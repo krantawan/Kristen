@@ -1,27 +1,30 @@
-import Container from "@/app/components/layout/Container"
-import Header from "@/app/components/layout/Header"
-import Footer from "@/app/components/layout/Footer"
-import UploadBox from "@/app/components/upload/UploadBox"
-import TagGroupSection from "./components/tag/TagGroupSection";
-import OperatorList from "./components/operator/OperatorList";
+"use client";
 
-const sampleTags = [
-  "Top Operator", "Support", "DPS", "Healing", "Survival",
-  "Slow", "AoE", "Starter", "Debuff", "Defense", "Nuker",
-]
+import { useState } from "react";
+import Header from "@/app/components/layout/Header";
+import Container from "@/app/components/layout/Container";
+import UploadBox from "@/app/components/upload/UploadBox";
+import SelectTag from "@/app/components/tag/SelectTag";
+import TagGroupSection from "@/app/components/tag/TagGroupSection";
+import OperatorList from "@/app/components/operator/OperatorList";
+import Footer from "@/app/components/layout/Footer";
 
-export default function Home() {
+export default function Page() {
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+
   return (
     <>
-    <Header />
-    <Container>
-      <UploadBox />
-      <div className="mt-6 p-2">
-        <TagGroupSection title="TAG OPERATOR" tags={sampleTags} />
-        <OperatorList title="OPERATOR POSSIBILITY" />
-      </div>
-    </Container>
-    <Footer />
+      <Header />
+      <Container>
+        <UploadBox />
+        <SelectTag selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
+
+        <div className="mt-6 p-2">
+          <TagGroupSection title="TAG OPERATOR" tags={selectedTags} />
+          <OperatorList title="OPERATOR POSSIBILITY" selectedTags={selectedTags} />
+        </div>
+      </Container>
+      <Footer />
     </>
   );
 }
