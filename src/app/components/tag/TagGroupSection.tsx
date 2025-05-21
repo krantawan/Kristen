@@ -27,7 +27,7 @@ export default function TagGroupSection({
           <TagButton 
           key={tag} 
           label={tag} 
-          className={tag === "Top Operator" ? "text-yellow-400" : ""}
+          className={tag === "Top Operator" ? "text-[#222] bg-[#FFD802] shadow-md" : "text-[#FFF]"}
         />
         ))}
       </div>
