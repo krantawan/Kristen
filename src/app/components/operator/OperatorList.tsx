@@ -6,30 +6,10 @@ type Operator = {
   name: string;
   tags: string[];
   image: string;
+  stars: number;
 };
 
-const allOperators: Operator[] = [
-  {
-    name: "SilverAsh",
-    tags: ["Top Operator","Guard", "DPS", "Support"],
-    image: "/operators/silverash.png"
-  },
-  {
-    name: "Saria",
-    tags: ["Top Operator","Defender", "Healing", "Support"],
-    image: "/operators/saria.png"
-  },
-  {
-    name: "Exusiai",
-    tags: ["Top Operator","Sniper", "DPS"],
-    image: "/operators/exusiai.png"
-  },
-  {
-    name: "Nightmare",
-    tags: ["Senior Operator","Caster", "Healing"],
-    image: "/operators/nightmare.png"
-  }
-];
+import operatorData from "@/data/operators.json";
 
 type Props = {
   title: string;
@@ -38,7 +18,12 @@ type Props = {
 
 export default function OperatorList({ title, selectedTags }: Props) {
 
-  const matchedOperators = allOperators.filter(op =>
+  const preparedOperators = operatorData.map((op: Operator) => ({
+    ...op,
+    tags: [...op.tags, `${op.stars}★`],
+  }));
+
+  const matchedOperators = preparedOperators.filter((op: Operator) =>
     selectedTags.every(tag => op.tags.includes(tag))
   );
 
@@ -61,8 +46,8 @@ export default function OperatorList({ title, selectedTags }: Props) {
         <p className="text-gray-500">No operators match your selected tags.</p>
       ) : (
         <div className="flex flex-wrap justify-start gap-1">
-          {matchedOperators.map(op => (
-            <OperatorItem key={op.name} name={op.name} image={op.image} />
+          {matchedOperators.map((op: Operator) => (
+            <OperatorItem key={op.name} name={op.name} image={op.image} stars={op.stars} />
           ))}
         </div>
       )}

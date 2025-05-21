@@ -3,16 +3,17 @@ import Image from "next/image"
 interface OperatorItemProps {
   name: string
   image: string
+  stars: number
 }
 
-export default function OperatorItem({ name, image }: OperatorItemProps) {
+export default function OperatorItem({ name, image, stars }: OperatorItemProps) {
   return (
     <div className="flex flex-col items-center w-[120px] group">
       <div className="transition-transform duration-300 group-hover:-translate-y-1">
         {/* รูปภาพ */}
         <Image
           src={image}
-          alt={name}
+          alt={name + " " + stars}
           width={120}
           height={120}
           className="object-cover rounded-t-md"
