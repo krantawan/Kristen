@@ -22,7 +22,7 @@ export default function TagGroupSection({
       </h2>
 
       {/* Tag Buttons */}
-      <div className="flex flex-wrap gap-3">
+      <div className="min-h-[48px] flex flex-wrap gap-3">
         {tags.map((tag) => (
           <TagButton 
           key={tag} 
