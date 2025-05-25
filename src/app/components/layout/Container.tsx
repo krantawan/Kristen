@@ -1,6 +1,6 @@
 export default function Container({ children }: { children: React.ReactNode }) {
   return (
-    <div className="max-w-4xl mx-auto shadow-lg rounded-md bg-[#fff9eb]">
+    <div className="max-w-6xl mx-auto shadow-lg rounded-md bg-[#fff9eb]">
       <div className="flex h-2">
         <div className="bg-[#5C7F71] flex-1" />
         <div className="bg-[#d4a940] flex-1" />

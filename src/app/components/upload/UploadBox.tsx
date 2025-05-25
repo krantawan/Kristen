@@ -131,7 +131,7 @@ export default function UploadBox({ onDetectTags }: Props) {
 
   return (
     <div className="bg-[#fcf4df]">
-      <div className="mx-auto max-w-5xl overflow-hidden">
+      <div className="mx-auto max-w-6xl overflow-hidden">
         <div
           className={`bg-[#202020] text-white text-center py-12 px-4 cursor-pointer transition-all ${
             isDragging ? "bg-[#303030] ring-2 ring-[#c27849]" : ""

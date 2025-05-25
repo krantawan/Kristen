@@ -10,8 +10,8 @@ interface OperatorItemProps {
 
 export default function OperatorItem({ name, image, stars }: OperatorItemProps) {
   const borderColors: Record<number, string> = {
-    6: "#FFD700",
-    5: "#f59e0b",
+    6: "#f59e0b",
+    5: "#FFE8CD",
     4: "#3b82f6",
     3: "#9ca3af",
     2: "#6b7280",
@@ -22,34 +22,42 @@ export default function OperatorItem({ name, image, stars }: OperatorItemProps) 
 
   return (
     <div
-      className="flex flex-col items-center w-[110px] h-full group"
-      title={`${name} (${stars}★)`}
-    >
-      <div className="transition-transform duration-300 group-hover:-translate-y-1 h-full flex flex-col">
-        {/* รูปภาพ */}
-        <Image
-          src={image}
-          alt={`${name} ${stars}★`}
-          width={110}
-          height={110}
-          className="object-cover rounded-t-md"
-        />
+  className={`flex flex-col items-center w-[110px] h-full group backdrop-blur-sm rounded-lg transition-all duration-300 cursor-pointer group-hover:scale-105 border ${
+    stars === 6
+      ? "border-[#4b3d2e] hover:border-[#f59e0b] group-hover:shadow-[0_0_6px_2px_rgba(245,158,11,0.5)]"
+      : stars === 5
+      ? "border-[#4b3d2e] hover:border-[#FFE8CD] group-hover:shadow-[0_0_6px_2px_rgba(255,232,205,0.5)]"
+      : "border-[#4b3d2e] hover:border-orange-400"
+  }`}
+  title={`${name} (${stars}★)`}
+  style={{
+    borderBottomWidth: "2px",
+    borderBottomColor: borderColor,
+  }}
+>
+      <div className="h-full flex flex-col">
+        {/* กล่องรูปภาพ + ชื่อทับรูป */}
+        <div className="relative w-[110px] h-[110px]">
+          {/* รูปภาพ */}
+          <Image
+            src={image}
+            alt={`${name} ${stars}★`}
+            width={110}
+            height={110}
+            className="object-cover rounded-t-md"
+          />
 
-        {/* เส้นขอบสีตามดาว */}
+          {/* ชื่อทับรูป */}
+          <div className="absolute bottom-0 w-full bg-black/40 text-white font-bold font-roboto text-sm text-center group-hover:text-[#BEC93B]">
+            {name}
+          </div>
+        </div>
+
+        {/* เส้นขอบล่าง */}
         <div
-          className="h-[4px] w-full transition-all duration-300"
+          className="h-[4px] w-[calc(100%-4px)] mx-auto rounded-b-md transition-all duration-300"
           style={{ backgroundColor: borderColor }}
         />
-
-        {/* กล่องชื่อ + ดาว */}
-        <div className="w-full bg-[#4b3d2e] text-center rounded-b-md py-2 flex flex-col justify-center flex-grow">
-          <span className="text-white font-bold text-sm group-hover:text-[#BEC93B]">
-            {name}
-          </span>
-          <span className="text-yellow-400 text-xs font-semibold leading-tight">
-            {"★".repeat(stars)}
-          </span>
-        </div>
       </div>
     </div>
   );

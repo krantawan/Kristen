@@ -12,13 +12,17 @@ import Footer from "@/app/components/layout/Footer";
 export default function Page() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
+  const handleRemoveTag = (tag: string) => {
+    setSelectedTags((prev) => prev.filter((t) => t !== tag));
+  };
+
   return (
     <>
       <Header />
       <Container>
         <UploadBox onDetectTags={(tags) => setSelectedTags(tags)} />
         <SelectTag selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
-          <TagGroupSection title="TAG OPERATOR" tags={selectedTags} />
+          <TagGroupSection title="TAG OPERATOR" tags={selectedTags} onRemoveTag={handleRemoveTag} />
           <OperatorList title="OPERATOR POSSIBILITY" selectedTags={selectedTags} />
       </Container>
       <Footer />

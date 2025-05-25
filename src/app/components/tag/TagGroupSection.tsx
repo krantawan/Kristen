@@ -1,11 +1,13 @@
-import TagButton from "@/app/components/tag/TagButton"
+import TagButton from "@/app/components/tag/TagButton";
 
 export default function TagGroupSection({
   title,
   tags,
+  onRemoveTag,
 }: {
-  title: string
-  tags: string[]
+  title: string;
+  tags: string[];
+  onRemoveTag: (tag: string) => void;
 }) {
   return (
     <section className="mb-5 mt-2 p-2 ">
@@ -24,13 +26,18 @@ export default function TagGroupSection({
       {/* Tag Buttons */}
       <div className="min-h-[48px] flex flex-wrap gap-3">
         {tags.map((tag) => (
-          <TagButton 
-          key={tag} 
-          label={tag} 
-          className={tag === "Top Operator" ? "text-[#222] bg-[#FFD802] shadow-md" : "text-[#FFF]"}
-        />
+          <TagButton
+            key={tag}
+            label={tag}
+            onClick={() => onRemoveTag(tag)}
+            className={
+              tag === "Top Operator"
+                ? "text-[#222] bg-[#FFD802] shadow-md"
+                : "text-[#FFF]"
+            }
+          />
         ))}
       </div>
     </section>
-  )
+  );
 }
