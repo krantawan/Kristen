@@ -64,7 +64,7 @@ export function CollapsibleButton({
   return (
     <div
       className={cn(
-        "w-full mb-4 bg-[#222] text-white border-t-2 border-[#BEC93B]",
+        "w-full bg-[#222] text-white border-t-2 border-[#BEC93B]",
         className
       )}
     >
@@ -104,7 +104,7 @@ export function CollapsibleButton({
         }}
         className="overflow-hidden"
       >
-        <div className="px-4 pt-2 pb-4">{children}</div>
+        {children}
       </div>
     </div>
   );

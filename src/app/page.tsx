@@ -19,10 +19,8 @@ export default function Page() {
         <UploadBox />
         <SelectTag selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
 
-        <div className="mt-6 p-2">
           <TagGroupSection title="TAG OPERATOR" tags={selectedTags} />
           <OperatorList title="OPERATOR POSSIBILITY" selectedTags={selectedTags} />
-        </div>
       </Container>
       <Footer />
     </>

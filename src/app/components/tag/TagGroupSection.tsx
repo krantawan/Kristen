@@ -8,7 +8,7 @@ export default function TagGroupSection({
   tags: string[]
 }) {
   return (
-    <section className="mb-6">
+    <section className="mb-5 mt-2 p-2 ">
       {/* Header Bar */}
       <div className="flex items-center">
         <div className="h-1 w-6 bg-[#BEC93B]" />
@@ -17,7 +17,7 @@ export default function TagGroupSection({
       </div>
 
       {/* Title */}
-      <h2 className="text-2xl font-black tracking-tight mb-4 font-roboto">
+      <h2 className="text-2xl font-black tracking-tight mb-2 font-roboto">
         {title}
       </h2>
 

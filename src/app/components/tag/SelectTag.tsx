@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CollapsibleButton } from "@/components/ui/collapsible-button";
 import { tagGroups } from "@/data/tagGroups";
 
@@ -27,8 +27,15 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
     );
   };
 
+  useEffect(() => {
+    if (!selectedTags.includes("Top Operator")) {
+      setSelectedTags([...selectedTags, "Top Operator"]);
+    }
+  }, []);
+  
   return (
     <CollapsibleButton title="OR SELECT TAG" defaultOpen={true}>
+      <div className="p-4">
       <div className="flex flex-wrap gap-3 mb-4 items-center justify-between w-full">
         <div className="flex flex-wrap gap-3">
           {allGroupLabels.map(label => (
@@ -81,6 +88,7 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
       ))}
         </div>
       )}
+      </div>
     </CollapsibleButton>
   );
 }
