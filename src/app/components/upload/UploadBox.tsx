@@ -17,19 +17,6 @@ export default function UploadBox({ onDetectTags }: Props) {
   const [file, setFile] = useState<File | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  const allowedTags = [
-    "Top Operator", "Medic", "Specialist", "Starter", "Debuff",
-    "Healing", "Defender", "Supporter", "Vanguard", "Guard",
-    "Melee", "Ranged", "Sniper", "Caster", "Nuker", "Slow", "DPS", "AoE", "Robot"
-  ]
-
-  const tagAlias: Record<string, string> = {
-    Defense: "Defender",
-    Support: "Supporter",
-    Shift: "Push",
-    Nuke: "Nuker"
-  }
-
   useEffect(() => {
     const handlePaste = (e: ClipboardEvent) => {
       const items = e.clipboardData?.items
@@ -102,13 +89,18 @@ export default function UploadBox({ onDetectTags }: Props) {
     const apiUrl = process.env.NEXT_PUBLIC_OBJECT_DETECTION_API_URL as string
     const apiKey = process.env.NEXT_PUBLIC_OBJECT_DETECTION_API_KEY as string
 
+    if (!apiUrl || !apiKey) {
+      console.error("API URL or API key is not defined.")
+      return
+    }
+
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${apiKey}`
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
+        api_key: apiKey,
         inputs: {
           image: {
             type: "base64",
@@ -119,24 +111,20 @@ export default function UploadBox({ onDetectTags }: Props) {
     })
 
     const result = await response.json()
-    console.log("📦 Raw result:", result)
-
+    //console.log("📦 Raw result:", result)
     const raw = result.outputs?.[0]?.predictions?.predictions || []
     const predictions = raw as Prediction[]
-    const classes = predictions.map(p => p.class)
-    console.log("🧠 All predictions:", classes)
 
     const detectedTags = predictions
-      .filter(p => p.confidence > 0.4)
-      .map(p => tagAlias[p.class] || p.class)
-      .filter(tag => allowedTags.includes(tag))
+      .filter(p => p.confidence > 0.7)
+      .map(p => p.class)
 
     const uniqueTags = Array.from(new Set(detectedTags))
     if (uniqueTags.length === 0) {
       console.log("🔍 No tag detected.")
     }
 
-    console.log("🎯 Final tags:", uniqueTags)
+    //console.log("🎯 Final tags:", uniqueTags)
     onDetectTags?.(uniqueTags)
     setIsProcessing(false)
   }

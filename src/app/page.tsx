@@ -16,9 +16,8 @@ export default function Page() {
     <>
       <Header />
       <Container>
-        <UploadBox />
+        <UploadBox onDetectTags={(tags) => setSelectedTags(tags)} />
         <SelectTag selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
-
           <TagGroupSection title="TAG OPERATOR" tags={selectedTags} />
           <OperatorList title="OPERATOR POSSIBILITY" selectedTags={selectedTags} />
       </Container>
