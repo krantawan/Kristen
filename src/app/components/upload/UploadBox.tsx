@@ -1,133 +1,140 @@
-"use client"
+"use client";
 
-import { useState, useRef, useEffect, type DragEvent, type ChangeEvent } from "react"
+import {
+  useState,
+  useRef,
+  useEffect,
+  type DragEvent,
+  type ChangeEvent,
+} from "react";
+import { File, Search, X } from "lucide-react";
 
 interface Prediction {
-  class: string
-  confidence: number
+  class: string;
+  confidence: number;
 }
 
 type Props = {
-  onDetectTags?: (tags: string[]) => void
-}
+  onDetectTags?: (tags: string[]) => void;
+};
 
 export default function UploadBox({ onDetectTags }: Props) {
-  const [isDragging, setIsDragging] = useState(false)
-  const [isProcessing, setIsProcessing] = useState(false)
-  const [file, setFile] = useState<File | null>(null)
-  const fileInputRef = useRef<HTMLInputElement>(null)
+  const [isDragging, setIsDragging] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [file, setFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const handlePaste = (e: ClipboardEvent) => {
-      const items = e.clipboardData?.items
-      if (!items) return
+      const items = e.clipboardData?.items;
+      if (!items) return;
 
       for (const item of items) {
         if (item.type.startsWith("image/")) {
-          const blob = item.getAsFile()
+          const blob = item.getAsFile();
           if (blob) {
-            setFile(blob)
-            runRoboflowModel(blob)
+            setFile(blob);
+            runRoboflowModel(blob);
           }
         }
       }
-    }
+    };
 
-    window.addEventListener("paste", handlePaste)
-    return () => window.removeEventListener("paste", handlePaste)
-  }, [])
+    window.addEventListener("paste", handlePaste);
+    return () => window.removeEventListener("paste", handlePaste);
+  }, []);
 
   const handleDragOver = (e: DragEvent<HTMLDivElement>) => {
-    e.preventDefault()
-    e.stopPropagation()
-    setIsDragging(true)
-  }
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(true);
+  };
 
   const handleDragLeave = (e: DragEvent<HTMLDivElement>) => {
-    e.preventDefault()
-    e.stopPropagation()
-    setIsDragging(false)
-  }
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+  };
 
   const handleDrop = (e: DragEvent<HTMLDivElement>) => {
-    e.preventDefault()
-    e.stopPropagation()
-    setIsDragging(false)
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
 
-    const droppedFile = e.dataTransfer.files?.[0]
-    if (!droppedFile) return
+    const droppedFile = e.dataTransfer.files?.[0];
+    if (!droppedFile) return;
 
-    setFile(droppedFile)
-    runRoboflowModel(droppedFile)
-  }
+    setFile(droppedFile);
+    runRoboflowModel(droppedFile);
+  };
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const selectedFile = e.target.files?.[0]
-    if (!selectedFile) return
+    const selectedFile = e.target.files?.[0];
+    if (!selectedFile) return;
 
-    setFile(selectedFile)
-    runRoboflowModel(selectedFile)
-  }
+    setFile(selectedFile);
+    runRoboflowModel(selectedFile);
+  };
 
   const handleClick = () => {
-    fileInputRef.current?.click()
-  }
+    fileInputRef.current?.click();
+  };
 
   const runRoboflowModel = async (file: File) => {
-    setIsProcessing(true)
+    setIsProcessing(true);
 
     const toBase64 = (file: File): Promise<string> =>
       new Promise((resolve, reject) => {
-        const reader = new FileReader()
-        reader.readAsDataURL(file)
-        reader.onload = () => resolve(reader.result as string)
-        reader.onerror = error => reject(error)
-      })
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result as string);
+        reader.onerror = (error) => reject(error);
+      });
 
-    const base64 = await toBase64(file)
+    const base64 = await toBase64(file);
 
-    const apiUrl = process.env.NEXT_PUBLIC_OBJECT_DETECTION_API_URL as string
-    const apiKey = process.env.NEXT_PUBLIC_OBJECT_DETECTION_API_KEY as string
+    const apiUrl = process.env.NEXT_PUBLIC_OBJECT_DETECTION_API_URL as string;
+    const apiKey = process.env.NEXT_PUBLIC_OBJECT_DETECTION_API_KEY as string;
 
     if (!apiUrl || !apiKey) {
-      console.error("API URL or API key is not defined.")
-      return
+      console.error("API URL or API key is not defined.");
+      return;
     }
 
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         api_key: apiKey,
         inputs: {
           image: {
             type: "base64",
-            value: base64
-          }
-        }
-      })
-    })
+            value: base64,
+          },
+        },
+      }),
+    });
 
-    const result = await response.json()
+    const result = await response.json();
     //console.log("📦 Raw result:", result)
-    const raw = result.outputs?.[0]?.predictions?.predictions || []
-    const predictions = raw as Prediction[]
+    const raw = result.outputs?.[0]?.predictions?.predictions || [];
+    const predictions = raw as Prediction[];
 
     const detectedTags = predictions
-      .filter(p => p.confidence > 0.7)
-      .map(p => p.class)
+      .filter((p) => p.confidence > 0.7)
+      .map((p) => p.class);
 
-    const uniqueTags = Array.from(new Set(detectedTags))
+    const uniqueTags = Array.from(new Set(detectedTags));
     if (uniqueTags.length === 0) {
-      console.log("🔍 No tag detected.")
+      console.log("🔍 No tag detected.");
     }
 
     //console.log("🎯 Final tags:", uniqueTags)
-    onDetectTags?.(uniqueTags)
-    setIsProcessing(false)
-  }
+    onDetectTags?.(uniqueTags);
+    setIsProcessing(false);
+  };
 
   return (
     <div className="bg-[#fcf4df]">
@@ -150,41 +157,49 @@ export default function UploadBox({ onDetectTags }: Props) {
               accept="image/png, image/jpeg, image/jpg"
             />
 
-            <h1 className="text-6xl font-bold tracking-tight text-white drop-shadow-md">UPLOAD</h1>
+            <h1 className="text-6xl font-bold tracking-tight text-white drop-shadow-md">
+              UPLOAD
+            </h1>
 
             <div className="flex items-center justify-center mt-1">
-              <div className="h-[10px] w-[9%] bg-[#c27849]"></div>
               <span className="ml-2 text-white text-sm font-semibold">
                 OR DRAG AND DROP / PASTE (Ctrl+V)
               </span>
             </div>
-
-            {isProcessing && (
-              <p className="mt-4 text-sm text-yellow-300">🔎 Detecting tags...</p>
-            )}
-
-            {file && !isProcessing && (
-              <div className="mt-6 text-left max-w-md mx-auto">
-                <p className="text-sm font-medium mb-2">Selected file:</p>
-                <ul className="text-sm text-gray-300 flex justify-between items-center">
-                  <li className="truncate">
-                    {file.name} ({(file.size / 1024).toFixed(1)} KB)
-                  </li>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      setFile(null)
-                    }}
-                    className="ml-2 text-red-400 hover:text-red-600 text-lg font-bold"
-                  >
-                    ✕
-                  </button>
-                </ul>
-              </div>
-            )}
           </div>
         </div>
       </div>
+
+      {(isProcessing || file) && (
+        <div className="relative bg-[#1b1b1b] text-white font-bold tracking-tight py-2 px-4 border-b-2 border-[#BEC93B] text-sm">
+          {/* ปุ่มลบที่ขวาบน */}
+          {file && !isProcessing && (
+            <button
+              onClick={() => setFile(null)}
+              className="absolute top-0 right-0 h-full px-4 bg-[#802520] hover:bg-[#802520c7] text-white flex items-center justify-center"
+              title="Remove File"
+            >
+              <X size={16} strokeWidth={4} />
+            </button>
+          )}
+
+          {isProcessing ? (
+            <div className="flex items-center text-yellow-300">
+              <Search className="mr-2" size={16} />
+              DETECTING TAGS
+            </div>
+          ) : (
+            <div className="flex items-center text-[#BEC93B] overflow-x-auto whitespace-nowrap pr-8">
+              <File className="mr-2" size={16} />
+              <span className="mr-2">SELECTED FILE :</span>
+              <span className="uppercase">
+                {file?.name} ({file?.size ? (file.size / 1024).toFixed(1) : "0"}
+                KB)
+              </span>
+            </div>
+          )}
+        </div>
+      )}
     </div>
-  )
+  );
 }

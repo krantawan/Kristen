@@ -4,8 +4,8 @@ import { CollapsibleButton } from "@/components/ui/collapsible-button";
 import OperatorItem from "./OperatorItem";
 import operatorData from "@/data/operators.json";
 import { cn } from "@/lib/utils";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { Terminal } from "lucide-react"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Terminal } from "lucide-react";
 
 type Operator = {
   name: string;
@@ -41,10 +41,10 @@ function getMatchingTagGroups(
 
   const tagCombos = getCombinations(selectedTags);
 
-  tagCombos.forEach(combo => {
+  tagCombos.forEach((combo) => {
     const comboKey = combo.sort().join(" + ");
-    const matched = operators.filter(op =>
-      combo.every(tag => op.tags.includes(tag))
+    const matched = operators.filter((op) =>
+      combo.every((tag) => op.tags.includes(tag))
     );
     if (matched.length > 0) {
       groups[comboKey] = matched;
@@ -79,9 +79,7 @@ export default function OperatorList({ title, selectedTags }: Props) {
         <Alert>
           <Terminal className="h-5 w-5" />
           <AlertTitle>Alert !</AlertTitle>
-          <AlertDescription>
-            Please select some tags.
-          </AlertDescription>
+          <AlertDescription>Please select some tags.</AlertDescription>
         </Alert>
       ) : Object.keys(grouped).length === 0 ? (
         <Alert>
@@ -93,36 +91,32 @@ export default function OperatorList({ title, selectedTags }: Props) {
         </Alert>
       ) : (
         <div className="flex flex-col gap-0">
-  {Object.entries(grouped).map(([combo, ops], index) => (
-    <CollapsibleButton key={combo} title={combo} defaultOpen={index === 0}>
-<div
-  className={cn(
-    "grid gap-3",
-    "px-4 sm:px-10",
-    "grid-cols-[repeat(auto-fit,minmax(100px,max-content))]",
-    "sm:grid-cols-[repeat(auto-fit,minmax(120px,max-content))]",
-    "py-4",
-    ops.length >= 4 ? "justify-center" : "justify-start",
-    "max-w-screen-lg mx-auto",
-    ops.length > 6 && "sm:max-h-none"
-  )}
-  style={{
-    overflow: "hidden",
-  }}
-> 
-
-   {ops.map((op) => (
-      <OperatorItem
-        key={`${combo}-${op.name}`}
-        name={op.name}
-        image={op.image}
-        stars={op.stars}
-      />
-    ))}
-  </div>
-    </CollapsibleButton>
-  ))}
-</div>
+          {Object.entries(grouped).map(([combo, ops], index) => (
+            <CollapsibleButton
+              key={combo}
+              title={combo}
+              defaultOpen={index === 0}
+            >
+              <div
+                className={cn(
+                  "grid gap-3",
+                  "px-4 sm:px-10 py-4",
+                  "grid-cols-[repeat(auto-fill,minmax(110px,1fr))]",
+                  "justify-start"
+                )}
+              >
+                {ops.map((op) => (
+                  <OperatorItem
+                    key={`${combo}-${op.name}`}
+                    name={op.name}
+                    image={op.image}
+                    stars={op.stars}
+                  />
+                ))}
+              </div>
+            </CollapsibleButton>
+          ))}
+        </div>
       )}
     </>
   );

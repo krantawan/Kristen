@@ -8,7 +8,11 @@ interface OperatorItemProps {
   stars: number;
 }
 
-export default function OperatorItem({ name, image, stars }: OperatorItemProps) {
+export default function OperatorItem({
+  name,
+  image,
+  stars,
+}: OperatorItemProps) {
   const borderColors: Record<number, string> = {
     6: "#f59e0b",
     5: "#FFE8CD",
@@ -18,44 +22,71 @@ export default function OperatorItem({ name, image, stars }: OperatorItemProps) 
     1: "#374151",
   };
 
+  const hoverTextColor: Record<number, string> = {
+    6: "group-hover:text-[#f59e0b]",
+    5: "group-hover:text-[#FFE8CD]",
+    4: "group-hover:text-[#3b82f6]",
+    3: "group-hover:text-[#9ca3af]",
+    2: "group-hover:text-[#6b7280]",
+    1: "group-hover:text-[#374151]",
+  };
+
   const borderColor = borderColors[stars] || "#4b3d2e";
 
   return (
     <div
-  className={`flex flex-col items-center w-[110px] h-full group backdrop-blur-sm rounded-lg transition-all duration-300 cursor-pointer group-hover:scale-105 border ${
-    stars === 6
-      ? "border-[#4b3d2e] hover:border-[#f59e0b] group-hover:shadow-[0_0_6px_2px_rgba(245,158,11,0.5)]"
-      : stars === 5
-      ? "border-[#4b3d2e] hover:border-[#FFE8CD] group-hover:shadow-[0_0_6px_2px_rgba(255,232,205,0.5)]"
-      : "border-[#4b3d2e] hover:border-orange-400"
-  }`}
-  title={`${name} (${stars}★)`}
-  style={{
-    borderBottomWidth: "2px",
-    borderBottomColor: borderColor,
-  }}
->
+      className={`flex flex-col items-center w-[110px] h-full group backdrop-blur-sm rounded-lg transition-all duration-300 cursor-pointer group-hover:scale-105 border ${
+        stars === 6
+          ? "border-[#4b3d2e] hover:border-[#f59e0b] group-hover:shadow-[0_0_6px_2px_rgba(245,158,11,0.5)]"
+          : stars === 5
+          ? "border-[#4b3d2e] hover:border-[#FFE8CD] group-hover:shadow-[0_0_6px_2px_rgba(255,232,205,0.5)]"
+          : "border-[#4b3d2e] hover:border-orange-400"
+      }`}
+      title={`${name} (${stars}★)`}
+      style={{
+        borderBottomWidth: "2px",
+        borderBottomColor: borderColor,
+      }}
+    >
       <div className="h-full flex flex-col">
-        {/* กล่องรูปภาพ + ชื่อทับรูป */}
+        {/* กล่องรูปภาพ + ดาว + ชื่อ */}
         <div className="relative w-[110px] h-[110px]">
+          {/* ⭐ ดาวบนหัว */}
+          {stars > 0 && (
+            <div className="absolute top-0 left-0 right-0 flex justify-center mt-[-16px] z-10 pointer-events-none">
+              {Array.from({ length: stars }).map((_, i) => (
+                <span
+                  key={i}
+                  className="text-white text-[20px] drop-shadow-[0_0_2px_#000]"
+                  style={{ color: borderColors[stars] }}
+                >
+                  ★
+                </span>
+              ))}
+            </div>
+          )}
+
           {/* รูปภาพ */}
           <Image
             src={image}
             alt={`${name} ${stars}★`}
             width={110}
             height={110}
+            draggable={false}
             className="object-cover rounded-t-md"
           />
 
           {/* ชื่อทับรูป */}
-          <div className="absolute bottom-0 w-full bg-black/40 text-white font-bold font-roboto text-sm text-center group-hover:text-[#BEC93B]">
+          <div
+            className={`absolute bottom-0 w-full bg-black/40 text-white font-bold font-roboto text-sm text-center ${hoverTextColor[stars]} transition-all duration-300`}
+          >
             {name}
           </div>
         </div>
 
         {/* เส้นขอบล่าง */}
         <div
-          className="h-[4px] w-[calc(100%-4px)] mx-auto rounded-b-md transition-all duration-300"
+          className="h-[3px] w-[calc(100%-4px)] mx-auto rounded-b-md transition-all duration-300"
           style={{ backgroundColor: borderColor }}
         />
       </div>
