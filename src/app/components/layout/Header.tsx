@@ -15,30 +15,26 @@ import {
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <header className="sticky top-0 z-10 mb-2 bg-white">
       <div className="mx-auto max-w-6xl w-full flex h-10 items-center px-2 sm:px-0">
-        {/* Brand / Logo */}
         <div className="text-2xl font-bold text-[#222]">Kristen</div>
 
-        {/* Desktop Navigation Menu - Hidden on mobile */}
         <div className="hidden md:flex flex-1 justify-center">
           <NavigationMenu>
             <NavigationMenuList className="flex items-center gap-1">
               <NavigationMenuItem>
-                <Link href="/">
-                  <NavigationMenuLink className="text-sm font-medium flex items-center text-[#222] hover:text-[#BEC93B] px-3 py-2 rounded-md transition-colors duration-200">
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/"
+                    className="text-sm font-medium flex items-center text-[#222] hover:text-[#BEC93B] px-3 py-2 rounded-md transition-colors duration-200"
+                  >
                     <HomeIcon className="h-4 w-4 mr-1" /> Home
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
@@ -68,7 +64,7 @@ export default function Header() {
                       <NavigationMenuLink asChild>
                         <Link
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#fff] hover:text-black focus:bg-[#05c70f] focus:text-black"
-                          href="/tutorials"
+                          href="/"
                         >
                           <div className="text-sm font-medium leading-none">
                             Recruitment Assistant
@@ -81,7 +77,7 @@ export default function Header() {
                       <NavigationMenuLink asChild>
                         <Link
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#fff] hover:text-black focus:bg-[#fff] focus:text-black"
-                          href="/event"
+                          href="/events"
                         >
                           <div className="text-sm font-medium leading-none">
                             Events
@@ -102,45 +98,37 @@ export default function Header() {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-4 w-[300px] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border rounded-md shadow-lg">
-                    <NavigationMenuLink asChild>
-                      <Link
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        href="/about/company"
-                      >
-                        <div className="text-sm font-medium leading-none">
-                          Our Company
-                        </div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Learn about our mission and values
-                        </p>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        href="/about/team"
-                      >
-                        <div className="text-sm font-medium leading-none">
-                          Our Team
-                        </div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Meet the people behind the product
-                        </p>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        href="/contact"
-                      >
-                        <div className="text-sm font-medium leading-none">
-                          Contact Us
-                        </div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Get in touch with our team
-                        </p>
-                      </Link>
-                    </NavigationMenuLink>
+                    {[
+                      {
+                        href: "/about/company",
+                        title: "Our Company",
+                        desc: "Learn about our mission and values",
+                      },
+                      {
+                        href: "/about/team",
+                        title: "Our Team",
+                        desc: "Meet the people behind the product",
+                      },
+                      {
+                        href: "/contact",
+                        title: "Contact Us",
+                        desc: "Get in touch with our team",
+                      },
+                    ].map((item) => (
+                      <NavigationMenuLink asChild key={item.href}>
+                        <Link
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          href={item.href}
+                        >
+                          <div className="text-sm font-medium leading-none">
+                            {item.title}
+                          </div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            {item.desc}
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    ))}
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -148,10 +136,8 @@ export default function Header() {
           </NavigationMenu>
         </div>
 
-        {/* Empty space for balance on desktop */}
         <div className="hidden md:block w-[72px]"></div>
 
-        {/* Mobile Menu Button - Only visible on mobile */}
         <button
           onClick={toggleMobileMenu}
           className="md:hidden ml-auto p-2 text-[#222] hover:text-[#BEC93B] transition-colors duration-200"
@@ -167,7 +153,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay - Only visible when open with slide animation */}
       <div
         className={`md:hidden border-t bg-background/95 backdrop-blur transition-all duration-300 ease-in-out overflow-hidden ${
           isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
@@ -183,72 +168,47 @@ export default function Header() {
             Home
           </Link>
 
-          {/* How to Use Section */}
           <div className="space-y-2">
             <div className="flex items-center text-sm font-medium text-muted-foreground py-2">
               <BookOpenIcon className="h-4 w-4 mr-2" />
               How to Use
             </div>
             <div className="ml-6 space-y-1">
-              <Link
-                href="/overview"
-                onClick={closeMobileMenu}
-                className="block text-sm text-muted-foreground hover:text-[#BEC93B] py-1 transition-colors duration-200"
-              >
-                Getting Started
-              </Link>
-              <Link
-                href="/tutorials"
-                onClick={closeMobileMenu}
-                className="block text-sm text-muted-foreground hover:text-[#BEC93B] py-1 transition-colors duration-200"
-              >
-                Tutorials
-              </Link>
-              <Link
-                href="/documentation"
-                onClick={closeMobileMenu}
-                className="block text-sm text-muted-foreground hover:text-[#BEC93B] py-1 transition-colors duration-200"
-              >
-                Documentation
-              </Link>
-              <Link
-                href="/faq"
-                onClick={closeMobileMenu}
-                className="block text-sm text-muted-foreground hover:text-[#BEC93B] py-1 transition-colors duration-200"
-              >
-                FAQ
-              </Link>
+              {["overview", "tutorials", "documentation", "faq"].map((slug) => (
+                <Link
+                  key={slug}
+                  href={`/${slug}`}
+                  onClick={closeMobileMenu}
+                  className="block text-sm text-muted-foreground hover:text-[#BEC93B] py-1 transition-colors duration-200"
+                >
+                  {slug.charAt(0).toUpperCase() +
+                    slug.slice(1).replace("-", " ")}
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* About Section */}
           <div className="space-y-2">
             <div className="flex items-center text-sm font-medium text-muted-foreground py-2">
               <SproutIcon className="h-4 w-4 mr-2" />
               About
             </div>
             <div className="ml-6 space-y-1">
-              <Link
-                href="/about/company"
-                onClick={closeMobileMenu}
-                className="block text-sm text-muted-foreground hover:text-[#BEC93B] py-1 transition-colors duration-200"
-              >
-                Our Company
-              </Link>
-              <Link
-                href="/about/team"
-                onClick={closeMobileMenu}
-                className="block text-sm text-muted-foreground hover:text-[#BEC93B] py-1 transition-colors duration-200"
-              >
-                Our Team
-              </Link>
-              <Link
-                href="/contact"
-                onClick={closeMobileMenu}
-                className="block text-sm text-muted-foreground hover:text-[#BEC93B] py-1 transition-colors duration-200"
-              >
-                Contact Us
-              </Link>
+              {["/about/company", "/about/team", "/contact"].map((href) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={closeMobileMenu}
+                  className="block text-sm text-muted-foreground hover:text-[#BEC93B] py-1 transition-colors duration-200"
+                >
+                  {href
+                    .replace("/about/", "")
+                    .replace("/", "")
+                    .replace("contact", "Contact Us")
+                    .replace("company", "Our Company")
+                    .replace("team", "Our Team")}
+                </Link>
+              ))}
             </div>
           </div>
         </nav>

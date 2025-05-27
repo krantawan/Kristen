@@ -21,9 +21,19 @@ export default function Page() {
       <Header />
       <Container>
         <UploadBox onDetectTags={(tags) => setSelectedTags(tags)} />
-        <SelectTag selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
-          <TagGroupSection title="TAG OPERATOR" tags={selectedTags} onRemoveTag={handleRemoveTag} />
-          <OperatorList title="OPERATOR POSSIBILITY" selectedTags={selectedTags} />
+        <SelectTag
+          selectedTags={selectedTags}
+          setSelectedTags={setSelectedTags}
+        />
+        <TagGroupSection
+          title="TAG OPERATOR"
+          tags={selectedTags}
+          onRemoveTag={handleRemoveTag}
+        />
+        <OperatorList
+          title="OPERATOR POSSIBILITY"
+          selectedTags={selectedTags}
+        />
       </Container>
       <Footer />
     </>
