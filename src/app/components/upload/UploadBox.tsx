@@ -93,8 +93,8 @@ export default function UploadBox({ onDetectTags }: Props) {
 
     const base64 = await toBase64(file);
 
-    const apiUrl = process.env.OBJECT_DETECTION_API_URL as string;
-    const apiKey = process.env.OBJECT_DETECTION_API_KEY as string;
+    const apiUrl = process.env.NEXT_PUBLIC_OBJECT_DETECTION_API_URL as string;
+    const apiKey = process.env.NEXT_PUBLIC_OBJECT_DETECTION_API_KEY as string;
 
     if (!apiUrl || !apiKey) {
       console.error("API URL or API key is not defined.");

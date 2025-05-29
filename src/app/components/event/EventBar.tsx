@@ -5,7 +5,6 @@ import {
   differenceInCalendarDays,
   differenceInHours,
   isAfter,
-  isSameDay,
 } from "date-fns";
 
 type Event = {
@@ -39,8 +38,12 @@ export default function EventBar({ event, dateRange }: Props) {
   const endDate = parseISO(event.end);
   const isEnded = isAfter(new Date(), endDate);
 
-  const startIndex = dateRange.findIndex((d) => isSameDay(d, startDate));
-  const endIndex = dateRange.findIndex((d) => isSameDay(d, endDate));
+  const startIndex = dateRange.findIndex(
+    (d) => d.toDateString() === startDate.toDateString()
+  );
+  const endIndex = dateRange.findIndex(
+    (d) => d.toDateString() === endDate.toDateString()
+  );
 
   if (startIndex === -1 || endIndex === -1) return null;
 
@@ -60,16 +63,18 @@ export default function EventBar({ event, dateRange }: Props) {
     <div
       className="grid items-center relative"
       style={{
-        gridTemplateColumns: `repeat(${dateRange.length}, 32px)`,
+        gridTemplateColumns: `repeat(${dateRange.length}, minmax(32px, 1fr))`,
       }}
     >
+      {/* Event bar */}
       <div
-        className={`relative h-10 rounded overflow-hidden text-xs font-medium shadow z-10 ${barColor}`}
+        className={`relative h-6 rounded overflow-hidden text-xs font-medium shadow z-10 ${barColor}`}
         style={{
           gridColumnStart: columnStart,
           gridColumnEnd: columnEnd,
         }}
       >
+        {/* Background image overlay */}
         {event.image && (
           <div
             className="absolute inset-0"
@@ -83,10 +88,12 @@ export default function EventBar({ event, dateRange }: Props) {
           />
         )}
 
+        {/* Text Content */}
         <div className="relative z-10 flex items-center justify-between h-full px-3">
           <span className="truncate">{event.title}</span>
         </div>
 
+        {/* Remaining time bubble */}
         {!isEnded && (
           <span className="absolute right-1 top-1/2 -translate-y-1/2 bg-gray-200 text-black text-[11px] font-semibold rounded-full px-2 py-0.5 shadow z-20">
             {timeRemainingText}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { format } from "date-fns";
 
 type Props = {
   dateRange: Date[];
@@ -9,12 +10,14 @@ type Props = {
 export default function TimeIndicator({ dateRange }: Props) {
   const today = new Date();
   const index = dateRange.findIndex(
-    (d) => d.toDateString() === today.toDateString()
+    (d) => format(d, "yyyy-MM-dd") === format(today, "yyyy-MM-dd")
   );
 
   const [timeString, setTimeString] = useState("");
   const [offsetPx, setOffsetPx] = useState(0);
-  const [timeColor, setTimeColor] = useState("bg-yellow-400");
+  const [colorClass, setColorClass] = useState("bg-yellow-500");
+  const [labelClass, setLabelClass] = useState("bg-yellow-100 text-yellow-700");
+  const [icon, setIcon] = useState("🌤️");
   const cellRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -40,11 +43,32 @@ export default function TimeIndicator({ dateRange }: Props) {
       }
 
       const hour = now.getHours();
-      if (hour >= 6 && hour < 18) {
-        setTimeColor("bg-yellow-400"); // daytime
+
+      let color = "bg-yellow-500";
+      let label = "bg-yellow-100 text-yellow-700";
+      let currentIcon = "🌤️";
+
+      if (hour < 6) {
+        color = "bg-blue-600";
+        label = "bg-blue-100 text-blue-800";
+        currentIcon = "🌙";
+      } else if (hour < 12) {
+        color = "bg-yellow-500";
+        label = "bg-yellow-100 text-yellow-700";
+        currentIcon = "🌤️";
+      } else if (hour < 18) {
+        color = "bg-orange-500";
+        label = "bg-orange-100 text-orange-800";
+        currentIcon = "🔥";
       } else {
-        setTimeColor("bg-[#52357B]"); // nighttime
+        color = "bg-purple-600";
+        label = "bg-purple-100 text-purple-700";
+        currentIcon = "🌕";
       }
+
+      setColorClass(color);
+      setLabelClass(label);
+      setIcon(currentIcon);
     };
 
     updateTime();
@@ -55,11 +79,6 @@ export default function TimeIndicator({ dateRange }: Props) {
   if (index === -1) return null;
 
   const column = index + 1;
-
-  const labelBgColor =
-    timeColor === "bg-yellow-400"
-      ? "bg-yellow-100 text-yellow-700"
-      : "bg-[#52357B] text-white";
 
   return (
     <div
@@ -72,24 +91,24 @@ export default function TimeIndicator({ dateRange }: Props) {
       {/* helper cell for measuring width */}
       <div ref={cellRef} className="absolute inset-0 pointer-events-none" />
 
-      {/* red time line with transition and dynamic color */}
+      {/* time line */}
       <div
-        className={`absolute top-0 bottom-0 w-[2px] z-50 transition-all duration-300 ${timeColor}`}
+        className={`absolute top-0 bottom-0 w-[2px] z-50 transition-all duration-200 ${colorClass}`}
         style={{
-          left: "50%",
-          transform: `translateX(calc(-50% + ${offsetPx}px))`,
+          left: 0,
+          transform: `translateX(calc(-100% + ${offsetPx}px))`,
         }}
       />
 
       {/* label */}
       <div
-        className={`absolute -top-1 z-50 text-[10px] px-1.5 py-0.5 rounded shadow-sm whitespace-nowrap transition-all duration-300 ${labelBgColor}`}
+        className={`absolute -top-1 z-50 text-[11px] px-1.5 py-0.5 rounded shadow-sm whitespace-nowrap transition-all duration-200 ${labelClass}`}
         style={{
-          left: "50%",
+          left: 0,
           transform: `translateX(calc(-50% + ${offsetPx}px))`,
         }}
       >
-        {timeString}
+        {icon} {timeString}
       </div>
     </div>
   );
