@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import Header from "@/app/components/layout/Header";
+import Header from "@/app/components/layout/header/Header";
 import Container from "@/app/components/layout/Container";
 import UploadBox from "@/app/components/upload/UploadBox";
 import SelectTag from "@/app/components/tag/SelectTag";
 import TagGroupSection from "@/app/components/tag/TagGroupSection";
 import OperatorList from "@/app/components/operator/OperatorList";
 import Footer from "@/app/components/layout/Footer";
+import PRTSSystemHeader from "@/components/ui/PRTSSystemHeader";
 
 export default function Page() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -19,12 +20,25 @@ export default function Page() {
   return (
     <>
       <Header />
+
       <Container>
-        <UploadBox onDetectTags={(tags) => setSelectedTags(tags)} />
+        {/* SECTION: SYSTEM HEADER / INTRO */}
+        <PRTSSystemHeader
+          version="v2.3"
+          user="DOCTOR"
+          status="ONLINE"
+          title=">> INITIATE RECRUITMENT ANALYSIS"
+          description="Use AI-assisted scan or manual tag selection to identify compatible operators."
+        />
+
+        {/* SECTION: TOOLS */}
         <SelectTag
           selectedTags={selectedTags}
           setSelectedTags={setSelectedTags}
         />
+        <UploadBox onDetectTags={(tags) => setSelectedTags(tags)} />
+
+        {/* SECTION: RESULT */}
         <TagGroupSection
           title="TAG OPERATOR"
           tags={selectedTags}
@@ -35,6 +49,7 @@ export default function Page() {
           selectedTags={selectedTags}
         />
       </Container>
+
       <Footer />
     </>
   );

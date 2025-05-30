@@ -1,17 +1,25 @@
 "use client";
 
-import Header from "@/app/components/layout/Header";
+import Header from "@/app/components/layout/header/Header";
 import Container from "@/app/components/layout/Container";
 import Footer from "@/app/components/layout/Footer";
 import EventTimeline from "@/app/components/event/EventTimeline";
 import EventSummarySection from "@/app/components/event/EventSummarySection";
 import EventCurrentBanner from "@/app/components/event/EventCurrentBanner";
+import PRTSSystemHeader from "@/components/ui/PRTSSystemHeader";
 
 export default function EventsPage() {
   return (
     <>
       <Header />
       <Container>
+        <PRTSSystemHeader
+          version="v2.3"
+          user="KRISTEN"
+          status="MAINTENANCE"
+          title=">> PRTS EVENT TIMELINE SYSTEM"
+          description="Track ongoing Arknights events and strategic timelines."
+        />
         <EventCurrentBanner />
 
         <div className="w-full max-w-full overflow-x-auto">

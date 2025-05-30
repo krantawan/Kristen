@@ -55,7 +55,7 @@ export default function EventTimeline() {
           Events
         </h2>
       </div>
-      <div className="overflow-x-auto border border-gray-300 bg-white dark:bg-zinc-900 px-2 sm:px-4 min-w-[350px]">
+      <div className="overflow-x-auto bg-white dark:bg-zinc-900 px-2 sm:px-4 min-w-[350px]">
         {/* Header แสดงวันที่ */}
         <div
           className="grid text-xs text-gray-600 mb-2"
