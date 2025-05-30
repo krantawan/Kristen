@@ -1,5 +1,7 @@
+"use client";
+
 import { EventSection } from "@/components/ui/EventSection";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import eventsDataRaw from "@/data/events.json";
 import { differenceInDays, formatDistanceToNow } from "date-fns";
 
@@ -12,17 +14,23 @@ const eventsData = eventsDataRaw as {
 }[];
 
 export default function EventSummarySection() {
-  const now = new Date();
+  useEffect(() => {
+    setNow(new Date());
+  }, []);
+
+  const [now, setNow] = useState(new Date());
 
   const currentEvents = useMemo(() => {
+    if (!now) return [];
     return eventsData.filter(
       (e) => new Date(e.start) <= now && now <= new Date(e.end)
     );
-  }, []);
+  }, [now]);
 
   const upcomingEvents = useMemo(() => {
+    if (!now) return [];
     return eventsData.filter((e) => new Date(e.start) > now);
-  }, []);
+  }, [now]);
 
   const nextEventIn = upcomingEvents.length
     ? formatDistanceToNow(new Date(upcomingEvents[0].start), {
