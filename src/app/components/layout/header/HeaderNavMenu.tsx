@@ -1,5 +1,3 @@
-// components/ui/HeaderNavMenu.tsx
-
 "use client";
 
 import Link from "next/link";
@@ -14,16 +12,24 @@ import {
 import { HomeIcon, BookOpenIcon, SproutIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useActivePath } from "@/components/ui/useActivePath";
+import { useLocale } from "next-intl";
+
+function localizedPath(locale: string, path: string) {
+  if (path === "/") return `/${locale}`;
+  return `/${locale}${path}`;
+}
 
 export default function HeaderNavMenu() {
+  const locale = useLocale();
   const isActive = useActivePath("/");
+
   return (
     <NavigationMenu>
       <NavigationMenuList className="flex items-center gap-1">
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Link
-              href="/"
+              href={localizedPath(locale, "/")}
               className={cn(
                 "inline-flex h-10 items-center justify-center px-4 py-2 text-sm font-mono font-medium transition-colors",
                 isActive
@@ -58,7 +64,7 @@ export default function HeaderNavMenu() {
               <div className="grid gap-1">
                 <NavigationMenuLink asChild>
                   <Link
-                    href="/"
+                    href={localizedPath(locale, "/")}
                     className={cn(
                       "block select-none space-y-1 rounded-md p-3 font-mono text-gray-300 hover:text-[#FACC15]",
                       useActivePath("/") ? "!text-[#FACC15]" : ""
@@ -72,9 +78,10 @@ export default function HeaderNavMenu() {
                     </p>
                   </Link>
                 </NavigationMenuLink>
+
                 <NavigationMenuLink asChild>
                   <Link
-                    href="/events"
+                    href={localizedPath(locale, "/events")}
                     className={cn(
                       "block select-none space-y-1 rounded-md p-3 font-mono text-gray-300 hover:text-[#FACC15]",
                       useActivePath("/events") ? "!text-[#FACC15]" : ""
@@ -113,7 +120,7 @@ export default function HeaderNavMenu() {
               ].map((item) => (
                 <NavigationMenuLink asChild key={item.href}>
                   <Link
-                    href={item.href}
+                    href={localizedPath(locale, item.href)}
                     className="block select-none space-y-1 rounded-md p-3 font-mono text-gray-300 hover:text-[#FACC15]"
                   >
                     <div className="text-sm font-medium leading-none">
