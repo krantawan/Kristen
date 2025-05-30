@@ -24,17 +24,15 @@ export function CollapsibleButton({
   const contentId = React.useId();
   const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
 
-  // ✅ Calculate scrollHeight after layout updated
-  const updateHeight = () => {
+  const updateHeight = React.useCallback(() => {
     requestAnimationFrame(() => {
       if (contentRef.current) {
         const h = contentRef.current.scrollHeight;
         setMaxHeight(`${h}px`);
       }
     });
-  };
+  }, []);
 
-  // ✅ Expand/collapse behavior
   React.useEffect(() => {
     if (!contentRef.current) return;
 
@@ -45,21 +43,14 @@ export function CollapsibleButton({
       }
 
       setFadeVisible(true);
-      updateHeight(); // ✅ ใช้เมื่อเปิด
+      updateHeight();
     } else {
       setMaxHeight("0px");
       timeoutRef.current = setTimeout(() => {
         setFadeVisible(false);
       }, 300);
     }
-  }, [isOpen]);
-
-  // ✅ Recalculate height when children inside change (ex. checkbox toggled)
-  React.useEffect(() => {
-    if (isOpen) {
-      updateHeight(); // ✅ สมูทตอนเนื้อหาเพิ่ม/ลด
-    }
-  }, [children]);
+  }, [isOpen, updateHeight]);
 
   return (
     <div
