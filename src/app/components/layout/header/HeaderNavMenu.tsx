@@ -21,7 +21,6 @@ function localizedPath(locale: string, path: string) {
 
 export default function HeaderNavMenu() {
   const locale = useLocale();
-  const isActive = useActivePath("/");
 
   return (
     <NavigationMenu>
@@ -32,7 +31,7 @@ export default function HeaderNavMenu() {
               href={localizedPath(locale, "/")}
               className={cn(
                 "inline-flex h-10 items-center justify-center px-4 py-2 text-sm font-mono font-medium transition-colors",
-                isActive
+                useActivePath("/")
                   ? "!text-[#FACC15]"
                   : "text-gray-300 hover:text-[#FACC15]"
               )}
