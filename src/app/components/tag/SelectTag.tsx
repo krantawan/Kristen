@@ -35,7 +35,7 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
     if (!selectedTags.includes("Top Operator")) {
       setSelectedTags([...selectedTags, "Top Operator"]);
     }
-  }, []);
+  }, [selectedTags, setSelectedTags]);
 
   return (
     <CollapsibleButton title="SELECT TAG" defaultOpen={true}>
