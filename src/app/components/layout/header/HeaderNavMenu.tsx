@@ -41,7 +41,7 @@ export default function HeaderNavMenu() {
             <BookOpenIcon className="h-4 w-4 mr-1" /> Tools
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="grid gap-3 w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            <div className="grid gap-3 w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] p-2">
               <div className="row-span-3">
                 <div className="flex h-full w-full select-none flex-col justify-end bg-[#2a2a2a] p-2 border border-[#444] text-left hover:bg-[#333] transition-colors">
                   <div className="mb-2 text-lg font-mono text-[#FACC15] tracking-widest">
@@ -59,7 +59,10 @@ export default function HeaderNavMenu() {
                 <NavigationMenuLink asChild>
                   <Link
                     href="/"
-                    className="block select-none space-y-1 rounded-md p-3 font-mono text-gray-300 hover:text-[#FACC15]"
+                    className={cn(
+                      "block select-none space-y-1 rounded-md p-3 font-mono text-gray-300 hover:text-[#FACC15]",
+                      useActivePath("/") ? "!text-[#FACC15]" : ""
+                    )}
                   >
                     <div className="text-sm font-medium leading-none">
                       Recruitment Assistant

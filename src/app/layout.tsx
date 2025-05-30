@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Roboto, Prompt } from "next/font/google";
 import "./globals.css";
 
@@ -14,16 +14,7 @@ const prompt = Prompt({
   variable: "--font-prompt",
 });
 
-export const metadata: Metadata = {
-  title: "Arknights Recruitment",
-  description: "Tag-based Operator Matching",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={`${roboto.variable} ${prompt.variable} antialiased`}>
