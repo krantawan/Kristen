@@ -3,7 +3,78 @@
 
 declare const messages: {
   "LocaleLayout": {
-    "title": "My Page Title"
+    "title": "Kristen Assistant"
+  },
+  "header": {
+    "menu": {
+      "home": "Home",
+      "tools": "Tools",
+      "about": "About",
+      "events": "Events",
+      "events_desc": "Event timeline for Arknights",
+      "tools_desc": "Accessing system modules...",
+      "tools_desc2": "Tools available for operator scan, event scheduling, and mission logging.",
+      "recruitment": "Recruitment",
+      "recruitment_desc": "Recruitment Assistant for Arknights",
+      "about_project": "About This Project",
+      "about_project_desc": "An Arknights-inspired recruitment and event tracking tool.",
+      "devlog": "Developer Log",
+      "devlog_desc": "Insights and motivations behind each feature.",
+      "switch_to_light_mode": "Switch to Light Mode",
+      "switch_to_dark_mode": "Switch to Dark Mode"
+    }
+  },
+  "components": {
+    "RecruitmentPage": {
+      "tag": {
+        "select_tag": "SELECT TAG",
+        "clear": "Clear",
+        "labelGroup": {
+          "Class": "Class",
+          "Range": "Range",
+          "Top Tier": "Top Tier",
+          "Trait Tags": "Trait Tags",
+          "Rarity": "Rarity",
+          "Tag Tier": "Tag Tier"
+        }
+      },
+      "upload": {
+        "title": "PRTS :: TAG-ANALYSIS",
+        "main_upload": "FEED OPERATOR IMAGE",
+        "signal": "SIGNAL : AWAITING INPUT...",
+        "paste_or_drag": "PASTE OR DRAG FILE TO BEGIN ANALYSIS",
+        "analysis_in_progress": "ANALYSIS IN PROGRESS... [DECRYPTING TAGS]",
+        "input_received": "INPUT RECEIVED",
+        "version": "BETA",
+        "clear": "Clear"
+      },
+      "tagGroupSection": {
+        "TAG OPERATOR": "TAG OPERATOR"
+      },
+      "operatorList": {
+        "OPERATOR POSSIBILITY": "OPERATOR POSSIBILITY"
+      }
+    },
+    "EventPage": {
+      "header_title": "PRTS EVENT TIMELINE SYSTEM",
+      "header_description": "Track ongoing Arknights events and strategic timelines.",
+      "event_title": "Events",
+      "day": "day",
+      "remaining": "remaining",
+      "event": {
+        "remaining_format": "{days} day{s} remaining",
+        "type": "{type, select, cc {CC} main {Main Story} side {Side Story} other {Other} }"
+      },
+      "event_summary": {
+        "event_summary_ongoing": "Ongoing Events",
+        "event_summary_incoming": "Incoming Events",
+        "event_summary_command_log": "Command Log",
+        "event_summary_command_log_desc": "No command log",
+        "remaining_format": "{days} day{days, plural, one {} other {s}} remaining",
+        "starts_in_format": "Starts in {days} day{days, plural, one {} other {s}}",
+        "today": "Today"
+      }
+    }
   }
 };
 export default messages;

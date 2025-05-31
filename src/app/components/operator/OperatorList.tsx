@@ -6,6 +6,7 @@ import operatorData from "@/data/operators.json";
 import { cn } from "@/lib/utils";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Terminal } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type Operator = {
   name: string;
@@ -55,6 +56,7 @@ function getMatchingTagGroups(
 }
 
 export default function OperatorList({ title, selectedTags }: Props) {
+  const t = useTranslations("components.RecruitmentPage.operatorList");
   const preparedOperators = operatorData.map((op: Operator) => ({
     ...op,
     tags: [...op.tags, `${op.stars}★`],
@@ -71,7 +73,7 @@ export default function OperatorList({ title, selectedTags }: Props) {
           <div className="h-1 w-6 bg-[#802520]" />
         </div>
         <h2 className="text-2xl font-black tracking-tight font-roboto">
-          {title}
+          {t(title)}
         </h2>
       </div>
 

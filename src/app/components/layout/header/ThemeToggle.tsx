@@ -7,6 +7,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useTranslations } from "next-intl";
 
 type Props = {
   isDarkMode: boolean;
@@ -14,13 +15,13 @@ type Props = {
 };
 
 export default function ThemeToggle({ isDarkMode, toggleTheme }: Props) {
+  const t = useTranslations("header.menu");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Prevent hydration mismatch
   if (!mounted) return null;
 
   return (
@@ -39,7 +40,7 @@ export default function ThemeToggle({ isDarkMode, toggleTheme }: Props) {
         </button>
       </TooltipTrigger>
       <TooltipContent side="bottom">
-        {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        {isDarkMode ? t("switch_to_light_mode") : t("switch_to_dark_mode")}
       </TooltipContent>
     </Tooltip>
   );

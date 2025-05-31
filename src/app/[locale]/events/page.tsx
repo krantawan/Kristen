@@ -7,8 +7,10 @@ import EventTimeline from "@/app/components/event/EventTimeline";
 import EventSummarySection from "@/app/components/event/EventSummarySection";
 import EventCurrentBanner from "@/app/components/event/EventCurrentBanner";
 import PRTSSystemHeader from "@/components/ui/PRTSSystemHeader";
+import { useTranslations } from "next-intl";
 
 export default function EventsPage() {
+  const t = useTranslations("components.EventPage");
   return (
     <>
       <Header />
@@ -17,8 +19,8 @@ export default function EventsPage() {
           version="v2.3"
           user="KRISTEN"
           status="MAINTENANCE"
-          title=">> PRTS EVENT TIMELINE SYSTEM"
-          description="Track ongoing Arknights events and strategic timelines."
+          title={">> " + t("header_title")}
+          description={t("header_description")}
         />
         <EventCurrentBanner />
 

@@ -1,4 +1,5 @@
 import TagButton from "@/app/components/tag/TagButton";
+import { useTranslations } from "next-intl";
 
 export default function TagGroupSection({
   title,
@@ -9,6 +10,7 @@ export default function TagGroupSection({
   tags: string[];
   onRemoveTag: (tag: string) => void;
 }) {
+  const t = useTranslations("components.RecruitmentPage.tagGroupSection");
   return (
     <section className="mb-5 mt-2 p-2 ">
       {/* Header Bar */}
@@ -20,7 +22,7 @@ export default function TagGroupSection({
 
       {/* Title */}
       <h2 className="text-2xl font-black tracking-tight mb-2 font-roboto">
-        {title}
+        {t(title)}
       </h2>
 
       {/* Tag Buttons */}

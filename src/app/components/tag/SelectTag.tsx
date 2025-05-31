@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { CollapsibleButton } from "@/components/ui/collapsible-button";
 import { tagGroups } from "@/data/tagGroups";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 type Props = {
   selectedTags: string[];
@@ -37,10 +39,17 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
     );
   }, [setSelectedTags]);
 
+  const t = useTranslations("components.RecruitmentPage.tag");
+
+  const locale = useLocale();
+  const fontClass = locale === "th" ? "" : "font-semibold";
+
   return (
-    <CollapsibleButton title="SELECT TAG" defaultOpen={true}>
+    <CollapsibleButton title={t("select_tag")} defaultOpen={true}>
       <div className="p-4">
-        <div className="flex flex-wrap gap-3 mb-4 items-center justify-between w-full">
+        <div
+          className={`flex flex-wrap gap-3 mb-4 items-center justify-between w-full ${fontClass}`}
+        >
           <div className="flex flex-wrap gap-3">
             {allGroupLabels.map((label) => (
               <label
@@ -53,21 +62,22 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
                   onChange={() => toggleGroup(label)}
                   className="accent-[#BEC93B]"
                 />
-                {label}
+                {t(`labelGroup.${label}`)}
               </label>
             ))}
           </div>
 
           <button
             onClick={() => setSelectedTags([])}
-            className={`px-4 py-1 rounded text-sm font-semibold transition-all duration-100
+            className={`px-4 py-1 rounded text-sm transition-all duration-100
             ${
               selectedTags.length > 0
                 ? "bg-[#802520] hover:bg-[#802520c7] text-white opacity-100"
                 : "opacity-0 pointer-events-none"
-            }`}
+            }
+            `}
           >
-            Clear
+            {t("clear")}
           </button>
         </div>
         {visibleGroups.length > 0 && (
@@ -76,15 +86,15 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
               .filter((group) => visibleGroups.includes(group.label))
               .map((group) => (
                 <div key={group.label}>
-                  <p className="text-sm font-bold text-[#BEC93B] mb-1">
-                    {group.label}
+                  <p className={`text-sm text-[#BEC93B] mb-1 ${fontClass}`}>
+                    {t(`labelGroup.${group.label}`)}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {group.tags.map((tag) => (
                       <button
                         key={tag}
                         onClick={() => toggleTag(tag)}
-                        className={`px-4 py-2 font-bold text-sm rounded ${
+                        className={`px-4 py-2 ${fontClass} text-sm rounded ${
                           selectedTags.includes(tag)
                             ? tag === "Top Operator"
                               ? "bg-[#FFD802] text-black"

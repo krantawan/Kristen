@@ -49,9 +49,7 @@ export default function OperatorItem({
       }}
     >
       <div className="h-full flex flex-col">
-        {/* กล่องรูปภาพ + ดาว + ชื่อ */}
         <div className="relative w-[110px] h-[110px]">
-          {/* ⭐ ดาวบนหัว */}
           {stars > 0 && (
             <div className="absolute top-0 left-0 right-0 flex justify-center mt-[-16px] z-10 pointer-events-none">
               {Array.from({ length: stars }).map((_, i) => (
@@ -66,7 +64,6 @@ export default function OperatorItem({
             </div>
           )}
 
-          {/* รูปภาพ */}
           <Image
             src={image}
             alt={`${name} ${stars}★`}
@@ -76,15 +73,12 @@ export default function OperatorItem({
             className="object-cover rounded-t-md"
           />
 
-          {/* ชื่อทับรูป */}
           <div
             className={`absolute bottom-0 w-full bg-black/40 text-white font-bold font-roboto text-sm text-center ${hoverTextColor[stars]} transition-all duration-300`}
           >
             {name}
           </div>
         </div>
-
-        {/* เส้นขอบล่าง */}
         <div
           className="h-[3px] w-[calc(100%-4px)] mx-auto rounded-b-md transition-all duration-300"
           style={{ backgroundColor: borderColor }}

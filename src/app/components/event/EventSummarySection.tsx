@@ -4,6 +4,7 @@ import { EventSection } from "@/components/ui/EventSection";
 import { useEffect, useMemo, useState } from "react";
 import eventsDataRaw from "@/data/events.json";
 import { differenceInDays, formatDistanceToNow } from "date-fns";
+import { useTranslations } from "next-intl";
 
 const eventsData = eventsDataRaw as {
   title: string;
@@ -14,6 +15,7 @@ const eventsData = eventsDataRaw as {
 }[];
 
 export default function EventSummarySection() {
+  const t = useTranslations("components.EventPage.event_summary");
   useEffect(() => {
     setNow(new Date());
   }, []);
@@ -42,24 +44,24 @@ export default function EventSummarySection() {
     <div className="border-t-5 border-[#BEC93B] border-b-5 bg-[#1b1b1b]">
       <div className="grid grid-cols-1 md:grid-cols-3 px-1 pb-5">
         <EventSection
-          title="Ongoing Missions"
+          title={t("event_summary_ongoing")}
           titleColor="text-[#e1fa52]"
           borderColor="border-[#e1fa52]"
           events={currentEvents}
           getStatusText={(e) => {
             const d = differenceInDays(new Date(e.end), now);
-            return `${d} day${d !== 1 ? "s" : ""} remaining`;
+            return d === 0 ? t("today") : t("remaining_format", { days: d });
           }}
         />
 
         <EventSection
-          title="Incoming Operations"
+          title={t("event_summary_incoming")}
           titleColor="text-[#fa9e52]"
           borderColor="border-[#fa9e52]"
           events={upcomingEvents}
           getStatusText={(e) => {
             const d = differenceInDays(new Date(e.start), now);
-            return `Starts in ${d} day${d !== 1 ? "s" : ""}`;
+            return d === 0 ? t("today") : t("starts_in_format", { days: d });
           }}
         />
 
@@ -71,11 +73,13 @@ export default function EventSummarySection() {
               <div className="h-1 w-6 bg-[#802520]" />
             </div>
             <h2 className="text-2xl font-black tracking-tight font-roboto text-[#8a8a8a] uppercase">
-              Command Log
+              {t("event_summary_command_log")}
             </h2>
           </div>
           <div className="p-0 rounded-b">
-            <p className="text-gray-400 text-sm italic">~$ No command log</p>
+            <p className="text-gray-400 text-sm italic">
+              ~$ {t("event_summary_command_log_desc")}
+            </p>
           </div>
         </div>
       </div>

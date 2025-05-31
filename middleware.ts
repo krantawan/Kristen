@@ -6,6 +6,5 @@ export default createMiddleware({
 });
 
 export const config = {
-  // ⬅️ ต้องครอบคลุม root path "/"
   matcher: ["/((?!_next|.*\\..*).*)"],
 };

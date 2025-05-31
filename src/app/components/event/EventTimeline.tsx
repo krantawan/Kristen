@@ -5,6 +5,7 @@ import { eachDayOfInterval, format, parseISO, startOfDay } from "date-fns";
 import EventBar from "@/app/components/event/EventBar";
 import eventsDataRaw from "@/data/events.json";
 import TimeIndicator from "./TimeIndicator";
+import { useTranslations } from "next-intl";
 
 type Event = {
   title: string;
@@ -19,6 +20,7 @@ const eventsData = eventsDataRaw as Event[];
 export default function EventTimeline() {
   const [events, setEvents] = useState<Event[]>([]);
   const [dateRange, setDateRange] = useState<Date[]>([]);
+  const t = useTranslations("components.EventPage");
 
   useEffect(() => {
     const startDates = eventsData.map((e) => startOfDay(parseISO(e.start)));
@@ -52,7 +54,7 @@ export default function EventTimeline() {
 
         {/* Title */}
         <h2 className="text-3xl font-black tracking-tight mb-2 font-roboto text-white">
-          Events
+          {t("event_title")}
         </h2>
       </div>
       <div className="overflow-x-auto bg-white dark:bg-zinc-900 px-2 sm:px-4 min-w-[350px]">
@@ -73,9 +75,15 @@ export default function EventTimeline() {
                 className="flex flex-col items-center gap-[2px] pt-[6px]"
               >
                 {!isFirstOfMonth ? (
-                  <span className="text-[10px] text-gray-400 font-normal">
-                    {format(date, "EEEEEE")}
-                  </span>
+                  isToday ? (
+                    <span className="text-[10px] text-red-600 font-normal">
+                      {format(date, "EEEEEE")}
+                    </span>
+                  ) : (
+                    <span className="text-[10px] text-gray-400 font-normal">
+                      {format(date, "EEEEEE")}
+                    </span>
+                  )
                 ) : null}
 
                 {isFirstOfMonth ? (
@@ -87,7 +95,7 @@ export default function EventTimeline() {
                 <span
                   className={`text-[13px] leading-none ${
                     isToday
-                      ? "bg-red-100 text-red-600 font-bold px-1 rounded"
+                      ? "text-red-600 font-bold rounded"
                       : "text-gray-800 dark:text-gray-100"
                   }`}
                 >
