@@ -52,6 +52,20 @@ export function CollapsibleButton({
     }
   }, [isOpen, updateHeight]);
 
+  React.useEffect(() => {
+    if (isOpen) {
+      updateHeight();
+    }
+  }, [children, isOpen, updateHeight]);
+
+  React.useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div
       className={cn(

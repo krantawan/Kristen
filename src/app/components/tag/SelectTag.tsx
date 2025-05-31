@@ -6,7 +6,7 @@ import { tagGroups } from "@/data/tagGroups";
 
 type Props = {
   selectedTags: string[];
-  setSelectedTags: (tags: string[]) => void;
+  setSelectedTags: React.Dispatch<React.SetStateAction<string[]>>;
 };
 
 export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
@@ -32,10 +32,10 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
   };
 
   useEffect(() => {
-    if (!selectedTags.includes("Top Operator")) {
-      setSelectedTags([...selectedTags, "Top Operator"]);
-    }
-  }, [selectedTags, setSelectedTags]);
+    setSelectedTags((prev: string[]) =>
+      prev.includes("Top Operator") ? prev : [...prev, "Top Operator"]
+    );
+  }, [setSelectedTags]);
 
   return (
     <CollapsibleButton title="SELECT TAG" defaultOpen={true}>

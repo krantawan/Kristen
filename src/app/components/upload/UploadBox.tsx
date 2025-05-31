@@ -28,7 +28,9 @@ export default function UploadBox({ onDetectTags }: Props) {
 
   const runRoboflowModel = useCallback(
     async (file: File) => {
+      //console.log("File received in model:", file);
       setIsProcessing(true);
+      setFile(file);
 
       const toBase64 = (file: File): Promise<string> =>
         new Promise((resolve, reject) => {
@@ -92,7 +94,6 @@ export default function UploadBox({ onDetectTags }: Props) {
         if (item.type.startsWith("image/")) {
           const blob = item.getAsFile();
           if (blob) {
-            setFile(blob);
             runRoboflowModel(blob);
           }
         }
@@ -122,8 +123,6 @@ export default function UploadBox({ onDetectTags }: Props) {
 
     const droppedFile = e.dataTransfer.files?.[0];
     if (!droppedFile) return;
-
-    setFile(droppedFile);
     runRoboflowModel(droppedFile);
   };
 
