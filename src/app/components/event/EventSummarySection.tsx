@@ -3,8 +3,9 @@
 import { EventSection } from "@/components/ui/EventSection";
 import { useEffect, useMemo, useState } from "react";
 import eventsDataRaw from "@/data/events.json";
-import { differenceInDays, formatDistanceToNow } from "date-fns";
-import { useTranslations } from "next-intl";
+import { formatDistanceToNow } from "date-fns";
+import { useTranslations, useLocale } from "next-intl";
+import { enUS, th } from "date-fns/locale"; // เพิ่ม locale
 
 const eventsData = eventsDataRaw as {
   title: string;
@@ -16,55 +17,76 @@ const eventsData = eventsDataRaw as {
 
 export default function EventSummarySection() {
   const t = useTranslations("components.EventPage.event_summary");
+  const locale = useLocale();
+  const dateLocale = locale === "th" ? th : enUS;
+
+  const [now, setNow] = useState(new Date());
+
   useEffect(() => {
     setNow(new Date());
   }, []);
 
-  const [now, setNow] = useState(new Date());
-
   const currentEvents = useMemo(() => {
-    if (!now) return [];
     return eventsData.filter(
       (e) => new Date(e.start) <= now && now <= new Date(e.end)
     );
   }, [now]);
 
   const upcomingEvents = useMemo(() => {
-    if (!now) return [];
     return eventsData.filter((e) => new Date(e.start) > now);
   }, [now]);
 
   const nextEventIn = upcomingEvents.length
     ? formatDistanceToNow(new Date(upcomingEvents[0].start), {
         addSuffix: true,
+        locale: dateLocale,
       })
     : "no upcoming schedule";
 
   return (
     <div className="border-t-5 border-[#BEC93B] border-b-5 bg-[#1b1b1b]">
       <div className="grid grid-cols-1 md:grid-cols-3 px-1 pb-5">
+        {/* Ongoing */}
         <EventSection
           title={t("event_summary_ongoing")}
           titleColor="text-[#e1fa52]"
           borderColor="border-[#e1fa52]"
           events={currentEvents}
           getStatusText={(e) => {
-            const d = differenceInDays(new Date(e.end), now);
-            return d === 0 ? t("today") : t("remaining_format", { days: d });
+            const end = new Date(e.end);
+            const rawDuration = formatDistanceToNow(end, {
+              addSuffix: false,
+              includeSeconds: false,
+              locale: dateLocale,
+            })
+              .replace(/^about\s*/, "")
+              .replace(/^ประมาณ\s*/, "");
+
+            return t("ends_in_duration", { duration: rawDuration });
           }}
         />
 
+        {/* Incoming */}
         <EventSection
           title={t("event_summary_incoming")}
           titleColor="text-[#fa9e52]"
           borderColor="border-[#fa9e52]"
           events={upcomingEvents}
           getStatusText={(e) => {
-            const d = differenceInDays(new Date(e.start), now);
-            return d === 0 ? t("today") : t("starts_in_format", { days: d });
+            const start = new Date(e.start);
+            const rawDuration = formatDistanceToNow(start, {
+              addSuffix: false,
+              includeSeconds: false,
+              locale: dateLocale,
+            })
+              .replace(/^about\s*/, "")
+              .replace(/^ประมาณ\s*/, "");
+
+            return t("starts_in_duration", { duration: rawDuration });
           }}
         />
 
+        {/* Command Log */}
         <div className="flex flex-col gap-3 px-1">
           <div className="bg-[#222] px-2 pt-3 pb-1 m-0 rounded-b">
             <div className="flex items-center mb-2">
@@ -84,7 +106,7 @@ export default function EventSummarySection() {
         </div>
       </div>
 
-      {/* Terminal Summary Section */}
+      {/* Terminal */}
       <div className="px-3 pb-6">
         <pre className="bg-[#111] p-4 rounded font-mono text-green-400 text-sm shadow-inner">
           ~$ ark.events --summary → {currentEvents.length} mission
