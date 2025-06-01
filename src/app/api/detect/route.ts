@@ -27,5 +27,6 @@ export async function POST(req: NextRequest) {
   });
 
   const data = await response.json();
+  console.log("Roboflow API result:", JSON.stringify(data, null, 2));
   return NextResponse.json(data);
 }

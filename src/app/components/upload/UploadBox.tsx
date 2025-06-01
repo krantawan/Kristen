@@ -58,7 +58,7 @@ export default function UploadBox({ onDetectTags }: Props) {
       const predictions = raw as Prediction[];
 
       const detectedTags = predictions
-        .filter((p) => p.confidence > 0.7)
+        .filter((p) => p.confidence > 0.5)
         .map((p) => p.class);
 
       const uniqueTags = Array.from(new Set(detectedTags));
