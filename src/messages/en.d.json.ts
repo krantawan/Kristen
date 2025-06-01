@@ -66,7 +66,8 @@ declare const messages: {
       "remaining": "remaining",
       "event": {
         "remaining_format": "{days} day{s} remaining",
-        "type": "{type, select, cc {CC} main {Main Story} side {Side Story} other {Other} }"
+        "type": "{type, select, cc {CC} main {Main Story} side {Side Story} other {Other} }",
+        "ended": "Ended"
       },
       "event_summary": {
         "event_summary_ongoing": "Ongoing Events",
@@ -75,7 +76,10 @@ declare const messages: {
         "event_summary_command_log_desc": "No command log",
         "remaining_format": "{days} day{days, plural, one {} other {s}} remaining",
         "starts_in_format": "Starts in {days} day{days, plural, one {} other {s}}",
-        "today": "Today"
+        "today": "Today",
+        "starts_tomorrow": "Starts tomorrow",
+        "starts_in_duration": "Starts in {duration}",
+        "ends_in_duration": "Ends in {duration}"
       }
     }
   }
