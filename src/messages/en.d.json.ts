@@ -52,7 +52,10 @@ declare const messages: {
         "TAG OPERATOR": "TAG OPERATOR"
       },
       "operatorList": {
-        "OPERATOR POSSIBILITY": "OPERATOR POSSIBILITY"
+        "OPERATOR POSSIBILITY": "OPERATOR POSSIBILITY",
+        "warning_message": "Please select at least one tag.",
+        "warning_message_no_match": "No operators match your selected tags.",
+        "operator_count": "{count, plural, one {# OPERATOR} other {# OPERATORS}}"
       }
     },
     "EventPage": {
