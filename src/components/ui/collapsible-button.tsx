@@ -8,6 +8,7 @@ interface CollapsibleButtonProps {
   title: string;
   children: React.ReactNode;
   className?: string;
+  description?: React.ReactNode;
   defaultOpen?: boolean;
 }
 
@@ -15,6 +16,7 @@ export function CollapsibleButton({
   title,
   children,
   className,
+  description,
   defaultOpen = false,
 }: CollapsibleButtonProps) {
   const [isOpen, setIsOpen] = React.useState(defaultOpen);
@@ -77,7 +79,7 @@ export function CollapsibleButton({
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "flex w-full items-center justify-between px-4 py-2 font-medium transition-colors hover:bg-[#1a1a1a]",
+          "flex w-full items-center px-4 py-2 font-medium transition-colors hover:bg-[#1a1a1a]",
           isOpen && "bg-[#1a1a1a]"
         )}
         aria-expanded={isOpen}
@@ -85,12 +87,16 @@ export function CollapsibleButton({
       >
         <span
           className={cn(
-            "text-2xl font-black tracking-tight font-roboto",
+            "text-2xl font-black tracking-tight font-roboto flex-1 text-left",
             isOpen ? "text-[#BEC93B]" : ""
           )}
         >
           {title}
         </span>
+        {description && (
+          <span className="text-xs text-[#BEC93B] mr-3">{description}</span>
+        )}
+
         <ChevronDown
           className={cn(
             "h-5 w-5 transition-transform duration-200",

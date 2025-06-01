@@ -16,7 +16,7 @@ export default function OperatorItem({
   const borderColors: Record<number, string> = {
     6: "#f59e0b",
     5: "#FFE8CD",
-    4: "#3b82f6",
+    4: "#7ea2db",
     3: "#9ca3af",
     2: "#6b7280",
     1: "#374151",
@@ -25,7 +25,7 @@ export default function OperatorItem({
   const hoverTextColor: Record<number, string> = {
     6: "group-hover:text-[#f59e0b]",
     5: "group-hover:text-[#FFE8CD]",
-    4: "group-hover:text-[#3b82f6]",
+    4: "group-hover:text-[#7ea2db]",
     3: "group-hover:text-[#9ca3af]",
     2: "group-hover:text-[#6b7280]",
     1: "group-hover:text-[#374151]",
@@ -40,6 +40,14 @@ export default function OperatorItem({
           ? "border-[#4b3d2e] hover:border-[#f59e0b] group-hover:shadow-[0_0_6px_2px_rgba(245,158,11,0.5)]"
           : stars === 5
           ? "border-[#4b3d2e] hover:border-[#FFE8CD] group-hover:shadow-[0_0_6px_2px_rgba(255,232,205,0.5)]"
+          : stars === 4
+          ? "border-[#4b3d2e] hover:border-[#7ea2db] group-hover:shadow-[0_0_6px_2px_rgba(126,162,219,0.5)]"
+          : stars === 3
+          ? "border-[#4b3d2e] hover:border-[#9ca3af] group-hover:shadow-[0_0_6px_2px_rgba(156,163,175,0.5)]"
+          : stars === 2
+          ? "border-[#4b3d2e] hover:border-[#6b7280] group-hover:shadow-[0_0_6px_2px_rgba(107,114,128,0.5)]"
+          : stars === 1
+          ? "border-[#4b3d2e] hover:border-[#374151] group-hover:shadow-[0_0_6px_2px_rgba(55,65,81,0.5)]"
           : "border-[#4b3d2e] hover:border-orange-400"
       }`}
       title={`${name} (${stars}★)`}
