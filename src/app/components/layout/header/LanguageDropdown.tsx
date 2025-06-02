@@ -8,19 +8,16 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown, Globe } from "lucide-react";
 
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
-import { routing } from "@/i18n/routing";
 
 export default function LanguageDropdown() {
   const router = useRouter();
-  const pathname = usePathname();
   const locale = useLocale();
 
   function switchLocale(to: string) {
-    const localePattern = new RegExp(`^/(${routing.locales.join("|")})`);
-    const pathWithoutLocale = pathname.replace(localePattern, "");
-    router.replace(`/${to}${pathWithoutLocale || "/"}`);
+    document.cookie = `NEXT_LOCALE=${to}; path=/`;
+    router.refresh();
   }
 
   return (

@@ -15,13 +15,6 @@ import { useActivePath } from "@/components/ui/useActivePath";
 import { useLocale } from "next-intl";
 import { useTranslations } from "next-intl";
 
-function localizedPath(locale: string, path: string) {
-  const cleaned = path.startsWith(`/${locale}`)
-    ? path.slice(locale.length + 1)
-    : path;
-  return path === "/" ? `/${locale}` : `/${locale}${cleaned}`;
-}
-
 export default function HeaderNavMenu() {
   const locale = useLocale();
   const t = useTranslations("header.menu");
@@ -34,7 +27,7 @@ export default function HeaderNavMenu() {
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Link
-              href={localizedPath(locale, "/")}
+              href={"/"}
               className={cn(
                 "inline-flex h-10 items-center justify-center px-4 py-2 text-sm font-medium transition-colors",
                 fontClass,
@@ -78,7 +71,7 @@ export default function HeaderNavMenu() {
               <div className="grid gap-1">
                 <NavigationMenuLink asChild>
                   <Link
-                    href={localizedPath(locale, "/")}
+                    href={"/"}
                     className={cn(
                       "block select-none space-y-1 rounded-md p-3 text-gray-300 hover:text-[#FACC15]",
                       fontClass,
@@ -101,7 +94,7 @@ export default function HeaderNavMenu() {
 
                 <NavigationMenuLink asChild>
                   <Link
-                    href={localizedPath(locale, "/events")}
+                    href={"/events"}
                     className={cn(
                       "block select-none space-y-1 rounded-md p-3 text-gray-300 hover:text-[#FACC15]",
                       fontClass,
@@ -146,7 +139,7 @@ export default function HeaderNavMenu() {
               ].map((item) => (
                 <NavigationMenuLink asChild key={item.href}>
                   <Link
-                    href={localizedPath(locale, item.href)}
+                    href={item.href}
                     className={cn(
                       "block select-none space-y-1 rounded-md p-3 text-gray-300 hover:text-[#FACC15]",
                       fontClass
