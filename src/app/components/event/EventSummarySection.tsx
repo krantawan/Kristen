@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import eventsDataRaw from "@/data/events.json";
 import { formatDistanceToNow } from "date-fns";
 import { useTranslations, useLocale } from "next-intl";
-import { enUS, th } from "date-fns/locale"; // เพิ่ม locale
+import { getDateLocale } from "@/lib/date/getDateLocale";
 
 const eventsData = eventsDataRaw as {
   title: string;
@@ -18,7 +18,7 @@ const eventsData = eventsDataRaw as {
 export default function EventSummarySection() {
   const t = useTranslations("components.EventPage.event_summary");
   const locale = useLocale();
-  const dateLocale = locale === "th" ? th : enUS;
+  const dateLocale = getDateLocale(locale);
 
   const [now, setNow] = useState(new Date());
 
@@ -38,9 +38,12 @@ export default function EventSummarySection() {
 
   const nextEventIn = upcomingEvents.length
     ? formatDistanceToNow(new Date(upcomingEvents[0].start), {
-        addSuffix: true,
+        addSuffix: false,
+        includeSeconds: false,
         locale: dateLocale,
       })
+        .replace(/^about\s*/, "")
+        .replace(/^ประมาณ\s*/, "")
     : "no upcoming schedule";
 
   return (
@@ -111,7 +114,7 @@ export default function EventSummarySection() {
         <pre className="bg-[#111] p-4 rounded font-mono text-green-400 text-sm shadow-inner">
           ~$ ark.events --summary → {currentEvents.length} mission
           {currentEvents.length !== 1 ? "s" : ""} in progress → Next operation
-          begins {nextEventIn}
+          begins in {nextEventIn}
         </pre>
       </div>
     </div>

@@ -5,12 +5,14 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import {
   differenceInDays,
-  differenceInCalendarDays,
+  formatDistanceToNow,
   isBefore,
   isAfter,
   isWithinInterval,
   parseISO,
 } from "date-fns";
+import { useRef } from "react";
+import { getDateLocale } from "@/lib/date/getDateLocale";
 
 const eventsData = eventsDataRaw as {
   title: string;
@@ -24,6 +26,9 @@ export default function EventCurrentBanner() {
   const t = useTranslations("components.EventPage");
   const locale = useLocale();
   const now = new Date();
+  const bannerRef = useRef<HTMLDivElement>(null);
+
+  const dateLocale = getDateLocale(locale);
 
   const ongoingEvents = eventsData.filter((e) =>
     isWithinInterval(now, { start: parseISO(e.start), end: parseISO(e.end) })
@@ -54,6 +59,7 @@ export default function EventCurrentBanner() {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
+      ref={bannerRef}
     >
       {/* Left: Current / Last Event */}
       <div className="relative h-[300px]">
@@ -105,10 +111,26 @@ export default function EventCurrentBanner() {
           </div>
           <div className="flex flex-col gap-1">
             {upcomingEvents.map((event) => {
-              const daysLeft = differenceInCalendarDays(
-                parseISO(event.start),
-                new Date()
-              );
+              const startDate = parseISO(event.start);
+              const dayDiff = differenceInDays(startDate, now);
+
+              let statusText = "";
+              if (dayDiff === 1) {
+                statusText = t("event_summary.starts_tomorrow");
+              } else {
+                const rawDuration = formatDistanceToNow(startDate, {
+                  addSuffix: false,
+                  includeSeconds: false,
+                  locale: dateLocale,
+                })
+                  .replace(/^about\s*/, "")
+                  .replace(/^\u0e1b\u0e23\u0e30\u0e21\u0e32\u0e13\s*/, "");
+
+                statusText = t("event_summary.starts_in_duration", {
+                  duration: rawDuration,
+                });
+              }
+
               return (
                 <div
                   key={event.title + event.start}
@@ -129,15 +151,7 @@ export default function EventCurrentBanner() {
                     >
                       {event.title}
                     </div>
-                    <div className="text-gray-400 text-xs">
-                      {daysLeft === 0
-                        ? t("event_summary.today")
-                        : daysLeft === 1
-                        ? t("event_summary.starts_tomorrow")
-                        : t("event_summary.starts_in_format", {
-                            days: daysLeft,
-                          })}
-                    </div>
+                    <div className="text-gray-400 text-xs">{statusText}</div>
                   </div>
                 </div>
               );

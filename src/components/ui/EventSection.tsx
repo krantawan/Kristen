@@ -1,5 +1,9 @@
 "use client";
 
+import { format, parseISO } from "date-fns";
+import { useLocale } from "next-intl";
+import { enUS, th } from "date-fns/locale";
+
 const eventsData = [] as {
   title: string;
   start: string;
@@ -23,6 +27,12 @@ export function EventSection({
   events,
   getStatusText,
 }: SectionProps) {
+  const locale = useLocale();
+  const dateLocale = locale === "th" ? th : enUS;
+
+  const formatDate = (dateStr: string) =>
+    format(parseISO(dateStr), "d MMM yyyy", { locale: dateLocale });
+
   return (
     <div className="flex flex-col gap-3 px-1">
       <div className="bg-[#222] px-2 pt-3 pb-1 m-0 rounded-b">
@@ -54,15 +64,15 @@ export function EventSection({
                 <span
                   className={`absolute top-1 right-1 text-[10px] px-2 py-[2px] rounded uppercase font-bold shadow
                     ${e.type === "main" ? "bg-[#802520] text-white" : ""}
-    ${e.type === "cc" ? "bg-[#BEC93B] text-black" : ""}
-    ${e.type === "side" ? "bg-[#F6B347] text-black" : ""}
+                    ${e.type === "cc" ? "bg-[#BEC93B] text-black" : ""}
+                    ${e.type === "side" ? "bg-[#F6B347] text-black" : ""}
                   `}
                 >
                   {e.type}
                 </span>
                 <div className="font-semibold text-sm">{e.title}</div>
                 <div className="text-xs text-gray-200">
-                  {e.start} – {e.end}
+                  {formatDate(e.start)} – {formatDate(e.end)}
                 </div>
                 <div className="text-xs mt-1 text-yellow-300">
                   {getStatusText(e)}
