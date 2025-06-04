@@ -5,53 +5,14 @@ import OperatorItem from "./OperatorItem";
 import operatorData from "@/data/operators.json";
 import { cn } from "@/lib/utils";
 import { useTranslations, useLocale } from "next-intl";
-
-type Operator = {
-  name: string;
-  tags: string[];
-  image: string;
-  stars: number;
-};
+import type { Operator } from "@/lib/operator-utils";
+import { getMatchingTagGroups } from "@/lib/operator-utils";
 
 type Props = {
   title: string;
   selectedTags: string[];
 };
 
-function getCombinations(tags: string[]): string[][] {
-  const results: string[][] = [];
-  const backtrack = (start: number, path: string[]) => {
-    if (path.length > 0) results.push([...path]);
-    for (let i = start; i < tags.length; i++) {
-      path.push(tags[i]);
-      backtrack(i + 1, path);
-      path.pop();
-    }
-  };
-  backtrack(0, []);
-  return results;
-}
-
-function getMatchingTagGroups(
-  operators: Operator[],
-  selectedTags: string[]
-): Record<string, Operator[]> {
-  const groups: Record<string, Operator[]> = {};
-
-  const tagCombos = getCombinations(selectedTags);
-
-  tagCombos.forEach((combo) => {
-    const comboKey = combo.sort().join(" + ");
-    const matched = operators.filter((op) =>
-      combo.every((tag) => op.tags.includes(tag))
-    );
-    if (matched.length > 0) {
-      groups[comboKey] = matched;
-    }
-  });
-
-  return groups;
-}
 
 export default function OperatorList({ title, selectedTags }: Props) {
   const t = useTranslations("components.RecruitmentPage.operatorList");
