@@ -79,7 +79,8 @@ declare const messages: {
         "today": "Today",
         "starts_tomorrow": "Starts tomorrow",
         "starts_in_duration": "Starts in {duration}",
-        "ends_in_duration": "Ends in {duration}"
+        "ends_in_duration": "Ends in {duration}",
+        "no_events": "Awaiting next mission deployment..."
       }
     }
   }

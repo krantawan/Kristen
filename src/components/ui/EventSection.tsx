@@ -3,6 +3,8 @@
 import { format, parseISO } from "date-fns";
 import { useLocale } from "next-intl";
 import { enUS, th } from "date-fns/locale";
+import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 const eventsData = [] as {
   title: string;
@@ -29,6 +31,7 @@ export function EventSection({
 }: SectionProps) {
   const locale = useLocale();
   const dateLocale = locale === "th" ? th : enUS;
+  const t = useTranslations("components.EventPage.event_summary");
 
   const formatDate = (dateStr: string) =>
     format(parseISO(dateStr), "d MMM yyyy", { locale: dateLocale });
@@ -62,11 +65,23 @@ export function EventSection({
             >
               <div className="backdrop-blur-sm bg-black/40 p-2 rounded">
                 <span
-                  className={`absolute top-1 right-1 text-[10px] px-2 py-[2px] rounded uppercase font-bold shadow
-                    ${e.type === "main" ? "bg-[#802520] text-white" : ""}
-                    ${e.type === "cc" ? "bg-[#BEC93B] text-black" : ""}
-                    ${e.type === "side" ? "bg-[#F6B347] text-black" : ""}
-                  `}
+                  className={cn(
+                    "absolute top-1 right-1 text-[10px] px-2 py-[2px] rounded uppercase font-bold shadow",
+                    {
+                      "bg-red-700 text-white": e.type === "main",
+                      "bg-lime-700 text-black": e.type === "cc",
+                      "bg-yellow-600 text-black": e.type === "side",
+                      "bg-blue-800 text-white": e.type === "kernel",
+                      "bg-purple-700 text-white": e.type === "gacha",
+                      "bg-neutral-600 text-white": ![
+                        "main",
+                        "cc",
+                        "side",
+                        "kernel",
+                        "gacha",
+                      ].includes(e.type),
+                    }
+                  )}
                 >
                   {e.type}
                 </span>
@@ -81,7 +96,7 @@ export function EventSection({
             </div>
           ))
         ) : (
-          <p className="text-gray-400 text-sm italic">No events available.</p>
+          <p className="text-gray-400 text-sm italic">{t("no_events")}.</p>
         )}
       </div>
     </div>
