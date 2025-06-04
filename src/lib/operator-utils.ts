@@ -1,8 +1,8 @@
 export interface Operator {
   name: string;
   tags: string[];
-  image?: string;
-  stars?: number;
+  image: string;
+  stars: number;
 }
 
 export function getCombinations(tags: string[]): string[][] {
