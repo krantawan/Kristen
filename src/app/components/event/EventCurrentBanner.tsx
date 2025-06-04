@@ -53,8 +53,6 @@ export default function EventCurrentBanner() {
       const startDate = parseISO(e.start);
       const isUpcoming = isAfter(startDate, now);
       const dayDiff = differenceInDays(startDate, now);
-      // ถ้าเป็น gacha หรืออื่นๆ => แสดงได้เลย
-      // ถ้าเป็น main/side/cc => แสดงเฉพาะ dayDiff > 1
       if (!isUpcoming) return false;
       if (mainTypesOnly.includes(e.type)) {
         return dayDiff > 1;
@@ -63,23 +61,30 @@ export default function EventCurrentBanner() {
     })
     .sort((a, b) => parseISO(a.start).getTime() - parseISO(b.start).getTime());
 
-  const startDate = parseISO(upcomingEventsForMain[0]?.start ?? "");
-  const dayDiff = differenceInDays(startDate, now);
+  const nextMainStart = parseISO(upcomingEventsForMain[0]?.start ?? "");
+  const isWithin24h =
+    nextMainStart.getTime() > now.getTime() &&
+    nextMainStart.getTime() - now.getTime() <= 86_400_000;
 
-  let displayedEvent;
-  if (dayDiff === 1) {
-    displayedEvent = upcomingEventsForMain[0];
-  } else {
-    displayedEvent = ongoingEvents[0] || pastEvents[0];
-  }
-
-  const isOngoing = Boolean(ongoingEvents.length);
+  const displayedEvent = isWithin24h
+    ? upcomingEventsForMain[0]
+    : ongoingEvents[0] || pastEvents[0];
 
   if (!displayedEvent) return null;
 
-  const remainingDays = isOngoing
-    ? differenceInDays(parseISO(displayedEvent.end), now)
-    : 0;
+  const isOngoing = isWithinInterval(now, {
+    start: parseISO(displayedEvent.start),
+    end: parseISO(displayedEvent.end),
+  });
+
+  const statusText = getEventStatusText(
+    displayedEvent.start,
+    now,
+    locale,
+    t,
+    isOngoing,
+    displayedEvent.end
+  );
 
   return (
     <div
@@ -115,19 +120,10 @@ export default function EventCurrentBanner() {
             </div>
             <div
               className={`mt-1 text-sm ${
-                isOngoing ? "text-green-300" : "text-red-300"
+                isOngoing ? "text-green-300" : "text-yellow-300"
               }`}
             >
-              {isOngoing
-                ? "→ " +
-                  t("event.remaining_format", {
-                    days: remainingDays,
-                    s: remainingDays === 1 ? "" : "s",
-                  })
-                : "→ " +
-                  (dayDiff === 1
-                    ? t("event_summary.starts_tomorrow")
-                    : t("event.ended"))}
+              → {statusText}
             </div>
           </div>
         </div>
@@ -154,7 +150,6 @@ export default function EventCurrentBanner() {
                 locale,
                 t
               );
-
               const isCompact = upcomingEvents.length > 1 && index > 0;
 
               return isCompact ? (
