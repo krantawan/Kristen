@@ -44,15 +44,18 @@ export default function EventSummarySection() {
       );
   }, [now]);
 
-  const nextEventIn = upcomingEvents.length
-    ? formatDistanceToNow(new Date(upcomingEvents[0].start), {
-        addSuffix: false,
-        includeSeconds: false,
-        locale: dateLocale,
-      })
-        .replace(/^about\s*/, "")
-        .replace(/^ประมาณ\s*/, "")
-    : "no upcoming schedule";
+  const nextEventIn = useMemo(() => {
+    if (!upcomingEvents.length) return "no upcoming schedule";
+
+    return formatDistanceToNow(new Date(upcomingEvents[0].start), {
+      addSuffix: false,
+      includeSeconds: false,
+      locale: dateLocale,
+    })
+      .replace(/^about\s*/, "")
+      .replace(/^ประมาณ\s*/, "");
+    // eslint-disable-next-line
+  }, [now, upcomingEvents, dateLocale]);
 
   return (
     <div className="border-t-5 border-[#BEC93B] border-b-5 bg-[#1b1b1b]">
