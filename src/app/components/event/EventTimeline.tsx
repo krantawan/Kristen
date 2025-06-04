@@ -17,9 +17,23 @@ type Event = {
 
 const eventsData = eventsDataRaw as Event[];
 
-function getUtcDay(dateString: string): Date {
-  const date = new Date(dateString);
+function getUtcDay(dateString: string | Date): Date {
+  const date = typeof dateString === "string" ? new Date(dateString) : dateString;
   return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+}
+
+function addUtcDays(date: Date, amount: number): Date {
+  const result = new Date(date);
+  result.setUTCDate(result.getUTCDate() + amount);
+  return result;
+}
+
+function eachUtcDayOfInterval(start: Date, end: Date): Date[] {
+  const days: Date[] = [];
+  for (let d = start.getTime(); d <= end.getTime(); d += 86_400_000) {
+    days.push(new Date(d));
+  }
+  return days;
 }
 
 export default function EventTimeline() {
@@ -31,16 +45,13 @@ export default function EventTimeline() {
     const startDates = eventsData.map((e) => getUtcDay(e.start));
     const endDates = eventsData.map((e) => getUtcDay(e.end));
 
-    const minDate = new Date(Math.min(...startDates.map((d) => d.getTime())));
-    const maxDate = new Date(Math.max(...endDates.map((d) => d.getTime())));
+    let minDate = new Date(Math.min(...startDates.map((d) => d.getTime())));
+    let maxDate = new Date(Math.max(...endDates.map((d) => d.getTime())));
 
-    minDate.setUTCDate(minDate.getUTCDate() - 7);
-    maxDate.setUTCDate(maxDate.getUTCDate() + 7);
+    minDate = addUtcDays(minDate, -7);
+    maxDate = addUtcDays(maxDate, 7);
 
-    const days: Date[] = [];
-    for (let d = minDate.getTime(); d <= maxDate.getTime(); d += 86400000) {
-      days.push(new Date(d));
-    }
+    const days = eachUtcDayOfInterval(minDate, maxDate);
 
     setDateRange(days);
     setEvents(eventsData);
