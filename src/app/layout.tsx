@@ -10,6 +10,15 @@ const prompt = Prompt({
   variable: "--font-prompt",
 });
 
+export const metadata = {
+  title: "Kristen Lab - Arknights Toolkit",
+  description:
+    "Kristen Lab - a terminal-inspired toolkit for Arknights analysis and operations.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   const messages = useMessages();
   const locale = useLocale();
