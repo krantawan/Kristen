@@ -33,7 +33,11 @@ export default function EventSummarySection() {
   }, [now]);
 
   const upcomingEvents = useMemo(() => {
-    return eventsData.filter((e) => new Date(e.start) > now);
+    return eventsData
+      .filter((e) => new Date(e.start) > now)
+      .sort(
+        (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime()
+      );
   }, [now]);
 
   const nextEventIn = upcomingEvents.length
