@@ -38,14 +38,14 @@ export default function EventBar({ event, dateRange }: Props) {
   const endDate = parseISO(event.end);
   const isEnded = isAfter(new Date(), endDate);
 
-  const startDay = event.start.slice(0, 10);
-  const endDay = event.end.slice(0, 10);
+  const localStartDay = startDate.toLocaleDateString("en-CA");
+  const localEndDay = endDate.toLocaleDateString("en-CA");
 
   const startIndex = dateRange.findIndex(
-    (d) => d.toISOString().slice(0, 10) === startDay
+    (d) => d.toLocaleDateString("en-CA") === localStartDay
   );
   const endIndex = dateRange.findIndex(
-    (d) => d.toISOString().slice(0, 10) === endDay
+    (d) => d.toLocaleDateString("en-CA") === localEndDay
   );
 
   if (startIndex === -1 || endIndex === -1) return null;
