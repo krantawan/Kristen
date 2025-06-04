@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { eachDayOfInterval, format, parseISO, startOfDay } from "date-fns";
+import { format } from "date-fns";
 import EventBar from "@/app/components/event/EventBar";
 import eventsDataRaw from "@/data/events.json";
 import TimeIndicator from "./TimeIndicator";
@@ -17,24 +17,41 @@ type Event = {
 
 const eventsData = eventsDataRaw as Event[];
 
+function getUtcDay(dateString: string | Date): Date {
+  const date = typeof dateString === "string" ? new Date(dateString) : dateString;
+  return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+}
+
+function addUtcDays(date: Date, amount: number): Date {
+  const result = new Date(date);
+  result.setUTCDate(result.getUTCDate() + amount);
+  return result;
+}
+
+function eachUtcDayOfInterval(start: Date, end: Date): Date[] {
+  const days: Date[] = [];
+  for (let d = start.getTime(); d <= end.getTime(); d += 86_400_000) {
+    days.push(new Date(d));
+  }
+  return days;
+}
+
 export default function EventTimeline() {
   const [events, setEvents] = useState<Event[]>([]);
   const [dateRange, setDateRange] = useState<Date[]>([]);
   const t = useTranslations("components.EventPage");
 
   useEffect(() => {
-    const startDates = eventsData.map((e) => startOfDay(parseISO(e.start)));
-    const endDates = eventsData.map((e) => startOfDay(parseISO(e.end)));
+    const startDates = eventsData.map((e) => getUtcDay(e.start));
+    const endDates = eventsData.map((e) => getUtcDay(e.end));
 
-    const minDate = new Date(Math.min(...startDates.map((d) => d.getTime())));
-    const maxDate = new Date(Math.max(...endDates.map((d) => d.getTime())));
+    let minDate = new Date(Math.min(...startDates.map((d) => d.getTime())));
+    let maxDate = new Date(Math.max(...endDates.map((d) => d.getTime())));
 
-    minDate.setDate(minDate.getDate() - 7);
-    maxDate.setDate(maxDate.getDate() + 7);
+    minDate = addUtcDays(minDate, -7);
+    maxDate = addUtcDays(maxDate, 7);
 
-    const days = eachDayOfInterval({ start: minDate, end: maxDate }).map((d) =>
-      startOfDay(new Date(d))
-    );
+    const days = eachUtcDayOfInterval(minDate, maxDate);
 
     setDateRange(days);
     setEvents(eventsData);
