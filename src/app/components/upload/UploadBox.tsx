@@ -8,7 +8,7 @@ import {
   type DragEvent,
   type ChangeEvent,
 } from "react";
-import { File, Search, X } from "lucide-react";
+import { File as FileIcon, Search, X } from "lucide-react";
 import { CollapsibleButton } from "@/components/ui/collapsible-button";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -186,7 +186,7 @@ export default function UploadBox({ onDetectTags }: Props) {
                   locale === "th" ? "" : "font-semibold"
                 }`}
               >
-                <File className="mr-2" size={16} />
+                <FileIcon className="mr-2" size={16} />
                 <span className="mr-2">{t("input_received")} ::</span>
                 <span className="uppercase">
                   {file?.name} (
