@@ -82,6 +82,14 @@ declare const messages: {
         "ends_in_duration": "Ends in {duration}",
         "no_events": "Awaiting next mission deployment..."
       }
+    },
+    "about": {
+      "project": {
+        "header_title": "About This Project",
+        "header_description": "An Arknights-inspired recruitment and event tracking tool.",
+        "developer": "Developer",
+        "special_thanks": "Special Thanks"
+      }
     }
   }
 };
