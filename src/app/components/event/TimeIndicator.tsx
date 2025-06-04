@@ -17,7 +17,6 @@ export default function TimeIndicator({ dateRange }: Props) {
   const [offsetPx, setOffsetPx] = useState(0);
   const [colorClass, setColorClass] = useState("bg-yellow-500");
   const [labelClass, setLabelClass] = useState("bg-yellow-100 text-yellow-700");
-  const [icon, setIcon] = useState("🌤️");
   const cellRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -46,29 +45,23 @@ export default function TimeIndicator({ dateRange }: Props) {
 
       let color = "bg-yellow-500";
       let label = "bg-yellow-100 text-yellow-700";
-      let currentIcon = "🌤️";
 
       if (hour < 6) {
         color = "bg-blue-600";
         label = "bg-blue-100 text-blue-800";
-        currentIcon = "🌙";
       } else if (hour < 12) {
         color = "bg-yellow-500";
         label = "bg-yellow-100 text-yellow-700";
-        currentIcon = "🌤️";
       } else if (hour < 18) {
         color = "bg-orange-500";
         label = "bg-orange-100 text-orange-800";
-        currentIcon = "🔥";
       } else {
         color = "bg-purple-600";
         label = "bg-purple-100 text-purple-700";
-        currentIcon = "🌕";
       }
 
       setColorClass(color);
       setLabelClass(label);
-      setIcon(currentIcon);
     };
 
     updateTime();
@@ -108,7 +101,7 @@ export default function TimeIndicator({ dateRange }: Props) {
           transform: `translateX(calc(-50% + ${offsetPx}px))`,
         }}
       >
-        {icon} {timeString}
+        {timeString}
       </div>
     </div>
   );

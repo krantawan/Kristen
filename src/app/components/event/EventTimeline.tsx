@@ -6,6 +6,7 @@ import EventBar from "@/app/components/event/EventBar";
 import eventsDataRaw from "@/data/events.json";
 import TimeIndicator from "./TimeIndicator";
 import { useTranslations } from "next-intl";
+import { useHorizontalDragScroll } from "@/lib/hooks/useHorizontalDragScroll";
 
 type Event = {
   title: string;
@@ -17,9 +18,11 @@ type Event = {
 
 const eventsData = eventsDataRaw as Event[];
 
-function getUtcDay(dateString: string | Date): Date {
-  const date = typeof dateString === "string" ? new Date(dateString) : dateString;
-  return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+function getUtcDay(date: string | Date): Date {
+  const d = typeof date === "string" ? new Date(date) : date;
+  return new Date(
+    Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate())
+  );
 }
 
 function addUtcDays(date: Date, amount: number): Date {
@@ -41,19 +44,19 @@ export default function EventTimeline() {
   const [dateRange, setDateRange] = useState<Date[]>([]);
   const t = useTranslations("components.EventPage");
 
+  const scrollRef = useHorizontalDragScroll<HTMLDivElement>();
+
   useEffect(() => {
     const startDates = eventsData.map((e) => getUtcDay(e.start));
     const endDates = eventsData.map((e) => getUtcDay(e.end));
 
-    let minDate = new Date(Math.min(...startDates.map((d) => d.getTime())));
-    let maxDate = new Date(Math.max(...endDates.map((d) => d.getTime())));
+    let min = new Date(Math.min(...startDates.map((d) => d.getTime())));
+    let max = new Date(Math.max(...endDates.map((d) => d.getTime())));
 
-    minDate = addUtcDays(minDate, -7);
-    maxDate = addUtcDays(maxDate, 7);
+    min = addUtcDays(min, -7);
+    max = addUtcDays(max, 7);
 
-    const days = eachUtcDayOfInterval(minDate, maxDate);
-
-    setDateRange(days);
+    setDateRange(eachUtcDayOfInterval(min, max));
     setEvents(eventsData);
   }, []);
 
@@ -62,20 +65,28 @@ export default function EventTimeline() {
   return (
     <>
       <div className="bg-[#222] px-2 pt-3 pb-1">
-        {/* Header Bar */}
         <div className="flex items-center">
           <div className="h-1 w-6 bg-[#BEC93B]" />
           <div className="h-1 w-6 bg-[#F6B347]" />
           <div className="h-1 w-6 bg-[#802520]" />
         </div>
-
-        {/* Title */}
         <h2 className="text-3xl font-black tracking-tight mb-2 font-roboto text-white">
           {t("event_title")}
         </h2>
       </div>
-      <div className="overflow-x-auto bg-white dark:bg-zinc-900 px-2 sm:px-4 min-w-[350px]">
-        {/* Header แสดงวันที่ */}
+
+      <div
+        ref={scrollRef.containerRef}
+        onMouseDown={scrollRef.onMouseDown}
+        onMouseMove={scrollRef.onMouseMove}
+        onMouseUp={scrollRef.onMouseUp}
+        onMouseLeave={scrollRef.onMouseLeave}
+        onTouchStart={scrollRef.onTouchStart}
+        onTouchMove={scrollRef.onTouchMove}
+        onTouchEnd={scrollRef.onTouchEnd}
+        className="overflow-x-auto bg-white dark:bg-zinc-900 px-2 sm:px-4 min-w-[350px] cursor-grab active:cursor-grabbing"
+      >
+        {/* Header - Dates */}
         <div
           className="grid text-xs text-gray-600 mb-2"
           style={{
@@ -91,28 +102,24 @@ export default function EventTimeline() {
                 key={date.toISOString()}
                 className="flex flex-col items-center gap-[2px] pt-[6px]"
               >
-                {!isFirstOfMonth ? (
-                  isToday ? (
-                    <span className="text-[10px] text-red-600 font-normal">
-                      {format(date, "EEEEEE")}
-                    </span>
-                  ) : (
-                    <span className="text-[10px] text-gray-400 font-normal">
-                      {format(date, "EEEEEE")}
-                    </span>
-                  )
-                ) : null}
-
-                {isFirstOfMonth ? (
+                {!isFirstOfMonth && (
+                  <span
+                    className={`text-[10px] font-normal ${
+                      isToday ? "text-red-600" : "text-gray-400"
+                    }`}
+                  >
+                    {format(date, "EEE")}
+                  </span>
+                )}
+                {isFirstOfMonth && (
                   <span className="text-[11px] text-green-600 font-semibold">
                     {format(date, "MMM")}
                   </span>
-                ) : null}
-
+                )}
                 <span
-                  className={`text-[13px] leading-none ${
+                  className={`text-[13px] ${
                     isToday
-                      ? "text-red-600 font-bold rounded"
+                      ? "text-red-600 font-bold"
                       : "text-gray-800 dark:text-gray-100"
                   }`}
                 >
@@ -123,9 +130,9 @@ export default function EventTimeline() {
           })}
         </div>
 
-        {/* แถวหลักของ Timeline */}
+        {/* Timeline */}
         <div className="space-y-2 relative pb-4">
-          {/* เส้นคั่นวันแบบเส้นประตรงกลาง */}
+          {/* Dashed Lines */}
           <div
             className="absolute inset-0 grid pointer-events-none z-0"
             style={{
@@ -135,11 +142,12 @@ export default function EventTimeline() {
             {dateRange.map((_, idx) => (
               <div
                 key={idx}
-                className="justify-self-end  w-px h-full border-r border-dashed border-gray-300 dark:border-zinc-700"
+                className="justify-self-end w-px h-full border-r border-dashed border-gray-300 dark:border-zinc-700"
               />
             ))}
           </div>
 
+          {/* Time Indicator */}
           <div
             className="absolute inset-0 grid z-[9999] pointer-events-none"
             style={{
@@ -149,7 +157,7 @@ export default function EventTimeline() {
             <TimeIndicator dateRange={dateRange} />
           </div>
 
-          {/* Event แสดงต่อบรรทัด */}
+          {/* Events */}
           {events.map((event, idx) => (
             <EventBar key={idx} event={event} dateRange={dateRange} />
           ))}

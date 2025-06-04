@@ -6,12 +6,13 @@ import {
   differenceInHours,
   isAfter,
 } from "date-fns";
+import { useTranslations } from "next-intl";
 
 type Event = {
   title: string;
   start: string;
   end: string;
-  type: "main" | "side" | "cc";
+  type: "main" | "side" | "cc" | "gacha" | "kernel";
   image?: string;
 };
 
@@ -28,12 +29,17 @@ function getEventColor(type: string) {
       return "bg-[#d4a940] text-black";
     case "cc":
       return "bg-[#5C7F71] text-white";
+    case "gacha":
+      return "bg-purple-800 text-white";
+    case "kernel":
+      return "bg-blue-800 text-white";
     default:
       return "bg-gray-400 text-white";
   }
 }
 
 export default function EventBar({ event, dateRange }: Props) {
+  const t = useTranslations("components.EventPage");
   const startDate = parseISO(event.start);
   const endDate = parseISO(event.end);
   const isEnded = isAfter(new Date(), endDate);
@@ -54,9 +60,15 @@ export default function EventBar({ event, dateRange }: Props) {
   const columnEnd = endIndex + 2;
 
   const now = new Date();
-  const remainingDays = differenceInCalendarDays(endDate, now);
-  const remainingHours = differenceInHours(endDate, now) % 24;
-  const timeRemainingText = `${remainingDays}d ${remainingHours}h`;
+
+  let timeRemainingText = "";
+  if (now >= startDate && now <= endDate) {
+    const days = differenceInCalendarDays(endDate, now);
+    const hours = differenceInHours(endDate, now) % 24;
+    timeRemainingText = `${days}d ${hours}h`;
+  } else if (now > endDate) {
+    timeRemainingText = t("event.ended");
+  }
 
   const barColor = isEnded
     ? "bg-gray-300 text-gray-600"
@@ -71,7 +83,7 @@ export default function EventBar({ event, dateRange }: Props) {
     >
       {/* Event bar */}
       <div
-        className={`relative h-6 rounded overflow-hidden text-xs font-medium shadow z-10 ${barColor}`}
+        className={`relative h-8 rounded overflow-hidden text-xs font-medium shadow z-10 ${barColor}`}
         style={{
           gridColumnStart: columnStart,
           gridColumnEnd: columnEnd,
@@ -97,8 +109,8 @@ export default function EventBar({ event, dateRange }: Props) {
         </div>
 
         {/* Remaining time bubble */}
-        {!isEnded && (
-          <span className="absolute right-1 top-1/2 -translate-y-1/2 bg-gray-200 text-black text-[11px] font-semibold rounded-full px-2 py-0.5 shadow z-20">
+        {timeRemainingText && (
+          <span className="absolute right-1 top-1/2 -translate-y-1/2 bg-gray-200 text-black text-[11px] rounded-full px-2 py-0.5 shadow z-20">
             {timeRemainingText}
           </span>
         )}

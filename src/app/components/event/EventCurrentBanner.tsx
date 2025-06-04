@@ -12,6 +12,7 @@ import {
 import { useRef } from "react";
 import EventCardCompact from "@/components/ui/EventCardCompact";
 import { getEventStatusText } from "@/lib/date/getEventStatusText";
+import { formatDateRange } from "@/lib/date/formatDateRange";
 
 const eventsData = eventsDataRaw as {
   title: string;
@@ -106,7 +107,11 @@ export default function EventCurrentBanner() {
               {displayedEvent.title}
             </div>
             <div className="text-gray-300 text-sm">
-              {displayedEvent.start} – {displayedEvent.end}
+              {formatDateRange(
+                displayedEvent.start,
+                displayedEvent.end,
+                locale
+              )}
             </div>
             <div
               className={`mt-1 text-sm ${

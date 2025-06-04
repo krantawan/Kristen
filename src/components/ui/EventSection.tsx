@@ -1,10 +1,9 @@
 "use client";
 
-import { format, parseISO } from "date-fns";
 import { useLocale } from "next-intl";
-import { enUS, th } from "date-fns/locale";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { formatDateRange } from "@/lib/date/formatDateRange";
 
 const eventsData = [] as {
   title: string;
@@ -30,11 +29,7 @@ export function EventSection({
   getStatusText,
 }: SectionProps) {
   const locale = useLocale();
-  const dateLocale = locale === "th" ? th : enUS;
   const t = useTranslations("components.EventPage.event_summary");
-
-  const formatDate = (dateStr: string) =>
-    format(parseISO(dateStr), "d MMM yyyy", { locale: dateLocale });
 
   return (
     <div className="flex flex-col gap-3 px-1">
@@ -87,7 +82,7 @@ export function EventSection({
                 </span>
                 <div className="font-semibold text-sm">{e.title}</div>
                 <div className="text-xs text-gray-200">
-                  {formatDate(e.start)} – {formatDate(e.end)}
+                  {formatDateRange(e.start, e.end, locale)}
                 </div>
                 <div className="text-xs mt-1 text-yellow-300">
                   {getStatusText(e)}
