@@ -23,7 +23,11 @@ export default function EventSummarySection() {
   const [now, setNow] = useState(new Date());
 
   useEffect(() => {
-    setNow(new Date());
+    const interval = setInterval(() => {
+      setNow(new Date());
+    }, 60_000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const currentEvents = useMemo(() => {
