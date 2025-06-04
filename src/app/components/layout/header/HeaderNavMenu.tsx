@@ -22,7 +22,7 @@ export default function HeaderNavMenu() {
   const fontClass = locale === "th" ? "font-thai" : "font-mono";
 
   return (
-    <NavigationMenu>
+    <NavigationMenu delayDuration={250}>
       <NavigationMenuList className="flex items-center gap-1">
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
