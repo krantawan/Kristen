@@ -6,7 +6,7 @@ import operatorData from "@/data/operators.json";
 import { cn } from "@/lib/utils";
 import { useTranslations, useLocale } from "next-intl";
 import type { Operator } from "@/lib/operator-utils";
-import { getCombinations, getMatchingTagGroups } from "@/lib/operator-utils";
+import { getMatchingTagGroups } from "@/lib/operator-utils";
 
 type Props = {
   title: string;
