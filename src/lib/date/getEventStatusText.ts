@@ -25,13 +25,14 @@ export function getEventStatusText(
       locale: dateLocale,
     })
       .replace(/^about\s*/, "")
-      .replace(/^ประมาณ\s*/, "");
+      .replace(/^ประมาณ\s*/, "")
+      .replace(/^約\s*/, "");
 
     return t("event_summary.ends_in_duration", { duration: rawDuration });
   }
 
   if (isBefore(startDate, now)) {
-    return t("event_summary.ended");
+    return t("event.ended");
   }
 
   const dayDiff = differenceInDays(startDate, now);
@@ -46,7 +47,8 @@ export function getEventStatusText(
     locale: dateLocale,
   })
     .replace(/^about\s*/, "")
-    .replace(/^ประมาณ\s*/, "");
+    .replace(/^ประมาณ\s*/, "")
+    .replace(/^約\s*/, "");
 
   return t("event_summary.starts_in_duration", { duration: rawDuration });
 }

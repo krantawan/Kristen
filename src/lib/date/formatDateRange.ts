@@ -10,9 +10,16 @@ export function formatDateRange(
   const end = parseISO(endISO);
   const dateLocale = getDateLocale(localeCode);
 
-  return `${format(start, "d MMM yyyy", { locale: dateLocale })} – ${format(
-    end,
-    "d MMM yyyy",
-    { locale: dateLocale }
-  )}`;
+  const formatStr =
+    localeCode === "ja"
+      ? "M月d日"
+      : localeCode === "th"
+      ? "d MMM yyyy"
+      : "d MMM yyyy";
+
+  const separator = localeCode === "ja" ? " ～ " : " – ";
+
+  return `${format(start, formatStr, {
+    locale: dateLocale,
+  })}${separator}${format(end, formatStr, { locale: dateLocale })}`;
 }
