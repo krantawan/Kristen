@@ -7,6 +7,9 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { useTranslations, useLocale } from "next-intl";
 import { useEffect, useState } from "react";
+import { siDiscord } from "simple-icons/icons";
+import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 
 export default function AboutProjectPage() {
   const t = useTranslations("components.about.project");
@@ -54,6 +57,7 @@ export default function AboutProjectPage() {
             {/* Developer Section */}
             <div>
               <p className="text-emerald-600 dark:text-green-400">~$ whoami</p>
+
               <div className="flex items-center gap-4 mt-2">
                 <Image
                   src="/dev/specter_icon_kalafia.png"
@@ -63,11 +67,47 @@ export default function AboutProjectPage() {
                   draggable={false}
                   className="rounded-full border border-yellow-500"
                 />
+
                 <div>
                   <p className="text-black dark:text-white">KALAFIA</p>
                   <p className="text-gray-600 dark:text-gray-400">
                     Lead Developer
                   </p>
+
+                  {/* Row for contact info */}
+                  <div className="flex h-3 items-center gap-3 mt-1 text-sm text-zinc-700 dark:text-zinc-400">
+                    {/* Discord */}
+                    <Link
+                      href="https://discordapp.com/users/239826440374190081"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-blue-500 hover:text-blue-700"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width={16}
+                        height={16}
+                        fill={`#${siDiscord.hex}`}
+                      >
+                        <title>{siDiscord.title}</title>
+                        <path d={siDiscord.path} />
+                      </svg>
+                      K
+                    </Link>
+
+                    {/* Vertical separator */}
+                    <Separator
+                      orientation="vertical"
+                      className="h-4 w-[1px] bg-zinc-400"
+                    />
+
+                    {/* In-game ID */}
+                    <p>
+                      <span className="font-mono">KALAFIA#6968</span>{" "}
+                      <Badge variant="outline">Global</Badge>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
