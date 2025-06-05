@@ -86,7 +86,7 @@ export default function TimeIndicator({ dateRange }: Props) {
 
       {/* time line */}
       <div
-        className={`absolute top-0 bottom-0 w-[2px] z-50 transition-all duration-200 ${colorClass}`}
+        className={`absolute top-0 bottom-0 w-[2px] z-10 transition-all duration-200 ${colorClass}`}
         style={{
           left: 0,
           transform: `translateX(calc(-100% + ${offsetPx}px))`,
@@ -95,7 +95,7 @@ export default function TimeIndicator({ dateRange }: Props) {
 
       {/* label */}
       <div
-        className={`absolute -top-1 z-50 text-[11px] px-1.5 py-0.5 rounded shadow-sm whitespace-nowrap transition-all duration-200 ${labelClass}`}
+        className={`absolute -top-2 z-10 text-[11px] px-1.5 py-0.5 rounded shadow-sm whitespace-nowrap transition-all duration-200 ${labelClass}`}
         style={{
           left: 0,
           transform: `translateX(calc(-50% + ${offsetPx}px))`,

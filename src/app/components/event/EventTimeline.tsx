@@ -149,7 +149,7 @@ export default function EventTimeline() {
 
           {/* Time Indicator */}
           <div
-            className="absolute inset-0 grid z-[9999] pointer-events-none"
+            className="absolute inset-0 grid z-[30] pointer-events-none"
             style={{
               gridTemplateColumns: `repeat(${dateRange.length}, minmax(32px, 1fr))`,
             }}
