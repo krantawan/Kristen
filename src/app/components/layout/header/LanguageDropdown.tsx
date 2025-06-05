@@ -35,8 +35,8 @@ export default function LanguageDropdown() {
         <DropdownMenuItem onClick={() => switchLocale("th")}>
           🇹🇭 Thai
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => switchLocale("jp")}>
-          🇯🇵 Japanese
+        <DropdownMenuItem onClick={() => switchLocale("ja")}>
+          🇯a Japanese
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
