@@ -111,7 +111,7 @@ export default function EventSummarySection() {
 
       {/* Terminal */}
       <div className="px-3 pb-6">
-        <pre className="bg-[#111] p-4 rounded font-mono text-green-400 text-sm shadow-inner">
+        <pre className="bg-[#111] p-4 rounded font-mono text-green-400 text-sm shadow-inner whitespace-pre-wrap break-words">
           ~$ ark.events --summary → {currentEvents.length} mission
           {currentEvents.length !== 1 ? "s" : ""} in progress → Next operation
           begins in {nextEventIn}
