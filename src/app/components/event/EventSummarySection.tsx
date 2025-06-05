@@ -73,9 +73,20 @@ export default function EventSummarySection() {
           titleColor="text-[#fa9e52]"
           borderColor="border-[#fa9e52]"
           events={upcomingEvents}
-          getStatusText={(e) =>
-            getEventStatusText(e.start, now, locale, t, true, e.end)
-          }
+          getStatusText={(e) => {
+            const start = new Date(e.start);
+            const end = e.end ? new Date(e.end) : undefined;
+            const isOngoing = !!end && now >= start && now <= end;
+
+            return getEventStatusText(
+              e.start,
+              now,
+              locale,
+              t,
+              isOngoing,
+              e.end
+            );
+          }}
         />
 
         {/* Command Log */}
