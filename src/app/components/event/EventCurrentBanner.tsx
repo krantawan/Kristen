@@ -137,7 +137,7 @@ export default function EventCurrentBanner() {
         >
           <div
             className={`text-yellow-300 text-xs uppercase tracking-wider text-center bg-[#1a1a1a] ${
-              locale === "th" ? "" : "font-mono"
+              locale === "en" ? "font-mono" : ""
             }`}
           >
             {t("event_summary.event_summary_incoming")}

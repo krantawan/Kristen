@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import eventsDataRaw from "@/data/events.json";
 import { formatDistanceToNow } from "date-fns";
 import { useTranslations, useLocale } from "next-intl";
-import { getDateLocale } from "@/lib/date/getDateLocale";
+import { getEventStatusText } from "@/lib/date/getEventStatusText";
 
 const eventsData = eventsDataRaw as {
   title: string;
@@ -16,9 +16,8 @@ const eventsData = eventsDataRaw as {
 }[];
 
 export default function EventSummarySection() {
-  const t = useTranslations("components.EventPage.event_summary");
+  const t = useTranslations("components.EventPage");
   const locale = useLocale();
-  const dateLocale = getDateLocale(locale);
 
   const [now, setNow] = useState(new Date());
 
@@ -50,54 +49,33 @@ export default function EventSummarySection() {
     return formatDistanceToNow(new Date(upcomingEvents[0].start), {
       addSuffix: false,
       includeSeconds: false,
-      locale: dateLocale,
-    })
-      .replace(/^about\s*/, "")
-      .replace(/^ประมาณ\s*/, "");
+    });
     // eslint-disable-next-line
-  }, [now, upcomingEvents, dateLocale]);
+  }, [now, upcomingEvents]);
 
   return (
     <div className="border-t-5 border-[#BEC93B] border-b-5 bg-[#1b1b1b]">
       <div className="grid grid-cols-1 md:grid-cols-3 px-1 pb-5">
         {/* Ongoing */}
         <EventSection
-          title={t("event_summary_ongoing")}
+          title={t("event_summary.event_summary_ongoing")}
           titleColor="text-[#e1fa52]"
           borderColor="border-[#e1fa52]"
           events={currentEvents}
-          getStatusText={(e) => {
-            const end = new Date(e.end);
-            const rawDuration = formatDistanceToNow(end, {
-              addSuffix: false,
-              includeSeconds: false,
-              locale: dateLocale,
-            })
-              .replace(/^about\s*/, "")
-              .replace(/^ประมาณ\s*/, "");
-
-            return t("ends_in_duration", { duration: rawDuration });
-          }}
+          getStatusText={(e) =>
+            getEventStatusText(e.start, now, locale, t, true, e.end)
+          }
         />
 
         {/* Incoming */}
         <EventSection
-          title={t("event_summary_incoming")}
+          title={t("event_summary.event_summary_incoming")}
           titleColor="text-[#fa9e52]"
           borderColor="border-[#fa9e52]"
           events={upcomingEvents}
-          getStatusText={(e) => {
-            const start = new Date(e.start);
-            const rawDuration = formatDistanceToNow(start, {
-              addSuffix: false,
-              includeSeconds: false,
-              locale: dateLocale,
-            })
-              .replace(/^about\s*/, "")
-              .replace(/^ประมาณ\s*/, "");
-
-            return t("starts_in_duration", { duration: rawDuration });
-          }}
+          getStatusText={(e) =>
+            getEventStatusText(e.start, now, locale, t, true, e.end)
+          }
         />
 
         {/* Command Log */}
@@ -109,12 +87,12 @@ export default function EventSummarySection() {
               <div className="h-1 w-6 bg-[#802520]" />
             </div>
             <h2 className="text-2xl font-black tracking-tight font-roboto text-[#8a8a8a] uppercase">
-              {t("event_summary_command_log")}
+              {t("event_summary.event_summary_command_log")}
             </h2>
           </div>
           <div className="p-0 rounded-b">
             <p className="text-gray-400 text-sm italic">
-              ~$ {t("event_summary_command_log_desc")}
+              ~$ {t("event_summary.event_summary_command_log_desc")}
             </p>
           </div>
         </div>

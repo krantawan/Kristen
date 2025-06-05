@@ -56,7 +56,7 @@ export default function SystemHeader({
 
       <h2
         className={`text-lg text-[#FACC15] ${
-          locale === "th" ? "" : "font-mono"
+          locale === "en" ? "font-mono" : ""
         }`}
       >
         {title}
