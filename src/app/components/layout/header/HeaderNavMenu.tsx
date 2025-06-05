@@ -19,7 +19,7 @@ export default function HeaderNavMenu() {
   const locale = useLocale();
   const t = useTranslations("header.menu");
 
-  const fontClass = locale === "th" ? "font-thai" : "font-mono";
+  const fontClass = locale === "en" ? "font-mono" : "";
 
   return (
     <NavigationMenu delayDuration={250}>
