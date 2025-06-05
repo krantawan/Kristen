@@ -56,8 +56,20 @@ export default function EventTimeline() {
     min = addUtcDays(min, -7);
     max = addUtcDays(max, 7);
 
-    setDateRange(eachUtcDayOfInterval(min, max));
+    const range = eachUtcDayOfInterval(min, max);
+    setDateRange(range);
     setEvents(eventsData);
+
+    setTimeout(() => {
+      const today = new Date();
+      const todayIdx = range.findIndex(
+        (d) => d.toDateString() === today.toDateString()
+      );
+      if (todayIdx !== -1) {
+        scrollRef.scrollToIndexCenter(todayIdx);
+      }
+    }, 50);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (events.length === 0 || dateRange.length === 0) return null;

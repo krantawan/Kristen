@@ -46,6 +46,23 @@ export function useHorizontalDragScroll<T extends HTMLElement>() {
     isDragging.current = false;
   };
 
+  const scrollToIndexCenter = (index: number) => {
+    if (!containerRef.current) return;
+    const container = containerRef.current;
+
+    const columns = container.querySelectorAll("div.grid > div");
+    const target = columns[index] as HTMLElement;
+    if (!target) return;
+
+    const scrollTarget =
+      target.offsetLeft - container.clientWidth / 2 + target.offsetWidth / 2;
+
+    container.scrollTo({
+      left: scrollTarget,
+      behavior: "smooth",
+    });
+  };
+
   return {
     containerRef,
     onMouseDown,
@@ -55,5 +72,6 @@ export function useHorizontalDragScroll<T extends HTMLElement>() {
     onTouchStart,
     onTouchMove,
     onTouchEnd,
+    scrollToIndexCenter,
   };
 }
