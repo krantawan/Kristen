@@ -39,13 +39,13 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
     );
   }, [setSelectedTags]);
 
-  const t = useTranslations("components.RecruitmentPage.tag");
+  const t = useTranslations("components.RecruitmentPage");
 
   const locale = useLocale();
   const fontClass = locale === "th" ? "" : "font-semibold";
 
   return (
-    <CollapsibleButton title={t("select_tag")} defaultOpen={true}>
+    <CollapsibleButton title={t("tag.select_tag")} defaultOpen={true}>
       <div className="p-4">
         <div
           className={`flex flex-wrap gap-3 mb-4 items-center justify-between w-full ${fontClass}`}
@@ -62,7 +62,7 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
                   onChange={() => toggleGroup(label)}
                   className="accent-[#BEC93B]"
                 />
-                {t(`labelGroup.${label}`)}
+                {t(`tag.labelGroup.${label}`)}
               </label>
             ))}
           </div>
@@ -77,7 +77,7 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
             }
             `}
           >
-            {t("clear")}
+            {t("tag.clear")}
           </button>
         </div>
         {visibleGroups.length > 0 && (
@@ -87,7 +87,7 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
               .map((group) => (
                 <div key={group.label}>
                   <p className={`text-sm text-[#BEC93B] mb-1 ${fontClass}`}>
-                    {t(`labelGroup.${group.label}`)}
+                    {t(`tag.labelGroup.${group.label}`)}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {group.tags.map((tag) => (
@@ -102,7 +102,7 @@ export default function SelectTag({ selectedTags, setSelectedTags }: Props) {
                             : "bg-[#333] text-[#f3f3f3] hover:bg-[#444]"
                         }`}
                       >
-                        {tag}
+                        {t(`taglist.${tag}`)}
                       </button>
                     ))}
                   </div>
