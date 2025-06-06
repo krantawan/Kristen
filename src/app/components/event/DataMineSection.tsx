@@ -3,12 +3,13 @@
 import { useState, useMemo } from "react";
 import { getEventBadge, getEventColor } from "@/lib/event-utils";
 import { formatDateRange } from "@/lib/date/formatDateRange";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Eye, EyeOff } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -53,11 +54,15 @@ const typeOrder = [
 
 export default function DataMineTable() {
   const locale = useLocale();
+  const t = useTranslations("components.EventPage");
 
   const [searchTerm, setSearchTerm] = useState("");
   const [typeFilter, setTypeFilter] = useState<string>("all");
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
+
+  // Spoiler toggle state
+  const [isSpoilerRevealed, setIsSpoilerRevealed] = useState(false);
 
   const filteredData = useMemo(() => {
     return eventsDatamine
@@ -94,20 +99,21 @@ export default function DataMineTable() {
         {/* Title */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
           <h2 className="text-2xl font-black tracking-tight font-roboto">
-            Data Mine
+            {t("data_mine.title")}
           </h2>
           <p className="text-sm text-gray-400 mt-1 sm:mt-0 sm:text-right">
-            Data Source: {credit}
+            {t("data_mine.source")}: {credit}
           </p>
         </div>
       </div>
+
       <Card className="w-full max-w-7xl mx-auto">
         <CardHeader>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-4">
-            {/* Search → อยู่แถวบนบน mobile, แถวซ้ายบน PC */}
+            {/* Search */}
             <div className="w-full sm:w-auto flex-1">
               <Input
-                placeholder="Search events..."
+                placeholder={t("data_mine.search_event")}
                 value={searchTerm}
                 onChange={(e) => {
                   setSearchTerm(e.target.value);
@@ -116,7 +122,7 @@ export default function DataMineTable() {
               />
             </div>
 
-            {/* Filter + Items → อยู่แถวล่าง mobile, แถวขวา PC */}
+            {/* Filter + Items */}
             <div className="flex flex-wrap justify-center gap-2 w-full sm:w-auto">
               <Select
                 value={typeFilter}
@@ -133,7 +139,7 @@ export default function DataMineTable() {
                   <SelectItem value="all">All Types</SelectItem>
                   {typeOrder.map((type) => (
                     <SelectItem key={type} value={type}>
-                      {typeLabels[type] || type}
+                      {typeLabels[type] || getEventBadge({ type })}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -150,6 +156,7 @@ export default function DataMineTable() {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
+                  <SelectItem value="5">5</SelectItem>
                   <SelectItem value="10">10</SelectItem>
                   <SelectItem value="20">20</SelectItem>
                 </SelectContent>
@@ -158,118 +165,170 @@ export default function DataMineTable() {
           </div>
         </CardHeader>
 
+        {/* Spoiler Toggle */}
+        <div className="flex justify-center mb-4 w-full">
+          <Button
+            variant={isSpoilerRevealed ? "outline" : "default"}
+            onClick={() => setIsSpoilerRevealed(!isSpoilerRevealed)}
+            className="w-full max-w-xs"
+          >
+            {isSpoilerRevealed ? (
+              <EyeOff className="w-4 h-4" />
+            ) : (
+              <Eye className="w-4 h-4" />
+            )}
+            {isSpoilerRevealed
+              ? t("data_mine.h_spoil")
+              : t("data_mine.r_spoil")}
+          </Button>
+        </div>
+
+        {/* Main Content with Blur */}
         <CardContent>
-          <div className="hidden lg:block overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b border-gray-200">
-                  <th className="text-left p-4 font-semibold">
-                    Reference Picture
-                  </th>
-                  <th className="text-left p-4 font-semibold">Date</th>
-                  <th className="text-left p-4 font-semibold">Type</th>
-                  <th className="text-left p-4 font-semibold">Title</th>
-                </tr>
-              </thead>
-              <tbody>
-                {paginatedData.map((event) => (
-                  <tr
-                    key={event.title + event.start}
-                    className="border-b border-gray-100 hover:bg-gray-100 transition-colors dark:border-gray-700 dark:hover:bg-gray-800"
-                  >
-                    <td className="p-4">
-                      <div className="relative inline-block">
-                        {/* DATAMINE Badge */}
-                        {event.source === "datamine" && (
-                          <div className="absolute top-2 right-2 bg-red-600 text-white text-[10px] px-1.5 py-0.5 rounded z-10">
-                            DATAMINE
-                          </div>
-                        )}
-
-                        <Image
-                          src={event.image || "/placeholder.svg"}
-                          alt={event.title}
-                          width={500}
-                          height={500}
-                          draggable={false}
-                          className={`rounded-lg object-cover border`}
-                        />
-                      </div>
-                    </td>
-                    <td className="p-4 text-sm font-medium text-gray-900 dark:text-gray-200">
-                      {formatDateRange(locale, event.start, event.end)}
-                    </td>
-                    <td className="p-4">
-                      <Badge
-                        variant="outline"
-                        className={`${getEventColor(event.type)} font-medium`}
-                      >
-                        {getEventBadge(event)}
-                      </Badge>
-                    </td>
-                    <td className="p-4 font-medium text-gray-900 dark:text-gray-200">
-                      {event.title}
-                    </td>
+          <div
+            className={`transition-all duration-500 ${
+              !isSpoilerRevealed ? "blur-sm" : ""
+            }`}
+          >
+            {/* Table */}
+            <div className="hidden lg:block overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="border-b border-gray-200">
+                    <th className="text-left p-4 font-semibold">
+                      {t("data_mine.reference_picture")}
+                    </th>
+                    <th className="text-left p-4 font-semibold">
+                      {t("data_mine.date")}
+                    </th>
+                    <th className="text-left p-4 font-semibold">
+                      {t("data_mine.type")}
+                    </th>
+                    <th className="text-left p-4 font-semibold">
+                      {t("data_mine.title")}
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody>
+                  {paginatedData.length === 0 ? (
+                    <tr>
+                      <td
+                        colSpan={4}
+                        className="p-8 text-center text-gray-400 text-sm italic"
+                      >
+                        {t("data_mine.not_found")}
+                      </td>
+                    </tr>
+                  ) : (
+                    paginatedData.map((event) => (
+                      <tr
+                        key={event.title + event.start}
+                        className="border-b border-gray-100 hover:bg-gray-100 transition-colors dark:border-gray-700 dark:hover:bg-gray-800"
+                      >
+                        <td className="p-4">
+                          <div className="relative inline-block">
+                            {event.source === "datamine" && (
+                              <div className="absolute top-2 right-2 bg-red-600 text-white text-[10px] px-1.5 py-0.5 rounded z-10">
+                                DATAMINE
+                              </div>
+                            )}
 
-          {/* Mobile Cards */}
-          <div className="lg:hidden space-y-4 mt-4">
-            {paginatedData.map((event) => (
-              <Card key={event.title + event.start} className="p-4">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  {/* Image */}
-                  <Image
-                    src={event.image || "/placeholder.svg"}
-                    alt={event.title}
-                    width={500}
-                    height={300}
-                    className="rounded-lg object-cover border w-full sm:w-auto"
-                    draggable={false}
-                  />
+                            <Image
+                              src={event.image || "/placeholder.svg"}
+                              alt={event.title}
+                              width={500}
+                              height={500}
+                              draggable={false}
+                              className={`rounded-lg object-cover border`}
+                            />
+                          </div>
+                        </td>
+                        <td className="p-4 text-sm font-medium text-gray-900 dark:text-gray-200">
+                          {formatDateRange(locale, event.start, event.end)}
+                        </td>
+                        <td className="p-4">
+                          <Badge
+                            variant="outline"
+                            className={`${getEventColor(
+                              event.type
+                            )} font-medium`}
+                          >
+                            {typeLabels[event.type] || event.type}
+                          </Badge>
+                        </td>
+                        <td className="p-4 font-medium text-gray-900 dark:text-gray-200">
+                          {event.title}
+                        </td>
+                      </tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
+            </div>
 
-                  {/* Content */}
-                  <div className="flex-1 space-y-2">
-                    {/* Title + Badge → บรรทัดแรก */}
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="font-medium text-gray-900 dark:text-gray-200">
-                        {event.title}
-                      </div>
+            {/* Mobile Cards */}
+            <div className="lg:hidden space-y-4 mt-4">
+              {paginatedData.map((event) => (
+                <Card key={event.title + event.start} className="p-4">
+                  <div className="flex flex-col xl:flex-row gap-4">
+                    {/* Image + Badge Overlay */}
+                    <div className="relative w-full xl:w-auto">
+                      <Image
+                        src={event.image || "/placeholder.svg"}
+                        alt={event.title}
+                        width={500}
+                        height={300}
+                        className="rounded-lg object-cover border w-full"
+                        draggable={false}
+                      />
+
+                      {event.source === "datamine" && (
+                        <Badge
+                          variant="default"
+                          className="absolute top-2 left-2 bg-red-600 text-white text-[10px] px-1.5 py-0.5 rounded z-10"
+                        >
+                          DATAMINE
+                        </Badge>
+                      )}
+
                       <Badge
-                        variant="outline"
-                        className={`${getEventColor(
+                        className={`absolute top-2 right-2 ${getEventColor(
                           event.type
                         )} font-medium rounded w-fit`}
                       >
-                        {getEventBadge(event)}
+                        {typeLabels[event.type] || event.type}
                       </Badge>
                     </div>
 
-                    {/* Date → บรรทัดล่าง */}
-                    <time className="text-sm font-medium text-gray-600 dark:text-gray-200">
-                      {!event.end || event.end.trim() === ""
-                        ? `${formatDateRange(
-                            locale,
-                            event.start,
-                            event.start
-                          )} → TBD`
-                        : formatDateRange(locale, event.start, event.end)}
-                    </time>
+                    {/* Content */}
+                    <div className="flex-1 space-y-2 pt-2 xl:pt-0">
+                      <div className="font-medium text-gray-900 dark:text-gray-200">
+                        {event.title}
+                      </div>
+                      <time className="text-sm font-medium text-gray-600 dark:text-gray-200">
+                        {!event.end || event.end.trim() === ""
+                          ? `${formatDateRange(
+                              locale,
+                              event.start,
+                              event.start
+                            )} → ${t("data_mine.TBD")}`
+                          : formatDateRange(locale, event.start, event.end)}
+                      </time>
+                    </div>
                   </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Pagination */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 pt-4 border-t border-gray-200">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 pt-4 border-t px-4 border-gray-200">
             <div className="text-sm text-gray-600">
-              Showing {startIndex + 1} to{" "}
-              {Math.min(startIndex + itemsPerPage, filteredData.length)} of{" "}
-              {filteredData.length} results
+              {t("data_mine.showing_results", {
+                x: startIndex + 1,
+                y: Math.min(startIndex + itemsPerPage, filteredData.length),
+                z: filteredData.length,
+              })}
             </div>
 
             <div className="flex items-center gap-2">
@@ -281,7 +340,7 @@ export default function DataMineTable() {
                 className="flex items-center gap-1"
               >
                 <ChevronLeft className="w-4 h-4" />
-                Previous
+                {t("data_mine.pagination.previous")}
               </Button>
 
               <div className="flex items-center gap-1">
@@ -320,7 +379,7 @@ export default function DataMineTable() {
                 disabled={currentPage === totalPages}
                 className="flex items-center gap-1"
               >
-                Next
+                {t("data_mine.pagination.next")}
                 <ChevronRight className="w-4 h-4" />
               </Button>
             </div>
