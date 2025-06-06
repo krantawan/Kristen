@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { Prompt, Noto_Sans_JP } from "next/font/google";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
 
 const prompt = Prompt({
   subsets: ["latin", "thai"],
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
+            <Analytics />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
