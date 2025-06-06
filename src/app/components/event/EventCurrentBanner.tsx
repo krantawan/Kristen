@@ -13,6 +13,7 @@ import { useRef } from "react";
 import EventCardCompact from "@/components/ui/EventCardCompact";
 import { getEventStatusText } from "@/lib/date/getEventStatusText";
 import { formatDateRange } from "@/lib/date/formatDateRange";
+import { getEventBadge } from "@/lib/event-utils";
 
 const eventsData = eventsDataRaw as {
   title: string;
@@ -113,9 +114,9 @@ export default function EventCurrentBanner() {
             </div>
             <div className="text-gray-300 text-sm">
               {formatDateRange(
+                locale,
                 displayedEvent.start,
-                displayedEvent.end,
-                locale
+                displayedEvent.end
               )}
             </div>
             <div
@@ -168,7 +169,7 @@ export default function EventCurrentBanner() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
 
                   <div className="absolute top-2 right-2 bg-black/70 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">
-                    {event.type}
+                    {getEventBadge(event)}
                   </div>
 
                   <div className="absolute bottom-0 w-full px-3 py-2 text-white text-sm z-10">

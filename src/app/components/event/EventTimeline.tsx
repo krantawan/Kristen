@@ -7,6 +7,7 @@ import eventsDataRaw from "@/data/events.json";
 import TimeIndicator from "./TimeIndicator";
 import { useTranslations } from "next-intl";
 import { useHorizontalDragScroll } from "@/lib/hooks/useHorizontalDragScroll";
+import EventTag from "./EventTag";
 
 type Event = {
   title: string;
@@ -86,7 +87,7 @@ export default function EventTimeline() {
           {t("event_title")}
         </h2>
       </div>
-
+      <EventTag />
       <div
         ref={scrollRef.containerRef}
         onMouseDown={scrollRef.onMouseDown}

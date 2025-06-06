@@ -7,6 +7,7 @@ import {
   isAfter,
 } from "date-fns";
 import { useTranslations } from "next-intl";
+import { getEventBadge, getEventColor } from "@/lib/event-utils";
 
 type Event = {
   title: string;
@@ -14,29 +15,13 @@ type Event = {
   end: string;
   type: "main" | "side" | "cc" | "gacha" | "kernel";
   image?: string;
+  status?: string;
 };
 
 type Props = {
   event: Event;
   dateRange: Date[];
 };
-
-function getEventColor(type: string) {
-  switch (type) {
-    case "main":
-      return "bg-[#802520] text-white";
-    case "side":
-      return "bg-[#d4a940] text-black";
-    case "cc":
-      return "bg-[#5C7F71] text-white";
-    case "gacha":
-      return "bg-purple-800 text-white";
-    case "kernel":
-      return "bg-blue-800 text-white";
-    default:
-      return "bg-gray-400 text-white";
-  }
-}
 
 export default function EventBar({ event, dateRange }: Props) {
   const t = useTranslations("components.EventPage");
@@ -104,7 +89,13 @@ export default function EventBar({ event, dateRange }: Props) {
         )}
 
         {/* Text Content */}
-        <div className="relative z-10 flex items-center justify-between h-full px-3">
+        <div className="relative z-10 flex items-center h-full px-3 space-x-2">
+          {/* Event Badge */}
+          <div className="flex items-center justify-center min-w-[50px] px-2 py-0.5 bg-black/30 rounded text-white text-[10px] font-bold uppercase">
+            {getEventBadge(event)}
+          </div>
+
+          {/* Event Title */}
           <span className="truncate">{event.title}</span>
         </div>
 
