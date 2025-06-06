@@ -35,7 +35,7 @@ export function getEventColor(type: string): string {
     case "main":
       return "bg-[#802520] text-white";
     case "side":
-      return "bg-[#d4a940] text-black";
+      return "bg-orange-500 text-white";
     case "cc":
       return "bg-[#5C7F71] text-white";
     case "gacha":
@@ -47,9 +47,9 @@ export function getEventColor(type: string): string {
     case "record":
       return "bg-pink-600 text-white";
     case "login":
-      return "bg-yellow-600 text-black";
+      return "bg-yellow-400 text-black";
     case "other":
-      return "bg-gray-500 text-white";
+      return "bg-indigo-500 text-white";
     default:
       return "bg-gray-400 text-white";
   }
