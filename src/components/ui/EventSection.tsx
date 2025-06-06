@@ -4,6 +4,7 @@ import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { formatDateRange } from "@/lib/date/formatDateRange";
+import { getEventBadge, getEventColor } from "@/lib/event-utils";
 
 const eventsData = [] as {
   title: string;
@@ -62,27 +63,14 @@ export function EventSection({
                 <span
                   className={cn(
                     "absolute top-1 right-1 text-[10px] px-2 py-[2px] rounded uppercase font-bold shadow",
-                    {
-                      "bg-red-700 text-white": e.type === "main",
-                      "bg-lime-700 text-black": e.type === "cc",
-                      "bg-yellow-600 text-black": e.type === "side",
-                      "bg-blue-800 text-white": e.type === "kernel",
-                      "bg-purple-700 text-white": e.type === "gacha",
-                      "bg-neutral-600 text-white": ![
-                        "main",
-                        "cc",
-                        "side",
-                        "kernel",
-                        "gacha",
-                      ].includes(e.type),
-                    }
+                    getEventColor(e.type)
                   )}
                 >
-                  {e.type}
+                  {getEventBadge(e)}
                 </span>
                 <div className="font-semibold text-sm">{e.title}</div>
                 <div className="text-xs text-gray-200">
-                  {formatDateRange(e.start, e.end, locale)}
+                  {formatDateRange(locale, e.start, e.end)}
                 </div>
                 <div className="text-xs mt-1 text-yellow-300">
                   {getStatusText(e)}
