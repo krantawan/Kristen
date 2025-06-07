@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { HomeIcon, BookOpenIcon, SproutIcon } from "lucide-react";
+import { HomeIcon, BookOpenIcon, SproutIcon, UserIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useActivePath } from "@/components/ui/useActivePath";
 import { useLocale } from "next-intl";
@@ -37,6 +37,23 @@ export default function HeaderNavMenu() {
               )}
             >
               <HomeIcon className="h-4 w-4 mr-1 text-inherit" /> {t("home")}
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild>
+            <Link
+              href={"/operators"}
+              className={cn(
+                "inline-flex h-10 items-center justify-center px-4 py-2 text-sm font-medium transition-colors",
+                fontClass,
+                useActivePath("/operators")
+                  ? "!text-[#FACC15]"
+                  : "text-gray-300 hover:text-[#FACC15]"
+              )}
+            >
+              <UserIcon className="h-4 w-4 mr-1 text-inherit" /> Operators
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>

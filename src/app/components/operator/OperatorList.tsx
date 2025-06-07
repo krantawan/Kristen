@@ -2,7 +2,7 @@
 
 import { CollapsibleButton } from "@/components/ui/collapsible-button";
 import OperatorItem from "./OperatorItem";
-import operatorData from "@/data/operators.json";
+import operatorData from "@/data/operators_recruitment.json";
 import { cn } from "@/lib/utils";
 import { useTranslations, useLocale } from "next-intl";
 import type { Operator } from "@/lib/operator-utils";
