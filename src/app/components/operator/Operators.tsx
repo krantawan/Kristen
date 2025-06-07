@@ -14,9 +14,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Filter } from "lucide-react";
+import { ChevronLeft, ChevronRight, Filter } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function OperatorsGrid() {
+  const t = useTranslations("components.OperatorsPage");
+
   const operators = operatorsData as {
     id: string;
     name: string;
@@ -216,171 +219,174 @@ export default function OperatorsGrid() {
 
   return (
     <Card className="w-full max-w-7xl mx-auto">
-      <CardHeader
-        className="
-    sticky top-10 z-20
-    bg-white/80 dark:bg-[#181818]/80
-    backdrop-blur-sm
-    transition-all
-  "
-      >
-        <div className="flex flex-wrap items-center gap-2 w-full px-2 py-2 rounded-md">
-          {/* Search */}
-          <div className="flex-[2] sm:flex-[3] min-w-[200px]">
+      <CardHeader className="top-10 z-20 bg-white/80 dark:bg-[#181818]/80 backdrop-blur-sm transition-all md:sticky md:top-10">
+        <div className="space-y-4 p-2">
+          <div className="w-full">
             <Input
-              placeholder="Search operator"
-              className="bg-white dark:bg-[#222] rounded-md shadow-sm"
+              placeholder={t("search")}
+              className="w-full bg-white dark:bg-[#222] rounded-md shadow-sm"
               value={searchTerm}
               onChange={(e) => {
                 setSearchTerm(e.target.value);
-                setCurrentPage(1); // Reset page เมื่อ search
+                setCurrentPage(1);
               }}
             />
           </div>
 
-          {/* Filter + Sort + Items per page */}
-          <div className="flex flex-row flex-wrap sm:flex-nowrap justify-start gap-2 w-full">
-            {/* Profession */}
-            <Select
-              value={professionFilter}
-              onValueChange={(value) => {
-                setProfessionFilter(value);
-                setSubProfessionFilter("all");
-                setCurrentPage(1);
-              }}
-            >
-              <SelectTrigger className="w-[73%] sm:w-48 bg-white dark:bg-[#222] rounded-md shadow-sm">
-                <Filter className="w-4 h-4 mr-2" />
-                <SelectValue placeholder="Profession" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Professions</SelectItem>
-                {professions.map((profession) => (
-                  <SelectItem key={profession} value={profession}>
-                    {professionLabels[profession] ?? profession}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            {/* Sub-Profession */}
-            <Select
-              value={subProfessionFilter}
-              onValueChange={(value) => {
-                setSubProfessionFilter(value);
-                setCurrentPage(1);
-              }}
-              disabled={professionFilter === "all"}
-            >
-              <SelectTrigger
-                className={`w-[73%] sm:w-48 ${
-                  professionFilter === "all" ? "opacity-50" : ""
-                } bg-white dark:bg-[#222] rounded-md shadow-sm`}
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2">
+            {/* Class */}
+            <div className="col-span-1">
+              <Select
+                value={professionFilter}
+                onValueChange={(value) => {
+                  setProfessionFilter(value);
+                  setSubProfessionFilter("all");
+                  setCurrentPage(1);
+                }}
               >
-                <Filter className="w-4 h-4 mr-2" />
-                <SelectValue placeholder="Sub-Profession" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Sub-Professions</SelectItem>
-                {filteredSubProfessions.map((sub) => (
-                  <SelectItem key={sub} value={sub}>
-                    {subProfessionLabels[sub] ?? sub}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+                <SelectTrigger className="w-full bg-white dark:bg-[#222] rounded-md shadow-sm text-sm">
+                  <Filter className="w-4 h-4 mr-1 flex-shrink-0" />
+                  <SelectValue placeholder="Class" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">{t("all_class")}</SelectItem>
+                  {professions.map((profession) => (
+                    <SelectItem key={profession} value={profession}>
+                      {professionLabels[profession] ?? profession}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Sub-Class */}
+            <div className="col-span-1">
+              <Select
+                value={subProfessionFilter}
+                onValueChange={(value) => {
+                  setSubProfessionFilter(value);
+                  setCurrentPage(1);
+                }}
+                disabled={professionFilter === "all"}
+              >
+                <SelectTrigger
+                  className={`w-full ${
+                    professionFilter === "all" ? "opacity-50" : ""
+                  } bg-white dark:bg-[#222] rounded-md shadow-sm text-sm`}
+                >
+                  <Filter className="w-4 h-4 mr-1 flex-shrink-0" />
+                  <SelectValue placeholder="Sub-Class" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">{t("all_sub_class")}</SelectItem>
+                  {filteredSubProfessions.map((sub) => (
+                    <SelectItem key={sub} value={sub}>
+                      {subProfessionLabels[sub] ?? sub}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Position */}
-            <Select
-              value={positionFilter}
-              onValueChange={(value) => {
-                setPositionFilter(value);
-                setCurrentPage(1);
-              }}
-            >
-              <SelectTrigger className="w-[73%] sm:w-48 bg-white dark:bg-[#222] rounded-md shadow-sm">
-                <Filter className="w-4 h-4 mr-2" />
-                <SelectValue placeholder="Position" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Positions</SelectItem>
-                {positions.map((pos) => (
-                  <SelectItem key={pos} value={pos}>
-                    {pos}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <div className="col-span-1">
+              <Select
+                value={positionFilter}
+                onValueChange={(value) => {
+                  setPositionFilter(value);
+                  setCurrentPage(1);
+                }}
+              >
+                <SelectTrigger className="w-full bg-white dark:bg-[#222] rounded-md shadow-sm text-sm">
+                  <Filter className="w-4 h-4 mr-1 flex-shrink-0" />
+                  <SelectValue placeholder="Position" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">{t("all_position")}</SelectItem>
+                  {positions.map((pos) => (
+                    <SelectItem key={pos} value={pos}>
+                      {pos}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Rarity */}
-            <Select
-              value={rarityFilter}
-              onValueChange={(value) => {
-                setRarityFilter(value);
-                setCurrentPage(1);
-              }}
-            >
-              <SelectTrigger className="w-[73%] sm:w-48 bg-white dark:bg-[#222] rounded-md shadow-sm">
-                <Filter className="w-4 h-4 mr-2" />
-                <SelectValue placeholder="Rarity" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Rarities</SelectItem>
-                {rarities.map((rarity) => (
-                  <SelectItem key={rarity} value={rarity}>
-                    {rarity} ★
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <div className="col-span-1">
+              <Select
+                value={rarityFilter}
+                onValueChange={(value) => {
+                  setRarityFilter(value);
+                  setCurrentPage(1);
+                }}
+              >
+                <SelectTrigger className="w-full bg-white dark:bg-[#222] rounded-md shadow-sm text-sm">
+                  <Filter className="w-4 h-4 mr-1 flex-shrink-0" />
+                  <SelectValue placeholder="Rarity" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">{t("all_rarity")}</SelectItem>
+                  {rarities.map((rarity) => (
+                    <SelectItem key={rarity} value={rarity}>
+                      {rarity} ★
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Sort */}
-            <Select
-              value={sortOption}
-              onValueChange={(value) => {
-                setSortOption(value);
-                setCurrentPage(1);
-              }}
-            >
-              <SelectTrigger className="w-[73%] sm:w-48 bg-white dark:bg-[#222] rounded-md shadow-sm">
-                <Filter className="w-4 h-4 mr-2" />
-                <SelectValue placeholder="Sort by" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem
-                  value="rarity-desc"
-                  disabled={rarityFilter !== "all"}
-                >
-                  Rarity ↓
-                </SelectItem>
-                <SelectItem
-                  value="rarity-asc"
-                  disabled={rarityFilter !== "all"}
-                >
-                  Rarity ↑
-                </SelectItem>
-                <SelectItem value="name-asc">Name A-Z</SelectItem>
-                <SelectItem value="name-desc">Name Z-A</SelectItem>
-              </SelectContent>
-            </Select>
+            <div className="col-span-1">
+              <Select
+                value={sortOption}
+                onValueChange={(value) => {
+                  setSortOption(value);
+                  setCurrentPage(1);
+                }}
+              >
+                <SelectTrigger className="w-full bg-white dark:bg-[#222] rounded-md shadow-sm text-sm">
+                  <Filter className="w-4 h-4 mr-1 flex-shrink-0" />
+                  <SelectValue placeholder="Sort" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem
+                    value="rarity-desc"
+                    disabled={rarityFilter !== "all"}
+                  >
+                    {t("rarity_desc")} ↓
+                  </SelectItem>
+                  <SelectItem
+                    value="rarity-asc"
+                    disabled={rarityFilter !== "all"}
+                  >
+                    {t("rarity_asc")} ↑
+                  </SelectItem>
+                  <SelectItem value="name-asc">{t("name_asc")}</SelectItem>
+                  <SelectItem value="name-desc">{t("name_desc")}</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Items per page */}
-            <Select
-              value={itemsPerPage.toString()}
-              onValueChange={(value) => {
-                setItemsPerPage(Number(value));
-                setCurrentPage(1);
-              }}
-            >
-              <SelectTrigger className="w-[73%] sm:w-24 bg-white dark:bg-[#222] rounded-md shadow-sm">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="10">10</SelectItem>
-                <SelectItem value="20">20</SelectItem>
-                <SelectItem value="50">50</SelectItem>
-              </SelectContent>
-            </Select>
+            <div className="col-span-1">
+              <Select
+                value={itemsPerPage.toString()}
+                onValueChange={(value) => {
+                  setItemsPerPage(Number(value));
+                  setCurrentPage(1);
+                }}
+              >
+                <SelectTrigger className="w-full bg-white dark:bg-[#222] rounded-md shadow-sm text-sm">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="10">10</SelectItem>
+                  <SelectItem value="20">20</SelectItem>
+                  <SelectItem value="50">50</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
           </div>
         </div>
       </CardHeader>
@@ -427,9 +433,11 @@ export default function OperatorsGrid() {
 
         {/* Showing X to Y of Z results */}
         <div className="text-sm text-center text-gray-400 mt-2">
-          Showing {(currentPage - 1) * itemsPerPage + 1} to{" "}
-          {Math.min(currentPage * itemsPerPage, sortedOperators.length)} of{" "}
-          {sortedOperators.length} results
+          {t("showing_results", {
+            start: (currentPage - 1) * itemsPerPage + 1,
+            end: Math.min(currentPage * itemsPerPage, sortedOperators.length),
+            total: sortedOperators.length,
+          })}
         </div>
 
         {/* Pagination Controls */}
@@ -440,7 +448,8 @@ export default function OperatorsGrid() {
             disabled={currentPage === 1}
             onClick={() => setCurrentPage((prev) => prev - 1)}
           >
-            Prev
+            {t("pagination.previous")}
+            <ChevronLeft className="w-4 h-4" />
           </Button>
           <div className="text-sm">
             Page {currentPage} of {totalPages}
@@ -451,7 +460,8 @@ export default function OperatorsGrid() {
             disabled={currentPage === totalPages}
             onClick={() => setCurrentPage((prev) => prev + 1)}
           >
-            Next
+            {t("pagination.next")}
+            <ChevronRight className="w-4 h-4" />
           </Button>
         </div>
       </CardContent>
