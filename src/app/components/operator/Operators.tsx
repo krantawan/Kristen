@@ -173,6 +173,7 @@ export default function OperatorsGrid() {
     "char_4144_chilc", // Chilchuck
     "char_4142_laios", // Laios
     "char_4141_marcil", // Marcille
+    "char_4126_fuze", // Fuze
   ]);
 
   const [searchTerm, setSearchTerm] = useState("");
