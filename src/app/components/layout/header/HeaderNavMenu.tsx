@@ -53,7 +53,8 @@ export default function HeaderNavMenu() {
                   : "text-gray-300 hover:text-[#FACC15]"
               )}
             >
-              <UserIcon className="h-4 w-4 mr-1 text-inherit" /> Operators
+              <UserIcon className="h-4 w-4 mr-1 text-inherit" />{" "}
+              {t("operators")}
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>

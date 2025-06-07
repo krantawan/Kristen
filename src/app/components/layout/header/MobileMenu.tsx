@@ -3,7 +3,7 @@
 "use client";
 
 import Link from "next/link";
-import { HomeIcon, BookOpenIcon, SproutIcon } from "lucide-react";
+import { HomeIcon, BookOpenIcon, SproutIcon, UserIcon } from "lucide-react";
 import LanguageDropdown from "./LanguageDropdown";
 import ThemeToggle from "./ThemeToggle";
 import { useTranslations } from "next-intl";
@@ -23,48 +23,54 @@ export default function MobileMenu({
   if (!isOpen) return null;
   return (
     <div className="md:hidden border-t border-[#333] bg-[#1a1a1a] px-4 py-4 space-y-4">
-      <nav className="space-y-3">
+      <nav className="space-y-1">
         <Link
           href="/"
-          className="flex items-center text-sm font-mono text-gray-300 hover:text-[#FACC15] py-2 transition-colors duration-200"
+          className="flex items-center text-sm font-mono text-gray-300 py-2 focus-highlight transition-colors duration-200"
         >
           <HomeIcon className="h-4 w-4 mr-2" /> {t("home")}
         </Link>
+        <Link
+          href="/operators"
+          className="flex items-center text-sm font-mono text-gray-300 hover:text-[#FACC15] focus-highlight py-2 transition-colors duration-200"
+        >
+          <UserIcon className="h-4 w-4 mr-2" /> {t("operators")}
+        </Link>
 
-        <div className="space-y-2">
+        <div className="space-y-1">
           <div className="flex items-center text-sm font-mono text-gray-400 py-2">
             <BookOpenIcon className="h-4 w-4 mr-2" /> {t("tools")}
           </div>
           <div className="ml-6 space-y-1">
             <Link
               href="/"
-              className="block text-sm font-mono text-gray-400 hover:text-[#FACC15]"
+              className="block text-sm font-mono text-gray-400 hover:text-[#FACC15] focus-highlight"
             >
               {t("recruitment")}
             </Link>
             <Link
               href="/events"
-              className="block text-sm font-mono text-gray-400 hover:text-[#FACC15]"
+              className="block text-sm font-mono text-gray-400 hover:text-[#FACC15] focus-highlight"
             >
               {t("events")}
             </Link>
           </div>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-1">
           <div className="flex items-center text-sm font-mono text-gray-400 py-2">
             <SproutIcon className="h-4 w-4 mr-2" /> {t("about")}
           </div>
           <div className="ml-6 space-y-1">
             <Link
               href="/about/project"
-              className="block text-sm font-mono text-gray-400 hover:text-[#FACC15]"
+              className="block text-sm font-mono text-gray-400 hover:text-[#FACC15] focus-highlight"
             >
               {t("about_project")}
             </Link>
             <Link
               href="/about/devlog"
-              className="block text-sm font-mono text-gray-400 hover:text-[#FACC15]"
+              className="block text-sm font-mono text-gray-400 hover:text-[#FACC15] focus-highlight"
             >
               {t("devlog")}
             </Link>
