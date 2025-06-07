@@ -359,7 +359,7 @@ export default function OperatorsGrid() {
                   <SelectItem value="all">{t("all_position")}</SelectItem>
                   {positions.map((pos) => (
                     <SelectItem key={pos} value={pos}>
-                      {t(pos)}
+                      {t("positions." + pos)}
                     </SelectItem>
                   ))}
                 </SelectContent>
