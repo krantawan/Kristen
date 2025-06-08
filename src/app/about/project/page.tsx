@@ -11,13 +11,59 @@ import { siDiscord } from "simple-icons/icons";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
+// interface FormResponse {
+//   [key: string]: string;
+// }
+
 export default function AboutProjectPage() {
   const t = useTranslations("components.about.project");
   const locale = useLocale();
 
   const [prompt, setPrompt] = useState("");
+  const [names, setNames] = useState<string[]>([]);
+
+  const uniqueNames = Array.from(
+    new Set(
+      names
+        .filter((name) => name && name.trim() !== "")
+        .map((name) => name.trim())
+    )
+  );
 
   useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await fetch("/api/form-data");
+        const data = await res.json();
+
+        if (Array.isArray(data)) {
+          const nameList = Array.from(
+            new Set(
+              data
+                .map(
+                  (item: { [key: string]: string }) =>
+                    item["Name (for credit / Special Thanks)"]
+                )
+                .filter(
+                  (name: string) =>
+                    name &&
+                    name.trim() !== "" &&
+                    name.trim() !== "-" &&
+                    name.trim() !== "KALAFIA"
+                )
+                .map((name: string) => name.trim())
+            )
+          ) as string[];
+
+          setNames(nameList);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+
     const full = 'echo "All systems operational."';
     let i = 0;
     const interval = setInterval(() => {
@@ -119,10 +165,20 @@ export default function AboutProjectPage() {
               <p className="text-emerald-600 dark:text-green-400">
                 ~$ cat thanks.txt
               </p>
+              <p className="mt-2 text-gray-600 dark:text-gray-400">
+                Special Thanks to all contributing Doctors! Your support helps
+                make this tool better for the Arknights community.
+              </p>
               <ul className="pl-4 mt-2 text-gray-700 dark:text-gray-300 list-disc space-y-1">
                 <li>
                   <span className="text-black dark:text-white">Lonetail</span> —
                   for design inspiration from Arknights
+                </li>
+                <li>
+                  <span className="text-black dark:text-white">
+                    Contributing Doctors:
+                  </span>{" "}
+                  {uniqueNames.join(", ")}
                 </li>
               </ul>
             </div>
