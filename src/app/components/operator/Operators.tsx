@@ -145,7 +145,6 @@ export default function OperatorsGrid() {
     "char_245_cello", // Virtuosa
     "char_1035_wisdel", // Wiš'adel
     "char_1038_whitw2", // Lappland the Decadenza
-    "char_003_kalts", // Kal'tsit
     //"char_xxx_", // Exusiai the New Covenant
 
     // Carnival
