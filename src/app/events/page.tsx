@@ -19,7 +19,7 @@ export default function EventsPage() {
         <PRTSSystemHeader
           version="v2.3"
           user="KRISTEN"
-          status="MAINTENANCE"
+          status="ONLINE"
           title={">> " + t("header_title")}
           description={t("header_description")}
         />
