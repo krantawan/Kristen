@@ -293,14 +293,14 @@ export default function GachaSimulator() {
             <Button
               onClick={handleSingleRoll}
               disabled={isRolling}
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+              className="bg-green-700 hover:bg-green-800 text-white"
             >
               {t("singlePull")}
             </Button>
             <Button
               onClick={handleMultiRoll}
               disabled={isRolling}
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+              className="bg-green-700 hover:bg-green-800 text-white"
             >
               {t("multiPull")}
             </Button>
