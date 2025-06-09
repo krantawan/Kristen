@@ -30,7 +30,10 @@ export default function HeaderNavMenu() {
   const fontClass = locale === "en" ? "font-mono" : "";
 
   const pathname = usePathname();
-  const isToolsActive = pathname === "/" || pathname.startsWith("/events");
+  const isToolsActive =
+    pathname === "/" ||
+    pathname.startsWith("/events") ||
+    pathname.startsWith("/gacha-simulator");
   const isAboutActive = pathname.startsWith("/about");
 
   return (
