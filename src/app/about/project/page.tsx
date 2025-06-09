@@ -21,6 +21,7 @@ export default function AboutProjectPage() {
 
   const [prompt, setPrompt] = useState("");
   const [names, setNames] = useState<string[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const uniqueNames = Array.from(
     new Set(
@@ -33,6 +34,7 @@ export default function AboutProjectPage() {
   useEffect(() => {
     async function fetchData() {
       try {
+        setLoading(true);
         const res = await fetch("/api/form-data");
         const data = await res.json();
 
@@ -59,6 +61,8 @@ export default function AboutProjectPage() {
         }
       } catch (error) {
         console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
       }
     }
 
@@ -178,7 +182,15 @@ export default function AboutProjectPage() {
                   <span className="text-black dark:text-white">
                     Contributing Doctors:
                   </span>{" "}
-                  {uniqueNames.join(", ")}
+                  {loading ? (
+                    <span className="animate-pulse text-emerald-600">
+                      Loading...
+                    </span>
+                  ) : (
+                    <span className="text-emerald-600">
+                      {uniqueNames.map((name) => `@${name}`).join(", ")}
+                    </span>
+                  )}
                 </li>
               </ul>
             </div>
