@@ -58,7 +58,11 @@ export const limitedOperatorIds = new Set([
 
 // Manual roll → ถ้าอยากใช้เอง
 export function rollRarity(rarityRates: Record<string, number>): number {
-  const roll = Math.random() * 100;
+  const totalRate = Object.values(rarityRates).reduce(
+    (sum, rate) => sum + rate,
+    0
+  );
+  const roll = Math.random() * totalRate;
   let acc = 0;
 
   for (const rarity of ["6", "5", "4", "3"]) {
@@ -78,9 +82,18 @@ export function performGachaRoll(
   guaranteeCounter: number
 ) {
   // 1. Calculate current 6⭐ rate
+  // let sixStarRate = 2;
+  // if (pityCounter >= 50) {
+  //   sixStarRate = Math.min(100, 2 + Math.pow(Math.max(pityCounter - 49, 0), 0.8));
+
+  // }
+
   let sixStarRate = 2;
   if (pityCounter >= 50) {
-    sixStarRate = Math.min(100, 2 + (pityCounter - 49) * 2);
+    sixStarRate = Math.min(
+      100,
+      2 + Math.pow(Math.max(pityCounter - 49, 0), 0.8)
+    );
   }
 
   // 2. Build roll table
@@ -109,7 +122,7 @@ export function performGachaRoll(
     let acc = 0;
     for (const entry of rollTable) {
       acc += entry.rate;
-      if (roll < acc) {
+      if (roll <= acc) {
         pickedRarity = entry.rarity;
         break;
       }
