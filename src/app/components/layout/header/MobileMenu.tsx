@@ -46,13 +46,19 @@ export default function MobileMenu({
               href="/"
               className="block text-sm font-mono text-gray-400 hover:text-[#FACC15] focus-highlight"
             >
-              {t("recruitment")}
+              ~$ {t("recruitment")}
             </Link>
             <Link
               href="/events"
               className="block text-sm font-mono text-gray-400 hover:text-[#FACC15] focus-highlight"
             >
-              {t("events")}
+              ~$ {t("events")}
+            </Link>
+            <Link
+              href="/gacha-simulator"
+              className="block text-sm font-mono text-gray-400 hover:text-[#FACC15] focus-highlight"
+            >
+              ~$ {t("gacha")}
             </Link>
           </div>
         </div>
@@ -66,13 +72,13 @@ export default function MobileMenu({
               href="/about/project"
               className="block text-sm font-mono text-gray-400 hover:text-[#FACC15] focus-highlight"
             >
-              {t("about_project")}
+              ~$ {t("about_project")}
             </Link>
             <Link
               href="/about/devlog"
               className="block text-sm font-mono text-gray-400 hover:text-[#FACC15] focus-highlight"
             >
-              {t("devlog")}
+              ~$ {t("devlog")}
             </Link>
           </div>
         </div>
