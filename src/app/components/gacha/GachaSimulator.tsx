@@ -146,6 +146,7 @@ export default function GachaSimulator() {
       }
     }
 
+    setHasGuaranteed5Or6(localHasGuaranteed5Or6);
     setTotalPulls((prev) => prev + 10);
     setResults((prev) => [...newResults, ...prev]);
     setPityCounter(localPity);
@@ -212,77 +213,41 @@ export default function GachaSimulator() {
             </span>
           </p>
 
-          {/* Summary */}
-          <div className="flex flex-wrap gap-4 mt-2 text-sm">
-            {/* Total Pulls */}
-            <div>
-              {t("totalPulls")}:{" "}
-              <span className="text-blue-600 dark:text-blue-400 font-medium">
-                {totalPulls}
-              </span>
-            </div>
-
-            {/* Pity Counter */}
-            <div className="flex items-center">
-              {t("pityCounter")}:{" "}
-              <span
-                className={`ml-1 font-medium ${
-                  pityCounter >= 50
-                    ? "text-yellow-600 dark:text-yellow-400"
-                    : "text-gray-700 dark:text-gray-300"
-                }`}
-              >
-                {pityCounter}
-              </span>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <button className="ml-1.5 text-gray-500 hover:text-gray-400">
-                      <InfoIcon size={14} />
-                    </button>
-                  </TooltipTrigger>
-                  <TooltipContent className="max-w-xs bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 border border-gray-300 dark:border-gray-700">
-                    <p>{t("pity_desc")}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            </div>
-
-            {/* Guarantee Counter */}
-            <div className="flex items-center">
-              {t("guarantee")}:{" "}
-              <span
-                className={`ml-1 font-medium ${
-                  currentGuaranteeCount >= 9
-                    ? "text-green-600 dark:text-green-400"
-                    : "text-gray-700 dark:text-gray-300"
-                }`}
-              >
-                {Math.min(currentGuaranteeCount, 10)} / 10
-              </span>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <button className="ml-1.5 text-gray-500 hover:text-gray-400">
-                      <InfoIcon size={14} />
-                    </button>
-                  </TooltipTrigger>
-                  <TooltipContent className="max-w-xs bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 border border-gray-300 dark:border-gray-700">
-                    <p>{t("guarantee_desc")}</p>
-                    <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                      {t("garantee_desc2")}
-                    </p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            </div>
-          </div>
-
           {/* Pity Progress */}
           <div className="mt-3 p-3 border border-gray-300 dark:border-gray-700 rounded bg-gray-50 dark:bg-[#1f1f1f] space-y-1 text-sm">
             <div className="font-semibold text-gray-800 dark:text-gray-200">
-              ★ {t("pityProgressTitle")}
+              ~$ {t("pityProgressTitle")}
             </div>
+            {/* Guarantee Counter */}
+            {!hasGuaranteed5Or6 && (
+              <div className="flex items-center">
+                {t("guarantee")}:{" "}
+                <span
+                  className={`ml-1 font-medium ${
+                    currentGuaranteeCount >= 10
+                      ? "text-green-600 dark:text-green-400"
+                      : "text-gray-700 dark:text-gray-300"
+                  }`}
+                >
+                  {Math.min(currentGuaranteeCount, 10)} / 10
+                </span>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <button className="ml-1.5 text-gray-500 hover:text-gray-400">
+                        <InfoIcon size={14} />
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent className="max-w-xs bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 border border-gray-300 dark:border-gray-700">
+                      <p>{t("guarantee_desc")}</p>
+                      <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                        {t("garantee_desc2")}
+                      </p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
+            )}
             <div className="flex items-center">
               {t("pity_rate")}{" "}
               <span className="ml-1 font-medium text-yellow-600 dark:text-yellow-400">
@@ -385,6 +350,74 @@ export default function GachaSimulator() {
         </div>
       </div>
 
+      <div className="w-full grid grid-cols-1 pb-2 border-b border-gray-300 dark:border-gray-700">
+        {/* Summary */}
+        <div className="flex flex-wrap gap-4 mt-2 text-sm w-full justify-center">
+          {/* Total Pulls */}
+          <div>
+            {t("totalPulls")}:{" "}
+            <span className="text-blue-600 dark:text-blue-400 font-medium">
+              {totalPulls}
+            </span>
+          </div>
+
+          {/* Pity Counter */}
+          <div className="flex items-center">
+            {t("pityCounter")}:{" "}
+            <span
+              className={`ml-1 font-medium ${
+                pityCounter >= 50
+                  ? "text-yellow-600 dark:text-yellow-400"
+                  : "text-gray-700 dark:text-gray-300"
+              }`}
+            >
+              {pityCounter}
+            </span>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button className="ml-1.5 text-gray-500 hover:text-gray-400">
+                    <InfoIcon size={14} />
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-xs bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 border border-gray-300 dark:border-gray-700">
+                  <p>{t("pity_desc")}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
+
+          {/* Count Orundum + Originite Prime*/}
+          <div className="flex items-center">
+            <Image
+              src={"/game-ui/18px-Orundum_icon.png"}
+              alt="Orundum"
+              width={20}
+              height={20}
+              className="w-5 h-5 mr-1"
+            />
+            Orundum:{" "}
+            <span className="ml-1 font-medium text-gray-700 dark:text-gray-300">
+              {(totalPulls * 600).toLocaleString()}
+            </span>
+          </div>
+
+          {/* Count Orundum + Originite Prime*/}
+          <div className="flex items-center">
+            <Image
+              src={"/game-ui/18px-Originite_Prime_icon.png"}
+              alt="Originite Prime"
+              width={20}
+              height={20}
+              className="w-5 h-5 mr-1"
+            />
+            Originite Prime:{" "}
+            <span className="ml-1 font-medium text-gray-700 dark:text-gray-300">
+              {((totalPulls * 600) / 180).toFixed(0).toLocaleString()}
+            </span>
+          </div>
+        </div>
+      </div>
       {/* Roll Results */}
       <div className="p-4 min-h-[1000px] transition-all duration-300">
         <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-200">
