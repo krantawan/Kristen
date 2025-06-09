@@ -342,7 +342,7 @@ export default function GachaSimulator() {
                   variant="ghost"
                   className="text-gray-500 col-span-1 md:col-span-1"
                 >
-                  ← Back
+                  ← {t("back")}
                 </Button>
               </>
             )}
@@ -396,7 +396,7 @@ export default function GachaSimulator() {
               height={20}
               className="w-5 h-5 mr-1"
             />
-            Orundum:{" "}
+            {t("orundum")}:{" "}
             <span className="ml-1 font-medium text-gray-700 dark:text-gray-300">
               {(totalPulls * 600).toLocaleString()}
             </span>
@@ -411,7 +411,7 @@ export default function GachaSimulator() {
               height={20}
               className="w-5 h-5 mr-1"
             />
-            Originite Prime:{" "}
+            {t("originite_prime")}:{" "}
             <span className="ml-1 font-medium text-gray-700 dark:text-gray-300">
               {((totalPulls * 600) / 180).toFixed(0).toLocaleString()}
             </span>
