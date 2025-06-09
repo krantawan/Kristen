@@ -9,8 +9,11 @@ declare const messages: {
     "menu": {
       "home": "Home",
       "tools": "Tools",
+      "operators": "Operators",
       "about": "About",
       "events": "Events",
+      "gacha": "Headhunting Simulator",
+      "gacha_desc": "See your luck on any banner!",
       "events_desc": "Track ongoing and upcoming events",
       "tools_desc": "Accessing system modules...",
       "tools_desc2": "Tools available for operator scan, event scheduling, and mission logging.",
@@ -116,7 +119,93 @@ declare const messages: {
         "starts_in_duration": "Starts in {duration}",
         "ends_in_duration": "Ends in {duration}",
         "no_events": "Awaiting next mission deployment..."
+      },
+      "data_mine": {
+        "title": "Data Mine",
+        "date": "Date",
+        "type": "Event Type",
+        "reference_picture": "Reference Picture",
+        "source": "Source",
+        "TBD": "TBD",
+        "h_spoil": "Hide spoilers",
+        "r_spoil": "Reveal spoilers",
+        "search_event": "Search events...",
+        "not_found": "No events found.",
+        "showing_results": "Showing {x} to {y} of {z} results",
+        "pagination": {
+          "previous": "Previous",
+          "next": "Next"
+        }
       }
+    },
+    "GachaSimulator": {
+      "title": "Gacha Simulator",
+      "singlePull": "Single Pull",
+      "multiPull": "10 Pull",
+      "pityCounter": "Pity Counter: {count}",
+      "rateUp": "Rate Up"
+    },
+    "OperatorsPage": {
+      "title": "All Operators",
+      "description": "Initiate operator search and filtering process.",
+      "search": "Search operator",
+      "showing_results": "Showing {start} to {end} of {total} results",
+      "filter": {
+        "title": "Advanced Filters",
+        "cn_spoiler": "CN Spoiler",
+        "clear_all": "Clear All",
+        "class": {
+          "title": "Class",
+          "all_class": "All Class",
+          "all_sub_class": "All Sub-Class"
+        },
+        "positions": {
+          "title": "Positions",
+          "all_position": "All Position",
+          "MELEE": "Melee",
+          "RANGED": "Ranged"
+        },
+        "rarity": {
+          "title": "Rarity",
+          "all_rarity": "All Rarity"
+        },
+        "availability": {
+          "title": "Availability",
+          "limited": "Limited",
+          "non_limited": "Non-Limited",
+          "all_limited": "All"
+        },
+        "sort_by": {
+          "title": "Sort By",
+          "rarity_asc": "Rarity",
+          "rarity_desc": "Rarity",
+          "name_asc": "Name A-Z",
+          "name_desc": "Name Z-A"
+        }
+      },
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next"
+      }
+    },
+    "gacha": {
+      "title": "Headhunting Simulator",
+      "description": "Simulate pulls with full pity and guarantee system. See your luck on any banner!",
+      "banner": "Banner",
+      "singlePull": "Single Pull",
+      "multiPull": "10 Pull",
+      "pityCounter": "Pity Counter",
+      "pity_desc": "After 50 pulls without a 6★ operator, the 6★ rate increases by 2% with each additional pull until reaching 100%.",
+      "guarantee": "5★ Guaranteed Pull Progress",
+      "guarantee_desc": "You are guaranteed at least one 5★ or higher operator within the first 10 pulls of each banner.",
+      "garantee_desc2": "Progress is tracked separately per banner.",
+      "clear": "Clear History",
+      "reset": "Reset Pity / Guarantee",
+      "rollResults": "Roll Results",
+      "featured": "Featured",
+      "offRate": "Off-rate",
+      "other": "Other",
+      "noResults": "No results yet."
     },
     "about": {
       "project": {

@@ -21,6 +21,7 @@ import { useActivePath } from "@/components/ui/useActivePath";
 import { useLocale } from "next-intl";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
 
 export default function HeaderNavMenu() {
   const locale = useLocale();
@@ -84,7 +85,7 @@ export default function HeaderNavMenu() {
             <NavigationMenuContent>
               <div className="grid gap-3 w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] p-2">
                 <div className="row-span-3">
-                  <div className="flex h-full w-full select-none flex-col justify-end bg-[#2a2a2a] p-2 border border-[#444] text-left hover:bg-[#333] transition-colors">
+                  <div className="flex h-full w-full select-none flex-col bg-[#2a2a2a] p-2 border border-[#444] text-left hover:bg-[#333] transition-colors">
                     <div
                       className={cn(
                         "mb-2 text-lg text-[#FACC15] tracking-widest font-mono"
@@ -147,6 +148,31 @@ export default function HeaderNavMenu() {
                       </div>
                       <p className="line-clamp-2 text-sm leading-snug text-gray-400">
                         {t("events_desc")}
+                      </p>
+                    </Link>
+                  </NavigationMenuLink>
+
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href={"/gacha-simulator"}
+                      className={cn(
+                        "block select-none space-y-1 rounded-md p-3 text-gray-300 hover:text-[#FACC15]",
+                        fontClass,
+                        useActivePath("/gacha-simulator")
+                          ? "!text-[#FACC15]"
+                          : ""
+                      )}
+                    >
+                      <div
+                        className={cn(
+                          "text-sm font-medium leading-none",
+                          fontClass
+                        )}
+                      >
+                        {t("gacha")} <Badge variant="destructive">BETA</Badge>
+                      </div>
+                      <p className="line-clamp-2 text-sm leading-snug text-gray-400">
+                        {t("gacha_desc")}
                       </p>
                     </Link>
                   </NavigationMenuLink>
