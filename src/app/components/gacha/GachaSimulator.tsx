@@ -4,7 +4,12 @@ import gachaBanners from "@/data/gacha-simulator/gacha-banners.json";
 import operators from "@/data/operators.json";
 import { performGachaRoll } from "@/lib/gacha-utils";
 import { useEffect, useState } from "react";
-import { X, InfoIcon, RotateCcw } from "lucide-react";
+import {
+  InfoIcon,
+  RotateCcw,
+  Settings as GearIcon,
+  Trash2,
+} from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -33,6 +38,7 @@ type OperatorData = {
 type OperatorResult = {
   id: string;
   rarity: number;
+  isRateUp?: boolean;
 };
 
 export default function GachaSimulator() {
@@ -40,14 +46,20 @@ export default function GachaSimulator() {
   const [selectedBannerId, setSelectedBannerId] = useState<string>(
     gachaBanners[0]?.id ?? ""
   );
+  const [totalPulls, setTotalPulls] = useState(0);
   const [results, setResults] = useState<OperatorResult[]>([]);
   const [isRolling, setIsRolling] = useState(false);
   const [pityCounter, setPityCounter] = useState<number>(0);
   const [guaranteeCounters, setGuaranteeCounters] = useState<
     Record<string, number>
   >({});
+  const [showAdvancedReset, setShowAdvancedReset] = useState(false);
 
   const currentGuaranteeCount = guaranteeCounters[selectedBannerId] || 0;
+
+  // Calculate current sixStarRate
+  const sixStarRate =
+    pityCounter >= 50 ? Math.min(100, 2 + (pityCounter - 49) * 2) : 2;
 
   useEffect(() => {
     const history = localStorage.getItem("gachaHistory");
@@ -92,6 +104,7 @@ export default function GachaSimulator() {
         updatedPity === 0 ? 0 : (prev[selectedBannerId] || 0) + 1,
     }));
 
+    setTotalPulls((prev) => prev + 1);
     setIsRolling(false);
   };
 
@@ -104,18 +117,28 @@ export default function GachaSimulator() {
     const newResults: OperatorResult[] = [];
 
     for (let i = 0; i < 10; i++) {
-      const { result, updatedPity } = performGachaRoll(
+      const { result, updatedPity, resetGuarantee } = performGachaRoll(
         banner,
         operators,
         localPity,
         localGuarantee
       );
-      newResults.push({ id: result.id, rarity: result.rarity });
 
+      newResults.push({
+        id: result.id,
+        rarity: result.rarity,
+        isRateUp: result.isRateUp,
+      });
+
+      // Update Pity Counter
       localPity = updatedPity;
-      localGuarantee = updatedPity === 0 ? 0 : localGuarantee + 1;
+
+      // Update Guarantee Counter
+      localGuarantee = resetGuarantee ? 0 : localGuarantee + 1;
     }
 
+    // After 10 pulls → update state
+    setTotalPulls((prev) => prev + 10);
     setResults((prev) => [...newResults, ...prev]);
     setPityCounter(localPity);
     setGuaranteeCounters((prev) => ({
@@ -137,6 +160,21 @@ export default function GachaSimulator() {
 
   const handleResetCounters = () => {
     setPityCounter(0);
+    setTotalPulls(0);
+    setGuaranteeCounters((prev) => ({
+      ...prev,
+      [selectedBannerId]: 0,
+    }));
+  };
+
+  const handleClearAll = () => {
+    // ลบ history
+    localStorage.removeItem("gachaHistory");
+    setResults([]);
+
+    // Reset pity + guarantee
+    setPityCounter(0);
+    setTotalPulls(0);
     setGuaranteeCounters((prev) => ({
       ...prev,
       [selectedBannerId]: 0,
@@ -158,6 +196,7 @@ export default function GachaSimulator() {
         </div>
         {/* Pity / Guarantee Info */}
         <div className="mt-4 text-md text-gray-700 dark:text-gray-400 space-y-2">
+          {/* Banner Name */}
           <p>
             {t("banner")}:{" "}
             <span className="text-blue-600 dark:text-blue-400 font-medium">
@@ -165,57 +204,91 @@ export default function GachaSimulator() {
             </span>
           </p>
 
-          <div className="flex items-center">
-            <span className="mr-2">{t("pityCounter")}</span>
-            <span
-              className={`font-medium ${
-                pityCounter >= 50
-                  ? "text-yellow-600 dark:text-yellow-400"
-                  : "text-gray-700 dark:text-gray-300"
-              }`}
-            >
-              {pityCounter}
-            </span>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <button className="ml-1.5 text-gray-500 hover:text-gray-400">
-                    <InfoIcon size={14} />
-                  </button>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-xs bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 border border-gray-300 dark:border-gray-700">
-                  <p>{t("pity_desc")}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+          {/* Summary */}
+          <div className="flex flex-wrap gap-4 mt-2 text-sm">
+            {/* Total Pulls */}
+            <div>
+              {t("totalPulls")}:{" "}
+              <span className="text-blue-600 dark:text-blue-400 font-medium">
+                {totalPulls}
+              </span>
+            </div>
+
+            {/* Pity Counter */}
+            <div className="flex items-center">
+              {t("pityCounter")}:{" "}
+              <span
+                className={`ml-1 font-medium ${
+                  pityCounter >= 50
+                    ? "text-yellow-600 dark:text-yellow-400"
+                    : "text-gray-700 dark:text-gray-300"
+                }`}
+              >
+                {pityCounter}
+              </span>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button className="ml-1.5 text-gray-500 hover:text-gray-400">
+                      <InfoIcon size={14} />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 border border-gray-300 dark:border-gray-700">
+                    <p>{t("pity_desc")}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
+
+            {/* Guarantee Counter */}
+            <div className="flex items-center">
+              {t("guarantee")}:{" "}
+              <span
+                className={`ml-1 font-medium ${
+                  currentGuaranteeCount >= 9
+                    ? "text-green-600 dark:text-green-400"
+                    : "text-gray-700 dark:text-gray-300"
+                }`}
+              >
+                {Math.min(currentGuaranteeCount, 10)} / 10
+              </span>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button className="ml-1.5 text-gray-500 hover:text-gray-400">
+                      <InfoIcon size={14} />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 border border-gray-300 dark:border-gray-700">
+                    <p>{t("guarantee_desc")}</p>
+                    <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                      {t("garantee_desc2")}
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
           </div>
 
-          <div className="flex items-center">
-            <span className="mr-2">{t("guarantee")}:</span>
-            <span
-              className={`font-medium ${
-                currentGuaranteeCount >= 9
-                  ? "text-green-600 dark:text-green-400"
-                  : "text-gray-700 dark:text-gray-300"
-              }`}
-            >
-              {currentGuaranteeCount} / 10
-            </span>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <button className="ml-1.5 text-gray-500 hover:text-gray-400">
-                    <InfoIcon size={14} />
-                  </button>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-xs bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 border border-gray-300 dark:border-gray-700">
-                  <p>{t("guarantee_desc")}</p>
-                  <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                    {t("garantee_desc2")}
-                  </p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+          {/* Pity Progress */}
+          <div className="mt-3 p-3 border border-gray-300 dark:border-gray-700 rounded bg-gray-50 dark:bg-[#1f1f1f] space-y-1 text-sm">
+            <div className="font-semibold text-gray-800 dark:text-gray-200">
+              ★ {t("pityProgressTitle")}
+            </div>
+            <div className="flex items-center">
+              {t("pity_rate")}{" "}
+              <span className="ml-1 font-medium text-yellow-600 dark:text-yellow-400">
+                {sixStarRate.toFixed(1)}%
+              </span>
+            </div>
+            <div className="flex items-center">
+              {t("pity_expected")}
+              <span className="ml-1 font-medium text-gray-900 dark:text-gray-100 pr-1">
+                {Math.round(100 / sixStarRate)}
+              </span>
+              {t("pity_expected_suffix")}
+            </div>
+            <div className="text-xs text-gray-400">{t("pity_desc")}</div>
           </div>
         </div>
         <hr className="my-4" />
@@ -238,7 +311,12 @@ export default function GachaSimulator() {
             </Select>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2">
+          <div
+            className={cn(
+              "grid grid-cols-2 sm:grid-cols-2 md:flex md:flex-wrap md:gap-2 md:max-w-[700px] gap-2",
+              showAdvancedReset ? "md:grid-cols-5" : ""
+            )}
+          >
             <Button
               onClick={handleSingleRoll}
               disabled={isRolling}
@@ -253,20 +331,48 @@ export default function GachaSimulator() {
             >
               {t("multiPull")}
             </Button>
-            <Button
-              onClick={handleClear}
-              variant="outline"
-              className="border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300"
-            >
-              <X className="w-4 h-4 mr-1" /> {t("clear")}
-            </Button>
-            <Button
-              onClick={handleResetCounters}
-              className="border-gray-300 dark:border-gray-700 text-white dark:text-white bg-red-800 hover:bg-red-900"
-            >
-              <RotateCcw className="w-4 h-4 mr-1" />
-              {t("reset")}
-            </Button>
+            {!showAdvancedReset && (
+              <Button
+                onClick={handleClearAll}
+                className="bg-red-800 hover:bg-red-900 text-white"
+              >
+                <Trash2 className="w-4 h-4 mr-1" />
+                {t("clearAll")}
+              </Button>
+            )}
+            {!showAdvancedReset ? (
+              <Button
+                onClick={() => setShowAdvancedReset(true)}
+                variant="outline"
+                className="border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300"
+              >
+                <GearIcon className="w-4 h-4" />
+              </Button>
+            ) : (
+              <>
+                <Button
+                  onClick={handleClear}
+                  variant="outline"
+                  className="border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300"
+                >
+                  <Trash2 className="w-4 h-4 mr-1" /> {t("clear")}
+                </Button>
+                <Button
+                  onClick={handleResetCounters}
+                  className="border-gray-300 dark:border-gray-700 text-white dark:text-white bg-red-800 hover:bg-red-900"
+                >
+                  <RotateCcw className="w-4 h-4 mr-1" />
+                  {t("reset")}
+                </Button>
+                <Button
+                  onClick={() => setShowAdvancedReset(false)}
+                  variant="ghost"
+                  className="text-gray-500 col-span-1 md:col-span-1"
+                >
+                  ← Back
+                </Button>
+              </>
+            )}
           </div>
         </div>
       </div>

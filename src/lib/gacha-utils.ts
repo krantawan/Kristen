@@ -91,14 +91,16 @@ export function performGachaRoll(
     { rarity: 3, rate: 40 },
   ];
 
-  // 3. Guarantee 5 + logic
+  // 3. Guarantee 5★+ logic
   let force5Or6 = false;
   if (guaranteeCounter >= 9) {
     force5Or6 = true;
   }
 
   // 4. Roll rarity
-  const roll = Math.random() * 100;
+  const totalRate = rollTable.reduce((sum, item) => sum + item.rate, 0);
+  const roll = Math.random() * totalRate;
+
   let pickedRarity = 3;
 
   if (force5Or6) {
@@ -107,7 +109,7 @@ export function performGachaRoll(
     let acc = 0;
     for (const entry of rollTable) {
       acc += entry.rate;
-      if (roll <= acc) {
+      if (roll < acc) {
         pickedRarity = entry.rarity;
         break;
       }
