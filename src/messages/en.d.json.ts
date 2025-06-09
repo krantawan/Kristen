@@ -195,7 +195,6 @@ declare const messages: {
       "singlePull": "Single Pull",
       "multiPull": "10 Pull",
       "pityCounter": "Pity Counter",
-      "pity_desc": "After 50 pulls without a 6★ operator, the 6★ rate increases by 2% with each additional pull until reaching 100%.",
       "guarantee": "5★ Guaranteed Pull Progress",
       "guarantee_desc": "You are guaranteed at least one 5★ or higher operator within the first 10 pulls of each banner.",
       "garantee_desc2": "Progress is tracked separately per banner.",
@@ -205,7 +204,14 @@ declare const messages: {
       "featured": "Featured",
       "offRate": "Off-rate",
       "other": "Other",
-      "noResults": "No results yet."
+      "noResults": "No results yet.",
+      "clearAll": "Clear All",
+      "totalPulls": "Total Pulls",
+      "pityProgressTitle": "Pity Progress",
+      "pity_rate": "Current 6★ appearance rate:",
+      "pity_expected": "Expected ~",
+      "pity_expected_suffix": " rolls to pull a 6★ (on average)",
+      "pity_desc": "*Pity resets after 6★ pull. Pity shared across all Standard banners."
     },
     "about": {
       "project": {

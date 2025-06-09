@@ -1,25 +1,40 @@
 // gacha-utils.ts
 
-export type Operator = {
-  id: string;
-  name: string;
-  rarity: number;
-  image: string;
-  profession?: string;
-  position?: string;
-  subProfessionId?: string;
-  tagList?: string[];
+export type BannerRates = {
+  base6StarRate: number;
+  base5StarRate: number;
+  base4StarRate: number;
+  pityStart: number;
+  pityIncrement: number;
+  max6StarRate: number;
 };
 
-export type GachaBanner = {
+export type Banner = {
   id: string;
   name: string;
-  image?: string;
+  image: string;
   featured6?: string[];
   featured5?: string[];
 };
 
-// Set ของ limited operators → Global
+export type OperatorData = {
+  id: string;
+  name: string;
+  image: string;
+  rarity: number;
+  isNotObtainable: boolean;
+  itemObtainApproach: string;
+};
+
+const DEFAULT_BANNER_RATES: BannerRates = {
+  base6StarRate: 2,
+  base5StarRate: 8,
+  base4StarRate: 50,
+  pityStart: 50,
+  pityIncrement: 2,
+  max6StarRate: 50, // 50% (default 70%)
+};
+
 export const limitedOperatorIds = new Set([
   "char_113_cqbw",
   "char_391_rosmon",
@@ -56,146 +71,123 @@ export const limitedOperatorIds = new Set([
   "char_4126_fuze",
 ]);
 
-// Manual roll → ถ้าอยากใช้เอง
-export function rollRarity(rarityRates: Record<string, number>): number {
-  const totalRate = Object.values(rarityRates).reduce(
-    (sum, rate) => sum + rate,
-    0
-  );
-  const roll = Math.random() * totalRate;
-  let acc = 0;
+export function rollRarity(
+  pityCounter: number,
+  bannerRates: BannerRates
+): number {
+  const base6StarRate = bannerRates.base6StarRate;
+  const base5StarRate = bannerRates.base5StarRate;
+  const base4StarRate = bannerRates.base4StarRate;
 
-  for (const rarity of ["6", "5", "4", "3"]) {
-    acc += rarityRates[rarity] ?? 0;
-    if (roll <= acc) {
-      return parseInt(rarity);
-    }
+  let effective6StarRate = base6StarRate;
+
+  // Pity system for 6★
+  if (pityCounter >= bannerRates.pityStart) {
+    const extraRate =
+      (pityCounter - bannerRates.pityStart + 1) * bannerRates.pityIncrement;
+
+    effective6StarRate = Math.min(
+      base6StarRate + extraRate,
+      bannerRates.max6StarRate
+    );
   }
 
+  const roll = Math.random() * 100;
+
+  if (roll < effective6StarRate) return 6;
+  if (roll < effective6StarRate + base5StarRate) return 5;
+  if (roll < effective6StarRate + base5StarRate + base4StarRate) return 4;
   return 3;
 }
 
 export function performGachaRoll(
-  banner: GachaBanner,
-  operators: Operator[],
+  banner: Banner,
+  operators: OperatorData[],
   pityCounter: number,
-  guaranteeCounter: number
-) {
-  // 1. Calculate current 6⭐ rate
-  // let sixStarRate = 2;
-  // if (pityCounter >= 50) {
-  //   sixStarRate = Math.min(100, 2 + Math.pow(Math.max(pityCounter - 49, 0), 0.8));
+  guaranteeCounter: number,
+  hasGuaranteed5Or6: boolean
+): {
+  result: {
+    id: string;
+    rarity: number;
+    isRateUp: boolean;
+  };
+  updatedPity: number;
+  resetGuarantee: boolean;
+} {
+  const bannerRates = DEFAULT_BANNER_RATES;
 
-  // }
+  // Guarantee logic: force 5★ on 10th roll if none appeared
+  let forcedRarity: number | undefined = undefined;
+  if (guaranteeCounter === 9 && !hasGuaranteed5Or6) {
+    forcedRarity = 5;
+  }
 
-  let sixStarRate = 2;
-  if (pityCounter >= 50) {
-    sixStarRate = Math.min(
-      100,
-      2 + Math.pow(Math.max(pityCounter - 49, 0), 0.8)
+  const rolledRarity = forcedRarity ?? rollRarity(pityCounter, bannerRates);
+  const rarity = rolledRarity;
+
+  // Guarantee reset condition: if pulled 5★ or 6★
+  const resetGuarantee = rarity >= 5;
+
+  // Filter operator pool
+  let availableOperators = operators.filter(
+    (op) =>
+      op.rarity === rarity &&
+      (!limitedOperatorIds.has(op.id) ||
+        banner.featured6?.includes(op.id) ||
+        banner.featured5?.includes(op.id)) &&
+      op.isNotObtainable === false &&
+      op.itemObtainApproach === "Recruitment & Headhunting"
+  );
+
+  let isRateUp = false;
+
+  if (rarity === 6 && banner.featured6 && banner.featured6.length > 0) {
+    if (Math.random() < 0.5) {
+      availableOperators = availableOperators.filter((op) =>
+        banner.featured6!.includes(op.id)
+      );
+      isRateUp = true;
+    } else {
+      availableOperators = availableOperators.filter(
+        (op) => !banner.featured6!.includes(op.id)
+      );
+    }
+  } else if (rarity === 5 && banner.featured5 && banner.featured5.length > 0) {
+    if (Math.random() < 0.5) {
+      availableOperators = availableOperators.filter((op) =>
+        banner.featured5!.includes(op.id)
+      );
+      isRateUp = true;
+    } else {
+      availableOperators = availableOperators.filter(
+        (op) => !banner.featured5!.includes(op.id)
+      );
+    }
+  }
+
+  // fallback ป้องกันไม่มี operator ให้ roll
+  if (availableOperators.length === 0) {
+    availableOperators = operators.filter(
+      (op) =>
+        op.rarity === rarity &&
+        op.isNotObtainable === false &&
+        op.itemObtainApproach === "Recruitment & Headhunting"
     );
   }
 
-  // 2. Build roll table
-  const rollTable = [
-    { rarity: 6, rate: sixStarRate },
-    { rarity: 5, rate: 8 },
-    { rarity: 4, rate: 50 },
-    { rarity: 3, rate: 40 },
-  ];
+  const selectedOperator =
+    availableOperators[Math.floor(Math.random() * availableOperators.length)];
 
-  // 3. Guarantee 5★+ logic
-  let force5Or6 = false;
-  if (guaranteeCounter >= 9) {
-    force5Or6 = true;
-  }
-
-  // 4. Roll rarity
-  const totalRate = rollTable.reduce((sum, item) => sum + item.rate, 0);
-  const roll = Math.random() * totalRate;
-
-  let pickedRarity = 3;
-
-  if (force5Or6) {
-    pickedRarity = Math.random() < 0.5 ? 5 : 6;
-  } else {
-    let acc = 0;
-    for (const entry of rollTable) {
-      acc += entry.rate;
-      if (roll <= acc) {
-        pickedRarity = entry.rarity;
-        break;
-      }
-    }
-  }
-
-  // 5. Pick operator from corresponding pool
-  const pool = operators.filter(
-    (op) =>
-      op.rarity === pickedRarity && // Limited จะไม่เข้า pool → ยกเว้น featured
-      (!limitedOperatorIds.has(op.id) ||
-        banner.featured6?.includes(op.id) ||
-        banner.featured5?.includes(op.id))
-  );
-
-  let pickedOperator: Operator;
-  let isRateUp = false;
-
-  // === 6 Rate up ===
-  if (pickedRarity === 6 && banner.featured6?.length) {
-    isRateUp = Math.random() < 0.5;
-    if (isRateUp) {
-      const featuredOps = pool.filter((op) =>
-        banner.featured6!.includes(op.id)
-      );
-      pickedOperator =
-        featuredOps[Math.floor(Math.random() * featuredOps.length)];
-    } else {
-      const nonFeatured = pool.filter(
-        (op) => !banner.featured6!.includes(op.id)
-      );
-      pickedOperator =
-        nonFeatured[Math.floor(Math.random() * nonFeatured.length)];
-    }
-  }
-
-  // === 5 Rate up ===
-  else if (pickedRarity === 5 && banner.featured5?.length) {
-    isRateUp = Math.random() < 0.5;
-    if (isRateUp) {
-      const featuredOps = pool.filter((op) =>
-        banner.featured5!.includes(op.id)
-      );
-      pickedOperator =
-        featuredOps[Math.floor(Math.random() * featuredOps.length)];
-    } else {
-      const nonFeatured = pool.filter(
-        (op) => !banner.featured5!.includes(op.id)
-      );
-      pickedOperator =
-        nonFeatured[Math.floor(Math.random() * nonFeatured.length)];
-    }
-  }
-
-  // === No rate up ===
-  else {
-    pickedOperator = pool[Math.floor(Math.random() * pool.length)];
-    isRateUp = false; // default
-  }
-
-  // 6. Update pity & guarantee
-  const resetPity = pickedRarity === 6;
-  const resetGuarantee = pickedRarity >= 5;
+  const updatedPity = rarity === 6 ? 0 : pityCounter + 1;
 
   return {
     result: {
-      id: pickedOperator.id,
-      name: pickedOperator.name,
-      image: pickedOperator.image,
-      rarity: pickedOperator.rarity,
-      isRateUp: isRateUp,
+      id: selectedOperator.id,
+      rarity,
+      isRateUp,
     },
-    updatedPity: resetPity ? 0 : pityCounter + 1,
+    updatedPity,
     resetGuarantee,
   };
 }

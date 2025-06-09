@@ -53,13 +53,13 @@ export default function GachaSimulator() {
   const [guaranteeCounters, setGuaranteeCounters] = useState<
     Record<string, number>
   >({});
+  const [hasGuaranteed5Or6, setHasGuaranteed5Or6] = useState(false);
   const [showAdvancedReset, setShowAdvancedReset] = useState(false);
 
   const currentGuaranteeCount = guaranteeCounters[selectedBannerId] || 0;
 
-  // Calculate current sixStarRate
   const sixStarRate =
-    pityCounter >= 50 ? Math.min(100, 2 + (pityCounter - 49) * 2) : 2;
+    pityCounter >= 50 ? Math.min(70, 2 + (pityCounter - 49) * 2) : 2;
 
   useEffect(() => {
     const history = localStorage.getItem("gachaHistory");
@@ -88,11 +88,12 @@ export default function GachaSimulator() {
   const handleSingleRoll = () => {
     setIsRolling(true);
     const banner = gachaBanners.find((b) => b.id === selectedBannerId)!;
-    const { result, updatedPity } = performGachaRoll(
+    const { result, updatedPity, resetGuarantee } = performGachaRoll(
       banner,
       operators,
       pityCounter,
-      currentGuaranteeCount
+      currentGuaranteeCount,
+      hasGuaranteed5Or6
     );
 
     setResults((prev) => [{ id: result.id, rarity: result.rarity }, ...prev]);
@@ -100,9 +101,14 @@ export default function GachaSimulator() {
     setPityCounter(updatedPity);
     setGuaranteeCounters((prev) => ({
       ...prev,
-      [selectedBannerId]:
-        updatedPity === 0 ? 0 : (prev[selectedBannerId] || 0) + 1,
+      [selectedBannerId]: resetGuarantee
+        ? 0
+        : (prev[selectedBannerId] || 0) + 1,
     }));
+
+    if (result.rarity >= 5 && !hasGuaranteed5Or6) {
+      setHasGuaranteed5Or6(true);
+    }
 
     setTotalPulls((prev) => prev + 1);
     setIsRolling(false);
@@ -113,6 +119,7 @@ export default function GachaSimulator() {
     const banner = gachaBanners.find((b) => b.id === selectedBannerId)!;
     let localPity = pityCounter;
     let localGuarantee = currentGuaranteeCount;
+    let localHasGuaranteed5Or6 = hasGuaranteed5Or6;
 
     const newResults: OperatorResult[] = [];
 
@@ -121,7 +128,8 @@ export default function GachaSimulator() {
         banner,
         operators,
         localPity,
-        localGuarantee
+        localGuarantee,
+        localHasGuaranteed5Or6
       );
 
       newResults.push({
@@ -130,14 +138,14 @@ export default function GachaSimulator() {
         isRateUp: result.isRateUp,
       });
 
-      // Update Pity Counter
       localPity = updatedPity;
-
-      // Update Guarantee Counter
       localGuarantee = resetGuarantee ? 0 : localGuarantee + 1;
+
+      if (result.rarity >= 5 && !localHasGuaranteed5Or6) {
+        localHasGuaranteed5Or6 = true;
+      }
     }
 
-    // After 10 pulls → update state
     setTotalPulls((prev) => prev + 10);
     setResults((prev) => [...newResults, ...prev]);
     setPityCounter(localPity);
@@ -145,13 +153,14 @@ export default function GachaSimulator() {
       ...prev,
       [selectedBannerId]: localGuarantee,
     }));
-
+    setHasGuaranteed5Or6(localHasGuaranteed5Or6);
     setIsRolling(false);
   };
 
   const handleClear = () => {
     localStorage.removeItem("gachaHistory");
     setResults([]);
+    setHasGuaranteed5Or6(false);
   };
 
   const getBanner = () => {
@@ -165,20 +174,19 @@ export default function GachaSimulator() {
       ...prev,
       [selectedBannerId]: 0,
     }));
+    setHasGuaranteed5Or6(false);
   };
 
   const handleClearAll = () => {
-    // ลบ history
     localStorage.removeItem("gachaHistory");
     setResults([]);
-
-    // Reset pity + guarantee
     setPityCounter(0);
     setTotalPulls(0);
     setGuaranteeCounters((prev) => ({
       ...prev,
       [selectedBannerId]: 0,
     }));
+    setHasGuaranteed5Or6(false);
   };
 
   return (
