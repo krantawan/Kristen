@@ -13,7 +13,7 @@ type Event = {
   title: string;
   start: string;
   end: string;
-  type: "main" | "side" | "cc" | "gacha" | "kernel";
+  type: "main" | "side" | "cc" | "gacha" | "kernel" | "other" | "login";
   image?: string;
   status?: string;
 };

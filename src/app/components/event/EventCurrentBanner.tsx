@@ -62,8 +62,11 @@ export default function EventCurrentBanner() {
     })
     .sort((a, b) => parseISO(a.start).getTime() - parseISO(b.start).getTime());
 
-  const nextMainStart = parseISO(upcomingEventsForMain[0]?.start ?? "");
+  const nextMainStartRaw = upcomingEventsForMain[0]?.start;
+  const nextMainStart = nextMainStartRaw ? parseISO(nextMainStartRaw) : null;
   const isWithin24h =
+    nextMainStart instanceof Date &&
+    !isNaN(nextMainStart.getTime()) &&
     nextMainStart.getTime() > now.getTime() &&
     nextMainStart.getTime() - now.getTime() <= 86_400_000;
 
@@ -154,11 +157,15 @@ export default function EventCurrentBanner() {
               const isCompact = upcomingEvents.length > 1 && index > 0;
 
               return isCompact ? (
-                <EventCardCompact event={event} statusText={statusText} />
+                <EventCardCompact
+                  key={event.title + event.start}
+                  event={event}
+                  statusText={statusText}
+                />
               ) : (
                 <div
                   key={event.title + event.start}
-                  className="relative rounded-md overflow-hidden shadow hover:shadow-lg transition-shadow border border-white/10 bg-black"
+                  className="relative rounded-b-md overflow-hidden shadow hover:shadow-lg transition-shadow border border-white/10 bg-black"
                   style={{
                     backgroundImage: `url(${event.image || "/fallback.jpg"})`,
                     backgroundSize: "cover",
