@@ -25,6 +25,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 
 export default function OperatorsGridRedesigned() {
   const t = useTranslations("components.OperatorsPage");
@@ -242,6 +243,13 @@ export default function OperatorsGridRedesigned() {
                     </SelectItem>
                     {professions.map((profession) => (
                       <SelectItem key={profession} value={profession}>
+                        <Image
+                          src={`/operators/icon-class/${profession.toLowerCase()}.png`}
+                          alt={profession}
+                          width={20}
+                          height={20}
+                          className="filter drop-shadow-[0_0_2px_black]"
+                        />
                         {profession}
                       </SelectItem>
                     ))}
@@ -271,6 +279,13 @@ export default function OperatorsGridRedesigned() {
                     </SelectItem>
                     {filteredSubProfessions.map((sub) => (
                       <SelectItem key={sub} value={sub}>
+                        <Image
+                          src={`/operators/icon-subclass/${professionFilter.toLowerCase()}/${sub.toLowerCase()}.png`}
+                          alt={sub}
+                          width={20}
+                          height={20}
+                          className="filter drop-shadow-[0_0_2px_black]"
+                        />
                         {sub}
                       </SelectItem>
                     ))}
@@ -281,27 +296,27 @@ export default function OperatorsGridRedesigned() {
 
             {/* Second row: CN Spoiler and Settings */}
             <div className="flex gap-2 items-center">
-              <div className="flex items-center space-x-2 px-4 py-3 bg-white dark:bg-[#222] rounded-md shadow-sm border border-input flex-1">
-                <input
-                  type="checkbox"
-                  id="spoiler-toggle-mobile"
+              <Label
+                htmlFor="spoiler-toggle"
+                className="hover:bg-accent/50 flex items-center gap-3 rounded-lg border p-3 has-[[aria-checked=true]]:border-blue-600 has-[[aria-checked=true]]:bg-blue-50 dark:has-[[aria-checked=true]]:border-blue-900 dark:has-[[aria-checked=true]]:bg-blue-950 cursor-pointer flex-1"
+              >
+                <Checkbox
+                  id="spoiler-toggle"
                   checked={showCnOnlySpoiler}
-                  onChange={(e) => {
-                    const newValue = e.target.checked;
+                  onCheckedChange={(checked) => {
+                    const newValue = !!checked;
                     setShowCnOnlySpoiler(newValue);
                     localStorage.setItem(
                       "showCnOnlySpoiler",
                       newValue.toString()
                     );
                   }}
+                  className="data-[state=checked]:border-blue-600 data-[state=checked]:bg-blue-600 data-[state=checked]:text-white data-[state=checked]:[&>svg]:text-white dark:data-[state=checked]:border-blue-700 dark:data-[state=checked]:bg-blue-700 dark:data-[state=checked]:[&>svg]:text-white"
                 />
-                <label
-                  htmlFor="spoiler-toggle-mobile"
-                  className="text-sm font-medium text-gray-900 dark:text-gray-300 cursor-pointer select-none"
-                >
-                  CN Spoiler
-                </label>
-              </div>
+                <span className="text-sm font-medium text-gray-900 dark:text-gray-300">
+                  {t("filter.cn_spoiler")}
+                </span>
+              </Label>
 
               <Dialog
                 open={isFilterModalOpenMobile}
@@ -311,13 +326,13 @@ export default function OperatorsGridRedesigned() {
                   <Button
                     variant="outline"
                     size="icon"
-                    className={`relative h-11 w-11 ${
+                    className={`relative h-12 w-12 ${
                       hasActiveFilters
                         ? "border-blue-500 bg-blue-50 dark:bg-blue-950"
                         : ""
                     }`}
                   >
-                    <Settings className="h-5 w-5" />
+                    <Settings className="h-6 w-6" />
                     {hasActiveFilters && (
                       <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full" />
                     )}
@@ -332,7 +347,7 @@ export default function OperatorsGridRedesigned() {
                   <div className="space-y-4">
                     {/* Position Filter */}
                     <div className="space-y-2">
-                      <Label>Position</Label>
+                      <Label>{t("filter.positions.title")}</Label>
                       <Select
                         value={positionFilter}
                         onValueChange={(value) => {
@@ -360,7 +375,7 @@ export default function OperatorsGridRedesigned() {
 
                     {/* Rarity Filter */}
                     <div className="space-y-2">
-                      <Label>Rarity</Label>
+                      <Label>{t("filter.rarity.title")}</Label>
                       <Select
                         value={rarityFilter}
                         onValueChange={(value) => {
@@ -386,7 +401,7 @@ export default function OperatorsGridRedesigned() {
 
                     {/* Limited Filter */}
                     <div className="space-y-2">
-                      <Label>Availability</Label>
+                      <Label>{t("filter.availability.title")}</Label>
                       <Select
                         value={limitedFilter}
                         onValueChange={(value) => {
@@ -415,7 +430,7 @@ export default function OperatorsGridRedesigned() {
 
                     {/* Sort Option */}
                     <div className="space-y-2">
-                      <Label>Sort By</Label>
+                      <Label>{t("filter.sort_by.title")}</Label>
                       <Select
                         value={sortOption}
                         onValueChange={(value) => {
@@ -459,7 +474,7 @@ export default function OperatorsGridRedesigned() {
                       onClick={clearAllFilters}
                       className="text-sm text-muted-foreground hover:text-foreground"
                     >
-                      Clear All
+                      {t("filter.clear_all")}
                     </Button>
                   )}
                 </DialogContent>
@@ -493,11 +508,11 @@ export default function OperatorsGridRedesigned() {
                 }}
               >
                 <SelectTrigger className="w-full bg-white dark:bg-[#222] rounded-md shadow-sm">
-                  <SelectValue placeholder={t("filter.positions.title")} />
+                  <SelectValue placeholder={t("filter.class.title")} />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">
-                    {t("filter.positions.all_position")}
+                    {t("filter.class.all_class")}
                   </SelectItem>
                   {professions.map((profession) => (
                     <SelectItem key={profession} value={profession}>
@@ -507,6 +522,7 @@ export default function OperatorsGridRedesigned() {
                           alt={profession}
                           width={20}
                           height={20}
+                          className="filter drop-shadow-[0_0_2px_black]"
                         />
                         <span>{profession}</span>
                       </div>
@@ -531,11 +547,11 @@ export default function OperatorsGridRedesigned() {
                     professionFilter === "all" ? "opacity-50" : ""
                   } bg-white dark:bg-[#222] rounded-md shadow-sm`}
                 >
-                  <SelectValue placeholder={t("filter.positions.title")} />
+                  <SelectValue placeholder={t("filter.class.title")} />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">
-                    {t("filter.positions.all_position")}
+                    {t("filter.class.all_sub_class")}
                   </SelectItem>
                   {filteredSubProfessions.map((sub) => (
                     <SelectItem key={sub} value={sub}>
@@ -545,6 +561,7 @@ export default function OperatorsGridRedesigned() {
                           alt={sub}
                           width={20}
                           height={20}
+                          className="filter drop-shadow-[0_0_2px_black]"
                         />
                         <span>{sub}</span>
                       </div>
@@ -555,26 +572,28 @@ export default function OperatorsGridRedesigned() {
             </div>
 
             {/* CN Spoiler Checkbox */}
-            <div className="flex items-center space-x-2 px-3 py-2 bg-white dark:bg-[#222] rounded-md shadow-sm border border-input whitespace-nowrap">
-              <input
-                type="checkbox"
-                id="spoiler-toggle-desktop"
-                checked={showCnOnlySpoiler}
-                onChange={(e) => {
-                  const newValue = e.target.checked;
-                  setShowCnOnlySpoiler(newValue);
-                  localStorage.setItem(
-                    "showCnOnlySpoiler",
-                    newValue.toString()
-                  );
-                }}
-              />
-              <label
+            <div className="flex items-center gap-2">
+              <Label
                 htmlFor="spoiler-toggle-desktop"
-                className="text-sm font-medium text-gray-900 dark:text-gray-300 cursor-pointer select-none"
+                className="flex items-center gap-3 rounded-md border px-4 h-9 hover:bg-accent/50 has-[[aria-checked=true]]:border-blue-600 has-[[aria-checked=true]]:bg-blue-50 dark:has-[[aria-checked=true]]:border-blue-900 dark:has-[[aria-checked=true]]:bg-blue-950 cursor-pointer whitespace-nowrap"
               >
-                {t("filter.cn_spoiler")}
-              </label>
+                <Checkbox
+                  id="spoiler-toggle-desktop"
+                  checked={showCnOnlySpoiler}
+                  onCheckedChange={(checked) => {
+                    const newValue = !!checked;
+                    setShowCnOnlySpoiler(newValue);
+                    localStorage.setItem(
+                      "showCnOnlySpoiler",
+                      newValue.toString()
+                    );
+                  }}
+                  className="flex items-center justify-center size-5 border border-input rounded data-[state=checked]:border-blue-600 data-[state=checked]:bg-blue-600 data-[state=checked]:text-white data-[state=checked]:[&>svg]:text-white dark:data-[state=checked]:border-blue-700 dark:data-[state=checked]:bg-blue-700 dark:data-[state=checked]:[&>svg]:text-white"
+                />
+                <span className="text-sm font-medium text-gray-900 dark:text-gray-300">
+                  {t("filter.cn_spoiler")}
+                </span>
+              </Label>
             </div>
 
             {/* Advanced Filters Modal Trigger */}
@@ -772,6 +791,7 @@ export default function OperatorsGridRedesigned() {
                   alt={operator.name}
                   fill
                   className="object-contain rounded"
+                  draggable={false}
                 />
               </div>
               <div className="text-center text-white text-sm font-semibold">
