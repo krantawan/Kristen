@@ -264,88 +264,183 @@ export default function GachaSimulator() {
             <div className="text-xs text-gray-400">{t("pity_desc")}</div>
           </div>
         </div>
-        <hr className="my-4" />
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div className="w-full md:w-full lg:w-64">
-            <Select
-              value={selectedBannerId}
-              onValueChange={setSelectedBannerId}
-            >
-              <SelectTrigger className="bg-white dark:bg-[#2a2a2a] border-gray-300 dark:border-gray-700">
-                <SelectValue placeholder="Select Banner" />
-              </SelectTrigger>
-              <SelectContent>
-                {gachaBanners.map((banner) => (
-                  <SelectItem key={banner.id} value={banner.id}>
-                    {banner.name}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
 
-          <div
-            className={cn(
-              "grid grid-cols-2 sm:grid-cols-2 md:flex md:flex-wrap md:gap-2 md:max-w-[700px] gap-2",
-              showAdvancedReset ? "md:grid-cols-5" : ""
-            )}
-          >
-            <Button
-              onClick={handleSingleRoll}
-              disabled={isRolling}
-              className="bg-green-700 hover:bg-green-800 text-white"
-            >
-              {t("singlePull")}
-            </Button>
-            <Button
-              onClick={handleMultiRoll}
-              disabled={isRolling}
-              className="bg-green-700 hover:bg-green-800 text-white"
-            >
-              {t("multiPull")}
-            </Button>
-            {!showAdvancedReset && (
-              <Button
-                onClick={handleClearAll}
-                className="bg-red-800 hover:bg-red-900 text-white"
+        <hr className="my-4" />
+
+        {/* Sticky Control Panel - แสดงเฉพาะบน mobile */}
+        <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white dark:bg-[#252525] border-t border-gray-300 dark:border-gray-800 p-4 z-50 shadow-lg">
+          <div className="flex flex-col gap-3">
+            {/* Banner Selector */}
+            <div className="w-full">
+              <Select
+                value={selectedBannerId}
+                onValueChange={setSelectedBannerId}
               >
-                <Trash2 className="w-4 h-4 mr-1" />
-                {t("clearAll")}
-              </Button>
-            )}
-            {!showAdvancedReset ? (
-              <Button
-                onClick={() => setShowAdvancedReset(true)}
-                variant="outline"
-                className="border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300"
-              >
-                <GearIcon className="w-4 h-4" />
-              </Button>
-            ) : (
-              <>
+                <SelectTrigger className="bg-white dark:bg-[#2a2a2a] border-gray-300 dark:border-gray-700">
+                  <SelectValue placeholder="Select Banner" />
+                </SelectTrigger>
+                <SelectContent>
+                  {gachaBanners.map((banner) => (
+                    <SelectItem key={banner.id} value={banner.id}>
+                      {banner.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            {/* Control Buttons */}
+            <div
+              className={cn(
+                "grid grid-cols-2 gap-2",
+                showAdvancedReset ? "grid-cols-3" : ""
+              )}
+            >
+              {!showAdvancedReset ? (
                 <Button
-                  onClick={handleClear}
+                  onClick={() => setShowAdvancedReset(true)}
+                  variant="outline"
+                  className="border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 col-span-2"
+                >
+                  <GearIcon className="w-4 h-4 mr-2" />
+                  Advanced
+                </Button>
+              ) : (
+                <>
+                  <Button
+                    onClick={() => setShowAdvancedReset(false)}
+                    variant="ghost"
+                    className="text-gray-500 text-sm"
+                  >
+                    ← {t("back")}
+                  </Button>
+                  <Button
+                    onClick={handleClear}
+                    variant="outline"
+                    className="border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm"
+                  >
+                    <Trash2 className="w-4 h-4 mr-1" /> {t("clear")}
+                  </Button>
+                  <Button
+                    onClick={handleResetCounters}
+                    className="border-gray-300 dark:border-gray-700 text-white dark:text-white bg-red-800 hover:bg-red-900 text-sm"
+                  >
+                    <RotateCcw className="w-4 h-4 mr-1" />
+                    {t("reset")}
+                  </Button>
+                </>
+              )}
+              {!showAdvancedReset && (
+                <Button
+                  onClick={handleClearAll}
+                  className="bg-red-800 hover:bg-red-900 text-white text-sm col-span-2"
+                >
+                  <Trash2 className="w-4 h-4 mr-1" />
+                  {t("clearAll")}
+                </Button>
+              )}
+
+              <Button
+                onClick={handleSingleRoll}
+                disabled={isRolling}
+                className="bg-blue-700 hover:bg-blue-800 text-white text-sm"
+              >
+                {t("singlePull")}
+              </Button>
+              <Button
+                onClick={handleMultiRoll}
+                disabled={isRolling}
+                className="bg-blue-700 hover:bg-blue-800 text-white text-sm"
+              >
+                {t("multiPull")}
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Original Control Panel - แสดงเฉพาะบน desktop */}
+        <div className="hidden md:block p-4 bg-gray-100 dark:bg-[#1d1d1d] border-t border-gray-300 dark:border-gray-800">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="w-full md:w-full lg:w-64">
+              <Select
+                value={selectedBannerId}
+                onValueChange={setSelectedBannerId}
+              >
+                <SelectTrigger className="bg-white dark:bg-[#2a2a2a] border-gray-300 dark:border-gray-700">
+                  <SelectValue placeholder="Select Banner" />
+                </SelectTrigger>
+                <SelectContent>
+                  {gachaBanners.map((banner) => (
+                    <SelectItem key={banner.id} value={banner.id}>
+                      {banner.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div
+              className={cn(
+                "grid grid-cols-2 sm:grid-cols-2 md:flex md:flex-wrap md:gap-2 md:max-w-[700px] gap-2",
+                showAdvancedReset ? "md:grid-cols-5" : ""
+              )}
+            >
+              <Button
+                onClick={handleSingleRoll}
+                disabled={isRolling}
+                className="bg-blue-700 hover:bg-blue-800 text-white"
+              >
+                {t("singlePull")}
+              </Button>
+              <Button
+                onClick={handleMultiRoll}
+                disabled={isRolling}
+                className="bg-blue-700 hover:bg-blue-800 text-white"
+              >
+                {t("multiPull")}
+              </Button>
+              {!showAdvancedReset && (
+                <Button
+                  onClick={handleClearAll}
+                  className="bg-red-800 hover:bg-red-900 text-white"
+                >
+                  <Trash2 className="w-4 h-4 mr-1" />
+                  {t("clearAll")}
+                </Button>
+              )}
+              {!showAdvancedReset ? (
+                <Button
+                  onClick={() => setShowAdvancedReset(true)}
                   variant="outline"
                   className="border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300"
                 >
-                  <Trash2 className="w-4 h-4 mr-1" /> {t("clear")}
+                  <GearIcon className="w-4 h-4" />
                 </Button>
-                <Button
-                  onClick={handleResetCounters}
-                  className="border-gray-300 dark:border-gray-700 text-white dark:text-white bg-red-800 hover:bg-red-900"
-                >
-                  <RotateCcw className="w-4 h-4 mr-1" />
-                  {t("reset")}
-                </Button>
-                <Button
-                  onClick={() => setShowAdvancedReset(false)}
-                  variant="ghost"
-                  className="text-gray-500 col-span-1 md:col-span-1"
-                >
-                  ← {t("back")}
-                </Button>
-              </>
-            )}
+              ) : (
+                <>
+                  <Button
+                    onClick={handleClear}
+                    variant="outline"
+                    className="border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300"
+                  >
+                    <Trash2 className="w-4 h-4 mr-1" /> {t("clear")}
+                  </Button>
+                  <Button
+                    onClick={handleResetCounters}
+                    className="border-gray-300 dark:border-gray-700 text-white dark:text-white bg-red-800 hover:bg-red-900"
+                  >
+                    <RotateCcw className="w-4 h-4 mr-1" />
+                    {t("reset")}
+                  </Button>
+                  <Button
+                    onClick={() => setShowAdvancedReset(false)}
+                    variant="ghost"
+                    className="text-gray-500 col-span-1 md:col-span-1"
+                  >
+                    ← {t("back")}
+                  </Button>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
