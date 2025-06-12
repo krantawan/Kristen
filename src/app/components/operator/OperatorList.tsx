@@ -28,12 +28,27 @@ export default function OperatorList({ title, selectedTags }: Props) {
 
   const groupedEntries = Object.entries(grouped);
 
-  // แยก tag เดี่ยวและ tag ผสม
-  const combinedTags = groupedEntries.filter(([key]) => key.includes(" + "));
-  const singleTags = groupedEntries.filter(([key]) => !key.includes(" + "));
-
   // เอามาต่อรวมกันโดยให้ tag ผสมขึ้นก่อน
-  const sortedGroups = [...combinedTags, ...singleTags];
+  const sortedGroups = groupedEntries.sort(([keyA], [keyB]) => {
+    const tagsA = keyA.split(" + ");
+    const tagsB = keyB.split(" + ");
+
+    const hasTopA = tagsA.includes("Top Operator") ? 1 : 0;
+    const hasTopB = tagsB.includes("Top Operator") ? 1 : 0;
+
+    // Top Operator first
+    if (hasTopA !== hasTopB) {
+      return hasTopB - hasTopA;
+    }
+
+    // More tags first
+    if (tagsA.length !== tagsB.length) {
+      return tagsB.length - tagsA.length;
+    }
+
+    // Alphabetical
+    return keyA.localeCompare(keyB);
+  });
 
   return (
     <>

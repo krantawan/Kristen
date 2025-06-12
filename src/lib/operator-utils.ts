@@ -29,9 +29,31 @@ export function getMatchingTagGroups(
 
   tagCombos.forEach((combo) => {
     const comboKey = combo.sort().join(" + ");
-    const matched = operators.filter((op) =>
-      combo.every((tag) => op.tags.includes(tag))
-    );
+
+    // Rule 1: combo ต้องเป็น subset ของ selectedTags
+    if (!combo.every((tag) => selectedTags.includes(tag))) {
+      return;
+    }
+
+    // Rule 2: ถ้า selectedTags มี Top Operator
+    // → ถ้า combo มี ≥ 2 tags → ต้องมี Top Operator
+    if (
+      selectedTags.includes("Top Operator") &&
+      combo.length >= 2 &&
+      !combo.includes("Top Operator")
+    ) {
+      return;
+    }
+
+    const matched = operators.filter((op) => {
+      // Rule 3: 6 ดาว → ต้องมี Top Operator
+      if (op.stars >= 6 && !selectedTags.includes("Top Operator")) {
+        return false;
+      }
+
+      return combo.every((tag) => op.tags.includes(tag));
+    });
+
     if (matched.length > 0) {
       groups[comboKey] = matched;
     }
