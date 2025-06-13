@@ -8,21 +8,13 @@ import EventSummarySection from "@/app/components/event/EventSummarySection";
 import EventCurrentBanner from "@/app/components/event/EventCurrentBanner";
 import PRTSSystemHeader from "@/components/ui/PRTSSystemHeader";
 import DataMineSection from "@/app/components/event/DataMineSection";
-import { useTranslations } from "next-intl";
 
 export default function EventsPage() {
-  const t = useTranslations("components.EventPage");
   return (
     <>
       <Header />
-      <Container>
-        <PRTSSystemHeader
-          version="v2.3"
-          user="KRISTEN"
-          status="ONLINE"
-          title={">> " + t("header_title")}
-          description={t("header_description")}
-        />
+      <Container title="Events">
+        <PRTSSystemHeader version="v2.3" user="KRISTEN" status="ONLINE" />
         <EventCurrentBanner />
 
         <div className="w-full max-w-full overflow-x-auto">

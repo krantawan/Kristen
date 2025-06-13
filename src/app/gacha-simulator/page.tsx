@@ -10,14 +10,8 @@ export default function GachaSimulatorPage() {
   return (
     <>
       <Header />
-      <Container>
-        <PRTSSystemHeader
-          version="v2.3"
-          user="KRISTEN"
-          status="MAINTENANCE"
-          title={"Headhunting Simulator v.beta"}
-          description="Simulate pulls with full pity and guarantee system. See your luck on any banner!"
-        />
+      <Container title="Headhunting Simulator">
+        <PRTSSystemHeader version="v2.3" user="KRISTEN" status="MAINTENANCE" />
         <GachaSimulator />
       </Container>
       <Footer />

@@ -1,7 +1,6 @@
 "use client";
 
 import { Cpu } from "lucide-react";
-import { useLocale } from "next-intl";
 
 type StatusType = "ONLINE" | "OFFLINE" | "MAINTENANCE";
 
@@ -9,8 +8,6 @@ type Props = {
   version?: string;
   user?: string;
   status?: StatusType;
-  title?: string;
-  description?: string;
 };
 
 const statusDotColor: Record<StatusType, string> = {
@@ -29,13 +26,10 @@ export default function SystemHeader({
   version = "v1.0",
   user = "DOCTOR",
   status = "ONLINE",
-  title = ">> INITIATE RECRUITMENT ANALYSIS",
-  description = "Use AI-assisted scan or manual tag selection to identify compatible operators.",
 }: Props) {
-  const locale = useLocale();
   return (
-    <div className="bg-[#1a1a1a] px-4 py-3 shadow-sm">
-      <div className="flex justify-between text-xs text-gray-500 font-mono border-b border-[#333] pb-1 mb-2">
+    <div className="bg-[#1a1a1a] px-4 py-4 shadow-sm">
+      <div className="flex justify-between text-xs text-gray-500 font-mono border-b border-[#333] pb-2">
         <span className="flex items-center gap-1">
           <Cpu size={12} />
           PRTS-CORE {version}
@@ -53,15 +47,6 @@ export default function SystemHeader({
           </span>
         </span>
       </div>
-
-      <h2
-        className={`text-lg text-[#FACC15] ${
-          locale === "en" ? "font-mono" : ""
-        }`}
-      >
-        {title}
-      </h2>
-      <p className="text-sm text-gray-400 mt-1">{description}</p>
     </div>
   );
 }
