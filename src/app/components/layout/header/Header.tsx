@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#1a1a1a] border-b border-[#333]">
-      <div className="relative mx-auto max-w-6xl w-full h-10">
+      <div className="relative mx-auto max-w-7xl w-full h-10">
         {/* LEFT */}
         <div className="absolute left-2 top-1/2 -translate-y-1/2">
           <div className="text-xl font-bold font-mono text-[#FACC15]">

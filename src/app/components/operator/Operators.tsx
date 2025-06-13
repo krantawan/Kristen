@@ -16,7 +16,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Settings } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
-import { Badge } from "@/components/ui/badge";
 import {
   Dialog,
   DialogContent,
@@ -26,6 +25,14 @@ import {
 } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { cn } from "@/lib/utils";
+
+function toSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9\-]/g, "");
+}
 
 export default function OperatorsGridRedesigned() {
   const t = useTranslations("components.OperatorsPage");
@@ -206,7 +213,7 @@ export default function OperatorsGridRedesigned() {
 
   return (
     <Card className="w-full max-w-7xl mx-auto">
-      <CardHeader className="top-10 z-20 bg-white/80 dark:bg-[#181818]/80 backdrop-blur-sm transition-all md:sticky md:top-10">
+      <CardHeader className="top-10 z-50 bg-white/80 dark:bg-[#181818]/80 backdrop-blur-sm transition-all md:sticky md:top-10">
         <div className="space-y-4 p-2">
           {/* Mobile Layout (sm and below) */}
           <div className="block sm:hidden space-y-3">
@@ -761,61 +768,69 @@ export default function OperatorsGridRedesigned() {
       </CardHeader>
 
       <CardContent>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {paginatedOperators.map((operator) => (
+        <div className="px-4 pb-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4">
+          {paginatedOperators.map((character) => (
             <Link
-              key={operator.id}
-              href={`/operators/`}
-              className={`group block bg-[#1e1e1e] p-2 rounded-lg hover:scale-105 transition-transform ${
-                operator.source === "cn-only" && !showCnOnlySpoiler
+              key={character.id}
+              href={`/operators/${toSlug(character.name)}`}
+              className={`relative group block hover:scale-105 transition-transform duration-300 ${
+                character.source === "cn-only" && !showCnOnlySpoiler
                   ? "blur-xs"
                   : ""
               }`}
             >
-              <div className="relative w-full aspect-square mb-2">
+              <div className="relative overflow-hidden aspect-[1/2] border border-gray-300 dark:border-gray-700">
+                {/* Character Image */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,.5)] via-[rgba(0,0,0,.1)] to-[rgba(0,0,0,0)] dark:bg-gradient-to-t dark:from-[rgba(0,0,0,.6)] dark:via-[rgba(0,0,0,.3)] dark:to-[rgba(0,0,0,0)] z-10" />
+
+                <Image
+                  src={`/assert/portrait/${character.id}_1.png`}
+                  alt={character.name}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-100"
+                />
+
+                {/* Status badges */}
                 <div className="absolute top-1 right-1 flex flex-row flex-wrap gap-1 z-10">
-                  {operator.source === "cn-only" && (
-                    <Badge className="text-xs bg-gradient-to-r from-blue-600 to-blue-400 text-white px-2 py-0.5 rounded shadow">
+                  {character.source === "cn-only" && (
+                    <span className="text-xs bg-gradient-to-r from-blue-600 to-blue-400 text-white px-2 py-0.5 shadow">
                       CN
-                    </Badge>
+                    </span>
                   )}
 
-                  {limitedOperatorIds.has(operator.id) && (
-                    <Badge className="text-xs bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-0.5 rounded shadow">
+                  {limitedOperatorIds.has(character.id) && (
+                    <span className="text-xs bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-0.5 shadow">
                       {t("filter.availability.limited")}
-                    </Badge>
+                    </span>
                   )}
                 </div>
-                <Image
-                  src={operator.image || "/placeholder.svg"}
-                  alt={operator.name}
-                  fill
-                  className="object-contain rounded"
-                  draggable={false}
-                />
-              </div>
-              <div className="text-center text-white text-sm font-semibold">
-                {locale === "ja" ? operator.name_jp : operator.name}
-              </div>
-              <div className="text-center text-yellow-400 text-xs mb-1">
-                {"★".repeat(operator.rarity)}
-              </div>
-              <div className="text-center text-gray-400 text-xs">
-                {[operator.profession]} / {[operator.subProfession]}
-              </div>
-              <div className="flex flex-wrap justify-center gap-1 mt-1">
-                {operator.tagList && operator.tagList.length > 0 && (
-                  <div className="flex flex-wrap justify-center gap-1 mt-1">
-                    {operator.tagList.map((tag: string) => (
-                      <span
-                        key={tag}
-                        className="text-[10px] px-2 py-0.5 rounded-full bg-gray-700 text-white"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+
+                <div className="absolute bottom-0 left-0 right-0 z-20 flex flex-col items-center p-3 space-y-1">
+                  {/* Class Icon */}
+                  <Image
+                    src={`/operators/icon-class/${character.profession.toLowerCase()}.png`}
+                    alt={character.profession}
+                    width={40}
+                    height={40}
+                    className="drop-shadow-lg"
+                  />
+                  {/* Character info */}
+                  <div className="text-white font-bold text-center text-xl leading-tight">
+                    {locale === "ja" ? character.name_jp : character.name}
                   </div>
-                )}
+                  {/* Class/Subclass */}
+                  <div className="text-white text-xs text-center bg-black/50 rounded p-1">
+                    {character.subProfession}
+                  </div>
+                  {/* Colored accent bar */}
+                  <div
+                    className={cn(
+                      "absolute bottom-0 left-0 right-0 h-1",
+                      character.rarity === 6 && "bg-amber-500",
+                      character.rarity === 5 && "bg-blue-500"
+                    )}
+                  />
+                </div>
               </div>
             </Link>
           ))}

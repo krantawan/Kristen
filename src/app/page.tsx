@@ -20,16 +20,9 @@ export default function Page() {
   return (
     <>
       <Header />
-
-      <Container>
+      <Container title="Recruitment">
         {/* SECTION: SYSTEM HEADER / INTRO */}
-        <PRTSSystemHeader
-          version="v2.3"
-          user="DOCTOR"
-          status="ONLINE"
-          title=">> INITIATE RECRUITMENT ANALYSIS"
-          description="Use AI-assisted scan or manual tag selection to identify compatible operators."
-        />
+        <PRTSSystemHeader version="v2.3" user="DOCTOR" status="ONLINE" />
 
         {/* SECTION: TOOLS */}
         <SelectTag
