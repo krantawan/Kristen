@@ -779,7 +779,7 @@ export default function OperatorsGridRedesigned() {
                   : ""
               }`}
             >
-              <div className="relative overflow-hidden aspect-[1/2] border border-gray-300 dark:border-gray-700">
+              <div className="relative overflow-hidden aspect-[4/4] lg:aspect-[1/2] border border-gray-300 dark:border-gray-700">
                 {/* Character Image */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,.5)] via-[rgba(0,0,0,.1)] to-[rgba(0,0,0,0)] dark:bg-gradient-to-t dark:from-[rgba(0,0,0,.6)] dark:via-[rgba(0,0,0,.3)] dark:to-[rgba(0,0,0,0)] z-10" />
 
@@ -787,7 +787,7 @@ export default function OperatorsGridRedesigned() {
                   src={`/assert/portrait/${character.id}_1.png`}
                   alt={character.name}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-100"
+                  className="object-cover object-[50%_30%] transition-transform duration-300 group-hover:scale-100 "
                 />
 
                 {/* Status badges */}
@@ -819,7 +819,7 @@ export default function OperatorsGridRedesigned() {
                     {locale === "ja" ? character.name_jp : character.name}
                   </div>
                   {/* Class/Subclass */}
-                  <div className="text-white text-xs text-center bg-black/50 rounded p-1">
+                  <div className="text-white text-xs text-center bg-black/50 rounded p-1 hidden lg:block">
                     {character.subProfession}
                   </div>
                   {/* Colored accent bar */}

@@ -29,7 +29,7 @@ export default function BackgroundRotator() {
     changeBackground();
 
     // Rotate every 10s
-    const interval = setInterval(changeBackground, 10000);
+    const interval = setInterval(changeBackground, 1000000);
 
     // 🔥 Listen for dark/light class change
     const observer = new MutationObserver(() => {
