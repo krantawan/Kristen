@@ -5,18 +5,13 @@ import Footer from "@/app/components/layout/Footer";
 import PRTSSystemHeader from "@/components/ui/PRTSSystemHeader";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
-import { useTranslations, useLocale } from "next-intl";
+import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 import { siDiscord } from "simple-icons/icons";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
-// interface FormResponse {
-//   [key: string]: string;
-// }
-
 export default function AboutProjectPage() {
-  const t = useTranslations("components.about.project");
   const locale = useLocale();
 
   const [prompt, setPrompt] = useState("");
@@ -95,13 +90,7 @@ export default function AboutProjectPage() {
             <div className="bg-[#802520] w-[10%]" />
           </div>
 
-          <PRTSSystemHeader
-            version="v2.3"
-            user="KALAFIA"
-            status="ONLINE"
-            title={">> " + t("header_title")}
-            description={t("header_description")}
-          />
+          <PRTSSystemHeader version="v2.3" user="KALAFIA" status="ONLINE" />
 
           <div className="space-y-6 bg-neutral-100 dark:bg-[#161616] p-4 rounded-b-md">
             {/* Developer Section */}
@@ -170,17 +159,30 @@ export default function AboutProjectPage() {
                 ~$ cat thanks.txt
               </p>
               <p className="mt-2 text-gray-600 dark:text-gray-400">
-                Special Thanks to all contributing Doctors! Your support helps
+                Special Thanks to all contributing Dokutah! Your support helps
                 make this tool better for the Arknights community.
               </p>
               <ul className="pl-4 mt-2 text-gray-700 dark:text-gray-300 list-disc space-y-1">
+                <li>
+                  <span className="text-black dark:text-white">Kengxxiao</span>{" "}
+                  —{" "}
+                  <a
+                    href="https://github.com/Kengxxiao/ArknightsGameData"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-600 underline"
+                  >
+                    ArknightsGameData
+                  </a>{" "}
+                  for game assets and data
+                </li>
                 <li>
                   <span className="text-black dark:text-white">Lonetail</span> —
                   for design inspiration from Arknights
                 </li>
                 <li>
                   <span className="text-black dark:text-white">
-                    Contributing Doctors:
+                    Contributing Dokutah:
                   </span>{" "}
                   {loading ? (
                     <span className="animate-pulse text-emerald-600">
