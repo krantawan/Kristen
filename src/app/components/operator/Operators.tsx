@@ -213,7 +213,7 @@ export default function OperatorsGridRedesigned() {
 
   return (
     <Card className="w-full max-w-7xl mx-auto">
-      <CardHeader className="top-10 z-50 bg-white/80 dark:bg-[#181818]/80 backdrop-blur-sm transition-all md:sticky md:top-10">
+      <CardHeader className="top-10 z-40 bg-white/80 dark:bg-[#181818]/80 backdrop-blur-sm transition-all md:sticky md:top-10">
         <div className="space-y-4 p-2">
           {/* Mobile Layout (sm and below) */}
           <div className="block sm:hidden space-y-3">
@@ -779,25 +779,25 @@ export default function OperatorsGridRedesigned() {
                   : ""
               }`}
             >
-              <div className="relative overflow-hidden aspect-[4/4] lg:aspect-[1/2] border border-gray-300 dark:border-gray-700">
-                {/* Character Image */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,.5)] via-[rgba(0,0,0,.1)] to-[rgba(0,0,0,0)] dark:bg-gradient-to-t dark:from-[rgba(0,0,0,.6)] dark:via-[rgba(0,0,0,.3)] dark:to-[rgba(0,0,0,0)] z-10" />
+              <div className="relative overflow-hidden aspect-[4/4] lg:aspect-[1/2] border border-gray-300 dark:border-gray-700 group">
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,.5)] via-[rgba(0,0,0,.1)] to-[rgba(0,0,0,0)] dark:from-[rgba(0,0,0,.6)] dark:via-[rgba(0,0,0,.3)] dark:to-[rgba(0,0,0,0)] z-10" />
 
+                {/* Character Image */}
                 <Image
                   src={`/assert/portrait/${character.id}_1.png`}
                   alt={character.name}
                   fill
-                  className="object-cover object-[50%_30%] transition-transform duration-300 group-hover:scale-100 "
+                  className="object-cover object-[50%_30%] transition-transform duration-300 group-hover:scale-105"
                 />
 
-                {/* Status badges */}
-                <div className="absolute top-1 right-1 flex flex-row flex-wrap gap-1 z-10">
+                {/* Badges */}
+                <div className="absolute top-1 right-1 flex flex-row flex-wrap gap-1 z-20">
                   {character.source === "cn-only" && (
                     <span className="text-xs bg-gradient-to-r from-blue-600 to-blue-400 text-white px-2 py-0.5 shadow">
                       CN
                     </span>
                   )}
-
                   {limitedOperatorIds.has(character.id) && (
                     <span className="text-xs bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-0.5 shadow">
                       {t("filter.availability.limited")}
@@ -805,8 +805,8 @@ export default function OperatorsGridRedesigned() {
                   )}
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 z-20 flex flex-col items-center p-3 space-y-1">
-                  {/* Class Icon */}
+                {/* Desktop layout */}
+                <div className="hidden lg:flex absolute bottom-0 left-0 right-0 z-20 flex-col items-center p-3 space-y-1">
                   <Image
                     src={`/operators/icon-class/${character.profession.toLowerCase()}.png`}
                     alt={character.profession}
@@ -814,15 +814,12 @@ export default function OperatorsGridRedesigned() {
                     height={40}
                     className="drop-shadow-lg"
                   />
-                  {/* Character info */}
-                  <div className="text-white font-bold text-center text-xl leading-tight">
+                  <div className="text-white text-center text-sm leading-tight font-semibold">
                     {locale === "ja" ? character.name_jp : character.name}
                   </div>
-                  {/* Class/Subclass */}
-                  <div className="text-white text-xs text-center bg-black/50 rounded p-1 hidden lg:block">
+                  <div className="text-white text-xs text-center bg-black/50 rounded p-1">
                     {character.subProfession}
                   </div>
-                  {/* Colored accent bar */}
                   <div
                     className={cn(
                       "absolute bottom-0 left-0 right-0 h-1",
@@ -830,6 +827,26 @@ export default function OperatorsGridRedesigned() {
                       character.rarity === 5 && "bg-blue-500"
                     )}
                   />
+                </div>
+
+                {/* Mobile layout */}
+                <div className="lg:hidden absolute top-1 left-1 z-20 bg-black/50 rounded">
+                  <Image
+                    src={`/operators/icon-class/${character.profession.toLowerCase()}.png`}
+                    alt={character.profession}
+                    width={40}
+                    height={40}
+                    className="drop-shadow-lg"
+                  />
+                </div>
+
+                <div className="lg:hidden absolute bottom-1 left-1 right-1 z-20 px-2 space-y-1 text-center">
+                  <div className="text-white font-bold text-sm leading-tight truncate">
+                    {locale === "ja" ? character.name_jp : character.name}
+                  </div>
+                  <div className="text-white text-xs bg-black/50 rounded px-1 py-0.5">
+                    {character.subProfession}
+                  </div>
                 </div>
               </div>
             </Link>
