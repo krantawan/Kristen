@@ -9,8 +9,13 @@ const withNextIntl = createNextIntlPlugin({
 
 const config: NextConfig = {
   images: {
-    unoptimized: true,
-    domains: ["arknights.wiki.gg"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "arknights.wiki.gg",
+      },
+    ],
+    formats: ["image/webp", "image/avif"],
   },
 };
 
