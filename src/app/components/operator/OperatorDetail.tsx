@@ -347,7 +347,7 @@ export default function OperatorPageClient({
                     }
                     fill
                     sizes="(max-width: 768px) 100vw, 80vw"
-                    className="object-cover object-center relative z-0"
+                    className="object-cover object-top relative z-0"
                     priority
                     draggable={false}
                     onError={() => setFallback(true)}
