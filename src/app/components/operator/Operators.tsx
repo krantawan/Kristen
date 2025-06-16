@@ -756,6 +756,7 @@ export default function OperatorsGridRedesigned() {
                   src={`/assets/portrait/${character.id}_1.png`}
                   alt={character.name}
                   fill
+                  sizes="(max-width: 640px) 100vw, 300px"
                   className="object-cover object-[50%_30%] transition-transform duration-300 group-hover:scale-105"
                 />
 
@@ -780,6 +781,7 @@ export default function OperatorsGridRedesigned() {
                     alt={character.profession}
                     width={40}
                     height={40}
+                    priority
                     className="drop-shadow-lg"
                   />
                   <div className="text-white text-center text-sm leading-tight font-semibold">
@@ -805,6 +807,7 @@ export default function OperatorsGridRedesigned() {
                     alt={character.profession}
                     width={40}
                     height={40}
+                    priority
                     className="drop-shadow-lg"
                   />
                 </div>
