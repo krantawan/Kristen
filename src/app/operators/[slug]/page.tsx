@@ -98,7 +98,7 @@ export async function generateMetadata({
       siteName: "Kristen Arknights DB",
       images: [
         {
-          url: `https://kristen-lab.vercel.app/operators/${operator.id}.png`, // ✅ เปลี่ยน path ตามจริง
+          url: `https://kristen-lab.vercel.app/operators/${operator.id}.png`,
           width: 1200,
           height: 630,
           alt: operator.name,
