@@ -28,7 +28,6 @@ export default function OperatorList({ title, selectedTags }: Props) {
 
   const groupedEntries = Object.entries(grouped);
 
-  // เอามาต่อรวมกันโดยให้ tag ผสมขึ้นก่อน
   const sortedGroups = groupedEntries.sort(([keyA], [keyB]) => {
     const tagsA = keyA.split(" + ");
     const tagsB = keyB.split(" + ");
