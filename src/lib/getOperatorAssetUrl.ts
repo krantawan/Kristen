@@ -1,8 +1,8 @@
 const ASSET_BASE_PATH = "/assets";
 
 const DEFAULT_IMAGES = {
-  skin: "/assets/skin/default.png",
-  portrait: "/assets/portrait/default.png",
+  skin: "/game-ui/char_any.png",
+  portrait: "/game-ui/char_any.png",
   skill: "/assets/skill/default.png",
   building_skill: "/assets/building_skill/default.png",
   item: "/assets/item/default.png",
