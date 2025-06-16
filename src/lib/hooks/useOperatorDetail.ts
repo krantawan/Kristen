@@ -4,6 +4,7 @@ import {
   OperatorModule,
   BuildingSkill,
   MetaInfo,
+  Phase,
 } from "@/types/operator";
 
 type Lang = "cn" | "en" | "jp";
@@ -18,6 +19,7 @@ export type OperatorDetail = {
   building_skills: BuildingSkill[];
   patch_info: unknown;
   meta_info: MetaInfo;
+  phases?: Phase[];
 };
 
 export async function getOperatorDetail(
@@ -65,6 +67,7 @@ export async function getOperatorDetail(
       : fallback.building_skills,
     patch_info: primary?.patch_info ?? fallback.patch_info,
     meta_info: primary?.meta_info ?? fallback.meta_info,
+    phases: primary?.phases ?? fallback.phases,
   };
 
   return merged;

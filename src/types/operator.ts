@@ -39,6 +39,23 @@ export type BuildingSkill = {
   phase?: number;
 };
 
+export type Phase = {
+  rangeId: string;
+  maxLevel: number;
+  attributesKeyFrames: {
+    level: number;
+    data: Record<string, number>;
+  }[];
+  evolveCost?: {
+    id: string;
+    count: number;
+    name: string;
+    rarity: number;
+    iconId: string;
+    type: string;
+  }[];
+};
+
 export type MetaInfo = {
   name: string;
   nationId?: string;
@@ -65,6 +82,7 @@ export type MetaInfo = {
     respawnTime?: number;
     cost?: number;
   };
+  phases?: Phase[];
   rarity: number;
   storyTextAudio?: {
     storyTitle: string;
@@ -84,6 +102,7 @@ export type OperatorDetail = {
   building_skills: BuildingSkill[];
   patch_info: unknown;
   meta_info: MetaInfo;
+  phases?: Phase[];
 };
 
 export type OperatorSummary = {

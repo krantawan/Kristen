@@ -8,8 +8,10 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/operator_detail/button";
 import { Card } from "@/components/ui/operator_detail/card";
 import { Badge } from "@/components/ui/operator_detail/badge";
+import { Slider } from "@/components/ui/operator_detail/slider";
 import { getOperatorAssetUrl } from "@/lib/getOperatorAssetUrl";
 import { getOperatorDetail } from "@/lib/hooks/useOperatorDetail";
+import AnimatedStat from "@/components/ui/operator_detail/AnimateStat";
 import type {
   OperatorDetail,
   OperatorSummary,
@@ -22,6 +24,55 @@ import {
 } from "@/app/components/operator/details/config";
 import { useTranslations } from "next-intl";
 import { OperatorHeader } from "./details/OperatorHeader";
+import {
+  Heart,
+  Shield,
+  Swords,
+  Zap,
+  Timer,
+  Blocks,
+  Diamond,
+  Wallet,
+} from "lucide-react";
+
+import rangeTable from "@/data/operator_detail/range_table.json";
+import OperatorRange from "@/components/ui/operator_detail/OperatorRange";
+import PromotionRequirements from "@/components/ui/operator_detail/PromotionRequirements";
+
+const labelMap: Record<string, { label: string; icon: React.ReactNode }> = {
+  maxHp: {
+    label: "Health",
+    icon: <Heart size={16} className="text-red-400" />,
+  },
+  atk: {
+    label: "Attack",
+    icon: <Swords size={16} className="text-orange-400" />,
+  },
+  def: {
+    label: "Defense",
+    icon: <Shield size={16} className="text-blue-400" />,
+  },
+  magicResistance: {
+    label: "Magic Res",
+    icon: <Diamond size={16} className="text-purple-400" />,
+  },
+  cost: {
+    label: "DP Cost",
+    icon: <Wallet size={16} className="text-yellow-400" />,
+  },
+  blockCnt: {
+    label: "Block",
+    icon: <Blocks size={16} className="text-green-400" />,
+  },
+  baseAttackTime: {
+    label: "Atk Interval",
+    icon: <Zap size={16} className="text-pink-400" />,
+  },
+  respawnTime: {
+    label: "Redeploy",
+    icon: <Timer size={16} className="text-gray-400" />,
+  },
+};
 
 // Memoized loading skeleton component
 const LoadingSkeleton = React.memo(() => (
@@ -85,6 +136,7 @@ const SkinSelector = React.memo(
             sizes="(max-width: 768px) 100vw, 80vw"
             className="object-cover object-top"
             loading="lazy"
+            draggable={false}
           />
         </button>
       ))}
@@ -102,9 +154,54 @@ export default function OperatorPageClient({
   const [opDetail, setOpDetail] = useState<OperatorDetail | undefined>(
     undefined
   );
+  // Phase selector
+  const [selectedPhaseIndex, setSelectedPhaseIndex] = useState(0);
+  const [selectedLevel, setSelectedLevel] = useState(1);
+  const currentPhase = opDetail?.phases?.[selectedPhaseIndex];
+  const evolveCost = currentPhase?.evolveCost ?? [];
+
+  const levelData = useMemo(() => {
+    if (!currentPhase || !selectedLevel) return {};
+
+    const keyframes = currentPhase.attributesKeyFrames ?? [];
+    const sorted = [...keyframes].sort((a, b) => a.level - b.level);
+
+    const lower = sorted.findLast((f) => f.level <= selectedLevel);
+    const upper = sorted.find((f) => f.level >= selectedLevel);
+
+    if (!lower || !upper) return {};
+
+    const percent =
+      lower.level === upper.level
+        ? 0
+        : (selectedLevel - lower.level) / (upper.level - lower.level);
+
+    const keys = Object.keys(lower.data);
+    const result: Record<string, number> = {};
+
+    keys.forEach((key) => {
+      const a = lower.data[key];
+      const b = upper.data[key];
+      if (typeof a === "number" && typeof b === "number") {
+        result[key] = parseFloat((a + (b - a) * percent).toFixed(2));
+      } else {
+        result[key] = a;
+      }
+    });
+
+    return result;
+  }, [currentPhase, selectedLevel]);
+
+  // Skin selector
   const [selectedSkinIndex, setSelectedSkinIndex] = useState(0);
   const [fallback, setFallback] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
+  // Range
+  const rangeId = currentPhase?.rangeId;
+  const range = rangeId ? rangeTable[rangeId as keyof typeof rangeTable] : null;
+  const rangeGrid = range?.grids ?? [];
+
   const t = useTranslations("components.OperatorsPage");
 
   // Optimized data fetching with error handling
@@ -123,6 +220,8 @@ export default function OperatorPageClient({
         if (isMounted && detail) {
           setOpDetail(detail);
           setSelectedSkinIndex(0);
+          setSelectedPhaseIndex(0);
+          setSelectedLevel(detail.phases?.[0]?.maxLevel ?? 1);
         }
       } catch (error) {
         console.error("Failed to fetch operator detail:", error);
@@ -191,12 +290,6 @@ export default function OperatorPageClient({
     );
   }
 
-  // Remove trailing dots from team name
-  const team = (opDetail?.meta_info.team ?? "Rhodes Island").replace(
-    /\.+$/,
-    ""
-  );
-
   const imageOperatorSrc = fallback
     ? "/game-ui/char_any.png"
     : getOperatorAssetUrl(
@@ -211,23 +304,10 @@ export default function OperatorPageClient({
     <div className="min-h-screen bg-card text-gray-900 dark:text-white transition-colors duration-200">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-4">
-          {/* Left panel - Character art and skin selector */}
           <div className="w-full lg:w-[50%] xl:w-[45%]">
             <Card className="overflow-hidden bg-white dark:bg-gradient-to-b dark:from-zinc-900 dark:to-black border-gray-200 dark:border-zinc-800">
-              {/* Art container with navigation buttons */}
               <div className="relative">
                 <div className="relative aspect-[3/4] overflow-hidden">
-                  {/* Faction background image */}
-                  <div
-                    className="absolute inset-0 bg-no-repeat bg-top bg-contain opacity-10"
-                    style={{
-                      backgroundImage: `url("/assets/faction/${encodeURIComponent(
-                        team ?? "Rhodes Island"
-                      )}.webp")`,
-                    }}
-                    aria-hidden="true"
-                  />
-
                   {/* Badge */}
                   <div className="absolute top-1 right-1 flex flex-row flex-wrap gap-1 z-20">
                     {limitedOperatorIds.has(opDetail.id) && (
@@ -269,6 +349,7 @@ export default function OperatorPageClient({
                     sizes="(max-width: 768px) 100vw, 80vw"
                     className="object-cover object-center relative z-0"
                     priority
+                    draggable={false}
                     onError={() => setFallback(true)}
                   />
                 </div>
@@ -330,7 +411,91 @@ export default function OperatorPageClient({
                   opDetail.meta_info.profession ?? ""
                 ).toLowerCase()}.png`}
               />
-              <div className="p-6">Coming Soon...</div>
+              {/* Stat Section */}
+              <div className="p-4 space-y-3">
+                {/* Phase Select */}
+                <div className="flex items-center gap-2">
+                  {opDetail.phases?.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => {
+                        setSelectedPhaseIndex(idx);
+                        const maxLv = opDetail?.phases?.[idx]?.maxLevel ?? 1;
+                        setSelectedLevel(maxLv);
+                      }}
+                      className={cn(
+                        "px-3 py-1 text-sm border",
+                        idx === selectedPhaseIndex
+                          ? "bg-yellow-400 text-black font-semibold"
+                          : "bg-zinc-800 text-white"
+                      )}
+                    >
+                      E{idx}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Level Slider */}
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-medium">Lv</span>
+                  <Slider
+                    min={1}
+                    max={currentPhase?.maxLevel ?? 1}
+                    value={[selectedLevel]}
+                    onValueChange={([val]) => setSelectedLevel(val)}
+                    className="flex-1"
+                  />
+                  <span className="text-sm font-bold">
+                    {selectedLevel} / {currentPhase?.maxLevel ?? "?"}
+                  </span>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+                  {Object.entries(labelMap).map(([key, { label, icon }]) => (
+                    <div
+                      key={key}
+                      className="flex flex-col bg-zinc-900 p-2 border border-zinc-700"
+                    >
+                      <div className="flex items-center gap-1 text-zinc-400">
+                        {icon}
+                        <span>{label}</span>
+                      </div>
+                      <span className="font-semibold text-white">
+                        <AnimatedStat
+                          value={levelData?.[key] ?? 0}
+                          fractionDigits={
+                            ["baseAttackTime", "respawnTime"].includes(key)
+                              ? 1
+                              : 0
+                          }
+                        />
+                        {["baseAttackTime", "respawnTime"].includes(key)
+                          ? "s"
+                          : ""}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-col md:flex-row gap-4 items-start">
+                  {/* Range */}
+                  <div className="shrink-0 pr-2">
+                    <OperatorRange grids={rangeGrid} />
+                  </div>
+
+                  {/* Promotion Requirements */}
+                  <PromotionRequirements
+                    items={evolveCost}
+                    rarity={opDetail.meta_info.rarity}
+                    phase={selectedPhaseIndex}
+                  />
+                </div>
+              </div>
+
+              <div className="border-t dark:border-zinc-800 p-4">
+                Coming Soon...
+              </div>
             </Card>
           </div>
         </div>
