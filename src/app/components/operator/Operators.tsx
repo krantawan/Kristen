@@ -785,7 +785,21 @@ export default function OperatorsGridRedesigned() {
                     className="drop-shadow-lg"
                   />
                   <div className="text-white text-center text-sm leading-tight font-semibold">
-                    {locale === "ja" ? character.name_jp : character.name}
+                    {(() => {
+                      const name =
+                        locale === "ja" ? character.name_jp : character.name;
+                      if (name.includes(" the ")) {
+                        const [before, after] = name.split(" the ");
+                        return (
+                          <>
+                            {before}
+                            <br />
+                            the {after}
+                          </>
+                        );
+                      }
+                      return name;
+                    })()}
                   </div>
                   <div className="text-white text-xs text-center bg-black/50 rounded p-1">
                     {character.subProfession}
@@ -811,6 +825,15 @@ export default function OperatorsGridRedesigned() {
                     className="drop-shadow-lg"
                   />
                 </div>
+
+                <div
+                  className={cn(
+                    "absolute bottom-0 left-0 right-0 h-1 z-10",
+                    OperatorRarity[
+                      character.rarity as keyof typeof OperatorRarity
+                    ]
+                  )}
+                />
 
                 <div className="lg:hidden absolute bottom-1 left-1 right-1 z-20 px-2 space-y-1 text-center">
                   <div className="text-white font-bold text-sm leading-tight truncate">
