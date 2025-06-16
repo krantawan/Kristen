@@ -94,8 +94,20 @@ export async function generateMetadata({
     openGraph: {
       title: `${operator.name} - Arknights Operator`,
       description: `View detailed information about ${operator.name}`,
-      // Add operator image if available
-      // images: [{ url: getOperatorImageUrl(operator) }],
+      url: `https://kristen-lab.vercel.app/operators/${slug}`,
+      siteName: "Kristen Arknights DB",
+      images: [
+        {
+          url: `https://kristen-lab.vercel.app/images/operators/${operator.id}.png`, // ✅ เปลี่ยน path ตามจริง
+          width: 1200,
+          height: 630,
+          alt: operator.name,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
     },
   };
 }
