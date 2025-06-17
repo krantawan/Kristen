@@ -99,8 +99,8 @@ export async function generateMetadata({
       images: [
         {
           url: `https://kristen-lab.vercel.app/operators/${operator.id}.png`,
-          width: 256,
-          height: 256,
+          width: 110,
+          height: 110,
           alt: operator.name,
         },
       ],
