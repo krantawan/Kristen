@@ -151,6 +151,7 @@
       "cost": 21
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_345_folnic#1",
@@ -621,16 +622,570 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 50,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Drug Inhibition Technique",
+          "description": "Gains <$ba.buffres>status resistance</>",
+          "blackboard": {
+            "one_minus_status_resistance": -0.5,
+            "damage_scale": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Drug Inhibition Technique",
+          "description": "Gains <$ba.buffres>status resistance</> and -40% damage taken from environmental effects",
+          "blackboard": {
+            "one_minus_status_resistance": -0.5,
+            "damage_scale": 0.6
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Drug Inhibition Technique",
+          "description": "Gains <$ba.buffres>status resistance</> and -50% <@ba.talpu>(+10%)</> damage taken from environmental effects",
+          "blackboard": {
+            "one_minus_status_resistance": -0.5,
+            "damage_scale": 0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_folnic",
       "moduleName": "Folinic's Badge",
-      "desc": "Operator Folinic has demonstrated a remarkable aptitude for healing teammates in the field.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Folinic has demonstrated a remarkable aptitude for healing teammates in the field.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_folnic",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_folnic",
       "moduleName": "Mother's Cravat",
-      "desc": "After finishing her studies, on the first day at her new post, Folinic picked out a light blue cravat for herself, its color much like that of medical gloves, seemingly chosen with little hesitation. With her outfit all together and a thrice-over in the mirror, she took her papers and tools with her, off to what was now her position in the Rhodes Island Medical Department.\nIt was an uneventful day. She got seated at her workplace, met Atro and the rest of her colleagues, set up her itinerary, went to a meeting, ate lunch, wrangled all manner of IDs, confirmed the laboratory she'd be using, ate dinner, chatted with Professor Kal'tsit, and went to read in the library. That was it, sunup to sundown.\nHowever, a subtlety to Kal'tsit's actions weighed on her mind. When she looked at Folinic, her eyes seemed inadvertently drawn to her cravat. Folinic had met with Kal'tsit several times throughout the day, and almost every time she did that, as small as it was, to the point she'd thought she was wearing it wrong, and that was how Kal'tsit was opting to notify her. Yet when she got back to her dorm and stood in front of her mirror, she found the cravat still tied neat and tidily upon her chest.\nIf something was wrong, Professor Kal'tsit would've mentioned it on the spot, Folinic thought. She untied her cravat, then tied it once again.\nSo, what exactly was the issue?\nFolinic puzzled over it, and in short order took it off, only to put it back on slowly this time, once again remembering how her mother taught her to tie it—\nA choked gasp escaped her throat before she covered her mouth. Folinic was a very disciplined person, but at this very moment, she was losing control over herself.\nShe tried to hold back her voice, but managed only to sob in heavier, more broken fits, almost suffocating.\nEven standing up straight felt beyond her, and her hands could barely brace against the table before she fell to the ground, where she curled into a ball.\nRationale? Wisdom? What use were they?\nAching—weeping—these were all she had left.\nA pain that a single night could hardly quell.\nHow long must it take, until you finally move past losing family so close to you, and all the inexhaustible grief—how long until you finally forget?\n......\nAt dawn the next day, Folinic came to on the ice-cold floor. She wiped her tears dry, went to the bathroom, and ran a cold shower. As the bracing water struck her back, she planned in her head to open up more possibilities in her own work.\nJust before she left, she picked out a jet-black cravat for herself."
+      "desc": "After finishing her studies, on the first day at her new post, Folinic picked out a light blue cravat for herself, its color much like that of medical gloves, seemingly chosen with little hesitation. With her outfit all together and a thrice-over in the mirror, she took her papers and tools with her, off to what was now her position in the Rhodes Island Medical Department.\nIt was an uneventful day. She got seated at her workplace, met Atro and the rest of her colleagues, set up her itinerary, went to a meeting, ate lunch, wrangled all manner of IDs, confirmed the laboratory she'd be using, ate dinner, chatted with Professor Kal'tsit, and went to read in the library. That was it, sunup to sundown.\nHowever, a subtlety to Kal'tsit's actions weighed on her mind. When she looked at Folinic, her eyes seemed inadvertently drawn to her cravat. Folinic had met with Kal'tsit several times throughout the day, and almost every time she did that, as small as it was, to the point she'd thought she was wearing it wrong, and that was how Kal'tsit was opting to notify her. Yet when she got back to her dorm and stood in front of her mirror, she found the cravat still tied neat and tidily upon her chest.\nIf something was wrong, Professor Kal'tsit would've mentioned it on the spot, Folinic thought. She untied her cravat, then tied it once again.\nSo, what exactly was the issue?\nFolinic puzzled over it, and in short order took it off, only to put it back on slowly this time, once again remembering how her mother taught her to tie it—\nA choked gasp escaped her throat before she covered her mouth. Folinic was a very disciplined person, but at this very moment, she was losing control over herself.\nShe tried to hold back her voice, but managed only to sob in heavier, more broken fits, almost suffocating.\nEven standing up straight felt beyond her, and her hands could barely brace against the table before she fell to the ground, where she curled into a ball.\nRationale? Wisdom? What use were they?\nAching—weeping—these were all she had left.\nA pain that a single night could hardly quell.\nHow long must it take, until you finally move past losing family so close to you, and all the inexhaustible grief—how long until you finally forget?\n......\nAt dawn the next day, Folinic came to on the ice-cold floor. She wiped her tears dry, went to the bathroom, and ran a cold shower. As the bracing water struck her back, she planned in her head to open up more possibilities in her own work.\nJust before she left, she picked out a jet-black cravat for herself.",
+      "typeIcon": "phy-y",
+      "uniEquipIcon": "uniequip_002_folnic",
+      "typeName1": "PHY",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_folnic_1",
+        "uniequip_002_folnic_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains <$ba.buffres>status resistance</> and -40% damage taken from environmental effects. Other allies within range take -15% damage from environmental effects",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Drug Inhibition Technique",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale_aura",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains <$ba.buffres>status resistance</> and -50%<@ba.talpu>(+10%)</> damage taken from environmental effects. Other allies within range take -15% damage from environmental effects",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Drug Inhibition Technique",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale_aura",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains <$ba.buffres>status resistance</> and -40% damage taken from environmental effects. Other allies within range take -25% damage from environmental effects",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Drug Inhibition Technique",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale_aura",
+                      "value": 0.75,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains <$ba.buffres>status resistance</> and -50%<@ba.talpu>(+10%)</> damage taken from environmental effects. Other allies within range take -25% damage from environmental effects",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Drug Inhibition Technique",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale_aura",
+                      "value": 0.75,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1084,5 +1639,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

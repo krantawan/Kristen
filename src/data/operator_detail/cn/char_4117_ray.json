@@ -168,6 +168,92 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 4,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.2,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "攻击时需要消耗子弹且攻击力提升至<@ba.kw>{atk_scale:0%}</>，不攻击时会缓慢地装填子弹（最多{value}发，精英1后更新）",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 6,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.2,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "攻击时需要消耗子弹且攻击力提升至<@ba.kw>{atk_scale:0%}</>，不攻击时会缓慢地装填子弹（最多{value}发，精英2后更新）",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 8,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.2,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "攻击时需要消耗子弹且攻击力提升至<@ba.kw>{atk_scale:0%}</>，不攻击时会缓慢地装填子弹（最多{value}发）",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4117_ray#1",
@@ -749,16 +835,611 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+37",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 37,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 120,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "巡哨伙伴",
+          "description": "可以在攻击范围内部署沙地兽于15秒内侦察一片区域延伸攻击范围，自身优先攻击该区域内的目标且对其造成的物理伤害提高10%",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10034_ray_sndbst",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "巡哨伙伴",
+          "description": "可以在攻击范围内部署沙地兽于25秒内侦察一片区域延伸攻击范围，自身优先攻击该区域内的目标且对其造成的物理伤害提高15%",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10034_ray_sndbst",
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "入神",
+          "description": "攻击相同目标时每次攻击提高自身攻击力8%，最多3层",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "入神",
+          "description": "攻击相同目标时每次攻击提高自身攻击力9%<@ba.talpu>（+1%）</>，最多3层",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.09,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_ray",
       "moduleName": "莱伊证章",
-      "desc": "干员莱伊擅长蓄积火力对敌人进行贯穿打击\n根据外勤部门决议\n在外勤任务中划分为狙击干员，行使猎手职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员莱伊擅长蓄积火力对敌人进行贯穿打击\n根据外勤部门决议\n在外勤任务中划分为狙击干员，行使猎手职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_ray",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_ray",
       "moduleName": "《跳舞的月光》",
-      "desc": "人事部事件记录RF-099-47\n【第一日】\n干员莱伊于上午失踪。此前，她并未提交任何形式的离舰申请。我们已经与外勤部展开联合调查。\n【第二日】\n外勤部组织搜寻的同时，我们也调查了莱伊近日的动向。据悉，莱伊在失踪前一晚反常地参加了一场干员们举办的私人舞会，我们向莱伊的朋友，工坊的实习工匠阿兰娜询问了详情。\n“那家伙居然会参加舞会！要不是她那螺纹曲奇似的头发太有标志性，我都不敢相信是她！”\n“她在舞会上做了什么吗？”\n“呃......在角落里坐着。好吧，这倒是很像她会做的事。”\n“她在舞会上和谁有过接触吗？”\n“有个拄拐的老太太，和她一起在角落里坐着。”\n“她们有进行过什么互动吗？”\n“她俩从头到尾一句话也没说！简直就像去的不是舞会，是桑拿房！”\n【第三日】\n我们了解到，与莱伊有交集的老人是后勤部退休干员，现以病患身份继续在罗德岛接受治疗。她向我们说明了自己参加舞会的原因。\n据悉，老人年轻时曾是一名舞蹈教师，因矿石病而被迫结束了舞蹈生涯。如今，她的左腿已严重结晶化，必须依靠辅助工具行走。\n“没别的念想，只是想看看年轻人跳舞。”她说。\n【第四日】\n一日无果的努力之后，搜寻队在准备收队时目击了两个蓝色的幽影。经过谨慎的法术探测，已经排开作战队形的外勤干员们放下了戒备——他们发现了搜寻的目标，莱伊。\n莱伊身边是一只荒地驮兽，厚实的皮褶里闪烁着蓝色的幽光，它正喘着粗气扭动着庞大的身躯，仿佛是在跳舞。而同样披着蓝色幽光的莱伊本人，则一动不动，只是少见地笑着，笑得像个孩子。\n【补充信息】\n后来莱伊才知道，“蓝色的幽光”实际上来自荧壳源石虫的粉尘状信息素。如果被它接触到皮肤，会产生难以忍受的瘙痒，那只驮兽正是因此才会“跳起舞来”。至于莱伊自己......她的生理耐受评测结果是“优良”，不是没有原因的。\n“所以，你到底为什么突然离舰？”\n“我想找到哥伦比亚荒野上的一种大驮兽，让它们重新开始跟着月亮跳舞。”\n“呃......这和那天的舞会有关吗？因为那位坐在你旁边的老人？”\n“嗯。我看到她的眼睛，那是一双想要跳舞的眼睛。所以我突然感觉，是时候去让驮兽跳舞了。”\n“......啊？”\n“嗯。”\n“那，你有再见过那位老人吗？或许可以给她讲讲你的经历呢？”\n“没......但你说得对，这样也许不错。如果不麻烦的话......能不能请你帮忙讲给她听？”"
+      "desc": "人事部事件记录RF-099-47\n【第一日】\n干员莱伊于上午失踪。此前，她并未提交任何形式的离舰申请。我们已经与外勤部展开联合调查。\n【第二日】\n外勤部组织搜寻的同时，我们也调查了莱伊近日的动向。据悉，莱伊在失踪前一晚反常地参加了一场干员们举办的私人舞会，我们向莱伊的朋友，工坊的实习工匠阿兰娜询问了详情。\n“那家伙居然会参加舞会！要不是她那螺纹曲奇似的头发太有标志性，我都不敢相信是她！”\n“她在舞会上做了什么吗？”\n“呃......在角落里坐着。好吧，这倒是很像她会做的事。”\n“她在舞会上和谁有过接触吗？”\n“有个拄拐的老太太，和她一起在角落里坐着。”\n“她们有进行过什么互动吗？”\n“她俩从头到尾一句话也没说！简直就像去的不是舞会，是桑拿房！”\n【第三日】\n我们了解到，与莱伊有交集的老人是后勤部退休干员，现以病患身份继续在罗德岛接受治疗。她向我们说明了自己参加舞会的原因。\n据悉，老人年轻时曾是一名舞蹈教师，因矿石病而被迫结束了舞蹈生涯。如今，她的左腿已严重结晶化，必须依靠辅助工具行走。\n“没别的念想，只是想看看年轻人跳舞。”她说。\n【第四日】\n一日无果的努力之后，搜寻队在准备收队时目击了两个蓝色的幽影。经过谨慎的法术探测，已经排开作战队形的外勤干员们放下了戒备——他们发现了搜寻的目标，莱伊。\n莱伊身边是一只荒地驮兽，厚实的皮褶里闪烁着蓝色的幽光，它正喘着粗气扭动着庞大的身躯，仿佛是在跳舞。而同样披着蓝色幽光的莱伊本人，则一动不动，只是少见地笑着，笑得像个孩子。\n【补充信息】\n后来莱伊才知道，“蓝色的幽光”实际上来自荧壳源石虫的粉尘状信息素。如果被它接触到皮肤，会产生难以忍受的瘙痒，那只驮兽正是因此才会“跳起舞来”。至于莱伊自己......她的生理耐受评测结果是“优良”，不是没有原因的。\n“所以，你到底为什么突然离舰？”\n“我想找到哥伦比亚荒野上的一种大驮兽，让它们重新开始跟着月亮跳舞。”\n“呃......这和那天的舞会有关吗？因为那位坐在你旁边的老人？”\n“嗯。我看到她的眼睛，那是一双想要跳舞的眼睛。所以我突然感觉，是时候去让驮兽跳舞了。”\n“......啊？”\n“嗯。”\n“那，你有再见过那位老人吗？或许可以给她讲讲你的经历呢？”\n“没......但你说得对，这样也许不错。如果不麻烦的话......能不能请你帮忙讲给她听？”",
+      "typeIcon": "hun-x",
+      "uniEquipIcon": "uniequip_002_ray",
+      "typeName1": "HUN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_ray_1",
+        "uniequip_002_ray_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "子弹数量为空时下次装填额外加装1发子弹",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10034_ray_sndbst": [
+              {
+                "key": "respawn_time",
+                "value": -5,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "子弹数量为空时下次装填额外加装1发子弹",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "可以在攻击范围内部署沙地兽于25秒内侦察一片区域延伸攻击范围，自身优先攻击该区域内的目标且对其造成的物理伤害提高18%，沙地兽的再部署时间-5秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "巡哨伙伴",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10034_ray_sndbst",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10034_ray_sndbst": [
+              {
+                "key": "respawn_time",
+                "value": -10,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "子弹数量为空时下次装填额外加装1发子弹",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "可以在攻击范围内部署沙地兽于25秒内侦察一片区域延伸攻击范围，自身优先攻击该区域内的目标且对其造成的物理伤害提高20%，沙地兽的再部署时间-10秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "巡哨伙伴",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10034_ray_sndbst",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1219,6 +1900,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10034_ray_sndbst"
   ],
   "patch_info": {}
 }

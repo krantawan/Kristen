@@ -169,6 +169,7 @@
       "cost": 19
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_171_bldsk#1",
@@ -674,16 +675,570 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+27",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 27,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "血液样本回收",
+          "description": "攻击范围内有敌人倒下时，为自身和范围内随机一名友方单位回复1点技力",
+          "blackboard": [
+            {
+              "key": "bldsk_t_1[self].sp",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "bldsk_t_1[rand].sp",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "血液样本回收",
+          "description": "攻击范围内有敌人倒下时，为自身和范围内随机一名友方单位回复2点技力",
+          "blackboard": [
+            {
+              "key": "bldsk_t_1[self].sp",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "bldsk_t_1[rand].sp",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_bldsk",
       "moduleName": "华法琳证章",
-      "desc": "干员华法琳擅长在战场上为干员提供治疗\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使医师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员华法琳擅长在战场上为干员提供治疗\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使医师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_bldsk",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_bldsk",
       "moduleName": "应急储备",
-      "desc": "【医疗部干员针对血库样本采集问题的一次对外答疑】\n罗德岛的体检项目完全向所有受检者公开，并根据受检者的意愿进行项目的增减，所有手续和流程都完全透明，不存在任何欺瞒的部分。\n我们会对患者的信息进行严格的封存保密，截至目前，我们建立的血库从来没有丢失过任何一件血液样本。是的，从来没有过。\n罗德岛有信心，我们能够确保这些样本处在安全的监控之下，仅用于疾病的治疗......什么？您问血库的管理人？\n咳咳，管理血库的是罗德岛的元老成员之一，华法琳医生。\n没有人能在血魔眼皮底下偷走任何一滴血液。我认为，正因血库的管理人是华法琳医生，我们才有信心断定罗德岛的血库绝不会受到外来的威胁。\n【华法琳的日志摘选】\n新干员的采血化验今天就结束了，最近新成员是不是有点太多了？菲林、佩洛、黎博利、萨卡兹......这么多人，一人抽好几管血，最开始闻味儿还稍微有点感觉，到最后看都感觉要看饱了。\n凯尔希真该夸一下我非凡的自控力，不说现在那些在外头胡来不知收敛的小辈，就算是族里的那些老家伙，在这方面的耐力肯定也都比不上我。\n......还是算了，和那些家伙有什么好比的。\n不过话又说回来了，工作之余，稍微多收集一点备用应该还是没什么问题的吧？难得罗德岛能聚集这么多人，那个叫斯卡蒂的干员，还有幽灵鲨和歌雷蒂娅，这么好的机会，不活用也太可惜了！\n以及，博士。\n博士啊。真是光看着就让研究者心痒痒，奇怪了，那种香味来源于何处？为什么我会受到如此强烈的吸引？其他血魔对此会有什么样的反应？可露希尔......算了，她算是个例外。\n如果我的判断没有错，博士的身体应该藏着什么秘密。这个秘密凯尔希一定知道，但她不愿意说，也不想让别人挖掘。\n天啊，凯尔希这个女人！怎么能把揭晓真相的机会摆在我面前，又禁止我探索？\n最近凯尔希看得也没那么紧了，要不然，找个机会试试看？\n嗯，得好好计划一下......"
+      "desc": "【医疗部干员针对血库样本采集问题的一次对外答疑】\n罗德岛的体检项目完全向所有受检者公开，并根据受检者的意愿进行项目的增减，所有手续和流程都完全透明，不存在任何欺瞒的部分。\n我们会对患者的信息进行严格的封存保密，截至目前，我们建立的血库从来没有丢失过任何一件血液样本。是的，从来没有过。\n罗德岛有信心，我们能够确保这些样本处在安全的监控之下，仅用于疾病的治疗......什么？您问血库的管理人？\n咳咳，管理血库的是罗德岛的元老成员之一，华法琳医生。\n没有人能在血魔眼皮底下偷走任何一滴血液。我认为，正因血库的管理人是华法琳医生，我们才有信心断定罗德岛的血库绝不会受到外来的威胁。\n【华法琳的日志摘选】\n新干员的采血化验今天就结束了，最近新成员是不是有点太多了？菲林、佩洛、黎博利、萨卡兹......这么多人，一人抽好几管血，最开始闻味儿还稍微有点感觉，到最后看都感觉要看饱了。\n凯尔希真该夸一下我非凡的自控力，不说现在那些在外头胡来不知收敛的小辈，就算是族里的那些老家伙，在这方面的耐力肯定也都比不上我。\n......还是算了，和那些家伙有什么好比的。\n不过话又说回来了，工作之余，稍微多收集一点备用应该还是没什么问题的吧？难得罗德岛能聚集这么多人，那个叫斯卡蒂的干员，还有幽灵鲨和歌雷蒂娅，这么好的机会，不活用也太可惜了！\n以及，博士。\n博士啊。真是光看着就让研究者心痒痒，奇怪了，那种香味来源于何处？为什么我会受到如此强烈的吸引？其他血魔对此会有什么样的反应？可露希尔......算了，她算是个例外。\n如果我的判断没有错，博士的身体应该藏着什么秘密。这个秘密凯尔希一定知道，但她不愿意说，也不想让别人挖掘。\n天啊，凯尔希这个女人！怎么能把揭晓真相的机会摆在我面前，又禁止我探索？\n最近凯尔希看得也没那么紧了，要不然，找个机会试试看？\n嗯，得好好计划一下......",
+      "typeIcon": "phy-x",
+      "uniEquipIcon": "uniequip_002_bldsk",
+      "typeName1": "PHY",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_bldsk_1",
+        "uniequip_002_bldsk_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "治疗生命值低于50%的友方单位时治疗量提升<@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "治疗生命值低于50%的友方单位时治疗量提升<@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内有敌人倒下时，为自身和范围内随机一名友方单位回复2点技力，敌人为精英或领袖时技力额外回复1点",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "血液样本回收",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "bldsk_t_1[self][no].sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[rand][no].sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[self][ex].sp",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[rand][ex].sp",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "治疗生命值低于50%的友方单位时治疗量提升<@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内有敌人倒下时，为自身和范围内随机一名友方单位回复2点技力，敌人为精英或领袖时技力额外回复2点",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "血液样本回收",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "bldsk_t_1[self][no].sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[rand][no].sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[self][ex].sp",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[rand][ex].sp",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1137,5 +1692,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

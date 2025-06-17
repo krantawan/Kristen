@@ -168,6 +168,64 @@
       "cost": 32
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@max_target",
+            "value": 3,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "attack@sluggish",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "攻击造成<@ba.kw>法术伤害</>，且会在<@ba.kw>{attack@max_target}</>个敌人间跳跃，每次跳跃伤害降低15%并造成短暂<$ba.sluggish>停顿</>（精英2后更新）",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@max_target",
+            "value": 4,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "attack@sluggish",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "攻击造成<@ba.kw>法术伤害</>，且会在<@ba.kw>{attack@max_target}</>个敌人间跳跃，每次跳跃伤害降低15%并造成短暂<$ba.sluggish>停顿</>",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_306_leizi#1",
@@ -642,16 +700,687 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+28",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 28,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "通流无阻",
+          "description": "攻击未被阻挡的敌人时攻击力提升至110%",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "通流无阻",
+          "description": "攻击未被阻挡的敌人时攻击力提升至113%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.13,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "通流无阻",
+          "description": "攻击未被阻挡的敌人时攻击力提升至120%",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "通流无阻",
+          "description": "攻击未被阻挡的敌人时攻击力提升至123%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.23,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_leizi",
       "moduleName": "惊蛰证章",
-      "desc": "干员惊蛰擅长使用术法串联攻击多个敌人\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使链术师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员惊蛰擅长使用术法串联攻击多个敌人\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使链术师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_leizi",
       "moduleName": "“天地通明”",
-      "desc": "黄口之年，苦学雷法，经文典籍烂熟于心。\n然唤霆霆不应，招雷雷不至。\n\n豆蔻年华，日夜精进，始知文外有文，话中有话。\n挥手电花烁烁，耳中噼啪声响。\n\n待到二十有二，每日一省，口诀律令随心而至。\n可引天雷，可正霆威。\n\n及近而立，道法自然，内蕴千钧而不外露。\n祛邪除恶，有罪无赦。\n师曰：“尚可。”\n乃赠精晶一对，内盈澄雷，外覆苍霆，似有迸碎轰鸣之感。\n师曰：“既为大理寺卿，当持杖节。现授汝晶石，汝自名之。”\n想及年少有志，勤习律令，惟愿号令五雷，以慑邪佞。\n又感天地苍茫，长夜漫漫，雷声轰隆，得察世间万难。\n故答：“天地通明。”"
+      "desc": "黄口之年，苦学雷法，经文典籍烂熟于心。\n然唤霆霆不应，招雷雷不至。\n\n豆蔻年华，日夜精进，始知文外有文，话中有话。\n挥手电花烁烁，耳中噼啪声响。\n\n待到二十有二，每日一省，口诀律令随心而至。\n可引天雷，可正霆威。\n\n及近而立，道法自然，内蕴千钧而不外露。\n祛邪除恶，有罪无赦。\n师曰：“尚可。”\n乃赠精晶一对，内盈澄雷，外覆苍霆，似有迸碎轰鸣之感。\n师曰：“既为大理寺卿，当持杖节。现授汝晶石，汝自名之。”\n想及年少有志，勤习律令，惟愿号令五雷，以慑邪佞。\n又感天地苍茫，长夜漫漫，雷声轰隆，得察世间万难。\n故答：“天地通明。”",
+      "typeIcon": "cha-x",
+      "uniEquipIcon": "uniequip_002_leizi",
+      "typeName1": "CHA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_leizi_1",
+        "uniequip_002_leizi_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 0.9,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，且会在<@ba.kw>{attack@max_target}</>个敌人间跳跃，每次跳跃伤害降低<@ba.kw>{value:0%}</>并造成一定时间<$ba.sluggish>停顿</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 95,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 0.9,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，且会在<@ba.kw>{attack@max_target}</>个敌人间跳跃，每次跳跃伤害降低<@ba.kw>{value:0%}</>并造成一定时间<$ba.sluggish>停顿</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击未被阻挡的敌人时攻击力提升至123%并获得1点技力",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "通流无阻",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击未被阻挡的敌人时攻击力提升至126%<@ba.talpu>（+3%）</>并获得1点技力",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "通流无阻",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.26,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 105,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 0.9,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，且会在<@ba.kw>{attack@max_target}</>个敌人间跳跃，每次跳跃伤害降低<@ba.kw>{value:0%}</>并造成一定时间<$ba.sluggish>停顿</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击未被阻挡的敌人时攻击力提升至126%并获得1点技力",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "通流无阻",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.26,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击未被阻挡的敌人时攻击力提升至129%<@ba.talpu>（+3%）</>并获得1点技力",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "通流无阻",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.29,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1105,5 +1834,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -151,6 +151,7 @@
       "cost": 17
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_275_breeze#1",
@@ -602,16 +603,585 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+20",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 20,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "医療班保護",
+          "description": "スキル発動中、配置中の味方【医療】全員に<$ba.buffres>レジスト</>状態を付与",
+          "blackboard": [
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            },
+            {
+              "key": "max_hp",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1+",
+          "name": "医療班保護",
+          "description": "スキル発動中、配置中の味方【医療】と【補助】全員に<$ba.buffres>レジスト</>状態を付与",
+          "blackboard": [
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            },
+            {
+              "key": "max_hp",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_breeze",
       "moduleName": "ブリーズの記章",
-      "desc": "ブリーズは同時に複数のオペレーターを治療することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、群癒師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ブリーズは同時に複数のオペレーターを治療することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、群癒師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_breeze",
       "moduleName": "外科医療キット",
-      "desc": "愛しのグレースへ。\nあなたは家を離れてから一度も連絡してくれないけれど、私たちは毎日あなたのことを想っているわ。\n実を言うと、最初の頃はまだ喧嘩のことを怒っているのかと思っていたの。あなたの身に起きたことを知ったのは、しばらくしてからのことだったから。\nこれまではお誕生日をお祝いしてあげられなかったけれど、職場の住所を知れたから、やっとお祝いしてあげられるわ。\nお誕生日おめでとう、グレース。\n箱には私からの誕生日プレゼントが入っているわ。工具入れなの。\n私も若い頃は、いつも遠くへ冒険したいって考えていてね、ロンディニウムの有名な革職人にこの工具入れを作ってもらったのよ。\nだけどその後、結局私は両親に敷かれたレールを進むだけの退屈な生活に戻ったから、それを使う機会は一度もなかったわ。大きくて丈夫だから、きっと役に立つわ。\nこの大地には、人々の歩みを止めようとする物事があふれてる。けれど、あなたならきっと私よりも遠くまで歩いていけると信じているわ。\nお父さんはね、とても自分を責めていたわ。ロドスまで会いに行きたいのに、合わす顔もなければ、これからのこととの向き合い方もわからないって。もし会えたなら、二人とも冷静によく話し合ってほしいわ。\n愛しのグレース、これからどうなろうと、私はあなたの選択と、あなたの理想を支持するわ。\nもしヘンリーが反対したとしても、一緒に説得してあげるから。\n追伸　お父さんったら、あなたが小さいころ大好きだったお菓子をたくさん作ってもらったみたいなの。食べるなって叱ってたのもお父さんなのに、笑っちゃうわね。もしそっちに届いても、一気に食べちゃダメよ！\n\n――ベアトリス・アリゾナ\n\n\nグレース、ロドスを視察させてもらった。お前の同僚に聞いたが、お前は今、外勤任務で危険な地域へと向かい、戦場医療救助サポートとやらをしているそうじゃないか。\n確かにロドスはこの大地で一二を争うほどの素晴らしいところと言えるかもしれない。だがお前がここにいるのは、患者として治療を受けるためであって、あちこち駆けずり回るためではないことを忘れるな。\nお前の治療費くらい、私たちがいくらでも負担してやれる。だが、お前を再び失ってしまうことだけは、何があっても受け入れられない。\n食べ物や日用品を持ってきたので置いていく。日持ちしないものもあるから、くれぐれも忘れないように。\n他にもなにか必要なものがあれば言いなさい。\nベアトリスがお前としっかり話し合えとうるさいので、来月もう一度来るつもりだ。\n母さんには手紙をたくさん出してやってくれ。\nそれと、お前の宿舎の机の引き出しが壊れていたから、直しておいた。あまり物を詰め込みすぎないように。\n\n――ヘンリー・アリゾナ"
+      "desc": "愛しのグレースへ。\nあなたは家を離れてから一度も連絡してくれないけれど、私たちは毎日あなたのことを想っているわ。\n実を言うと、最初の頃はまだ喧嘩のことを怒っているのかと思っていたの。あなたの身に起きたことを知ったのは、しばらくしてからのことだったから。\nこれまではお誕生日をお祝いしてあげられなかったけれど、職場の住所を知れたから、やっとお祝いしてあげられるわ。\nお誕生日おめでとう、グレース。\n箱には私からの誕生日プレゼントが入っているわ。工具入れなの。\n私も若い頃は、いつも遠くへ冒険したいって考えていてね、ロンディニウムの有名な革職人にこの工具入れを作ってもらったのよ。\nだけどその後、結局私は両親に敷かれたレールを進むだけの退屈な生活に戻ったから、それを使う機会は一度もなかったわ。大きくて丈夫だから、きっと役に立つわ。\nこの大地には、人々の歩みを止めようとする物事があふれてる。けれど、あなたならきっと私よりも遠くまで歩いていけると信じているわ。\nお父さんはね、とても自分を責めていたわ。ロドスまで会いに行きたいのに、合わす顔もなければ、これからのこととの向き合い方もわからないって。もし会えたなら、二人とも冷静によく話し合ってほしいわ。\n愛しのグレース、これからどうなろうと、私はあなたの選択と、あなたの理想を支持するわ。\nもしヘンリーが反対したとしても、一緒に説得してあげるから。\n追伸　お父さんったら、あなたが小さいころ大好きだったお菓子をたくさん作ってもらったみたいなの。食べるなって叱ってたのもお父さんなのに、笑っちゃうわね。もしそっちに届いても、一気に食べちゃダメよ！\n\n――ベアトリス・アリゾナ\n\n\nグレース、ロドスを視察させてもらった。お前の同僚に聞いたが、お前は今、外勤任務で危険な地域へと向かい、戦場医療救助サポートとやらをしているそうじゃないか。\n確かにロドスはこの大地で一二を争うほどの素晴らしいところと言えるかもしれない。だがお前がここにいるのは、患者として治療を受けるためであって、あちこち駆けずり回るためではないことを忘れるな。\nお前の治療費くらい、私たちがいくらでも負担してやれる。だが、お前を再び失ってしまうことだけは、何があっても受け入れられない。\n食べ物や日用品を持ってきたので置いていく。日持ちしないものもあるから、くれぐれも忘れないように。\n他にもなにか必要なものがあれば言いなさい。\nベアトリスがお前としっかり話し合えとうるさいので、来月もう一度来るつもりだ。\n母さんには手紙をたくさん出してやってくれ。\nそれと、お前の宿舎の机の引き出しが壊れていたから、直しておいた。あまり物を詰め込みすぎないように。\n\n――ヘンリー・アリゾナ",
+      "typeIcon": "rin-x",
+      "uniEquipIcon": "uniequip_002_breeze",
+      "typeName1": "RIN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_001_breeze_13",
+        "uniequip_002_breeze_14"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲<@ba.kw>拡大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲<@ba.kw>拡大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、味方【医療】・【補助】が最大HP+10%、<$ba.buffres>レジスト</>状態を獲得",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1+",
+                  "name": "医療班保護",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲<@ba.kw>拡大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、味方【医療】、【補助】が最大HP+15%、<$ba.buffres>レジスト</>状態を獲得",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1+",
+                  "name": "医療班保護",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1055,5 +1625,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

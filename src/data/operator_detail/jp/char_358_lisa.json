@@ -152,6 +152,28 @@
       "cost": 16
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "sluggish",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_358_lisa#1",
@@ -739,21 +761,968 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "スキルブースト・補助",
+          "description": "配置中、味方【補助】のSPの自然回復速度+0.2sp/秒（同種の効果は高いほうのみ適用）",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "スキルブースト・補助",
+          "description": "配置中、味方【補助】のSPの自然回復速度+0.4sp/秒（同種の効果は高いほうのみ適用）",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "狐の祟り",
+          "description": "攻撃範囲内の敵が<$ba.sluggish>足止め</>された時、次の瞬間から<$ba.sluggish>足止め</>と同じ時間の20%の<$ba.fragile>脆弱</>状態も付与される",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 1.2,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "狐の祟り",
+          "description": "攻撃範囲内の敵が<$ba.sluggish>足止め</>された時、次の瞬間から<$ba.sluggish>足止め</>と同じ時間の23%<@ba.talpu>（+3%）</>の<$ba.fragile>脆弱</>状態も付与される",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 1.23,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_lisa",
       "moduleName": "スズランの記章",
-      "desc": "スズランは敵の牽制に秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、緩速師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "スズランは敵の牽制に秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、緩速師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_lisa",
       "moduleName": "懐中の御守り",
-      "desc": "スズランをロドスに託した両親は、その去り際に、目を真っ赤にした愛娘にある「お守り」を手渡した。\n「お守りからチクタク聞こえなくなったら、パパとママは戻ってくるよ。」\n端から見れば子供騙しの約束に見えただろう。\nだがスズランは、すすり泣きながらも頷いた。\n「パパとママは約束を破ったことなんてないんです。」\n後に、スズランは友人たちにそう話したそうだ。\nそしてスズランは、今でもそのしっかりと重量感のある小さな布袋を肌身離さず身に着けている。\n毎晩就寝の時間になると、スズランはお守りから聞こえる機械音に耳を傾け、両親に聞いてほしい話を語りかけながら安心して眠りについた。\n毎晩そうやって過ごした。\n「お守りを開けて中のものを止めてしまえば両親が来るんじゃないか？」とそそのかす者もいたが、スズランは頑なにそれを拒んだ。\n「お守りは開けちゃうと効果がなくなるんです。絶対ダメです！」\n中に何が入っているかなど、スズランはとうに知っていた。布越しで中のものに触れ、ある程度の知識と照らし合わせれば答えは明白だった。\nしかしスズランは、両親の言いつけを信じて待つことを選んだ。\n一日、また一日と時間が過ぎていった。\nそんなある日の午後、ポケットの中のお守りから微細な振動が感じられなくなった。\nすると――突然母親が背後に現れて、大きな袋を下げた父親も姿を見せた。二人の温かな笑顔がとても懐かしかった。\nそう、パパとママは約束を破ったことなどないのだ。\n再び集った家族は、わずか数日であったが、忘れられない団らんのひとときを過ごした。\nそしてまた、別れの日がやってきた。\n父は大げさに祝辞を読み上げるとお守りを開封し、母が懐中時計の盤面を検査したのち、ゼンマイを巻いてくれた。\n二人は見事な役割分担で懐中時計の針を再び動かすと、スズランにそれをお守りの袋に入れて、紐を固く閉じるよう言った。\n簡素で素朴な「儀式」はそうして執り行われた。短い時間ではあったが、三人とも真剣に取り組んだ。\n神職者と、殺し屋と、オペレーター。\n父と、母と、娘。\n小さなお守りが、三人の魂を固く結びつける。\n互いを尊重しているからこそ、約束は必ず守る。\n互いを信頼しているからこそ、約束が果たされるまで我慢できる。\n彼らは大地の残酷さ故に、離ればなれにならざるを得なかった。\nしかし「愛」は空間や時間を越えて、彼らに再会する力を与えるのだ。\n「またお守りからチクタク聞こえなくなったら、パパとママは戻ってくるよ。」\n「それまでは、ちゃんと時間通りに早寝早起きするのよ。」\n「うん！」\n「ママ、パパ、いってらっしゃい！」"
+      "desc": "スズランをロドスに託した両親は、その去り際に、目を真っ赤にした愛娘にある「お守り」を手渡した。\n「お守りからチクタク聞こえなくなったら、パパとママは戻ってくるよ。」\n端から見れば子供騙しの約束に見えただろう。\nだがスズランは、すすり泣きながらも頷いた。\n「パパとママは約束を破ったことなんてないんです。」\n後に、スズランは友人たちにそう話したそうだ。\nそしてスズランは、今でもそのしっかりと重量感のある小さな布袋を肌身離さず身に着けている。\n毎晩就寝の時間になると、スズランはお守りから聞こえる機械音に耳を傾け、両親に聞いてほしい話を語りかけながら安心して眠りについた。\n毎晩そうやって過ごした。\n「お守りを開けて中のものを止めてしまえば両親が来るんじゃないか？」とそそのかす者もいたが、スズランは頑なにそれを拒んだ。\n「お守りは開けちゃうと効果がなくなるんです。絶対ダメです！」\n中に何が入っているかなど、スズランはとうに知っていた。布越しで中のものに触れ、ある程度の知識と照らし合わせれば答えは明白だった。\nしかしスズランは、両親の言いつけを信じて待つことを選んだ。\n一日、また一日と時間が過ぎていった。\nそんなある日の午後、ポケットの中のお守りから微細な振動が感じられなくなった。\nすると――突然母親が背後に現れて、大きな袋を下げた父親も姿を見せた。二人の温かな笑顔がとても懐かしかった。\nそう、パパとママは約束を破ったことなどないのだ。\n再び集った家族は、わずか数日であったが、忘れられない団らんのひとときを過ごした。\nそしてまた、別れの日がやってきた。\n父は大げさに祝辞を読み上げるとお守りを開封し、母が懐中時計の盤面を検査したのち、ゼンマイを巻いてくれた。\n二人は見事な役割分担で懐中時計の針を再び動かすと、スズランにそれをお守りの袋に入れて、紐を固く閉じるよう言った。\n簡素で素朴な「儀式」はそうして執り行われた。短い時間ではあったが、三人とも真剣に取り組んだ。\n神職者と、殺し屋と、オペレーター。\n父と、母と、娘。\n小さなお守りが、三人の魂を固く結びつける。\n互いを尊重しているからこそ、約束は必ず守る。\n互いを信頼しているからこそ、約束が果たされるまで我慢できる。\n彼らは大地の残酷さ故に、離ればなれにならざるを得なかった。\nしかし「愛」は空間や時間を越えて、彼らに再会する力を与えるのだ。\n「またお守りからチクタク聞こえなくなったら、パパとママは戻ってくるよ。」\n「それまでは、ちゃんと時間通りに早寝早起きするのよ。」\n「うん！」\n「ママ、パパ、いってらっしゃい！」",
+      "typeIcon": "dec-x",
+      "uniEquipIcon": "uniequip_002_lisa",
+      "typeName1": "DEC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_lisa_1",
+        "uniequip_002_lisa_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵がいるとき、SPの自然回復速度+0.2sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵がいるとき、SPの自然回復速度+0.2sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方【補助】のSPの自然回復速度+0.4sp/秒（同種の効果は高いほうのみ適用）、攻撃力+6%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "スキルブースト・補助",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.06,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵がいるとき、SPの自然回復速度+0.2sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方【補助】のSPの自然回復速度+0.4sp/秒（同種の効果は高いほうのみ適用）、攻撃力+9%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "スキルブースト・補助",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.09,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_lisa",
       "moduleName": "子供たち",
-      "desc": "スズランは、緊迫した様子の二人の医療オペレーターを見かけた。一人は防護服を身にまとい、もう一人は袋を携えて、遊戯室の入り口に万全の状態で待機している。\n事の発端は複雑な話ではなかった。ズタボロのぬいぐるみに、不安げな少年、そしてアーツの失敗。そのアーツによって修復されるはずだったぬいぐるみは、今や恐ろしい源石結晶に貫かれてしまっていた。\nスズランが通りかかった時、ぬいぐるみを誰にも取られないように抱きかかえて泣く少年の姿が目に入った。\n「ちょっと石が生えちゃっただけだもん。この子は何も悪いことしてないし、危なくなんかないよ！」\nかつて、スズランにも大好きなぬいぐるみがあった。少年が抱えているそれより遥かに作りが良く、青いコートを着た、ふわふわの鼷獣の毛がついたぬいぐるみだ。そんなぬいぐるみからも、同じような結晶が生えてきたことがあった――スズランがそのぬいぐるみを抱いて眠りについた直後に、鋭い痛みが乱暴にスズランを夢の中から引き戻したのだ。\n「せっかくゴミ箱から助けてあげたんだから、もう絶対捨てちゃダメだってば！」\nスズランはあの夜のことをよく覚えていないが、母の腕の暖かさと、医者の優しい声は覚えていた。翌朝になれば、まったく同じぬいぐるみが新品同然の状態でベッドに現れていたことも記憶に残っている。\n「パパとママが連れてかれた時もこうだったんだ！全部持ってかれて、埋められちゃって……どうしてぼくを、ぼくたちの物を怖がるの！？」\nスズランにはどうしてそうなるのかはわからなかった。彼女の人生では、そんなことは起こらなかったからだ。けれど、自分の時と似た状況に変えることはできるかもしれないと思った。そこで、彼女は医療オペレーターの制止を気にも留めずに少年へと近付くと、ある物語を聞かせることにした。\n\n「こ、こんにちは……そのぬいぐるみさん、私は危なくなんかないと思うよ……」\n「ほんとに？お姉ちゃんもそう思う？」\n「うん。その石は、こことは別の、もう一つの大地から来た琥珀なんだ。よく見ると、透き通って見えるでしょう？身体にそれと同じ石が生えてる人は、琥珀の中で眠る虫さんみたいに、いつかはその石の中で眠ることになるんだよ。それからまた目が覚めたら、もう一つの大地を旅するんだって。」\n「やっぱり、あいつらはぼくを騙したんだね！パパとママのこと『死んだ』としか言わなくて、何も説明してくれなかったんだ！いくら言っても、めんどくさそうな顔して、『死んだったら死んだんだ』とか繰り返すばっかりでさ……あいつら、何もわかってなかったんだね！」\n「ええと、その人たちは知らなかったのかもしれないけど、こことは別の大地があるっていうのは本当の話だよ……身体に石が生えてから消えちゃった人たちは、実はみんな、今はそのもう一つの大地を旅してるんだって。だから今頃は、きっと金色の水面に浮かんで、あったかいお日様の光を浴びてるんだと思うな。」\n「それじゃあ、ぼくたちもいつかは、そこに行ける？」\n「もちろん。でも、旅に出る前にはよく眠らないといけないんだって。ほら、このぬいぐるみさんはここにいると、周りが賑やかで眠れないみたいだよ。ゆっくり眠らせてあげることにしない？」\n\nその後ほどなくして、遊戯室にはぬいぐるみの入ったガラスケースが設置された。そこに貼られたしわしわの紙には、こう書かれている。「旅の途中です。起こさないでね。」"
+      "desc": "スズランは、緊迫した様子の二人の医療オペレーターを見かけた。一人は防護服を身にまとい、もう一人は袋を携えて、遊戯室の入り口に万全の状態で待機している。\n事の発端は複雑な話ではなかった。ズタボロのぬいぐるみに、不安げな少年、そしてアーツの失敗。そのアーツによって修復されるはずだったぬいぐるみは、今や恐ろしい源石結晶に貫かれてしまっていた。\nスズランが通りかかった時、ぬいぐるみを誰にも取られないように抱きかかえて泣く少年の姿が目に入った。\n「ちょっと石が生えちゃっただけだもん。この子は何も悪いことしてないし、危なくなんかないよ！」\nかつて、スズランにも大好きなぬいぐるみがあった。少年が抱えているそれより遥かに作りが良く、青いコートを着た、ふわふわの鼷獣の毛がついたぬいぐるみだ。そんなぬいぐるみからも、同じような結晶が生えてきたことがあった――スズランがそのぬいぐるみを抱いて眠りについた直後に、鋭い痛みが乱暴にスズランを夢の中から引き戻したのだ。\n「せっかくゴミ箱から助けてあげたんだから、もう絶対捨てちゃダメだってば！」\nスズランはあの夜のことをよく覚えていないが、母の腕の暖かさと、医者の優しい声は覚えていた。翌朝になれば、まったく同じぬいぐるみが新品同然の状態でベッドに現れていたことも記憶に残っている。\n「パパとママが連れてかれた時もこうだったんだ！全部持ってかれて、埋められちゃって……どうしてぼくを、ぼくたちの物を怖がるの！？」\nスズランにはどうしてそうなるのかはわからなかった。彼女の人生では、そんなことは起こらなかったからだ。けれど、自分の時と似た状況に変えることはできるかもしれないと思った。そこで、彼女は医療オペレーターの制止を気にも留めずに少年へと近付くと、ある物語を聞かせることにした。\n\n「こ、こんにちは……そのぬいぐるみさん、私は危なくなんかないと思うよ……」\n「ほんとに？お姉ちゃんもそう思う？」\n「うん。その石は、こことは別の、もう一つの大地から来た琥珀なんだ。よく見ると、透き通って見えるでしょう？身体にそれと同じ石が生えてる人は、琥珀の中で眠る虫さんみたいに、いつかはその石の中で眠ることになるんだよ。それからまた目が覚めたら、もう一つの大地を旅するんだって。」\n「やっぱり、あいつらはぼくを騙したんだね！パパとママのこと『死んだ』としか言わなくて、何も説明してくれなかったんだ！いくら言っても、めんどくさそうな顔して、『死んだったら死んだんだ』とか繰り返すばっかりでさ……あいつら、何もわかってなかったんだね！」\n「ええと、その人たちは知らなかったのかもしれないけど、こことは別の大地があるっていうのは本当の話だよ……身体に石が生えてから消えちゃった人たちは、実はみんな、今はそのもう一つの大地を旅してるんだって。だから今頃は、きっと金色の水面に浮かんで、あったかいお日様の光を浴びてるんだと思うな。」\n「それじゃあ、ぼくたちもいつかは、そこに行ける？」\n「もちろん。でも、旅に出る前にはよく眠らないといけないんだって。ほら、このぬいぐるみさんはここにいると、周りが賑やかで眠れないみたいだよ。ゆっくり眠らせてあげることにしない？」\n\nその後ほどなくして、遊戯室にはぬいぐるみの入ったガラスケースが設置された。そこに貼られたしわしわの紙には、こう書かれている。「旅の途中です。起こさないでね。」",
+      "typeIcon": "dec-y",
+      "uniEquipIcon": "uniequip_003_lisa",
+      "typeName1": "DEC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_lisa_1",
+        "uniequip_003_lisa_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与え\n攻撃時、敵を<@ba.kw>やや長い間</><$ba.sluggish>足止め</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 43,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与え\n攻撃時、敵を<@ba.kw>やや長い間</><$ba.sluggish>足止め</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の敵が<$ba.sluggish>足止め</>された時、次の瞬間から<$ba.sluggish>足止め</>と同じ時間の21%の<$ba.fragile>脆弱</>状態と5%の<$ba.weaken>虚弱</>状態も付与される",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "狐の祟り",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.95,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の敵が<$ba.sluggish>足止め</>された時、次の瞬間から<$ba.sluggish>足止め</>と同じ時間の24%<@ba.talpu>（+3%）</>の<$ba.fragile>脆弱</>状態と5%の<$ba.weaken>虚弱</>状態も付与される",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "狐の祟り",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.24,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.95,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 46,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与え\n攻撃時、敵を<@ba.kw>やや長い間</><$ba.sluggish>足止め</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の敵が<$ba.sluggish>足止め</>された時、次の瞬間から<$ba.sluggish>足止め</>と同じ時間の22%の<$ba.fragile>脆弱</>状態と8%の<$ba.weaken>虚弱</>状態も付与される",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "狐の祟り",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.22,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.92,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の敵が<$ba.sluggish>足止め</>された時、次の瞬間から<$ba.sluggish>足止め</>と同じ時間の25%<@ba.talpu>（+3%）</>の<$ba.fragile>脆弱</>状態と8%の<$ba.weaken>虚弱</>状態も付与される",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "狐の祟り",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.92,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1207,5 +2176,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

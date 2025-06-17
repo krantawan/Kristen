@@ -152,6 +152,28 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "scale",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1020_reed2#1",
@@ -756,16 +778,723 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+26",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "灼けつく炎",
+          "description": "敵にダメージを与えた際、30％の確率で対象に6秒間攻撃力-10％、15％の<$ba.magicfragile>【対術脆弱】</>効果をもたらす灼痕を付与する（重複不可）",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": -0.1,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "talent@atk",
+              "value": -0.1,
+              "valueStr": null
+            },
+            {
+              "key": "talent@damage_scale",
+              "value": 1.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "灼けつく炎",
+          "description": "敵にダメージを与えた際、30％の確率で対象に6秒間攻撃力-12％<@ba.talpu>（+2）</>、17％<@ba.talpu>（+2）</>の<$ba.magicfragile>【対術脆弱】</>効果をもたらす灼痕を付与する（重複不可）",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": -0.12,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.17,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "talent@atk",
+              "value": -0.12,
+              "valueStr": null
+            },
+            {
+              "key": "talent@damage_scale",
+              "value": 1.17,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "灼けつく炎",
+          "description": "敵にダメージを与えた際、30％の確率で対象に6秒間攻撃力-20％、30％の<$ba.magicfragile>【対術脆弱】</>効果をもたらす灼痕を付与する（重複不可）",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": -0.2,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.3,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "talent@atk",
+              "value": -0.2,
+              "valueStr": null
+            },
+            {
+              "key": "talent@damage_scale",
+              "value": 1.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "灼けつく炎",
+          "description": "敵にダメージを与えた際、30％の確率で対象に6秒間攻撃力-22％<@ba.talpu>（+2）</>、32％<@ba.talpu>（+2）</>の<$ba.magicfragile>【対術脆弱】</>効果をもたらす灼痕を付与する（重複不可）",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": -0.22,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.32,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "talent@atk",
+              "value": -0.22,
+              "valueStr": null
+            },
+            {
+              "key": "talent@damage_scale",
+              "value": 1.32,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "耀映",
+          "description": "自身以外の味方ユニットを治療する時、焔影リードも同時に50％の治療効果を受ける",
+          "blackboard": [
+            {
+              "key": "scale",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "2",
+          "name": "耀映",
+          "description": "自身以外の味方ユニットを治療する時、焔影リードも同時に55％<@ba.talpu>（+5）</>のの治療効果を受ける",
+          "blackboard": [
+            {
+              "key": "scale",
+              "value": 0.55,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_reed2",
       "moduleName": "焔影リードの記章",
-      "desc": "焔影リードはアーツで敵を攻撃すると共に味方を治療することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては医療オペレーターとして区分し、呪癒師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "焔影リードはアーツで敵を攻撃すると共に味方を治療することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては医療オペレーターとして区分し、呪癒師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_reed2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_reed2",
       "moduleName": "「赤き龍に贈る冠」",
-      "desc": "暗闇の中、リードは手探りで丁寧に髪を整えると、改めて背筋を伸ばす。\n彼女は、昔よく見ていた夢を思い出した。背後に伸びる影の上に姉が立っており、ひどく重い王冠を被るリードの姿を眺めている、という夢だ。彼女は、自分が王冠を戴くのは間違っていると思ったのだが、どうしてもそれは頭から外れず、取るには炎で融かすしかなかった。融けた金属は頬を伝って流れ落ち、とても熱く感じたのだが、冷たい紫の炎に慰められるほうがよほど恐ろしく、ゆえに声を一切上げずにいたものだ。\n彼女は、先日高速軍艦の航跡沿いに進んでいた時出会った二人を思い出した。彼らは「ダブリン」の名を知っており、彼らの土地には炎で焼かれた痕跡があった。二人は、「私たちの暮らしを破壊したのはお前か？」とリードのことを責め立てた。生命の火を操るドラコはしばし押し黙っていた。自分の姉が人々にどんな恐怖を残していくかをよく知っていたからだ。けれど結局、彼女は首を縦に振った。というのは、彼女がダブリンのリーダーであり、ターラー人にダブリンは二つも必要なかったからである。\n誰かが彼女の名を呼んだ。彼女は立ち上がり、狭い木の扉をくぐる。\n――そうして彼女は、干し草が敷き詰められ、色とりどりのボール紙で飾られた脱穀場へ足を踏み入れた。\n舞台衣装は動きにくく、愛する者のボタン穴へと花を挿すように、皆が彼女の衣装にリボンを掛けていった。千年前の赤き龍が、こんな格好で戦場へ赴いたとは到底思えない。\nだがそれで構わなかった。王冠を戴く者の見た目など、彼らが心に留めておくべきことではないのだ。ゆえに吟遊詩人が韻を踏むべく、伝説のドラコの英雄は長い金髪の持ち主だということにしても特に問題はないだろう。\nリードは咳払いをすると、やや緊張した面持ちで尻尾を振った。目の前のターラー人たちは、沼地にできた泥水の混じる細い川が、高速軍艦の走った跡であることを知らない。北の空に溜まる黒い雲が、戦火の煙であることを知らない。彼らが知ることと言えば、納税を終えた後食事にありつけることの有難みや、豊作を願って祭祀を執り行い、芝居を披露することの重要性くらいだった。リードと共に戦ってきた戦士たちは後列に座り、ほかのターラー人と同じ期待の目で彼女を見ている。リードは彼らから、もしセリフを間違えてしまったら次の一年は豊作に恵まれないというふうに教わっていた。\n「そなたらに土地を、恵まれた天候を授けよう。」\nそのセリフと共に槍の穂先が燃え上がると、観衆はしんと静まり返る。その場の全員が同じ錯覚を抱いたか、あるいは目の前の人物に対して、あるぼんやりとした予感を覚えたのかもしれない。\nリードがこうべを垂れると、子供が彼女の頭へとカラフルな花冠を載せた。それぞれの花は、健やかに育つ作物を象徴している。\n花冠は軽かった。彼女は間を置いてから、長年変わらず村に伝わる台本に、自らの意志でセリフを一つ付け加えた。\n「我はそなたらに、平和を授けよう。」"
+      "desc": "暗闇の中、リードは手探りで丁寧に髪を整えると、改めて背筋を伸ばす。\n彼女は、昔よく見ていた夢を思い出した。背後に伸びる影の上に姉が立っており、ひどく重い王冠を被るリードの姿を眺めている、という夢だ。彼女は、自分が王冠を戴くのは間違っていると思ったのだが、どうしてもそれは頭から外れず、取るには炎で融かすしかなかった。融けた金属は頬を伝って流れ落ち、とても熱く感じたのだが、冷たい紫の炎に慰められるほうがよほど恐ろしく、ゆえに声を一切上げずにいたものだ。\n彼女は、先日高速軍艦の航跡沿いに進んでいた時出会った二人を思い出した。彼らは「ダブリン」の名を知っており、彼らの土地には炎で焼かれた痕跡があった。二人は、「私たちの暮らしを破壊したのはお前か？」とリードのことを責め立てた。生命の火を操るドラコはしばし押し黙っていた。自分の姉が人々にどんな恐怖を残していくかをよく知っていたからだ。けれど結局、彼女は首を縦に振った。というのは、彼女がダブリンのリーダーであり、ターラー人にダブリンは二つも必要なかったからである。\n誰かが彼女の名を呼んだ。彼女は立ち上がり、狭い木の扉をくぐる。\n――そうして彼女は、干し草が敷き詰められ、色とりどりのボール紙で飾られた脱穀場へ足を踏み入れた。\n舞台衣装は動きにくく、愛する者のボタン穴へと花を挿すように、皆が彼女の衣装にリボンを掛けていった。千年前の赤き龍が、こんな格好で戦場へ赴いたとは到底思えない。\nだがそれで構わなかった。王冠を戴く者の見た目など、彼らが心に留めておくべきことではないのだ。ゆえに吟遊詩人が韻を踏むべく、伝説のドラコの英雄は長い金髪の持ち主だということにしても特に問題はないだろう。\nリードは咳払いをすると、やや緊張した面持ちで尻尾を振った。目の前のターラー人たちは、沼地にできた泥水の混じる細い川が、高速軍艦の走った跡であることを知らない。北の空に溜まる黒い雲が、戦火の煙であることを知らない。彼らが知ることと言えば、納税を終えた後食事にありつけることの有難みや、豊作を願って祭祀を執り行い、芝居を披露することの重要性くらいだった。リードと共に戦ってきた戦士たちは後列に座り、ほかのターラー人と同じ期待の目で彼女を見ている。リードは彼らから、もしセリフを間違えてしまったら次の一年は豊作に恵まれないというふうに教わっていた。\n「そなたらに土地を、恵まれた天候を授けよう。」\nそのセリフと共に槍の穂先が燃え上がると、観衆はしんと静まり返る。その場の全員が同じ錯覚を抱いたか、あるいは目の前の人物に対して、あるぼんやりとした予感を覚えたのかもしれない。\nリードがこうべを垂れると、子供が彼女の頭へとカラフルな花冠を載せた。それぞれの花は、健やかに育つ作物を象徴している。\n花冠は軽かった。彼女は間を置いてから、長年変わらず村に伝わる台本に、自らの意志でセリフを一つ付け加えた。\n「我はそなたらに、平和を授けよう。」",
+      "typeIcon": "inc-x",
+      "uniEquipIcon": "uniequip_002_reed2",
+      "typeName1": "INC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_reed2_1",
+        "uniequip_002_reed2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 105,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 145,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 42,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身以外の味方ユニットに対する治療量+3%、焔影リードも同時治療量の55%のHP回復効果を受ける",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "耀映",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 1.03,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身以外の味方ユニットに与える回復量+3%、焔影リードも同時に治療量の60%<@ba.talpu>（+5）</>のHP回復効果を受ける",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 5,
+                  "prefabKey": "2",
+                  "name": "耀映",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 1.03,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身以外の味方ユニットに対する治療量+5%、焔影リードも同時治療量の60%のHP回復効果を受ける",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "耀映",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身以外の味方ユニットに対する治療量+5%、焔影リードも同時治療量の65%<@ba.talpu>（+5）</>のHP回復効果を受ける",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 5,
+                  "prefabKey": "2",
+                  "name": "耀映",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.65,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1227,5 +1956,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

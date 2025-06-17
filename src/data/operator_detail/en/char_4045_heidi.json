@@ -151,6 +151,24 @@
       "cost": 9
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "attack@atk_to_hp_recovery_ratio",
+          "value": 0.1
+        }
+      ],
+      "overrideDescription": "Does not attack but continuously restores the <@ba.kw>HP</> of all allies within range (the HP restored per second is equal to <@ba.kw>{attack@atk_to_hp_recovery_ratio:0%}</> of self ATK). Self is unaffected by <$ba.inspire>Inspiration</>",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4045_heidi#1",
@@ -633,16 +651,687 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 250,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Crafty Rebel",
+          "description": "When Skill 1 is equipped, allies within range gain +2% ATK; when Skill 2 is equipped, allies within range gain +2% DEF",
+          "blackboard": {
+            "atk": 0.02,
+            "def": 0.02
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Crafty Rebel",
+          "description": "When Skill 1 is equipped, allies within range gain +3%<@ba.talpu>(+1%)</> ATK; when Skill 2 is equipped, allies within range gain +3%<@ba.talpu>(+1%)</> DEF",
+          "blackboard": {
+            "atk": 0.03,
+            "def": 0.03
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Crafty Rebel",
+          "description": "When Skill 1 is equipped, allies within range gain +5% ATK; when Skill 2 is equipped, allies within range gain +5% DEF",
+          "blackboard": {
+            "atk": 0.05,
+            "def": 0.05
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Crafty Rebel",
+          "description": "When Skill 1 is equipped, allies within range gain +6%<@ba.talpu>(+1%)</> ATK; when Skill 2 is equipped, allies within range gain +6%<@ba.talpu>(+1%)</> DEF",
+          "blackboard": {
+            "atk": 0.06,
+            "def": 0.06
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Private Messenger",
+          "description": "Increases SP recovery of all allies in range by 0.5/sec while in [Shatterpoint]",
+          "blackboard": {
+            "sp_recovery_per_sec": 0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_heidi",
       "moduleName": "Heidi's Badge",
-      "desc": "Operator Heidi has demonstrated a remarkable aptitude for tactical support and low-level therapy of operators within proximity.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Bard responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Heidi has demonstrated a remarkable aptitude for tactical support and low-level therapy of operators within proximity.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Bard responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_heidi",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_heidi",
       "moduleName": "Luxurious Life-and-Death Struggle",
-      "desc": "'Nobody move.'\nA group of Sarkaz kick the doors open, prompting the guests to look around in dismay. The Count's entire ballroom maintains its stoicism as best it can while the head intruder paces, peering around, almost unsure where to start.\n'We saw a woman pick something up inside a bookshop just earlier—I said FREEZE! You wanna get killed?'\nNo luck for the white-whiskered Count, barked at the moment he tries to reach for his cane.\n'Whole room's playing dumb, huh? Alright, ladies, show me your hats. Who's wearing red?'\nHeidi clears her throat and stands, then immediately realizes it might be a bad idea and tries to sit back down, but the Sarkaz marches over to her before she can.\n'Let's go for a walk.'\nHeidi stares helplessly at the Count, whose mask shows not a crack. Well. She turns to the Sarkaz.\n'Sir, you mustn't treat me so.'\n'The hell do you think you are?'\n'I'm a novelist,' Heidi huffs with attempted bluster, though her shudders give her away. 'I was just picking up a letter from a reader!'\nThe Sarkaz, paying no attention to her excuse, is busy rifling through every possible hiding place on her—and sure enough finds a letter, its words of gushing praise run by rainblots.\n'Well, you've been more cooperative than some. Come with us.' The Sarkaz gestures to the open door. 'You're not going anywhere much worse than this place, anyway.'\n'Really?'\nThat takes him aback for a moment, and then he laughs.\n'How does someone stupid as you come up with any stories worth writing down? Move!'\nHeidi again shoots a plea for help at the Count, and this time her limpid eyes sting. Reluctantly, he moves to speak.\n'Sir, if I might, you did prove Miss Heidi's innocence. Would you treat her with a broad mind?'\n'You vouch for her?'\n'I do.'\nThe Sarkaz spits on the floor.\n'Promise me all your guests are as stupid as her. Then we'll talk.'\nJust as a wave of relief passes over the ballroom, Heidi suddenly has her hat set alight. The fright gives way to screaming, and she tries to hoist it off with her cane, but gets nowhere while her ears are fastened firmly inside. As soon as it singes her hair too, she gives up and rushes out through the door.\nIn an instant, the Sarkaz become wary, but all Heidi does is stand outside in the garden, letting the downpour put out the flames atop her head.\nThe sight of it all makes the Sarkaz roar with laughter. After delivering their verdict of 'Stupid AND a scaredy-cat!', they finally leave the premises, and the shaken guests depart in befuddlement.\nAs the last one vanishes, the Count braves the rain to approach Heidi in the garden, and takes off her half-burnt hat for her.\n'To think they'd trample on a lady's dignity so... My due apologies, Madam.'\n'No, no need. What dignity does one piffling hat even have today, in the rains of Londinium?'\nIt's with some shock that the Count properly regards the rain-soaked novelist, who he thought would be in hysterics over the disgrace he had allowed her to suffer.\n'I'm no fool, and you're no coward. You gave them a distraction so <i>that lady in the red hat</i> had a chance to hide the incriminating evidence. And who better to handle the aftermath than me, no?'\nThe shock in his eyes turns to esteem.\n'Once again, my apologies, Madam. Not for anything else, but that I had underestimate you.\n'No need. I'd like to believe we have some information to share.'"
+      "desc": "'Nobody move.'\nA group of Sarkaz kick the doors open, prompting the guests to look around in dismay. The Count's entire ballroom maintains its stoicism as best it can while the head intruder paces, peering around, almost unsure where to start.\n'We saw a woman pick something up inside a bookshop just earlier—I said FREEZE! You wanna get killed?'\nNo luck for the white-whiskered Count, barked at the moment he tries to reach for his cane.\n'Whole room's playing dumb, huh? Alright, ladies, show me your hats. Who's wearing red?'\nHeidi clears her throat and stands, then immediately realizes it might be a bad idea and tries to sit back down, but the Sarkaz marches over to her before she can.\n'Let's go for a walk.'\nHeidi stares helplessly at the Count, whose mask shows not a crack. Well. She turns to the Sarkaz.\n'Sir, you mustn't treat me so.'\n'The hell do you think you are?'\n'I'm a novelist,' Heidi huffs with attempted bluster, though her shudders give her away. 'I was just picking up a letter from a reader!'\nThe Sarkaz, paying no attention to her excuse, is busy rifling through every possible hiding place on her—and sure enough finds a letter, its words of gushing praise run by rainblots.\n'Well, you've been more cooperative than some. Come with us.' The Sarkaz gestures to the open door. 'You're not going anywhere much worse than this place, anyway.'\n'Really?'\nThat takes him aback for a moment, and then he laughs.\n'How does someone stupid as you come up with any stories worth writing down? Move!'\nHeidi again shoots a plea for help at the Count, and this time her limpid eyes sting. Reluctantly, he moves to speak.\n'Sir, if I might, you did prove Miss Heidi's innocence. Would you treat her with a broad mind?'\n'You vouch for her?'\n'I do.'\nThe Sarkaz spits on the floor.\n'Promise me all your guests are as stupid as her. Then we'll talk.'\nJust as a wave of relief passes over the ballroom, Heidi suddenly has her hat set alight. The fright gives way to screaming, and she tries to hoist it off with her cane, but gets nowhere while her ears are fastened firmly inside. As soon as it singes her hair too, she gives up and rushes out through the door.\nIn an instant, the Sarkaz become wary, but all Heidi does is stand outside in the garden, letting the downpour put out the flames atop her head.\nThe sight of it all makes the Sarkaz roar with laughter. After delivering their verdict of 'Stupid AND a scaredy-cat!', they finally leave the premises, and the shaken guests depart in befuddlement.\nAs the last one vanishes, the Count braves the rain to approach Heidi in the garden, and takes off her half-burnt hat for her.\n'To think they'd trample on a lady's dignity so... My due apologies, Madam.'\n'No, no need. What dignity does one piffling hat even have today, in the rains of Londinium?'\nIt's with some shock that the Count properly regards the rain-soaked novelist, who he thought would be in hysterics over the disgrace he had allowed her to suffer.\n'I'm no fool, and you're no coward. You gave them a distraction so <i>that lady in the red hat</i> had a chance to hide the incriminating evidence. And who better to handle the aftermath than me, no?'\nThe shock in his eyes turns to esteem.\n'Once again, my apologies, Madam. Not for anything else, but that I had underestimate you.\n'No need. I'd like to believe we have some information to share.'",
+      "typeIcon": "bar-x",
+      "uniEquipIcon": "uniequip_002_heidi",
+      "typeName1": "BAR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_heidi_1",
+        "uniequip_002_heidi_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 13,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 12,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 85,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 17,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 16,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Skill 1 is equipped, allies within range gain +7% ATK; when Skill 2 is equipped, allies within range gain +7% DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Crafty Rebel",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.07,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.07,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Skill 1 is equipped, allies within range gain +8% <@ba.talpu>(+1%)</> ATK; when Skill 2 is equipped, allies within range gain +8% <@ba.talpu>(+1%)</> DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Crafty Rebel",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 21,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 19,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Skill 1 is equipped, allies within range gain +8% ATK; when Skill 2 is equipped, allies within range gain +8% DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Crafty Rebel",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Skill 1 is equipped, allies within range gain +9% <@ba.talpu>(+1%)</> ATK; when Skill 2 is equipped, allies within range gain +9% <@ba.talpu>(+1%)</> DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Crafty Rebel",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.09,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.09,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1104,5 +1793,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

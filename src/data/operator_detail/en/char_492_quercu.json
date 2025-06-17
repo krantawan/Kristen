@@ -151,6 +151,24 @@
       "cost": 12
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "heal_scale",
+          "value": 0.75
+        }
+      ],
+      "overrideDescription": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_492_quercu#1",
@@ -632,16 +650,581 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +160",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 160,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 400,
+        "atk": 0,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Forest Sanctuary",
+          "description": "Apply 8% <$ba.protect>Sanctuary</> effect to allies within range with more than 70% HP",
+          "blackboard": {
+            "hp_ratio": 0.7,
+            "damage_resistance": 0.08
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Forest Sanctuary",
+          "description": "Apply 10% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> effect to allies within range with more than 70% HP",
+          "blackboard": {
+            "hp_ratio": 0.7,
+            "damage_resistance": 0.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Forest Sanctuary",
+          "description": "Apply 14% <$ba.protect>Sanctuary</> effect to allies within range with more than 70% HP",
+          "blackboard": {
+            "hp_ratio": 0.7,
+            "damage_resistance": 0.14
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Forest Sanctuary",
+          "description": "Apply 16% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> effect to allies within range with more than 70% HP",
+          "blackboard": {
+            "hp_ratio": 0.7,
+            "damage_resistance": 0.16
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_quercu",
       "moduleName": "Quercus's Badge",
-      "desc": "Operator Quercus has demonstrated a remarkable aptitude for providing continuous protection to allies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Abjurer responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Quercus has demonstrated a remarkable aptitude for providing continuous protection to allies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Abjurer responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_quercu",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_quercu",
       "moduleName": "Rusty Stick",
-      "desc": "20 MAR\nVia this operation, my team succeeded in establishing a contact channel out of the city. We'll continue to stay within the rioters' encirclement, scout for intel, and await the backup team as well as the results of the negotiation.\nTwo excellent soldiers gave their lives on this mission. I'm filing to have bereavement paid to their families; the forms are attached to this report.\n(They were the youngest children in the squad. I recited farewell to them, so that they may find rest in these foreign soils. I believe, for my squad, that such a ritual must be done.)\n\n04 APR\nHaving not yet received further orders, my team has been laying bait as per the original plan, and locked onto a number of core enemy personnel as a result. Files are attached. We are ready to cut at the neck.\nWe expect to spend substantially longer in combat, so consumption of medical supplies will rise too. I'll dispatch a professional from the team to reexamine our contact channel; if the situation outside is dire, or the comms line is obstructed, she can provide you with some effective aid.\n\n10 APR\nI apologize for my rashness. After this is over, I will accept disciplinary action for my failure in this operation.\nMy team carried out a breakthrough under my command. I judged from meager information that other Victorian Army units had arrived at the enclave, and planned accordingly. We were required to make an opening for the ensuing force, carrying out our duty as an advance unit. Besides that, we had a shortage of supplies, so could not continue biding our time.\nAs the outcome shows, I made a grave lapse of judgment.\nI will record the callsigns and family names of each of the deceased.\nI pray this report arrives swiftly, and that we may receive our next orders.\n\n15 APR\nWe have successfully made contact with a force of the Redsteel Guard, and learned that other friendly forces are in fact present within the city; the news greatly heartens us. However, even they could not deliver us any valid orders.\nI apologize for the blood staining this paper; I am busy treating my wounded soldiers. There is no mission to report on here; this letter is simply... a plea for help. What exactly has happened on the outside?\n\n(dateless)\nI will be writing no further reports. I have no squad anymore.\nWhy has there been no reply? Why was our mission objective fake—our information too? Why did they have to die before their time?\nTo whoever receives this report—whoever—I DO NOT CARE WHO. I will not be returning to debrief at Command. The lives of those children weigh on me. I must atone, and so must you."
+      "desc": "20 MAR\nVia this operation, my team succeeded in establishing a contact channel out of the city. We'll continue to stay within the rioters' encirclement, scout for intel, and await the backup team as well as the results of the negotiation.\nTwo excellent soldiers gave their lives on this mission. I'm filing to have bereavement paid to their families; the forms are attached to this report.\n(They were the youngest children in the squad. I recited farewell to them, so that they may find rest in these foreign soils. I believe, for my squad, that such a ritual must be done.)\n\n04 APR\nHaving not yet received further orders, my team has been laying bait as per the original plan, and locked onto a number of core enemy personnel as a result. Files are attached. We are ready to cut at the neck.\nWe expect to spend substantially longer in combat, so consumption of medical supplies will rise too. I'll dispatch a professional from the team to reexamine our contact channel; if the situation outside is dire, or the comms line is obstructed, she can provide you with some effective aid.\n\n10 APR\nI apologize for my rashness. After this is over, I will accept disciplinary action for my failure in this operation.\nMy team carried out a breakthrough under my command. I judged from meager information that other Victorian Army units had arrived at the enclave, and planned accordingly. We were required to make an opening for the ensuing force, carrying out our duty as an advance unit. Besides that, we had a shortage of supplies, so could not continue biding our time.\nAs the outcome shows, I made a grave lapse of judgment.\nI will record the callsigns and family names of each of the deceased.\nI pray this report arrives swiftly, and that we may receive our next orders.\n\n15 APR\nWe have successfully made contact with a force of the Redsteel Guard, and learned that other friendly forces are in fact present within the city; the news greatly heartens us. However, even they could not deliver us any valid orders.\nI apologize for the blood staining this paper; I am busy treating my wounded soldiers. There is no mission to report on here; this letter is simply... a plea for help. What exactly has happened on the outside?\n\n(dateless)\nI will be writing no further reports. I have no squad anymore.\nWhy has there been no reply? Why was our mission objective fake—our information too? Why did they have to die before their time?\nTo whoever receives this report—whoever—I DO NOT CARE WHO. I will not be returning to debrief at Command. The lives of those children weigh on me. I must atone, and so must you.",
+      "typeIcon": "bls-x",
+      "uniEquipIcon": "uniequip_002_quercu",
+      "typeName1": "BLS",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_quercu_1",
+        "uniequip_002_quercu_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Grants a 16% <$ba.protect>Sanctuary</> effect to all friendly units within range with more than 70% HP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Forest Sanctuary",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Grants an 18% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> effect to all friendly units within range with more than 70% HP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Forest Sanctuary",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Grants a 16% <$ba.protect>Sanctuary</> effect to all friendly units within range with more than 60% HP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Forest Sanctuary",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Grants an 18% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> effect to all friendly units within range with more than 60% HP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Forest Sanctuary",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1095,5 +1678,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

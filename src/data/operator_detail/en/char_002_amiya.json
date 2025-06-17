@@ -206,6 +206,7 @@
       "cost": 20
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_002_amiya#1",
@@ -853,36 +854,1145 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "Max HP +200",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 200,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +30",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 30,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 70,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "#",
+          "name": "？？？",
+          "description": "？？？？？",
+          "blackboard": {},
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Emotional Absorption",
+          "description": "Restores 2 extra Skill Points when attacking an enemy and 8 extra Skill Points when killing an enemy",
+          "blackboard": {
+            "amiya_t_1[atk].sp": 2,
+            "amiya_t_1[kill].sp": 8
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "1",
+          "name": "Emotional Absorption",
+          "description": "Restores 3 <@ba.talpu>(+1)</> extra Skill Points when attacking an enemy and 10 <@ba.talpu>(+2)</> extra Skill Points when killing an enemy",
+          "blackboard": {
+            "amiya_t_1[atk].sp": 3,
+            "amiya_t_1[kill].sp": 10
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_amiya",
       "moduleName": "Amiya's Badge",
-      "desc": "Amiya has demonstrated a remarkable aptitude for inflicting Arts casualties on the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Core Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Amiya has demonstrated a remarkable aptitude for inflicting Arts casualties on the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Core Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_amiya",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_amiya",
       "moduleName": "DWDB-221E",
-      "desc": "First, there are a few indistinct silhouettes. Soon, a dazzling light. Gradually, the light grows distant and rises to the sky, leaving behind bright blotches. Not long after, these points of light themselves speed far away, and all that remains is a meaningless, jet black.\nYou remember those blotches are celestial bodies, every one. You remember the home of the stars is called the cosmos.\nThen immediately, your sight abruptly grows clear. Sleek metal. A sealed room. A clear window forms your third eye—through the window, you gaze at a colossal grey sphere, and in the center of that megastructure no normal mind could comprehend, it quietly awaits its birth father...\nYou suddenly feel a kind of movement. A fluid wets your vision. You begin to seek this emotion's root. You see a child's birth. It is your child. A brand new fate, a soul entrusted... But against that yawning megastructure, how insignificant a life of such miniscule proportions it is.\nYou return to the now, and gaze at those engineering ships, big and small. You, the mathematician, quickly make a ridiculous comparison—even the smallest ship among them is thousands of times larger than an infant of mankind.\nBut you have all done it. Starting from the antiquity of antiquity, starting with fire or a hunt, you have come all the way to today.\nYou are immensely proud. By some mysterious mechanism, you feel this pride as if it is yours, upon which more information pours into your mind. You remember your own identity. You realize that you are the designer of that artificial satellite. And after such a long journey in subspace, you finally greet the moment of its completion with your very own eyes.\nHonor, wealth, family, ideals... such vocabulary flickers elusive, hovers, dissipates, and in the end there is left one, and only one...\n...\n...\n'Future...'\n'What? What did you see?'\n'...'\n'Hey, respond! Hey!'\nAll present lapse into silence. A young woman to the side wells with urgency.\n'Examine his brain! I told you we shouldn't have been so hasty! We only just set up protocol channels to database comms! This is only our first recorded successful transmission!'\n'...I'm sorry.'\n'Wait. What are you saying?'\n'I mean... I never used to be too fond of you planetary engineers. I always felt your work was all style, no substance... but I saw it. I saw your past, I shared in your past. I felt your emotions. It was... like nothing else.'\n'You...'\n'Yes. I felt you reminisce, like an ordinary father, about your children and your home. I saw that artificial moon, astonishing as anything. And the sensation, it's beyond all imagination... We've done it.'\nOnce again, everyone is silent.\n'So...' The one to break the silence is a fairly young, red-haired lady. 'How will it record our epoch, and the epochs to come?'\n'As an omnibus of idiocy, I assume,' someone responds thoughtlessly. 'We've had quite enough ourselves, but from here on out, none of them will ever find another excuse to embellish history.'\n'Have a little more faith in mankind, friends,' says another, elderly, who simply sits down and shuffles herself into a comfortable position. 'We've drawn enough lessons already. Our progeny won't be repeating our blunders.'\nSome chuckle bitterly. It is, of course, no more than a beautiful wish.\n'...So we've definitely succeeded? Project DWDB-221E has borne fruit so quickly... My god.'\nWith no warning, a curly-haired person springs to his feet.\n'Are we always going to call it DWDB-221E? I know, project numbering follows regulation format. Cold, cold nomenclature, just like with AMa... But our work <i>deserves</i> a more dignified official name!' Once again, he throws out the proposal he hadn't relented on for more than half the year now. 'I want to call it... 'Destiny'! Or maybe 'Truth of the World'?'\nThe ensuing silence is now an awkward one.\n'How about the 'Black Crown'? In terms of an intuitive visual impression of parts of its appearance, it does resemble a crown, after all.'\n'Eh, not a fan. That one sounds like some boring historical drama.'\n'In that case...'\nThe elderly woman interrupts her subordinates before they embroil themselves in yet another endless dispute. She gazes out at the stars beyond the window. Some unwelcome information is arriving, but humanity will ultimately overcome this hardship, just as it has countless times before.\n'I have a proposal...'\n'We should call it—'Civilight Eterna'.'"
+      "desc": "First, there are a few indistinct silhouettes. Soon, a dazzling light. Gradually, the light grows distant and rises to the sky, leaving behind bright blotches. Not long after, these points of light themselves speed far away, and all that remains is a meaningless, jet black.\nYou remember those blotches are celestial bodies, every one. You remember the home of the stars is called the cosmos.\nThen immediately, your sight abruptly grows clear. Sleek metal. A sealed room. A clear window forms your third eye—through the window, you gaze at a colossal grey sphere, and in the center of that megastructure no normal mind could comprehend, it quietly awaits its birth father...\nYou suddenly feel a kind of movement. A fluid wets your vision. You begin to seek this emotion's root. You see a child's birth. It is your child. A brand new fate, a soul entrusted... But against that yawning megastructure, how insignificant a life of such miniscule proportions it is.\nYou return to the now, and gaze at those engineering ships, big and small. You, the mathematician, quickly make a ridiculous comparison—even the smallest ship among them is thousands of times larger than an infant of mankind.\nBut you have all done it. Starting from the antiquity of antiquity, starting with fire or a hunt, you have come all the way to today.\nYou are immensely proud. By some mysterious mechanism, you feel this pride as if it is yours, upon which more information pours into your mind. You remember your own identity. You realize that you are the designer of that artificial satellite. And after such a long journey in subspace, you finally greet the moment of its completion with your very own eyes.\nHonor, wealth, family, ideals... such vocabulary flickers elusive, hovers, dissipates, and in the end there is left one, and only one...\n...\n...\n'Future...'\n'What? What did you see?'\n'...'\n'Hey, respond! Hey!'\nAll present lapse into silence. A young woman to the side wells with urgency.\n'Examine his brain! I told you we shouldn't have been so hasty! We only just set up protocol channels to database comms! This is only our first recorded successful transmission!'\n'...I'm sorry.'\n'Wait. What are you saying?'\n'I mean... I never used to be too fond of you planetary engineers. I always felt your work was all style, no substance... but I saw it. I saw your past, I shared in your past. I felt your emotions. It was... like nothing else.'\n'You...'\n'Yes. I felt you reminisce, like an ordinary father, about your children and your home. I saw that artificial moon, astonishing as anything. And the sensation, it's beyond all imagination... We've done it.'\nOnce again, everyone is silent.\n'So...' The one to break the silence is a fairly young, red-haired lady. 'How will it record our epoch, and the epochs to come?'\n'As an omnibus of idiocy, I assume,' someone responds thoughtlessly. 'We've had quite enough ourselves, but from here on out, none of them will ever find another excuse to embellish history.'\n'Have a little more faith in mankind, friends,' says another, elderly, who simply sits down and shuffles herself into a comfortable position. 'We've drawn enough lessons already. Our progeny won't be repeating our blunders.'\nSome chuckle bitterly. It is, of course, no more than a beautiful wish.\n'...So we've definitely succeeded? Project DWDB-221E has borne fruit so quickly... My god.'\nWith no warning, a curly-haired person springs to his feet.\n'Are we always going to call it DWDB-221E? I know, project numbering follows regulation format. Cold, cold nomenclature, just like with AMa... But our work <i>deserves</i> a more dignified official name!' Once again, he throws out the proposal he hadn't relented on for more than half the year now. 'I want to call it... 'Destiny'! Or maybe 'Truth of the World'?'\nThe ensuing silence is now an awkward one.\n'How about the 'Black Crown'? In terms of an intuitive visual impression of parts of its appearance, it does resemble a crown, after all.'\n'Eh, not a fan. That one sounds like some boring historical drama.'\n'In that case...'\nThe elderly woman interrupts her subordinates before they embroil themselves in yet another endless dispute. She gazes out at the stars beyond the window. Some unwelcome information is arriving, but humanity will ultimately overcome this hardship, just as it has countless times before.\n'I have a proposal...'\n'We should call it—'Civilight Eterna'.'",
+      "typeIcon": "ccr-y",
+      "uniEquipIcon": "uniequip_002_amiya",
+      "typeName1": "CCR",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_amiya_1",
+        "uniequip_002_amiya_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 3 extra Skill Points when attacking an enemy and 8 extra Skill Points when killing an enemy",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Emotional Absorption",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "amiya_t_1[atk].sp",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "amiya_t_1[kill].sp",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 4 <@ba.talpu>(+1)</> extra Skill Points when attacking an enemy and 10 <@ba.talpu>(+2)</> extra Skill Points when killing an enemy",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 5,
+                  "prefabKey": "1",
+                  "name": "Emotional Absorption",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "amiya_t_1[atk].sp",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "amiya_t_1[kill].sp",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 3 extra Skill Points when attacking an enemy and 10 extra Skill Points when killing an enemy",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Emotional Absorption",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "amiya_t_1[atk].sp",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "amiya_t_1[kill].sp",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 4 <@ba.talpu>(+1)</> extra Skill Points when attacking an enemy and 12 <@ba.talpu>(+2)</> extra Skill Points when killing an enemy",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 5,
+                  "prefabKey": "1",
+                  "name": "Emotional Absorption",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "amiya_t_1[atk].sp",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "amiya_t_1[kill].sp",
+                      "value": 12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_001_amiya3",
       "moduleName": "Amiya's Badge (Medic)",
-      "desc": "Amiya has found power in the confrontation of great sorrow,\nThe emotions borne of Theresa forming the staff by which she casts.\nIn light of her profound display of empathetic therapeutic capacity toward allies, and rendering unto darkest depths of enemies in her sincere grief,\nProcedural evaluation has acceded her due qualification to be appointed as a Medic Operator.\nIn memorial whereof,\nThis badge is hereby conferred upon her."
+      "desc": "Amiya has found power in the confrontation of great sorrow,\nThe emotions borne of Theresa forming the staff by which she casts.\nIn light of her profound display of empathetic therapeutic capacity toward allies, and rendering unto darkest depths of enemies in her sincere grief,\nProcedural evaluation has acceded her due qualification to be appointed as a Medic Operator.\nIn memorial whereof,\nThis badge is hereby conferred upon her.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_amiya3",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_amiya3",
       "moduleName": "The Dress Handpicked by Theresa",
-      "desc": "Kal'tsit pauses at the door of the command center.\n'Dr. Kal'tsit?' The girl inside takes notice.\nShe lifts her head in an attempt to catch Kal'tsit's gaze. However, stacks of files sprawled across the conference table obscures most of her face, revealing only the tips of a pair of fluffy ears.\n'The leader of the Leithanian convoy did not object to our terms.' Kal'tsit listens as she moves towards the girl, gathering the scattered files. 'That doesn't mean they'll agree to all of them.'\n'Right. While they were polite during the negotiations, the way they looked at me felt... cold and menacing.' The girl winces, as if still feeling the sting of their sugar-coated animosity.\n'Try not to—'\n'—be influenced by the emotions of others, especially their negative ones. I understand.' The girl's smile is reassuring. 'Don't worry. I've already put them under the surveillance of Mantra's squad. Logos assured me that if they harbored any ill intentions towards Rhodes Island, their hands would be frozen to their staffs before they could even cast.'\nLogos likely tempered his rhetoric when describing the devastating effects of his Arts to protect this young girl. It has become a common practice among the Operators, who adjust to her leadership while subconsciously taking her as a child who needs protection. Yet anyone who assumes that eleven-year-old Amiya needs protection is soon taken aback by her shrewdness and meticulous nature.\nYoung Amiya is growing quickly. She has already outgrown her bespoke dress from three months ago, and the rate at which her mind expands is even more remarkable. There were times when Kal'tsit felt that each day, the Amiya she saw was slightly different from the day before. She wasn't sure if it was merely a hallucination or if the influence of Civilight Eterna on Amiya hadn't been completely subdued.\n'Dr. Kal'tsit...' Amiya's voice softened, like a pin dropping in a silent room. 'I've been dreaming again.'\n'What did you dream about?'\n'I dreamed of... a person. She sat next to me, held my hand, and spoke of many things. Some were from my past, while others seemed like experiences yet to come.'\n'The future?'\n'Umm... Maybe. She told me that in a massive nomadic city with steel high walls, a terrible war will break out. Many, especially the Sarkaz, will perish, and black rocks will spread everywhere.'\n'And as she spoke of these things, she was...'\n'She was so very upset, but she was strong and didn't keep crying. She said she would never give up and that the future would become better.'\nKal'tsit extends her hand to the little girl. In the past year, the deceased have not been a topic commonly discussed. Perhaps Amiya still needed comfort to cope with her losses.\n'Amiya, it is only natural to miss those we've lost. You need not suppress your feelings for Theresa.'\n'Well... I do miss Theresa a whole lot, but it wasn't her in my dream.' Amiya's eyes widen. 'Dr. Kal'tsit, I think... the person in my dream was me.'\nKal'tsit is slightly taken aback by this revelation, but before she can respond, Amiya has already rushed forward and embraced her.\n'All this talking has made me hungry.' The young girl shakes Kal'tsit's hands, her eyes shining with a precious look. She begins to drag Kal'tsit along, her voice bubbling with excitement. 'Dr. Kal'tsit, won't you keep me company?'\n'What should we get? Baked beans sound nice. Mr. Scout said that adding carrots would make them sweeter...'\n'Brr... Ursus sure is cold. Do you think those who sit around all day feel cold too?'\n'Say, Dr. Kal'tsit, do you ever... Dr. Kal'tsit...'\nKal'tsit holds onto Amiya's hand, allowing herself to be led. As Amiya's cheerful chatter fills the air, Kal'tsit finds herself lost in thought—\nClosure has done an impressive job with the landship. The lights in this corridor are so much brighter now."
+      "desc": "Kal'tsit pauses at the door of the command center.\n'Dr. Kal'tsit?' The girl inside takes notice.\nShe lifts her head in an attempt to catch Kal'tsit's gaze. However, stacks of files sprawled across the conference table obscures most of her face, revealing only the tips of a pair of fluffy ears.\n'The leader of the Leithanian convoy did not object to our terms.' Kal'tsit listens as she moves towards the girl, gathering the scattered files. 'That doesn't mean they'll agree to all of them.'\n'Right. While they were polite during the negotiations, the way they looked at me felt... cold and menacing.' The girl winces, as if still feeling the sting of their sugar-coated animosity.\n'Try not to—'\n'—be influenced by the emotions of others, especially their negative ones. I understand.' The girl's smile is reassuring. 'Don't worry. I've already put them under the surveillance of Mantra's squad. Logos assured me that if they harbored any ill intentions towards Rhodes Island, their hands would be frozen to their staffs before they could even cast.'\nLogos likely tempered his rhetoric when describing the devastating effects of his Arts to protect this young girl. It has become a common practice among the Operators, who adjust to her leadership while subconsciously taking her as a child who needs protection. Yet anyone who assumes that eleven-year-old Amiya needs protection is soon taken aback by her shrewdness and meticulous nature.\nYoung Amiya is growing quickly. She has already outgrown her bespoke dress from three months ago, and the rate at which her mind expands is even more remarkable. There were times when Kal'tsit felt that each day, the Amiya she saw was slightly different from the day before. She wasn't sure if it was merely a hallucination or if the influence of Civilight Eterna on Amiya hadn't been completely subdued.\n'Dr. Kal'tsit...' Amiya's voice softened, like a pin dropping in a silent room. 'I've been dreaming again.'\n'What did you dream about?'\n'I dreamed of... a person. She sat next to me, held my hand, and spoke of many things. Some were from my past, while others seemed like experiences yet to come.'\n'The future?'\n'Umm... Maybe. She told me that in a massive nomadic city with steel high walls, a terrible war will break out. Many, especially the Sarkaz, will perish, and black rocks will spread everywhere.'\n'And as she spoke of these things, she was...'\n'She was so very upset, but she was strong and didn't keep crying. She said she would never give up and that the future would become better.'\nKal'tsit extends her hand to the little girl. In the past year, the deceased have not been a topic commonly discussed. Perhaps Amiya still needed comfort to cope with her losses.\n'Amiya, it is only natural to miss those we've lost. You need not suppress your feelings for Theresa.'\n'Well... I do miss Theresa a whole lot, but it wasn't her in my dream.' Amiya's eyes widen. 'Dr. Kal'tsit, I think... the person in my dream was me.'\nKal'tsit is slightly taken aback by this revelation, but before she can respond, Amiya has already rushed forward and embraced her.\n'All this talking has made me hungry.' The young girl shakes Kal'tsit's hands, her eyes shining with a precious look. She begins to drag Kal'tsit along, her voice bubbling with excitement. 'Dr. Kal'tsit, won't you keep me company?'\n'What should we get? Baked beans sound nice. Mr. Scout said that adding carrots would make them sweeter...'\n'Brr... Ursus sure is cold. Do you think those who sit around all day feel cold too?'\n'Say, Dr. Kal'tsit, do you ever... Dr. Kal'tsit...'\nKal'tsit holds onto Amiya's hand, allowing herself to be led. As Amiya's cheerful chatter fills the air, Kal'tsit finds herself lost in thought—\nClosure has done an impressive job with the landship. The lights in this corridor are so much brighter now.",
+      "typeIcon": "inc-x",
+      "uniEquipIcon": "uniequip_002_amiya3",
+      "typeName1": "INC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_amiya3_1",
+        "uniequip_002_amiya3_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deployed, all allied units have max HP +9%, and while skill is active, all allied units recover 3% of max HP per second",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Prayer of Sincerity",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.09,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.03,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deployed, all allied units have max HP +10%, and while skill is active, all allied units recover 3.5% of max HP per second",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Prayer of Sincerity",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.035,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_001_amiya2",
       "moduleName": "Amiya's Badge (Guard)",
-      "desc": "Amiya has found power in the confrontation of great wrath.\nThe anger borne of the countless oppressed coalescing in the longsword by which she cuts through Arts.\nIn light of this twinning, of the ire of chaos that burns as a cleansing wildfire and lucid fury that sunders hatred as a vorpal edge, procedural evaluation has acceded to her due qualification to be appointed as a Guard Operator.\nIn memorial whereof,\nThis badge is hereby conferred upon her."
+      "desc": "Amiya has found power in the confrontation of great wrath.\nThe anger borne of the countless oppressed coalescing in the longsword by which she cuts through Arts.\nIn light of this twinning, of the ire of chaos that burns as a cleansing wildfire and lucid fury that sunders hatred as a vorpal edge, procedural evaluation has acceded to her due qualification to be appointed as a Guard Operator.\nIn memorial whereof,\nThis badge is hereby conferred upon her.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_amiya2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_amiya2",
       "moduleName": "Anger to be Tuned",
-      "desc": "Amiya reached for her pajamas, then pulled back, remembering there was one last thing to do before bed.\nShe sat back at her desk, gave her pen a shake—it hadn't been writing too well lately—and pulled out a blank piece of card.\nDamaged Article No.: 037\nDamaged Article Name: Violin\nSo she wrote. She was meant to describe it further, but it was just too ordinary. Its wood was bottletree timber, the kind you'd see everywhere in Rim Billiton. It was her sixth birthday present. Her mom used to take her hand in hand and teach her how to play, along with all the funniest rhymes for how to keep her position straight, not that she could really remember them now. The only words of advice she could still recall were: playing the violin isn't about bowing whatever way the sheet tells you to. It's about painting your own feelings onto the strings.\nAnd Amiya had tried, but the violin wouldn't sing with clear melodic tones, just shrieks and wails. One string violently twisted and flinched, like it was cowering in a customs inspection line, hiding with apprehension as deep as possible in the crowd. As if doing that would somehow escape the contrast-scanning gate at the queue's head and the shrill alarms it would inevitably set off. Another string began to shrink away as fast as it could, like it'd been shoved headfirst into a team of miners, left to shiver and curl up into a ball. Anything to conserve what little heat was left, to get just that tiny bit further from the bloodstained whips. The third string shook like it was going mad as active Originium dust glittered in the air, compounding the abandoned warehouse's smell of blood and rot to form a stench that no human could possibly bear. The final string sat amidst sharp animalistic cries and screamed why? why? why? And no string could answer that question. Coming back to her senses, each of the violin's strings had snapped under tension, and its body had been scorched a cerulean-black.\nAmiya tied the filled-out card around the violin's neck, and laid the broken instrument into the box with the greatest care. Many other things were in there too—the Doctor had caught an Originium Slug while out on a trip and fashioned its shell into this whistle, and Miss Theresa had knitted this hat that made such a funny sound when you pulled on it, and Dr. Kal'tsit had personally engraved this monitor band with animal motifs for her... They all carried those cerulean-black scorch marks, and now they laid in this box, waiting until they saw the light of day again.\nWhen? <i>When the flames of wrath across the land have quelled,</i> Amiya thought subconsciously, <i>when the nameless wrath roiling in her chest is no longer there to burn them.</i> But when would that be? Would she be there to see it? She had no idea.\nJust before she closed the lid, she caught sight of a tiny little dent made in the violin's side. Not a scorch mark, it was—she remembered—it was made just after she'd got it. She had thrown the bow at the violin, because she could never play it in tune. She left that mark out of anger.\nAmiya laughed. The wrath roiling in her chest might be nameless and senseless, but this little spark of almost petulant rage was one she was all too familiar with. It was one she could understand, one she could keep in check.\nShe saw her little self, puffing her chest out and telling her mom, I know what anger is now. It's when you can't figure out why things never go the way you picture them. I can hear all the music notes in my head, but all I can do is make a silly mess out of it. So she would try and try again, until she'd never play a bum note again, until she'd never get angry about her own clumsiness again. Little Amiya promised her mom, she'd never smack her bow on anything again, because it wouldn't solve a thing.\nAnd so, Amiya took the ravaged violin out of the box. Maybe tomorrow, or the day after, she'd mend it up, and then try to play it once more."
+      "desc": "Amiya reached for her pajamas, then pulled back, remembering there was one last thing to do before bed.\nShe sat back at her desk, gave her pen a shake—it hadn't been writing too well lately—and pulled out a blank piece of card.\nDamaged Article No.: 037\nDamaged Article Name: Violin\nSo she wrote. She was meant to describe it further, but it was just too ordinary. Its wood was bottletree timber, the kind you'd see everywhere in Rim Billiton. It was her sixth birthday present. Her mom used to take her hand in hand and teach her how to play, along with all the funniest rhymes for how to keep her position straight, not that she could really remember them now. The only words of advice she could still recall were: playing the violin isn't about bowing whatever way the sheet tells you to. It's about painting your own feelings onto the strings.\nAnd Amiya had tried, but the violin wouldn't sing with clear melodic tones, just shrieks and wails. One string violently twisted and flinched, like it was cowering in a customs inspection line, hiding with apprehension as deep as possible in the crowd. As if doing that would somehow escape the contrast-scanning gate at the queue's head and the shrill alarms it would inevitably set off. Another string began to shrink away as fast as it could, like it'd been shoved headfirst into a team of miners, left to shiver and curl up into a ball. Anything to conserve what little heat was left, to get just that tiny bit further from the bloodstained whips. The third string shook like it was going mad as active Originium dust glittered in the air, compounding the abandoned warehouse's smell of blood and rot to form a stench that no human could possibly bear. The final string sat amidst sharp animalistic cries and screamed why? why? why? And no string could answer that question. Coming back to her senses, each of the violin's strings had snapped under tension, and its body had been scorched a cerulean-black.\nAmiya tied the filled-out card around the violin's neck, and laid the broken instrument into the box with the greatest care. Many other things were in there too—the Doctor had caught an Originium Slug while out on a trip and fashioned its shell into this whistle, and Miss Theresa had knitted this hat that made such a funny sound when you pulled on it, and Dr. Kal'tsit had personally engraved this monitor band with animal motifs for her... They all carried those cerulean-black scorch marks, and now they laid in this box, waiting until they saw the light of day again.\nWhen? <i>When the flames of wrath across the land have quelled,</i> Amiya thought subconsciously, <i>when the nameless wrath roiling in her chest is no longer there to burn them.</i> But when would that be? Would she be there to see it? She had no idea.\nJust before she closed the lid, she caught sight of a tiny little dent made in the violin's side. Not a scorch mark, it was—she remembered—it was made just after she'd got it. She had thrown the bow at the violin, because she could never play it in tune. She left that mark out of anger.\nAmiya laughed. The wrath roiling in her chest might be nameless and senseless, but this little spark of almost petulant rage was one she was all too familiar with. It was one she could understand, one she could keep in check.\nShe saw her little self, puffing her chest out and telling her mom, I know what anger is now. It's when you can't figure out why things never go the way you picture them. I can hear all the music notes in my head, but all I can do is make a silly mess out of it. So she would try and try again, until she'd never play a bum note again, until she'd never get angry about her own clumsiness again. Little Amiya promised her mom, she'd never smack her bow on anything again, because it wouldn't solve a thing.\nAnd so, Amiya took the ravaged violin out of the box. Maybe tomorrow, or the day after, she'd mend it up, and then try to play it once more.",
+      "typeIcon": "aft-x",
+      "uniEquipIcon": "uniequip_002_amiya2",
+      "typeName1": "AFT",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_amiya2_1",
+        "uniequip_002_amiya2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 26,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "All allied units on the battlefield gain +8% ATK and DEF, doubled when this unit's skill is active",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Wrathful Cerulean Flame",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "All allied units on the battlefield gain +9% ATK and DEF, doubled when this unit's skill is active",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Wrathful Cerulean Flame",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.09,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.09,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1336,5 +2446,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

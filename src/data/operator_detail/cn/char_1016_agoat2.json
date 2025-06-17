@@ -168,6 +168,28 @@
       "cost": 16
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "ep_heal_ratio",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1016_agoat2#1",
@@ -737,16 +759,636 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 45,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "氤氲",
+          "description": "普通治疗使目标每秒额外受到一次治疗量和<$ba.dt.element>元素损伤</>回复量为8%的增益治疗，持续4秒（最多叠加3层）",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "氤氲",
+          "description": "普通治疗使目标每秒额外受到一次治疗量和<$ba.dt.element>元素损伤</>回复量为10%的增益治疗，持续6秒（最多叠加3层）",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "火山灰疗愈",
+          "description": "攻击范围内的友方单位生命上限+6%，且受到的<$ba.dt.element>元素损伤</>降低12%",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.06,
+              "valueStr": null
+            },
+            {
+              "key": "ep_damage_resistance",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "火山灰疗愈",
+          "description": "攻击范围内的友方单位生命上限+8%<@ba.talpu>（+2%）</>，且受到的<$ba.dt.element>元素损伤</>降低12%",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "ep_damage_resistance",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_agoat2",
       "moduleName": "纯烬艾雅法拉证章",
-      "desc": "干员纯烬艾雅法拉擅长大范围治疗并为干员恢复元素损伤\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使行医职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员纯烬艾雅法拉擅长大范围治疗并为干员恢复元素损伤\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使行医职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_agoat2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_agoat2",
       "moduleName": "想要留住的声音",
-      "desc": "【录音内容：火山熔岩的涌动声】\n命名：火山的呼吸\n附注：\n喷发止息后，我又和凯勒老师一起登上了汐斯塔火山，进行最后一次数据采集。\n在我们录下这一段熔岩翻涌的声音之后，凯勒老师忽然提议一起在山顶上坐一会儿。\n望着已成灰白的旧汐斯塔，老师的眼眶有些湿润。她提起火山博物馆的未来，还提起自己可能要推迟的退休计划，我知道，她也希望我未来能常来汐斯塔——不仅仅是为了火山研究。\n\n【录音内容：乐声与歌声】\n命名：在蛋糕店唱歌了\n附注：\n很久没有回去了。从那时起，我便觉得这座小城停了下来，好像一切都不再有变化。\n我意外发现妈妈之前很喜欢的那家蛋糕店整修完毕，重新开业了，有很多乐师在院子里即兴演奏。\n那天，我听到了很熟悉的旋律，就凑近去听，没想到竟然被歌手先生拉去跟着一起唱！唉，可惜我不记得歌词了，也听不太清大家的发音，只能跟着哼哼......我应该没有走调吧？\n\n【录音内容：一段学术讨论】\n命名：大学绿地上的研讨会\n附注：\n我带着汐斯塔火山的观测资料回到了威廉大学，偶遇了卡恩前辈和其他学者。卡恩前辈看上去有些不好意思，我试图告诉他不要在意，可他好像还是很拘束。\n好在简单的寒暄过后，话题还是很快转到火山研究上了，卡恩前辈也终于放松下来。\n我们聊得很愉快，完全没有意识到这里不是一间教室、实验室或会议室，而是大学绿地上的一条小路。\n真好啊。\n\n【录音内容：童年影像的翻录录音】\n命名：我还记得那时的愿望\n附注：\n离开了大学，我顺道回到了家里。\n我换了新窗帘，清理了一些不再需要的旧物，还意外翻到了一张小时候的录像光碟。可惜绝大部分影像内容都失真了，幸好声音没有损坏，我才能把它重新录在这个录音带里。\n我听到爸爸妈妈在给我唱生日歌，让我许一个生日愿望。录像里我当然没有说出口，但我现在还记得那时的愿望——\n现在的我，已经在实现愿望的路上啦。\n\n【录音内容：朋友们的欢笑】\n命名：大家为我举办了欢迎会！\n附注：\n将家中一切安顿妥当后，我回舰做定期体检。很久没回罗德岛，没想到大家为我举办了欢迎会。\n普罗旺斯姐姐和安洁莉娜小姐放礼花筒时出了点小差错，碰倒了堆起来的布偶山，然后小羊们不知道从哪里窜了出来，场面突然变得特别混乱......但我们都笑得很开心。\n真希望与大家相处的日子，能再久一点呀。\n\n【录音内容：暂无】\n命名：暂未命名\n附注：\n为下一次实地考察留作备用。\n若有机会，我还想再录更多——熔岩声，风雨声，还有身边人的声音。"
+      "desc": "【录音内容：火山熔岩的涌动声】\n命名：火山的呼吸\n附注：\n喷发止息后，我又和凯勒老师一起登上了汐斯塔火山，进行最后一次数据采集。\n在我们录下这一段熔岩翻涌的声音之后，凯勒老师忽然提议一起在山顶上坐一会儿。\n望着已成灰白的旧汐斯塔，老师的眼眶有些湿润。她提起火山博物馆的未来，还提起自己可能要推迟的退休计划，我知道，她也希望我未来能常来汐斯塔——不仅仅是为了火山研究。\n\n【录音内容：乐声与歌声】\n命名：在蛋糕店唱歌了\n附注：\n很久没有回去了。从那时起，我便觉得这座小城停了下来，好像一切都不再有变化。\n我意外发现妈妈之前很喜欢的那家蛋糕店整修完毕，重新开业了，有很多乐师在院子里即兴演奏。\n那天，我听到了很熟悉的旋律，就凑近去听，没想到竟然被歌手先生拉去跟着一起唱！唉，可惜我不记得歌词了，也听不太清大家的发音，只能跟着哼哼......我应该没有走调吧？\n\n【录音内容：一段学术讨论】\n命名：大学绿地上的研讨会\n附注：\n我带着汐斯塔火山的观测资料回到了威廉大学，偶遇了卡恩前辈和其他学者。卡恩前辈看上去有些不好意思，我试图告诉他不要在意，可他好像还是很拘束。\n好在简单的寒暄过后，话题还是很快转到火山研究上了，卡恩前辈也终于放松下来。\n我们聊得很愉快，完全没有意识到这里不是一间教室、实验室或会议室，而是大学绿地上的一条小路。\n真好啊。\n\n【录音内容：童年影像的翻录录音】\n命名：我还记得那时的愿望\n附注：\n离开了大学，我顺道回到了家里。\n我换了新窗帘，清理了一些不再需要的旧物，还意外翻到了一张小时候的录像光碟。可惜绝大部分影像内容都失真了，幸好声音没有损坏，我才能把它重新录在这个录音带里。\n我听到爸爸妈妈在给我唱生日歌，让我许一个生日愿望。录像里我当然没有说出口，但我现在还记得那时的愿望——\n现在的我，已经在实现愿望的路上啦。\n\n【录音内容：朋友们的欢笑】\n命名：大家为我举办了欢迎会！\n附注：\n将家中一切安顿妥当后，我回舰做定期体检。很久没回罗德岛，没想到大家为我举办了欢迎会。\n普罗旺斯姐姐和安洁莉娜小姐放礼花筒时出了点小差错，碰倒了堆起来的布偶山，然后小羊们不知道从哪里窜了出来，场面突然变得特别混乱......但我们都笑得很开心。\n真希望与大家相处的日子，能再久一点呀。\n\n【录音内容：暂无】\n命名：暂未命名\n附注：\n为下一次实地考察留作备用。\n若有机会，我还想再录更多——熔岩声，风雨声，还有身边人的声音。",
+      "typeIcon": "wdm-x",
+      "uniEquipIcon": "uniequip_002_agoat2",
+      "typeName1": "WDM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_agoat2_1",
+        "uniequip_002_agoat2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 36,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内的友方单位生命上限+6%，且受到的<$ba.dt.element>元素损伤</>降低14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "火山灰疗愈",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.06,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内的友方单位生命上限+8%<@ba.talpu>（+2%）</>，且受到的<$ba.dt.element>元素损伤</>降低14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "火山灰疗愈",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 44,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内的友方单位生命上限+8%，且受到的<$ba.dt.element>元素损伤</>降低14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "火山灰疗愈",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内的友方单位生命上限+10%<@ba.talpu>（+2%）</>，且受到的<$ba.dt.element>元素损伤</>降低14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "火山灰疗愈",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1208,5 +1850,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

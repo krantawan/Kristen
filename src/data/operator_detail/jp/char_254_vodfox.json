@@ -150,6 +150,7 @@
       "cost": 12
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_254_vodfox#1",
@@ -620,16 +621,625 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "術耐性+8",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAGIC_RESISTANCE",
+              "formulaItem": "ADDITION",
+              "value": 8,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 65,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "潰敗への誘い",
+          "description": "攻撃範囲内のHPが40％未満の敵に10%の<$ba.fragile>脆弱</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "潰敗への誘い",
+          "description": "攻撃範囲内のHPが40％未満の敵に13%<@ba.talpu>（+3%）</>の<$ba.fragile>脆弱</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.13,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "潰敗への誘い",
+          "description": "攻撃範囲内のHPが40％未満の敵に20%の<$ba.fragile>脆弱</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "潰敗への誘い",
+          "description": "攻撃範囲内のHPが40％未満の敵に23%<@ba.talpu>（+3%）</>の<$ba.fragile>脆弱</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.23,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "潰敗への誘い",
+          "description": "攻撃範囲内のHPが40％未満の敵に30%の<$ba.fragile>脆弱</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "潰敗への誘い",
+          "description": "攻撃範囲内のHPが40％未満の敵に33%<@ba.talpu>（+3%）</>の<$ba.fragile>脆弱</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.33,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_vodfox",
       "moduleName": "シャマレの記章",
-      "desc": "シャマレは呪いを操って敵を弱らせることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、呪詛師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "シャマレは呪いを操って敵を弱らせることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、呪詛師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_vodfox",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_vodfox",
       "moduleName": "布製のリンゴ",
-      "desc": "「この子、リンゴが欲しいんだって。」\n「聞こえないの？一つだけで良いからリンゴが欲しいんだって。」\n気に留める者は誰もいなかった。\n彼女は伸ばされた腕を見やった。痩せこけ、血色のない不健康な肌の色をしていたが、その持ち主は彼女とさほど変わらない年齢の女の子だった。ちょうどリンゴが一つ乗るくらいの大きさの手のひらを、握ったり開いたりしている。\n周囲の人々が女の子に向ける感情を、彼女ははっきりと理解できた。普段彼女に向けられる感情を不安や恐怖と呼ぶのならば、女の子に向けられている感情は無関心であった。より正確に言うと、そこには僅かばかりの嫌悪感が入り混じっており、その人間の形をした身体は最初から自分たちとは別の生き物だといわんばかりだった。\n「アンタ、リンゴを食べたことあるの？」彼女からの問いかけに、女の子は首を横に振った。\n彼女もリンゴを食べる機会はあまりなかったが、そのおいしさは知っていた。使用人がごく稀に買ってきて、彼女に近づかないように入り口へと置いていくことがあるからだ。\n一方で、この女の子はひょっとすると、リンゴを遠くから見たことがあるだけか、あるいは通行人の会話の中から漏れ聞いたことがあるだけなのかもしれない。\n彼女は少し考え込んでから、同行しながらもまるで近付いてこようとしない使用人のほうを見た。そして使用人に近づくと、勇気を振り絞ってこう告げた。\n「アタシ……リンゴが欲しいんだけど。」\n脅すわけでも呪うわけでもなく、ただほかの人がするのと同じように、自分の思いをそのまま伝えてみた。\nしかし使用人は手を震わせながら目を見開くと、叫び声を上げて一目散に逃げていってしまった。\n\nその数日後、町では「島の少女がリンゴを呪いの道具にしたらしい」という噂が出回り始めた。ロマーノ家の九十になるおばあちゃんが突然病に伏せったのも、ブチェラッティ家の長女がお嫁に行けないのも、すべてその悪辣な呪いのせいらしいと騒ぎになった。町民たちは呪いに満ちた島へとリンゴが届けられないよう、リンゴは元より、形の似たものまですべてを隠すようになった。\n彼女は長い間待ち続けたが、リンゴが届くことはなかった。\nそしてリンゴが消えてしまったことで、自分は永遠にあの人たちと同じにはなれないのだと理解した。\n彼女はみんなとは違うのだ。\n「アンタたちなんて……悪霊に呪われてしまえ……」\nある日、屋敷の使用人が掃除中、布で作られたリンゴを見つけた。それには釘が深く打ち込まれていた。\n使用人は先日買ったリンゴと最近絶え間なく続く頭痛を結びつけ、冷や汗で服を濡らした。\nそうして、屋敷の中で次々と布製のリンゴが見つかるようになると、ある恐ろしい噂が町中に広まった。\n「リンゴを持つ者には呪いが降りかかる。」\nたちまち町の人々はみんなリンゴを捨て始めた。箱一杯のリンゴが湖に沈められ、食べ頃に熟したリンゴが道ばたに投げ捨てられた。さらには町の名前を「リンゴなき町」に改名しようという意見まで挙がり、満場一致で可決された。\nある真っ暗な夜、彼女は一人で湖の畔までやってくるとそこに流れ着いたリンゴを拾った。一口かじると、甘くみずみずしい果汁が喉に流れ込んできた。\nその日の眠りの中、彼女は久しぶりに素敵な夢を見た。道ばたに佇む女の子が真っ赤に熟れたリンゴを頬張る夢だった。"
+      "desc": "「この子、リンゴが欲しいんだって。」\n「聞こえないの？一つだけで良いからリンゴが欲しいんだって。」\n気に留める者は誰もいなかった。\n彼女は伸ばされた腕を見やった。痩せこけ、血色のない不健康な肌の色をしていたが、その持ち主は彼女とさほど変わらない年齢の女の子だった。ちょうどリンゴが一つ乗るくらいの大きさの手のひらを、握ったり開いたりしている。\n周囲の人々が女の子に向ける感情を、彼女ははっきりと理解できた。普段彼女に向けられる感情を不安や恐怖と呼ぶのならば、女の子に向けられている感情は無関心であった。より正確に言うと、そこには僅かばかりの嫌悪感が入り混じっており、その人間の形をした身体は最初から自分たちとは別の生き物だといわんばかりだった。\n「アンタ、リンゴを食べたことあるの？」彼女からの問いかけに、女の子は首を横に振った。\n彼女もリンゴを食べる機会はあまりなかったが、そのおいしさは知っていた。使用人がごく稀に買ってきて、彼女に近づかないように入り口へと置いていくことがあるからだ。\n一方で、この女の子はひょっとすると、リンゴを遠くから見たことがあるだけか、あるいは通行人の会話の中から漏れ聞いたことがあるだけなのかもしれない。\n彼女は少し考え込んでから、同行しながらもまるで近付いてこようとしない使用人のほうを見た。そして使用人に近づくと、勇気を振り絞ってこう告げた。\n「アタシ……リンゴが欲しいんだけど。」\n脅すわけでも呪うわけでもなく、ただほかの人がするのと同じように、自分の思いをそのまま伝えてみた。\nしかし使用人は手を震わせながら目を見開くと、叫び声を上げて一目散に逃げていってしまった。\n\nその数日後、町では「島の少女がリンゴを呪いの道具にしたらしい」という噂が出回り始めた。ロマーノ家の九十になるおばあちゃんが突然病に伏せったのも、ブチェラッティ家の長女がお嫁に行けないのも、すべてその悪辣な呪いのせいらしいと騒ぎになった。町民たちは呪いに満ちた島へとリンゴが届けられないよう、リンゴは元より、形の似たものまですべてを隠すようになった。\n彼女は長い間待ち続けたが、リンゴが届くことはなかった。\nそしてリンゴが消えてしまったことで、自分は永遠にあの人たちと同じにはなれないのだと理解した。\n彼女はみんなとは違うのだ。\n「アンタたちなんて……悪霊に呪われてしまえ……」\nある日、屋敷の使用人が掃除中、布で作られたリンゴを見つけた。それには釘が深く打ち込まれていた。\n使用人は先日買ったリンゴと最近絶え間なく続く頭痛を結びつけ、冷や汗で服を濡らした。\nそうして、屋敷の中で次々と布製のリンゴが見つかるようになると、ある恐ろしい噂が町中に広まった。\n「リンゴを持つ者には呪いが降りかかる。」\nたちまち町の人々はみんなリンゴを捨て始めた。箱一杯のリンゴが湖に沈められ、食べ頃に熟したリンゴが道ばたに投げ捨てられた。さらには町の名前を「リンゴなき町」に改名しようという意見まで挙がり、満場一致で可決された。\nある真っ暗な夜、彼女は一人で湖の畔までやってくるとそこに流れ着いたリンゴを拾った。一口かじると、甘くみずみずしい果汁が喉に流れ込んできた。\nその日の眠りの中、彼女は久しぶりに素敵な夢を見た。道ばたに佇む女の子が真っ赤に熟れたリンゴを頬張る夢だった。",
+      "typeIcon": "umd-x",
+      "uniEquipIcon": "uniequip_002_vodfox",
+      "typeName1": "UMD",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_vodfox_1",
+        "uniequip_002_vodfox_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 10,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "対象に10%の<$ba.weaken>虚弱</>効果を2秒間付与する",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": -0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "対象に10%の<$ba.weaken>虚弱</>効果を2秒間付与する",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": -0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置から15秒後、敵に狙われにくくなる",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "凶兆を宿し者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "対象に10%の<$ba.weaken>虚弱</>効果を2秒間付与する",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": -0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置から10秒後、敵に狙われにくくなる",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "凶兆を宿し者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1082,6 +1692,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10006_vodfox_doll"
   ],
   "patch_info": {}
 }

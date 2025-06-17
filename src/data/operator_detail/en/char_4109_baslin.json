@@ -151,6 +151,7 @@
       "cost": 21
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_4109_baslin#1",
@@ -625,16 +626,550 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DEF +25",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +200",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 200,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Authoritarian Teachings",
+          "description": "RES +6; if there are allied Operators in the 8 surrounding tiles, gain another RES +2",
+          "blackboard": {
+            "baslin_t[self].magic_resistance": 6,
+            "baslin_t[ally].magic_resistance": 2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Authoritarian Teachings",
+          "description": "RES +12; if there are allied Operators in the 8 surrounding tiles, gain another RES +4",
+          "blackboard": {
+            "baslin_t[self].magic_resistance": 12,
+            "baslin_t[ally].magic_resistance": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_baslin",
       "moduleName": "Bassline's Badge",
-      "desc": "Operator Bassline has demonstrated the capacity for simultaneously treating allied forces while holding the battlefront.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Defender Operator during field operations to exercise Guardian responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Bassline has demonstrated the capacity for simultaneously treating allied forces while holding the battlefront.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Defender Operator during field operations to exercise Guardian responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_baslin",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_baslin",
       "moduleName": "Bestowed Trinket",
-      "desc": "Micha waves a hand over the crystal-shaped nightlight. Like wafting a breeze to put out a candle, it extinguishes; the Spire's study turns to dusk hues, with only the light of the setting sun coming through the window.\nEvening falls over Zwillingstürme, the sound of music filtering like mist through the Spire's generous walls. It is profound and yet murky, not at all there, yet opaque to the senses. Micha recognizes the piece; Bach's 12th Symphony 'Abendrot', 3rd movement, performed by the Fortsgard Philharmonic Orchestra. From the style, possibly conducted by Ricercar, yet also reminiscent of Graf Lotzmann—is he still allowed into Zwillingstürme these days? Grimmacht had already sent him off to the Black Manor, thirteen months ago. It was Micha himself who delivered the documents...\nA muffled noise ripples past his ear, one he's all too familiar with: his Originium Arts. Silent soundwaves transmit outwards from him, pushing the sound of 'Abendrot' away, until every corner of the study is encompassed. The room is soundproofed, and Micha's mind is proofed from the chaos of any lingering thoughts.\nMicha picks up the pair of castanets, much heavier than any ordinary kind, made of thicker, sturdier wood. On top, the inlaid—well, what used to be inlaid gold thread was gilded with no regard for acoustics, which already ruined the castanets' original timbre, not to mention the oversized gemstones. Thanks to those, they come off as ornate, respectable, no longer capable of the sound they were meant to make. They qualify no longer as an instrument, but an exceptional gift instead, and an exceptional trinket.\nMicha has never really treasured this reward since it was bestowed to him. He doesn't want an instrument permanently stripped of its proper sound—and he knows the one who gave them to him meant it in exactly that way. That's why the castanets scare him, why he detests them, why they prick at him at practically every turn.\nHe won't take them up; he'd rather regard them as a trinket, a child's plaything, to be willfully handled until the gold thread falls off, their formerly sleek black surface riddled with scratches. He once even thought of throwing them away, into the hills, into the wind, back into that curdled-stiff afterglow.\n'You must keep them by your side. Can a toy hurt you? You must keep them by your side, to prove that you and them are different. Not for Lupukarn, but for yourself.' The voice sounds so close to him, but in truth it is further than any other voice could be. Micha knows that that voice is the reason he's kept them. He remembers, gazing at that Spire, how the black shadow it cast would always keep him strong.\nMicha looks out of the window, and all he sees is the golden afterglow."
+      "desc": "Micha waves a hand over the crystal-shaped nightlight. Like wafting a breeze to put out a candle, it extinguishes; the Spire's study turns to dusk hues, with only the light of the setting sun coming through the window.\nEvening falls over Zwillingstürme, the sound of music filtering like mist through the Spire's generous walls. It is profound and yet murky, not at all there, yet opaque to the senses. Micha recognizes the piece; Bach's 12th Symphony 'Abendrot', 3rd movement, performed by the Fortsgard Philharmonic Orchestra. From the style, possibly conducted by Ricercar, yet also reminiscent of Graf Lotzmann—is he still allowed into Zwillingstürme these days? Grimmacht had already sent him off to the Black Manor, thirteen months ago. It was Micha himself who delivered the documents...\nA muffled noise ripples past his ear, one he's all too familiar with: his Originium Arts. Silent soundwaves transmit outwards from him, pushing the sound of 'Abendrot' away, until every corner of the study is encompassed. The room is soundproofed, and Micha's mind is proofed from the chaos of any lingering thoughts.\nMicha picks up the pair of castanets, much heavier than any ordinary kind, made of thicker, sturdier wood. On top, the inlaid—well, what used to be inlaid gold thread was gilded with no regard for acoustics, which already ruined the castanets' original timbre, not to mention the oversized gemstones. Thanks to those, they come off as ornate, respectable, no longer capable of the sound they were meant to make. They qualify no longer as an instrument, but an exceptional gift instead, and an exceptional trinket.\nMicha has never really treasured this reward since it was bestowed to him. He doesn't want an instrument permanently stripped of its proper sound—and he knows the one who gave them to him meant it in exactly that way. That's why the castanets scare him, why he detests them, why they prick at him at practically every turn.\nHe won't take them up; he'd rather regard them as a trinket, a child's plaything, to be willfully handled until the gold thread falls off, their formerly sleek black surface riddled with scratches. He once even thought of throwing them away, into the hills, into the wind, back into that curdled-stiff afterglow.\n'You must keep them by your side. Can a toy hurt you? You must keep them by your side, to prove that you and them are different. Not for Lupukarn, but for yourself.' The voice sounds so close to him, but in truth it is further than any other voice could be. Micha knows that that voice is the reason he's kept them. He remembers, gazing at that Spire, how the black shadow it cast would always keep him strong.\nMicha looks out of the window, and all he sees is the golden afterglow.",
+      "typeIcon": "gua-y",
+      "uniEquipIcon": "uniequip_002_baslin",
+      "typeName1": "GUA",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_baslin_1",
+        "uniequip_002_baslin_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 265,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Reduces damage taken by <@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 345,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Reduces damage taken by <@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "RES +12; if there are allied Operators in the 8 surrounding tiles, both this unit and them gain another RES +4",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Authoritarian Teachings",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "baslin_t[self].magic_resistance",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "baslin_t[ally].magic_resistance",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resistance",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 410,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Reduces damage taken by <@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "RES +14; if there are allied Operators in the 8 surrounding tiles, both this unit and them gain another RES +5",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Authoritarian Teachings",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "baslin_t[self].magic_resistance",
+                      "value": 14,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "baslin_t[ally].magic_resistance",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resistance",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1096,5 +1631,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -151,6 +151,28 @@
       "cost": 18
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.2,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4106_bryota#1",
@@ -621,16 +643,666 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 35,
+        "def": 35,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "状況判断",
+          "description": "敵をブロックしていない時、周囲8マスにいる近距離オペレーターの防御力+4%。敵をブロックしている時、自身の防御力+4%",
+          "blackboard": [
+            {
+              "key": "bryota_t_ally.def",
+              "value": 0.04,
+              "valueStr": null
+            },
+            {
+              "key": "bryota_t_self.def",
+              "value": 0.04,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "状況判断",
+          "description": "敵をブロックしていない時、周囲8マスにいる近距離オペレーターの防御力+6%<@ba.talpu>（+2%）</>。敵をブロックしている時、自身の防御力+6%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "bryota_t_ally.def",
+              "value": 0.06,
+              "valueStr": null
+            },
+            {
+              "key": "bryota_t_self.def",
+              "value": 0.06,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "状況判断",
+          "description": "敵をブロックしていない時、周囲8マスにいる近距離オペレーターの防御力+8％。敵をブロックしている時、自身の防御力+8％",
+          "blackboard": [
+            {
+              "key": "bryota_t_ally.def",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "bryota_t_self.def",
+              "value": 0.08,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "状況判断",
+          "description": "敵をブロックしていない時、周囲8マスにいる近距離オペレーターの防御力+10%<@ba.talpu>（+2%）</>。敵をブロックしている時、自身の防御力+10%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "bryota_t_ally.def",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "bryota_t_self.def",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "状況判断",
+          "description": "敵をブロックしていない時、周囲8マスにいる近距離オペレーターの防御力+12%。敵をブロックしている時、自身の防御力+12%",
+          "blackboard": [
+            {
+              "key": "bryota_t_ally.def",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "bryota_t_self.def",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "状況判断",
+          "description": "敵をブロックしていない時、周囲8マスにいる近距離オペレーターの防御力+14%<@ba.talpu>（+2%）</>。敵をブロックしている時、自身の防御力+14%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "bryota_t_ally.def",
+              "value": 0.14,
+              "valueStr": null
+            },
+            {
+              "key": "bryota_t_self.def",
+              "value": 0.14,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_bryota",
       "moduleName": "ブライオファイタの記章",
-      "desc": "ブライオファイタは周囲の近距離オペレーターを鼓舞することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、教官の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ブライオファイタは周囲の近距離オペレーターを鼓舞することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、教官の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_bryota",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_bryota",
       "moduleName": "食後のお楽しみ",
-      "desc": "古いポスターにカセットテープのケース、カーボンのペンにスケッチブック、そして水泳ゴーグル……と、色々なものがベッドの上に投げ出されていく。\n少年は宝探しをするように兄の「秘密基地」を漁っていた。\n「いいもの見っけ！　リーフ、こっちこっち！」\n呼び声を聞いた女の子がやってくると、散らかされた部屋を見て少し怒ったように口を尖らせた。\n「ルートったら！もう……ヘイリーが言ってたでしょ、勝手にエニスの物に触っちゃダメだって！」\n「ジャジャーン！エニスのスケジュール表！」\n「リーフだって、エニスが今日どこで何をしてるか気になるだろ？」\n「……」\n少年は兄のスケジュール表を戦利品でも見せびらかすかのように誇らしげに振ってみせた。\n女の子はまん丸な目を瞬かせながらも、揺れ動く紙を見つめる。結局、どうやら言いくるめられてしまったようで、大人からの言いつけなどは遥か彼方に忘れ去られてしまった。\n「エニスは一緒に缶蹴りしてくれるって約束してくれたんだ！」\n「あたしにも、髪を結ってくれるって約束してくれたもん！」\nそうして、一人はベッドに寝っ転がり、もう一人は壁に寄りかかった状態で、二人は少しでも多く兄と居る時間を勝ち取るために争いだした。\n「えーとなになに、『5時半、仕入れ。コショウが切れた。ちゃんと買っておかないと、またヘイリーに料理が味気ないって文句を言われちまう。』……」\n「……『9時半、手紙の配達。ついでにチャックが使いたがってたストックも送ってあげないと。家に置いたって埃が溜まるだけだし。』……」\n「……『1時から4時はトム爺ちゃんの日向ぼっこの時間だから、店番の手伝い。リーフとルートのためにアイスを取っておく、イチゴとチョコレート味！』……」\n「えっと、6時は……」\n「じゃあ、8時は……」\nスケジュールはびっしりと埋まっており、メモもたくさん書き込まれていた。\n子供たちが何度読み返したところで、そこには自分たちが割って入れる隙などない。\n「うわぁ、こんなにいっぱいやることあるのか……エニス、晩ご飯食べに帰ってこれるかな？」\n「夕飯は絶対一緒に食べてくれるよ！ねぇ、アイスをもらいに行くのはやめない？あたしたちで先に、ヘイリーと一緒に支度を済ませちゃおうよ。」\n「じゃあ、缶蹴りもなしにしとこっか。」\n「髪を結ってもらうのも今度にする！」\n男の子はベッドの下からチェス盤を取り出し、女の子は引き出しの中から駒を見つけた。\n「代わりに、ご飯食べたら、これで一緒に遊んでもらお！」\n「でも、エニスは一日中働きっぱなしで疲れてるだろうし……付き合ってくれるかな？」\n「もちろんだよ！エニスが言ってたもん。」\n「あたしたちと一緒に遊ぶ時が一番楽しいって！」"
+      "desc": "古いポスターにカセットテープのケース、カーボンのペンにスケッチブック、そして水泳ゴーグル……と、色々なものがベッドの上に投げ出されていく。\n少年は宝探しをするように兄の「秘密基地」を漁っていた。\n「いいもの見っけ！　リーフ、こっちこっち！」\n呼び声を聞いた女の子がやってくると、散らかされた部屋を見て少し怒ったように口を尖らせた。\n「ルートったら！もう……ヘイリーが言ってたでしょ、勝手にエニスの物に触っちゃダメだって！」\n「ジャジャーン！エニスのスケジュール表！」\n「リーフだって、エニスが今日どこで何をしてるか気になるだろ？」\n「……」\n少年は兄のスケジュール表を戦利品でも見せびらかすかのように誇らしげに振ってみせた。\n女の子はまん丸な目を瞬かせながらも、揺れ動く紙を見つめる。結局、どうやら言いくるめられてしまったようで、大人からの言いつけなどは遥か彼方に忘れ去られてしまった。\n「エニスは一緒に缶蹴りしてくれるって約束してくれたんだ！」\n「あたしにも、髪を結ってくれるって約束してくれたもん！」\nそうして、一人はベッドに寝っ転がり、もう一人は壁に寄りかかった状態で、二人は少しでも多く兄と居る時間を勝ち取るために争いだした。\n「えーとなになに、『5時半、仕入れ。コショウが切れた。ちゃんと買っておかないと、またヘイリーに料理が味気ないって文句を言われちまう。』……」\n「……『9時半、手紙の配達。ついでにチャックが使いたがってたストックも送ってあげないと。家に置いたって埃が溜まるだけだし。』……」\n「……『1時から4時はトム爺ちゃんの日向ぼっこの時間だから、店番の手伝い。リーフとルートのためにアイスを取っておく、イチゴとチョコレート味！』……」\n「えっと、6時は……」\n「じゃあ、8時は……」\nスケジュールはびっしりと埋まっており、メモもたくさん書き込まれていた。\n子供たちが何度読み返したところで、そこには自分たちが割って入れる隙などない。\n「うわぁ、こんなにいっぱいやることあるのか……エニス、晩ご飯食べに帰ってこれるかな？」\n「夕飯は絶対一緒に食べてくれるよ！ねぇ、アイスをもらいに行くのはやめない？あたしたちで先に、ヘイリーと一緒に支度を済ませちゃおうよ。」\n「じゃあ、缶蹴りもなしにしとこっか。」\n「髪を結ってもらうのも今度にする！」\n男の子はベッドの下からチェス盤を取り出し、女の子は引き出しの中から駒を見つけた。\n「代わりに、ご飯食べたら、これで一緒に遊んでもらお！」\n「でも、エニスは一日中働きっぱなしで疲れてるだろうし……付き合ってくれるかな？」\n「もちろんだよ！エニスが言ってたもん。」\n「あたしたちと一緒に遊ぶ時が一番楽しいって！」",
+      "typeIcon": "ins-x",
+      "uniEquipIcon": "uniequip_002_bryota",
+      "typeName1": "INS",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_bryota_1",
+        "uniequip_002_bryota_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃距離が<@ba.kw>やや長い</>\n自身がブロックしていない敵を攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 52,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃距離が<@ba.kw>やや長い</>\n自身がブロックしていない敵を攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "未ブロック時、周囲8マスにいるの近距離オペレーターの防御力+15%。ブロック中、自身の防御力+15%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "状況判断",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "bryota_t_ally.def",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bryota_t_self.def",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "未ブロック時、周囲8マスにいるの近距離オペレーターの防御力+17%<@ba.talpu>（+2%）</>。ブロック中、自身の防御力+17%<@ba.talpu>（+2%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "状況判断",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "bryota_t_ally.def",
+                      "value": 0.17,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bryota_t_self.def",
+                      "value": 0.17,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 190,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃距離が<@ba.kw>やや長い</>\n自身がブロックしていない敵を攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "未ブロック時、周囲8マスにいるの近距離オペレーターの防御力+17%。ブロック中、自身の防御力+17%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "状況判断",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "bryota_t_ally.def",
+                      "value": 0.17,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bryota_t_self.def",
+                      "value": 0.17,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "未ブロック時、周囲8マスにいる近距離オペレーターの防御力+19%<@ba.talpu>（+2%）</>。ブロック中、自身の防御力+19%<@ba.talpu>（+2%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "状況判断",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "bryota_t_ally.def",
+                      "value": 0.19,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bryota_t_self.def",
+                      "value": 0.19,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1084,5 +1756,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

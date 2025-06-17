@@ -150,6 +150,7 @@
       "cost": 20
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_340_shwaz#1",
@@ -726,21 +727,961 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +30",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 30,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 100,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Sharp Arrow",
+          "description": "When attacking, has a 20% chance to increase the current damage of that attack to 130%",
+          "blackboard": {
+            "atk_scale": 1.3,
+            "def": 1,
+            "prob": 0.2,
+            "defdown_duration": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Armor Penetration Arrow",
+          "description": "When attacking, has a 20% chance to increase the current damage of that attack to 130% and reduce the DEF of the target hit by 10% for 5 seconds",
+          "blackboard": {
+            "atk_scale": 1.3,
+            "def": -0.1,
+            "prob": 0.2,
+            "defdown_duration": 5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Armor Penetration Arrow",
+          "description": "When attacking, has a 20% chance to increase the current damage of that attack to 160% and reduce the DEF of the target hit by 20% for 5 seconds",
+          "blackboard": {
+            "atk_scale": 1.6,
+            "def": -0.2,
+            "prob": 0.2,
+            "defdown_duration": 5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Crossfire",
+          "description": "When Schwarz and at least one more [Sniper] Operator are on the battlefield, all [Sniper] Operators' ATK +8%",
+          "blackboard": {
+            "atk": 0.08
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "2",
+          "name": "Crossfire",
+          "description": "When Schwarz and at least one more [Sniper] Operator are on the battlefield, all [Sniper] Operators' ATK +10%<@ba.talpu> (+2%)</>",
+          "blackboard": {
+            "atk": 0.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_shwaz",
       "moduleName": "Schwarz's Badge",
-      "desc": "Operator Schwarz has demonstrated a remarkable aptitude for inflicting physical casualties with precision on enemies at close range.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Heavyshooter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Schwarz has demonstrated a remarkable aptitude for inflicting physical casualties with precision on enemies at close range.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Heavyshooter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_shwaz",
       "moduleName": "Customized Crossbow Accessory Suit",
-      "desc": "'Freeze.'\nDeathly as ice, the splitting roar hits a young man's ears. The instant he turns to look in the voice's direction, he finds a crossbow bolt embedded deep into the soil, a mere inch from his feet.\n'S—Save me!' His legs go limp, and he falls to the ground.\n'If you really want to save your own life, then return what you stole.' Schwarz is stood on the rooftop, looking down on him coldly.\n'Oripathy put me out of work everywhere! I'll starve to death if I don't eat any longer!' Schwarz's eyes seem to pierce through him, and in a flash, anger overtakes him. 'You're Infected too, aren't you! Why can't you just let me go?!'\nSchwarz is silent for a moment, then gives a faint sigh. 'Because this is the only way you get to keep living. Also, if you can't find work, you can come to Rhodes Island. Give it a shot.'\nThe man is startled for a spell the moment his anger abates, already beginning to feel rueful. 'Really?' he asks, out of disbelief.\nSchwarz doesn't reply. She simply turns and leaves. She knows colleagues of hers will be there to help deal with his case.\nCome to Rhodes Island. Colleagues. She's reminded of when she'd just joined Rhodes Island, on the heels of a clash with certain others after having almost killed a target. It's almost hard for her to believe where she is now.\nRhodes Island's usual mission assignments are barely as complicated as she was braced for before she joined, but she hasn't missed people's whispers of what combat veterans like her have done before, and what they'll do again. She knows why she doesn't fall in their ranks—she joined Rhodes Island accompanying Lady Ceylon, and not out of any sort of personal belief.\nThe thing is—\nShe stops. Looks back. And sure enough, a fellow coworker is comforting the dejected youngster.\nAn Infected.\nFor the longest time, Lady Ceylon's dedication to curing Schwarz's Oripathy never really clicked with her, because she never felt her life was that important, nor did she think Oripathy was that exceptional.\nBut once she came to Rhodes Island, she realized how in a certain sense, she was honestly lucky. She'd never been treated unfairly for her own disease.\nBut no doubt, she was an Infected too.\nShe used to always accompany Lady Ceylon as she fumed, wait until she'd calmed down, and then brew her a cup of black tea. Lately, she's realized she sort of gets Lady Ceylon now.\n'Schwarz, did you catch the thief?' Just as she's barraging a local with geology questions, Ceylon sees Schwarz has come back, and waves excitedly at her.\nShe nods, and is there by Ceylon's side in just a few short leaps.\n'Schwarz, I've just heard about a group of homeless Infected banding together to attack passersby. I know we're in the field right now and it's beyond the mission's scope—could I leave it to you?'\n'Milady.'\nIt crosses her mind. Maybe I can do a little more."
+      "desc": "'Freeze.'\nDeathly as ice, the splitting roar hits a young man's ears. The instant he turns to look in the voice's direction, he finds a crossbow bolt embedded deep into the soil, a mere inch from his feet.\n'S—Save me!' His legs go limp, and he falls to the ground.\n'If you really want to save your own life, then return what you stole.' Schwarz is stood on the rooftop, looking down on him coldly.\n'Oripathy put me out of work everywhere! I'll starve to death if I don't eat any longer!' Schwarz's eyes seem to pierce through him, and in a flash, anger overtakes him. 'You're Infected too, aren't you! Why can't you just let me go?!'\nSchwarz is silent for a moment, then gives a faint sigh. 'Because this is the only way you get to keep living. Also, if you can't find work, you can come to Rhodes Island. Give it a shot.'\nThe man is startled for a spell the moment his anger abates, already beginning to feel rueful. 'Really?' he asks, out of disbelief.\nSchwarz doesn't reply. She simply turns and leaves. She knows colleagues of hers will be there to help deal with his case.\nCome to Rhodes Island. Colleagues. She's reminded of when she'd just joined Rhodes Island, on the heels of a clash with certain others after having almost killed a target. It's almost hard for her to believe where she is now.\nRhodes Island's usual mission assignments are barely as complicated as she was braced for before she joined, but she hasn't missed people's whispers of what combat veterans like her have done before, and what they'll do again. She knows why she doesn't fall in their ranks—she joined Rhodes Island accompanying Lady Ceylon, and not out of any sort of personal belief.\nThe thing is—\nShe stops. Looks back. And sure enough, a fellow coworker is comforting the dejected youngster.\nAn Infected.\nFor the longest time, Lady Ceylon's dedication to curing Schwarz's Oripathy never really clicked with her, because she never felt her life was that important, nor did she think Oripathy was that exceptional.\nBut once she came to Rhodes Island, she realized how in a certain sense, she was honestly lucky. She'd never been treated unfairly for her own disease.\nBut no doubt, she was an Infected too.\nShe used to always accompany Lady Ceylon as she fumed, wait until she'd calmed down, and then brew her a cup of black tea. Lately, she's realized she sort of gets Lady Ceylon now.\n'Schwarz, did you catch the thief?' Just as she's barraging a local with geology questions, Ceylon sees Schwarz has come back, and waves excitedly at her.\nShe nods, and is there by Ceylon's side in just a few short leaps.\n'Schwarz, I've just heard about a group of homeless Infected banding together to attack passersby. I know we're in the field right now and it's beyond the mission's scope—could I leave it to you?'\n'Milady.'\nIt crosses her mind. Maybe I can do a little more.",
+      "typeIcon": "arc-x",
+      "uniEquipIcon": "uniequip_002_shwaz",
+      "typeName1": "ARC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_shwaz_1",
+        "uniequip_002_shwaz_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "respawn_time",
+              "value": -25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Redeployment Time <@ba.kw>reduced</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "respawn_time",
+              "value": -25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Redeployment Time <@ba.kw>reduced</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Schwarz and at least one more Sniper Operator are in the squad, all Sniper Operators gain +11% ATK",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Crossfire",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.11,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Schwarz and at least one more Sniper Operator are in the squad, all Sniper Operators gain +13% <@ba.talpu>(+2%)</> ATK",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 5,
+                  "prefabKey": "2",
+                  "name": "Crossfire",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.13,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            },
+            {
+              "key": "respawn_time",
+              "value": -25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Redeployment Time <@ba.kw>reduced</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Schwarz and at least one more Sniper Operator are in the squad, all Sniper Operators gain +13% ATK",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Crossfire",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.13,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Schwarz and at least one more Sniper Operator are in the squad, all Sniper Operators gain +15% <@ba.talpu>(+2%)</> ATK",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 5,
+                  "prefabKey": "2",
+                  "name": "Crossfire",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_shwaz",
       "moduleName": "Old Razor",
-      "desc": "Trudging through the slurry of rotting leaves and branches, doomed no matter how careful he is, a lone man stumbles in the rainforest and crashes with full weight against the muddy ground.\n'Am I still not in place? Are you still not going to kill me?!' He struggles to get back up, his shouts aimed at the one behind him, but his trembling tone bares his panic.\n'I haven't told you to stop yet. Keep moving forward.'\nIt surprises him—the answer he expects comes not from behind him, but from above.\nHe strains to look up, and the woman who gives him so much cause for fear is standing upon a thick tree trunk, the shade covering most of her face, leaving only a mouth pressed into a straight line.\nKachunk.\nHe knows. That's the sound of her loading a bolt into the groove.\nMore and more, his heart pounds like a drum, drowning out all sound in the forest, just like the thought screaming in his head louder than anything else.\nI want to live.\nHis hands push against the mud, and he throws himself out of the hole to lurch hurriedly forward, deeper into the forest. But death is tailing him, and can't be shaken. The woman looses the bowstring, and the bolt flies skimming over his scalp, leaving a wound down to the skull.\n'Aaagggh—!' he cries wretchedly into the sky.\n'Why? Why do you have to kill me?' The question is howled in misery, clutching his unstaunchable wound.\n'You're going the wrong way. You're meant to head right,' the woman icily orders, not answering his question.\nHis gasps come rapidly as he drags his staggering body in the direction the woman instructs. Very soon, he feels himself sunk still in the mire, ankles bound in place by some powerful force. The more he tries to step out, the deeper he's trapped. The mud gradually reaches his waist, and extends up towards his stomach.\n'Just do me a kindness, please, I'm begging you. I don't want to die here,' he finally croaks, unable to stifle the pain, realizing the dire situation he's facing.\nThe woman is not one bit moved from observing his twisted, shame-ridden face, and simply watches him thrash endlessly against the mud.\n'Three years ago, you ordered a group of completely unprotected child workers into a mine to excavate Originium. The vein was active, and caused an explosion in the tunnel, collapsing it. Every one of them was buried underground.\n'You must have been thinking that with such a terrifying accident, the children weren't likely to be alive, so you gave up on any rescue, and let them die on their own.\n'But there was one child, a very tough one, who used a razor to dig a tunnel to the surface with his own bare hands.\n'He dug for seven hours, without pause...'\n'I don't understand! What does that have to do with me?!' the man shouts, now breaking down.\n'Nothing. It just came to mind—I had a razor too when I was young. The only difference is, I wasn't digging dirt with it.'\nShe crouches down, and continues.\n'...I was slitting throats.\n'But there's not much difference. No matter how we used them, in the end we both relied on razors to survive.\n'Sir. I take it you're dead set on surviving too?'\nThe woman draws a hideously worn razor from her pocket, and throws it into the mire.\n'Then show me.'"
+      "desc": "Trudging through the slurry of rotting leaves and branches, doomed no matter how careful he is, a lone man stumbles in the rainforest and crashes with full weight against the muddy ground.\n'Am I still not in place? Are you still not going to kill me?!' He struggles to get back up, his shouts aimed at the one behind him, but his trembling tone bares his panic.\n'I haven't told you to stop yet. Keep moving forward.'\nIt surprises him—the answer he expects comes not from behind him, but from above.\nHe strains to look up, and the woman who gives him so much cause for fear is standing upon a thick tree trunk, the shade covering most of her face, leaving only a mouth pressed into a straight line.\nKachunk.\nHe knows. That's the sound of her loading a bolt into the groove.\nMore and more, his heart pounds like a drum, drowning out all sound in the forest, just like the thought screaming in his head louder than anything else.\nI want to live.\nHis hands push against the mud, and he throws himself out of the hole to lurch hurriedly forward, deeper into the forest. But death is tailing him, and can't be shaken. The woman looses the bowstring, and the bolt flies skimming over his scalp, leaving a wound down to the skull.\n'Aaagggh—!' he cries wretchedly into the sky.\n'Why? Why do you have to kill me?' The question is howled in misery, clutching his unstaunchable wound.\n'You're going the wrong way. You're meant to head right,' the woman icily orders, not answering his question.\nHis gasps come rapidly as he drags his staggering body in the direction the woman instructs. Very soon, he feels himself sunk still in the mire, ankles bound in place by some powerful force. The more he tries to step out, the deeper he's trapped. The mud gradually reaches his waist, and extends up towards his stomach.\n'Just do me a kindness, please, I'm begging you. I don't want to die here,' he finally croaks, unable to stifle the pain, realizing the dire situation he's facing.\nThe woman is not one bit moved from observing his twisted, shame-ridden face, and simply watches him thrash endlessly against the mud.\n'Three years ago, you ordered a group of completely unprotected child workers into a mine to excavate Originium. The vein was active, and caused an explosion in the tunnel, collapsing it. Every one of them was buried underground.\n'You must have been thinking that with such a terrifying accident, the children weren't likely to be alive, so you gave up on any rescue, and let them die on their own.\n'But there was one child, a very tough one, who used a razor to dig a tunnel to the surface with his own bare hands.\n'He dug for seven hours, without pause...'\n'I don't understand! What does that have to do with me?!' the man shouts, now breaking down.\n'Nothing. It just came to mind—I had a razor too when I was young. The only difference is, I wasn't digging dirt with it.'\nShe crouches down, and continues.\n'...I was slitting throats.\n'But there's not much difference. No matter how we used them, in the end we both relied on razors to survive.\n'Sir. I take it you're dead set on surviving too?'\nThe woman draws a hideously worn razor from her pocket, and throws it into the mire.\n'Then show me.'",
+      "typeIcon": "arc-y",
+      "uniEquipIcon": "uniequip_003_shwaz",
+      "typeName1": "ARC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_shwaz_1",
+        "uniequip_003_shwaz_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 13,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks have a 20% chance to deal 165% damage and reduce the target's DEF by 25% for 5 seconds",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Armor Penetration Arrow",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": -0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "defdown_duration",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 16,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks have a 20% chance to deal 170% damage and reduce the target's DEF by 25% for 5 seconds",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Armor Penetration Arrow",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": -0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "defdown_duration",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1194,5 +2135,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

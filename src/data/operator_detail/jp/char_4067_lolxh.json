@@ -150,6 +150,28 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4067_lolxh#1",
@@ -609,16 +631,612 @@
       ]
     }
   ],
+  "potentialRanks": [],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 30,
+        "def": 25,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "執行人見習い",
+          "description": "敵に致命的なダメージを与えた時、対象のHPを1残し、<$ba.dying>重傷</>（倒すとSPが1回復）を付与する。自身は<$ba.dying>重傷</>状態の敵を攻撃しない",
+          "blackboard": [
+            {
+              "key": "move_speed",
+              "value": -0.8,
+              "valueStr": null
+            },
+            {
+              "key": "sp",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "執行人見習い",
+          "description": "敵に致命的なダメージを与えた時、対象のHPを1残し、<$ba.dying>重傷</>（倒すとSPが2回復）を付与する。自身は<$ba.dying>重傷</>状態の敵を攻撃しない",
+          "blackboard": [
+            {
+              "key": "move_speed",
+              "value": -0.8,
+              "valueStr": null
+            },
+            {
+              "key": "sp",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_lolxh",
       "moduleName": "羅小黒の記章",
-      "desc": "羅小黒は中距離から敵を攻撃する戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、領主の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "羅小黒は中距離から敵を攻撃する戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、領主の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_lolxh",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_lolxh",
       "moduleName": "毛糸玉",
-      "desc": "『医療部日誌』より抜粋\n今日は未成年のオペレーターたちの健康診断でした。子供というものは大抵いたずらっ子ではありますが、昨日健康診断だった暴れん坊たちと比べれば、今日のお喋りなちびっ子たちはまだお利口で可愛らしいと言えるでしょう。ほとんどの子の鉱石病はまだコントロール可能な範囲で、病状によって作戦能力を失っていた子たちも徐々に回復しています。\nその一方で、非感染者の子たちに関しては、一連の細かな検査を経て、一部の子に急激な体重増加が起きていることを確認しています。これまで劣悪な成長環境に置かれ栄養失調に陥っていた子供たちが、ロドスに来て十分な栄養を摂取したことで、体重が急増したと考えれば理に適っているでしょう。\nとはいえ、シャオヘイさんの体重変化には違和感を覚えました。食事の摂取量は至って普通の範疇ですし、彼と仲の良いアグンさんやシャオバイさんに聞いてみても、シャオヘイが暴飲暴食しているところは見ていないとのことでした。また、任務外でもトレーニングで身体を動かす習慣があるため、シャオヘイさんの運動量は非常に多いほうです。\n以上二点を考慮すると、潜在的な発病リスクによって問題が起きないよう、シャオヘイさんの体重増加は要観察と思われます。つきましては来週、より専門的な検査を手配し、要因の洗い出しを行うことを推奨します。\n\n『医療オペレーターの日記』より抜粋\n一日中働きづめで本当にくたびれた。首も腰もバキバキだし、宿舎に戻って横になったらもう何もしたくない。\n治療への協力をかたくなに拒む患者たちや、入ってくるなりそこら中走り回るやんちゃ坊主。彼らの相手はもうたくさん。\n卒業したばかりの頃は、胸いっぱいの使命感を抱いていたのに、今はもうただただ死にそうだ。\n朝、医療部に向かう途中で、またあの黒ネコに会った。いつもそこに現れるから、同僚たちもよく見かけてるらしい。あの辺りで日向ぼっこするのが好きなようで、通りすがりの人は皆あの子をじゃらそうとするんだけど、全然取り合ってもらえない。ペット用の缶詰やおやつがあっても、まるでダメ。でも、なぜだか人用のおやつがあれば少しは構ってくれる。\nクールな子だけど、みんなあの子にもう夢中。特に最近はあの子の話題で持ちきりだ。\nもちろん、私もあの子に夢中なんだけど。\nあの子は周りを気にせずただおやつを食べてるだけなのに、その姿は仕事で疲れた私の心を癒してくれる。\nだから私はいつもおやつを持ち歩くようにしてる。明日はさらに、ちょっといいお菓子を持っていくつもりだった。でも医療部に来てみれば、同僚たちもみんなおやつを持ち歩いてるらしいとわかった。聞けばここ数か月、知らないうちに色々な人があの黒ネコにおやつをあげていたらしい。\nどうりで太ってくるわけだ……はぁ、やっぱり明日はおやつの代わりに毛糸玉でもあげてみよう。"
+      "desc": "『医療部日誌』より抜粋\n今日は未成年のオペレーターたちの健康診断でした。子供というものは大抵いたずらっ子ではありますが、昨日健康診断だった暴れん坊たちと比べれば、今日のお喋りなちびっ子たちはまだお利口で可愛らしいと言えるでしょう。ほとんどの子の鉱石病はまだコントロール可能な範囲で、病状によって作戦能力を失っていた子たちも徐々に回復しています。\nその一方で、非感染者の子たちに関しては、一連の細かな検査を経て、一部の子に急激な体重増加が起きていることを確認しています。これまで劣悪な成長環境に置かれ栄養失調に陥っていた子供たちが、ロドスに来て十分な栄養を摂取したことで、体重が急増したと考えれば理に適っているでしょう。\nとはいえ、シャオヘイさんの体重変化には違和感を覚えました。食事の摂取量は至って普通の範疇ですし、彼と仲の良いアグンさんやシャオバイさんに聞いてみても、シャオヘイが暴飲暴食しているところは見ていないとのことでした。また、任務外でもトレーニングで身体を動かす習慣があるため、シャオヘイさんの運動量は非常に多いほうです。\n以上二点を考慮すると、潜在的な発病リスクによって問題が起きないよう、シャオヘイさんの体重増加は要観察と思われます。つきましては来週、より専門的な検査を手配し、要因の洗い出しを行うことを推奨します。\n\n『医療オペレーターの日記』より抜粋\n一日中働きづめで本当にくたびれた。首も腰もバキバキだし、宿舎に戻って横になったらもう何もしたくない。\n治療への協力をかたくなに拒む患者たちや、入ってくるなりそこら中走り回るやんちゃ坊主。彼らの相手はもうたくさん。\n卒業したばかりの頃は、胸いっぱいの使命感を抱いていたのに、今はもうただただ死にそうだ。\n朝、医療部に向かう途中で、またあの黒ネコに会った。いつもそこに現れるから、同僚たちもよく見かけてるらしい。あの辺りで日向ぼっこするのが好きなようで、通りすがりの人は皆あの子をじゃらそうとするんだけど、全然取り合ってもらえない。ペット用の缶詰やおやつがあっても、まるでダメ。でも、なぜだか人用のおやつがあれば少しは構ってくれる。\nクールな子だけど、みんなあの子にもう夢中。特に最近はあの子の話題で持ちきりだ。\nもちろん、私もあの子に夢中なんだけど。\nあの子は周りを気にせずただおやつを食べてるだけなのに、その姿は仕事で疲れた私の心を癒してくれる。\nだから私はいつもおやつを持ち歩くようにしてる。明日はさらに、ちょっといいお菓子を持っていくつもりだった。でも医療部に来てみれば、同僚たちもみんなおやつを持ち歩いてるらしいとわかった。聞けばここ数か月、知らないうちに色々な人があの黒ネコにおやつをあげていたらしい。\nどうりで太ってくるわけだ……はぁ、やっぱり明日はおやつの代わりに毛糸玉でもあげてみよう。",
+      "typeIcon": "lor-y",
+      "uniEquipIcon": "uniequip_002_lolxh",
+      "typeName1": "LOR",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_lolxh_1",
+        "uniequip_002_lolxh_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30063",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30043",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30013",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵が2体以上いる時、攻撃速度<@ba.vup>+12</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 83,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵が2体以上いる時、攻撃速度<@ba.vup>+12</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが最大値の半分以下のユニットに与えるダメージ+8%。敵に致命的なダメージを与えた時、対象のHPを1残し、<$ba.dying>重傷</>（倒すとSPが2回復）を付与する。自身は<$ba.dying>重傷</>状態の敵を攻撃しない",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "執行人見習い",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵が2体以上いる時、攻撃速度<@ba.vup>+12</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが最大値の半分以下のユニットに与えるダメージ+12%。敵に致命的なダメージを与えた時、対象のHPを1残し、<$ba.dying>重傷</>（倒すとSPが2回復）を付与する。自身は<$ba.dying>重傷</>状態の敵を攻撃しない",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "執行人見習い",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1042,5 +1660,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

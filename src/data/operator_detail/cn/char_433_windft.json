@@ -169,6 +169,7 @@
       "cost": 18
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_433_windft#1",
@@ -648,16 +649,905 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 40,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "共进",
+          "description": "携带2个仅对术师和辅助干员生效的可靠电池（最多部署2个），使装备者攻击力+5%（持续20秒）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10023_windft_wrench",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "共进",
+          "description": "携带2个仅对术师和辅助干员生效的可靠电池（最多部署2个），使装备者攻击力+7%<@ba.talpu>（+2%）</>（持续20秒）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.07,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10023_windft_wrench",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "共进",
+          "description": "携带3个仅对术师和辅助干员生效的可靠电池（最多部署2个），使装备者攻击力+10%（持续30秒）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10023_windft_wrench",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "共进",
+          "description": "携带3个仅对术师和辅助干员生效的可靠电池（最多部署2个），使装备者攻击力+12%<@ba.talpu>（+2%）</>（持续30秒）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10023_windft_wrench",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "共进",
+          "description": "携带3个仅对术师和辅助干员生效的可靠电池（最多部署2个），使装备者攻击力+15%（持续30秒）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10023_windft_wrench",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "共进",
+          "description": "携带3个仅对术师和辅助干员生效的可靠电池（最多部署2个），使装备者攻击力+17%<@ba.talpu>（+2%）</>（持续30秒）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.17,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10023_windft_wrench",
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_windft",
       "moduleName": "掠风证章",
-      "desc": "干员掠风擅长使用装置协助队友作战\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使工匠职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员掠风擅长使用装置协助队友作战\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使工匠职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_windft",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_windft",
       "moduleName": "“灵机一动”",
-      "desc": "“甘特，你怎么又一个人，还在生刚才那些人的气吗？”\n“就是甘特之前中学的那些人，他们不服甘特和他们一样被教授选中当学生了呗，这都几次了，我都烦了。”\n“领头那个就是上一任社长，立什么只收名流家族学生的规矩，对甘特的履历指指点点，还弄得大家都没法好好搞研究，最后还不是被咱们赶下去了？那几天教授那老头子嘴上不说，每天高兴得尾巴都放不下来。\n“走，甘特，别再一个人吃饭了，和我们一起吧？你没看到，刚才在球场上我们把他们踢了个屁滚尿流！”\n“甘特，你笑了对吧？就知道说这个你会高兴。下次他们再找事你别躲，有我们呢！”\n“什么？甘特你停一下电钻，我没听清，什么值三天饭？嗨，赢球这种事哪用得着请吃饭，还三天？超出平常价这么多，刚才真的是你说的话？这样，你帮我看改造，那少请一天，成交？\n“等下甘特，你上次拜托我看装置，说好报酬是帮我写报告，你没写，收报告那天我差点被教授拔光羽毛！算你欠我一顿！\n“你是说我十三次翘课都是你帮忙签到，所以顶了报告？”\n“那这个可是大家都有份的事！上个月说好申请要打动老头子坚硬的心，多要点经费，但甘特失败了，这是不是要减一次极限飞盘？”\n“老头子说他已经免疫了甘特摇尾巴？坏了，这可是个大问题——唔，怎么黑了，跳闸？”\n“什么味道？”\n“甘特！你的装置炸了！”\n......\n“灭了！灭火值两顿饭！”\n“你别道歉啊，道歉干什么？这里天天爆炸，换成两顿饭就行！”\n“别的小组有像我们这样用饭和报告还有飞盘做交易的吗？甘特，这方法是不也是你提的？\n“好吧，你是真的不喜欢和我们算钱，放心吧，我们的关系就算混了钱也不会变的。但无所谓啦，舒服就行。\n“那按照刚说的，你帮我看这个装置，我给的报酬是——一个月饭两个维修一个报告和三次极限飞盘？！等下，再算算！\n“唔，什么意思？甘特你突然这么认真地拍我肩膀是什么意思？\n“什么报酬都不要，你也会帮我？整个小组都是？以后都是？\n“因为我们是你交到的第一堆朋友？哇！甘特，真的？”\n“......不是，谁用‘堆’来形容朋友啊，哈哈哈！走吧，一起吃饭去啦！”"
+      "desc": "“甘特，你怎么又一个人，还在生刚才那些人的气吗？”\n“就是甘特之前中学的那些人，他们不服甘特和他们一样被教授选中当学生了呗，这都几次了，我都烦了。”\n“领头那个就是上一任社长，立什么只收名流家族学生的规矩，对甘特的履历指指点点，还弄得大家都没法好好搞研究，最后还不是被咱们赶下去了？那几天教授那老头子嘴上不说，每天高兴得尾巴都放不下来。\n“走，甘特，别再一个人吃饭了，和我们一起吧？你没看到，刚才在球场上我们把他们踢了个屁滚尿流！”\n“甘特，你笑了对吧？就知道说这个你会高兴。下次他们再找事你别躲，有我们呢！”\n“什么？甘特你停一下电钻，我没听清，什么值三天饭？嗨，赢球这种事哪用得着请吃饭，还三天？超出平常价这么多，刚才真的是你说的话？这样，你帮我看改造，那少请一天，成交？\n“等下甘特，你上次拜托我看装置，说好报酬是帮我写报告，你没写，收报告那天我差点被教授拔光羽毛！算你欠我一顿！\n“你是说我十三次翘课都是你帮忙签到，所以顶了报告？”\n“那这个可是大家都有份的事！上个月说好申请要打动老头子坚硬的心，多要点经费，但甘特失败了，这是不是要减一次极限飞盘？”\n“老头子说他已经免疫了甘特摇尾巴？坏了，这可是个大问题——唔，怎么黑了，跳闸？”\n“什么味道？”\n“甘特！你的装置炸了！”\n......\n“灭了！灭火值两顿饭！”\n“你别道歉啊，道歉干什么？这里天天爆炸，换成两顿饭就行！”\n“别的小组有像我们这样用饭和报告还有飞盘做交易的吗？甘特，这方法是不也是你提的？\n“好吧，你是真的不喜欢和我们算钱，放心吧，我们的关系就算混了钱也不会变的。但无所谓啦，舒服就行。\n“那按照刚说的，你帮我看这个装置，我给的报酬是——一个月饭两个维修一个报告和三次极限飞盘？！等下，再算算！\n“唔，什么意思？甘特你突然这么认真地拍我肩膀是什么意思？\n“什么报酬都不要，你也会帮我？整个小组都是？以后都是？\n“因为我们是你交到的第一堆朋友？哇！甘特，真的？”\n“......不是，谁用‘堆’来形容朋友啊，哈哈哈！走吧，一起吃饭去啦！”",
+      "typeIcon": "cra-x",
+      "uniEquipIcon": "uniequip_002_windft",
+      "typeName1": "CRA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_windft_1",
+        "uniequip_002_windft_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10023_windft_wrench": [
+              {
+                "key": "cost",
+                "value": -2,
+                "valueStr": null
+              },
+              {
+                "key": "max_deck_stack_cnt",
+                "value": 1,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<支援装置>的持有上限<@ba.kw>+{cnt}</>且部署费用<@ba.kw>减少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 220,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10023_windft_wrench": [
+              {
+                "key": "cost",
+                "value": -2,
+                "valueStr": null
+              },
+              {
+                "key": "max_deck_stack_cnt",
+                "value": 1,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<支援装置>的持有上限<@ba.kw>+{cnt}</>且部署费用<@ba.kw>减少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带3个仅对术师和辅助干员生效的可靠电池（最多部署2个），使装备者攻击力+18%（持续30秒）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "共进",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10023_windft_wrench",
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带3个仅对术师和辅助干员生效的可靠电池（最多部署2个），使装备者攻击力+20%<@ba.talpu>（+2%）</>（持续30秒）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "共进",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10023_windft_wrench",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "仅对术师和辅助干员生效，使装备者攻击力+18%（持续30秒）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "共进",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "仅对术师和辅助干员生效，使装备者攻击力+20%<@ba.talpu>（+2%）</>（持续30秒）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "共进",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 48,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10023_windft_wrench": [
+              {
+                "key": "cost",
+                "value": -2,
+                "valueStr": null
+              },
+              {
+                "key": "max_deck_stack_cnt",
+                "value": 1,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<支援装置>的持有上限<@ba.kw>+{cnt}</>且部署费用<@ba.kw>减少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带3个仅对术师和辅助干员生效的可靠电池（最多部署2个），使装备者攻击力+20%（持续30秒）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "共进",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10023_windft_wrench",
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带3个仅对术师和辅助干员生效的可靠电池（最多部署2个），使装备者攻击力+22%<@ba.talpu>（+2%）</>（持续30秒）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "共进",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.22,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10023_windft_wrench",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "仅对术师和辅助干员生效的可靠电池，使装备者攻击力+20%（持续30秒）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "共进",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "仅对术师和辅助干员生效，使装备者攻击力+22%<@ba.talpu>（+2%）</>（持续30秒）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "共进",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.22,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1110,6 +2000,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10023_windft_wrench"
   ],
   "patch_info": {}
 }

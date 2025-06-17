@@ -169,6 +169,28 @@
       "cost": 13
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "hp_ratio",
+            "value": 0.01,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_225_haak#1",
@@ -757,16 +779,716 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "生命上限+150",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 150,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 300,
+        "atk": 50,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "混合药物射击",
+          "description": "每次攻击时会随机触发下列效果之一：回复自身生命13%；当次攻击力提升至130%；目标<$ba.sluggish>停顿</>1秒；目标<$ba.stun>晕眩</>0.6秒",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.13,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.3,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 0.6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "混合药物射击",
+          "description": "每次攻击时会随机触发下列效果之一：回复自身生命14%；当次攻击力提升至140%；目标<$ba.sluggish>停顿</>1.2秒；目标<$ba.stun>晕眩</>0.8秒",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.14,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.4,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish",
+              "value": 1.2,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 0.8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "混合药物射击",
+          "description": "每次攻击时会随机触发下列效果之一：回复自身生命15%；当次攻击力提升至150%；目标<$ba.sluggish>停顿</>1.4秒；目标<$ba.stun>晕眩</>1秒",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish",
+              "value": 1.4,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "药剂扩散",
+          "description": "自身受到的治疗量+20%",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "药剂扩散",
+          "description": "自身受到的治疗量+25%<@ba.talpu>（+5%）</>",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 1.25,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_haak",
       "moduleName": "阿证章",
-      "desc": "干员阿擅长以出人意料的方式作战\n根据外勤部门决议\n在外勤任务中划分为特种干员，行使怪杰职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员阿擅长以出人意料的方式作战\n根据外勤部门决议\n在外勤任务中划分为特种干员，行使怪杰职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_haak",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_haak",
       "moduleName": "什锦果味医用箱",
-      "desc": "雨才离开，夜幕又匆匆到来。这是我第几次摔门走掉了？\n吽那家伙，真让人受不了，非要和我争论什么“医学的意义”啦，什么“正道”啦，什么“职责”啦，净是些假惺惺的词语。\n街市虽然也不清净，但至少那些喧闹与我无关。再说了，以前和老东西逃命的时候，不也是这么过来的吗？\n“抓、抓小偷啊！”\n烦人，每天都要上演这种无聊的戏码。这游客也是够搞笑的，能被一个右臂肌无力的小偷抢了包，没救。\n哎呀哎呀，这个小偷，好像有点面熟？这不就是上次来找我解毒的倒霉蛋嘛。大半夜的被他的帮派弟兄们扛过来，肿得像打了生长素的茄子。\n看来上次还是手下留情了，早知道就该让他左胳膊里的毒素也多闹腾一会儿。\n我说过了，医学并不能从根源上阻止伤害的产生，吽非要......\n“呜呜呜，爷爷......”\n呃，麻烦事又来了，千万别看见我。\n“医......医生？救救我的爷爷，我只有他一个亲人了......”\n救？怎么救？这老头子的命数到头了，或许有人能把他放进檀香木棺材里，让他走得体面一点。但那个人绝不会是我。\n之前，好像也是个雨刚停的晚上。中了流弹后，老东西就不行了，拉着我躲在和现在一样的街角。他盼着我能接过衣钵，缓解他的痛苦，或者......彻底解决他的痛苦。\n老东西最后的样子有些可笑，再想起他总是以毒医自居，就更可笑了。\n“呜呜呜......”\n没办法，得做点什么，让这小孩收起难看的哭脸。\n西瓜味荔枝味凤梨味，混合起来，挤掉气泡，嗯......完美，这绝对是最合时宜的药剂。\n好啦，老头子，别让你的乖孙太担心，好好接下这一针吧。\n“嗯？爷爷，你醒了？爷爷？医生，为什么爷爷他笑个不停啊......爷爷，你别笑了，我也想笑......”\n有点副作用也是在所难免啦。另外，可别再叫我医生。不然我就直截了当地告诉你，老头子就算挺过了今晚，也——\n算啦，至少还能挺过今晚。\n......\n“那厨艺也不能从根源上阻止饥饿的产生，所以也是没用的咯？”\n奇怪，为什么吽大唠叨的话会闪进脑子里？唔，不过确实是有点饿了......\n欸？厨房的灯还亮着......吽那个家伙，还没睡？\n“喏，你的夜宵。\n“吃完以后，把碗刷了，再放回柜橱里。要养成好习惯。”\n什么啊，又自顾自地教育起人来了。"
+      "desc": "雨才离开，夜幕又匆匆到来。这是我第几次摔门走掉了？\n吽那家伙，真让人受不了，非要和我争论什么“医学的意义”啦，什么“正道”啦，什么“职责”啦，净是些假惺惺的词语。\n街市虽然也不清净，但至少那些喧闹与我无关。再说了，以前和老东西逃命的时候，不也是这么过来的吗？\n“抓、抓小偷啊！”\n烦人，每天都要上演这种无聊的戏码。这游客也是够搞笑的，能被一个右臂肌无力的小偷抢了包，没救。\n哎呀哎呀，这个小偷，好像有点面熟？这不就是上次来找我解毒的倒霉蛋嘛。大半夜的被他的帮派弟兄们扛过来，肿得像打了生长素的茄子。\n看来上次还是手下留情了，早知道就该让他左胳膊里的毒素也多闹腾一会儿。\n我说过了，医学并不能从根源上阻止伤害的产生，吽非要......\n“呜呜呜，爷爷......”\n呃，麻烦事又来了，千万别看见我。\n“医......医生？救救我的爷爷，我只有他一个亲人了......”\n救？怎么救？这老头子的命数到头了，或许有人能把他放进檀香木棺材里，让他走得体面一点。但那个人绝不会是我。\n之前，好像也是个雨刚停的晚上。中了流弹后，老东西就不行了，拉着我躲在和现在一样的街角。他盼着我能接过衣钵，缓解他的痛苦，或者......彻底解决他的痛苦。\n老东西最后的样子有些可笑，再想起他总是以毒医自居，就更可笑了。\n“呜呜呜......”\n没办法，得做点什么，让这小孩收起难看的哭脸。\n西瓜味荔枝味凤梨味，混合起来，挤掉气泡，嗯......完美，这绝对是最合时宜的药剂。\n好啦，老头子，别让你的乖孙太担心，好好接下这一针吧。\n“嗯？爷爷，你醒了？爷爷？医生，为什么爷爷他笑个不停啊......爷爷，你别笑了，我也想笑......”\n有点副作用也是在所难免啦。另外，可别再叫我医生。不然我就直截了当地告诉你，老头子就算挺过了今晚，也——\n算啦，至少还能挺过今晚。\n......\n“那厨艺也不能从根源上阻止饥饿的产生，所以也是没用的咯？”\n奇怪，为什么吽大唠叨的话会闪进脑子里？唔，不过确实是有点饿了......\n欸？厨房的灯还亮着......吽那个家伙，还没睡？\n“喏，你的夜宵。\n“吃完以后，把碗刷了，再放回柜橱里。要养成好习惯。”\n什么啊，又自顾自地教育起人来了。",
+      "typeIcon": "gee-x",
+      "uniEquipIcon": "uniequip_002_haak",
+      "typeName1": "GEE",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_haak_1",
+        "uniequip_002_haak_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 135,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 37,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "生命值高于80%时，技力自然回复速度+0.25/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 190,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "生命值高于80%时，技力自然回复速度+0.25/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "每次攻击时会随机触发下列效果之一：回复自身生命18%；当次攻击力提升至160%；目标<$ba.sluggish>停顿</>1.5秒；目标<$ba.stun>晕眩</>1.1秒；有20%概率同时触发以上所有效果",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "混合药物射击",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sluggish",
+                      "value": 1.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 57,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "生命值高于80%时，技力自然回复速度+0.25/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "每次攻击时会随机触发下列效果之一：回复自身生命20%；当次攻击力提升至165%；目标<$ba.sluggish>停顿</>1.6秒；目标<$ba.stun>晕眩</>1.2秒；有30%概率同时触发以上所有效果",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "混合药物射击",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sluggish",
+                      "value": 1.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1220,5 +1942,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -150,6 +150,24 @@
       "cost": 16
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "ep_heal_ratio",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1016_agoat2#1",
@@ -707,16 +725,572 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +23",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 45,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Replenishing Mist",
+          "description": "Normal heals additionally restore HP and <$ba.dt.element>Elemental Injury</> per second equal to 8% of the original amount, lasting for 4 seconds (stacks up to 3 times)",
+          "blackboard": {
+            "heal_scale": 0.08,
+            "duration": 4,
+            "max_stack_cnt": 3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Replenishing Mist",
+          "description": "Normal heals additionally restore HP and <$ba.dt.element>Elemental Injury</> per second equal to 10% of the original amount, lasting for 6 seconds (stacks up to 3 times)",
+          "blackboard": {
+            "heal_scale": 0.1,
+            "duration": 6,
+            "max_stack_cnt": 3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Volcanic Ash Remedy",
+          "description": "Increases the Max HP of friendly units within range by +6%, and reduces the <$ba.dt.element>Elemental Injury</> they take by 12%",
+          "blackboard": {
+            "max_hp": 0.06,
+            "ep_damage_resistance": 0.12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Volcanic Ash Remedy",
+          "description": "Increases the Max HP of friendly units within range by +8% <@ba.talpu>(+2%)</>, and reduces the <$ba.dt.element>Elemental Injury</> they take by 12%",
+          "blackboard": {
+            "max_hp": 0.08,
+            "ep_damage_resistance": 0.12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_agoat2",
       "moduleName": "Eyjafjalla the Hvít Aska's Badge",
-      "desc": "Operator Eyjafjalla the Hvít Aska has demonstrated a remarkable aptitude for wide-range healing in tandem with remedying Operators of their accrued Elemental Injurys.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Wandering Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Eyjafjalla the Hvít Aska has demonstrated a remarkable aptitude for wide-range healing in tandem with remedying Operators of their accrued Elemental Injurys.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Wandering Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_agoat2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_agoat2",
       "moduleName": "Sounds I Want to Retain",
-      "desc": "[Recording: Bubbling lava]\nTitle: Volcano's Breathing\nDescription:\nWhen the Mount Siesta stopped erupting, Professor Keller and I climbed up the volcano once again to finish our last data collection.\nAfter we recorded this sound of bubbling lava, Professor Keller suddenly suggested that we sit for a while at the mountaintop.\nShe gazed at the already ash-grey Siesta and I saw her eyes swell up with tears. She mentioned something about the future of the Volcano Museum of Siesta and her plans for retirement, which would very likely be delayed. I knew that she wanted me to visit Siesta as much as possible in the future—not just for research.\n\n[Recording: Singing with music]\nTitle: Singing at a Cake Shop\nDescription:\nIt's been a while since I last came back, and I had this feeling that this little town was stuck in time and nothing was ever going to change.\nHowever, I accidentally noticed that the cake shop Mom used to like so much had finished its renovation and reopened. A lot of musicians even came to the courtyard, holding impromptu performances.\nI heard a very familiar melody that day and went up close, and the singer invited me to join them! *Sighs* It was a pity I couldn't remember the lyrics and wasn't quite sure which part everyone was singing, so I just struggled to hum along... Hope I wasn't off-key too much.\n\n[Recording: An academic talk]\nTitle: On-campus Seminar\nDescription:\nI brought the data from Mount Siesta back to William University and met with Dr. Kahn and other scholars there. Dr. Kahn seemed a little unsettled. I told him it was not a big deal, but by the looks of it, that wasn't much help.\nThankfully, after some small talk, we started discussing research on volcanoes, and Dr. Kahn finally found peace and became more relaxed.\nThe seminar was exciting. No one seemed to care that we were not in a classroom, laboratory, or meeting room, but just standing on a path on campus.\nIt felt really nice.\n\n[Recording: Ripped audio from a childhood video]\nTitle: I Still Remember That Wish\nDescription:\nI left the university and came back home.\nI changed the curtains, threw away some old stuff I didn't need anymore, and found a childhood video in the process. It was a shame that most of the content was damaged. Fortunately, the soundtracks were intact, so I got to rip them and re-record them onto this tape.\nI heard Mom and Dad singing me the birthday song and encouraging me to make a wish. Of course, I didn't say it out loud, but I still remember it—\nNow I'm on my way to making it come true.\n\n[Recording: Friends' laughing]\nTitle: A Welcome Party For Me!\nDescription:\nI returned aboard for my regular check-up after settling everything at home. It'd been a long time since I last left Rhodes Island, and guess what? People held a welcome party for me!\nProvence and Angelina caused a little chaos when they set off the firework tubes and accidentally knocked down a huge pile of dolls. Then next thing I remember was little lambs coming from nowhere and rampaging all about... It was a disaster. But everyone was laughing so hard.\nI really hope these kinds of moments can last longer.\n\n[Recording: N/A]\nTitle: Untitled\nDescription:\nFor the next field investigation.\nI'd love to keep more recordings if I have the chance—the sound of lava, wind, rain, and the people around me."
+      "desc": "[Recording: Bubbling lava]\nTitle: Volcano's Breathing\nDescription:\nWhen the Mount Siesta stopped erupting, Professor Keller and I climbed up the volcano once again to finish our last data collection.\nAfter we recorded this sound of bubbling lava, Professor Keller suddenly suggested that we sit for a while at the mountaintop.\nShe gazed at the already ash-grey Siesta and I saw her eyes swell up with tears. She mentioned something about the future of the Volcano Museum of Siesta and her plans for retirement, which would very likely be delayed. I knew that she wanted me to visit Siesta as much as possible in the future—not just for research.\n\n[Recording: Singing with music]\nTitle: Singing at a Cake Shop\nDescription:\nIt's been a while since I last came back, and I had this feeling that this little town was stuck in time and nothing was ever going to change.\nHowever, I accidentally noticed that the cake shop Mom used to like so much had finished its renovation and reopened. A lot of musicians even came to the courtyard, holding impromptu performances.\nI heard a very familiar melody that day and went up close, and the singer invited me to join them! *Sighs* It was a pity I couldn't remember the lyrics and wasn't quite sure which part everyone was singing, so I just struggled to hum along... Hope I wasn't off-key too much.\n\n[Recording: An academic talk]\nTitle: On-campus Seminar\nDescription:\nI brought the data from Mount Siesta back to William University and met with Dr. Kahn and other scholars there. Dr. Kahn seemed a little unsettled. I told him it was not a big deal, but by the looks of it, that wasn't much help.\nThankfully, after some small talk, we started discussing research on volcanoes, and Dr. Kahn finally found peace and became more relaxed.\nThe seminar was exciting. No one seemed to care that we were not in a classroom, laboratory, or meeting room, but just standing on a path on campus.\nIt felt really nice.\n\n[Recording: Ripped audio from a childhood video]\nTitle: I Still Remember That Wish\nDescription:\nI left the university and came back home.\nI changed the curtains, threw away some old stuff I didn't need anymore, and found a childhood video in the process. It was a shame that most of the content was damaged. Fortunately, the soundtracks were intact, so I got to rip them and re-record them onto this tape.\nI heard Mom and Dad singing me the birthday song and encouraging me to make a wish. Of course, I didn't say it out loud, but I still remember it—\nNow I'm on my way to making it come true.\n\n[Recording: Friends' laughing]\nTitle: A Welcome Party For Me!\nDescription:\nI returned aboard for my regular check-up after settling everything at home. It'd been a long time since I last left Rhodes Island, and guess what? People held a welcome party for me!\nProvence and Angelina caused a little chaos when they set off the firework tubes and accidentally knocked down a huge pile of dolls. Then next thing I remember was little lambs coming from nowhere and rampaging all about... It was a disaster. But everyone was laughing so hard.\nI really hope these kinds of moments can last longer.\n\n[Recording: N/A]\nTitle: Untitled\nDescription:\nFor the next field investigation.\nI'd love to keep more recordings if I have the chance—the sound of lava, wind, rain, and the people around me.",
+      "typeIcon": "wdm-x",
+      "uniEquipIcon": "uniequip_002_agoat2",
+      "typeName1": "WDM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_agoat2_1",
+        "uniequip_002_agoat2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 36,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Increases the Max HP of friendly units within range by +6%, and reduces the <$ba.dt.element>Elemental Injury</> they take by 14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Volcanic Ash Remedy",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.06,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Increases the Max HP of friendly units within range by +8% <@ba.talpu>(+2%)</>, and reduces the <$ba.dt.element>Elemental Injury</> they take by 14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Volcanic Ash Remedy",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 44,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Increases the Max HP of friendly units within range by +8%, and reduces the <$ba.dt.element>Elemental Injury</> they take by 14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Volcanic Ash Remedy",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Increases the Max HP of friendly units within range by +10% <@ba.talpu>(+2%)</>, and reduces the <$ba.dt.element>Elemental Injury</> they take by 14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Volcanic Ash Remedy",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1178,5 +1752,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

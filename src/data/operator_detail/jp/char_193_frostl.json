@@ -138,6 +138,28 @@
       "cost": 18
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_193_frostl#1",
@@ -620,16 +642,577 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃速度+8",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 8,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 55,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "援護攻撃",
+          "description": "攻撃範囲拡大、攻撃間隔をわずかに延長",
+          "blackboard": [
+            {
+              "key": "base_attack_time",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_frostl",
       "moduleName": "フロストリーフの記章",
-      "desc": "フロストリーフは比較的広い範囲で敵を迎え撃つ戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、領主の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "フロストリーフは比較的広い範囲で敵を迎え撃つ戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、領主の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_frostl",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_frostl",
       "moduleName": "止まないビート",
-      "desc": "リュックの内ポケットの二列目に入れてある。リュックを洗濯する際は必ず取り出すこと。\n――フロストリーフの私有物。勝手にとらないように。\n予備用テープNo.2　曲リスト\n総再生時間：36:00\nA面\n1.目を閉じて-イージーレインドロップ 3:27\n2.シエスタよ背伸びをして-ケープピアニスト 3:20\n3.緑のゆず-イージーレインドロップ 3:11\n（横に丸い果物が描かれている）\n4.音を立て過ぎゆくは夜-マックスD.C.児童合唱団 3:30\n（それまでと色の違うペンで「小さい頃に聞いた曲、ずっと探していた」と書かれている）\n5.地下トンネル、地に落ちたコーン-ベスグランデ 4:32\n（読点の下に瞼を閉じた目が描かれている）\nB面\n1.我が災難-ノンビリバーズ 5:31\n（隣に赤く塗られたハートマークが描かれている）\n2.無罪宣告-ファイアアックス 4:37\n3.■■■■-■■ ■:■■\n（何重にも塗りたくられており、横にはまた違う色のペンで「リズムが合わない、これだとケガをする」と書かれている）\n（すぐ下では違う曲名に向けて矢印が書かれ、「ストームライダー-ファイアアックス 4:00」と書かれている）\n4.涙を取り戻して-ファンタジーレルム 3:30\n\nこれは私が作った二つ目の予備テープ。一つ目は水浸しになって、再生できなくなってしまった。\n今回作り直すにあたって、B面の曲を一つ換えた。元々入れていた曲はリズムが合わず、それに合わせて斧を振るえば呼吸が乱れてしまっていたからだ。\nしかし、曲を換えたことで総再生時間が22秒減り、テープの尺が余ってしまった。このままでは、リピート再生中に空白の時間ができてしまう。\n私が頭を悩ませていると、どこかの宿舎から楽器を練習する音が聞こえてきた。その傍らでカチカチと鳴るメトロノームの音がとても心地よく感じた。\nそこで私は、廊下で録音のボタンを押し、余った22秒の尺をメトロノームの音で補った。\n誰が演奏していたのかは分からなかったが、とても感謝している。\n今や私は、たくさんの文字を書けるようになった。だからこうした出来事を記録しておくことにする。\n医療部のオペレーターからも、自分の気持ちをなるべく多く記録しておくよう勧められたが、常に変化し続ける気持ちをどうやって文字にすればいいのかわからない。\nテープにA面とB面があるように、気持ちというのも色々で、いつもコロコロと変わるものだ。\n私は、気持ちの変化が刻むそのリズムが好きだ。まるでドラムビートやメトロノームのような、それが。\n一人でいる時の静かなリズムも、任務を行う時の激しいリズムも――すべては私だけの、決して止まることのないリズムだ。\nもうこのメモには書くところがないし、この辺りにしておこう。"
+      "desc": "リュックの内ポケットの二列目に入れてある。リュックを洗濯する際は必ず取り出すこと。\n――フロストリーフの私有物。勝手にとらないように。\n予備用テープNo.2　曲リスト\n総再生時間：36:00\nA面\n1.目を閉じて-イージーレインドロップ 3:27\n2.シエスタよ背伸びをして-ケープピアニスト 3:20\n3.緑のゆず-イージーレインドロップ 3:11\n（横に丸い果物が描かれている）\n4.音を立て過ぎゆくは夜-マックスD.C.児童合唱団 3:30\n（それまでと色の違うペンで「小さい頃に聞いた曲、ずっと探していた」と書かれている）\n5.地下トンネル、地に落ちたコーン-ベスグランデ 4:32\n（読点の下に瞼を閉じた目が描かれている）\nB面\n1.我が災難-ノンビリバーズ 5:31\n（隣に赤く塗られたハートマークが描かれている）\n2.無罪宣告-ファイアアックス 4:37\n3.■■■■-■■ ■:■■\n（何重にも塗りたくられており、横にはまた違う色のペンで「リズムが合わない、これだとケガをする」と書かれている）\n（すぐ下では違う曲名に向けて矢印が書かれ、「ストームライダー-ファイアアックス 4:00」と書かれている）\n4.涙を取り戻して-ファンタジーレルム 3:30\n\nこれは私が作った二つ目の予備テープ。一つ目は水浸しになって、再生できなくなってしまった。\n今回作り直すにあたって、B面の曲を一つ換えた。元々入れていた曲はリズムが合わず、それに合わせて斧を振るえば呼吸が乱れてしまっていたからだ。\nしかし、曲を換えたことで総再生時間が22秒減り、テープの尺が余ってしまった。このままでは、リピート再生中に空白の時間ができてしまう。\n私が頭を悩ませていると、どこかの宿舎から楽器を練習する音が聞こえてきた。その傍らでカチカチと鳴るメトロノームの音がとても心地よく感じた。\nそこで私は、廊下で録音のボタンを押し、余った22秒の尺をメトロノームの音で補った。\n誰が演奏していたのかは分からなかったが、とても感謝している。\n今や私は、たくさんの文字を書けるようになった。だからこうした出来事を記録しておくことにする。\n医療部のオペレーターからも、自分の気持ちをなるべく多く記録しておくよう勧められたが、常に変化し続ける気持ちをどうやって文字にすればいいのかわからない。\nテープにA面とB面があるように、気持ちというのも色々で、いつもコロコロと変わるものだ。\n私は、気持ちの変化が刻むそのリズムが好きだ。まるでドラムビートやメトロノームのような、それが。\n一人でいる時の静かなリズムも、任務を行う時の激しいリズムも――すべては私だけの、決して止まることのないリズムだ。\nもうこのメモには書くところがないし、この辺りにしておこう。",
+      "typeIcon": "lor-x",
+      "uniEquipIcon": "uniequip_002_frostl",
+      "typeName1": "LOR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_frostl_1",
+        "uniequip_002_frostl_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30053",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30103",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31013",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 34,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に追加で攻撃力の<@ba.vup>{atk_scale_m:0%}</>の術ダメージを与える",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 41,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に追加で攻撃力の<@ba.vup>{atk_scale_m:0%}</>の術ダメージを与える",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cold",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲が拡大し、通常攻撃が15%の確率で対象を1.5秒間<$ba.cold>寒冷</>状態にするが、攻撃間隔がわずかに延長",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "援護攻撃",
+                  "description": null,
+                  "rangeId": "3-1",
+                  "blackboard": [
+                    {
+                      "key": "base_attack_time",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に追加で攻撃力の<@ba.vup>{atk_scale_m:0%}</>の術ダメージを与える",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cold",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲が拡大し、通常攻撃が25%の確率で対象を1.5秒間<$ba.cold>寒冷</>状態にするが、攻撃間隔がわずかに延長",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "援護攻撃",
+                  "description": null,
+                  "rangeId": "3-1",
+                  "blackboard": [
+                    {
+                      "key": "base_attack_time",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1083,5 +1666,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

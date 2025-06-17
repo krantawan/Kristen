@@ -151,6 +151,28 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_427_vigil#1",
@@ -720,16 +742,820 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 80,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "群狼の統率者",
+          "description": "戦術召集点に2体の「狼の隻影」から成る「狼の群れ」を援軍として召喚可能\n30秒ごとに「狼の隻影」が1体増える（最大計3体まで。「狼の隻影」1体につき、「狼の群れ」のブロック数+1、攻撃時のダメージ発生回数+1）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10028_vigil_wolf",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "群狼の統率者",
+          "description": "戦術召集点に2体の「狼の隻影」から成る「狼の群れ」を援軍として召喚可能\n27秒ごとに「狼の隻影」が1体増える（最大計3体まで。「狼の隻影」1体につき、「狼の群れ」のブロック数+1、攻撃時のダメージ発生回数+1）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10028_vigil_wolf",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "群狼の統率者",
+          "description": "戦術召集点に2体の「狼の隻影」から成る「狼の群れ」を援軍として召喚可能\n25秒ごとに「狼の隻影」が1体増える（最大計3体まで。「狼の隻影」1体につき、「狼の群れ」のブロック数+1、攻撃時のダメージ発生回数+1）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10028_vigil_wolf",
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "飢えたる群狼",
+          "description": "「狼の群れ」にブロックされている敵を攻撃時、ヴィジェルと「狼の群れ」が対象の防御力を175無視",
+          "blackboard": [
+            {
+              "key": "def_penetrate_fixed",
+              "value": 175,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "飢えたる群狼",
+          "description": "「狼の群れ」にブロックされている敵を攻撃時、ヴィジェルと「狼の群れ」が対象の防御力を200<@ba.talpu>（+25）</>無視",
+          "blackboard": [
+            {
+              "key": "def_penetrate_fixed",
+              "value": 200,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_vigil",
       "moduleName": "ヴィジェルの記章",
-      "desc": "ヴィジェルは戦術召集点を設置して援軍を呼び、後続の展開に余裕を持たせる戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては先鋒オペレーターとして区分し、戦術家の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ヴィジェルは戦術召集点を設置して援軍を呼び、後続の展開に余裕を持たせる戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては先鋒オペレーターとして区分し、戦術家の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_vigil",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_vigil",
       "moduleName": "シラクーザ式入門の証",
-      "desc": "靴磨きは恐る恐るベッローネファミリーの応接室へ入った。\nその不安は、ここがベッローネファミリーの敷地であることから来るものではない。彼はベルナルドのために三十年も革靴を磨いてきており、ベルナルドのほうも常に自身を尊重する者たちに敬意を表していた。彼が最後にこの場所を訪れたのは、ベルナルドに息子の名を付けてもらう時だった。\n彼が今日こうして畏れ多い様子で腰掛けているのは、相手がベルナルドだからではなく、その息子レオントゥッツォだからだ。\n彼はこれまで、この若旦那についてはあまり聞いたことがない。ただ彼が、一度も自分に靴磨きを頼んだことがないことだけは知っていた。\n「親父はしばらく留守にしている。だが、俺のことは親父と同じように信頼してくれて構わない。」\n青年の言葉には不思議な力があるようで、靴磨きは少し安堵して、彼がここに来ざるを得なかった理由を述べた――\n曰く、彼にはカタギの息子がおり、クルビアからやってきた女性と恋に落ちたのだが、その女性には一方的に思いを寄せてくる横暴な求婚者がいたらしい。その求婚者は息子の存在を目障りに感じたのか、三日前の夜に息子を待ち伏せし、重傷を負わせたのだという。靴磨きは裁判所に助けを求めようとしたが、その求婚者はクルビア系のとあるファミリーに属する人物で、相手の雇った弁護士によっていとも容易く無罪にされてしまったとのことだった。\n「私が裁判所を出た時、そいつが近付いてきたと思えば、少しの紙幣を握らせてきたのです。そしてニヤニヤしながら、息子の治療代にでも充ててやれと言ってきました。私は……」靴磨きは話しているうちに、その乾ききった目から涙をどっと溢れさせた。\nレオントゥッツォは静かに耳を傾けていた。もし親父がここにいたら、きっと靴磨きの肩を優しく叩いて彼を慰め、彼の痛みを尊重しながら、人情味溢れる解決策を提示してくれるに違いないと、彼はそう思った。\n普通なら、いわゆる「解決策」というのは血を見るようなものになる。\nだが、彼はそんなことはしない。\n「あなたの望みは？」\n「敬愛なるレオントゥッツォさん、私の望みはただ一つです。私はただ、正義の執行を願っているのです。」\n「正義か。奴らにも、息子と同じ苦しみを味わわせてやりたいという意味と考えてもいいだろうか？」\n「はい、それ以外には何も望みません。」\nレオントゥッツォが指を鳴らすと、赤髪の青年が裏から現れた。\n「ディーマ、まずはそいつのバックについているファミリーを調べてくれ。」\n「そのくらいなら簡単だが、その後はどうする？」\n「俺の記憶が確かなら、あの手のクルビア系ファミリーの連中は俺たちを介さずシラクーザの地元政府と関係を構築しようとしていたはずだ。それならこちら側から、シラクーザにいるファミリーを挙げてクルビアの開拓地に『人材』を派遣するという法案を出してやろう。うちからは、元々追放処分予定の奴を数人出せばいい。」\n赤髪の青年が指を鳴らした。「それで、向こうのファミリーからはそいつが送り込まれるように仕向けると？」\n「そうだ。」\n「了解。」\nそう言って青年は部屋を後にした。レオントゥッツォは驚いた様子の靴磨きに向き直ると、「こちらから提供できる正義は、こういったものだ。満足していただけただろうか？」と尋ねる。\n靴磨きはすぐにその策の目的を理解し、レオントゥッツォに向けていた困惑の眼差しをたちまち感謝の眼差しへと変えた。\n「そうだ、これを受け取ってくれ。」\n「これは……」\n「俺の『銃』だ。それを靴磨き道具の横にでも置いてくれたらいい。そうすれば、もう邪魔者は寄ってこないはずだ。」\n「しかし――」\n「安心してくれ、そいつは滅多に使わないものなんだ。あなたがぐっすり眠れるようになったら、うちの屋敷の門番にでも届けてくれればいい。」"
+      "desc": "靴磨きは恐る恐るベッローネファミリーの応接室へ入った。\nその不安は、ここがベッローネファミリーの敷地であることから来るものではない。彼はベルナルドのために三十年も革靴を磨いてきており、ベルナルドのほうも常に自身を尊重する者たちに敬意を表していた。彼が最後にこの場所を訪れたのは、ベルナルドに息子の名を付けてもらう時だった。\n彼が今日こうして畏れ多い様子で腰掛けているのは、相手がベルナルドだからではなく、その息子レオントゥッツォだからだ。\n彼はこれまで、この若旦那についてはあまり聞いたことがない。ただ彼が、一度も自分に靴磨きを頼んだことがないことだけは知っていた。\n「親父はしばらく留守にしている。だが、俺のことは親父と同じように信頼してくれて構わない。」\n青年の言葉には不思議な力があるようで、靴磨きは少し安堵して、彼がここに来ざるを得なかった理由を述べた――\n曰く、彼にはカタギの息子がおり、クルビアからやってきた女性と恋に落ちたのだが、その女性には一方的に思いを寄せてくる横暴な求婚者がいたらしい。その求婚者は息子の存在を目障りに感じたのか、三日前の夜に息子を待ち伏せし、重傷を負わせたのだという。靴磨きは裁判所に助けを求めようとしたが、その求婚者はクルビア系のとあるファミリーに属する人物で、相手の雇った弁護士によっていとも容易く無罪にされてしまったとのことだった。\n「私が裁判所を出た時、そいつが近付いてきたと思えば、少しの紙幣を握らせてきたのです。そしてニヤニヤしながら、息子の治療代にでも充ててやれと言ってきました。私は……」靴磨きは話しているうちに、その乾ききった目から涙をどっと溢れさせた。\nレオントゥッツォは静かに耳を傾けていた。もし親父がここにいたら、きっと靴磨きの肩を優しく叩いて彼を慰め、彼の痛みを尊重しながら、人情味溢れる解決策を提示してくれるに違いないと、彼はそう思った。\n普通なら、いわゆる「解決策」というのは血を見るようなものになる。\nだが、彼はそんなことはしない。\n「あなたの望みは？」\n「敬愛なるレオントゥッツォさん、私の望みはただ一つです。私はただ、正義の執行を願っているのです。」\n「正義か。奴らにも、息子と同じ苦しみを味わわせてやりたいという意味と考えてもいいだろうか？」\n「はい、それ以外には何も望みません。」\nレオントゥッツォが指を鳴らすと、赤髪の青年が裏から現れた。\n「ディーマ、まずはそいつのバックについているファミリーを調べてくれ。」\n「そのくらいなら簡単だが、その後はどうする？」\n「俺の記憶が確かなら、あの手のクルビア系ファミリーの連中は俺たちを介さずシラクーザの地元政府と関係を構築しようとしていたはずだ。それならこちら側から、シラクーザにいるファミリーを挙げてクルビアの開拓地に『人材』を派遣するという法案を出してやろう。うちからは、元々追放処分予定の奴を数人出せばいい。」\n赤髪の青年が指を鳴らした。「それで、向こうのファミリーからはそいつが送り込まれるように仕向けると？」\n「そうだ。」\n「了解。」\nそう言って青年は部屋を後にした。レオントゥッツォは驚いた様子の靴磨きに向き直ると、「こちらから提供できる正義は、こういったものだ。満足していただけただろうか？」と尋ねる。\n靴磨きはすぐにその策の目的を理解し、レオントゥッツォに向けていた困惑の眼差しをたちまち感謝の眼差しへと変えた。\n「そうだ、これを受け取ってくれ。」\n「これは……」\n「俺の『銃』だ。それを靴磨き道具の横にでも置いてくれたらいい。そうすれば、もう邪魔者は寄ってこないはずだ。」\n「しかし――」\n「安心してくれ、そいつは滅多に使わないものなんだ。あなたがぐっすり眠れるようになったら、うちの屋敷の門番にでも届けてくれればいい。」",
+      "typeIcon": "tac-x",
+      "uniEquipIcon": "uniequip_002_vigil",
+      "typeName1": "TAC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_vigil_1",
+        "uniequip_002_vigil_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が150%まで上昇\n援軍はブロックしている敵からの被ダメージ-<@ba.kw>15%</>。",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "evade_duration",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が150%まで上昇\n援軍はブロックしている敵からの被ダメージ-<@ba.kw>15%</>。",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "evade_duration",
+                      "value": 7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "戦術召集点に3体の「狼の隻影」から成る「狼の群れ」を援軍として召喚可能。25秒ごとに「狼の隻影」が1体増える（最大計3体まで。「狼の隻影」1体につき、「狼の群れ」のブロック数+1、攻撃時のダメージ発生回数+1。「狼の隻影」が消滅するたびに「狼の群れ」の物理回避が7秒間+30%）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "群狼の統率者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10028_vigil_wolf",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "25秒ごとに「狼の隻影」が1体増える（最大計3体まで）。「狼の隻影」が1体出現するごとに「狼の群れ」のブロック数+1、ダメージ発生回数+1。群れに「狼の隻影」が2体以上存在する場合、「狼の群れ」が致命的なダメージを受ける時、群れにいる「狼の隻影」が1体消滅し、「狼の群れ」のHPが最大値まで回復すると同時に「狼の群れ」の物理回避が7秒間+30%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "群狼の統率者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "vigil_wolf_t_1_enhance[trigger].max_stack_cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "vigil_wolf_t_1_enhance[trigger].interval",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "vigil_wolf_t_1_enhance[trigger].block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が150%まで上昇\n援軍はブロックしている敵からの被ダメージ-<@ba.kw>15%</>。",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "evade_duration",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "戦術召集点に3体の「狼の隻影」から成る「狼の群れ」を援軍として召喚可能。25秒ごとに「狼の隻影」が1体増える（最大計3体まで。「狼の隻影」1体につき、「狼の群れ」のブロック数+1、攻撃時のダメージ発生回数+1。「狼の隻影」が消滅するたびに「狼の群れ」の物理回避が10秒間+50%）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "群狼の統率者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10028_vigil_wolf",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "25秒ごとに「狼の隻影」が1体増える（最大計3体まで）。「狼の隻影」が1体出現するごとに「狼の群れ」のブロック数+1、ダメージ発生回数+1。群れに「狼の隻影」が2体以上存在する場合、「狼の群れ」が致命的なダメージを受ける時、群れにいる「狼の隻影」が1体消滅し、「狼の群れ」のHPが最大値まで回復すると同時に「狼の群れ」の物理回避が10秒間+50%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "群狼の統率者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "vigil_wolf_t_1_enhance[trigger].max_stack_cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "vigil_wolf_t_1_enhance[trigger].interval",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "vigil_wolf_t_1_enhance[trigger].block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1182,6 +2008,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10028_vigil_wolf"
   ],
   "patch_info": {}
 }

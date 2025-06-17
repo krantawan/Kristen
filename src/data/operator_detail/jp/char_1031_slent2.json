@@ -152,6 +152,28 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "heal_scale",
+            "value": 0.75,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1031_slent2#1",
@@ -713,16 +735,702 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 350,
+        "atk": 55,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "無言の支え",
+          "description": "攻撃範囲内の味方全員に8%の<$ba.protect>加護</>を付与する。味方のHPが低いほど効果が強まる（最大効果値：HPが最大値の30%未満時、15%の<$ba.protect>加護</>を獲得）",
+          "blackboard": [
+            {
+              "key": "damage_resistance_base",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "resistance_scale",
+              "value": 0.0125,
+              "valueStr": null
+            },
+            {
+              "key": "hp_ratio",
+              "value": 0.01,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "無言の支え",
+          "description": "攻撃範囲内の味方全員に10%の<$ba.protect>加護</>を付与する。味方のHPが低いほど効果が強まる（最大効果値：HPが最大値の30%未満時、24%の<$ba.protect>加護</>を獲得）",
+          "blackboard": [
+            {
+              "key": "damage_resistance_base",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "resistance_scale",
+              "value": 0.02,
+              "valueStr": null
+            },
+            {
+              "key": "hp_ratio",
+              "value": 0.01,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "庇護の翼",
+          "description": "1秒ごとに攻撃範囲内のHPが最大値の50%未満の味方のHPを、淬羽サイレンスの攻撃力の5%回復。味方【ライン生命】に対する効果値倍増",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "atk_to_hp_recovery_ratio",
+              "value": 0.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "庇護の翼",
+          "description": "1秒ごとに攻撃範囲内のHPが最大値の50%未満の味方のHPを、淬羽サイレンスの攻撃力の6%<@ba.talpu>（+1%）</>回復。味方【ライン生命】に対する効果値倍増",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "atk_to_hp_recovery_ratio",
+              "value": 0.06,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_slent2",
       "moduleName": "淬羽サイレンスの記章",
-      "desc": "淬羽サイレンスは味方に持続的な防護の提供に秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、祈祷師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "淬羽サイレンスは味方に持続的な防護の提供に秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、祈祷師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_slent2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_slent2",
       "moduleName": "明晰な思考の助け",
-      "desc": "この先に、サイレンスの新しいオフィスがある。\nその場所へと歩んでいく彼女の傍らには、要人警護の規則に則り、二人の警備課職員が彼女の荷物を携えて立っていた。\nそう、今や彼女は要人と呼ばれる存在になったのだ。\nここは統括執務室の下の階で、各種事務系のオフィスも同じ階に集められている。\n彼女にとっては知らない場所でもなかったが、なにやら今日は冷房が少し肌寒く、靴音がいつもより響く上に、周囲からは……刺すような視線を感じて、彼女はたまらずため息をついた。\nけれどそんな気も知らず、後ろに控えた警備課職員の一人は、内心その姿に尊敬の念を募らせていた。\nというのも、そのため息を就任早々ライン生命の未来を憂えて発したものと捉えたからだ。\nその時、彼の端末が鳴る。何か連絡が来たようで、彼はそれに小声で応答すると、通信を切った。\n「何かあったの？」\n「いえ、どうぞご心配なく。たいしたことではありません。誰かがエンジニア課のパイプラインを勝手に使って何かを送ったようでして、それを同僚が追跡しているだけのようです。」\nともあれ、オフィスはもうすぐそこだ。\n警備課の職員は慣れた手つきでドアを操作すると、「どうぞ」と彼女を促した。\n『――認証完了。ようこそ、コンポーネント統括課特別顧問、オリヴィア・サイレンス女史。』\n彼女はドアを開け、オフィスへと足を踏み入れる。\n警備課の職員は荷物をローテーブルの上に置くと、彼女がうなずいて見せたのを合図に出て行った。\n部屋の中を見渡せば、そこは標準的な大型オフィスで、イフリータが走り回っても余りあるような広さだった。\nと、感慨に浸る間もなく、背後の扉が突然開くと、すぐに閉まる。\n「まだ何か――」彼女は言いかけた言葉を呑み込んだ。そこにいたのは、人間ではなく……\n「ミーボ！？」そう、それは紛れもなく、あのメイヤーの自信作だ。\nミーボが背負った袋の中にはコーヒー豆とコップが入っており、一通の手紙が添えられていた。無論、その筆跡はメイヤーのものだ。\n『お祝いに何を贈ろうかずっと考えてたところに、ジョイスがコーヒー豆をあげるつもりだって聞いたから、ビビッと来て特別仕様のミーボを作ってみたよ。』\n『君が出発するまでに間に合わせられなかったから、完成したら郵送しようと思ってたんだけど、統括課の人に聞いたら君宛てのプレゼントがもう山積みで、安全検査だけでも半月かかるって話で、待ちきれなくてエンジニア課のパイプラインを拝借しちゃった。』\nそんな手紙を読んでいると扉をノックする音が響いた。\nまずい、とサイレンスは思う。もしミーボに気づかれたら――\nだが、顔を上げてみれば、ミーボは新しいデスクに飛び乗り、複雑な変形過程を経て、コーヒーメーカーに早変わりしたところだった。\nそこへ、警備課の職員が申し訳なさそうに入ってくる。\n「申し訳ありません、サイレンスさん。例のパイプラインで送られた荷物、どうやらこのオフィスに届いたようなのですが……おや、そちらは？」\nサイレンスは反射的に答えた。\n「ただのコーヒーメーカーだよ。」\n「ですが……」\n「昇進祝いに友達が贈ってくれたの。何か問題でも？」\nサイレンスはそう言いつつ、コーヒー豆をミーボの中に入れ、なるべく手慣れたふうを装ってコーヒーを淹れようとした。\n――えっと、ボタンはこれかな？あっ、よかった、合ってそうだ……などと思いながら。\n「いいえ、異常がないようでしたら問題ありません。失礼いたしました。」\n警備課の職員は疑う様子もなく身を翻して出て行き、彼女は安堵の息をついた。\nそういえば、と手紙の続きに目を落とせば、こんなことが書かれていた。\n『送別会でも言ったけど、改めて昇進おめでとう、サイレンス！次、本部に帰った時は遊びに行くからね！』\nその文言に、彼女は少し心が軽くなった気がした。\n以前とは変わったことも確かにあるが、ずっと変わらないこともあるようだ。\nこのコーヒーメーカーがあれば、眠気に負けずに明晰な思考を保ち続けられるはずだと、彼女は思った。"
+      "desc": "この先に、サイレンスの新しいオフィスがある。\nその場所へと歩んでいく彼女の傍らには、要人警護の規則に則り、二人の警備課職員が彼女の荷物を携えて立っていた。\nそう、今や彼女は要人と呼ばれる存在になったのだ。\nここは統括執務室の下の階で、各種事務系のオフィスも同じ階に集められている。\n彼女にとっては知らない場所でもなかったが、なにやら今日は冷房が少し肌寒く、靴音がいつもより響く上に、周囲からは……刺すような視線を感じて、彼女はたまらずため息をついた。\nけれどそんな気も知らず、後ろに控えた警備課職員の一人は、内心その姿に尊敬の念を募らせていた。\nというのも、そのため息を就任早々ライン生命の未来を憂えて発したものと捉えたからだ。\nその時、彼の端末が鳴る。何か連絡が来たようで、彼はそれに小声で応答すると、通信を切った。\n「何かあったの？」\n「いえ、どうぞご心配なく。たいしたことではありません。誰かがエンジニア課のパイプラインを勝手に使って何かを送ったようでして、それを同僚が追跡しているだけのようです。」\nともあれ、オフィスはもうすぐそこだ。\n警備課の職員は慣れた手つきでドアを操作すると、「どうぞ」と彼女を促した。\n『――認証完了。ようこそ、コンポーネント統括課特別顧問、オリヴィア・サイレンス女史。』\n彼女はドアを開け、オフィスへと足を踏み入れる。\n警備課の職員は荷物をローテーブルの上に置くと、彼女がうなずいて見せたのを合図に出て行った。\n部屋の中を見渡せば、そこは標準的な大型オフィスで、イフリータが走り回っても余りあるような広さだった。\nと、感慨に浸る間もなく、背後の扉が突然開くと、すぐに閉まる。\n「まだ何か――」彼女は言いかけた言葉を呑み込んだ。そこにいたのは、人間ではなく……\n「ミーボ！？」そう、それは紛れもなく、あのメイヤーの自信作だ。\nミーボが背負った袋の中にはコーヒー豆とコップが入っており、一通の手紙が添えられていた。無論、その筆跡はメイヤーのものだ。\n『お祝いに何を贈ろうかずっと考えてたところに、ジョイスがコーヒー豆をあげるつもりだって聞いたから、ビビッと来て特別仕様のミーボを作ってみたよ。』\n『君が出発するまでに間に合わせられなかったから、完成したら郵送しようと思ってたんだけど、統括課の人に聞いたら君宛てのプレゼントがもう山積みで、安全検査だけでも半月かかるって話で、待ちきれなくてエンジニア課のパイプラインを拝借しちゃった。』\nそんな手紙を読んでいると扉をノックする音が響いた。\nまずい、とサイレンスは思う。もしミーボに気づかれたら――\nだが、顔を上げてみれば、ミーボは新しいデスクに飛び乗り、複雑な変形過程を経て、コーヒーメーカーに早変わりしたところだった。\nそこへ、警備課の職員が申し訳なさそうに入ってくる。\n「申し訳ありません、サイレンスさん。例のパイプラインで送られた荷物、どうやらこのオフィスに届いたようなのですが……おや、そちらは？」\nサイレンスは反射的に答えた。\n「ただのコーヒーメーカーだよ。」\n「ですが……」\n「昇進祝いに友達が贈ってくれたの。何か問題でも？」\nサイレンスはそう言いつつ、コーヒー豆をミーボの中に入れ、なるべく手慣れたふうを装ってコーヒーを淹れようとした。\n――えっと、ボタンはこれかな？あっ、よかった、合ってそうだ……などと思いながら。\n「いいえ、異常がないようでしたら問題ありません。失礼いたしました。」\n警備課の職員は疑う様子もなく身を翻して出て行き、彼女は安堵の息をついた。\nそういえば、と手紙の続きに目を落とせば、こんなことが書かれていた。\n『送別会でも言ったけど、改めて昇進おめでとう、サイレンス！次、本部に帰った時は遊びに行くからね！』\nその文言に、彼女は少し心が軽くなった気がした。\n以前とは変わったことも確かにあるが、ずっと変わらないこともあるようだ。\nこのコーヒーメーカーがあれば、眠気に負けずに明晰な思考を保ち続けられるはずだと、彼女は思った。",
+      "typeIcon": "bls-x",
+      "uniEquipIcon": "uniequip_002_slent2",
+      "typeName1": "BLS",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_slent2_1",
+        "uniequip_002_slent2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "20_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.06,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の味方の最大HP+6%、さらに範囲内のHPが最大値の50%未満の味方に対して、1秒ごとに淬羽サイレンスの攻撃力の6%のHPを回復させる。味方【ライン生命】に対する効果値倍増",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "庇護の翼",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.06,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の味方の最大HP+6%、さらに範囲内のHPが最大値の50%未満の味方に対して、1秒ごとに淬羽サイレンスの攻撃力の7%<@ba.talpu>（+1%）</>のHPを回復させる。味方【ライン生命】に対する効果値倍増",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "庇護の翼",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.07,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "20_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の味方の最大HP+10%、さらに範囲内のHPが最大値の50%未満の味方に対して、1秒ごとに淬羽サイレンスの攻撃力の7%のHPを回復させる。味方【ライン生命】に対する効果値倍増",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "庇護の翼",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.07,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の味方の最大HP+10%、さらに範囲内のHPが最大値の50%未満の味方に対して、1秒ごとに淬羽サイレンスの攻撃力の8%<@ba.talpu>（+1%）</>のHPを回復させる。味方【ライン生命】に対する効果値倍増",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "庇護の翼",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1175,6 +1883,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10029_slent2_protrb"
   ],
   "patch_info": {}
 }

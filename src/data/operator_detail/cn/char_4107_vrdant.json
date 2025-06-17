@@ -169,6 +169,52 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "duration",
+            "value": 20,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "atk",
+            "value": 0,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_hp",
+            "value": 0,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "3",
+          "value": {
+            "key": "talent_override_rangeid_flag",
+            "value": 1,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "受到致命伤时不撤退，切换成<替身>作战（替身阻挡数为0），持续20秒后自身再次替换<替身>",
+      "prefabKey": "-1",
+      "rangeId": "x-4"
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4107_vrdant#1",
@@ -651,16 +697,632 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "生命上限+160",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 160,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 100,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "植物自愈力",
+          "description": "<替身>每秒回复2%生命值",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.02,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "植物自愈力",
+          "description": "<替身>每秒回复2.5%<@ba.talpu>（+0.5%）</>生命值",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.025,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "植物自愈力",
+          "description": "<替身>每秒回复3.5%生命值",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.035,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "植物自愈力",
+          "description": "<替身>每秒回复4%<@ba.talpu>（+0.5%）</>生命值",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.04,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_vrdant",
       "moduleName": "维荻证章",
-      "desc": "干员维荻擅长于战场上同敌人反复周旋\n根据外勤部门决议\n在外勤任务中划分为特种干员，行使傀儡师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员维荻擅长于战场上同敌人反复周旋\n根据外勤部门决议\n在外勤任务中划分为特种干员，行使傀儡师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_vrdant",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_vrdant",
       "moduleName": "密林撷萃",
-      "desc": "维荻刚朝前迈出一步，灌木丛中就突然伸出一根比手臂还粗的藤蔓，直奔他的腰间。一旁的向导甩出投矛，藤蔓像是有意识一样缩回了灌木丛中。\n“怎么会这么粗？！”\n向导搔了搔头：“就这么粗呀。你不就冲着它来的吗，咋可能不知道？”\n“出发前老板可不是这么说的，”维荻叹了口气，“在他嘴里，这是阿卡胡拉密林深处活泼好动的食虫植物，养一盆就可以一劳永逸摆脱室内源石虫困扰，必将成为维多利亚上流人士的新宠......”\n向导听得半懂不懂，只好问道：“那你还要不要？”\n维荻双手抱头：“我再想想吧，采不到样品老板肯定大发雷霆，可我总得先想想怎么把命保住。”\n“啊？保命？出发前你不是说我们部族的勇士你一个人能打五个吗？这玩意儿五个人肯定对付得过来，要不然酋长咋可能只让我一个人跟你过来？”\n“这......你就当这是一种工作需要......”\n一根藤蔓在此时悄悄缠上向导的脚踝，要把他拖进灌木丛里。维荻赶忙拉住向导的手，但藤蔓的力气大得出奇，维荻甚至能感受到自己的鞋钉正在像犁一样翻开脚下的土地。\n维荻在心里暗骂了老板一声，单手给手锯换上液罐，对着向导的脚踝扣动扳机。药雾喷出，很快，从向导脚上的藤蔓开始，整个灌木丛都变得一片枯黄。\n向导一骨碌从地上爬起来：“哥们，多亏了你！现在怎么说，可以把那玩意儿摘回来了吧！”\n“别想了，我刚喷的是最强效的落叶剂，现在整株植物都保不住，采回去也没用了。”\n“没关系，还有下回！有你的神药，下回肯定能行！”\n“唔，嗯。”\n“我跟你说，我们部族最讨厌说大话的人了，刚才看你那样子，我还以为你也是个不靠谱的，可你一下就把那玩意儿干掉了！你说你能打五个，我信！”\n“那、那当然了。”\n“回了部族我得告诉所有人，你是——这个！”向导对维荻竖起大拇指，“到时候可能有人来找你摔跤，你肯定没问题！你那神药冲着人一喷，人肯定也软了，你这样的小个子也能轻松撂倒，哈哈哈哈！”\n向导突然打开了话匣子，维荻红着脸听着，想到自称提亚卡乌的人们轮番来找自己挑战的样子，不由得感到一阵恶寒。\n但和回去应付暴跳如雷的老板相比......他突然觉得这样也不坏。\n今晚就放下伪装，大吃大喝，然后做好被摔在地上几十遍的准备吧。"
+      "desc": "维荻刚朝前迈出一步，灌木丛中就突然伸出一根比手臂还粗的藤蔓，直奔他的腰间。一旁的向导甩出投矛，藤蔓像是有意识一样缩回了灌木丛中。\n“怎么会这么粗？！”\n向导搔了搔头：“就这么粗呀。你不就冲着它来的吗，咋可能不知道？”\n“出发前老板可不是这么说的，”维荻叹了口气，“在他嘴里，这是阿卡胡拉密林深处活泼好动的食虫植物，养一盆就可以一劳永逸摆脱室内源石虫困扰，必将成为维多利亚上流人士的新宠......”\n向导听得半懂不懂，只好问道：“那你还要不要？”\n维荻双手抱头：“我再想想吧，采不到样品老板肯定大发雷霆，可我总得先想想怎么把命保住。”\n“啊？保命？出发前你不是说我们部族的勇士你一个人能打五个吗？这玩意儿五个人肯定对付得过来，要不然酋长咋可能只让我一个人跟你过来？”\n“这......你就当这是一种工作需要......”\n一根藤蔓在此时悄悄缠上向导的脚踝，要把他拖进灌木丛里。维荻赶忙拉住向导的手，但藤蔓的力气大得出奇，维荻甚至能感受到自己的鞋钉正在像犁一样翻开脚下的土地。\n维荻在心里暗骂了老板一声，单手给手锯换上液罐，对着向导的脚踝扣动扳机。药雾喷出，很快，从向导脚上的藤蔓开始，整个灌木丛都变得一片枯黄。\n向导一骨碌从地上爬起来：“哥们，多亏了你！现在怎么说，可以把那玩意儿摘回来了吧！”\n“别想了，我刚喷的是最强效的落叶剂，现在整株植物都保不住，采回去也没用了。”\n“没关系，还有下回！有你的神药，下回肯定能行！”\n“唔，嗯。”\n“我跟你说，我们部族最讨厌说大话的人了，刚才看你那样子，我还以为你也是个不靠谱的，可你一下就把那玩意儿干掉了！你说你能打五个，我信！”\n“那、那当然了。”\n“回了部族我得告诉所有人，你是——这个！”向导对维荻竖起大拇指，“到时候可能有人来找你摔跤，你肯定没问题！你那神药冲着人一喷，人肯定也软了，你这样的小个子也能轻松撂倒，哈哈哈哈！”\n向导突然打开了话匣子，维荻红着脸听着，想到自称提亚卡乌的人们轮番来找自己挑战的样子，不由得感到一阵恶寒。\n但和回去应付暴跳如雷的老板相比......他突然觉得这样也不坏。\n今晚就放下伪装，大吃大喝，然后做好被摔在地上几十遍的准备吧。",
+      "typeIcon": "pum-y",
+      "uniEquipIcon": "uniequip_002_vrdant",
+      "typeName1": "PUM",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_vrdant_1",
+        "uniequip_002_vrdant_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31033",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31023",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31053",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 145,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "受到致命伤时不撤退，切换成<替身>作战（替身阻挡数为0但生命值<@ba.kw>提升</>），持续20秒后自身再次替换<替身>",
+                  "prefabKey": "-1",
+                  "rangeId": "x-4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "受到致命伤时不撤退，切换成<替身>作战（替身阻挡数为0但生命值<@ba.kw>提升</>），持续20秒后自身再次替换<替身>",
+                  "prefabKey": "-1",
+                  "rangeId": "x-4"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<替身>每秒回复3.5%生命值，法术抗性+5",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "植物自愈力",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.035,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<替身>每秒回复4%<@ba.talpu>（+0.5%）</>生命值，法术抗性+5",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "植物自愈力",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 185,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "受到致命伤时不撤退，切换成<替身>作战（替身阻挡数为0但生命值<@ba.kw>提升</>），持续20秒后自身再次替换<替身>",
+                  "prefabKey": "-1",
+                  "rangeId": "x-4"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<替身>每秒回复3.5%生命值，法术抗性+8",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "植物自愈力",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.035,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<替身>每秒回复4%<@ba.talpu>（+0.5%）</>生命值，法术抗性+8",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "植物自愈力",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1114,5 +1776,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

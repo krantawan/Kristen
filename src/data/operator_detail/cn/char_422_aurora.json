@@ -169,6 +169,7 @@
       "cost": 32
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_422_aurora#1",
@@ -667,16 +668,622 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+27",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 27,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 55,
+        "def": 55,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "低温休憩",
+          "description": "未开启技能且技力小于或等于最大值一半时，停止攻击并每秒恢复1.5%最大生命值",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.015,
+              "valueStr": null
+            },
+            {
+              "key": "sp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "低温休憩",
+          "description": "未开启技能且技力小于或等于最大值一半时，停止攻击并每秒恢复2%<@ba.talpu>（+0.5%）</>最大生命值",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.02,
+              "valueStr": null
+            },
+            {
+              "key": "sp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "低温休憩",
+          "description": "未开启技能且技力小于或等于最大值一半时，停止攻击并每秒恢复3%最大生命值",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.03,
+              "valueStr": null
+            },
+            {
+              "key": "sp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "低温休憩",
+          "description": "未开启技能且技力小于或等于最大值一半时，停止攻击并每秒恢复3.5%<@ba.talpu>（+0.5%）</>最大生命值",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.035,
+              "valueStr": null
+            },
+            {
+              "key": "sp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_aurora",
       "moduleName": "极光证章",
-      "desc": "干员极光擅长在抵挡伤害的同时迎战敌人\n根据外勤部门决议\n在外勤任务中划分为重装干员，行使决战者职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员极光擅长在抵挡伤害的同时迎战敌人\n根据外勤部门决议\n在外勤任务中划分为重装干员，行使决战者职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_aurora",
       "moduleName": "盾用摄制模块",
-      "desc": "麦麦，照片我收到了，谢谢你。极光很美，很......震撼，抱歉我找不到更好的词汇了。我还看了你传回罗德岛的其他资料，那朵黄色的小花，我没有想到极北的冰漠上居然能生长出那么美的花！真不可思议。\n“以辅助勘察员的身份加入接下来的科考计划”，我认真考虑了你的提议，并不是考虑“去”或者“不去”——虽然现阶段我还得留在本舰接受矿石病的治疗，而是我去了能帮到什么。听梅尔说过，在极寒条件下，龙腾无人机组的稳定性会受到影响，我在铸铁城理工大学就读期间辅修过科研摄制，所以我尝试在自己的盾牌上加装了一组摄制模块，让它能承担一定程度的拍摄与资料存储任务。比起无人机的话，我带着盾牌，应该能去到一些更特殊的地形，而且有它作为基础防护工事，稳定性的问题也能够解决。\n......\n麦麦，我由衷地敬佩你，在大家对于遥远之地仅有贫瘠的想象时，你已然深入其中，领略迷人的风光，感知生命的脉搏。我曾跟随科考团在北地冰原看见过极光，也正是那次，我修习到了人生的重要一课：不是每个地方都有谢拉格那样的雪山，都有耶拉冈德的庇佑，可每个地方都有无法用常理解释的美丽，黑流树海、环山平原......这种极致的景象其实和神灵无关，它们本就是泰拉的一部分。我忍不住地想，对这片大地，我们的所知所闻所为所信，到底有多么浅陋和狭隘。\n我无比想要再去看极光，去看冰漠，不是为了证明什么，仅仅是“想要去看”。银灰老爷说得对，想要保护谢拉格的话，就必须知道我们身处的，到底是怎样的天地。\n只有勇敢地向前探索，才能更好地守护我们身后的家园。而且，我有种预感，冰漠、极地，这些埋藏着秘密的遥远之地，早已被许多双眼睛注视着......\n所以，麦麦，等我准备好了，我一定会向博士提交申请的。\n......\n我的饭量......有点大，觉也比较多，不过请放心，工作的时候我会很认真，一定可以帮到你。\n\n——摘自干员极光发给干员麦哲伦的通讯记录"
+      "desc": "麦麦，照片我收到了，谢谢你。极光很美，很......震撼，抱歉我找不到更好的词汇了。我还看了你传回罗德岛的其他资料，那朵黄色的小花，我没有想到极北的冰漠上居然能生长出那么美的花！真不可思议。\n“以辅助勘察员的身份加入接下来的科考计划”，我认真考虑了你的提议，并不是考虑“去”或者“不去”——虽然现阶段我还得留在本舰接受矿石病的治疗，而是我去了能帮到什么。听梅尔说过，在极寒条件下，龙腾无人机组的稳定性会受到影响，我在铸铁城理工大学就读期间辅修过科研摄制，所以我尝试在自己的盾牌上加装了一组摄制模块，让它能承担一定程度的拍摄与资料存储任务。比起无人机的话，我带着盾牌，应该能去到一些更特殊的地形，而且有它作为基础防护工事，稳定性的问题也能够解决。\n......\n麦麦，我由衷地敬佩你，在大家对于遥远之地仅有贫瘠的想象时，你已然深入其中，领略迷人的风光，感知生命的脉搏。我曾跟随科考团在北地冰原看见过极光，也正是那次，我修习到了人生的重要一课：不是每个地方都有谢拉格那样的雪山，都有耶拉冈德的庇佑，可每个地方都有无法用常理解释的美丽，黑流树海、环山平原......这种极致的景象其实和神灵无关，它们本就是泰拉的一部分。我忍不住地想，对这片大地，我们的所知所闻所为所信，到底有多么浅陋和狭隘。\n我无比想要再去看极光，去看冰漠，不是为了证明什么，仅仅是“想要去看”。银灰老爷说得对，想要保护谢拉格的话，就必须知道我们身处的，到底是怎样的天地。\n只有勇敢地向前探索，才能更好地守护我们身后的家园。而且，我有种预感，冰漠、极地，这些埋藏着秘密的遥远之地，早已被许多双眼睛注视着......\n所以，麦麦，等我准备好了，我一定会向博士提交申请的。\n......\n我的饭量......有点大，觉也比较多，不过请放心，工作的时候我会很认真，一定可以帮到你。\n\n——摘自干员极光发给干员麦哲伦的通讯记录",
+      "typeIcon": "hes-x",
+      "uniEquipIcon": "uniequip_002_aurora",
+      "typeName1": "HES",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_aurora_1",
+        "uniequip_002_aurora_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "缓慢回复技力，只有阻挡敌人时恢复技力回复速度",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 320,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "缓慢回复技力，只有阻挡敌人时恢复技力回复速度",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "未开启技能且技力小于或等于最大值一半时，停止攻击并每秒恢复3.5%最大生命值",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "低温休憩",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.035,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "未开启技能且技力小于或等于最大值一半时，停止攻击并每秒恢复4%<@ba.talpu>（+0.5%）</>最大生命值",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "低温休憩",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 380,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 90,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "缓慢回复技力，只有阻挡敌人时恢复技力回复速度",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "未开启技能且技力小于或等于最大值一半时，停止攻击并每秒恢复4%最大生命值",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "低温休憩",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "未开启技能且技力小于或等于最大值一半时，停止攻击并每秒恢复4.5%<@ba.talpu>（+0.5%）</>最大生命值",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "低温休憩",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.045,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1130,5 +1737,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -151,6 +151,56 @@
       "cost": 25
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 30
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 1)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 2)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 70
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1030_noirc2#1",
@@ -622,16 +672,679 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ASPD +5",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 5,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -6 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 40,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Decisive",
+          "description": "Gains up to +30 ASPD and +30% DEF <$ba.berserk>Tenacity</> (reaches maximum bonus when missing 50% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 30,
+            "min_hp_ratio": 0.5,
+            "min_def": 0.3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Decisive",
+          "description": "Gains up to +40 ASPD and +40% DEF <$ba.berserk>Tenacity</> (reaches maximum bonus when missing 60% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 40,
+            "min_hp_ratio": 0.4,
+            "min_def": 0.4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Decisive",
+          "description": "Gains up to +50 ASPD and +50% DEF <$ba.berserk>Tenacity</> (reaches maximum bonus when missing 70% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 50,
+            "min_hp_ratio": 0.3,
+            "min_def": 0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Spirit",
+          "description": "Gains +3% ATK for every 5 attacks made while skill is inactive (stacks up to 3 times)",
+          "blackboard": {
+            "atk": 0.03,
+            "hit_num": 5,
+            "attack@clear_attackcount_time": 1.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Spirit",
+          "description": "Gains +5% ATK for every 5 attacks made while skill is inactive (stacks up to 3 times)",
+          "blackboard": {
+            "atk": 0.05,
+            "hit_num": 5,
+            "attack@clear_attackcount_time": 1.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Spirit",
+          "description": "Gains +7% ATK for every 5 attacks made while skill is inactive (stacks up to 3 times)",
+          "blackboard": {
+            "atk": 0.07,
+            "hit_num": 5,
+            "attack@clear_attackcount_time": 1.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_noirc2",
       "moduleName": "Rathalos S Noir Corne's Badge",
-      "desc": "Outfitted with a custom-craft kit, Operator Noir Corne has demonstrated a remarkable aptitude for solo confrontation with the enemy while far removed from support lines.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Musha responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Outfitted with a custom-craft kit, Operator Noir Corne has demonstrated a remarkable aptitude for solo confrontation with the enemy while far removed from support lines.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Musha responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_noirc2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_noirc2",
       "moduleName": "Noir Corne's Personal Notes",
-      "desc": "Part 1: Your Map is Made for Looking!\n......\nSection 2: Layout of R.I. Facilities\n(Hand-drawn diagrams. In all the winding lines, you can vaguely make out the distribution of facilities aboard the Island. The Training Room's location has a giant red ring circled around it.)\nAfter Yato finishes training, be sure to check if equipment is broken. Call for repairs ASAP!\n......\nSection 5: Map of Lungmen\n(A map cut out of a newspaper, with Rhodes Island branch office and safehouse positions marked.)\nRemind Yato, go to office FIRST for any problems!\nNote: If we knock and no one answers, don't let Yato kick down the door!\n......\nPart 2: Illustrated Guide to Nasty as Hell Guys\n......\nSection 3: Infused Originium Slugs\n(An extremely blurry photograph.)\nOriginium Slugs with yellow light coming from belly. Trouble at first sight. Blows everywhere after you beat it up, hurts like hell, BE CAREFUL. Remind Yato, don't rush straight in to cut them down!\nWARNING: If she already did, get your shield the hell up!\n......\nSection 27: Metal Crabs\n(Hand-drawn images, remarkably abstract.)\nInfected creature that glows all over. Don't know what part of it's weak. Basically hack away at it until it's done.\nSPECIAL NOTE: Better to just let Yato at this one!\n......\nPart 3: How to Use Your Weapons\n......\nSection 2: Shield\n(An overview cut out from an encyclopedia accompanies this entry.)\nI know this one. Wherever the sound and light comes from, you block in that direction, get your team behind you, and then you don't fall one single step back.\n......\nPart 4: Because You Learn Something New Every Day\n......\nSection 53: How to Give Other People Reminders\nAnyone but Yato: Tell them straight up what to do and you're fine.\nYato: She's pretty hasty, probably won't take it in if you just tell her once. Gotta sit her down first, then walk her through the reasons, and once she understands you're smooth sailing.\n......\nSection 237: Watch Out For Sunlight!\nYato's skin gets damaged VERY easy by sunlight. When changing surroundings, watch for the position of sunlight, block it off for her.\nDoesn't seem to need it anymore with her new equipment. Good stuff.\n......\nSection 561: Yato's Birthday\nMay 14th.\nBuddy, you're just grinding out numbers now! BUT IF there's an accident on a mission and all suddenly you forget a bunch... Yeah, better note this down.\n......\nTitle Page: To Whoever Picked Up This Notebook\nThis is Noir Corne, notebook's owner. If you picked this up but can't find me, then hand this over to Yato from Rhodes Island.\nAlso, please tell her for me, if she runs into any trouble she can take a good flick through these notes. My way of helping her out even when I'm not there by her side.\nThanks.\n—Extracts from Noir Corne's Personal Notes"
+      "desc": "Part 1: Your Map is Made for Looking!\n......\nSection 2: Layout of R.I. Facilities\n(Hand-drawn diagrams. In all the winding lines, you can vaguely make out the distribution of facilities aboard the Island. The Training Room's location has a giant red ring circled around it.)\nAfter Yato finishes training, be sure to check if equipment is broken. Call for repairs ASAP!\n......\nSection 5: Map of Lungmen\n(A map cut out of a newspaper, with Rhodes Island branch office and safehouse positions marked.)\nRemind Yato, go to office FIRST for any problems!\nNote: If we knock and no one answers, don't let Yato kick down the door!\n......\nPart 2: Illustrated Guide to Nasty as Hell Guys\n......\nSection 3: Infused Originium Slugs\n(An extremely blurry photograph.)\nOriginium Slugs with yellow light coming from belly. Trouble at first sight. Blows everywhere after you beat it up, hurts like hell, BE CAREFUL. Remind Yato, don't rush straight in to cut them down!\nWARNING: If she already did, get your shield the hell up!\n......\nSection 27: Metal Crabs\n(Hand-drawn images, remarkably abstract.)\nInfected creature that glows all over. Don't know what part of it's weak. Basically hack away at it until it's done.\nSPECIAL NOTE: Better to just let Yato at this one!\n......\nPart 3: How to Use Your Weapons\n......\nSection 2: Shield\n(An overview cut out from an encyclopedia accompanies this entry.)\nI know this one. Wherever the sound and light comes from, you block in that direction, get your team behind you, and then you don't fall one single step back.\n......\nPart 4: Because You Learn Something New Every Day\n......\nSection 53: How to Give Other People Reminders\nAnyone but Yato: Tell them straight up what to do and you're fine.\nYato: She's pretty hasty, probably won't take it in if you just tell her once. Gotta sit her down first, then walk her through the reasons, and once she understands you're smooth sailing.\n......\nSection 237: Watch Out For Sunlight!\nYato's skin gets damaged VERY easy by sunlight. When changing surroundings, watch for the position of sunlight, block it off for her.\nDoesn't seem to need it anymore with her new equipment. Good stuff.\n......\nSection 561: Yato's Birthday\nMay 14th.\nBuddy, you're just grinding out numbers now! BUT IF there's an accident on a mission and all suddenly you forget a bunch... Yeah, better note this down.\n......\nTitle Page: To Whoever Picked Up This Notebook\nThis is Noir Corne, notebook's owner. If you picked this up but can't find me, then hand this over to Yato from Rhodes Island.\nAlso, please tell her for me, if she runs into any trouble she can take a good flick through these notes. My way of helping her out even when I'm not there by her side.\nThanks.\n—Extracts from Noir Corne's Personal Notes",
+      "typeIcon": "sbl-x",
+      "uniEquipIcon": "uniequip_002_noirc2",
+      "typeName1": "SBL",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_noirc2_1",
+        "uniequip_002_noirc2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains +8% ATK for every 5 attacks made while skill is inactive (stacks up to 3 times)",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Spirit",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hit_num",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@clear_attackcount_time",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 500,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 36,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains +9% ATK for every 5 attacks made while skill is inactive (stacks up to 3 times)",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Spirit",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.09,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hit_num",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@clear_attackcount_time",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1055,5 +1768,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

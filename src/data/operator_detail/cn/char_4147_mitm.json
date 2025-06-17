@@ -169,6 +169,28 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4147_mitm#1",
@@ -668,16 +690,779 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击速度+8",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 8,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "废品战车",
+          "description": "可以在战术点召唤樱桃三号协助作战，其被击败后会在20秒后自动刷新，并在周围四格生成残骸",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10037_mitm_trshrb",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "废品战车",
+          "description": "可以在战术点召唤樱桃三号协助作战，其被击败后会在17秒后自动刷新，并在周围四格生成残骸",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10037_mitm_trshrb",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "废品战车",
+          "description": "可以在战术点召唤樱桃三号协助作战，其被击败后会在15秒后自动刷新，并在周围四格生成残骸",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10037_mitm_trshrb",
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mitm",
       "moduleName": "渡桥证章",
-      "desc": "干员渡桥擅长布设战术点召唤援军来争取部署空间\n根据外勤部门决议\n在外勤任务中划分为先锋干员，行使战术家职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员渡桥擅长布设战术点召唤援军来争取部署空间\n根据外勤部门决议\n在外勤任务中划分为先锋干员，行使战术家职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_mitm",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mitm",
       "moduleName": "内敛锋芒",
-      "desc": "“买这么多东西，你的购物凭证还够用吗？”正在挑选生活用品的干员看着那个被塞得鼓鼓囊囊的购物袋，不禁为渡桥担忧。\n“有几张优惠券快过期了，得赶紧用掉。”渡桥从货架后拖出一辆满到快溢出来的购物车。\n“居然还有这么多？不行，我得先去结账！千万不能排在你后面。”\n等渡桥抵达结账柜台时，来看热闹的人已经围成了一个圈。\n负责结账的后勤干员已经严阵以待：“来吧！”\n收银设备嘀嘀地响个不停，显示屏上的数字以夸张的速度增长着。\n“一共是......997.5龙门币！”\n“等一下，我要......”渡桥把手伸向大衣内袋。\n“要用干员个人积分结账吗？积分结账的95折优惠已经算进去了。”\n人群中响起零星的掌声。但那名后勤干员脸上没有笑意，他知道这场战斗才刚开始。\n“这样啊......”渡桥从大衣中拿出一大摞五颜六色的票券，“这些优惠券，也麻烦帮我用掉吧。”\n围观的人群开始躁动。\n“周年庆限时折扣券，还有新人干员早餐兑换券，这些都过期了。”后勤干员谨慎地从那一摞票券里挑出几张。\n收银设备又嘀嘀地响了起来，这次显示屏上的数字开始不断下降——\n一刻钟后。\n“103龙门币。”后勤干员的脸上终于绽放出笑意，“总算守住了100龙门币的大关。”\n渡桥皱起眉头，扫视一圈，目光停在对面的挂钟上。\n“算上这个。”渡桥拿起一盒口香糖，递给那名后勤干员，“另外，现在的时间是晚上八点过一分——八点以后，水果熟食可半价兑换。”\n后勤干员脸上的笑容凝固了。显示屏上的数字跳动了一下，变成了84.75。\n人群中爆发出欢呼声。\n“等等！”后勤干员仍不死心，他盯着渡桥尾巴上的购物袋，“你那一大袋子，还没结账吧？”\n渡桥脸色一变：“袋子里是我的私人物品！”\n“我都看见了！一大盒瘤奶，还有洗涤剂......至少30龙门币，我还没输！”\n后勤干员扑上前去，渡桥尾巴一甩，购物袋被高高抛起——\n瘤奶盒在空中翻滚，侧面的合页被甩开，露出其中藏着的刀刃；洗涤剂瓶则敞开胸怀，展示着嵌在其中的遥控小车与备用储能单元。\n一时间，刀刃与各种五金工具乱飞......\n“都说了是私人物品！”\n“谁让你把那么危险的东西藏在奶盒跟瓶子里！你就不能像其他人一样用个正常点的工具箱吗？”\n“这叫‘伪装’！拎着工具箱的话，就算是小孩也知道里面藏着武器了。”"
+      "desc": "“买这么多东西，你的购物凭证还够用吗？”正在挑选生活用品的干员看着那个被塞得鼓鼓囊囊的购物袋，不禁为渡桥担忧。\n“有几张优惠券快过期了，得赶紧用掉。”渡桥从货架后拖出一辆满到快溢出来的购物车。\n“居然还有这么多？不行，我得先去结账！千万不能排在你后面。”\n等渡桥抵达结账柜台时，来看热闹的人已经围成了一个圈。\n负责结账的后勤干员已经严阵以待：“来吧！”\n收银设备嘀嘀地响个不停，显示屏上的数字以夸张的速度增长着。\n“一共是......997.5龙门币！”\n“等一下，我要......”渡桥把手伸向大衣内袋。\n“要用干员个人积分结账吗？积分结账的95折优惠已经算进去了。”\n人群中响起零星的掌声。但那名后勤干员脸上没有笑意，他知道这场战斗才刚开始。\n“这样啊......”渡桥从大衣中拿出一大摞五颜六色的票券，“这些优惠券，也麻烦帮我用掉吧。”\n围观的人群开始躁动。\n“周年庆限时折扣券，还有新人干员早餐兑换券，这些都过期了。”后勤干员谨慎地从那一摞票券里挑出几张。\n收银设备又嘀嘀地响了起来，这次显示屏上的数字开始不断下降——\n一刻钟后。\n“103龙门币。”后勤干员的脸上终于绽放出笑意，“总算守住了100龙门币的大关。”\n渡桥皱起眉头，扫视一圈，目光停在对面的挂钟上。\n“算上这个。”渡桥拿起一盒口香糖，递给那名后勤干员，“另外，现在的时间是晚上八点过一分——八点以后，水果熟食可半价兑换。”\n后勤干员脸上的笑容凝固了。显示屏上的数字跳动了一下，变成了84.75。\n人群中爆发出欢呼声。\n“等等！”后勤干员仍不死心，他盯着渡桥尾巴上的购物袋，“你那一大袋子，还没结账吧？”\n渡桥脸色一变：“袋子里是我的私人物品！”\n“我都看见了！一大盒瘤奶，还有洗涤剂......至少30龙门币，我还没输！”\n后勤干员扑上前去，渡桥尾巴一甩，购物袋被高高抛起——\n瘤奶盒在空中翻滚，侧面的合页被甩开，露出其中藏着的刀刃；洗涤剂瓶则敞开胸怀，展示着嵌在其中的遥控小车与备用储能单元。\n一时间，刀刃与各种五金工具乱飞......\n“都说了是私人物品！”\n“谁让你把那么危险的东西藏在奶盒跟瓶子里！你就不能像其他人一样用个正常点的工具箱吗？”\n“这叫‘伪装’！拎着工具箱的话，就算是小孩也知道里面藏着武器了。”",
+      "typeIcon": "tac-y",
+      "uniEquipIcon": "uniequip_002_mitm",
+      "typeName1": "TAC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_mitm_1",
+        "uniequip_002_mitm_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军阻挡的敌人更容易受到我方的攻击，自身攻击援军阻挡的敌人时攻击力提升至165%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军阻挡的敌人更容易受到我方的攻击，自身攻击援军阻挡的敌人时攻击力提升至165%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "作为小车形态存在时被击败后会在15秒后自动刷新，并在周围四格生成生命值更高的残骸；作为残骸形态存在时可以阻挡1个敌人",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "废品战车",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].max_hp",
+                      "value": -0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].def",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].atk",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "可以在战术点召唤樱桃三号协助作战，其被击败后会在15秒后自动刷新，并在周围四格生成生命值更高的残骸",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "废品战车",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10037_mitm_trshrb",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军阻挡的敌人更容易受到我方的攻击，自身攻击援军阻挡的敌人时攻击力提升至165%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "作为小车形态存在时被击败后会在15秒后自动刷新，并在周围四格生成生命值进一步提高的残骸；作为残骸形态存在时可以阻挡1个敌人",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "废品战车",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].max_hp",
+                      "value": -0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].def",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].atk",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "可以在战术点召唤樱桃三号协助作战，其被击败后会在15秒后自动刷新，并在周围四格生成生命值进一步提高的残骸",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "废品战车",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10037_mitm_trshrb",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1130,6 +1915,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10037_mitm_trshrb"
   ],
   "patch_info": {}
 }

@@ -151,6 +151,28 @@
       "cost": 16
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.2,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_308_swire#1",
@@ -621,16 +643,580 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+26",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 40,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "近距離戦指導",
+          "description": "配置中、周囲8マスの味方近距離ユニットの攻撃力+3%",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.03,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "近距離戦指導",
+          "description": "配置中、周囲8マスの味方近距離ユニットの攻撃力+5%<@ba.talpu>(+2%)</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "近距離戦指導",
+          "description": "配置中、周囲8マスの味方近距離ユニットの攻撃力+6%",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.06,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "近距離戦指導",
+          "description": "配置中、周囲8マスの味方近距離ユニットの攻撃力+8%<@ba.talpu>(+2%)</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.08,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "近距離戦指導",
+          "description": "配置中、周囲8マスの味方近距離ユニットの攻撃力+10%",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "近距離戦指導",
+          "description": "配置中、周囲8マスの味方近距離ユニットの攻撃力+12%<@ba.talpu>(+2%)</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_swire",
       "moduleName": "スワイヤーの記章",
-      "desc": "スワイヤーは周囲の近距離オペレーターを鼓舞することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、教官の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "スワイヤーは周囲の近距離オペレーターを鼓舞することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、教官の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_swire",
       "moduleName": "防犯ルージュ",
-      "desc": "本日、龍門上級警司スワイヤーは非番である。そのため、いつものように大古プラザへショッピングに向かった。\n建物の隅から隅までを六時間かけて回り、八つの大きなショッピングバッグを手にした彼女は、帰路につく前に角を一つ曲がって、スワイヤー家傘下の口紅専門店に寄った。\n「いつも通り、#38のバレットを5本ちょうだい。よろしくね」とスワイヤーは口慣れた調子で販売員に注文した。38番のバレットは彼女が一番お気に入りのカラーで、十年にわたって口紅はこれを愛用し続けている。\nしかしその値段は……\n「承知いたしました、スワイヤーお嬢様。今すぐ用意いたします」販売員も手慣れた様子で、同僚に店番を頼むと、素早く倉庫へ商品をピックアップに向かった。ほどなくして、木製の入れ物とともに戻り、それをスワイヤーへと差し出した。\n「ご確認よろしくお願い致します」\nスワイヤーはそれを開けるかと思いきや、返事だけ返すと、身に着けているバッグを漁り始めた。\nしばらくして、ようやく中からミニバッグを取り出した。はたから見れば、手提げバッグのミニチュア版に見えただろう。\nバックルを開けてかぶせをめくると、中には黒ベルベットが敷かれた凹みがあり、そこに使い切った38番のバレットがはめられていた。\nスワイヤーはそれらを取り出してカウンターに置き、新しく購入したもののうちの四本は凹みに入れ、残る一本は直接ポケットに突っ込んだ。\nその後、下ろしていたショッピングバッグを再び腕に掛け戻すスワイヤーを見て、販売員は気が気でない様子だった。\n「お嬢様、荷物持ちをお呼びしましょうか？」\n「へっ？大丈夫よ、そんな重くないし」\n「それだけ持っていて本当に重くないのですか、お嬢様……」\n「本当よ。じゃあまたね」という返事は、店舗から数歩離れた位置から響いた。スワイヤーは確かに、誰かの助けを必要とするタイプではない。\nむしろ、ほかの者たちが彼女を必要とするのである。\nデパートの入り口を出てすぐ、助けを求める女性の叫び声がスワイヤーの耳に飛び込んだ。見れば、いかにも間抜けそうなひったくり犯が、女性の手提げバッグを引っ提げて無我夢中に逃走していた。\nしかも、あろうことか上級警司である自分の方向に駆けてきたのだ。\nちょうどいいわね。スワイヤーはそう思った。\nちょうど、今日は武器を身に着けていない。\nちょうど、今日新しい口紅を買ったばかりである。\nそしてちょうど、そのうち一本が今ポケットに入っているのだ。\nスワイヤーは、ひったくり犯に一生忘れられないだろう罰を与えることに決めた。\nショッピングバッグをおろして、口紅を取り出し、ふたを開けて、底面のセーフティシールをはがして、スワイヤーはひったくり犯が接近するのを待ち構えた。\n数秒後、その場に居合わせた者たちは、くぐもった鈍い音を聞いた。そのすぐ後に愚かなひったくり犯の悲鳴と倒れる音、そして巡回中の近衛局局員の怒号が響き渡った。\n\n数分後\n「お疲れ様です、お嬢様。休暇中なのに犯人逮捕にご協力いただけるとは」強盗未遂事件の監査に来たホシグマは、正義の名の下に勇敢さを見せた立派な市民――スワイヤーに笑顔を向けた。\n業務中であれば、スワイヤーはきっと事件の振り返りと犯人の尋問を率先して行っていただろう。\nしかし今日は非番であるから、事件はスワイヤー担当ではないのである。\n「あたしと鉢合わせしちゃうなんて、不運もいいところね」\n「確かに、強盗を働いた矢先に非番の警司と出くわすのは、龍門では珍しいことでしょう」\n「ふん、まあいいわ。局まで連行してちょうだい、あたしは家に帰るから、この事件の処理は明日するわ」\n「ええ、お嬢様がそう言うのなら」\n「ですが少々お待ちを、少し確認したいことが」\n「何？」\nスワイヤーが振り返ると、ホシグマが調査報告書に何か書き込んでいるのが目に入った。\n「この、容疑者が倒されたことについて、どう書いたらよろしいでしょうか？」\nホシグマは自分に判断を仰いでいるのだ。スワイヤーはすぐその意図に気付いた。\n「口紅で、ってそのまま書けばいいのよ。こんな奴に気なんて遣わなくていいわ」\n「あはは、わかりました」と答えながら、ホシグマは楽しそうに報告書に「容疑者は口紅によって倒された」と記載した。\n「なんか帰るの面倒くさくなってきたわ。さっさと書いちゃいなさい、一緒にご飯行くわよ」\n「それから荷物持ちと、自宅までの見送りをやらされるというわけですか、お嬢様。ふふっ」\n「聞かないでよ、もう。早くしなさい」\n「わかりました、すぐ報告書を提出しますので、もう少々お待ちください。」\n「食事のときには、『口紅』の武勇伝をよく聞かせていただきたいですね」\n「もちろん」\n\n「やっぱり今すぐ荷物持ってくれる？ちょっと腕が疲れたわ」\n「はいはい、今やりますよ」"
+      "desc": "本日、龍門上級警司スワイヤーは非番である。そのため、いつものように大古プラザへショッピングに向かった。\n建物の隅から隅までを六時間かけて回り、八つの大きなショッピングバッグを手にした彼女は、帰路につく前に角を一つ曲がって、スワイヤー家傘下の口紅専門店に寄った。\n「いつも通り、#38のバレットを5本ちょうだい。よろしくね」とスワイヤーは口慣れた調子で販売員に注文した。38番のバレットは彼女が一番お気に入りのカラーで、十年にわたって口紅はこれを愛用し続けている。\nしかしその値段は……\n「承知いたしました、スワイヤーお嬢様。今すぐ用意いたします」販売員も手慣れた様子で、同僚に店番を頼むと、素早く倉庫へ商品をピックアップに向かった。ほどなくして、木製の入れ物とともに戻り、それをスワイヤーへと差し出した。\n「ご確認よろしくお願い致します」\nスワイヤーはそれを開けるかと思いきや、返事だけ返すと、身に着けているバッグを漁り始めた。\nしばらくして、ようやく中からミニバッグを取り出した。はたから見れば、手提げバッグのミニチュア版に見えただろう。\nバックルを開けてかぶせをめくると、中には黒ベルベットが敷かれた凹みがあり、そこに使い切った38番のバレットがはめられていた。\nスワイヤーはそれらを取り出してカウンターに置き、新しく購入したもののうちの四本は凹みに入れ、残る一本は直接ポケットに突っ込んだ。\nその後、下ろしていたショッピングバッグを再び腕に掛け戻すスワイヤーを見て、販売員は気が気でない様子だった。\n「お嬢様、荷物持ちをお呼びしましょうか？」\n「へっ？大丈夫よ、そんな重くないし」\n「それだけ持っていて本当に重くないのですか、お嬢様……」\n「本当よ。じゃあまたね」という返事は、店舗から数歩離れた位置から響いた。スワイヤーは確かに、誰かの助けを必要とするタイプではない。\nむしろ、ほかの者たちが彼女を必要とするのである。\nデパートの入り口を出てすぐ、助けを求める女性の叫び声がスワイヤーの耳に飛び込んだ。見れば、いかにも間抜けそうなひったくり犯が、女性の手提げバッグを引っ提げて無我夢中に逃走していた。\nしかも、あろうことか上級警司である自分の方向に駆けてきたのだ。\nちょうどいいわね。スワイヤーはそう思った。\nちょうど、今日は武器を身に着けていない。\nちょうど、今日新しい口紅を買ったばかりである。\nそしてちょうど、そのうち一本が今ポケットに入っているのだ。\nスワイヤーは、ひったくり犯に一生忘れられないだろう罰を与えることに決めた。\nショッピングバッグをおろして、口紅を取り出し、ふたを開けて、底面のセーフティシールをはがして、スワイヤーはひったくり犯が接近するのを待ち構えた。\n数秒後、その場に居合わせた者たちは、くぐもった鈍い音を聞いた。そのすぐ後に愚かなひったくり犯の悲鳴と倒れる音、そして巡回中の近衛局局員の怒号が響き渡った。\n\n数分後\n「お疲れ様です、お嬢様。休暇中なのに犯人逮捕にご協力いただけるとは」強盗未遂事件の監査に来たホシグマは、正義の名の下に勇敢さを見せた立派な市民――スワイヤーに笑顔を向けた。\n業務中であれば、スワイヤーはきっと事件の振り返りと犯人の尋問を率先して行っていただろう。\nしかし今日は非番であるから、事件はスワイヤー担当ではないのである。\n「あたしと鉢合わせしちゃうなんて、不運もいいところね」\n「確かに、強盗を働いた矢先に非番の警司と出くわすのは、龍門では珍しいことでしょう」\n「ふん、まあいいわ。局まで連行してちょうだい、あたしは家に帰るから、この事件の処理は明日するわ」\n「ええ、お嬢様がそう言うのなら」\n「ですが少々お待ちを、少し確認したいことが」\n「何？」\nスワイヤーが振り返ると、ホシグマが調査報告書に何か書き込んでいるのが目に入った。\n「この、容疑者が倒されたことについて、どう書いたらよろしいでしょうか？」\nホシグマは自分に判断を仰いでいるのだ。スワイヤーはすぐその意図に気付いた。\n「口紅で、ってそのまま書けばいいのよ。こんな奴に気なんて遣わなくていいわ」\n「あはは、わかりました」と答えながら、ホシグマは楽しそうに報告書に「容疑者は口紅によって倒された」と記載した。\n「なんか帰るの面倒くさくなってきたわ。さっさと書いちゃいなさい、一緒にご飯行くわよ」\n「それから荷物持ちと、自宅までの見送りをやらされるというわけですか、お嬢様。ふふっ」\n「聞かないでよ、もう。早くしなさい」\n「わかりました、すぐ報告書を提出しますので、もう少々お待ちください。」\n「食事のときには、『口紅』の武勇伝をよく聞かせていただきたいですね」\n「もちろん」\n\n「やっぱり今すぐ荷物持ってくれる？ちょっと腕が疲れたわ」\n「はいはい、今やりますよ」",
+      "typeIcon": "ins-x",
+      "uniEquipIcon": "uniequip_002_swire",
+      "typeName1": "INS",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_swire_1",
+        "uniequip_002_swire_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃距離が<@ba.kw>やや長い</>\n自身がブロックしていない敵を攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 145,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃距離が<@ba.kw>やや長い</>\n自身がブロックしていない敵を攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "周囲8マスに味方近距離ユニットがいる時、4秒ごとに自身のSPを1回復",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": "負けず嫌い",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃距離が<@ba.kw>やや長い</>\n自身がブロックしていない敵を攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "周囲8マスに味方近距離ユニットがいる時、3秒ごとに自身のSPを1回復",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": "負けず嫌い",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1084,5 +1670,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -151,6 +151,7 @@
       "cost": 16
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_245_cello#1",
@@ -720,16 +721,584 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -6 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +23",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 300,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Wordless Elegy",
+          "description": "Enemies within attack range take 6% ATK as <$ba.dt.apoptosis2>Necrosis damage</> per second",
+          "blackboard": {
+            "ep_damage_ratio": 0.06,
+            "sluggish": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Wordless Elegy",
+          "description": "Enemies within attack range take 8% ATK as <$ba.dt.apoptosis2>Necrosis damage</> per second, and are <$ba.sluggish>Slowed</> for 0.2s",
+          "blackboard": {
+            "ep_damage_ratio": 0.08,
+            "sluggish": 0.2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Wordless Elegy",
+          "description": "Enemies within attack range take 10% ATK as <$ba.dt.apoptosis2>Necrosis damage</> per second, and are <$ba.sluggish>Slowed</> for 0.2s",
+          "blackboard": {
+            "ep_damage_ratio": 0.1,
+            "sluggish": 0.2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Mental Inversion",
+          "description": "Enemies within attack range take 20% more <$ba.dt.apoptosis2>Necrosis damage</>",
+          "blackboard": {
+            "ep_damage_scale": 1.2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Mental Inversion",
+          "description": "Enemies within attack range take 22% more <$ba.dt.apoptosis2>Necrosis damage</> <@ba.talpu>(+2%)</>",
+          "blackboard": {
+            "ep_damage_scale": 1.22
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_cello",
       "moduleName": "Virtuosa's Badge",
-      "desc": "Operator Virtuosa has demonstrated a remarkable aptitude for assisting allies in the inflicting of elemental casualties upon the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Ritualist responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Virtuosa has demonstrated a remarkable aptitude for assisting allies in the inflicting of elemental casualties upon the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Ritualist responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_cello",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_cello",
       "moduleName": "The Decrescendo",
-      "desc": "Her tutor seems very late to today's lesson, but the student hardly cares. She's always hated this tutor anyway. Clearly she's good enough to finish this whole cello solo unguided! But somehow, her tutor's just never satisfied.\nCertainly, she can't play as well as her tutor. Oh, she's <i>tried</i> to submerge herself in the score, to converse without care with the composer she never got to know. But those ebon-black markings have stayed silent on their chalk-white scores. Their mysterious composer passed away almost a century ago; they say she died all alone, and practically left no trace she ever lived save for a few of her scores. It's not in her grasp to comprehend the passion and sorrow that lie within each movement, nor does she have a clue who that 'ever-lost lover' hiding with the score really was, or why they were struck by such fits of madness.\nAnd so she can only but play as the score instructs, emotionlessly. At first, it goes well enough. She can still feel the brush of each note, feel them settle in her heart. But as the movements progress, and the music enters its passages of true frothing turbulence, the leaps, the repeats, those elegant trills and appoggiaturas, it all embraces her with fervor. They invite her to a mad dance, but step by step, her gait follows less and less. Tempestuous crescendos and diminuendos barrel violently through her vision, only to slip away next instant to the score's furthest reaches. She tries to catch them, grab hold of each glittering moment that accompanies them, struggling in the midst of the endlessly long staff to the point her strings' tremors can no longer rouse those worked-up emotions, and their place is taken by the repetitious back-and-forth of the metronome, clack, clack, clack, clack... echoing lonely in her ears, until the impassioned music agonizingly lingers no longer, as if this betrayal was preordained.\nAnd thus, the energy fades from her fingertips as does that beautiful passage, leaving only the metronome still chiming away. Clack, clack, clack, clack... This imperfect silence becomes a parting declaration. At this, the fury and despair that lurk in her heart burst forth, becoming the heat in the tears her eyes brim with. Her vision blurs—the plain white score before her bids her final throes of resistance. She snatches the quill, and upon the score engraves each and every leap, every repeat, every elegant trill and appoggiatura, every tempestuous crescendo and diminuendo. Jet-black like cast iron shackles, she knows she's gone mad, but this is the only way she has to bind her ever-lost lover to her side. Before the final barline ends it all, her life will flow with the music.\nAnd this is when the cello grinds to a halt. She finds herself holding the bow, the cello silently resting upon her bosom, and the strings are not quivering, and the metronome is not rocking, and all that fills the chamber is her heavy breathing. And her Sankta tutor, with her black gloves, gently brushes a hand over hers, and speaks in the same soft and gentle tone as ever.\n'Your playing today was perfect,' she congratulates her, content. 'The composer's life, and her love, flowed within your performance.'"
+      "desc": "Her tutor seems very late to today's lesson, but the student hardly cares. She's always hated this tutor anyway. Clearly she's good enough to finish this whole cello solo unguided! But somehow, her tutor's just never satisfied.\nCertainly, she can't play as well as her tutor. Oh, she's <i>tried</i> to submerge herself in the score, to converse without care with the composer she never got to know. But those ebon-black markings have stayed silent on their chalk-white scores. Their mysterious composer passed away almost a century ago; they say she died all alone, and practically left no trace she ever lived save for a few of her scores. It's not in her grasp to comprehend the passion and sorrow that lie within each movement, nor does she have a clue who that 'ever-lost lover' hiding with the score really was, or why they were struck by such fits of madness.\nAnd so she can only but play as the score instructs, emotionlessly. At first, it goes well enough. She can still feel the brush of each note, feel them settle in her heart. But as the movements progress, and the music enters its passages of true frothing turbulence, the leaps, the repeats, those elegant trills and appoggiaturas, it all embraces her with fervor. They invite her to a mad dance, but step by step, her gait follows less and less. Tempestuous crescendos and diminuendos barrel violently through her vision, only to slip away next instant to the score's furthest reaches. She tries to catch them, grab hold of each glittering moment that accompanies them, struggling in the midst of the endlessly long staff to the point her strings' tremors can no longer rouse those worked-up emotions, and their place is taken by the repetitious back-and-forth of the metronome, clack, clack, clack, clack... echoing lonely in her ears, until the impassioned music agonizingly lingers no longer, as if this betrayal was preordained.\nAnd thus, the energy fades from her fingertips as does that beautiful passage, leaving only the metronome still chiming away. Clack, clack, clack, clack... This imperfect silence becomes a parting declaration. At this, the fury and despair that lurk in her heart burst forth, becoming the heat in the tears her eyes brim with. Her vision blurs—the plain white score before her bids her final throes of resistance. She snatches the quill, and upon the score engraves each and every leap, every repeat, every elegant trill and appoggiatura, every tempestuous crescendo and diminuendo. Jet-black like cast iron shackles, she knows she's gone mad, but this is the only way she has to bind her ever-lost lover to her side. Before the final barline ends it all, her life will flow with the music.\nAnd this is when the cello grinds to a halt. She finds herself holding the bow, the cello silently resting upon her bosom, and the strings are not quivering, and the metronome is not rocking, and all that fills the chamber is her heavy breathing. And her Sankta tutor, with her black gloves, gently brushes a hand over hers, and speaks in the same soft and gentle tone as ever.\n'Your playing today was perfect,' she congratulates her, content. 'The composer's life, and her love, flowed within your performance.'",
+      "typeIcon": "rit-x",
+      "uniEquipIcon": "uniequip_002_cello",
+      "typeName1": "RIT",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_cello_1",
+        "uniequip_002_cello_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 135,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Elemental Injury dealt to Elite and Leader enemies increases by <@ba.kw>18%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 175,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Elemental Injury dealt to Elite and Leader enemies increases by <@ba.kw>18%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Enemies within attack range take 28% more <$ba.dt.apoptosis2>Necrosis damage</>; if the target is under the burst effect of <$ba.dt.apoptosis2>Necrosis damage</>, they receive 3% <$ba.elementfragile>Elemental Fragility</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Mental Inversion",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Enemies within attack range take 30% <@ba.talpu>(+2%)</> more <$ba.dt.apoptosis2>Necrosis damage</>; if the target is under the burst effect of <$ba.dt.apoptosis2>Necrosis damage</>, they receive 3% <$ba.elementfragile>Elemental Fragility</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Mental Inversion",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Elemental Injury dealt to Elite and Leader enemies increases by <@ba.kw>18%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Enemies within attack range take 33% more <$ba.dt.apoptosis2>Necrosis damage</>; if the target is under the burst effect of <$ba.dt.apoptosis2>Necrosis damage</>, they receive 5% <$ba.elementfragile>Elemental Fragility</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Mental Inversion",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.33,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Enemies within attack range take 35% <@ba.talpu>(+2%)</> more <$ba.dt.apoptosis2>Necrosis damage</>; if the target is under the burst effect of <$ba.dt.apoptosis2>Necrosis damage</>, they receive 5% <$ba.elementfragile>Elemental Fragility</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Mental Inversion",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.35,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1183,5 +1752,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

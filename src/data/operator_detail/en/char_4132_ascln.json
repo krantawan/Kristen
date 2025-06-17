@@ -151,6 +151,24 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "prob",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4132_ascln#1",
@@ -713,16 +731,643 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +160",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 160,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 0,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Mortal Interrogation",
+          "description": "Attacks inflict the following effect on enemies: Movement Speed reduced by 12% and take 6% of Ascalon's current ATK as Arts damage per second for 18s, stacking up to 3 times.",
+          "blackboard": {
+            "move_speed": -0.12,
+            "atk_ratio": 0.06,
+            "max_stack_cnt": 3,
+            "debuff_duration": 18,
+            "interval": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Mortal Interrogation",
+          "description": "Attacks inflict the following effect on enemies: Movement Speed reduced by 15% and take 8% of Ascalon's current ATK as Arts damage per second for 18s, stacking up to 3 times.",
+          "blackboard": {
+            "move_speed": -0.15,
+            "atk_ratio": 0.08,
+            "max_stack_cnt": 3,
+            "debuff_duration": 18,
+            "interval": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Mortal Interrogation",
+          "description": "Attacks inflict the following effect on enemies: Movement Speed reduced by 18% and take 10% of Ascalon's current ATK as Arts damage per second for 25s, stacking up to 3 times.",
+          "blackboard": {
+            "move_speed": -0.18,
+            "atk_ratio": 0.1,
+            "max_stack_cnt": 3,
+            "debuff_duration": 25,
+            "interval": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Penumbral Image",
+          "description": "ASPD +8; gain an additional ASPD +6 if there is high ground in the 4 adjacent tiles.",
+          "blackboard": {
+            "attack_speed": 8,
+            "attack_speed_add": 6,
+            "cnt": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Penumbral Image",
+          "description": "ASPD +10 <@ba.talpu>(+2)</>; gain an additional ASPD +6 if there is high ground in the 4 adjacent tiles.",
+          "blackboard": {
+            "attack_speed": 10,
+            "attack_speed_add": 6,
+            "cnt": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_ascln",
       "moduleName": "Ascalon's Badge",
-      "desc": "Operator Ascalon has demonstrated a remarkable aptitude for bodily concealment and enemy ambush.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Ambusher responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Ascalon has demonstrated a remarkable aptitude for bodily concealment and enemy ambush.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Ambusher responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_ascln",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_ascln",
       "moduleName": "'Hidden Blade'",
-      "desc": "The deathmonger's finger curls, lightly touching the base of her palm. The blade slides along its tracks out into the fierce sunlight, pinpricks of light dripping down its edge until coming together like molten iron silently filling a mold.\nIn the heat, there is only quiet.\nThis quiet is broken by the hissing of carrion fowlbeasts. Under the scorching sun, an elderly Sarkaz lifts his head, and sees mist careening down the sides of the canyon towards him. The burdenbeast disappears, as does the canyon. The faintest shadow crosses his eyes, another layer of gray atop the ones from gazing at the forge year round.\nThe blade leaves his chest soon after. His skewered torso fills with blood, leaving him to drown on dry land. He remembers that this slow death was but one of many cruel punishments used in Kazdel. At first, he thinks he will spend his final moments lying flat on the hot sands, his puzzled burdenbeast his only deathbed companion. However,  the deathmonger hasn't left yet. She kneels down on one knee, supporting his back.\n'Oh... it's you.'\nThe wrinkles on his face gradually smoothen. He still remembers those eyes. Back then, he had looked up from the forge to see a girl by the general's side. She was young, but had a warrior's eyes, and hands that could tear apart a storm. Then the general told him to make her a sword.\n'Can I see it one last time?' She observes the old man's longing gaze. 'I... didn't see it clearly just now.'\nThe deathmonger looks towards her wrist. She remembers those willing to die for their cause. The armories of the Military Commission offered excellent equipment, but... She places her hand on the old man's chest. The death-defying fighters were prepared. Kazdel's finest smith had personally forged their regicidal blades.\nHer finger curls, lightly touching the base of her palm. The blade slides along its tracks out into the fierce sunlight, pinpricks of light dripping up its edge until coming together. The old man strokes these points of light. He knows their true identity. Every parry, every strike, leaves a scar upon its edge. Some of the scars are stained with his blood.\n'As I forged it... the fires told me that one day, it would take my life. But... it was a commission from the general.' The old man raises his torso, struggling to breathe as he lifts his head to look into his deathmonger's eyes.\n'How about you? Shadow beneath the sun. Who commissioned you... to settle this account?'\nThe deathmonger does not answer. She covers his eyes with her palm, allowing her sleeve-blade to cut across his throat. The carrion fowlbeasts whirl down from above the canyon, crowding into the shadows of the cliff and rubbing their beaks against one another's feathers."
+      "desc": "The deathmonger's finger curls, lightly touching the base of her palm. The blade slides along its tracks out into the fierce sunlight, pinpricks of light dripping down its edge until coming together like molten iron silently filling a mold.\nIn the heat, there is only quiet.\nThis quiet is broken by the hissing of carrion fowlbeasts. Under the scorching sun, an elderly Sarkaz lifts his head, and sees mist careening down the sides of the canyon towards him. The burdenbeast disappears, as does the canyon. The faintest shadow crosses his eyes, another layer of gray atop the ones from gazing at the forge year round.\nThe blade leaves his chest soon after. His skewered torso fills with blood, leaving him to drown on dry land. He remembers that this slow death was but one of many cruel punishments used in Kazdel. At first, he thinks he will spend his final moments lying flat on the hot sands, his puzzled burdenbeast his only deathbed companion. However,  the deathmonger hasn't left yet. She kneels down on one knee, supporting his back.\n'Oh... it's you.'\nThe wrinkles on his face gradually smoothen. He still remembers those eyes. Back then, he had looked up from the forge to see a girl by the general's side. She was young, but had a warrior's eyes, and hands that could tear apart a storm. Then the general told him to make her a sword.\n'Can I see it one last time?' She observes the old man's longing gaze. 'I... didn't see it clearly just now.'\nThe deathmonger looks towards her wrist. She remembers those willing to die for their cause. The armories of the Military Commission offered excellent equipment, but... She places her hand on the old man's chest. The death-defying fighters were prepared. Kazdel's finest smith had personally forged their regicidal blades.\nHer finger curls, lightly touching the base of her palm. The blade slides along its tracks out into the fierce sunlight, pinpricks of light dripping up its edge until coming together. The old man strokes these points of light. He knows their true identity. Every parry, every strike, leaves a scar upon its edge. Some of the scars are stained with his blood.\n'As I forged it... the fires told me that one day, it would take my life. But... it was a commission from the general.' The old man raises his torso, struggling to breathe as he lifts his head to look into his deathmonger's eyes.\n'How about you? Shadow beneath the sun. Who commissioned you... to settle this account?'\nThe deathmonger does not answer. She covers his eyes with her palm, allowing her sleeve-blade to cut across his throat. The carrion fowlbeasts whirl down from above the canyon, crowding into the shadows of the cliff and rubbing their beaks against one another's feathers.",
+      "typeIcon": "amb-x",
+      "uniEquipIcon": "uniequip_002_ascln",
+      "typeName1": "AMB",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_ascln_1",
+        "uniequip_002_ascln_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Slows the Movement Speed of enemies within this unit's attack range by <@ba.kw>20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 230,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Slows the Movement Speed of enemies within this unit's attack range by <@ba.kw>20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks inflict the following effect on enemies: Movement Speed reduced by 18% and take 11% of Ascalon's current ATK as Arts damage per second for 27s, stacking up to 3 times.",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Mortal Interrogation",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_ratio",
+                      "value": 0.11,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "debuff_duration",
+                      "value": 27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 270,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 53,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Slows the Movement Speed of enemies within this unit's attack range by <@ba.kw>20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks inflict the following effect on enemies: Movement Speed reduced by 18% and take 11% of Ascalon's current ATK as Arts damage per second for 30s, stacking up to 3 times.",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Mortal Interrogation",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_ratio",
+                      "value": 0.11,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "debuff_duration",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1176,5 +1821,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

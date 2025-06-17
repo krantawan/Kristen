@@ -150,6 +150,68 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 4
+        },
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ],
+      "overrideDescription": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}, improved at Elite 1).",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 6
+        },
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ],
+      "overrideDescription": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}, improved at Elite 2).",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 8
+        },
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ],
+      "overrideDescription": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}).",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4117_ray#1",
@@ -719,16 +781,563 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +37",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 37,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 120,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Patrol Partner",
+          "description": "Can deploy a sandbeast within Attack Range to scout an area for 15s, extending Attack Range into that area. Prioritizes attacking targets within this area, and deals 10% more Physical damage to them",
+          "blackboard": {
+            "damage_scale": 0.1
+          },
+          "tokenKey": "token_10034_ray_sndbst",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Patrol Partner",
+          "description": "Can deploy a sandbeast within Attack Range to scout an area for 25s, extending Attack Range into that area. Prioritizes attacking targets within this area, and deals 15% more Physical damage to them",
+          "blackboard": {
+            "damage_scale": 0.15
+          },
+          "tokenKey": "token_10034_ray_sndbst",
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Extreme Focus",
+          "description": "When attacking the same target, each attack increases ATK by 8%, stacking up to 3 times",
+          "blackboard": {
+            "atk": 0.08,
+            "max_stack_cnt": 3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Extreme Focus",
+          "description": "When attacking the same target, each attack increases ATK by 9% <@ba.talpu>(+1%)</>, stacking up to 3 times",
+          "blackboard": {
+            "atk": 0.09,
+            "max_stack_cnt": 3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_ray",
       "moduleName": "Ray's Badge",
-      "desc": "Operator Ray has demonstrated a remarkable aptitude for storing and unleashing capacitance-based firepower to penetrative ends when facing the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Hunter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Ray has demonstrated a remarkable aptitude for storing and unleashing capacitance-based firepower to penetrative ends when facing the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Hunter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_ray",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_ray",
       "moduleName": "Dancing Moonlight",
-      "desc": "Human Resources Record File RF-099-47\nDay One\nOperator Ray has been reported missing this morning without submitting any official application to leave the ship. Human Resources is currently collaborating with Field Operations to investigate.\nDay Two\nWhile the Field Operations team conducts searches, we have also reviewed Ray's recent activities. On the night before her disappearance, she attended a private dance, which we consider to be abnormal behavior. We interviewed Alanna, Ray's friend and an intern at the Workshop, for more details. Below is an excerpt from our interview:\n'To think a weirdo like her went to a dance! I would never have believed it was her, but her cookie-shaped bangs were too iconic.'\n'What did she do at the dance?'\n'Umm... She just sat in a corner. Now that's more like something she'd do.'\n'Did she get into contact with anyone during the dance?'\n'Well, there was this old lady with a cane who sat in the corner with her.'\n'Did they interact in any way?'\n'That's the strange part! Neither of them spoke at all. It was as if they weren't at a dance, but sitting in a sauna house!'\nDay Three\nAccording to our investigation, the elderly woman whom Ray interacted with is a retired Operator from the Logistics Department currently on Rhodes Island for Oripathy treatment. She provided the following explanation for her attendance at the dance:\nShe used to be a dance teacher in her youth but had to end her career prematurely due to Oripathy. Now, severe crystallization of her left leg requires her to use a cane for walking.\nStatement from Retired Operator: 'All I wanted was to see young people dance.'\nDay Four\nAfter another futile day of searching, the search party witnessed two 'blue ghosts' as they were about to return. The Field Operators quickly assumed battle formations but broke formation after carefully probing said 'ghosts' with Arts: One of them was Ray.\nNext to Ray was a wasteland burdenbeast, its thick skin folds glistening with a blue hue as it heaved and twisted its massive body, as if dancing. Ray, also covered in a blue light, remained motionless. However, she was smiling like a child—a rare sight.\n[Supplementary Information]\nRay later learned that the blue light came from the dust pheromone of the Fluorescent Originium Slug, which causes intolerable irritation upon contact with the skin. This explained why the burdenbeast appeared to be dancing; in reality, it was writhing in itchiness. As for why Ray could remain unaffected by the itch... her 'excellent' rating in physical resilience is well-deserved. Below is an excerpt from our interview with her:\n'So, why did you suddenly leave the ship?'\n'I wanted to find the big burdenbeasts on the Colombian wasteland and make them dance to the moon again.'\n'Err... Did this have anything to do with the dance you attended? Was it because of the old lady who sat next to you?'\n'Yes. Her eyes showed me that she wanted to dance. So I suddenly felt that it was time to let the burdenbeasts dance again.'\n'... Huh?'\n'Yup.'\n'Well, umm, did you ever meet that old lady again? Maybe you'd like to tell her about your experience?'\n'No... but you're right, that'd be nice. If it's not too much trouble, could you tell her for me?'"
+      "desc": "Human Resources Record File RF-099-47\nDay One\nOperator Ray has been reported missing this morning without submitting any official application to leave the ship. Human Resources is currently collaborating with Field Operations to investigate.\nDay Two\nWhile the Field Operations team conducts searches, we have also reviewed Ray's recent activities. On the night before her disappearance, she attended a private dance, which we consider to be abnormal behavior. We interviewed Alanna, Ray's friend and an intern at the Workshop, for more details. Below is an excerpt from our interview:\n'To think a weirdo like her went to a dance! I would never have believed it was her, but her cookie-shaped bangs were too iconic.'\n'What did she do at the dance?'\n'Umm... She just sat in a corner. Now that's more like something she'd do.'\n'Did she get into contact with anyone during the dance?'\n'Well, there was this old lady with a cane who sat in the corner with her.'\n'Did they interact in any way?'\n'That's the strange part! Neither of them spoke at all. It was as if they weren't at a dance, but sitting in a sauna house!'\nDay Three\nAccording to our investigation, the elderly woman whom Ray interacted with is a retired Operator from the Logistics Department currently on Rhodes Island for Oripathy treatment. She provided the following explanation for her attendance at the dance:\nShe used to be a dance teacher in her youth but had to end her career prematurely due to Oripathy. Now, severe crystallization of her left leg requires her to use a cane for walking.\nStatement from Retired Operator: 'All I wanted was to see young people dance.'\nDay Four\nAfter another futile day of searching, the search party witnessed two 'blue ghosts' as they were about to return. The Field Operators quickly assumed battle formations but broke formation after carefully probing said 'ghosts' with Arts: One of them was Ray.\nNext to Ray was a wasteland burdenbeast, its thick skin folds glistening with a blue hue as it heaved and twisted its massive body, as if dancing. Ray, also covered in a blue light, remained motionless. However, she was smiling like a child—a rare sight.\n[Supplementary Information]\nRay later learned that the blue light came from the dust pheromone of the Fluorescent Originium Slug, which causes intolerable irritation upon contact with the skin. This explained why the burdenbeast appeared to be dancing; in reality, it was writhing in itchiness. As for why Ray could remain unaffected by the itch... her 'excellent' rating in physical resilience is well-deserved. Below is an excerpt from our interview with her:\n'So, why did you suddenly leave the ship?'\n'I wanted to find the big burdenbeasts on the Colombian wasteland and make them dance to the moon again.'\n'Err... Did this have anything to do with the dance you attended? Was it because of the old lady who sat next to you?'\n'Yes. Her eyes showed me that she wanted to dance. So I suddenly felt that it was time to let the burdenbeasts dance again.'\n'... Huh?'\n'Yup.'\n'Well, umm, did you ever meet that old lady again? Maybe you'd like to tell her about your experience?'\n'No... but you're right, that'd be nice. If it's not too much trouble, could you tell her for me?'",
+      "typeIcon": "hun-x",
+      "uniEquipIcon": "uniequip_002_ray",
+      "typeName1": "HUN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_ray_1",
+        "uniequip_002_ray_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When Ammo count is empty, the next reload +1 Ammo additionally",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10034_ray_sndbst": [
+              {
+                "key": "respawn_time",
+                "value": -5,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When Ammo count is empty, the next reload +1 Ammo additionally",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Can deploy a sandbeast within Attack Range to scout an area for 25s, extending Attack Range into that area. Prioritizes attacking targets within this area, and deals 18% more Physical damage to them; Sandbeast has -5 seconds Redeployment Time",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Patrol Partner",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10034_ray_sndbst",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10034_ray_sndbst": [
+              {
+                "key": "respawn_time",
+                "value": -10,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When Ammo count is empty, the next reload +1 Ammo additionally",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Can deploy a sandbeast within Attack Range to scout an area for 25s, extending Attack Range into that area. Prioritizes attacking targets within this area, and deals 20% more Physical damage to them; Sandbeast has -10 seconds Redeployment Time",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Patrol Partner",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10034_ray_sndbst",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1189,6 +1798,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10034_ray_sndbst"
   ],
   "patch_info": {}
 }

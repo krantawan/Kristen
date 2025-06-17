@@ -125,6 +125,7 @@
       "cost": 22
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_127_estell#1",
@@ -576,16 +577,557 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +200",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 200,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 350,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Self-Healing",
+          "description": "Restores HP by 7% of Max HP when there is an enemy killed within the 8 surrounding tiles",
+          "blackboard": {
+            "hp_ratio": 0.07
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Self-Healing",
+          "description": "Restores HP by 9% <@ba.talpu>(+2%)</> of Max HP when there is an enemy killed within the 8 surrounding tiles",
+          "blackboard": {
+            "hp_ratio": 0.09
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Self-Healing",
+          "description": "Restores HP by 12% of Max HP when there is an enemy killed within the 8 surrounding tiles",
+          "blackboard": {
+            "hp_ratio": 0.12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Self-Healing",
+          "description": "Restores HP by 14% <@ba.talpu>(+2%)</> of Max HP when there is an enemy killed within the 8 surrounding tiles",
+          "blackboard": {
+            "hp_ratio": 0.14
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_estell",
       "moduleName": "Estelle's Badge",
-      "desc": "Operator Estelle has demonstrated a remarkable aptitude for swift and fierce enemy suppression in combat.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Centurion responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Estelle has demonstrated a remarkable aptitude for swift and fierce enemy suppression in combat.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Centurion responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_estell",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_estell",
       "moduleName": "Farewell Gifts from the Wildlands",
-      "desc": "'Look at the girl in this photo. Memorize her appearance,' Danny Chip told Rustcage. 'If someone comes to your doorstep with a girl like this, look after her for me.'\nThe careworker at Lloyd Russet Biolaboratories often used to speak with pride, lips pried lightly by alcohol, of how their company had stolen rainforests and headwaters away from the aboriginals that survived on them. Of how amidst crop failure they'd bought the requisite Archosauria children for just twelve gold bonds and a handful of food. He would speak, too, of how those children priced at just twelve bonds would be remodeled into replicas of the 'Archosauria War-God.' At the end of the story, they would defeat their competitors, receive orders from the military, and then come home like kings...\nHalf a year later, the passionate egghead was reduced to a drunkard passing each night with a bottle, always grumbling in despair of the chaos of the experiments: an escaped fowl during Phase II of animal testing, the complete failures of Phases I and II of human testing, all the test subjects destroyed... then ultimately, Subject 75, the most abnormal individual in all the Phase IV human tests.\nSubject 75 was not just devoid of two horns; her personality lacked any resemblance to a weapon of war. Even after provoking her by all proven means, driving her to her last gasp, she showed no hint of the 'War-God' essence at all. Bizarrely, as a failed article, 75 was only a momentary frustration to the careworker. Very quickly, he ceased to drown himself in drink, and began to happily chat with her about daily life, about his wonderful future with Careworker Celina, about how they'd raise a girl that loved princess stories, and go on vacation to Siesta together... A failure, yet one that guided this lost soul back home.\nHowever, all the 'successful' Phase IV subjects suddenly and collectively went out of control during obedience training one day, leading to the deaths of several experiment personnel. As was standard procedure, they had to 'humanely' destroy the subjects of this phase. That evening, Danny came to Rustcage's saloon, and handed him the photograph of Subject 75.\nIn the end, neither Danny nor the girl ever visited that saloon again.\nThe lab later officially declared that Danny had, along with fellow careworker Celina, 'lost their lives together' in the incident.\nSix years later, the noisy saloon patrons have turned into wild hunters, exchanging the saloon's fine dining for the taste of fresh sport... What was once an establishment in the wake of the Great Expansion now exists in solidarity with the Oripathy-blighted and the Pioneers that same wake had cast out unto the dried-up earth. Not even the biolab was spared, resting marooned upon loose rock.\nAt this moment, Rustcage stares at the girl not far away, then looks down to compare the photograph in his hands. He doesn't know why she's grown two big horns, but there's no doubt they're one and the same.\nHe sees the hunt wild and unadulterated, sees the food chain built around her. He sees civilization's mark gradually fading, and the wilderness baring her original face—despite her heavy infection he knows he stands no chance.\nFinally, Rustcage sets down his hunter's crossbow. With the last of his strength, he delivers to her his hoard of oh so many years, these farewell gifts from the wilds."
+      "desc": "'Look at the girl in this photo. Memorize her appearance,' Danny Chip told Rustcage. 'If someone comes to your doorstep with a girl like this, look after her for me.'\nThe careworker at Lloyd Russet Biolaboratories often used to speak with pride, lips pried lightly by alcohol, of how their company had stolen rainforests and headwaters away from the aboriginals that survived on them. Of how amidst crop failure they'd bought the requisite Archosauria children for just twelve gold bonds and a handful of food. He would speak, too, of how those children priced at just twelve bonds would be remodeled into replicas of the 'Archosauria War-God.' At the end of the story, they would defeat their competitors, receive orders from the military, and then come home like kings...\nHalf a year later, the passionate egghead was reduced to a drunkard passing each night with a bottle, always grumbling in despair of the chaos of the experiments: an escaped fowl during Phase II of animal testing, the complete failures of Phases I and II of human testing, all the test subjects destroyed... then ultimately, Subject 75, the most abnormal individual in all the Phase IV human tests.\nSubject 75 was not just devoid of two horns; her personality lacked any resemblance to a weapon of war. Even after provoking her by all proven means, driving her to her last gasp, she showed no hint of the 'War-God' essence at all. Bizarrely, as a failed article, 75 was only a momentary frustration to the careworker. Very quickly, he ceased to drown himself in drink, and began to happily chat with her about daily life, about his wonderful future with Careworker Celina, about how they'd raise a girl that loved princess stories, and go on vacation to Siesta together... A failure, yet one that guided this lost soul back home.\nHowever, all the 'successful' Phase IV subjects suddenly and collectively went out of control during obedience training one day, leading to the deaths of several experiment personnel. As was standard procedure, they had to 'humanely' destroy the subjects of this phase. That evening, Danny came to Rustcage's saloon, and handed him the photograph of Subject 75.\nIn the end, neither Danny nor the girl ever visited that saloon again.\nThe lab later officially declared that Danny had, along with fellow careworker Celina, 'lost their lives together' in the incident.\nSix years later, the noisy saloon patrons have turned into wild hunters, exchanging the saloon's fine dining for the taste of fresh sport... What was once an establishment in the wake of the Great Expansion now exists in solidarity with the Oripathy-blighted and the Pioneers that same wake had cast out unto the dried-up earth. Not even the biolab was spared, resting marooned upon loose rock.\nAt this moment, Rustcage stares at the girl not far away, then looks down to compare the photograph in his hands. He doesn't know why she's grown two big horns, but there's no doubt they're one and the same.\nHe sees the hunt wild and unadulterated, sees the food chain built around her. He sees civilization's mark gradually fading, and the wilderness baring her original face—despite her heavy infection he knows he stands no chance.\nFinally, Rustcage sets down his hunter's crossbow. With the last of his strength, he delivers to her his hoard of oh so many years, these farewell gifts from the wilds.",
+      "typeIcon": "cen-y",
+      "uniEquipIcon": "uniequip_002_estell",
+      "typeName1": "CEN",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_estell_1",
+        "uniequip_002_estell_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31013",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30063",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30073",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 43,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 14% of Max HP whenever an enemy is defeated in the surrounding 8 tiles",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Self-Healing",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 16% <@ba.talpu>(+2%)</> of Max HP whenever an enemy is defeated in the surrounding 8 tiles",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Self-Healing",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 52,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 16% of Max HP whenever an enemy is defeated in the surrounding 8 tiles",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Self-Healing",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 18% <@ba.talpu>(+2%)</> of Max HP whenever an enemy is defeated in the surrounding 8 tiles",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Self-Healing",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1039,5 +1581,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -151,6 +151,28 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "prob",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_437_mizuki#1",
@@ -728,21 +750,1062 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+32",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 32,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 110,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "恐怖喚起",
+          "description": "攻撃時、攻撃範囲内のHPが最も少ない敵に追加で攻撃力の20％の術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "attack@mizuki_t_1.atk_scale",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_target",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "恐怖喚起",
+          "description": "攻撃時、攻撃範囲内のHPが最も少ない敵に追加で攻撃力の30％の術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "attack@mizuki_t_1.atk_scale",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_target",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "恐怖喚起",
+          "description": "攻撃時、攻撃範囲内のHPが最も少ない敵に追加で攻撃力の50％の術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "attack@mizuki_t_1.atk_scale",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_target",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "逆転移",
+          "description": "攻撃範囲内にHPが最大値の50％未満の敵がいる時、攻撃力+10％",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "逆転移",
+          "description": "攻撃範囲内にHPが最大値の50％未満の敵がいる時、攻撃力+12%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mizuki",
       "moduleName": "ミヅキの記章",
-      "desc": "ミヅキは身を潜め、敵を待ち伏せし奇襲する戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、潜伏者の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ミヅキは身を潜め、敵を待ち伏せし奇襲する戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、潜伏者の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mizuki",
       "moduleName": "使者の盟約",
-      "desc": "あの子もいずれは、ありふれた結果に終わるのだろうと思っていた。\nしかし、その舌が使者の贈り物に触れてもなお、あの子は大群の声に呑まれ卑小な恐魚に成り果てることなく、すべてを我が物にしてみせた。\nとなれば、事情は変わってくる。\n\n私は、あの不幸にも行われた略奪を阻止できたはずだった。\nけれど実際には何もせず、ただ賊徒の悪行を眺めていただけだ。\n今となってはそんな自分を軽蔑することしかできない。\n傍観に徹した理由が、十分な資質を持った被検者を確保し、人類の可能性を探ることにあったのを考慮しても、だ。\nのちにあの子も、本来なら私がすべての人を救えたはずだと気付いただろう。\nだが、あれは聡い子だ。わざわざ私を問い詰めるまでもなかったのかもしれない。\nそう、あの子は聡く、向上心もあったが、一方で知識に敬意を抱くことも、それを単なる道具と見下すこともなく――\nまるで傍観者であるかのように、すべての事象から一歩引いて、目にするものものを分析しているふうでもあった。\nあれが使者の血肉で結ばれた繋がりに惑わされなかったのは、そのためなのかもしれない。\n仮に違う出自であったなら、界隈に新たな風を吹かせる学者として名を馳せた可能性すらある。\nともあれ、あの子に何の変化も見られなかったことで、私は自身の研究を疑わざるを得なくなった。\nそのため、観察期間を延長することになったのだ。\nやがてあの子は例の賊徒たちを探し当てると、自身の血肉を切り取って分け与え、問いを投げかけた。\n彼らが悪の道へと踏み入ったのは、飢えと貧困のためか否か。\n豊かな生活が保障されるのなら、その道から足を洗えるか否か――\n\nあの子もいずれは、ありふれた結果に終わるのだろうと思っていた。\nしかし、今回は――人類の希望を見いだせるかもしれない。"
+      "desc": "あの子もいずれは、ありふれた結果に終わるのだろうと思っていた。\nしかし、その舌が使者の贈り物に触れてもなお、あの子は大群の声に呑まれ卑小な恐魚に成り果てることなく、すべてを我が物にしてみせた。\nとなれば、事情は変わってくる。\n\n私は、あの不幸にも行われた略奪を阻止できたはずだった。\nけれど実際には何もせず、ただ賊徒の悪行を眺めていただけだ。\n今となってはそんな自分を軽蔑することしかできない。\n傍観に徹した理由が、十分な資質を持った被検者を確保し、人類の可能性を探ることにあったのを考慮しても、だ。\nのちにあの子も、本来なら私がすべての人を救えたはずだと気付いただろう。\nだが、あれは聡い子だ。わざわざ私を問い詰めるまでもなかったのかもしれない。\nそう、あの子は聡く、向上心もあったが、一方で知識に敬意を抱くことも、それを単なる道具と見下すこともなく――\nまるで傍観者であるかのように、すべての事象から一歩引いて、目にするものものを分析しているふうでもあった。\nあれが使者の血肉で結ばれた繋がりに惑わされなかったのは、そのためなのかもしれない。\n仮に違う出自であったなら、界隈に新たな風を吹かせる学者として名を馳せた可能性すらある。\nともあれ、あの子に何の変化も見られなかったことで、私は自身の研究を疑わざるを得なくなった。\nそのため、観察期間を延長することになったのだ。\nやがてあの子は例の賊徒たちを探し当てると、自身の血肉を切り取って分け与え、問いを投げかけた。\n彼らが悪の道へと踏み入ったのは、飢えと貧困のためか否か。\n豊かな生活が保障されるのなら、その道から足を洗えるか否か――\n\nあの子もいずれは、ありふれた結果に終わるのだろうと思っていた。\nしかし、今回は――人類の希望を見いだせるかもしれない。",
+      "typeIcon": "amb-x",
+      "uniEquipIcon": "uniequip_002_mizuki",
+      "typeName1": "AMB",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_mizuki_1",
+        "uniequip_002_mizuki_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、攻撃範囲内のHPが最も少ない敵2体に追加で攻撃力の55%の術ダメージを与える",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "恐怖喚起",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@mizuki_t_1.atk_scale",
+                      "value": 0.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_target",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 220,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 90,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、攻撃範囲内のHPが最も少ない敵2体に追加で攻撃力の60%の術ダメージを与える",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "恐怖喚起",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@mizuki_t_1.atk_scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_target",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_mizuki",
       "moduleName": "紺碧の種",
-      "desc": "どんなに立派な大木も、その始まりはちっぽけな種だ。\n獣の餌食となってその小腹を満たすことすらできずに終わるか、深く根を張り空に向かって無数の枝を伸ばす大樹になるかは、芽吹いた時点では誰にもわからない。\n確かに、中には生まれつき一族の長となりうる非凡な力を持つ個体もあるかもしれないが、どんなに取るに足らない存在も、時が流れるうちに進化していくのが自然の摂理である。\nそれを思えば、今は小さな苗であっても、遠い未来には今の我々に想像もできないほどに強くたくましく大きな木へと成長を遂げているかもしれない。\nだが、そんな日など本当に来るのだろうか？\n――いいや、きっと来るだろう。\n木々は自らが生きながらえるためだけに地中の養分を使うのではなく、種を残して土へと還り、次の命の糧となる。これはまさしく、その未来を実現するためなのだ。\n根底にあるのは哀れみではなく、未来への希望なのである。\nときに、この想定を特定の種のみならず、生態系全体に当てはめてみると、見えてくるものがある。\nすべての生き物が助け合いながら、共に大地と海を作り変え、惑星全体を豊かなものに変える。お互いのため、そして後世のために暮らしやすい環境を作っていく……今はごく平凡な種のひとつひとつに、そうした可能性が等しく存在しているのだ。\n……\n計画は本来、そうした未来を迎えるはずだった。\n思いもよらないものが天から降り注いでくるまでは……"
+      "desc": "どんなに立派な大木も、その始まりはちっぽけな種だ。\n獣の餌食となってその小腹を満たすことすらできずに終わるか、深く根を張り空に向かって無数の枝を伸ばす大樹になるかは、芽吹いた時点では誰にもわからない。\n確かに、中には生まれつき一族の長となりうる非凡な力を持つ個体もあるかもしれないが、どんなに取るに足らない存在も、時が流れるうちに進化していくのが自然の摂理である。\nそれを思えば、今は小さな苗であっても、遠い未来には今の我々に想像もできないほどに強くたくましく大きな木へと成長を遂げているかもしれない。\nだが、そんな日など本当に来るのだろうか？\n――いいや、きっと来るだろう。\n木々は自らが生きながらえるためだけに地中の養分を使うのではなく、種を残して土へと還り、次の命の糧となる。これはまさしく、その未来を実現するためなのだ。\n根底にあるのは哀れみではなく、未来への希望なのである。\nときに、この想定を特定の種のみならず、生態系全体に当てはめてみると、見えてくるものがある。\nすべての生き物が助け合いながら、共に大地と海を作り変え、惑星全体を豊かなものに変える。お互いのため、そして後世のために暮らしやすい環境を作っていく……今はごく平凡な種のひとつひとつに、そうした可能性が等しく存在しているのだ。\n……\n計画は本来、そうした未来を迎えるはずだった。\n思いもよらないものが天から降り注いでくるまでは……",
+      "typeIcon": "amb-y",
+      "uniEquipIcon": "uniequip_003_mizuki",
+      "typeName1": "AMB",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_mizuki_1",
+        "uniequip_003_mizuki_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃\n物理回避、術回避が65%上昇\n敵に<@ba.kw>狙われにくい</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 62,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃\n物理回避、術回避が65%上昇\n敵に<@ba.kw>狙われにくい</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内にHPが最大値の50%未満の敵がいる時、攻撃力+15%。敵を1体倒すたびにHPが最大値の5%回復する",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "逆転移",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内にHPが最大値の50%未満の敵がいる時、攻撃力+17%<@ba.talpu>（+2%）</>。敵を1体倒すたびにHPが最大値の5%回復する",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "逆転移",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.17,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃\n物理回避、術回避が65%上昇\n敵に<@ba.kw>狙われにくい</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内にHPが最大値の50%未満の敵がいる時、攻撃力+20%。敵を1体倒すたびにHPが最大値の10%回復する",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "逆転移",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内にHPが最大値の50%未満の敵がいる時、攻撃力+22%<@ba.talpu>（+2%）</>。敵を1体倒すたびにHPが最大値の10%回復する",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "逆転移",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.22,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1196,5 +2259,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

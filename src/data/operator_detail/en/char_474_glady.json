@@ -152,6 +152,7 @@
       "cost": 16
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_474_glady#1",
@@ -756,21 +757,1001 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 50,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Waves of Ægir",
+          "description": "When deployed, all [Abyssal Hunter] Operators recover 1.5% Max HP every second and receive 15% less Physical and Arts damage from [Sea Monster] enemies",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.015,
+            "damage_resistance": 0.15
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Waves of Ægir",
+          "description": "When deployed, all [Abyssal Hunter] Operators recover 2.5% Max HP every second and receive 25% less Physical and Arts damage from [Sea Monster] enemies",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.025,
+            "damage_resistance": 0.25
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Survival of the Fittest",
+          "description": "When attacking enemies with 3 or less weight, increase ATK to 130%",
+          "blackboard": {
+            "value": 3,
+            "atk_scale": 1.3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Survival of the Fittest",
+          "description": "When attacking enemies with 3 or less weight, increase ATK to 136% <@ba.talpu>(+6%)</>",
+          "blackboard": {
+            "value": 3,
+            "atk_scale": 1.36
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_glady",
       "moduleName": "Gladiia's Badge",
-      "desc": "Operator Gladiia has demonstrated a remarkable aptitude for assault following physical coercion of enemy proximity.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Hookmaster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Gladiia has demonstrated a remarkable aptitude for assault following physical coercion of enemy proximity.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Hookmaster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_glady",
       "moduleName": "Consul's Handmirror",
-      "desc": "Upon hearing her mother leave the house, young Gladiia gets up from her bed, calls her lamp alight, and pulls out her vanity handmirror from under her pillow. Not that she would with any regularity be fully awake when the clock rolls over to zero, but tonight, she needs to look at herself. She needs to choose. As other Ægir view her, she is Gladiia, daughter of key Academy of Sciences personnel, winner of all youth competitions, a family girl, a young success story. But in her mirror, Gladiia sees a carbon-based robot, an emotionless form. Her memory begins with her birth mother being infatuated with Ægir affairs and Academy policymaking, her home merely a secondary point of residence, after the Academy's lounge. She once believed her birth mother sought accomplishment from her, and so she compelled herself to relentlessly reach new heights, applying the standards of adults to her young self. But she never was able to pry any form of feedback from her birth mother—no acknowledgement, no criticism, nothing whatsoever. No, her birth mother gave all her time to Ægir, and left not one idle second of one spare minute for her daughter.\nPerhaps it was all an accident that she was raised, and this household had no reason to exist. This was the sort of conclusion Gladiia reached.\nSo, what else but to look for somewhere she can truly call 'home,' Ægir she can truly call 'family.'\nShe has decided. She will seek. She is set to do it.\nShe wants to hear for herself just what kind of case her birth mother might make in a civil court of law.\nGladiia stows away the handmirror, turns off her light, and sinks into rest.\nHer mind swims frantically with planning.\nShe is restless all night.\n......\nGladiia stands before the tremendous standing mirror of the Consul's residence, examining her negligible self in the looking glass. In just a few hours, she will depart the mansion, take to an operating table, and begin the Abyssal Hunter modification surgery. Perhaps, the moment the procedure is over, her dutiful vocation will be as a military commander and not a Technology Consul, and she will take to the battlefield, there becoming a monster with hands drenched in fresh blood. This has completely destroyed any notion of plotting her life's trajectory, and may even end her time then and there. Gladiia has never feared death, nor the giving of her life, but the sumptuous hall she sees in the mirror does make clear to her an aside—she is still teeming with regrets. Some are desires, some are responsibilities, some are promises, and becoming an Abyssal Hunter will render them all forever unfulfilled. If only the surgery could be postponed long enough, if only Ægir could publish the full scope of the plans to her as soon as possible... This is the first time she realizes that she had never had it all firmly in her grasp like she thought. She will lose, and she will never be able to regain.\nGladiia looks around the hall one more time, then returns to her study.\nIn a few hours, she will depart for the Abyssal Hunter experimentation site. Before she does, she has the mansion's smart housekeeping system store two documents.\nOne, her speech to be given upon becoming an Abyssal Hunter.\nOne, a will.\n......\nAfter Gladiia is marooned in a land not of Ægir, she has in the truest sense of the words lost it all. All she has left with her are a bloodridden lance, a still-passable outfit, and a desiccated and scorching eternity. And now, she stands before a pothole filled with fresh water, gazing upon her own reflection, washing the filth and bloodstains from her clothes.\nThe silt comes off with the water easily enough, but the clots of blood on her garments refuse to be washed off. With no option but to brush them by hand, she watches as their hardened forms attain a pellucidity, turn the shade of liquid blood, and run through the seams, dripping to a rest upon the soil. Is it her blood? The Seaborn's blood? Or her fellows' blood? She cannot differentiate. All of a sudden, Gladiia notices something, and she leans close to the hole, carefully examining her neck.\nA tiny scale.\nThough why is a mystery, Gladiia's birth mother comes to her mind in that moment. If she could, she would rather suffer her neglect again. This scale would never have found the chance to rest upon her neck.\nBut it has.\nGladiia stands up, and throws her freshwater-soaked hair behind her in one gesture.\nShe can indeed feel it. There is an embitterment, a discontent inside her. There is no need for these feelings to surface, and they do nothing to help in this present situation.\nShe has indeed lost it all, but she finds she can still afford to uphold her basic honor and dignity, which in turn means she can still move onwards with her head held high.\nShe needs no hope. She simply focuses on possibilities, feasibilities, and results.\nShe can still return to Ægir.\nShe is still alive to recover the Abyssal Hunters, scattered and lost.\nAs long as the probability is not zero, she is still bound to try.\nSo make good on it she shall.\nGladiia wipes her lance's bloodstains dry, and vanishes from the side of the 'hole.'\nSeconds later, the sonic boom jolts the water from the pool, blanketing any and all trace she was ever there."
+      "desc": "Upon hearing her mother leave the house, young Gladiia gets up from her bed, calls her lamp alight, and pulls out her vanity handmirror from under her pillow. Not that she would with any regularity be fully awake when the clock rolls over to zero, but tonight, she needs to look at herself. She needs to choose. As other Ægir view her, she is Gladiia, daughter of key Academy of Sciences personnel, winner of all youth competitions, a family girl, a young success story. But in her mirror, Gladiia sees a carbon-based robot, an emotionless form. Her memory begins with her birth mother being infatuated with Ægir affairs and Academy policymaking, her home merely a secondary point of residence, after the Academy's lounge. She once believed her birth mother sought accomplishment from her, and so she compelled herself to relentlessly reach new heights, applying the standards of adults to her young self. But she never was able to pry any form of feedback from her birth mother—no acknowledgement, no criticism, nothing whatsoever. No, her birth mother gave all her time to Ægir, and left not one idle second of one spare minute for her daughter.\nPerhaps it was all an accident that she was raised, and this household had no reason to exist. This was the sort of conclusion Gladiia reached.\nSo, what else but to look for somewhere she can truly call 'home,' Ægir she can truly call 'family.'\nShe has decided. She will seek. She is set to do it.\nShe wants to hear for herself just what kind of case her birth mother might make in a civil court of law.\nGladiia stows away the handmirror, turns off her light, and sinks into rest.\nHer mind swims frantically with planning.\nShe is restless all night.\n......\nGladiia stands before the tremendous standing mirror of the Consul's residence, examining her negligible self in the looking glass. In just a few hours, she will depart the mansion, take to an operating table, and begin the Abyssal Hunter modification surgery. Perhaps, the moment the procedure is over, her dutiful vocation will be as a military commander and not a Technology Consul, and she will take to the battlefield, there becoming a monster with hands drenched in fresh blood. This has completely destroyed any notion of plotting her life's trajectory, and may even end her time then and there. Gladiia has never feared death, nor the giving of her life, but the sumptuous hall she sees in the mirror does make clear to her an aside—she is still teeming with regrets. Some are desires, some are responsibilities, some are promises, and becoming an Abyssal Hunter will render them all forever unfulfilled. If only the surgery could be postponed long enough, if only Ægir could publish the full scope of the plans to her as soon as possible... This is the first time she realizes that she had never had it all firmly in her grasp like she thought. She will lose, and she will never be able to regain.\nGladiia looks around the hall one more time, then returns to her study.\nIn a few hours, she will depart for the Abyssal Hunter experimentation site. Before she does, she has the mansion's smart housekeeping system store two documents.\nOne, her speech to be given upon becoming an Abyssal Hunter.\nOne, a will.\n......\nAfter Gladiia is marooned in a land not of Ægir, she has in the truest sense of the words lost it all. All she has left with her are a bloodridden lance, a still-passable outfit, and a desiccated and scorching eternity. And now, she stands before a pothole filled with fresh water, gazing upon her own reflection, washing the filth and bloodstains from her clothes.\nThe silt comes off with the water easily enough, but the clots of blood on her garments refuse to be washed off. With no option but to brush them by hand, she watches as their hardened forms attain a pellucidity, turn the shade of liquid blood, and run through the seams, dripping to a rest upon the soil. Is it her blood? The Seaborn's blood? Or her fellows' blood? She cannot differentiate. All of a sudden, Gladiia notices something, and she leans close to the hole, carefully examining her neck.\nA tiny scale.\nThough why is a mystery, Gladiia's birth mother comes to her mind in that moment. If she could, she would rather suffer her neglect again. This scale would never have found the chance to rest upon her neck.\nBut it has.\nGladiia stands up, and throws her freshwater-soaked hair behind her in one gesture.\nShe can indeed feel it. There is an embitterment, a discontent inside her. There is no need for these feelings to surface, and they do nothing to help in this present situation.\nShe has indeed lost it all, but she finds she can still afford to uphold her basic honor and dignity, which in turn means she can still move onwards with her head held high.\nShe needs no hope. She simply focuses on possibilities, feasibilities, and results.\nShe can still return to Ægir.\nShe is still alive to recover the Abyssal Hunters, scattered and lost.\nAs long as the probability is not zero, she is still bound to try.\nSo make good on it she shall.\nGladiia wipes her lance's bloodstains dry, and vanishes from the side of the 'hole.'\nSeconds later, the sonic boom jolts the water from the pool, blanketing any and all trace she was ever there.",
+      "typeIcon": "hok-x",
+      "uniEquipIcon": "uniequip_002_glady",
+      "typeName1": "HOK",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_glady_1",
+        "uniequip_002_glady_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "dist",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 800,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 0.066,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 59,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "dist",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 800,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 0.066,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deployed, all [Abyssal Hunter] Operators recover 3% of their Max HP every second and receive 28% less Physical and Arts damage from enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Waves of Ægir",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "dist",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 800,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 0.066,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deployed, all [Abyssal Hunter] Operators recover 3.5% of their Max HP every second and receive 30% less Physical and Arts damage from enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Waves of Ægir",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.035,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_glady",
       "moduleName": "Pale Gold Hair Pendant",
-      "desc": "'Technology Consul Gladiia, before we proceed with the surgery, I am authorized to ask: Would you like to keep a sample of your original genes?'\nLittle Handy nimbly extends its mechanical arm, and through its speaker comes the voice of the researcher in charge of the surgery.\nThe Consul looks up at the faces of the Ægir in the remote operation room. Many of these researchers are elites she hand-picked from the Academy of Technology—capable, experienced, and loyal to both the Ægir people and every dome under the tides. Now, these elites look back at their Consul through the mirror, made from the same material as the domes, and purse their lips. Since asking her the question, none have spoken; some even turn away from the gaze of their Consul.\nAs a Consul, social rationality is usually the only philosophical instrument Gladiia needs to analyze the behaviors of others. Born in the sea, the Ægir never display meaningless behavior, so at this moment, she is particularly curious about the silence of her fellow people. Is it reverence, fear, or sadness? Or perhaps it is guilt and relief all at once, that the person who has to sacrifice their body to merge with the Sea Born and save all of Ægir is not them?\nShe knows she will not get the answer now, and will have no need for it once the surgery is complete.\nShe remembers when the Academy of Science attempted to develop a batch of artificial organisms injected with Sea Born neuro-cells. These organisms were intended to mimic Sea Born activities in a controlled environment, aiding the Ægir in understanding those abominations. To achieve this, they had to be both loyal servants of the Ægir and establish a limited connection with the Sea Born and their clan.\nShe recalls that the project, which initially made huge progress, ended in tragedy. As cell integration reached a critical point, the organisms were quickly assimilated by the Sea Born and devoured the entire research team. The Sea Patrol had no choice but to call off the rescue and obliterate the entire research facility from the sea bed with their battleship.\nShe also remembers her mother, Horatia, being a staunch supporter of that radical project. They had even debated over it. Now, Gladiia herself is about to partake in an even more radical experiment, with several failed attempts and dead subjects before her already.\nThe first Hunter of Ægir once said that the Abyssal Hunters would not repeat the failure of the artificial organisms because they are not slaves, but warriors who command the tides.\nThe abyss may claim my body, but I still belong to Ægir.\n'Scissors.' The Consul's order is curt. Little Handy extends its other limb, and thin blades protrude from its end.\nShe holds out a lock of light golden hair and lets the blades close around it. When the surgery is complete, the blood of the Sea Born will change the color of her hair.\n'Store this for me. I will claim it back after the surgery.'"
+      "desc": "'Technology Consul Gladiia, before we proceed with the surgery, I am authorized to ask: Would you like to keep a sample of your original genes?'\nLittle Handy nimbly extends its mechanical arm, and through its speaker comes the voice of the researcher in charge of the surgery.\nThe Consul looks up at the faces of the Ægir in the remote operation room. Many of these researchers are elites she hand-picked from the Academy of Technology—capable, experienced, and loyal to both the Ægir people and every dome under the tides. Now, these elites look back at their Consul through the mirror, made from the same material as the domes, and purse their lips. Since asking her the question, none have spoken; some even turn away from the gaze of their Consul.\nAs a Consul, social rationality is usually the only philosophical instrument Gladiia needs to analyze the behaviors of others. Born in the sea, the Ægir never display meaningless behavior, so at this moment, she is particularly curious about the silence of her fellow people. Is it reverence, fear, or sadness? Or perhaps it is guilt and relief all at once, that the person who has to sacrifice their body to merge with the Sea Born and save all of Ægir is not them?\nShe knows she will not get the answer now, and will have no need for it once the surgery is complete.\nShe remembers when the Academy of Science attempted to develop a batch of artificial organisms injected with Sea Born neuro-cells. These organisms were intended to mimic Sea Born activities in a controlled environment, aiding the Ægir in understanding those abominations. To achieve this, they had to be both loyal servants of the Ægir and establish a limited connection with the Sea Born and their clan.\nShe recalls that the project, which initially made huge progress, ended in tragedy. As cell integration reached a critical point, the organisms were quickly assimilated by the Sea Born and devoured the entire research team. The Sea Patrol had no choice but to call off the rescue and obliterate the entire research facility from the sea bed with their battleship.\nShe also remembers her mother, Horatia, being a staunch supporter of that radical project. They had even debated over it. Now, Gladiia herself is about to partake in an even more radical experiment, with several failed attempts and dead subjects before her already.\nThe first Hunter of Ægir once said that the Abyssal Hunters would not repeat the failure of the artificial organisms because they are not slaves, but warriors who command the tides.\nThe abyss may claim my body, but I still belong to Ægir.\n'Scissors.' The Consul's order is curt. Little Handy extends its other limb, and thin blades protrude from its end.\nShe holds out a lock of light golden hair and lets the blades close around it. When the surgery is complete, the blood of the Sea Born will change the color of her hair.\n'Store this for me. I will claim it back after the surgery.'",
+      "typeIcon": "hok-y",
+      "uniEquipIcon": "uniequip_003_glady",
+      "typeName1": "HOK",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_glady_1",
+        "uniequip_003_glady_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "Can <@ba.kw>Shift</> enemies by using skills; increases the strength of the shift by 1 degree when dragging enemies far away towards herself\nCan be deployed on Ranged tiles",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "skill@range_radius",
+                      "value": 2.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@delta_force",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 2.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@delta_force",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 63,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "Can <@ba.kw>Shift</> enemies by using skills; increases the strength of the shift by 1 degree when dragging enemies far away towards herself\nCan be deployed on Ranged tiles",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "skill@range_radius",
+                      "value": 2.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@delta_force",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 2.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@delta_force",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking enemies with 3 or less weight, increase ATK to 140%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Survival of the Fittest",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking enemies with 3 or less weight, increase ATK to 146% <@ba.talpu>(+6%)</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Survival of the Fittest",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.46,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 74,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "Can <@ba.kw>Shift</> enemies by using skills; increases the strength of the shift by 1 degree when dragging enemies far away towards herself\nCan be deployed on Ranged tiles",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "skill@range_radius",
+                      "value": 2.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@delta_force",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 2.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@delta_force",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking enemies with 3 or less weight, increase ATK to 145%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Survival of the Fittest",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.45,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking enemies with 3 or less weight, increase ATK to 151% <@ba.talpu>(+6%)</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Survival of the Fittest",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.51,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1232,5 +2213,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

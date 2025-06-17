@@ -169,6 +169,28 @@
       "cost": 20
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_293_thorns#1",
@@ -769,21 +791,1232 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+26",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 30,
+        "def": 70,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "神经腐蚀",
+          "description": "攻击使目标中毒，在3秒内每秒受到65点法术伤害（对会远程攻击的目标伤害加倍）",
+          "blackboard": [
+            {
+              "key": "damage[normal]",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "damage[ranged]",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "神经腐蚀",
+          "description": "攻击使目标中毒，在3秒内每秒受到80<@ba.talpu>（+15）</>点法术伤害（对会远程攻击的目标伤害加倍）",
+          "blackboard": [
+            {
+              "key": "damage[normal]",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "damage[ranged]",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "神经腐蚀",
+          "description": "攻击使目标中毒，在3秒内每秒受到125点法术伤害（对会远程攻击的目标伤害加倍）",
+          "blackboard": [
+            {
+              "key": "damage[normal]",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "damage[ranged]",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "神经腐蚀",
+          "description": "攻击使目标中毒，在3秒内每秒受到140<@ba.talpu>（+15）</>点法术伤害（对会远程攻击的目标伤害加倍）",
+          "blackboard": [
+            {
+              "key": "damage[normal]",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "damage[ranged]",
+              "value": 280,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "故土潮声",
+          "description": "如果2秒内没有主动攻击过，每秒恢复最大生命3.5%的生命",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.035,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "2",
+          "name": "故土潮声",
+          "description": "如果2秒内没有主动攻击过，每秒恢复最大生命4%<@ba.talpu>（+0.5%）</>的生命",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.04,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_thorns",
       "moduleName": "棘刺证章",
-      "desc": "干员棘刺擅长在较大范围内阻击敌人\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使领主职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员棘刺擅长在较大范围内阻击敌人\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使领主职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_thorns",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_thorns",
       "moduleName": "“盐与沙”",
-      "desc": "从前，盐还不属于大地，沙还不属于海洋。\n那时狂热的律法还未将这片土地禁锢，伊比利亚的王城之中仍有国王。\n那时国王是这片疆土的主人，他的麾下兵强士壮，他的谕令征服无数城邦。\n他的勇武和威名穿过重重天灾，他将堡垒和哨所修到越发遥远的边疆。\n他建起宫殿厅堂，他的王城内遍布他的塑像。\n但国王永远不会满足，他还希望自己名字处处传唱。\n于是伊比利亚的国王向一百座城池发出号令——\n“把所有博学多识的人都召集到我的王城来，我要知道这大地与海洋究竟有多宽广。”\n第一位求见的是位商人，他年老体衰，说带有宝物，要献给国王。\n国王相信岁月的智慧，便把商人召至他的厅堂。\n商人向国王献上一个烫手的沙漏，声称最炙热的沙漠，就是大地的尽头。\n“我已抵达大地的尽头，那里焚风似火，烈阳如炬，这其中的沙砾，就来自那个地方！”\n第二位求见的是位渔民，他稚气未脱，说带有宝物，要献给国王。\n国王相信青春的智慧，便把渔民召至他的厅堂。\n渔民向国王献上一瓶黑色的海水，声称最漆黑的水域，就是海洋的终点。\n“我已抵达海洋的终点，那里水深无底，狂风不息，这瓶中的咸水，就来自那个地方！”\n最后求见的是一位炼金术师，他面目不清，长幼不辨，说带有宝物，要献给国王。\n国王还未决定是否取信，炼金术师便已经出现在他的厅堂。\n炼金术师请求国王赐他沙漏和咸水，而国王欣然应允，想看看他到底能玩出什么名堂。\n那大地尽头的沙砾，竟在国王的面前熔成一摊红水。\n那海洋终点的咸水，竟在国王的面前结作粒粒白砂。\n炼金术师随意抛洒，它们消散在空中。似是应了他的旨意，王国的疆土上刮起大风，三天三夜仍不见停歇。\n“我不知道大地与海洋究竟有多宽广，但我知道无论如何，都不及伊比利亚的无边力量。\n“从今往后这大地与海洋上的风都将忠实于您，伊比利亚的国王。\n“请您从今天开始打造舰队，顺着风的方向。\n“不论大地还是海洋，请让伊比利亚的舰队去丈量。”"
+      "desc": "从前，盐还不属于大地，沙还不属于海洋。\n那时狂热的律法还未将这片土地禁锢，伊比利亚的王城之中仍有国王。\n那时国王是这片疆土的主人，他的麾下兵强士壮，他的谕令征服无数城邦。\n他的勇武和威名穿过重重天灾，他将堡垒和哨所修到越发遥远的边疆。\n他建起宫殿厅堂，他的王城内遍布他的塑像。\n但国王永远不会满足，他还希望自己名字处处传唱。\n于是伊比利亚的国王向一百座城池发出号令——\n“把所有博学多识的人都召集到我的王城来，我要知道这大地与海洋究竟有多宽广。”\n第一位求见的是位商人，他年老体衰，说带有宝物，要献给国王。\n国王相信岁月的智慧，便把商人召至他的厅堂。\n商人向国王献上一个烫手的沙漏，声称最炙热的沙漠，就是大地的尽头。\n“我已抵达大地的尽头，那里焚风似火，烈阳如炬，这其中的沙砾，就来自那个地方！”\n第二位求见的是位渔民，他稚气未脱，说带有宝物，要献给国王。\n国王相信青春的智慧，便把渔民召至他的厅堂。\n渔民向国王献上一瓶黑色的海水，声称最漆黑的水域，就是海洋的终点。\n“我已抵达海洋的终点，那里水深无底，狂风不息，这瓶中的咸水，就来自那个地方！”\n最后求见的是一位炼金术师，他面目不清，长幼不辨，说带有宝物，要献给国王。\n国王还未决定是否取信，炼金术师便已经出现在他的厅堂。\n炼金术师请求国王赐他沙漏和咸水，而国王欣然应允，想看看他到底能玩出什么名堂。\n那大地尽头的沙砾，竟在国王的面前熔成一摊红水。\n那海洋终点的咸水，竟在国王的面前结作粒粒白砂。\n炼金术师随意抛洒，它们消散在空中。似是应了他的旨意，王国的疆土上刮起大风，三天三夜仍不见停歇。\n“我不知道大地与海洋究竟有多宽广，但我知道无论如何，都不及伊比利亚的无边力量。\n“从今往后这大地与海洋上的风都将忠实于您，伊比利亚的国王。\n“请您从今天开始打造舰队，顺着风的方向。\n“不论大地还是海洋，请让伊比利亚的舰队去丈量。”",
+      "typeIcon": "lor-x",
+      "uniEquipIcon": "uniequip_002_thorns",
+      "typeName1": "LOR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_thorns_1",
+        "uniequip_002_thorns_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 39,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击附带<@ba.vup>{atk_scale_m:0%}</>攻击力的法术伤害",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 215,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 48,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击附带<@ba.vup>{atk_scale_m:0%}</>攻击力的法术伤害",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标中毒，在3秒内每秒受到125点法术伤害，可叠加3次（对会远程攻击的目标伤害加倍）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "神经腐蚀",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[normal]",
+                      "value": 125,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[ranged]",
+                      "value": 250,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标中毒，在3秒内每秒受到140<@ba.talpu>（+15）</>点法术伤害，可叠加3次（对会远程攻击的目标伤害加倍）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "神经腐蚀",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[normal]",
+                      "value": 140,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[ranged]",
+                      "value": 280,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 260,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击附带<@ba.vup>{atk_scale_m:0%}</>攻击力的法术伤害",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标中毒，在3秒内每秒受到135点法术伤害，可叠加4次（对会远程攻击的目标伤害加倍）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "神经腐蚀",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[normal]",
+                      "value": 135,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[ranged]",
+                      "value": 270,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_cnt",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标中毒，在3秒内每秒受到150<@ba.talpu>（+15）</>点法术伤害，可叠加4次（对会远程攻击的目标伤害加倍）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "神经腐蚀",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[normal]",
+                      "value": 150,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[ranged]",
+                      "value": 300,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_cnt",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_thorns",
       "moduleName": "沙蚀",
-      "desc": "“我输了。”剑士收起剑，向断崖旁的男人低下头。\n“你很厉害。”男人也收起剑，向剑士轻轻颔首，认可道：“几乎要逼迫我使出那一招了。”\n“那一招？哪一招？”剑士心生好奇，本想挥手作别的双手又抱在怀里。\n男人面无表情，但说出来的话却令人震撼：“是我保命的一招，这些年来，凡是见过它的人，或是讨饶，或是逃跑......没有谁能坚持三个回合。”\n“这么厉害，是哪个流派的剑术？”剑士瞪大眼睛。\n“没有流派，是我还跟着老师时学的。”\n“恩师是......？”\n“......没什么，只是一个普通的教士罢了。”\n“普通的教士？我可不信，你的剑招让我想起了一位故人，他的名字叫奥卢斯，数十年前我曾落败于他手下。”剑士感慨道，“如果是他教你的，那我心里有数。”\n“......不，那一招不是他教给我的。”\n“也是，你所学剑招颇杂，应该不止师承一位剑术大师。”\n“......那人并不会剑术。但就连老师在与他对峙时也会败下阵来。”男人摇摇头，陷入往日的回忆。\n“连他也会输......不可能！那个人是谁？！”剑士的语气变得激动。\n“他是老师请来照料学生们衣食住行的人，有点凶，不怎么爱和人交际，大家都怕他。只要有人捣乱，他便会挥舞手中的拖把狠狠将对方教训一顿。”想起那人凶巴巴的模样，男人轻轻一颤。\n“一把拖把而已，有什么好怕的。”\n“不，那把拖把上总有一股刺鼻的消毒水味，极其难闻，甚至甩出来的水滴还有腐蚀性。”男人脸上诡异地露出了一抹赞赏的神色，“受他启发，我也在长剑上安装了储液管，里面是改良过配方的消毒液，腐蚀性更强，也更加难闻。”\n“我开始好奇了，到底有多难闻？”\n“你确定要闻吗？”\n“......是，我要闻。”\n男人叹了口气，拔开连接长剑的软管，凑到剑士面前。\n剑士深吸一口气，随后他的面色迅速从白转红再到紫，最后整个人竟直直栽倒在地。\n男人迅速将软管插了回去，蹲在剑士身旁，发现他已经两眼翻白，不省人事，沉默片刻，才终于吐出一句话——\n“呼......怎么憋了那么久的气......气味还是没散干净......”"
+      "desc": "“我输了。”剑士收起剑，向断崖旁的男人低下头。\n“你很厉害。”男人也收起剑，向剑士轻轻颔首，认可道：“几乎要逼迫我使出那一招了。”\n“那一招？哪一招？”剑士心生好奇，本想挥手作别的双手又抱在怀里。\n男人面无表情，但说出来的话却令人震撼：“是我保命的一招，这些年来，凡是见过它的人，或是讨饶，或是逃跑......没有谁能坚持三个回合。”\n“这么厉害，是哪个流派的剑术？”剑士瞪大眼睛。\n“没有流派，是我还跟着老师时学的。”\n“恩师是......？”\n“......没什么，只是一个普通的教士罢了。”\n“普通的教士？我可不信，你的剑招让我想起了一位故人，他的名字叫奥卢斯，数十年前我曾落败于他手下。”剑士感慨道，“如果是他教你的，那我心里有数。”\n“......不，那一招不是他教给我的。”\n“也是，你所学剑招颇杂，应该不止师承一位剑术大师。”\n“......那人并不会剑术。但就连老师在与他对峙时也会败下阵来。”男人摇摇头，陷入往日的回忆。\n“连他也会输......不可能！那个人是谁？！”剑士的语气变得激动。\n“他是老师请来照料学生们衣食住行的人，有点凶，不怎么爱和人交际，大家都怕他。只要有人捣乱，他便会挥舞手中的拖把狠狠将对方教训一顿。”想起那人凶巴巴的模样，男人轻轻一颤。\n“一把拖把而已，有什么好怕的。”\n“不，那把拖把上总有一股刺鼻的消毒水味，极其难闻，甚至甩出来的水滴还有腐蚀性。”男人脸上诡异地露出了一抹赞赏的神色，“受他启发，我也在长剑上安装了储液管，里面是改良过配方的消毒液，腐蚀性更强，也更加难闻。”\n“我开始好奇了，到底有多难闻？”\n“你确定要闻吗？”\n“......是，我要闻。”\n男人叹了口气，拔开连接长剑的软管，凑到剑士面前。\n剑士深吸一口气，随后他的面色迅速从白转红再到紫，最后整个人竟直直栽倒在地。\n男人迅速将软管插了回去，蹲在剑士身旁，发现他已经两眼翻白，不省人事，沉默片刻，才终于吐出一句话——\n“呼......怎么憋了那么久的气......气味还是没散干净......”",
+      "typeIcon": "lor-d",
+      "uniEquipIcon": "uniequip_003_thorns",
+      "typeName1": "LOR",
+      "typeName2": "D",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_thorns_1",
+        "uniequip_003_thorns_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30165",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "造成伤害时附带相当于<@ba.kw>10%</>伤害的<$ba.dt.neural2>神经损伤</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_ratio",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_ratio",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 69,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "造成伤害时附带相当于<@ba.kw>10%</>伤害的<$ba.dt.neural2>神经损伤</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_ratio",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标中毒，在3秒内每秒受到200点法术伤害（对会远程攻击的目标伤害加倍）。如果敌方单位处于<$ba.dt.neural2>神经损伤</>爆发期间，中毒伤害变为2倍且类型改为元素伤害",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "神经腐蚀",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage[normal]",
+                      "value": 200,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[ranged]",
+                      "value": 400,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_break_multi",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标中毒，在3秒内每秒受到215<@ba.talpu>（+15）</>点法术伤害（对会远程攻击的目标伤害加倍）。如果敌方单位处于<$ba.dt.neural2>神经损伤</>爆发期间，中毒伤害变为2倍且类型改为元素伤害",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "神经腐蚀",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage[normal]",
+                      "value": 215,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[ranged]",
+                      "value": 430,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_break_multi",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_ratio",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "造成伤害时附带相当于<@ba.kw>10%</>伤害的<$ba.dt.neural2>神经损伤</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_ratio",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标中毒，在3秒内每秒受到300点法术伤害（对会远程攻击的目标伤害加倍）。如果敌方单位处于<$ba.dt.neural2>神经损伤</>爆发期间，中毒伤害变为2.5倍且类型改为元素伤害",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "神经腐蚀",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage[normal]",
+                      "value": 300,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[ranged]",
+                      "value": 600,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_break_multi",
+                      "value": 2.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标中毒，在3秒内每秒受到315<@ba.talpu>（+15）</>点法术伤害（对会远程攻击的目标伤害加倍）。如果敌方单位处于<$ba.dt.neural2>神经损伤</>爆发期间，中毒伤害变为2.5倍且类型改为元素伤害",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "神经腐蚀",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage[normal]",
+                      "value": 315,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage[ranged]",
+                      "value": 630,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_break_multi",
+                      "value": 2.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_ratio",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1237,5 +2470,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

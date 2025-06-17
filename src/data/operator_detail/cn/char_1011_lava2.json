@@ -168,6 +168,7 @@
       "cost": 35
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_1011_lava2#1",
@@ -654,16 +655,676 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "咒术阵线",
+          "description": "首次部署后立即获得15点技力，每次部署时使在场术师干员技力+2，在场时其余友方术师干员初始技力+2",
+          "blackboard": [
+            {
+              "key": "lava2_t_1[ally].sp",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "lava2_t_1[self].sp",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "咒术阵线",
+          "description": "首次部署后立即获得20<@ba.talpu>（+5）</>点技力，每次部署时使在场术师干员技力+3<@ba.talpu>（+1）</>，在场时其余友方术师干员初始技力+3<@ba.talpu>（+1）</>",
+          "blackboard": [
+            {
+              "key": "lava2_t_1[ally].sp",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "lava2_t_1[self].sp",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "咒术阵线",
+          "description": "首次部署后立即获得30点技力，每次部署时使在场术师干员技力+4，在场时其余友方术师干员初始技力+4",
+          "blackboard": [
+            {
+              "key": "lava2_t_1[ally].sp",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "lava2_t_1[self].sp",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "咒术阵线",
+          "description": "首次部署后立即获得35<@ba.talpu>（+5）</>点技力，每次部署时使在场术师干员技力+5<@ba.talpu>（+1）</>，在场时其余友方术师干员初始技力+5<@ba.talpu>（+1）</>",
+          "blackboard": [
+            {
+              "key": "lava2_t_1[ally].sp",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "lava2_t_1[self].sp",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_lava2",
       "moduleName": "炎狱炎熔证章",
-      "desc": "炎狱炎熔擅长对复数敌人造成法术杀伤\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使扩散术师职责\n特别颁发此证章\n以兹证明"
+      "desc": "炎狱炎熔擅长对复数敌人造成法术杀伤\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使扩散术师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_lava2",
       "moduleName": "萨卡兹的刀",
-      "desc": "铸造室中锤打的声音停了下来，从工匠手中接过沉重的铁夹，炎熔把烧得通红的小刀浸入冰冷的水中，气泡和白烟伴随着剧烈的沸腾声毫无章法地窜出来，迷住了她的眼睛。\n冷却好的小刀被放在铸台上，上面有炎熔刻上去的，自己双角的图案。\n\n“好酷......！姐姐，我也想要这个！”\n出生在贫民区的孩子们很难吃到好的食物，而炎熔平日里爱吃的甜食，他们更是从来都没有见过。\n自从炎熔解下腰间随着走路步伐一晃一晃散发出甜蜜气息的小袋，把雪白的美味一个一个仔细分给那些怯生生伸来的小手后，这里的孩子们便把父母口中曾经说的“魔族”抛在脑后，甚至期盼着这个看起来酷酷的姐姐来和他们玩。\n看着孩子们乌黑眼珠中的芥蒂随着时光和自己的善意一层一层减少，炎熔问出了一个想了很久的问题。\n“你们知道法术吗？”\n炎熔变出一片片红色的火焰花朵，枝枝蔓蔓，在夜色下显得惊人的美丽。\n一群小脑袋想靠近却又不敢，炎熔牵着他们的手，蹲下身子讲解一些入门的知识。\n从来没有见过这些的他们兴奋地有样学样，意料之外地，炎熔看到其中一两只小手之间腾出零碎的光芒，是还没有成型的法术，那光映着自己惊喜的脸。\n炎熔决定做一件自己一直想做的事情。\n即使单从世俗的一面来讲，学会一些法术也是一件好事，能找到一份稳定的工作，填饱肚子，不必在贫民区继续挨饿受冻，这样才能摆脱一些缠绕在自己身上的命运。\n\n时间一日接一日地过去，这片大地没有变好，也没有变坏，它仍旧孕育着祸与福、生与死。\n这里的孩子学会了萨卡兹的法术，他们并没有变好，也没有变坏，他们仍旧和平日一样生活，但他们的未来已经在悄悄地变动。\n这把新打出来的小刀在好奇的小手里接连不断地传递着，炎熔用她自己的方法改变一些事情。"
+      "desc": "铸造室中锤打的声音停了下来，从工匠手中接过沉重的铁夹，炎熔把烧得通红的小刀浸入冰冷的水中，气泡和白烟伴随着剧烈的沸腾声毫无章法地窜出来，迷住了她的眼睛。\n冷却好的小刀被放在铸台上，上面有炎熔刻上去的，自己双角的图案。\n\n“好酷......！姐姐，我也想要这个！”\n出生在贫民区的孩子们很难吃到好的食物，而炎熔平日里爱吃的甜食，他们更是从来都没有见过。\n自从炎熔解下腰间随着走路步伐一晃一晃散发出甜蜜气息的小袋，把雪白的美味一个一个仔细分给那些怯生生伸来的小手后，这里的孩子们便把父母口中曾经说的“魔族”抛在脑后，甚至期盼着这个看起来酷酷的姐姐来和他们玩。\n看着孩子们乌黑眼珠中的芥蒂随着时光和自己的善意一层一层减少，炎熔问出了一个想了很久的问题。\n“你们知道法术吗？”\n炎熔变出一片片红色的火焰花朵，枝枝蔓蔓，在夜色下显得惊人的美丽。\n一群小脑袋想靠近却又不敢，炎熔牵着他们的手，蹲下身子讲解一些入门的知识。\n从来没有见过这些的他们兴奋地有样学样，意料之外地，炎熔看到其中一两只小手之间腾出零碎的光芒，是还没有成型的法术，那光映着自己惊喜的脸。\n炎熔决定做一件自己一直想做的事情。\n即使单从世俗的一面来讲，学会一些法术也是一件好事，能找到一份稳定的工作，填饱肚子，不必在贫民区继续挨饿受冻，这样才能摆脱一些缠绕在自己身上的命运。\n\n时间一日接一日地过去，这片大地没有变好，也没有变坏，它仍旧孕育着祸与福、生与死。\n这里的孩子学会了萨卡兹的法术，他们并没有变好，也没有变坏，他们仍旧和平日一样生活，但他们的未来已经在悄悄地变动。\n这把新打出来的小刀在好奇的小手里接连不断地传递着，炎熔用她自己的方法改变一些事情。",
+      "typeIcon": "spc-x",
+      "uniEquipIcon": "uniequip_002_lava2",
+      "typeName1": "SPC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_lava2_1",
+        "uniequip_002_lava2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 43,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围<@ba.kw>扩大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "3-1",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围<@ba.kw>扩大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "3-1",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "首次部署后立即获得33点技力，每次部署时使在场术师干员技力+4，在场时其余友方术师干员初始技力+4",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "咒术阵线",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lava2_t_1[ally].sp",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lava2_t_1[self].sp",
+                      "value": 33,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "首次部署后立即获得38<@ba.talpu>（+5）</>点技力，每次部署时使在场术师干员技力+5<@ba.talpu>（+1）</>，在场时其余友方术师干员初始技力+5<@ba.talpu>（+1）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "咒术阵线",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lava2_t_1[ally].sp",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lava2_t_1[self].sp",
+                      "value": 38,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 165,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 62,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围<@ba.kw>扩大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "3-1",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "首次部署后立即获得35点技力，每次部署时使在场术师干员技力+4，在场时其余友方术师干员初始技力+4",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "咒术阵线",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lava2_t_1[ally].sp",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lava2_t_1[self].sp",
+                      "value": 35,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "首次部署后立即获得40<@ba.talpu>（+5）</>点技力，每次部署时使在场术师干员技力+5<@ba.talpu>（+1）</>，在场时其余友方术师干员初始技力+5<@ba.talpu>（+1）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "咒术阵线",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lava2_t_1[ally].sp",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lava2_t_1[self].sp",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1117,5 +1778,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

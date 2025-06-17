@@ -137,6 +137,24 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "sluggish",
+          "value": 0.8
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_183_skgoat#1",
@@ -603,16 +621,512 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +21",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 21,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Geological Survey",
+          "description": "Extends <$ba.sluggish>Slow</> duration slightly",
+          "blackboard": {
+            "sluggish": 0.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Geological Survey",
+          "description": "Extends <$ba.sluggish>Slow</> duration moderately",
+          "blackboard": {
+            "sluggish": 0.13
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_skgoat",
       "moduleName": "Earthspirit's Badge",
-      "desc": "Operator Earthspirit has demonstrated a remarkable aptitude for impeding the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Decel Binder responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Earthspirit has demonstrated a remarkable aptitude for impeding the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Decel Binder responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_skgoat",
       "moduleName": "Application Forms, To Be Confirmed",
-      "desc": "TO BE EXPENSED: Repairs + installing a music player on motorcycle\nJUSTIFICATION: Motorcycle broke down. Also, would very much like approval for adding a music player.\nOVERVIEW FROM ENGINEERING DEPT.: Fernand II 3-wheel motorcycle, manufactured before Battle of the Four Emperors, antique. Mr. Greypaw conducted fullbody inspection, says original parts hard to find because of age. Re safety: vehicle as old as this should be in museum, not speeding on roads. Greypaw explained this to Earthspirit, Earthspirit stated vehicle originally belonged to mentor Prof. Bachmann. Earthspirit oft. sat in sidecar holding boxes of stones, following mentor everywhere on field investigations. Prof. Bachmann gifted vehicle to her at graduation, and asked her to keep a promise. At present, Prof. Bachmann is deceased. Left only this Fernand II behind, always reminding Earthspirit not to forget promise. Earthspirit rides this motorcycle on vacation, sidecar usually filled with various stones when she returns, plus other Catastrophe Messengers hitchhike on occasion.\nVIEW OF ENGINEERING DEPT.: Given special nature of Earthspirit's dept. plus direct superior of that dept. being the Doctor, this form to be passed onto the Doctor.\n\nTO BE EXPENSED: Installation of suppressor for tuning fork\nJUSTIFICATION: Sound has been bothering people more lately. Seemingly caused by Oripathy? Require installing an inhibitor for my tuning fork.\nOVERVIEW FROM MEDICAL DEPT.: While true Earthspirit's Oripathy has grown severe, no others have heard this supposed sound she mentions. According to physical examination results, the worsening of Earthspirit's Oripathy seems to relate to her continued involuntary continuous usage of Originium Arts.\nOVERVIEW FROM ENGINEERING DEPT.: Tuning fork is Leithanian, custom-order by Earthspirit's mentor for Earthspirit. Rhodes Island requires relevant tech documentation before able to commence investigation of how to limit its output rate.\nVIEW OF ENGINEERING DEPT.: Given special nature of Earthspirit's dept. plus direct superior of that dept. being the Doctor, this form to be passed onto the Doctor.\n\nLEAVE REQUESTED: Visiting home\nLEAVE PERIOD: Apr 1 TO Apr 8\nDATE OF REQUEST: Feb 24\nAPPLICANT: Glacier Wegenie\nDETAILS: Haven't returned home in a long time. I would like to visit, given relative proximity to Leithanien soon.\nVIEW OF HR DEPT.: Approved. Earthspirit was attacked by unknown assailants during a recent field mission, and is presently being treated in the Medical cabin. No adjustment of leave period required, as reconfirmed with Earthspirit. Additionally, Provence + Eyjafjalla will travel with Earthspirit, though given Provence has not returned aboard recently, we provisionally have not received her leave request.\n*Given special nature of Earthspirit's dept. plus direct superior of that dept. being the Doctor, this form to be passed onto the Doctor."
+      "desc": "TO BE EXPENSED: Repairs + installing a music player on motorcycle\nJUSTIFICATION: Motorcycle broke down. Also, would very much like approval for adding a music player.\nOVERVIEW FROM ENGINEERING DEPT.: Fernand II 3-wheel motorcycle, manufactured before Battle of the Four Emperors, antique. Mr. Greypaw conducted fullbody inspection, says original parts hard to find because of age. Re safety: vehicle as old as this should be in museum, not speeding on roads. Greypaw explained this to Earthspirit, Earthspirit stated vehicle originally belonged to mentor Prof. Bachmann. Earthspirit oft. sat in sidecar holding boxes of stones, following mentor everywhere on field investigations. Prof. Bachmann gifted vehicle to her at graduation, and asked her to keep a promise. At present, Prof. Bachmann is deceased. Left only this Fernand II behind, always reminding Earthspirit not to forget promise. Earthspirit rides this motorcycle on vacation, sidecar usually filled with various stones when she returns, plus other Catastrophe Messengers hitchhike on occasion.\nVIEW OF ENGINEERING DEPT.: Given special nature of Earthspirit's dept. plus direct superior of that dept. being the Doctor, this form to be passed onto the Doctor.\n\nTO BE EXPENSED: Installation of suppressor for tuning fork\nJUSTIFICATION: Sound has been bothering people more lately. Seemingly caused by Oripathy? Require installing an inhibitor for my tuning fork.\nOVERVIEW FROM MEDICAL DEPT.: While true Earthspirit's Oripathy has grown severe, no others have heard this supposed sound she mentions. According to physical examination results, the worsening of Earthspirit's Oripathy seems to relate to her continued involuntary continuous usage of Originium Arts.\nOVERVIEW FROM ENGINEERING DEPT.: Tuning fork is Leithanian, custom-order by Earthspirit's mentor for Earthspirit. Rhodes Island requires relevant tech documentation before able to commence investigation of how to limit its output rate.\nVIEW OF ENGINEERING DEPT.: Given special nature of Earthspirit's dept. plus direct superior of that dept. being the Doctor, this form to be passed onto the Doctor.\n\nLEAVE REQUESTED: Visiting home\nLEAVE PERIOD: Apr 1 TO Apr 8\nDATE OF REQUEST: Feb 24\nAPPLICANT: Glacier Wegenie\nDETAILS: Haven't returned home in a long time. I would like to visit, given relative proximity to Leithanien soon.\nVIEW OF HR DEPT.: Approved. Earthspirit was attacked by unknown assailants during a recent field mission, and is presently being treated in the Medical cabin. No adjustment of leave period required, as reconfirmed with Earthspirit. Additionally, Provence + Eyjafjalla will travel with Earthspirit, though given Provence has not returned aboard recently, we provisionally have not received her leave request.\n*Given special nature of Earthspirit's dept. plus direct superior of that dept. being the Doctor, this form to be passed onto the Doctor.",
+      "typeIcon": "dec-y",
+      "uniEquipIcon": "uniequip_002_skgoat",
+      "typeName1": "DEC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_skgoat_1",
+        "uniequip_002_skgoat_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30023",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30083",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31033",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts damage</>, and <$ba.sluggish>Slow</> the enemy for a <@ba.kw>moderate</> period of time",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts damage</>, and <$ba.sluggish>Slow</> the enemy for a <@ba.kw>moderate</> period of time",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Extends the duration of<$ba.sluggish>Slow</> caused by the Trait",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Geological Survey",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Extends the duration of<$ba.sluggish>Slow</> caused by the Trait greatly",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Geological Survey",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 0.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts damage</>, and <$ba.sluggish>Slow</> the enemy for a <@ba.kw>moderate</> period of time",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Further the duration of<$ba.sluggish>Slow</> caused by the Trait",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Geological Survey",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Further the duration of<$ba.sluggish>Slow</> caused by the Trait significantly",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Geological Survey",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 0.33,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1074,5 +1588,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -169,6 +169,28 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_476_blkngt#1",
@@ -682,16 +704,621 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击速度+8",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 8,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "夜行",
+          "description": "可以在战术点召唤眠兽协助作战，其被击败后会在20秒后自动刷新",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10021_blkngt_hypnos",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "夜行",
+          "description": "可以在战术点召唤眠兽协助作战，其被击败后会在17秒后自动刷新",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10021_blkngt_hypnos",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "夜行",
+          "description": "可以在战术点召唤眠兽协助作战，其被击败后会在15秒后自动刷新",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10021_blkngt_hypnos",
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_blkngt",
       "moduleName": "夜半证章",
-      "desc": "干员夜半擅长布设战术点召唤援军来争取部署空间\n根据外勤部门决议\n在外勤任务中划分为先锋干员，行使战术家职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员夜半擅长布设战术点召唤援军来争取部署空间\n根据外勤部门决议\n在外勤任务中划分为先锋干员，行使战术家职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_bstalk",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_blkngt",
       "moduleName": "星星与瞌睡虫",
-      "desc": "长吻眠兽将在今夜失眠，她也一样。\n她从未接受过任何生物学训练，因此无从知晓失眠对长吻眠兽而言是一种致命的麻烦。如果无法维持每日十六小时的睡眠循环，它们很快便会死于神经紊乱和器官衰竭。\n但她是一位猎人。只消观察沙土上的痕迹便已明了，这一窝眠兽幼崽刚刚失去了父母。爪痕与血迹自被刨开的巢穴深处延伸至地面，甲壳摩擦着灌丛，留下一连串逐渐远去的脚步声。两头沙地兽以微弱的优势先她一步得到了猎物，扬长而去。\n猎人从来不愿空手而归。\n她从靴筒的一侧抽出短刀，走向低声呜咽着的幼崽，脚下悄无声息。养父母教过她许多次：长久生息于荒地之上的一切事物都有其价值。在老练的猎人手中，这些奄奄一息的幼崽可以成为最优质的诱饵，无论是用来诱捕其他兽类，还是引开危险的掠食者。\n群星依旧璀璨，地平线上还未浮现淡白的天光。猎人如约回到营地，吹响呼哨。比她年龄稍小些的孩子们收起弩箭与陷阱，欢喜地从她肩上接过猎获。他们磨快了剥皮刀和剁骨的斧子，就在这荒地中央的小小的营地里忙碌起来，很快，毛皮与内脏汇聚成一股难以言喻的腥热蒸气，在营火的上方升腾。\n喝过一杯安神的热茶，猎人便回到自己的帐篷。她在身前摸索一番，眠兽幼崽柔软温暖的身躯便被她小心翼翼地捧在掌心。它不再呜咽，正在猎人手中安静地酣睡着，一道笔直的黑白条纹穿过两眼之间。这是唯一从狩猎中幸存下来的幼崽，强壮、勇敢，在狩猎中比它的兄弟姐妹分泌了更多催眠物质。猎人知道，她，还有营地里的孩子们，距离移动城市的童话很远。这种颠沛流离的生活需要可以携手的同伴，而不是驯服服帖的宠物。\n她抽出一小块毛毡，让眠兽幼崽安稳地睡在上面，然后强迫酸胀的手指摆弄起了针线。借着帐篷外的营火与星光，在日出以前，她还要为这只小小的瞌睡虫织一顶帽子......\n嗯，以后它就叫“小帽”。"
+      "desc": "长吻眠兽将在今夜失眠，她也一样。\n她从未接受过任何生物学训练，因此无从知晓失眠对长吻眠兽而言是一种致命的麻烦。如果无法维持每日十六小时的睡眠循环，它们很快便会死于神经紊乱和器官衰竭。\n但她是一位猎人。只消观察沙土上的痕迹便已明了，这一窝眠兽幼崽刚刚失去了父母。爪痕与血迹自被刨开的巢穴深处延伸至地面，甲壳摩擦着灌丛，留下一连串逐渐远去的脚步声。两头沙地兽以微弱的优势先她一步得到了猎物，扬长而去。\n猎人从来不愿空手而归。\n她从靴筒的一侧抽出短刀，走向低声呜咽着的幼崽，脚下悄无声息。养父母教过她许多次：长久生息于荒地之上的一切事物都有其价值。在老练的猎人手中，这些奄奄一息的幼崽可以成为最优质的诱饵，无论是用来诱捕其他兽类，还是引开危险的掠食者。\n群星依旧璀璨，地平线上还未浮现淡白的天光。猎人如约回到营地，吹响呼哨。比她年龄稍小些的孩子们收起弩箭与陷阱，欢喜地从她肩上接过猎获。他们磨快了剥皮刀和剁骨的斧子，就在这荒地中央的小小的营地里忙碌起来，很快，毛皮与内脏汇聚成一股难以言喻的腥热蒸气，在营火的上方升腾。\n喝过一杯安神的热茶，猎人便回到自己的帐篷。她在身前摸索一番，眠兽幼崽柔软温暖的身躯便被她小心翼翼地捧在掌心。它不再呜咽，正在猎人手中安静地酣睡着，一道笔直的黑白条纹穿过两眼之间。这是唯一从狩猎中幸存下来的幼崽，强壮、勇敢，在狩猎中比它的兄弟姐妹分泌了更多催眠物质。猎人知道，她，还有营地里的孩子们，距离移动城市的童话很远。这种颠沛流离的生活需要可以携手的同伴，而不是驯服服帖的宠物。\n她抽出一小块毛毡，让眠兽幼崽安稳地睡在上面，然后强迫酸胀的手指摆弄起了针线。借着帐篷外的营火与星光，在日出以前，她还要为这只小小的瞌睡虫织一顶帽子......\n嗯，以后它就叫“小帽”。",
+      "typeIcon": "tac-x",
+      "uniEquipIcon": "uniequip_002_bstalk",
+      "typeName1": "TAC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_blkngt_1",
+        "uniequip_002_blkngt_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军受到来自自身阻挡单位的伤害降低<@ba.kw>15%</>，自身攻击援军阻挡的敌人时攻击力提升至150%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 17,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军受到来自自身阻挡单位的伤害降低<@ba.kw>15%</>，自身攻击援军阻挡的敌人时攻击力提升至150%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内存在处于沉睡状态的敌人时，自身和眠兽攻击力+5%",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "点梦",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军受到来自自身阻挡单位的伤害降低<@ba.kw>15%</>，自身攻击援军阻挡的敌人时攻击力提升至150%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内存在处于沉睡状态的敌人时，自身和眠兽攻击力+10%",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "点梦",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1144,6 +1771,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10021_blkngt_hypnos"
   ],
   "patch_info": {}
 }

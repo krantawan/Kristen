@@ -151,6 +151,28 @@
       "cost": 12
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "hp_ratio",
+            "value": 0.03,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4015_spuria#1",
@@ -610,16 +632,662 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+24",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 24,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 45,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "弾薬性能比較試験",
+          "description": "攻撃時、30%の確率で次の効果からランダムな1つ発動：その攻撃のみ2回攻撃になる/攻撃対象を0.5秒間<$ba.stun>スタン</>させる/攻撃対象の防御力を60%無視",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "def_penetrate",
+              "value": 0.6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "弾薬性能比較試験",
+          "description": "攻撃時、50%の確率で次の効果からランダムな1つ発動：その攻撃のみ2回攻撃になる/攻撃対象を1秒間<$ba.stun>スタン</>させる/攻撃対象の防御力を60%無視",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "def_penetrate",
+              "value": 0.6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "弾薬性能比較試験",
+          "description": "攻撃時、70%の確率で次の効果からランダムな1つを発動：その攻撃のみ2回攻撃になる/攻撃対象を1秒間<$ba.stun>スタン</>させる/攻撃対象の防御力を80%無視",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.7,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "def_penetrate",
+              "value": 0.8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_spuria",
       "moduleName": "スプリアの記章",
-      "desc": "スプリアは意表を突く手段を用いた戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、鬼才の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "スプリアは意表を突く手段を用いた戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、鬼才の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_spuria",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_spuria",
       "moduleName": "ドローン塗装キット",
-      "desc": "背後から妙な音が聞こえて、レミュアンは振り向きざまに銃を構えた。\nそこにあったのは一台のドローンだ。\n気流の中で大きな音を立てているこの「精密機器」を見た瞬間、彼女にはその持ち主の見当がついた。\n「今度は何のつもり？」\n少し呆れた様子でため息をついたあと、レミュアンはドローンのカメラを見つめ、銃をしまった。\n「今日は捕まえに来なかったし、こっちの勝ちね。」\n「九十九日連続記録もここまでかしら、先輩？」\nドローンからは冗談めかした声が聞こえる。\n「時間は有限なのよ。いつまでも問題児に付き合っているほど暇じゃないわ。」\n「それで？今日はこのかわい子ちゃんを代わりに授業に出させるつもりなのかしら？リア。」\nレミュアンはそのまま校舎へと向かっていく。\n自身が「かわい子ちゃん」と呼ぶそのドローンに尾行されることにも、すっかり慣れてしまったようだ。\nそのドローンのカメラを通して、スプリアはピンクの髪のサンクタを観察していた。\n校長や先生たちでさえ、授業への出席を催促するのを諦めた今、「スプリアを授業に出席させる」というくだらない日課を続けているのはもはや彼女だけになった。\nなんとも……実に興味深く観察のしがいがある人物だ。\n送られてくる映像をじっと見つめながら、スプリアはその一挙手一投足を観察していた。\n彼女が今日はどのようにして、自分を、あるいは自分が用意した「プレゼント」を見つけるのかを。\nと、気が散っていたほんの一瞬の間に――「ボンッ」という音がした。\nそれと同時に、スプリアはまたドローンを彼女に破壊されたことに気がついた。\n「前にいるドローンはただのホログラム。本当の『かわい子ちゃん』はこっちでしょう？まったく、こんなことにばかり技術力の無駄使いをして。」\n「ほら、もう隠れるのはやめなさい。私を観察したいのなら直接来たらどう？隅々まで堂々と見ればいいじゃない。」\nレミュアンは再び銃をしまった。\n「あーあ、やっぱ先輩の目は欺けないか……」\nスプリアは屋根から飛び降りて、がっくりと言わんばかり、レミュアンの横にあったベンチに寝転がった。\n「それでも、勝ちには変わりないかな。」\n「先輩はこれで私に二回も負けたことになるわね。私を出席させるのを諦めた時と、先輩にあげるはずだったプレゼントを銃で打ち壊した時ってことで。」\n「あら、そう？周りをよく見てみたら？」\nレミュアンが言い終わると同時に、澄んだ笛の音が響いて、きちんと整列した学生たちが目の前を走り抜けていった。\n彼らは皆、頭の上に七個も八個もアイスクリームを乗せており、スプリアはそれに困惑した。\n「お勉強の時間よ、リアちゃん。今日は課外授業ね。外に出て、スイーツを護送するという内容よ。」\nピンクの髪のサンクタはベンチのそばにしゃがみ込む。\nスプリアは彼女の視線を逃れようとして別の方向を向いたが、強烈な日の光に目がくらんでしまった。\n騒がしい街の中、スプリアの耳に届いたのはレミュアンのささやき声だけだ。\n「『かわい子ちゃん』をちゃんと修理したら、またちょうだいね。今度は私の好きな色に塗り替えるのも忘れないように。」"
+      "desc": "背後から妙な音が聞こえて、レミュアンは振り向きざまに銃を構えた。\nそこにあったのは一台のドローンだ。\n気流の中で大きな音を立てているこの「精密機器」を見た瞬間、彼女にはその持ち主の見当がついた。\n「今度は何のつもり？」\n少し呆れた様子でため息をついたあと、レミュアンはドローンのカメラを見つめ、銃をしまった。\n「今日は捕まえに来なかったし、こっちの勝ちね。」\n「九十九日連続記録もここまでかしら、先輩？」\nドローンからは冗談めかした声が聞こえる。\n「時間は有限なのよ。いつまでも問題児に付き合っているほど暇じゃないわ。」\n「それで？今日はこのかわい子ちゃんを代わりに授業に出させるつもりなのかしら？リア。」\nレミュアンはそのまま校舎へと向かっていく。\n自身が「かわい子ちゃん」と呼ぶそのドローンに尾行されることにも、すっかり慣れてしまったようだ。\nそのドローンのカメラを通して、スプリアはピンクの髪のサンクタを観察していた。\n校長や先生たちでさえ、授業への出席を催促するのを諦めた今、「スプリアを授業に出席させる」というくだらない日課を続けているのはもはや彼女だけになった。\nなんとも……実に興味深く観察のしがいがある人物だ。\n送られてくる映像をじっと見つめながら、スプリアはその一挙手一投足を観察していた。\n彼女が今日はどのようにして、自分を、あるいは自分が用意した「プレゼント」を見つけるのかを。\nと、気が散っていたほんの一瞬の間に――「ボンッ」という音がした。\nそれと同時に、スプリアはまたドローンを彼女に破壊されたことに気がついた。\n「前にいるドローンはただのホログラム。本当の『かわい子ちゃん』はこっちでしょう？まったく、こんなことにばかり技術力の無駄使いをして。」\n「ほら、もう隠れるのはやめなさい。私を観察したいのなら直接来たらどう？隅々まで堂々と見ればいいじゃない。」\nレミュアンは再び銃をしまった。\n「あーあ、やっぱ先輩の目は欺けないか……」\nスプリアは屋根から飛び降りて、がっくりと言わんばかり、レミュアンの横にあったベンチに寝転がった。\n「それでも、勝ちには変わりないかな。」\n「先輩はこれで私に二回も負けたことになるわね。私を出席させるのを諦めた時と、先輩にあげるはずだったプレゼントを銃で打ち壊した時ってことで。」\n「あら、そう？周りをよく見てみたら？」\nレミュアンが言い終わると同時に、澄んだ笛の音が響いて、きちんと整列した学生たちが目の前を走り抜けていった。\n彼らは皆、頭の上に七個も八個もアイスクリームを乗せており、スプリアはそれに困惑した。\n「お勉強の時間よ、リアちゃん。今日は課外授業ね。外に出て、スイーツを護送するという内容よ。」\nピンクの髪のサンクタはベンチのそばにしゃがみ込む。\nスプリアは彼女の視線を逃れようとして別の方向を向いたが、強烈な日の光に目がくらんでしまった。\n騒がしい街の中、スプリアの耳に届いたのはレミュアンのささやき声だけだ。\n「『かわい子ちゃん』をちゃんと修理したら、またちょうだいね。今度は私の好きな色に塗り替えるのも忘れないように。」",
+      "typeIcon": "gee-x",
+      "uniEquipIcon": "uniequip_002_spuria",
+      "typeName1": "GEE",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_spuria_1",
+        "uniequip_002_spuria_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが最大値の80%以上の場合、SP自然回復速度+0.25sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 31,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが最大値の80%以上の場合、SP自然回復速度+0.25sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、70%の確率で次の効果からランダムな1つを発動：通常攻撃が2連撃になる/対象を1秒間スタンさせる/対象の防御力を80%無視。発動時にその攻撃の攻撃力が110%まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "弾薬性能比較試験",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが最大値の80%以上の場合、SP自然回復速度+0.25sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、70%の確率で次の効果からランダムな1つを発動：通常攻撃が2回攻撃になる/対象を1秒間スタンさせる/対象の防御力を80%無視。発動時にその攻撃の攻撃力が115%まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "弾薬性能比較試験",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1081,5 +1749,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

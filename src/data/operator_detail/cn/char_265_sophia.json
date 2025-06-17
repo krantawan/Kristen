@@ -154,6 +154,28 @@
       "cost": 18
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.2,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_265_sophia#1",
@@ -640,16 +662,652 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 30,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "责骂",
+          "description": "在场时阻挡数大于等于3的友方近战单位攻速+2，防御+4%",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0.04,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.attack_speed",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.def",
+              "value": 0.02,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "责骂",
+          "description": "在场时阻挡数大于等于3的友方近战单位攻速+4<@ba.talpu>（+2）</>，防御+6%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0.06,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.attack_speed",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.def",
+              "value": 0.03,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "责骂",
+          "description": "在场时阻挡数大于等于3的友方近战单位攻速+4，防御+8%",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.attack_speed",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.def",
+              "value": 0.04,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "责骂",
+          "description": "在场时阻挡数大于等于3的友方近战单位攻速+6<@ba.talpu>（+2）</>，防御+10%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.attack_speed",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.def",
+              "value": 0.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "责骂",
+          "description": "在场时阻挡数大于等于3的友方近战单位攻速+6，防御+12%",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.attack_speed",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.def",
+              "value": 0.06,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "责骂",
+          "description": "在场时阻挡数大于等于3的友方近战单位攻速+8<@ba.talpu>（+2）</>，防御+14%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0.14,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.attack_speed",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "sophia_t_1_less.def",
+              "value": 0.07,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_sophia",
       "moduleName": "鞭刃证章",
-      "desc": "干员鞭刃擅长“鼓舞”阻击大量敌人的干员\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使教官职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员鞭刃擅长“鼓舞”阻击大量敌人的干员\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使教官职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_sophia",
       "moduleName": "加长鞭刃丝线",
-      "desc": "佐菲娅在上赛场前就知道自己和裂隙骑士间会有差距，但当她真正站在对方面前与之较量时，她才真正感受到这道致命的鸿沟。\n听说对方有专业人员反复观摩她的比赛，由与她体型相近的教练使用相同武器现场复现训练，保证在赛前对自己的所有常用招式了如指掌。\n听说裂隙的铠甲专门针对她手中鞭刃进行铸造，不仅难以缠绕，挥舞时的切割也无法造成致命伤害。\n至于他的双剑，每一把的边缘都经过单独处理，对丝线有着良好的切割能力。\n她曾以为这些只是传言，可惜的是，每一条都是真的。\n连续几次交锋都以她的失败告终，佐菲娅有些气馁了。\n裂隙身后到底有几家公司？几百上千人为他出谋划策，只为对付一个鞭刃骑士？\n她急需一个破局的方法，不然，失败必将到来。\n当初临光也是如她这样孤军奋战吗？\n在劣势之下，她可曾动摇？她可曾疑虑？\n她知道答案，她也知道，自己并非临光。\n而当技巧、武器、护甲都无法带来优势时，她所想要依靠的，却与临光殊途同归。\n信念，以及决心。\n她开始频繁转变打法，用自己都尚未熟习的招式组织进攻。\n更多依靠剑刃劈砍，而非鞭刃挥击打压对手。\n如今鞭刃佐菲娅有了一个明确目标：\n迷惑对手。\n抓住他分心的瞬间，\n然后，用这鞭刃去缠裂隙的武器，在丝线断裂之前，\n夺下他一把利刃！"
+      "desc": "佐菲娅在上赛场前就知道自己和裂隙骑士间会有差距，但当她真正站在对方面前与之较量时，她才真正感受到这道致命的鸿沟。\n听说对方有专业人员反复观摩她的比赛，由与她体型相近的教练使用相同武器现场复现训练，保证在赛前对自己的所有常用招式了如指掌。\n听说裂隙的铠甲专门针对她手中鞭刃进行铸造，不仅难以缠绕，挥舞时的切割也无法造成致命伤害。\n至于他的双剑，每一把的边缘都经过单独处理，对丝线有着良好的切割能力。\n她曾以为这些只是传言，可惜的是，每一条都是真的。\n连续几次交锋都以她的失败告终，佐菲娅有些气馁了。\n裂隙身后到底有几家公司？几百上千人为他出谋划策，只为对付一个鞭刃骑士？\n她急需一个破局的方法，不然，失败必将到来。\n当初临光也是如她这样孤军奋战吗？\n在劣势之下，她可曾动摇？她可曾疑虑？\n她知道答案，她也知道，自己并非临光。\n而当技巧、武器、护甲都无法带来优势时，她所想要依靠的，却与临光殊途同归。\n信念，以及决心。\n她开始频繁转变打法，用自己都尚未熟习的招式组织进攻。\n更多依靠剑刃劈砍，而非鞭刃挥击打压对手。\n如今鞭刃佐菲娅有了一个明确目标：\n迷惑对手。\n抓住他分心的瞬间，\n然后，用这鞭刃去缠裂隙的武器，在丝线断裂之前，\n夺下他一把利刃！",
+      "typeIcon": "ins-x",
+      "uniEquipIcon": "uniequip_002_sophia",
+      "typeName1": "INS",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_sophia_1",
+        "uniequip_002_sophia_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "可以攻击到<@ba.kw>较远敌人</>，攻击自身未阻挡的敌人时攻击力提升至<@ba.kw>{atk_scale:0%}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 47,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "可以攻击到<@ba.kw>较远敌人</>，攻击自身未阻挡的敌人时攻击力提升至<@ba.kw>{atk_scale:0%}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "部署后，使场上阻挡数大于等于3的友方近战单位获得1层<$ba.physhield>物理护盾</>",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": "比肩的愿景",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 52,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 52,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "可以攻击到<@ba.kw>较远敌人</>，攻击自身未阻挡的敌人时攻击力提升至<@ba.kw>{atk_scale:0%}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "部署后，使场上阻挡数大于等于3的友方近战单位获得1层<$ba.physhield>物理护盾</>，【卡西米尔】阵营干员额外再获得1层",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": "比肩的愿景",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1103,5 +1761,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

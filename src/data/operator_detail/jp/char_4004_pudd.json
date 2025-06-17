@@ -150,6 +150,64 @@
       "cost": 31
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@max_target",
+            "value": 3,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "attack@sluggish",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>{attack@max_target}</>体目まで跳躍していく<@ba.kw>術ダメージ</>を敵に与え、跳躍する度ダメージが15%減衰し、敵を一瞬<$ba.sluggish>足止め</>(昇進2で効果強化)",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@max_target",
+            "value": 4,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "attack@sluggish",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>{attack@max_target}</>体目まで跳躍していく<@ba.kw>術ダメージ</>を敵に与え、跳躍する度ダメージが15%減衰し、敵を一瞬<$ba.sluggish>足止め</>",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4004_pudd#1",
@@ -616,16 +674,541 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "電磁波",
+          "description": "攻撃力+8%",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.08,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "電磁波",
+          "description": "攻撃力+10％",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_pudd",
       "moduleName": "プリンの記章",
-      "desc": "プリンは機械による複数の敵への連鎖攻撃に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、連鎖術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "プリンは機械による複数の敵への連鎖攻撃に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、連鎖術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_pudd",
       "moduleName": "携帯式テスター",
-      "desc": "プリンにとって、サーミの家屋で過ごす悠々自適な休暇よりも素晴らしい時間はないだろう。\nかつて、クルビア人がサーミ南部の国境で貿易を通じてサーミ人から土地と資源を得ると、クルビアの移動都市はキャラバンと採掘艦を率いて古の凍土を越えた。貿易用の飛び地が誕生したことは、サーミが数百年の沈黙を破り、初めて閉ざされた国の扉を開いたことを意味していた。ほどなくして、クルビアのキャラバンや企業所属の施工チームはサーミ国境の常連となった。プリンも小さい頃から、よく両親に連れられサーミの古の地に赴いていた。\n大地は雪に覆われ、こぼれ落ちる陽光はいたるところで反射して、宝石のように雪に敷き詰められていた。しかし、それすらもサーミのほんの一部に過ぎないのだ。\n「文明からは遠く離れたサーミの氷原や、極寒の冬牙山脈に住むサーミ人は、そのほとんどが千年来の古いしきたりと共に生活してる。クルビアの貿易飛び地とは距離を置き、冬牙連峰と骨に沁みる冷気の中から全てを観察しているんだ。時間の流れすら、彼らの身体に凍り付いているのかもしれない。」サルカズのカフェのマスターはそう語った。「奥の様子まで見てみたいと思わないか？　あの氷原や連峰の奥地や、サーミ人と自然の共存形態なんかを。」\n「私なんかが行っても大丈夫なんですか？」プリンは戸惑いながら尋ねた。「私みたいな都会から来た人が受け入れてもらえるんでしょうか……」\n「サーミは自らの運命を拒みはしない。自分たちが何と向き合っているのか、そしてそれにどう応えるべきなのかを知っているんだ。」\nそれからプリンは現地の建設工事支援に名乗りを上げ、某日の明け方、クルビアの工事チームと共に、本来ならば遠方から眺めることしかできないはずの黒き森に足を踏み入れた。\n原始的な森の中で、サーミ人は現代技術からは頑なに距離を置いていた。クルビアの工事チームの援助を受け入れたのは、ごく一部の自治区付近の湿地で暮らす者たちのみだった。\n基地局を建て、そこから電線をつなぎ、村に一つ目の電灯を灯す……プリンは弱々しいその輝きと、サーミ人の驚きと満足感に満ちた笑顔を眺めながら、人々にとって科学技術とはどういうものなのかを悟った。\nしかし、サーミ人の真の秘密はさらに奥地――クルビア人では到底のぞき見することのできないほどの奥地に隠れているのだ。\nプリンの休暇もまもなく終わる。彼女はサーミ集落での建設支援の経験を報告書にしたため、クルビアに持ち帰る荷物のなかにしまった。\nすぐにまた戻ってこられる――そう楽観的に考えながら。\nこんなごく普通の願いさえ、事故により長い間先延ばしにされ、ようやく実現に至るのだった。"
+      "desc": "プリンにとって、サーミの家屋で過ごす悠々自適な休暇よりも素晴らしい時間はないだろう。\nかつて、クルビア人がサーミ南部の国境で貿易を通じてサーミ人から土地と資源を得ると、クルビアの移動都市はキャラバンと採掘艦を率いて古の凍土を越えた。貿易用の飛び地が誕生したことは、サーミが数百年の沈黙を破り、初めて閉ざされた国の扉を開いたことを意味していた。ほどなくして、クルビアのキャラバンや企業所属の施工チームはサーミ国境の常連となった。プリンも小さい頃から、よく両親に連れられサーミの古の地に赴いていた。\n大地は雪に覆われ、こぼれ落ちる陽光はいたるところで反射して、宝石のように雪に敷き詰められていた。しかし、それすらもサーミのほんの一部に過ぎないのだ。\n「文明からは遠く離れたサーミの氷原や、極寒の冬牙山脈に住むサーミ人は、そのほとんどが千年来の古いしきたりと共に生活してる。クルビアの貿易飛び地とは距離を置き、冬牙連峰と骨に沁みる冷気の中から全てを観察しているんだ。時間の流れすら、彼らの身体に凍り付いているのかもしれない。」サルカズのカフェのマスターはそう語った。「奥の様子まで見てみたいと思わないか？　あの氷原や連峰の奥地や、サーミ人と自然の共存形態なんかを。」\n「私なんかが行っても大丈夫なんですか？」プリンは戸惑いながら尋ねた。「私みたいな都会から来た人が受け入れてもらえるんでしょうか……」\n「サーミは自らの運命を拒みはしない。自分たちが何と向き合っているのか、そしてそれにどう応えるべきなのかを知っているんだ。」\nそれからプリンは現地の建設工事支援に名乗りを上げ、某日の明け方、クルビアの工事チームと共に、本来ならば遠方から眺めることしかできないはずの黒き森に足を踏み入れた。\n原始的な森の中で、サーミ人は現代技術からは頑なに距離を置いていた。クルビアの工事チームの援助を受け入れたのは、ごく一部の自治区付近の湿地で暮らす者たちのみだった。\n基地局を建て、そこから電線をつなぎ、村に一つ目の電灯を灯す……プリンは弱々しいその輝きと、サーミ人の驚きと満足感に満ちた笑顔を眺めながら、人々にとって科学技術とはどういうものなのかを悟った。\nしかし、サーミ人の真の秘密はさらに奥地――クルビア人では到底のぞき見することのできないほどの奥地に隠れているのだ。\nプリンの休暇もまもなく終わる。彼女はサーミ集落での建設支援の経験を報告書にしたため、クルビアに持ち帰る荷物のなかにしまった。\nすぐにまた戻ってこられる――そう楽観的に考えながら。\nこんなごく普通の願いさえ、事故により長い間先延ばしにされ、ようやく実現に至るのだった。",
+      "typeIcon": "cha-y",
+      "uniEquipIcon": "uniequip_002_pudd",
+      "typeName1": "CHA",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_pudd_1",
+        "uniequip_002_pudd_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30063",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30013",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30033",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>{attack@max_target}</>体目まで跳躍していく<@ba.kw>術ダメージ</>を敵に与え、跳躍する度ダメージが<@ba.kw>減衰しなくなり</>、敵を一瞬<$ba.sluggish>足止め</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>{attack@max_target}</>体目まで跳躍していく<@ba.kw>術ダメージ</>を敵に与え、跳躍する度ダメージが<@ba.kw>減衰しなくなり</>、敵を一瞬<$ba.sluggish>足止め</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+13%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "電磁波",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.13,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>{attack@max_target}</>体目まで跳躍していく<@ba.kw>術ダメージ</>を敵に与え、跳躍する度ダメージが<@ba.kw>減衰しなくなり</>、敵を一瞬<$ba.sluggish>足止め</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+16%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "電磁波",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1079,5 +1662,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

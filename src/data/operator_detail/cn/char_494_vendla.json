@@ -168,6 +168,28 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "scale",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "攻击造成<@ba.kw>法术伤害</>，攻击敌人时为攻击范围内一名友方干员治疗相当于<@ba.kw>{scale:0%}</>伤害的生命值",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_494_vendla#1",
@@ -635,16 +657,582 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+22",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 22,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 180,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "土壤基肥改良",
+          "description": "攻击范围内生命上限最高的友方角色受到的治疗效果提升8%",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 1.08,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "土壤基肥改良",
+          "description": "攻击范围内生命上限最高的友方角色受到的治疗效果提升11%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 1.11,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "土壤基肥改良",
+          "description": "攻击范围内生命上限最高的友方角色受到的治疗效果提升15%",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 1.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "土壤基肥改良",
+          "description": "攻击范围内生命上限最高的友方角色受到的治疗效果提升18%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 1.18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_vendla",
       "moduleName": "刺玫证章",
-      "desc": "干员刺玫擅长在向敌人施术杀伤的同时疗愈友方\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使咒愈师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员刺玫擅长在向敌人施术杀伤的同时疗愈友方\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使咒愈师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_vendla",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_vendla",
       "moduleName": "碎片",
-      "desc": "来自刺玫干员的订单：\n深海色小姐你好，这些碎片来自我家乡的一扇彩绘玻璃门，是祖父在我十二岁生日时为我制作的礼物，安设在我的花房内。但后来因为战事，玻璃门被损毁，我收集了所有碎片，将它们带到罗德岛。本来我只是想作为纪念留在身边，但听说您可以修复彩绘玻璃，就把它们送到这里，希望您能够帮忙还原。不论要花费多少，都有没有关系。\n碎片很锋利，每一片我都用泡沫纸妥善包裹好了，希望你拿取时尽量小心，不要割破手。\n深海色回复：\n你说，这扇彩绘玻璃门是在战事中损毁，难怪上面覆盖着大量尘土。我需要时间清理，请您耐心等待。\n干员回复：\n辛苦您了，可否麻烦您为我保留那些扫下来的尘土。\n那是尘土，也是我的故土。我在这里栽培了一株家乡的花，长势不是很理想。或许将那些土填进它的花盆里，它能更自在地生长。\n后勤部回复：\n好的，请于明日十二点前查收包裹。\n干员回复：\n谢谢\n（附带一支雏菊）\n深海色回复：\n修复工作非常顺利，您带来的碎片保存得非常完好，我没费什么力气就将它们拼凑完整了。不过，有许多块玻璃的裂缝中沁入了红色，破坏了原有的花样，我建议取几块全新的玻璃来代替，上面的花纹我会照原来的模样绘制。\n干员回复\n抱歉，我猜想裂缝中的红色应该是无意中溅在上面的鲜血，我以为我已经擦干净了。\n我想我需要一段时间考虑，可否请您暂时停止修复工作。\n谢谢。\n深海色回复：\n发生什么了，刺玫小姐？这些天一直联系不上你，这扇玻璃门已经在我这里快有一个月了。\n干员回复\n很抱歉，深海色小姐，我回了一趟家乡。\n那些玻璃上的血液让我想起了一段不愿回想的经历，我曾沾着鲜血在一条小径上狂奔，血液滴在土地上，留下黑色的印记，我不敢细看。\n可这次回家，我发现那条小径上开满了鲜红的玫瑰，或许当时落下的还有我口袋里的种子，它们吸收了那些血液作为养分，向着阳光雨露生出了花朵。\n我想留下那些沾染了鲜血的玻璃，请您为我重新在上面绘制这些艳丽的花朵。它有着血一样的颜色，也和血一样的有着温度。\n（附上一支来自我家乡的我玫瑰，我用了源石技艺保鲜，希望您也能感受到它的美丽）"
+      "desc": "来自刺玫干员的订单：\n深海色小姐你好，这些碎片来自我家乡的一扇彩绘玻璃门，是祖父在我十二岁生日时为我制作的礼物，安设在我的花房内。但后来因为战事，玻璃门被损毁，我收集了所有碎片，将它们带到罗德岛。本来我只是想作为纪念留在身边，但听说您可以修复彩绘玻璃，就把它们送到这里，希望您能够帮忙还原。不论要花费多少，都有没有关系。\n碎片很锋利，每一片我都用泡沫纸妥善包裹好了，希望你拿取时尽量小心，不要割破手。\n深海色回复：\n你说，这扇彩绘玻璃门是在战事中损毁，难怪上面覆盖着大量尘土。我需要时间清理，请您耐心等待。\n干员回复：\n辛苦您了，可否麻烦您为我保留那些扫下来的尘土。\n那是尘土，也是我的故土。我在这里栽培了一株家乡的花，长势不是很理想。或许将那些土填进它的花盆里，它能更自在地生长。\n后勤部回复：\n好的，请于明日十二点前查收包裹。\n干员回复：\n谢谢\n（附带一支雏菊）\n深海色回复：\n修复工作非常顺利，您带来的碎片保存得非常完好，我没费什么力气就将它们拼凑完整了。不过，有许多块玻璃的裂缝中沁入了红色，破坏了原有的花样，我建议取几块全新的玻璃来代替，上面的花纹我会照原来的模样绘制。\n干员回复\n抱歉，我猜想裂缝中的红色应该是无意中溅在上面的鲜血，我以为我已经擦干净了。\n我想我需要一段时间考虑，可否请您暂时停止修复工作。\n谢谢。\n深海色回复：\n发生什么了，刺玫小姐？这些天一直联系不上你，这扇玻璃门已经在我这里快有一个月了。\n干员回复\n很抱歉，深海色小姐，我回了一趟家乡。\n那些玻璃上的血液让我想起了一段不愿回想的经历，我曾沾着鲜血在一条小径上狂奔，血液滴在土地上，留下黑色的印记，我不敢细看。\n可这次回家，我发现那条小径上开满了鲜红的玫瑰，或许当时落下的还有我口袋里的种子，它们吸收了那些血液作为养分，向着阳光雨露生出了花朵。\n我想留下那些沾染了鲜血的玻璃，请您为我重新在上面绘制这些艳丽的花朵。它有着血一样的颜色，也和血一样的有着温度。\n（附上一支来自我家乡的我玫瑰，我用了源石技艺保鲜，希望您也能感受到它的美丽）",
+      "typeIcon": "inc-x",
+      "uniEquipIcon": "uniequip_002_vendla",
+      "typeName1": "INC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_vendla_1",
+        "uniequip_002_vendla_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 105,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，攻击敌人时为攻击范围内一名友方干员治疗相当于<@ba.kw>{scale:0%}</>伤害的生命值",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 122,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，攻击敌人时为攻击范围内一名友方干员治疗相当于<@ba.kw>{scale:0%}</>伤害的生命值",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内生命上限最高的友方角色受到的治疗效果提升20%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "土壤基肥改良",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内生命上限最高的友方角色受到的治疗效果提升23%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "土壤基肥改良",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 143,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，攻击敌人时为攻击范围内一名友方干员治疗相当于<@ba.kw>{scale:0%}</>伤害的生命值",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内生命上限最高的友方角色受到的治疗效果提升23%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "土壤基肥改良",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内生命上限最高的友方角色受到的治疗效果提升26%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "土壤基肥改良",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.26,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1098,5 +1686,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

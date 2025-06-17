@@ -151,6 +151,7 @@
       "cost": 23
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_333_sidero#1",
@@ -617,16 +618,600 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 500,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "傭兵の意地",
+          "description": "敵を7体倒した後、自身が<$ba.buffres>レジスト</>状態になり、攻撃速度+15",
+          "blackboard": [
+            {
+              "key": "times",
+              "value": 7,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "傭兵の意地",
+          "description": "敵を5<@ba.talpu>（-2）</>体倒した後、自身が<$ba.buffres>レジスト</>状態になり、攻撃速度+15",
+          "blackboard": [
+            {
+              "key": "times",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_sidero",
       "moduleName": "シデロカの記章",
-      "desc": "シデロカは近接戦闘において敵に術ダメージを与えることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、術戦士の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "シデロカは近接戦闘において敵に術ダメージを与えることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、術戦士の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_sidero",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_sidero",
       "moduleName": "放浪者のためのバラスト",
-      "desc": "「コリニアを愛すべし」。城門の石柱の上部に刻まれた銘文である。おそらく、コリニアを離れる者が顔を上げれば目に入るようにとそこに文字を刻んだのだろう。しかし今や門は露天商や傭兵でごった返しており、顔を上げても煤けた落書きや広告のキャッチコピーしか目に入らない。幼い頃、シデロカはよくこの場所に来ていた。雇い主を待つ老いた傭兵を観察しては彼らが漏らす愚痴から言葉を拾い、その情報を元に頭の中で周辺の地図を組み立て、将来この都市から逃げ出すための準備をしていたのだ。\nそれから数年が経ち、シデロカは再びこの門の下にやってきた。シデロカをロドスに引き入れたミノス支部長も彼女の再訪に付き添い、故郷での昔話に花を咲かせた。当時のシデロカと契約を進めたのは、逸材を競争相手に奪われたくなかったからだと支部長は素直に語った。確かにシデロカは他の放浪者が持たないものを持っていたが、それをいち早く見抜けるのは、同じものを持つ者だけだろう。\n貨物船にバラストが必要なように、都市間を渡り歩く傭兵や商人の心にも重しが必要だ。それがなければ、確かな歩みで山を越え遠くへ行くことはできない。当時のシデロカは成人したばかりだったが、その足取りは酒瓶の中に人生の大半を葬ってきた傭兵よりずっとしっかりしていた。彼女の心には、一体どれほどの重しがあるのだろうか。\nシデロカは支部長の話にすぐには返答せず、改めてコリニアを――この一般的等価物で構成された都市を観察した。この都市のあらゆる名声と悪評を憎み、様々な通貨が印刷された読み書きの教科書を嫌悪し、子供たちがままごとで市場の大人のように値切り交渉をしては酒を酌み交わす真似をしていることに嫌気がさしていた。彼女はコリニアを巨大な反面教師として、門の前を一歩進むたび「門の下で偽物を売る露天商、金をゆするために屋台を壊す傭兵。こんな人たちみたいにはなるな。」と自身に言い聞かせていた。\n山から切り出された石は、船のバラストにもなり、彫刻を施せば柱の装飾にもなる。しかし宝石のように値札を付けて宝物とし、その石にしがみついていても、いずれ腕は力を失って石と共に水底へと沈んでしまうだろう。故郷から遠く離れていくにしたがって、シデロカはそうした道理をはっきりと理解した。\nシデロカは都市に入ろうとはしなかった。去り際、支部長は門の反対側に銘文の後半部分を見つけたと言ってシデロカに教えてくれた。\n「あまたの道はここから始まる」"
+      "desc": "「コリニアを愛すべし」。城門の石柱の上部に刻まれた銘文である。おそらく、コリニアを離れる者が顔を上げれば目に入るようにとそこに文字を刻んだのだろう。しかし今や門は露天商や傭兵でごった返しており、顔を上げても煤けた落書きや広告のキャッチコピーしか目に入らない。幼い頃、シデロカはよくこの場所に来ていた。雇い主を待つ老いた傭兵を観察しては彼らが漏らす愚痴から言葉を拾い、その情報を元に頭の中で周辺の地図を組み立て、将来この都市から逃げ出すための準備をしていたのだ。\nそれから数年が経ち、シデロカは再びこの門の下にやってきた。シデロカをロドスに引き入れたミノス支部長も彼女の再訪に付き添い、故郷での昔話に花を咲かせた。当時のシデロカと契約を進めたのは、逸材を競争相手に奪われたくなかったからだと支部長は素直に語った。確かにシデロカは他の放浪者が持たないものを持っていたが、それをいち早く見抜けるのは、同じものを持つ者だけだろう。\n貨物船にバラストが必要なように、都市間を渡り歩く傭兵や商人の心にも重しが必要だ。それがなければ、確かな歩みで山を越え遠くへ行くことはできない。当時のシデロカは成人したばかりだったが、その足取りは酒瓶の中に人生の大半を葬ってきた傭兵よりずっとしっかりしていた。彼女の心には、一体どれほどの重しがあるのだろうか。\nシデロカは支部長の話にすぐには返答せず、改めてコリニアを――この一般的等価物で構成された都市を観察した。この都市のあらゆる名声と悪評を憎み、様々な通貨が印刷された読み書きの教科書を嫌悪し、子供たちがままごとで市場の大人のように値切り交渉をしては酒を酌み交わす真似をしていることに嫌気がさしていた。彼女はコリニアを巨大な反面教師として、門の前を一歩進むたび「門の下で偽物を売る露天商、金をゆするために屋台を壊す傭兵。こんな人たちみたいにはなるな。」と自身に言い聞かせていた。\n山から切り出された石は、船のバラストにもなり、彫刻を施せば柱の装飾にもなる。しかし宝石のように値札を付けて宝物とし、その石にしがみついていても、いずれ腕は力を失って石と共に水底へと沈んでしまうだろう。故郷から遠く離れていくにしたがって、シデロカはそうした道理をはっきりと理解した。\nシデロカは都市に入ろうとはしなかった。去り際、支部長は門の反対側に銘文の後半部分を見つけたと言ってシデロカに教えてくれた。\n「あまたの道はここから始まる」",
+      "typeIcon": "aft-y",
+      "uniEquipIcon": "uniequip_002_sidero",
+      "typeName1": "AFT",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_sidero_1",
+        "uniequip_002_sidero_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31064",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身がブロックしている敵に<@ba.kw>10%</>の<$ba.magicfragile>対術脆弱</>状態を付与",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 270,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身がブロックしている敵に<@ba.kw>10%</>の<$ba.magicfragile>対術脆弱</>状態を付与",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵を6体倒した後、自身が<$ba.buffres>レジスト</>状態になり、攻撃速度+20",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "傭兵の意地",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵を4<@ba.talpu>（-2）</>体倒した後、自身が<$ba.buffres>レジスト</>状態になり、攻撃速度+20",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "傭兵の意地",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 320,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身がブロックしている敵に<@ba.kw>10%</>の<$ba.magicfragile>対術脆弱</>状態を付与",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵を5体倒した後、自身が<$ba.buffres>レジスト</>状態になり、攻撃速度+23",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "傭兵の意地",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵を3<@ba.talpu>（-2）</>体倒した後、自身が<$ba.buffres>レジスト</>状態になり、攻撃速度+23",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "傭兵の意地",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1080,5 +1665,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -151,6 +151,68 @@
       "cost": 24
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 30,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n敵を攻撃する度自身のHPを<@ba.kw>{value}</>回復(昇進1で効果強化)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 50,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n敵を攻撃する度自身のHPを<@ba.kw>{value}</>回復(昇進2で効果強化)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 70,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n敵を攻撃する度自身のHPを<@ba.kw>{value}</>回復",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_337_utage#1",
@@ -644,16 +706,670 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 30,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "マジモード",
+          "description": "配置中、最大で攻撃速度+50の<$ba.berserk>不屈</>状態を獲得する（HPが最大値の50%減少時、効果最大）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "マジモード",
+          "description": "配置中、最大で攻撃速度+75の<$ba.berserk>不屈</>状態を獲得する（HPが最大値の60%減少時、効果最大）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 75,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "マジモード",
+          "description": "配置中、最大で攻撃速度+100の<$ba.berserk>不屈</>状態を獲得する（HPが最大値の70%減少時、効果最大）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_utage",
       "moduleName": "ウタゲの記章",
-      "desc": "ウタゲは支援抜きの単独戦闘に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、武者の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ウタゲは支援抜きの単独戦闘に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、武者の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_utage",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_utage",
       "moduleName": "デコったガラケー",
-      "desc": "【♥キャシーリリーのネイルサロンより】\nクルビア製ネイルマシンを導入したサロンが新たにオープン！\n一足先に体験するなら、今すぐご予約ください！\n皆様のご来店をお待ちしております♡♡♡！\n【銀行より：重要なお知らせ】\nカード残高が不足しているため、引き落としができませんでした。\n【♥キャシーリリーのネイルサロンより】\n03月22日施術分の前金お振り込みがなかったため、ご予約をキャンセルしました。\nまたのご利用をお待ちしております♡♡♡！\n【龍門速報より】\n今週のグルメ探訪は、商店街の丼もの屋さんをご紹介します。\nコスパの高さから、店内は常に超満員！この滑らかで歯ごたえのあるお肉は必見・必食です！\n食べれば日頃のストレスを吹き飛ばしてくれること間違いなし。\nそれにしても、店主の松本さんは若くして成功者となったわけですから、まったく羨ましいくらいです！\n彼にインタビューして今後の展望についてお尋ねしましたが、この内気な青年は頬を赤らめて「今は独身なので早く恋人を作って一緒にカフェでデートをしたい」と答えてくれました。早くいい人が見つかるといいですね！\n【カフェ・ラージコーヒーより】\n深まる秋にコーヒーはいかが？\nお手持ちの「ドリンク交換券」の有効期限がもうまもなくとなりました。ぜひこの機会にご利用ください！\n【カフェ・ラージコーヒーより】\nご注文のオータムラテの準備が完了しました。\nただ今、キャシーリリーのネイルサロンに配達中です。\n【ぱくぱくグルメさんより】\n聞いてよ、今日丼もの屋で意外な人を見かけたんだ！ネイルサロンのオーナーだよ！\nなんでも、ここのところ毎日通ってるんだって！\nでも、あの人ダイエット中じゃなかったっけ？\n【アイ・ラブ・フラワーより】\nご注文の花束を商店街1455号の丼もの屋さんにお届けしました。（受領サインもいただいております。）\nこの度はご利用ありがとうございました。\n～愛を届ける　アイ・ラブ・フラワー♬～\n【きらりんビューティーさんより】\n聞いて聞いて、今日ネイルサロンで意外な人を見かけたの！丼もの屋の松本さんだよ！\nしかもあの人、オーナーのためにコーヒーを持ってきてた！\nあの二人、絶対、ぜーったい怪しいって！！\n【龍門速報より】\nグルメ探訪、今週は商店街の丼もの屋さんを再訪問！\nなんと最近は、若い女性に大人気の新メニューを出しているとのこと。\nこのピンクのハートのトッピングは必見です！\n可愛すぎて食べるのがもったいないくらいですね！\n【♥キャシーリリーのネイルサロンより】\nこの度、当店オーナーが婚約することになりました！\nこれを記念して、各種割引を実施中です！事前予約ならさらにお得に！\nリピーター様もご新規様もぜひご利用ください♡♡♡！"
+      "desc": "【♥キャシーリリーのネイルサロンより】\nクルビア製ネイルマシンを導入したサロンが新たにオープン！\n一足先に体験するなら、今すぐご予約ください！\n皆様のご来店をお待ちしております♡♡♡！\n【銀行より：重要なお知らせ】\nカード残高が不足しているため、引き落としができませんでした。\n【♥キャシーリリーのネイルサロンより】\n03月22日施術分の前金お振り込みがなかったため、ご予約をキャンセルしました。\nまたのご利用をお待ちしております♡♡♡！\n【龍門速報より】\n今週のグルメ探訪は、商店街の丼もの屋さんをご紹介します。\nコスパの高さから、店内は常に超満員！この滑らかで歯ごたえのあるお肉は必見・必食です！\n食べれば日頃のストレスを吹き飛ばしてくれること間違いなし。\nそれにしても、店主の松本さんは若くして成功者となったわけですから、まったく羨ましいくらいです！\n彼にインタビューして今後の展望についてお尋ねしましたが、この内気な青年は頬を赤らめて「今は独身なので早く恋人を作って一緒にカフェでデートをしたい」と答えてくれました。早くいい人が見つかるといいですね！\n【カフェ・ラージコーヒーより】\n深まる秋にコーヒーはいかが？\nお手持ちの「ドリンク交換券」の有効期限がもうまもなくとなりました。ぜひこの機会にご利用ください！\n【カフェ・ラージコーヒーより】\nご注文のオータムラテの準備が完了しました。\nただ今、キャシーリリーのネイルサロンに配達中です。\n【ぱくぱくグルメさんより】\n聞いてよ、今日丼もの屋で意外な人を見かけたんだ！ネイルサロンのオーナーだよ！\nなんでも、ここのところ毎日通ってるんだって！\nでも、あの人ダイエット中じゃなかったっけ？\n【アイ・ラブ・フラワーより】\nご注文の花束を商店街1455号の丼もの屋さんにお届けしました。（受領サインもいただいております。）\nこの度はご利用ありがとうございました。\n～愛を届ける　アイ・ラブ・フラワー♬～\n【きらりんビューティーさんより】\n聞いて聞いて、今日ネイルサロンで意外な人を見かけたの！丼もの屋の松本さんだよ！\nしかもあの人、オーナーのためにコーヒーを持ってきてた！\nあの二人、絶対、ぜーったい怪しいって！！\n【龍門速報より】\nグルメ探訪、今週は商店街の丼もの屋さんを再訪問！\nなんと最近は、若い女性に大人気の新メニューを出しているとのこと。\nこのピンクのハートのトッピングは必見です！\n可愛すぎて食べるのがもったいないくらいですね！\n【♥キャシーリリーのネイルサロンより】\nこの度、当店オーナーが婚約することになりました！\nこれを記念して、各種割引を実施中です！事前予約ならさらにお得に！\nリピーター様もご新規様もぜひご利用ください♡♡♡！",
+      "typeIcon": "sbl-x",
+      "uniEquipIcon": "uniequip_002_utage",
+      "typeName1": "SBL",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_utage_1",
+        "uniequip_002_utage_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30063",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30093",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の時、25%の<$ba.protect>加護</>状態を獲得",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の時、25%の<$ba.protect>加護</>状態を獲得",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが最大値の50%未満の時、攻撃力+3%、防御力+3%",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "冷血",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.03,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の時、25%の<$ba.protect>加護</>状態を獲得",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが最大値の50%未満の時、攻撃力+4%、防御力+4%",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "冷血",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.04,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1107,5 +1823,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

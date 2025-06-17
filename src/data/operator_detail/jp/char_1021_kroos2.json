@@ -150,6 +150,7 @@
       "cost": 15
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_1021_kroos2#1",
@@ -631,16 +632,658 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "的中",
+          "description": "攻撃時、10%の確率でその攻撃のみ攻撃力が150％に上昇し、敵を0.2秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "的中",
+          "description": "攻撃時、10%の確率でその攻撃のみ攻撃力が160%<@ba.talpu>（+10%）</>に上昇し、敵を0.2秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.6,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "的中",
+          "description": "攻撃時、20%の確率でその攻撃のみ攻撃力が150％に上昇し、敵を0.2秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "的中",
+          "description": "攻撃時、20%の確率でその攻撃のみ攻撃力が160%<@ba.talpu>（+10%）</>に上昇し、敵を0.2秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.6,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_kroos2",
       "moduleName": "寒芒クルースの記章",
-      "desc": "寒芒クルースは敵との距離を保って火力で制圧することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、速射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "寒芒クルースは敵との距離を保って火力で制圧することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、速射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_kroos2",
       "moduleName": "真実か挑戦か",
-      "desc": "私が演習中にミスをしでかした後、クルース先輩はずっと私を見ていた。だから訓練室で教官に叱られ終え、先輩がこっちへ来てと声をかけてきた時、私は先輩にも叱責されるのだと思った。しかし実際に私に与えられたのは、ケーキだった。\n先輩は私が落ち込んでいると見抜いていたのだろう。しかしミスはミスだ。あの時、左前方にいた仲間は背後に迫る危険に気付いていなかった。咄嗟に助けなければと思い、報告もなしに動いた結果、私自身が訓練用の矢に当たってしまった。そのまま演習任務が失敗に終わり、教官から低レベルなミスについて責められた時、私は自分を恥じることしかできなかった。\n「こっそり食べてねぇ。それ、私が隠してたとっておきなんだからぁ。」\n頷いて、一口かじる。クリームはとても甘く、上に乗った焼きリンゴのスライスは香ばしい。そして中には――包装されたままのチョコレートがたくさん！？\n「本当は歯が欠けちゃいそうな物が入ってたんだけどねぇ。泣きそうな子にそんなイタズラはダメだから、チョコレートに変えておいたよぉ」\nクルース先輩は包み紙を開けてチョコを口に入れると、私にも一つくれた。訓練室入口のベンチに座りながら、先輩は色々なお話をしてくれた。その中には先輩が過去にしたミスの話もあって、それは今日の私のものとほとんど同じだった。後は戦場で意見の相違から仲間と大喧嘩した話に、これまでにしたイタズラの話、先輩が改造したクロスボウの話なんかも。\nケーキを食べ終え、私は残ったチョコレートをポケットに入れた。クルース先輩は私の頭をポンポンと叩いて言った。「今日の教訓はもう忘れないでしょぉ？」\n「はい……ですが仲間の危機を見過ごしていたら、私はきっと後悔していたと思うんです……」\n先輩は私の目を真剣に見つめた。「そうだね。本当にそんなことが起きちゃったら、きっと後悔するよ。だから正しい対応を学ばなくちゃいけないんだ。実戦で同じミスをしないために、訓練があるんだから。」\nそれから先輩は私に小さなおもちゃをくれた。どうやらイタズラグッズらしい。「よ～し、あそこのオペレーターをびっくりさせにいこっかぁ！」\n「それと、私がケーキを隠してたのは内緒だよぉ。」\nそれから随分経って、私は正式なオペレーターとなった。そして任務で窮地に陥った際、私は正確な判断を下し、負傷者すら出さずに済んだ。九死に一生を得た喜びの中で私が思い出していたのはあの日のこと、クルース先輩がくれたケーキと聞かせてくれた話だった。\n本艦に戻ってから私は先輩と任務の話をした。私の作戦報告を聞いた後、先輩はある物を見せてくれた。その分厚いファイルにびっしりと記載されていたのは、訓練室内のあらゆる訓練用装置の作動タイミング調整パターンと、パターンごとに各予備オペレーターが取り得る対応で、筆跡は先輩のものだった。\n「これで少しは後悔を減らせるかもって思ってねぇ。」クルース先輩はそう言って笑った。「よく頑張ったね。」"
+      "desc": "私が演習中にミスをしでかした後、クルース先輩はずっと私を見ていた。だから訓練室で教官に叱られ終え、先輩がこっちへ来てと声をかけてきた時、私は先輩にも叱責されるのだと思った。しかし実際に私に与えられたのは、ケーキだった。\n先輩は私が落ち込んでいると見抜いていたのだろう。しかしミスはミスだ。あの時、左前方にいた仲間は背後に迫る危険に気付いていなかった。咄嗟に助けなければと思い、報告もなしに動いた結果、私自身が訓練用の矢に当たってしまった。そのまま演習任務が失敗に終わり、教官から低レベルなミスについて責められた時、私は自分を恥じることしかできなかった。\n「こっそり食べてねぇ。それ、私が隠してたとっておきなんだからぁ。」\n頷いて、一口かじる。クリームはとても甘く、上に乗った焼きリンゴのスライスは香ばしい。そして中には――包装されたままのチョコレートがたくさん！？\n「本当は歯が欠けちゃいそうな物が入ってたんだけどねぇ。泣きそうな子にそんなイタズラはダメだから、チョコレートに変えておいたよぉ」\nクルース先輩は包み紙を開けてチョコを口に入れると、私にも一つくれた。訓練室入口のベンチに座りながら、先輩は色々なお話をしてくれた。その中には先輩が過去にしたミスの話もあって、それは今日の私のものとほとんど同じだった。後は戦場で意見の相違から仲間と大喧嘩した話に、これまでにしたイタズラの話、先輩が改造したクロスボウの話なんかも。\nケーキを食べ終え、私は残ったチョコレートをポケットに入れた。クルース先輩は私の頭をポンポンと叩いて言った。「今日の教訓はもう忘れないでしょぉ？」\n「はい……ですが仲間の危機を見過ごしていたら、私はきっと後悔していたと思うんです……」\n先輩は私の目を真剣に見つめた。「そうだね。本当にそんなことが起きちゃったら、きっと後悔するよ。だから正しい対応を学ばなくちゃいけないんだ。実戦で同じミスをしないために、訓練があるんだから。」\nそれから先輩は私に小さなおもちゃをくれた。どうやらイタズラグッズらしい。「よ～し、あそこのオペレーターをびっくりさせにいこっかぁ！」\n「それと、私がケーキを隠してたのは内緒だよぉ。」\nそれから随分経って、私は正式なオペレーターとなった。そして任務で窮地に陥った際、私は正確な判断を下し、負傷者すら出さずに済んだ。九死に一生を得た喜びの中で私が思い出していたのはあの日のこと、クルース先輩がくれたケーキと聞かせてくれた話だった。\n本艦に戻ってから私は先輩と任務の話をした。私の作戦報告を聞いた後、先輩はある物を見せてくれた。その分厚いファイルにびっしりと記載されていたのは、訓練室内のあらゆる訓練用装置の作動タイミング調整パターンと、パターンごとに各予備オペレーターが取り得る対応で、筆跡は先輩のものだった。\n「これで少しは後悔を減らせるかもって思ってねぇ。」クルース先輩はそう言って笑った。「よく頑張ったね。」",
+      "typeIcon": "mar-x",
+      "uniEquipIcon": "uniequip_002_kroos2",
+      "typeName1": "MAR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_kroos2_1",
+        "uniequip_002_kroos2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "飛行ユニットを攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 27,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "飛行ユニットを攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、20%の確率でその攻撃のみ攻撃力が160%に上昇し、敵を0.2秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "的中",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、20%の確率でその攻撃のみ攻撃力が170%<@ba.talpu>（+10%）</>に上昇し、敵を0.2秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "的中",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 190,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 31,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "飛行ユニットを攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、20%の確率でその攻撃のみ攻撃力が165%に上昇し、敵を0.2秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "的中",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、20%の確率でその攻撃のみ攻撃力が175%<@ba.talpu>（+10%）</>に上昇し、敵を0.2秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "的中",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1094,5 +1737,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

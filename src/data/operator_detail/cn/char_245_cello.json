@@ -169,6 +169,7 @@
       "cost": 16
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_245_cello#1",
@@ -750,16 +751,640 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 300,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "无词哀歌",
+          "description": "使攻击范围内敌人每秒受到相当于攻击力6%的<$ba.dt.apoptosis2>凋亡损伤</>",
+          "blackboard": [
+            {
+              "key": "ep_damage_ratio",
+              "value": 0.06,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "无词哀歌",
+          "description": "使攻击范围内敌人每秒受到相当于攻击力8%的<$ba.dt.apoptosis2>凋亡损伤</>并<$ba.sluggish>停顿</>0.2秒",
+          "blackboard": [
+            {
+              "key": "ep_damage_ratio",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "无词哀歌",
+          "description": "使攻击范围内敌人每秒受到相当于攻击力10%的<$ba.dt.apoptosis2>凋亡损伤</>并<$ba.sluggish>停顿</>0.2秒",
+          "blackboard": [
+            {
+              "key": "ep_damage_ratio",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "精神逆构",
+          "description": "使攻击范围内敌人受到的<$ba.dt.apoptosis2>凋亡损伤</>提高20%",
+          "blackboard": [
+            {
+              "key": "ep_damage_scale",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "精神逆构",
+          "description": "使攻击范围内敌人受到的<$ba.dt.apoptosis2>凋亡损伤</>提高22%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "ep_damage_scale",
+              "value": 1.22,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_cello",
       "moduleName": "塑心证章",
-      "desc": "干员塑心擅长协助友方对敌人造成元素杀伤\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使巫役职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员塑心擅长协助友方对敌人造成元素杀伤\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使巫役职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_cello",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_cello",
       "moduleName": "强弱法",
-      "desc": "今天的提琴课，老师似乎迟到了很长时间，但学生却并无所谓，反正她从来也不喜欢那位提琴教师。那部大提琴独奏，她明明已经能够独立完成，却总也无法让老师满意。\n自己确实没法演奏得和老师一样好。她曾经也想要沉到乐谱中去，与素未谋面的作曲家畅快对谈。可那苍白乐谱上的漆黑字迹却总是沉默。那位神秘的作曲家离世已逾百年，据说她终身孤独，除了几份乐谱孤本流传，其他生平几乎无迹可寻。她无从领悟乐章中起伏的热情和悲伤，也不知道乐谱中那“永恒的爱人”究竟是什么人物，又为什么会变得狂乱仓皇。\n于是她只能无情地执行着乐谱上的指令。一开始，她还得心应手，那些音符都还触手可及，稳当地落在她的心中。然而随着乐章的行进，音乐来到了真正汹涌澎湃的乐段，那些跳进和反复、那些华丽的颤音和倚音与她热烈相拥。它们邀请她一同狂舞，但一步一步，她的舞步却越发局促。那些粗重的强弱记号凶暴地闯入她的视野，又在下一个瞬间疾速滑向乐谱的远端。她想要抓住它们，抓住与它们相伴的灿烂时光，因此在漫长的谱线之中疲于奔命，直到琴弦的振动不再能引起情绪的激昂，取而代之的是节拍器往复的声响，咔、咔、咔、咔......孤单地在耳畔回荡，直到那些热烈的乐音不再苦苦流连，仿佛这场背叛早已经注定。\n于是在她指尖的活力也连同那些华美的乐段一起逝去，只剩节拍器的声音还在回响，咔、咔、咔、咔......这不尽然的沉默变成了分手的宣言。她心底潜藏的愤怒与绝望再也无可抑制，裹挟着泪水夺眶而出。她的视野模糊起来，只有那份苍白的乐谱就在眼前，鼓动着最后的抵抗。她抓起一支羽毛笔，把那些跳进和反复、华丽的颤音和倚音，还有粗重的强弱记号都记录在乐谱上。漆黑字迹宛如钢铁镣铐，她知道自己已经癫狂，但这是唯一的办法，将永恒的爱人束缚在自己身旁。在终止线到来之前，她的生命会同音乐一起流淌。\n就在这时，大提琴的声音戛然而止。她发现自己拿着琴弓，大提琴静静地靠在自己的怀中，琴弦没有振动，节拍器也没有发出声响，仅有自己粗重的呼吸在琴室回响。而那位萨科塔老师，戴着黑色的手套，轻抚着学生扶琴的手，话语依然温柔。\n“今天的演奏非常完美，”老师欣喜地祝贺道，“那位作曲家的生命会同她的爱一起在你的演奏中流淌。”"
+      "desc": "今天的提琴课，老师似乎迟到了很长时间，但学生却并无所谓，反正她从来也不喜欢那位提琴教师。那部大提琴独奏，她明明已经能够独立完成，却总也无法让老师满意。\n自己确实没法演奏得和老师一样好。她曾经也想要沉到乐谱中去，与素未谋面的作曲家畅快对谈。可那苍白乐谱上的漆黑字迹却总是沉默。那位神秘的作曲家离世已逾百年，据说她终身孤独，除了几份乐谱孤本流传，其他生平几乎无迹可寻。她无从领悟乐章中起伏的热情和悲伤，也不知道乐谱中那“永恒的爱人”究竟是什么人物，又为什么会变得狂乱仓皇。\n于是她只能无情地执行着乐谱上的指令。一开始，她还得心应手，那些音符都还触手可及，稳当地落在她的心中。然而随着乐章的行进，音乐来到了真正汹涌澎湃的乐段，那些跳进和反复、那些华丽的颤音和倚音与她热烈相拥。它们邀请她一同狂舞，但一步一步，她的舞步却越发局促。那些粗重的强弱记号凶暴地闯入她的视野，又在下一个瞬间疾速滑向乐谱的远端。她想要抓住它们，抓住与它们相伴的灿烂时光，因此在漫长的谱线之中疲于奔命，直到琴弦的振动不再能引起情绪的激昂，取而代之的是节拍器往复的声响，咔、咔、咔、咔......孤单地在耳畔回荡，直到那些热烈的乐音不再苦苦流连，仿佛这场背叛早已经注定。\n于是在她指尖的活力也连同那些华美的乐段一起逝去，只剩节拍器的声音还在回响，咔、咔、咔、咔......这不尽然的沉默变成了分手的宣言。她心底潜藏的愤怒与绝望再也无可抑制，裹挟着泪水夺眶而出。她的视野模糊起来，只有那份苍白的乐谱就在眼前，鼓动着最后的抵抗。她抓起一支羽毛笔，把那些跳进和反复、华丽的颤音和倚音，还有粗重的强弱记号都记录在乐谱上。漆黑字迹宛如钢铁镣铐，她知道自己已经癫狂，但这是唯一的办法，将永恒的爱人束缚在自己身旁。在终止线到来之前，她的生命会同音乐一起流淌。\n就在这时，大提琴的声音戛然而止。她发现自己拿着琴弓，大提琴静静地靠在自己的怀中，琴弦没有振动，节拍器也没有发出声响，仅有自己粗重的呼吸在琴室回响。而那位萨科塔老师，戴着黑色的手套，轻抚着学生扶琴的手，话语依然温柔。\n“今天的演奏非常完美，”老师欣喜地祝贺道，“那位作曲家的生命会同她的爱一起在你的演奏中流淌。”",
+      "typeIcon": "rit-x",
+      "uniEquipIcon": "uniequip_002_cello",
+      "typeName1": "RIT",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_cello_1",
+        "uniequip_002_cello_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 135,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "对精英和领袖敌人造成的元素损伤提升<@ba.kw>18%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 175,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "对精英和领袖敌人造成的元素损伤提升<@ba.kw>18%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "使攻击范围内敌人受到的<$ba.dt.apoptosis2>凋亡损伤</>提高28%，<$ba.dt.apoptosis2>凋亡损伤</>爆发期间受到3%的<$ba.elementfragile>元素脆弱</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "精神逆构",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "使攻击范围内敌人受到的<$ba.dt.apoptosis2>凋亡损伤</>提高30%<@ba.talpu>（+2%）</>，<$ba.dt.apoptosis2>凋亡损伤</>爆发期间受到3%的<$ba.elementfragile>元素脆弱</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "精神逆构",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "对精英和领袖敌人造成的元素损伤提升<@ba.kw>18%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "使攻击范围内敌人受到的<$ba.dt.apoptosis2>凋亡损伤</>提高33%，<$ba.dt.apoptosis2>凋亡损伤</>爆发期间受到5%的<$ba.elementfragile>元素脆弱</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "精神逆构",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.33,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "使攻击范围内敌人受到的<$ba.dt.apoptosis2>凋亡损伤</>提高35%<@ba.talpu>（+2%）</>，<$ba.dt.apoptosis2>凋亡损伤</>爆发期间受到5%的<$ba.elementfragile>元素脆弱</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "精神逆构",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.35,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1213,5 +1838,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

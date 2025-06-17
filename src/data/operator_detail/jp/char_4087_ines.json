@@ -151,6 +151,28 @@
       "cost": 11
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "runtime_cost",
+            "value": -9999,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4087_ines#1",
@@ -732,6 +754,306 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃速度+8",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 8,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "影織り",
+          "description": "敵にダメージを与えた際、対象ごとに一回限り3秒間<$ba.root>バインド</>させ、さらに対象の攻撃力を50<$ba.steal>奪取</>（対象が撃破されるか、イネスが退場するまで効果が持続）",
+          "blackboard": [
+            {
+              "key": "steal_atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "steal_atk_max",
+              "value": 10000,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "影織り",
+          "description": "敵にダメージを与えた際、対象ごとに一回限り3秒間<$ba.root>バインド</>させ、さらに対象の攻撃力を60<@ba.talpu>（+10）</><$ba.steal>奪取</>（対象が撃破されるか、イネスが退場するまで効果が持続）",
+          "blackboard": [
+            {
+              "key": "steal_atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "steal_atk_max",
+              "value": 12000,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "影織り",
+          "description": "敵にダメージを与えた際、対象ごとに一回限り5秒間<$ba.root>バインド</>させ、さらに対象の攻撃力を90<$ba.steal>奪取</>（対象が撃破されるか、イネスが退場するまで効果が持続）",
+          "blackboard": [
+            {
+              "key": "steal_atk",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "steal_atk_max",
+              "value": 18000,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "影織り",
+          "description": "敵にダメージを与えた際、対象ごとに一回限り5秒間<$ba.root>バインド</>させ、さらに対象の攻撃力を100<@ba.talpu>（+10）</><$ba.steal>奪取</>（対象が撃破されるか、イネスが退場するまで効果が持続）",
+          "blackboard": [
+            {
+              "key": "steal_atk",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "steal_atk_max",
+              "value": 20000,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "影哨",
+          "description": "攻撃範囲内の敵の<$ba.invisible>ステルス</>状態が無効になり、さらに移動速度-30%。撤退後、影哨を1体残して効果を持続させる（最大1体まで）",
+          "blackboard": [
+            {
+              "key": "move_speed",
+              "value": -0.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [],
   "voice_lines": [
     {
@@ -1184,5 +1506,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

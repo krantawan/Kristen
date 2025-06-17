@@ -138,6 +138,28 @@
       "cost": 19
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_140_whitew#1",
@@ -604,16 +626,648 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "精神破壊",
+          "description": "攻撃時、攻撃対象の一部の特殊能力を1秒間無効化する",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "精神破壊",
+          "description": "攻撃時、攻撃対象の一部の特殊能力を2<@ba.talpu>(+1)</>秒間無効化する",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "精神破壊",
+          "description": "攻撃時、攻撃対象の一部の特殊能力を5秒間無効化する",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "精神破壊",
+          "description": "攻撃時、攻撃対象の一部の特殊能力を6<@ba.talpu>(+1)</>秒間無効化する",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_whitew",
       "moduleName": "ラップランドの記章",
-      "desc": "ラップランドは比較的広い範囲で敵を迎え撃つ戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、領主の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ラップランドは比較的広い範囲で敵を迎え撃つ戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、領主の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_whitew",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_whitew",
       "moduleName": "「幼き狼の牙」",
-      "desc": "その武器を作り上げるにあたり、刀鍛冶は長い間頭を悩ませていた。\nサルッツォファミリーのドンが自ら刀鍛冶のもとを訪ねて、娘のために唯一無二の武器を作ってほしいと依頼してきたのだ。\n彼は依頼を引き受けたが、それは単にファミリーの権威を恐れていたからではなかった――\n極東より訪れたその刀鍛冶は信じていたのだ。鏡のように磨かれた刀身は持ち主の魂を映し出し、得物を振るうことは即ち運命を操ることを意味するのだと。\n彼はかつて、五人がかりでなければ持ち上げられもしない野太刀を作り上げたことがあった。それを手にした武士は戦場で無双の活躍を見せたが、老いては怪我と病に伏せり、恨みの中で自ら命を絶った。\n彼はかつて、格式高く豪華絢爛でありながら鋭利な刃を潜ませた飾り太刀を鍛えたことがあった。その持ち主である稀代の王は生涯その剣を抜くことはなかったが、その威光で各地を平定した。\nそして刀鍛冶はまたかつて、かのミズ・シチリアに忠誠を誓おうとしたことがあった。だがその時は、疎ましそうに拒まれてしまった。それを受けて彼は、彼女がいかにしてこの暴力に満ちた国を治め、どれほどの気苦労と諦めを秘めているのかを知った。\nそれでも今、彼はあの変わり者の幼き狼に、どのような牙を持たせてやればいいのかをわからずにいた。\nこれから彼女は、変幻自在でつかみどころのない父のすべてを学んでいくことになる。ならば、精巧な細剣はどうだろうか？\nあるいは、血筋に眠る荒野の呼びかけを捨て去ることは難しいだろう彼女には、一撃で敵を屠る大斧がいいだろうか？\nいや、いずれも足りないだろう。刀鍛冶は未完成品を炉に投げ込んだ。\n彼女はその父と同じく残忍で、優雅で、捉えどころのない人物だが、同時に父とはまるで違っていた。\n「まだできないの？我が最愛のお父様は、ボクの成人まで待てと言ってたけど、ボクらの敵は今夜にでもそれを拝みたがってるんだよ？」\n刀鍛冶は、彼女に相応しい武器を模索している最中だと説明した。しかし頭を絞れば絞るほど、彼はその武器のあるべき形を思い浮かべることができずにいる。\n「この一対は？」\n彼女は無造作に、一対の刀を指さした。\n刀鍛冶はかつて、自身の技量を十二分に証明できる武器を作ろうとしていた。この一対は、そんな彼の有り余る着想を過分に背負わされた剣だ。そのため、鍛えれば鍛えるほどその形は複雑化していき、アーツを乗せることはできても緻密なコントロールが難しく、ひいては鞘に収めることすらできないものとなっていた。\n「へえ、完成しようのない失敗作？」白狼はその一対の刀を振り回すと、笑顔を浮かべた。「気に入ったよ。」\n刀鍛冶は懇願した。彼女の持つ唯一無二の魂には、もっと特別な武器のほうが相応しい、と。\n「……何か勘違いしてないかな？ボクがここに来たのは手に馴染む道具をもらうためだよ。これは、人を殺すにはぴったりだし、頑丈でもあるでしょ。それに形も気に入った。だから、これからはボクが持っておくことにした。それで十分なのさ。」\n刀鍛冶は茫然自失の状態で、立ち去る彼女を見送った。\nあるいは、彼の捨てた失敗作こそが彼の最高傑作だったのかもしれない。\nもしくは、武器に定義される魂など、もとより空虚なものなのかもしれない。\nその晩、名高き刀鍛冶が隠居を決めてそれを公表した。一方でサルッツォファミリーのラップランドは、彼女のシンボルとなる武器を初めて振りかざした――\n後に、それは「幼き狼の牙」と称されるようになる。"
+      "desc": "その武器を作り上げるにあたり、刀鍛冶は長い間頭を悩ませていた。\nサルッツォファミリーのドンが自ら刀鍛冶のもとを訪ねて、娘のために唯一無二の武器を作ってほしいと依頼してきたのだ。\n彼は依頼を引き受けたが、それは単にファミリーの権威を恐れていたからではなかった――\n極東より訪れたその刀鍛冶は信じていたのだ。鏡のように磨かれた刀身は持ち主の魂を映し出し、得物を振るうことは即ち運命を操ることを意味するのだと。\n彼はかつて、五人がかりでなければ持ち上げられもしない野太刀を作り上げたことがあった。それを手にした武士は戦場で無双の活躍を見せたが、老いては怪我と病に伏せり、恨みの中で自ら命を絶った。\n彼はかつて、格式高く豪華絢爛でありながら鋭利な刃を潜ませた飾り太刀を鍛えたことがあった。その持ち主である稀代の王は生涯その剣を抜くことはなかったが、その威光で各地を平定した。\nそして刀鍛冶はまたかつて、かのミズ・シチリアに忠誠を誓おうとしたことがあった。だがその時は、疎ましそうに拒まれてしまった。それを受けて彼は、彼女がいかにしてこの暴力に満ちた国を治め、どれほどの気苦労と諦めを秘めているのかを知った。\nそれでも今、彼はあの変わり者の幼き狼に、どのような牙を持たせてやればいいのかをわからずにいた。\nこれから彼女は、変幻自在でつかみどころのない父のすべてを学んでいくことになる。ならば、精巧な細剣はどうだろうか？\nあるいは、血筋に眠る荒野の呼びかけを捨て去ることは難しいだろう彼女には、一撃で敵を屠る大斧がいいだろうか？\nいや、いずれも足りないだろう。刀鍛冶は未完成品を炉に投げ込んだ。\n彼女はその父と同じく残忍で、優雅で、捉えどころのない人物だが、同時に父とはまるで違っていた。\n「まだできないの？我が最愛のお父様は、ボクの成人まで待てと言ってたけど、ボクらの敵は今夜にでもそれを拝みたがってるんだよ？」\n刀鍛冶は、彼女に相応しい武器を模索している最中だと説明した。しかし頭を絞れば絞るほど、彼はその武器のあるべき形を思い浮かべることができずにいる。\n「この一対は？」\n彼女は無造作に、一対の刀を指さした。\n刀鍛冶はかつて、自身の技量を十二分に証明できる武器を作ろうとしていた。この一対は、そんな彼の有り余る着想を過分に背負わされた剣だ。そのため、鍛えれば鍛えるほどその形は複雑化していき、アーツを乗せることはできても緻密なコントロールが難しく、ひいては鞘に収めることすらできないものとなっていた。\n「へえ、完成しようのない失敗作？」白狼はその一対の刀を振り回すと、笑顔を浮かべた。「気に入ったよ。」\n刀鍛冶は懇願した。彼女の持つ唯一無二の魂には、もっと特別な武器のほうが相応しい、と。\n「……何か勘違いしてないかな？ボクがここに来たのは手に馴染む道具をもらうためだよ。これは、人を殺すにはぴったりだし、頑丈でもあるでしょ。それに形も気に入った。だから、これからはボクが持っておくことにした。それで十分なのさ。」\n刀鍛冶は茫然自失の状態で、立ち去る彼女を見送った。\nあるいは、彼の捨てた失敗作こそが彼の最高傑作だったのかもしれない。\nもしくは、武器に定義される魂など、もとより空虚なものなのかもしれない。\nその晩、名高き刀鍛冶が隠居を決めてそれを公表した。一方でサルッツォファミリーのラップランドは、彼女のシンボルとなる武器を初めて振りかざした――\n後に、それは「幼き狼の牙」と称されるようになる。",
+      "typeIcon": "lor-x",
+      "uniEquipIcon": "uniequip_002_whitew",
+      "typeName1": "LOR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_whitew_1",
+        "uniequip_002_whitew_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に追加で攻撃力の<@ba.vup>{atk_scale_m:0%}</>の術ダメージを与える",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に追加で攻撃力の<@ba.vup>{atk_scale_m:0%}</>の術ダメージを与える",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、6秒間対象の一部の特殊能力を無効化し、4%の<$ba.fragile>脆弱</>を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "精神破壊",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、7<@ba.talpu>（+1）</>秒間対象の一部の特殊能力を無効化し、4%の<$ba.fragile>脆弱</>を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "精神破壊",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 175,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に追加で攻撃力の<@ba.vup>{atk_scale_m:0%}</>の術ダメージを与える",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、6秒間対象の一部の特殊能力を無効化し、8%の<$ba.fragile>脆弱</>を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "精神破壊",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、7<@ba.talpu>（+1）</>秒間対象の一部の特殊能力を無効化し、8%の<$ba.fragile>脆弱</>を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "精神破壊",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1067,5 +1721,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

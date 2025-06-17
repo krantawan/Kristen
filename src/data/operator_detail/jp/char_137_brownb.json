@@ -137,6 +137,7 @@
       "cost": 9
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_137_brownb#1",
@@ -599,16 +600,618 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "最大HP+180",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 180,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "一騎打ち",
+          "description": "同じ敵を攻撃する度攻撃力+3%、最大5回まで。攻撃対象が変わるとリセット",
+          "blackboard": [
+            {
+              "key": "max_stack_cnt",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.03,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "一騎打ち",
+          "description": "同じ敵を攻撃する度攻撃力+4%<@ba.talpu>(+1%)</>、最大5回まで。攻撃対象が変わるとリセット",
+          "blackboard": [
+            {
+              "key": "max_stack_cnt",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.04,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "一騎打ち",
+          "description": "同じ敵を攻撃する度攻撃力+5%、最大5回まで。攻撃対象が変わるとリセット",
+          "blackboard": [
+            {
+              "key": "max_stack_cnt",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "一騎打ち",
+          "description": "同じ敵を攻撃する度攻撃力+6%<@ba.talpu>(+1%)</>、最大5回まで。攻撃対象が変わるとリセット",
+          "blackboard": [
+            {
+              "key": "max_stack_cnt",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.06,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_brownb",
       "moduleName": "ビーハンターの記章",
-      "desc": "ビーハンターは接近戦で優位に立つことに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、闘士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ビーハンターは接近戦で優位に立つことに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、闘士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_brownb",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_brownb",
       "moduleName": "歯を食いしばれ",
-      "desc": "「左のパンチ、続けて右も！この速さ、そしてパワー……こ、このウルサス人は今までどこに潜んでいたんだーっ！？」\n「信じられない光景だ！この神聖なリングに突如乱入してきた第三の拳闘士は、熱戦を繰り広げていた『暴虐の野獣』二人が繰り出す強烈なパンチをすべて受け止めているーっ！」\n「えっ？……俺を連行するって？この地下闘技場があんたらの薬を買いためて、転売してる疑いで？」\n「ま、待ってくれ！せめてこの試合を最後まで解説させてくれないか！こんなにも自由で激しく、一人で複数人を相手取り強者を制する戦いっぷり――これぞ地下格闘技のあるべき姿なんだ！」\n解説員を連行中のオペレーターたちが、行儀の悪い観客から投げつけられた酒瓶やボロいボクシンググローブを振り払う。すると、そこに強面の用心棒たちが立ちはだかった。ロドスとしては事を荒立てたくはなかったが、すでに観客は騒然としている。\nそこで、オペレーターたちは地下の流儀を肌で感じる覚悟を決めた。シュラが用意していたマウスガードをつけたその時、思い立ったら即行動のウルサスの闘士がリングを飛び降り、オペレーターの前に立つ。\n「ここはアタイに任せとけ！奴らとアタイ、どっちが地下の流儀をよーく知ってるか、教えてやるよ！」\nシュラは薄暗い照明に照らされてボロいリングに立ち、ゴングの音と共に響く歓声と罵声を聞きながら育った。自分よりはるかに強い相手や、不公平なジャッジ、そして気に食わないのに手も足も出ないすべてを、歯を食いしばって耐えることを早いうちから学んでいたのだ。倒れては立ち上がり、全身全霊で拳を振り続けた彼女は、その拳で心の奥底にある不満を表し、血の中に潜む反抗心を解き放ってきた。\nシュラが我に返った時、彼女はオペレーターたちに支えられながら、地下闘技場を後にするところだった。大勢の敵を前にして、シュラはまたしても、仲間たちが自らのものを取り戻すために十分な時間を稼いだのだ。今晩の祝勝パーティーでは、シュラが飲みきれないほどのハチミツを注文しようと皆が話し合う声が聞こえる。呆れたように笑ったシュラは、その時ようやくズキズキとした痛みに気が付いた。\n「シュラ……ひどいケガだぞ。まずは医療オペレーターに手当してもらったらどうだ？」\n「んん……ペッ……こんなの大したことねぇよ！」\nシュラが口を開いた瞬間、マウスガードが飛び出してきた。驚いたことに、それは原型を留めないほどに嚙み潰されていた。"
+      "desc": "「左のパンチ、続けて右も！この速さ、そしてパワー……こ、このウルサス人は今までどこに潜んでいたんだーっ！？」\n「信じられない光景だ！この神聖なリングに突如乱入してきた第三の拳闘士は、熱戦を繰り広げていた『暴虐の野獣』二人が繰り出す強烈なパンチをすべて受け止めているーっ！」\n「えっ？……俺を連行するって？この地下闘技場があんたらの薬を買いためて、転売してる疑いで？」\n「ま、待ってくれ！せめてこの試合を最後まで解説させてくれないか！こんなにも自由で激しく、一人で複数人を相手取り強者を制する戦いっぷり――これぞ地下格闘技のあるべき姿なんだ！」\n解説員を連行中のオペレーターたちが、行儀の悪い観客から投げつけられた酒瓶やボロいボクシンググローブを振り払う。すると、そこに強面の用心棒たちが立ちはだかった。ロドスとしては事を荒立てたくはなかったが、すでに観客は騒然としている。\nそこで、オペレーターたちは地下の流儀を肌で感じる覚悟を決めた。シュラが用意していたマウスガードをつけたその時、思い立ったら即行動のウルサスの闘士がリングを飛び降り、オペレーターの前に立つ。\n「ここはアタイに任せとけ！奴らとアタイ、どっちが地下の流儀をよーく知ってるか、教えてやるよ！」\nシュラは薄暗い照明に照らされてボロいリングに立ち、ゴングの音と共に響く歓声と罵声を聞きながら育った。自分よりはるかに強い相手や、不公平なジャッジ、そして気に食わないのに手も足も出ないすべてを、歯を食いしばって耐えることを早いうちから学んでいたのだ。倒れては立ち上がり、全身全霊で拳を振り続けた彼女は、その拳で心の奥底にある不満を表し、血の中に潜む反抗心を解き放ってきた。\nシュラが我に返った時、彼女はオペレーターたちに支えられながら、地下闘技場を後にするところだった。大勢の敵を前にして、シュラはまたしても、仲間たちが自らのものを取り戻すために十分な時間を稼いだのだ。今晩の祝勝パーティーでは、シュラが飲みきれないほどのハチミツを注文しようと皆が話し合う声が聞こえる。呆れたように笑ったシュラは、その時ようやくズキズキとした痛みに気が付いた。\n「シュラ……ひどいケガだぞ。まずは医療オペレーターに手当してもらったらどうだ？」\n「んん……ペッ……こんなの大したことねぇよ！」\nシュラが口を開いた瞬間、マウスガードが飛び出してきた。驚いたことに、それは原型を留めないほどに嚙み潰されていた。",
+      "typeIcon": "fgt-y",
+      "uniEquipIcon": "uniequip_002_brownb",
+      "typeName1": "FGT",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_brownb_1",
+        "uniequip_002_brownb_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31053",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30043",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30013",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵を1体までブロックできる\nHPが最大値の50%を上回った場合、攻撃速度<@ba.vup>+{attack_speed}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 145,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵を1体までブロックできる\nHPが最大値の50%を上回った場合、攻撃速度<@ba.vup>+{attack_speed}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "同じ敵を攻撃する度攻撃力+6%、最大5回まで。攻撃対象が変わるとリセット",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "一騎打ち",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.06,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "同じ敵を攻撃する度攻撃力7%<@ba.talpu>（+1%）</>、最大5回まで。攻撃対象が変わるとリセット",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "一騎打ち",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.07,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵を1体までブロックできる\nHPが最大値の50%を上回った場合、攻撃速度<@ba.vup>+{attack_speed}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "同じ敵を攻撃する度攻撃力7%、最大5回まで。攻撃対象が変わるとリセット",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "一騎打ち",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.07,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "同じ敵を攻撃する度攻撃力+8%<@ba.talpu>（+1%）</>、最大5回まで。攻撃対象が変わるとリセット",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "一騎打ち",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1062,5 +1665,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

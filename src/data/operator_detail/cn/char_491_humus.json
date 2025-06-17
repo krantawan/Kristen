@@ -169,6 +169,28 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 50,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "无法被友方角色治疗，攻击造成<@ba.kw>群体伤害</>，每攻击到一个敌人回复自身<@ba.kw>{value}</>生命，最大生效数等于阻挡数",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_491_humus#1",
@@ -648,16 +670,637 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+35",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 35,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 30,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "再回收",
+          "description": "超出自身生命上限的生命值可转化为<$ba.barrier>屏障</>；最多不超过自身最大生命值的60%",
+          "blackboard": [
+            {
+              "key": "max_hp_ratio",
+              "value": 0.6,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "再回收",
+          "description": "超出自身生命上限的生命值可转化为<$ba.barrier>屏障</>；最多不超过自身最大生命值的64%<@ba.talpu>（+4%）</>",
+          "blackboard": [
+            {
+              "key": "max_hp_ratio",
+              "value": 0.64,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "再回收",
+          "description": "超出自身生命上限的生命值可转化为<$ba.barrier>屏障</>；最多不超过自身最大生命值的100%",
+          "blackboard": [
+            {
+              "key": "max_hp_ratio",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "再回收",
+          "description": "超出自身生命上限的生命值可转化为<$ba.barrier>屏障</>；最多不超过自身最大生命值的104%<@ba.talpu>（+4%）</>",
+          "blackboard": [
+            {
+              "key": "max_hp_ratio",
+              "value": 1.04,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_humus",
       "moduleName": "休谟斯证章",
-      "desc": "干员休谟斯擅长孤身一人扫清众敌\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使收割者职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员休谟斯擅长孤身一人扫清众敌\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使收割者职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_humus",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_humus",
       "moduleName": "恶地奇异工具套组",
-      "desc": "那是休谟斯刚入职时的故事了。\n听说来了个哥伦比亚的拓荒地废弃物处理站负责人，许多工程部的干员都非常好奇，想看看拥有这样工作经验的人是不是有什么特别的本领。\n当休谟斯提着那堆陪了他许多年的工具设备去工程部报到的时候，在场的所有人都吓了一跳。\n首先，用来装这些工具的箱子大得吓人，也只有休谟斯这样习惯了粗重工作的人能单手提着这玩意儿走来走去。其次，除了常规工具之外，箱子里还有一大堆造型奇特、用途不明的东西，足以让看到它们的人感到困惑。\n好在，休谟斯是一个乐于分享的人。在接下来的几个小时里，工程部的干员们结结实实长了不少见识。\n“这是一个多功能遥控器，改造空间很大。只要像这样......这样......重新组装一下，它就可以从电视遥控器变成遥控炸弹引爆器，功率大，有效距离远，很好用的。\n“这基本上就是个普通的手摇发电机，不过有个额外功能，可以一边发电一边给玉米脱粒或者给土豆削皮。毕竟在处理站的时候经常没电用，又经常只有玉米和土豆可以吃。\n“至于这把镰刀，是我拆了一扇车门做的。那辆车可真不一般，送来报废之后搁置了好久，因为太结实了，拆起来得费好大功夫。我把镰刀的造型做得足够夸张，这样把它掏出来之后，要是能吓到人，就不用打架了。”\n这场别开生面的工具设备说明会刚刚结束，晚饭铃正好就响了。被搞得晕头转向的工程部干员们迫不及待地拖着这位不太一般的新同事去食堂举行预定好的欢迎会。席间，休谟斯向好奇的同事们讲了一些故事，一些在他看来司空见惯的，拓荒地的人和事。而他的听众们听完故事后才明白，为什么休谟斯有这样一套本领。\n拓荒地可不是什么依靠普通人的常识就能生活下去的地方。"
+      "desc": "那是休谟斯刚入职时的故事了。\n听说来了个哥伦比亚的拓荒地废弃物处理站负责人，许多工程部的干员都非常好奇，想看看拥有这样工作经验的人是不是有什么特别的本领。\n当休谟斯提着那堆陪了他许多年的工具设备去工程部报到的时候，在场的所有人都吓了一跳。\n首先，用来装这些工具的箱子大得吓人，也只有休谟斯这样习惯了粗重工作的人能单手提着这玩意儿走来走去。其次，除了常规工具之外，箱子里还有一大堆造型奇特、用途不明的东西，足以让看到它们的人感到困惑。\n好在，休谟斯是一个乐于分享的人。在接下来的几个小时里，工程部的干员们结结实实长了不少见识。\n“这是一个多功能遥控器，改造空间很大。只要像这样......这样......重新组装一下，它就可以从电视遥控器变成遥控炸弹引爆器，功率大，有效距离远，很好用的。\n“这基本上就是个普通的手摇发电机，不过有个额外功能，可以一边发电一边给玉米脱粒或者给土豆削皮。毕竟在处理站的时候经常没电用，又经常只有玉米和土豆可以吃。\n“至于这把镰刀，是我拆了一扇车门做的。那辆车可真不一般，送来报废之后搁置了好久，因为太结实了，拆起来得费好大功夫。我把镰刀的造型做得足够夸张，这样把它掏出来之后，要是能吓到人，就不用打架了。”\n这场别开生面的工具设备说明会刚刚结束，晚饭铃正好就响了。被搞得晕头转向的工程部干员们迫不及待地拖着这位不太一般的新同事去食堂举行预定好的欢迎会。席间，休谟斯向好奇的同事们讲了一些故事，一些在他看来司空见惯的，拓荒地的人和事。而他的听众们听完故事后才明白，为什么休谟斯有这样一套本领。\n拓荒地可不是什么依靠普通人的常识就能生活下去的地方。",
+      "typeIcon": "rea-x",
+      "uniEquipIcon": "uniequip_002_humus",
+      "typeName1": "REA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_humus_1",
+        "uniequip_002_humus_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31023",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30033",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 10,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 14,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "无法被友方角色治疗，攻击造成<@ba.kw>群体伤害</>，每攻击到一个敌人回复自身<@ba.kw>{value}</>生命，最大生效数等于阻挡数",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "无法被友方角色治疗，攻击造成<@ba.kw>群体伤害</>，每攻击到一个敌人回复自身<@ba.kw>{value}</>生命，最大生效数等于阻挡数",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "超出自身生命上限的生命值可转化为<$ba.barrier>屏障</>，最多不超过自身最大生命值的100%；拥有来源于自身的<$ba.barrier>屏障</>时防御力+5%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "再回收",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "超出自身生命上限的生命值可转化为<$ba.barrier>屏障</>，最多不超过自身最大生命值的104%<@ba.talpu>（+4%）</>；拥有来源于自身的<$ba.barrier>屏障</>时防御力+5%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "再回收",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "无法被友方角色治疗，攻击造成<@ba.kw>群体伤害</>，每攻击到一个敌人回复自身<@ba.kw>{value}</>生命，最大生效数等于阻挡数",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "超出自身生命上限的生命值可转化为<$ba.barrier>屏障</>，最多不超过自身最大生命值的100%；拥有来源于自身的<$ba.barrier>屏障</>时防御力+8%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "再回收",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "超出自身生命上限的生命值可转化为<$ba.barrier>屏障</>，最多不超过自身最大生命值的104%<@ba.talpu>（+4%）</>；拥有来源于自身的<$ba.barrier>屏障</>时防御力+8%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "再回收",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1111,5 +1754,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

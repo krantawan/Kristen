@@ -151,6 +151,24 @@
       "cost": 12
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "heal_scale",
+          "value": 0.75
+        }
+      ],
+      "overrideDescription": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_343_tknogi#1",
@@ -636,16 +654,636 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +160",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 160,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 300,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Blessing",
+          "description": "Apply 12% <$ba.protect>Sanctuary</> effect to allies within range with less than 40% HP",
+          "blackboard": {
+            "hp_ratio": 0.4,
+            "damage_resistance": 0.12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Blessing",
+          "description": "Apply 14% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> effect to allies within range with less than 40% HP",
+          "blackboard": {
+            "hp_ratio": 0.4,
+            "damage_resistance": 0.14
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Blessing",
+          "description": "Apply 18% <$ba.protect>Sanctuary</> effect to allies within range with less than 40% HP",
+          "blackboard": {
+            "hp_ratio": 0.4,
+            "damage_resistance": 0.18
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Blessing",
+          "description": "Apply 20% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> effect to allies within range with less than 40% HP",
+          "blackboard": {
+            "hp_ratio": 0.4,
+            "damage_resistance": 0.2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_tknogi",
       "moduleName": "Tsukinogi's Badge",
-      "desc": "Operator Tsukinogi has demonstrated a remarkable aptitude for providing continuous protection to allies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Abjurer responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Tsukinogi has demonstrated a remarkable aptitude for providing continuous protection to allies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Abjurer responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_tknogi",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_tknogi",
       "moduleName": "Rouya Bimei",
-      "desc": "The mist has not yet lifted from the mountains; still the hazy circle of the moon climbs through the sky. The moonlight is a pale and indistinct grey in the color of the fog, like a fine veil tangled about sparse branches, drawing this now-disturbed night into its cover.\nAn insect flies along with a chirp and a skitter, skirting around and around the stone lanterns' light, soon seeming to tire as it alights upon a smoothed rock.\nThe rock suddenly wrinkles, after which a hand swats at it, driving the lost insect away.\n'Oh, when is this fog going to lift—'\nA monk sits by the stone lantern, forcing his all-too-weary face into a bitter smile. One must know, see, that he ascended to pick wild fruits and bamboo shoots while it was light out, but a great mist descended out of nowhere, and left him wandering lost for a spell. Within the dense fog, he saw a vague glimmer of light, and thinking it a sign of habitation in the foothills, he followed after it only to find it was but this rough and moss-covered lantern.\nBefore he realized, the fog grew thicker. Forget the way down; now he couldn't even tell where a single step forward would land his foot. The monk could only sit and rest here for a while, accompanying the lantern until nightfall.\nAll of a sudden, he hears the clear peal of a bell. The monk rubs at his drowsy eyes, and what should he see but another faint light in the fog. Not like the one before, for this one floats straight towards him.\nThe sounds of unhurried, sure-footed steps draw near, and thereupon strands of faint blue and mottled white streamers brush by the lantern's brim. By the moonlight's glow and lantern's faint shine, the monk sees, finally, the face of his visitor.\n'You're... You're from the shrine at the summit...'\n'Spring is well on its way in the mounts. Haze settles most easily around this time. It seems you do not know this mountain.\n'You must be new, from the monastery at the foot?'\nAfter such a greeting, the monk is unsure how to respond for a spell.\n'Worry not.\n'Though I serve the gods at the summit, I would hardly stay at the shrine in my day-to-day.\n'Offering aid to those who've fallen on the mountain, and guiding the way for those lost in the mists, are closer to how I interpret such 'sacred' servitude.\n'As for why you came, and why your plight should be here, I will not pursue the question.'\nThe monk is still skeptical, but the visitor raises her staff, its streamers encompassing points of light and mist, and then after another ring of a bell, the mist scatters some. The narrow way gradually grows clear within the forest, and lifting his head to look, he faintly makes out the Hanesu that stands sentinel on the path to the summit.\n'Let us go. It is still far to the monastery at the foot.\n'Rest the night at the summit, and once day breaks and the mist dispels, I will send you back down.'"
+      "desc": "The mist has not yet lifted from the mountains; still the hazy circle of the moon climbs through the sky. The moonlight is a pale and indistinct grey in the color of the fog, like a fine veil tangled about sparse branches, drawing this now-disturbed night into its cover.\nAn insect flies along with a chirp and a skitter, skirting around and around the stone lanterns' light, soon seeming to tire as it alights upon a smoothed rock.\nThe rock suddenly wrinkles, after which a hand swats at it, driving the lost insect away.\n'Oh, when is this fog going to lift—'\nA monk sits by the stone lantern, forcing his all-too-weary face into a bitter smile. One must know, see, that he ascended to pick wild fruits and bamboo shoots while it was light out, but a great mist descended out of nowhere, and left him wandering lost for a spell. Within the dense fog, he saw a vague glimmer of light, and thinking it a sign of habitation in the foothills, he followed after it only to find it was but this rough and moss-covered lantern.\nBefore he realized, the fog grew thicker. Forget the way down; now he couldn't even tell where a single step forward would land his foot. The monk could only sit and rest here for a while, accompanying the lantern until nightfall.\nAll of a sudden, he hears the clear peal of a bell. The monk rubs at his drowsy eyes, and what should he see but another faint light in the fog. Not like the one before, for this one floats straight towards him.\nThe sounds of unhurried, sure-footed steps draw near, and thereupon strands of faint blue and mottled white streamers brush by the lantern's brim. By the moonlight's glow and lantern's faint shine, the monk sees, finally, the face of his visitor.\n'You're... You're from the shrine at the summit...'\n'Spring is well on its way in the mounts. Haze settles most easily around this time. It seems you do not know this mountain.\n'You must be new, from the monastery at the foot?'\nAfter such a greeting, the monk is unsure how to respond for a spell.\n'Worry not.\n'Though I serve the gods at the summit, I would hardly stay at the shrine in my day-to-day.\n'Offering aid to those who've fallen on the mountain, and guiding the way for those lost in the mists, are closer to how I interpret such 'sacred' servitude.\n'As for why you came, and why your plight should be here, I will not pursue the question.'\nThe monk is still skeptical, but the visitor raises her staff, its streamers encompassing points of light and mist, and then after another ring of a bell, the mist scatters some. The narrow way gradually grows clear within the forest, and lifting his head to look, he faintly makes out the Hanesu that stands sentinel on the path to the summit.\n'Let us go. It is still far to the monastery at the foot.\n'Rest the night at the summit, and once day breaks and the mist dispels, I will send you back down.'",
+      "typeIcon": "bls-x",
+      "uniEquipIcon": "uniequip_002_tknogi",
+      "typeName1": "BLS",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_tknogi_1",
+        "uniequip_002_tknogi_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Grants a 20% <$ba.protect>Sanctuary</> effect and +5% DEF to all friendly units within range with less than 40% HP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Blessing",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Grants a 22% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> effect and +5% DEF to all friendly units within range with less than 40% HP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Blessing",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.22,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Grants a 22% <$ba.protect>Sanctuary</> effect and +8% DEF to all friendly units within range with less than 40% HP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Blessing",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.22,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Grants a 24% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> effect and +8% DEF to all friendly units within range with less than 40% HP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Blessing",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.24,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1099,5 +1737,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

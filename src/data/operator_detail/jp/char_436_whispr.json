@@ -150,6 +150,28 @@
       "cost": 20
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "heal_scale",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "治療範囲が広く、遠く離れた味方を治療時、HP回復効果が<@ba.kw>{heal_scale:0%}</>になる",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_436_whispr#1",
@@ -647,16 +669,608 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "命の灯台",
+          "description": "攻撃範囲内の<$ba.buffres>レジスト</>状態中の味方全員のHPが1秒ごとにウィスパーレインの攻撃力の3％回復（回復量は特性に影響されない）",
+          "blackboard": [
+            {
+              "key": "atk_to_hp_recovery_ratio",
+              "value": 0.03,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "命の灯台",
+          "description": "攻撃範囲内の<$ba.buffres>レジスト</>状態中の味方全員のHPが1秒ごとにウィスパーレインの攻撃力の4%<@ba.talpu>（+1%）</>回復（回復量は特性に影響されない）",
+          "blackboard": [
+            {
+              "key": "atk_to_hp_recovery_ratio",
+              "value": 0.04,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "命の灯台",
+          "description": "攻撃範囲内の<$ba.buffres>レジスト</>状態中の味方全員のHPが1秒ごとにウィスパーレインの攻撃力の6％回復（回復量は特性に影響されない）",
+          "blackboard": [
+            {
+              "key": "atk_to_hp_recovery_ratio",
+              "value": 0.06,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "命の灯台",
+          "description": "攻撃範囲内の<$ba.buffres>レジスト</>状態中の味方全員のHPが1秒ごとにウィスパーレインの攻撃力の7%<@ba.talpu>（+1%）</>回復（回復量は特性に影響されない）",
+          "blackboard": [
+            {
+              "key": "atk_to_hp_recovery_ratio",
+              "value": 0.07,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_whispr",
       "moduleName": "ウィスパーレインの記章",
-      "desc": "ウィスパーレインは広範囲の治療を行うと同時に、有益な効果を付与することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、療養師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ウィスパーレインは広範囲の治療を行うと同時に、有益な効果を付与することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、療養師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_whispr",
       "moduleName": "使い込まれた救急箱",
-      "desc": "それはある雨の日でした。ひとりの若い旅人が我が家のドアを叩き、少し雨宿りをさせてほしいと、か細い声で言いました。\n村に奇病が蔓延し、子供たちが一人また一人と病に冒されていたのもその時期です。うちのウィッキーも例外ではなく、奇病に苦しむ日々を送っていました。村人たちの間ではきっと魔族の巫術だろうという噂が広がり、みな固く戸締まりをして家に閉じこもっていました。ですが私たちは風が吹けば折れてしまいそうなほどの女性を、暴風雨の中で荒野へと追い返すことなどできず、仕方なく部屋に招き入れました。\nその方はウィッキーの様子を一目見ただけで異常に気がつきました。私たちに詳しい症状と村の状況を訊ねた彼女は、自身が放浪医であることを明かしました。\n「巫術やアーツの類いではなく、病気の一種です。土地や水源が汚染されたことで、まずは子供たちが病気にかかってしまったようです。毒素が蓄積されていけば、いずれ大人たちにも症状が出てしまいます。」\n彼女はそう言うと持っていた救急箱を開き、慣れた手つきで薬剤の調合を始めました。\n「私にできるのはあくまで応急処置です、申し訳ございません。このような病気の場合、汚染源から離れ、長期的な投薬により徐々に体を整えるのが唯一の治療法です。可能であれば、村人の皆様にお伝えいただき、移住を検討していただけると。」\n「だがここは俺たちの故郷なんだ。」\n夫が心配そうに言いました。\n「仮にこの土地が本当に病気の原因でも、俺たちはここから離れてどこで暮らせばいいんだ？」\nお医者さんはそれ以上は語らず、黙々と調薬を続けました。\n\n翌日は晴れました。玄関前で、ひっそりと去ろうとしているお医者さんとばったり会いました。ドアにはどこにでも咲いているような野花が、まだ摘んで間もない様子で飾られていました。それを目にした瞬間、頭の奥で眠っていた記憶と、目の前のお医者さんの姿が重なりました。\n「お医者さん、前にお会いしたことがありましたね。今やっと思い出しました。」\n「まだ私たちが移動都市の周辺にある村に住んでいた頃です。みんなの病気を診てくださったのと、まだ子供だった私たちにこうやって花を摘んできてくださったのを覚えています……私はいつもカーテンの陰からこっそり見ていました。」\n「もう何十年も前になりますね。実はあれから母が鉱石病に感染してしまい、追い出されてここに流れ着いたんです……私もすっかり年を取りましたし、もう顔を見ても分からないでしょうね。ですが、お医者さんはあの頃と全く変わらない様子で……」\n私は心からの感謝を伝えようとしました。当時は高熱に苦しんだ私を救い、今は私の子供を助けてくださったのですから。しかしお医者さんは呆然とした表情の後、まるで泣き出してしまいそうな程に悲しい顔をしました。\n「ごめんなさい、どうか……どうかそれ以上は仰らないでください。私のことなどもう忘れていただいて結構ですから。」"
+      "desc": "それはある雨の日でした。ひとりの若い旅人が我が家のドアを叩き、少し雨宿りをさせてほしいと、か細い声で言いました。\n村に奇病が蔓延し、子供たちが一人また一人と病に冒されていたのもその時期です。うちのウィッキーも例外ではなく、奇病に苦しむ日々を送っていました。村人たちの間ではきっと魔族の巫術だろうという噂が広がり、みな固く戸締まりをして家に閉じこもっていました。ですが私たちは風が吹けば折れてしまいそうなほどの女性を、暴風雨の中で荒野へと追い返すことなどできず、仕方なく部屋に招き入れました。\nその方はウィッキーの様子を一目見ただけで異常に気がつきました。私たちに詳しい症状と村の状況を訊ねた彼女は、自身が放浪医であることを明かしました。\n「巫術やアーツの類いではなく、病気の一種です。土地や水源が汚染されたことで、まずは子供たちが病気にかかってしまったようです。毒素が蓄積されていけば、いずれ大人たちにも症状が出てしまいます。」\n彼女はそう言うと持っていた救急箱を開き、慣れた手つきで薬剤の調合を始めました。\n「私にできるのはあくまで応急処置です、申し訳ございません。このような病気の場合、汚染源から離れ、長期的な投薬により徐々に体を整えるのが唯一の治療法です。可能であれば、村人の皆様にお伝えいただき、移住を検討していただけると。」\n「だがここは俺たちの故郷なんだ。」\n夫が心配そうに言いました。\n「仮にこの土地が本当に病気の原因でも、俺たちはここから離れてどこで暮らせばいいんだ？」\nお医者さんはそれ以上は語らず、黙々と調薬を続けました。\n\n翌日は晴れました。玄関前で、ひっそりと去ろうとしているお医者さんとばったり会いました。ドアにはどこにでも咲いているような野花が、まだ摘んで間もない様子で飾られていました。それを目にした瞬間、頭の奥で眠っていた記憶と、目の前のお医者さんの姿が重なりました。\n「お医者さん、前にお会いしたことがありましたね。今やっと思い出しました。」\n「まだ私たちが移動都市の周辺にある村に住んでいた頃です。みんなの病気を診てくださったのと、まだ子供だった私たちにこうやって花を摘んできてくださったのを覚えています……私はいつもカーテンの陰からこっそり見ていました。」\n「もう何十年も前になりますね。実はあれから母が鉱石病に感染してしまい、追い出されてここに流れ着いたんです……私もすっかり年を取りましたし、もう顔を見ても分からないでしょうね。ですが、お医者さんはあの頃と全く変わらない様子で……」\n私は心からの感謝を伝えようとしました。当時は高熱に苦しんだ私を救い、今は私の子供を助けてくださったのですから。しかしお医者さんは呆然とした表情の後、まるで泣き出してしまいそうな程に悲しい顔をしました。\n「ごめんなさい、どうか……どうかそれ以上は仰らないでください。私のことなどもう忘れていただいて結構ですから。」",
+      "typeIcon": "wah-x",
+      "uniEquipIcon": "uniequip_002_whispr",
+      "typeName1": "WAH",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_whispr_1",
+        "uniequip_002_whispr_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身が<$ba.buffres>レジスト</>状態になり、敵に狙われにくくなる",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身が<$ba.buffres>レジスト</>状態になり、敵に狙われにくくなる",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内で<$ba.buffres>レジスト</>を有する味方全員のHPが1秒ごとにウィスパーレインの攻撃力の8%回復（回復量は特性に影響されない）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "命の灯台",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内で<$ba.buffres>レジスト</>を有する味方全員のHPが1秒ごとにウィスパーレインの攻撃力の9%<@ba.talpu>（+1%）</>回復（回復量は特性に影響されない）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "命の灯台",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.09,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身が<$ba.buffres>レジスト</>状態になり、敵に狙われにくくなる",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内で<$ba.buffres>レジスト</>を有する味方全員のHPが1秒ごとにウィスパーレインの攻撃力の9%回復（回復量は特性に影響されない）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "命の灯台",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.09,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内で<$ba.buffres>レジスト</>を有する味方全員のHPが1秒ごとにウィスパーレインの攻撃力の10%<@ba.talpu>（+1%）</>回復（回復量は特性に影響されない）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "命の灯台",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1110,5 +1724,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

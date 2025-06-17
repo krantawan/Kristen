@@ -151,6 +151,36 @@
       "cost": 8
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "interval",
+            "value": 3,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "cost",
+            "value": -3,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_455_nothin#1",
@@ -645,16 +675,673 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-3秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -3,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "不意打ち",
+          "description": "4秒間通常攻撃せずにいると、次の通常攻撃時、攻撃力が125%まで上昇し、敵を3秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.25,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "不意打ち",
+          "description": "4秒間通常攻撃せずにいると、次の通常攻撃時、攻撃力が130%<@ba.talpu>（+5%）</>まで上昇し、敵を3秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.3,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "不意打ち",
+          "description": "4秒間通常攻撃せずにいると、次の通常攻撃時、攻撃力が150%まで上昇し、敵を4秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "不意打ち",
+          "description": "4秒間通常攻撃せずにいると、次の通常攻撃時、攻撃力が155%<@ba.talpu>（+5%）</>まで上昇し、敵を4秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.55,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_nothin",
       "moduleName": "ウユウの記章",
-      "desc": "ウユウは繰り返し戦場に切り込む戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、行商人の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ウユウは繰り返し戦場に切り込む戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、行商人の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_nothin",
       "moduleName": "「檐下聴雨」",
-      "desc": "廉（レン）家の道場を離れる時、勾呉はもう何日も雨に降られていた。落ちたアオギリの葉が地面にびっちりと張り付き、土の生臭さに蓋をしていた。彼は道場の門に内側から鍵をかけ、誰もが寝静まった深夜を狙い、修行用の武器棚から銅棍を拝借すると、壁を越えて道場を後にした。\nそれからしばらくして、勾呉近くの街に、サングラスを掛けた占い師が出没するようになった。晴れの日は十字路のそばで占いを、人通りの少ない雨の日は、一人傘をさして町外れの川で釣りをする姿が目撃された。彼をすっぽりと覆う傘は、骨組みがしっかりしていて重量もあり、ちょっとのことでは風にさらわれることはなかった。彼の自由気ままな暮らしを羨ましがり、「天命を知るからこそ、俗世の波に踊らされることがないのですね。」と声を掛ける者がいれば、「エセ占い師ごときが、本当に未来を占えるのなら、自分の運命も知っているのだろうな？」と批判的に問い詰める者もいた。\n「それはもう、当然でございましょう。」彼はすべての問いに、笑ってそう答えた。\n傘は雨こそ凌げど、吹き矢や飛び道具の類いの暗器は防げない。彼は傘が破られる度に、荷物をまとめては別の街へ向かい、傘を修理してはまたすぐに破られる日々を繰り返した。雨風に打たれ彷徨う時間が増えるに従い、彼は自分にはもう行き場などないのだと強く自覚するようになっていった。自らの命運の終着点はあの道場にあり、そこに到達してしまえばもうそれ以上歩む必要はないと確信する一方で、ではそれまでの間はどこに向かって歩めば良いのかがわからなかった。この傘に守られたわずかな地面は、辛うじて彼一人が足を休めることのできる広さしかなく、到底頑丈な家とは呼べないのだから。\nそんな折、彼は風変わりな者たちと出会い、ほどなくして彼らから一つの言葉を学んだ。炎国の言葉で言い換えるなら、「天命は人に在り」と表すべきだろう。\n――以上が、オペレーターとなったウユウがあなたに語った内容だ。現在、ロドスは発達中の小型天災から全速力で避難している最中であるが、ウユウは悠々と椅子に寝転ぶようにもたれかかり、例の傘は閉じた状態でそばに立てかけられている。艦船の窓からは、源石雨の奥に燦々と輝く太陽が見えた。\n「雨上がりに太陽、お天道様が下界を見渡しているわけだね。おっと、ドクター、サングラスはご入り用かな？」"
+      "desc": "廉（レン）家の道場を離れる時、勾呉はもう何日も雨に降られていた。落ちたアオギリの葉が地面にびっちりと張り付き、土の生臭さに蓋をしていた。彼は道場の門に内側から鍵をかけ、誰もが寝静まった深夜を狙い、修行用の武器棚から銅棍を拝借すると、壁を越えて道場を後にした。\nそれからしばらくして、勾呉近くの街に、サングラスを掛けた占い師が出没するようになった。晴れの日は十字路のそばで占いを、人通りの少ない雨の日は、一人傘をさして町外れの川で釣りをする姿が目撃された。彼をすっぽりと覆う傘は、骨組みがしっかりしていて重量もあり、ちょっとのことでは風にさらわれることはなかった。彼の自由気ままな暮らしを羨ましがり、「天命を知るからこそ、俗世の波に踊らされることがないのですね。」と声を掛ける者がいれば、「エセ占い師ごときが、本当に未来を占えるのなら、自分の運命も知っているのだろうな？」と批判的に問い詰める者もいた。\n「それはもう、当然でございましょう。」彼はすべての問いに、笑ってそう答えた。\n傘は雨こそ凌げど、吹き矢や飛び道具の類いの暗器は防げない。彼は傘が破られる度に、荷物をまとめては別の街へ向かい、傘を修理してはまたすぐに破られる日々を繰り返した。雨風に打たれ彷徨う時間が増えるに従い、彼は自分にはもう行き場などないのだと強く自覚するようになっていった。自らの命運の終着点はあの道場にあり、そこに到達してしまえばもうそれ以上歩む必要はないと確信する一方で、ではそれまでの間はどこに向かって歩めば良いのかがわからなかった。この傘に守られたわずかな地面は、辛うじて彼一人が足を休めることのできる広さしかなく、到底頑丈な家とは呼べないのだから。\nそんな折、彼は風変わりな者たちと出会い、ほどなくして彼らから一つの言葉を学んだ。炎国の言葉で言い換えるなら、「天命は人に在り」と表すべきだろう。\n――以上が、オペレーターとなったウユウがあなたに語った内容だ。現在、ロドスは発達中の小型天災から全速力で避難している最中であるが、ウユウは悠々と椅子に寝転ぶようにもたれかかり、例の傘は閉じた状態でそばに立てかけられている。艦船の窓からは、源石雨の奥に燦々と輝く太陽が見えた。\n「雨上がりに太陽、お天道様が下界を見渡しているわけだね。おっと、ドクター、サングラスはご入り用かな？」",
+      "typeIcon": "mer-x",
+      "uniEquipIcon": "uniequip_002_nothin",
+      "typeName1": "MER",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_nothin_1",
+        "uniequip_002_nothin_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "4秒間通常攻撃せずにいると、次の通常攻撃時、攻撃力が165%まで上昇し、敵を5秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "不意打ち",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "4秒間通常攻撃せずにいると、次の通常攻撃時、攻撃力が170%<@ba.talpu>（+5%）</>まで上昇し、敵を5秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "不意打ち",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "3秒間通常攻撃せずにいると、次の通常攻撃時、攻撃力が175%まで上昇し、敵を5秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "不意打ち",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "3秒間通常攻撃せずにいると、次の通常攻撃時、攻撃力が180%<@ba.talpu>（+5%）</>まで上昇し、敵を5秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "不意打ち",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1108,5 +1795,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

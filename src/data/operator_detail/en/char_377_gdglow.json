@@ -150,6 +150,36 @@
       "cost": 22
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "init_atk_scale",
+          "value": 0.2
+        },
+        {
+          "key": "delta_atk_scale",
+          "value": 0.15
+        },
+        {
+          "key": "max_atk_scale",
+          "value": 1.1
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 6
+        }
+      ],
+      "overrideDescription": "Controls a <@ba.kw>Drone</> that deals <@ba.kw>Arts damage</>; When the Drone attacks the same enemy, its damage will increase (up to 110% of the operator's ATK)",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_377_gdglow#1",
@@ -745,16 +775,657 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +25",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Beacon's Wrath",
+          "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 200% of Goldenglow's ATK as Arts damage to enemies in a small area",
+          "blackboard": {
+            "attack@prob": 0.015,
+            "attack@atk_scale_2": 2,
+            "attack@max_stack_cnt": 40
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "Beacon's Wrath",
+          "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 215% <@ba.talpu>(+15%)</> of Goldenglow's ATK as Arts damage to enemies in a small area",
+          "blackboard": {
+            "attack@prob": 0.015,
+            "attack@atk_scale_2": 2.15,
+            "attack@max_stack_cnt": 40
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Beacon's Wrath",
+          "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 300% of Goldenglow's ATK as Arts damage to enemies in a small area",
+          "blackboard": {
+            "attack@prob": 0.015,
+            "attack@atk_scale_2": 3,
+            "attack@max_stack_cnt": 40
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "Beacon's Wrath",
+          "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 315% <@ba.talpu>(+15%)</> of Goldenglow's ATK as Arts damage to enemies in a small area",
+          "blackboard": {
+            "attack@prob": 0.015,
+            "attack@atk_scale_2": 3.15,
+            "attack@max_stack_cnt": 40
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Precise Redirection",
+          "description": "Goldenglow and her Drones' attacks ignore 15 RES",
+          "blackboard": {
+            "magic_resist_penetrate_fixed": 15
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "2",
+          "name": "Precise Redirection",
+          "description": "Goldenglow and her Drones' attacks ignore 18 <@ba.talpu>(+3)</> RES",
+          "blackboard": {
+            "magic_resist_penetrate_fixed": 18
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_gdglow",
       "moduleName": "Goldenglow's Badge",
-      "desc": "Operator Goldenglow has demonstrated a remarkable aptitude for manipulating hovering units to combat and pursue the enemy in concert.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Mech-accord Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Goldenglow has demonstrated a remarkable aptitude for manipulating hovering units to combat and pursue the enemy in concert.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Mech-accord Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_gdglow",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_gdglow",
       "moduleName": "'Industrious Wings'",
-      "desc": "It's late at night, and Susie's still flipping through her textbook. She has Originium Arts Theory tomorrow, and this is her final chance to review. Her workbook lays open to the side, strewn with soundly proofed notes of all the bits she had no idea of (or the wrong idea).\n<i>It's time you slept...</i> Her falling eyelids give her a nudge.\nAnd so, just before going to bed, she stuffs everything she needs for the exam tomorrow in her bag, peeks over her shoulder, and flips her daily scheduler open. What she'll be up to each day, sorted neat and tidily in here—a habit she picked up from working at Quercus's. Procurement, punctual opening and closing, running inventory, cleaning the shop... With so much to do—none of it trivial—on top of frequent and ever-urgent surprises, having everything she needed written out gave her no small relief.\nHer schedule for tomorrow runs as follows:\nMorning\n(7:30-9:30) Exam time!\n(9:30-10:30) TA for Intro to Originium Arts Theory\nNoon\n(12:00-13:00) Help out at hairdressers\nAfternoon\n(14:00-16:00) Practice a bit at training grounds/tidy up plant nursery for Lena (ask first, might not be today)\n(17:00-18:00) Help out at hairdressers\n(18:00-21:00) Help out at bar\n(21:00-22:00) Reading break\nSusie stares and thinks. After a moment, she shortens her shift at the bar and adds a new item below it:\n(20:00-?) Have a talk with Theory tutor about future\nWith how responsible Rhodes Island's tutors and operators all are, she's not one bit worried she'll fail the exam. But as for what's in store for her from now on? That's definitely a conversation her tutor can help with.\nThese days, she's gotten the static that once exploded out of her a little under control, and—though hardly anyone notices—she's already started using little tricks from her casting course in her hairdressing. A tactical dab of electrical charge here and there for even swifter, cleaner haircuts.\nAnd all, so that one day—\nSusie leafs forward through the scheduler a little, and stops. Out in the midst of all these untouched pages, there's one event, a single note that's been written long, long in advance:\nSend money to Mum\nMum keeps telling her she doesn't need to do anything of the sort, but she can't help wanting to send something back home. And this is about when Mum'd always send her money too—somehow, it's become their unofficial way of letting each other know they're still well.\nSusie flips the scheduler back to tomorrow, and gives the freshly filled-in cells a few strokes of her fingers.\nShe's a grounded person. She knows that whatever far-flung future she's imagining, it's not her life in the here and now. She likes to give each book a proper read, do each job well, catch each opportunity when it comes. Imagination's a volatile thing, after all... Still, her current everyday, her life aboard Rhodes Island, is one that so clearly rewards her for her efforts, and isn't that precisely what she's wanted all along?\nSo she corrects that item a little:\n(20:00-?) Have a talk with Theory tutor about upcoming course\n<i>That's</i> what she should be asking.\nTime to turn in now... Her heavy eyes tug at her lids, desperate to pull down the shutters.\nSo she heeds, puts away the scheduler, turns off the lights, and tries to calm her nervously fluttering heart. She'll get good marks tomorrow. It's in her power.\nTomorrow's still a busy day, and tomorrow will reward her for it.\n......\nSusie falls into deep, warm, contented slumber."
+      "desc": "It's late at night, and Susie's still flipping through her textbook. She has Originium Arts Theory tomorrow, and this is her final chance to review. Her workbook lays open to the side, strewn with soundly proofed notes of all the bits she had no idea of (or the wrong idea).\n<i>It's time you slept...</i> Her falling eyelids give her a nudge.\nAnd so, just before going to bed, she stuffs everything she needs for the exam tomorrow in her bag, peeks over her shoulder, and flips her daily scheduler open. What she'll be up to each day, sorted neat and tidily in here—a habit she picked up from working at Quercus's. Procurement, punctual opening and closing, running inventory, cleaning the shop... With so much to do—none of it trivial—on top of frequent and ever-urgent surprises, having everything she needed written out gave her no small relief.\nHer schedule for tomorrow runs as follows:\nMorning\n(7:30-9:30) Exam time!\n(9:30-10:30) TA for Intro to Originium Arts Theory\nNoon\n(12:00-13:00) Help out at hairdressers\nAfternoon\n(14:00-16:00) Practice a bit at training grounds/tidy up plant nursery for Lena (ask first, might not be today)\n(17:00-18:00) Help out at hairdressers\n(18:00-21:00) Help out at bar\n(21:00-22:00) Reading break\nSusie stares and thinks. After a moment, she shortens her shift at the bar and adds a new item below it:\n(20:00-?) Have a talk with Theory tutor about future\nWith how responsible Rhodes Island's tutors and operators all are, she's not one bit worried she'll fail the exam. But as for what's in store for her from now on? That's definitely a conversation her tutor can help with.\nThese days, she's gotten the static that once exploded out of her a little under control, and—though hardly anyone notices—she's already started using little tricks from her casting course in her hairdressing. A tactical dab of electrical charge here and there for even swifter, cleaner haircuts.\nAnd all, so that one day—\nSusie leafs forward through the scheduler a little, and stops. Out in the midst of all these untouched pages, there's one event, a single note that's been written long, long in advance:\nSend money to Mum\nMum keeps telling her she doesn't need to do anything of the sort, but she can't help wanting to send something back home. And this is about when Mum'd always send her money too—somehow, it's become their unofficial way of letting each other know they're still well.\nSusie flips the scheduler back to tomorrow, and gives the freshly filled-in cells a few strokes of her fingers.\nShe's a grounded person. She knows that whatever far-flung future she's imagining, it's not her life in the here and now. She likes to give each book a proper read, do each job well, catch each opportunity when it comes. Imagination's a volatile thing, after all... Still, her current everyday, her life aboard Rhodes Island, is one that so clearly rewards her for her efforts, and isn't that precisely what she's wanted all along?\nSo she corrects that item a little:\n(20:00-?) Have a talk with Theory tutor about upcoming course\n<i>That's</i> what she should be asking.\nTime to turn in now... Her heavy eyes tug at her lids, desperate to pull down the shutters.\nSo she heeds, puts away the scheduler, turns off the lights, and tries to calm her nervously fluttering heart. She'll get good marks tomorrow. It's in her power.\nTomorrow's still a busy day, and tomorrow will reward her for it.\n......\nSusie falls into deep, warm, contented slumber.",
+      "typeIcon": "fun-x",
+      "uniEquipIcon": "uniequip_002_gdglow",
+      "typeName1": "FUN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_gdglow_1",
+        "uniequip_002_gdglow_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (base damage increased, deals up to 110% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (base damage increased, deals up to 110% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 340% of Goldenglow's ATK as Arts damage to enemies in a small area",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Beacon's Wrath",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 355% <@ba.talpu>(+15%)</> of Goldenglow's ATK as Arts damage to enemies in a small area",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "1",
+                  "name": "Beacon's Wrath",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (base damage increased, deals up to 110% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 360% of Goldenglow's ATK as Arts damage to enemies in a small area",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Beacon's Wrath",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 375% <@ba.talpu>(+15%)</> of Goldenglow's ATK as Arts damage to enemies in a small area",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "1",
+                  "name": "Beacon's Wrath",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1208,5 +1879,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

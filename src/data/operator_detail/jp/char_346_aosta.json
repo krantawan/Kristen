@@ -137,6 +137,28 @@
       "cost": 31
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": "1-3"
+    }
+  ],
   "skins": [
     {
       "skinId": "char_346_aosta#1",
@@ -615,16 +637,618 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+26",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 65,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "釘刺創",
+          "description": "ブロックされてない敵を攻撃時、攻撃対象を3秒間、1秒ごとにアオスタの攻撃力の12％の術ダメージ（特性に影響されない）を受ける流血状態にする",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "釘刺創",
+          "description": "ブロックされてない敵を攻撃時、攻撃対象を3秒間、1秒ごとにアオスタの攻撃力の14%<@ba.talpu>（+2%）</>の術ダメージ（特性に影響されない）を受ける流血状態にする",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 0.14,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "釘刺創",
+          "description": "ブロックされてない敵を攻撃時、攻撃対象を3秒間、1秒ごとにアオスタの攻撃力の18％の術ダメージ（特性に影響されない）を受ける流血状態にする",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 0.18,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "釘刺創",
+          "description": "ブロックされてない敵を攻撃時、攻撃対象を3秒間、1秒ごとにアオスタの攻撃力の20%<@ba.talpu>（+2%）</>の術ダメージ（特性に影響されない）を受ける流血状態にする",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_aosta",
       "moduleName": "アオスタの記章",
-      "desc": "アオスタは近距離射撃によって複数の敵を火力で制圧することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、散弾射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "アオスタは近距離射撃によって複数の敵を火力で制圧することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、散弾射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_aosta",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_aosta",
       "moduleName": "逃亡用の緊急キット",
-      "desc": "その夜のロコモティヴァシティには、得物を手にしたならず者が至る所でうろついていた。彼らのターゲットはといえば、路地に隠れている。\n「聞けアオスタ、俺に考えがある。カツラ被って衣装に着替えて、サーカスに混ざって街を出よう。」\n「シッ、静かに。路地から頭を出さないでください。」\n「おいこら、ちゃんと聞け。俺だって頭働かせてんだからよ。たった今、ロコモティヴァで一番凶悪なドンの顔に――あいつの行いを考えりゃ当然の報いだが、パイ弾をぶつけてやった以上、俺らは後には引けねえんだ。とはいえ俺らは文無しで、おまけに迷子だってのに、街中俺らをひき肉にしようとしてる連中で一杯になっちまった。早いとこなんとかしねえと、このままじゃおしまいだぜ。」\n「別に道に迷ったわけではないですよ。ここはバー・バロンの裏通りです。向かいには、ひとまず身を隠せそうな廃倉庫もありますし、そこにはまだ使える固定電話があるのも確認済みです。」\nアオスタはポーチから街の地図を取り出した。\n「このぐにゃぐにゃした線は？」\n「僕たちの逃走ルートです。今はこれに沿って逃げてきたところですよ。」\n「なあ、ブローカ……こいつがこんなこと計画してたの知ってたか！？」\n「いいや。だが驚かない。」\n「で、固定電話で誰に電話すんだよ？」\n「前に薬をくれた方に。僕たちの車は、まだ彼の所にありますので。」\nそう言って、アオスタは『オペレーター・スケール　ロドス・アイランド製薬』と書かれた名刺を取り出した。\n「マジで助けてもらえんなら、その礼にあいつの面白みのねえオフィスの改造を手伝ってやってもいいな。」\n「前のような逃避行はもうたくさんなんです。」アオスタはポーチから更に数枚のコインを取り出した。「次もあるだろうと予測がつくからには、準備しておくのは当然ですよ。」\n「アオスタ！改造用の金なんかないとか言ってなかったか！？お前隠してたのかよ！そのポーチ、他に一体どんな隠し玉が残ってんだ？どうせ美味いもんは出てこねえだろうけど。はぁ……腹減ったな。お前が言った廃倉庫で肉焼けねえか？」\nアオスタはまたもポーチを開け、地味な包み紙のキャンディを二つ取り出した。\n「おいマジか！もう二度とお前のこと母ちゃんみてえだとか言わねえって約束するわ！けど……二つしかねえのか？俺らに渡しちまったらお前の分がなくなるんじゃねえか？」\n「お腹が空いていないので。」\n「やっぱ母ちゃんが言うようなことだな……」\n「黙って食べなさい。包み紙まで剥がせとは言わないでしょう？」\n「へいへい……」\nがさりと音を立てて、包み紙が地面に落ちる。その後、キアーベの表情は感激から困惑へと変わり、そして歪んだ。\n「おえっ！なんだこのクソみてえな味！」\n逃走劇が始まって以来、ずっと真面目な表情をしていた白髪のループスは、そこでようやく笑みを浮かべた。\n「鼻クソ味のキャンディです。あなたの無駄な食欲を抑えるためのものですよ。」\n言うと、彼は人差し指を立てた。\n「通りに出ている連中が減ってきました。二人とも、準備は良いですか？三つ数えたら、あの倉庫まで走りますよ。」"
+      "desc": "その夜のロコモティヴァシティには、得物を手にしたならず者が至る所でうろついていた。彼らのターゲットはといえば、路地に隠れている。\n「聞けアオスタ、俺に考えがある。カツラ被って衣装に着替えて、サーカスに混ざって街を出よう。」\n「シッ、静かに。路地から頭を出さないでください。」\n「おいこら、ちゃんと聞け。俺だって頭働かせてんだからよ。たった今、ロコモティヴァで一番凶悪なドンの顔に――あいつの行いを考えりゃ当然の報いだが、パイ弾をぶつけてやった以上、俺らは後には引けねえんだ。とはいえ俺らは文無しで、おまけに迷子だってのに、街中俺らをひき肉にしようとしてる連中で一杯になっちまった。早いとこなんとかしねえと、このままじゃおしまいだぜ。」\n「別に道に迷ったわけではないですよ。ここはバー・バロンの裏通りです。向かいには、ひとまず身を隠せそうな廃倉庫もありますし、そこにはまだ使える固定電話があるのも確認済みです。」\nアオスタはポーチから街の地図を取り出した。\n「このぐにゃぐにゃした線は？」\n「僕たちの逃走ルートです。今はこれに沿って逃げてきたところですよ。」\n「なあ、ブローカ……こいつがこんなこと計画してたの知ってたか！？」\n「いいや。だが驚かない。」\n「で、固定電話で誰に電話すんだよ？」\n「前に薬をくれた方に。僕たちの車は、まだ彼の所にありますので。」\nそう言って、アオスタは『オペレーター・スケール　ロドス・アイランド製薬』と書かれた名刺を取り出した。\n「マジで助けてもらえんなら、その礼にあいつの面白みのねえオフィスの改造を手伝ってやってもいいな。」\n「前のような逃避行はもうたくさんなんです。」アオスタはポーチから更に数枚のコインを取り出した。「次もあるだろうと予測がつくからには、準備しておくのは当然ですよ。」\n「アオスタ！改造用の金なんかないとか言ってなかったか！？お前隠してたのかよ！そのポーチ、他に一体どんな隠し玉が残ってんだ？どうせ美味いもんは出てこねえだろうけど。はぁ……腹減ったな。お前が言った廃倉庫で肉焼けねえか？」\nアオスタはまたもポーチを開け、地味な包み紙のキャンディを二つ取り出した。\n「おいマジか！もう二度とお前のこと母ちゃんみてえだとか言わねえって約束するわ！けど……二つしかねえのか？俺らに渡しちまったらお前の分がなくなるんじゃねえか？」\n「お腹が空いていないので。」\n「やっぱ母ちゃんが言うようなことだな……」\n「黙って食べなさい。包み紙まで剥がせとは言わないでしょう？」\n「へいへい……」\nがさりと音を立てて、包み紙が地面に落ちる。その後、キアーベの表情は感激から困惑へと変わり、そして歪んだ。\n「おえっ！なんだこのクソみてえな味！」\n逃走劇が始まって以来、ずっと真面目な表情をしていた白髪のループスは、そこでようやく笑みを浮かべた。\n「鼻クソ味のキャンディです。あなたの無駄な食欲を抑えるためのものですよ。」\n言うと、彼は人差し指を立てた。\n「通りに出ている連中が減ってきました。二人とも、準備は良いですか？三つ数えたら、あの倉庫まで走りますよ。」",
+      "typeIcon": "rpr-x",
+      "uniEquipIcon": "uniequip_002_aosta",
+      "typeName1": "RPR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_aosta_1",
+        "uniequip_002_aosta_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃し、自身の正面横3マスにいる敵を攻撃時攻撃力が<@ba.kw>160%</>まで上昇",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 44,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃し、自身の正面横3マスにいる敵を攻撃時攻撃力が<@ba.kw>160%</>まで上昇",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ブロックされてない敵を攻撃時、攻撃対象を4秒間、1秒ごとにアオスタの攻撃力の23%の術ダメージ（特性に影響されない）を受ける流血状態にする",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "釘刺創",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ブロックされてない敵を攻撃時、攻撃対象を4秒間、1秒ごとにアオスタの攻撃力の25%<@ba.talpu>（+2%）</>の術ダメージ（特性に影響されない）を受ける流血状態にする",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "釘刺創",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃し、自身の正面横3マスにいる敵を攻撃時攻撃力が<@ba.kw>160%</>まで上昇",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ブロックされてない敵を攻撃時、攻撃対象を5秒間、1秒ごとにアオスタの攻撃力の25%の術ダメージ（特性に影響されない）を受ける流血状態にする",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "釘刺創",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ブロックされてない敵を攻撃時、攻撃対象を5秒間、1秒ごとにアオスタの攻撃力の27%<@ba.talpu>（+2%）</>の術ダメージ（特性に影響されない）を受ける流血状態にする",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "釘刺創",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1078,5 +1702,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

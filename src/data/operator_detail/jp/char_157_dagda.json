@@ -151,6 +151,7 @@
       "cost": 12
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_157_dagda#1",
@@ -606,16 +607,599 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+24",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 24,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 40,
+        "def": 35,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ストリートソウル",
+          "description": "攻撃時、30％の確率でその攻撃のみ攻撃力が130％まで上昇\n配置中、味方【グラスゴー】の隣接4マス内で敵が倒れた度、攻撃力上昇効果が追加で5％上昇（最大190％まで）",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_up_max_value",
+              "value": 1.9,
+              "valueStr": null
+            },
+            {
+              "key": "atk_up_each_time",
+              "value": 0.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ストリートソウル",
+          "description": "攻撃時、30％の確率でその攻撃のみ攻撃力が150％まで上昇\n配置中、味方【グラスゴー】の隣接4マス内で敵が倒れた度、攻撃力上昇効果が追加で5％上昇（最大240％まで）",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            },
+            {
+              "key": "atk_up_max_value",
+              "value": 2.4,
+              "valueStr": null
+            },
+            {
+              "key": "atk_up_each_time",
+              "value": 0.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "ナイツスピリッツ",
+          "description": "【淬火煙塵】において、最大HP+20％、攻撃時、自身のHPを与ダメージの20％回復",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "heal_scale",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_dagda",
       "moduleName": "ダグザの記章",
-      "desc": "ダグザは接近戦で優位に立つことに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、闘士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ダグザは接近戦で優位に立つことに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、闘士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_dagda",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_dagda",
       "moduleName": "裏通りのラウンドシールド",
-      "desc": "ロドスエンジニア部から贈られたこのシンプルで丈夫そうなラウンドシールドは、エンジニア部が空き時間に暇つぶしとして開催した「ヴィクトリア伝統制式装備制作コンテスト」で作られたものだ。\n「これは騎士の身分を象徴するものなんです。」\n盾をダグザに届けたオペレーターは、冗談めかしてそう言った。\n「だから私たちは、ロドスとヴィクトリアを行き来している騎士さんにこれを贈ろうと決めたんですよ。」\nダグザはテーブルに置かれたシールドを見て、塔楼騎士としての訓練を受けていた日々を思い出し、思わず上の空になっていた。 \n訓練においては、厳しい体力トレーニングや戦術訓練を受けたほか、騎士としての礼儀作法についても多くを学んでいた。あの複雑で苦しい記憶トレーニングとボディランゲージの練習の中では、こういったラウンドシールドに関する内容も重要なカリキュラムとして取り扱われていた。\nこの手の歴史ある軍装品は、かつては騎士が普段から身に着けている装備の一つだったが、今となってはこれを戦闘用の防具として使う騎士などいない。ゆえに、それは暖炉の上に掛けられたインテリアとなっており、その身分を誇るための――高価な顔料で家紋や騎士団の紋章が描かれた――プレートでしかなかった。鮮やかな模様が盾本来の色を覆い隠しているその様は、洗練された礼儀作法で騎士の暴力性を覆い隠しているそれと同じように見えた。 \nフィン哨戒長はかつて、騎士たちがラウンドシールドを誇示する光景についてダグザに語ったことがあった。祭典の日の夕刻、騎士たちは鎧を身にまとい、武器を携えて通りに繰り出すのだという。彼らが手にする盾の模様は、誇り高き出自を示すものもあれば、様々なポーズをとる戦士、色とりどりの花々、逞しい野獣、さらに線が網目のように交差したものなどもあり、様々だった。小気味よい太鼓のリズムが低いトランペットを伴って、整然と並んだ隊列を囲み、皆が塔楼に灯る火の輝きを目指していた。\nしかし、今ではその塔楼はとうの昔に崩壊しており、こうした光景はもうダグザの想像の中にしか存在しなかった。 \n「実のところ、師匠の記憶の中にある光景を、この目で見たことはないんだ。」ダグザは少し我に返った様子でこう続けた。\n「私の騎士としての身分は、あの本――騎士の生涯が記され、その一生が栄光に満ちたものであるか否かを定められる本と共に消えてしまった。ゆえに、今でも記憶に留めるに値するものがあるとすれば……」\n彼女は盾を持って工房へと向かうと、彼女を象徴するもの――ストリートの紋章を描いたのだった。"
+      "desc": "ロドスエンジニア部から贈られたこのシンプルで丈夫そうなラウンドシールドは、エンジニア部が空き時間に暇つぶしとして開催した「ヴィクトリア伝統制式装備制作コンテスト」で作られたものだ。\n「これは騎士の身分を象徴するものなんです。」\n盾をダグザに届けたオペレーターは、冗談めかしてそう言った。\n「だから私たちは、ロドスとヴィクトリアを行き来している騎士さんにこれを贈ろうと決めたんですよ。」\nダグザはテーブルに置かれたシールドを見て、塔楼騎士としての訓練を受けていた日々を思い出し、思わず上の空になっていた。 \n訓練においては、厳しい体力トレーニングや戦術訓練を受けたほか、騎士としての礼儀作法についても多くを学んでいた。あの複雑で苦しい記憶トレーニングとボディランゲージの練習の中では、こういったラウンドシールドに関する内容も重要なカリキュラムとして取り扱われていた。\nこの手の歴史ある軍装品は、かつては騎士が普段から身に着けている装備の一つだったが、今となってはこれを戦闘用の防具として使う騎士などいない。ゆえに、それは暖炉の上に掛けられたインテリアとなっており、その身分を誇るための――高価な顔料で家紋や騎士団の紋章が描かれた――プレートでしかなかった。鮮やかな模様が盾本来の色を覆い隠しているその様は、洗練された礼儀作法で騎士の暴力性を覆い隠しているそれと同じように見えた。 \nフィン哨戒長はかつて、騎士たちがラウンドシールドを誇示する光景についてダグザに語ったことがあった。祭典の日の夕刻、騎士たちは鎧を身にまとい、武器を携えて通りに繰り出すのだという。彼らが手にする盾の模様は、誇り高き出自を示すものもあれば、様々なポーズをとる戦士、色とりどりの花々、逞しい野獣、さらに線が網目のように交差したものなどもあり、様々だった。小気味よい太鼓のリズムが低いトランペットを伴って、整然と並んだ隊列を囲み、皆が塔楼に灯る火の輝きを目指していた。\nしかし、今ではその塔楼はとうの昔に崩壊しており、こうした光景はもうダグザの想像の中にしか存在しなかった。 \n「実のところ、師匠の記憶の中にある光景を、この目で見たことはないんだ。」ダグザは少し我に返った様子でこう続けた。\n「私の騎士としての身分は、あの本――騎士の生涯が記され、その一生が栄光に満ちたものであるか否かを定められる本と共に消えてしまった。ゆえに、今でも記憶に留めるに値するものがあるとすれば……」\n彼女は盾を持って工房へと向かうと、彼女を象徴するもの――ストリートの紋章を描いたのだった。",
+      "typeIcon": "fgt-y",
+      "uniEquipIcon": "uniequip_002_dagda",
+      "typeName1": "FGT",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_dagda_1",
+        "uniequip_002_dagda_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵を1体までブロックできる\nHPが最大値の50%を上回った場合、攻撃速度<@ba.vup>+{attack_speed}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵を1体までブロックできる\nHPが最大値の50%を上回った場合、攻撃速度<@ba.vup>+{attack_speed}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、30%の確率でその攻撃のみ攻撃力が156%まで上昇。配置中、味方【グラスゴー】の隣接4マス内で敵が倒れた度、攻撃力上昇効果が追加で6%上昇（最大240%まで）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ストリートソウル",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.56,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_up_max_value",
+                      "value": 2.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_up_each_time",
+                      "value": 0.06,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵を1体までブロックできる\nHPが最大値の50%を上回った場合、攻撃速度<@ba.vup>+{attack_speed}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、30%の確率でその攻撃のみ攻撃力が162%まで上昇。配置中、味方【グラスゴー】の隣接4マス内で敵が倒れた度、攻撃力上昇効果が追加で6%上昇（最大240%まで）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ストリートソウル",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.62,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_up_max_value",
+                      "value": 2.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_up_each_time",
+                      "value": 0.06,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1069,5 +1653,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

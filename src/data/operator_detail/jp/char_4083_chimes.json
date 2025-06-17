@@ -150,6 +150,7 @@
       "cost": 23
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_4083_chimes#1",
@@ -628,16 +629,618 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+40",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 40,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 350,
+        "atk": 70,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "山路を往く",
+          "description": "最大HP+5％。HPが最大値の50％以上の場合、攻撃力+15％の<$ba.strong>勇猛</>状態を獲得する",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "山路を往く",
+          "description": "最大HP+5％。HPが最大値の50％以上の場合、攻撃力+17％<@ba.talpu>（+2％）</>の<$ba.strong>勇猛</>状態を獲得する",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.17,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "山路を往く",
+          "description": "最大HP+5％。HPが最大値の50％以上の場合、攻撃力+20％の<$ba.strong>勇猛</>状態を獲得する",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "山路を往く",
+          "description": "最大HP+5％。HPが最大値の50％以上の場合、攻撃力+22％<@ba.talpu>（+2％）</>の<$ba.strong>勇猛</>状態を獲得する",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.22,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_chimes",
       "moduleName": "ウィンドチャイムの記章",
-      "desc": "ウィンドチャイムは重く強力な武器を用いて敵を迎撃する戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、重剣士の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ウィンドチャイムは重く強力な武器を用いて敵を迎撃する戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、重剣士の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_chimes",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_chimes",
       "moduleName": "後任の方へ",
-      "desc": "「山岳地帯の居住地域は、現在地図に記された村と町しか残っていません。通常、配達の際には記した順序通り行けば問題ありません。各ルートには色がついていますが、これはそのルートの険しさや、最適な交通手段を示したものです。先輩の経験による助言といったところですね。\nまず、舗装状況が最も良いルートであれば、自転車で通行可能です。下り坂は爽快ですが、スピードにはくれぐれも気を付けてください。山道はどれだけ良くても、整備された馳道には及びませんので。それと、ひどく揺れますから、郵便物をまき散らさないように。万一手紙を失くしてしまえば、泣くに泣けない事態になりますよ。\n次に、自分の足で歩くルートです。山道を歩くのは容易ではありませんが、何より重要なのはお天道様との時間の勝負であるという点です。天気を読めるようになりましょう。雲が集まり始めたら足を速め、空が雲で覆われた時は走るのです。雷が鳴ってから雨宿りしようとしても遅いのですから。雨の中で道を急げば事故も起きやすいですし、私の角は（取り消し線）――私はそのせいで痛い目に遭ったこともあります。野獣や盗賊の類については、冷静に対処すればどうということはありません。私でも対処できたのですから、後継者として認められたあなたならきっと大丈夫でしょう。\nそれから、一部の特殊なルートについても書いておきます。普段はあまり使いませんが――余白が足りなくなったので、ほかのものは別紙に記すとして、ひとまずジップラインを使う場合について書きましょう。どうか怖がらないでください。私も何度も使いましたし、実際とても安全ですから。むしろ爽快感があるくらいですので、続けているうちに好きになるかもしれませんね。」\n……\n「そういえば、まだ書くべきことがありました。ぶしつけなお願いかもしれませんがご容赦ください。印をつけてあるところは、若者がほとんどいなくなった村です。住民は皆ご年配ですので、頑固な方も多く、お身体の自由が利かない方もいらっしゃいます。そちらではどうか寛大に接してあげてください。そのうえ、何かお手伝いしていただけるようなら、私が住民たちに代わって心から感謝いたします。\n最後に一点、一番大事なことを！必ず鉱石病対策をしてください！決して――」\nそこで地図の裏側にあった余白は尽きたようだ。さほど大きくもないこの紙は、文字でびっしり埋め尽くされていた。ウィンドチャイムがある時病院の検査から帰って来て以来、それはずっとここに置かれている。しかしその後時が経っても、ウィンドチャイムは何年も変わらず山道を歩いており、この古い地図もまた、彼女の机に置かれたままになっていた。偶然それを裏返した者は、思わず苦笑いしたものだ。\n「本当に真面目な嬢ちゃんだな。あの子のほかに、こんな辺鄙な山奥まで手紙を届けてくれる奴なんかいるもんかね。」\n「そのうち、ここらに誰もいなくなっちまったら、後任のトランスポーターなんぞ必要なくなるだろうな。」\n「やれやれ、あれから何年経ったかな。道すがらあんなに色んなことに出くわしてちゃ、こんな紙に全部書ききれるはずもなかろうよ。」\n「それに、こんなに長い道を、ほかの奴じゃあ歩ききれるはずもないさ。」"
+      "desc": "「山岳地帯の居住地域は、現在地図に記された村と町しか残っていません。通常、配達の際には記した順序通り行けば問題ありません。各ルートには色がついていますが、これはそのルートの険しさや、最適な交通手段を示したものです。先輩の経験による助言といったところですね。\nまず、舗装状況が最も良いルートであれば、自転車で通行可能です。下り坂は爽快ですが、スピードにはくれぐれも気を付けてください。山道はどれだけ良くても、整備された馳道には及びませんので。それと、ひどく揺れますから、郵便物をまき散らさないように。万一手紙を失くしてしまえば、泣くに泣けない事態になりますよ。\n次に、自分の足で歩くルートです。山道を歩くのは容易ではありませんが、何より重要なのはお天道様との時間の勝負であるという点です。天気を読めるようになりましょう。雲が集まり始めたら足を速め、空が雲で覆われた時は走るのです。雷が鳴ってから雨宿りしようとしても遅いのですから。雨の中で道を急げば事故も起きやすいですし、私の角は（取り消し線）――私はそのせいで痛い目に遭ったこともあります。野獣や盗賊の類については、冷静に対処すればどうということはありません。私でも対処できたのですから、後継者として認められたあなたならきっと大丈夫でしょう。\nそれから、一部の特殊なルートについても書いておきます。普段はあまり使いませんが――余白が足りなくなったので、ほかのものは別紙に記すとして、ひとまずジップラインを使う場合について書きましょう。どうか怖がらないでください。私も何度も使いましたし、実際とても安全ですから。むしろ爽快感があるくらいですので、続けているうちに好きになるかもしれませんね。」\n……\n「そういえば、まだ書くべきことがありました。ぶしつけなお願いかもしれませんがご容赦ください。印をつけてあるところは、若者がほとんどいなくなった村です。住民は皆ご年配ですので、頑固な方も多く、お身体の自由が利かない方もいらっしゃいます。そちらではどうか寛大に接してあげてください。そのうえ、何かお手伝いしていただけるようなら、私が住民たちに代わって心から感謝いたします。\n最後に一点、一番大事なことを！必ず鉱石病対策をしてください！決して――」\nそこで地図の裏側にあった余白は尽きたようだ。さほど大きくもないこの紙は、文字でびっしり埋め尽くされていた。ウィンドチャイムがある時病院の検査から帰って来て以来、それはずっとここに置かれている。しかしその後時が経っても、ウィンドチャイムは何年も変わらず山道を歩いており、この古い地図もまた、彼女の机に置かれたままになっていた。偶然それを裏返した者は、思わず苦笑いしたものだ。\n「本当に真面目な嬢ちゃんだな。あの子のほかに、こんな辺鄙な山奥まで手紙を届けてくれる奴なんかいるもんかね。」\n「そのうち、ここらに誰もいなくなっちまったら、後任のトランスポーターなんぞ必要なくなるだろうな。」\n「やれやれ、あれから何年経ったかな。道すがらあんなに色んなことに出くわしてちゃ、こんな紙に全部書ききれるはずもなかろうよ。」\n「それに、こんなに長い道を、ほかの奴じゃあ歩ききれるはずもないさ。」",
+      "typeIcon": "cru-x",
+      "uniEquipIcon": "uniequip_002_chimes",
+      "typeName1": "CRU",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_chimes_1",
+        "uniequip_002_chimes_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 230,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "受ける治療効果<@ba.kw>+20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 305,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 89,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "受ける治療効果<@ba.kw>+20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "最大HP+7%。HPが最大値の50%以上の場合、攻撃力+28%の<$ba.strong>勇猛</>状態を獲得",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "山路を往く",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.07,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "最大HP+7%。HPが最大値の50%以上の場合、攻撃力+30%<@ba.talpu>（+2%）</>の<$ba.strong>勇猛</>状態を獲得",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "山路を往く",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.07,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 350,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 100,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "受ける治療効果<@ba.kw>+20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "最大HP+8%。HPが最大値の50%以上の場合、攻撃力+33%の<$ba.strong>勇猛</>状態を獲得",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "山路を往く",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.33,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "最大HP+8%。HPが最大値の50%以上の場合、攻撃力+35%<@ba.talpu>（+2%）</>の<$ba.strong>勇猛</>状態を獲得",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "山路を往く",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.35,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1091,5 +1694,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

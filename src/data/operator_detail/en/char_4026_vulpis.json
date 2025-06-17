@@ -151,6 +151,7 @@
       "cost": 14
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_4026_vulpis#1",
@@ -721,16 +722,531 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +25",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Fox Hunt",
+          "description": "After dealing damage to an enemy for the first time, Vulpisfoglia deals an additional 20% ATK as Arts damage whenever she deals damage to this enemy during the next 10s",
+          "blackboard": {
+            "atk_scale": 0.2,
+            "interval": 10
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Fox Hunt",
+          "description": "After dealing damage to an enemy for the first time, Vulpisfoglia deals an additional 30% ATK as Arts damage whenever she deals damage to this enemy during the next 10s",
+          "blackboard": {
+            "atk_scale": 0.3,
+            "interval": 10
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Accelerando",
+          "description": "Natural DP regeneration rate +10% while on the field; if Vulpisfoglia does not take damage for 4s, recovers 4% of Max HP every second",
+          "blackboard": {
+            "delta_cost_increase_time": 1.1,
+            "interval": 4,
+            "vulpis_t_2[heal][interval].hp_recovery_per_sec_by_max_hp_ratio": 0.04
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Accelerando",
+          "description": "Natural DP regeneration rate +10% while on the field; if Vulpisfoglia does not take damage for 4s, recovers 5% <@ba.talpu>(+1%)</> of Max HP every second",
+          "blackboard": {
+            "delta_cost_increase_time": 1.1,
+            "interval": 4,
+            "vulpis_t_2[heal][interval].hp_recovery_per_sec_by_max_hp_ratio": 0.05
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_vulpis",
       "moduleName": "Vulpisfoglia's Badge",
-      "desc": "Operator Vulpisfoglia has demonstrated a remarkable aptitude for preemptive penetration of the battlefield situation and active offense so as to secure leeway for deployment.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall hereby be appointed a Vanguard Operator during field operations to exercise Pioneer responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Vulpisfoglia has demonstrated a remarkable aptitude for preemptive penetration of the battlefield situation and active offense so as to secure leeway for deployment.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall hereby be appointed a Vanguard Operator during field operations to exercise Pioneer responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_vulpis",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_vulpis",
       "moduleName": "Patience, Mission, Vacation",
-      "desc": "Ingrid observes the young man's face, blood dripping through his hair and down the nape of his neck like some wretched tattoo.\n'Help me,' he begs, as if he's forgotten that he tried to fling a dagger at this very lady just a day ago.\nIngrid's gaze shifts past his shoulders, landing on the smoking vehicle in the distance. <i>Oh,</i> she thinks, <i>so they caught up to him after all.</i>\nHis story was of failing to enact his vendetta against Ingrid, then running into his own foes on the way back for good measure. All too common a story. Revenge is a wolf snapping at its own tail.\n'Help me.' He's still asking?\nWho would help an enemy? What, just because she pardoned him once before? But those thoughts don't bother Ingrid for too long, for then she answers.\n'Sorry, I don't do this kind of thing anymore.'\nShe tosses a dagger to the ground—the very same one her personal avenger left her yesterday. It's not her concern whether he still has the strength to pick it up, or whose heart he'll elect to aim it at.\nShe turns, and steps into her Rhodes Island dorm room. The Logistics op outside reminds her that the physio appointment she booked starts in fifteen minutes. Through the porthole, she peers out into the barrens, the dagger she tossed down now six hours in the past. Who knows if that young man ever escaped the wheels of hostility after him.\nThere's an unfinished jigsaw puzzle on her dorm table. A present. Now and then, Lisa comes by to chat while casually putting a couple of pieces in place.\nShe carefully examines the part of the image that's already formed. An everyday landscape, an undulating horizon; one could imagine the outline of buildings, mountains, forests. Despite not having pieced a single row together herself, it's already complete—at least in her mind.\nIt's not for lack of patience; it's just never much excited her when the start of something can give away the full picture. As if examining herself, she picks up a jigsaw piece, and places it right in the heart of a vast swathe of blank.\n'That's where it belongs,' she says to herself. She doesn't even need to look for the pieces around it; she's more than sure, as if she's secretly completed this puzzle countless times before.\nPlacing that lone little piece at the center, she can almost picture a wolf circling it chasing its own tail, round and round and round, in endless joy.\nWith a shake of her head and a flick of her finger, she sends the piece flying off the table.\n'I shouldn't be having thoughts like these on vacation.'\nShe heads out of her dorm. Is it time for her physio appointment yet? Whatever the case, a killer on holiday can make as luxurious use of her time as she wants."
+      "desc": "Ingrid observes the young man's face, blood dripping through his hair and down the nape of his neck like some wretched tattoo.\n'Help me,' he begs, as if he's forgotten that he tried to fling a dagger at this very lady just a day ago.\nIngrid's gaze shifts past his shoulders, landing on the smoking vehicle in the distance. <i>Oh,</i> she thinks, <i>so they caught up to him after all.</i>\nHis story was of failing to enact his vendetta against Ingrid, then running into his own foes on the way back for good measure. All too common a story. Revenge is a wolf snapping at its own tail.\n'Help me.' He's still asking?\nWho would help an enemy? What, just because she pardoned him once before? But those thoughts don't bother Ingrid for too long, for then she answers.\n'Sorry, I don't do this kind of thing anymore.'\nShe tosses a dagger to the ground—the very same one her personal avenger left her yesterday. It's not her concern whether he still has the strength to pick it up, or whose heart he'll elect to aim it at.\nShe turns, and steps into her Rhodes Island dorm room. The Logistics op outside reminds her that the physio appointment she booked starts in fifteen minutes. Through the porthole, she peers out into the barrens, the dagger she tossed down now six hours in the past. Who knows if that young man ever escaped the wheels of hostility after him.\nThere's an unfinished jigsaw puzzle on her dorm table. A present. Now and then, Lisa comes by to chat while casually putting a couple of pieces in place.\nShe carefully examines the part of the image that's already formed. An everyday landscape, an undulating horizon; one could imagine the outline of buildings, mountains, forests. Despite not having pieced a single row together herself, it's already complete—at least in her mind.\nIt's not for lack of patience; it's just never much excited her when the start of something can give away the full picture. As if examining herself, she picks up a jigsaw piece, and places it right in the heart of a vast swathe of blank.\n'That's where it belongs,' she says to herself. She doesn't even need to look for the pieces around it; she's more than sure, as if she's secretly completed this puzzle countless times before.\nPlacing that lone little piece at the center, she can almost picture a wolf circling it chasing its own tail, round and round and round, in endless joy.\nWith a shake of her head and a flick of her finger, she sends the piece flying off the table.\n'I shouldn't be having thoughts like these on vacation.'\nShe heads out of her dorm. Is it time for her physio appointment yet? Whatever the case, a killer on holiday can make as luxurious use of her time as she wants.",
+      "typeIcon": "sol-x",
+      "uniEquipIcon": "uniequip_002_vulpis",
+      "typeName1": "SOL",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_vulpis_1",
+        "uniequip_002_vulpis_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 175,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After dealing damage to an enemy for the first time, Vulpisfoglia deals an additional 35% ATK as Arts damage whenever she deals damage to this enemy during the next 10s",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Fox Hunt",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After dealing damage to an enemy for the first time, Vulpisfoglia deals an additional 40% ATK as Arts damage whenever she deals damage to this enemy during the next 10s",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Fox Hunt",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1192,5 +1708,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

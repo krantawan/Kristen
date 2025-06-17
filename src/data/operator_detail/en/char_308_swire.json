@@ -151,6 +151,24 @@
       "cost": 16
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_308_swire#1",
@@ -621,16 +639,536 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +26",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 40,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Melee Combat Guidance",
+          "description": "ATK of Melee allies in the 8 surrounding tiles +3% when Swire is deployed",
+          "blackboard": {
+            "atk": 0.03
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Melee Combat Guidance",
+          "description": "ATK of Melee allies in the 8 surrounding tiles +5% <@ba.talpu>(+2%)</> when Swire is deployed",
+          "blackboard": {
+            "atk": 0.05
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Melee Combat Guidance",
+          "description": "ATK of Melee allies in the 8 surrounding tiles +6% when Swire is deployed",
+          "blackboard": {
+            "atk": 0.06
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Melee Combat Guidance",
+          "description": "ATK of Melee allies in the 8 surrounding tiles +8% <@ba.talpu>(+2%)</> when Swire is deployed",
+          "blackboard": {
+            "atk": 0.08
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Melee Combat Guidance",
+          "description": "ATK of Melee Attack allies in the 8 surrounding tiles +10% when Swire is deployed",
+          "blackboard": {
+            "atk": 0.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Melee Combat Guidance",
+          "description": "ATK of Melee allies in the 8 surrounding tiles +12% <@ba.talpu>(+2%)</> when Swire is deployed",
+          "blackboard": {
+            "atk": 0.12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_swire",
       "moduleName": "Swire's Badge",
-      "desc": "Operator Swire has demonstrated a remarkable aptitude in rallying her nearby Melee operators.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Instructor responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Swire has demonstrated a remarkable aptitude in rallying her nearby Melee operators.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Instructor responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_swire",
       "moduleName": "Self-defense Lipstick",
-      "desc": "Swire, Senior Superintendent of the Lungmen Police Department, is off work today, so, just as always, she goes shopping at Paci Plaza.\nAfter a six-hour shopping spree across the entire mall, she is just getting ready to go home with eight big bags in her hands and a big smile on her face. That is, until she turns the corner to a Swire branded lipstick counter.\n'The usual. Five #38 Bullets. Thanks,' Swire masterfully asks the salesperson for her favorite lipstick.\nThe #38 Bullet has been her lipstick of choice for the past ten years. Naturally, the price is of no concern to her.\n'Of course, Miss Swire. Right away,' says the salesperson, who seems to be familiar with this process herself. She asks a coworker to take over at the counter and disappears into the storeroom to look for the lipsticks the princess personally requested. Before long, she returns with a wooden carton and hands it over to Swire.\n'Please confirm this is the correct amount.'\nWithout opening the box to check its contents, Swire merely acknowledges the salesperson and looks down to fish for something in her handbag.\nAfter a good while, she takes out a mini bag. To everyone else, this probably looks more like a petite handbag.\nShe unbuckles her bag, revealing five black velvet slots inside.\nIn each of those slots is a used up #38 Bullet lipstick.\nSwire removes her used lipsticks and places them on the counter before inserting four of her newly purchased lipsticks in the slots, with the fifth one going into her pocket instead.\nWhen she notices Swire placing her bags back on her shoulders again, the salesperson's heart begins to race.\n'Miss, would you like someone to help carry your bags?'\n'Oh? No need. They are hardly heavy at all.'\n'Frightfully sorry, but are you sure...?'\n'Yes, I'm sure,' Swire answers as she walks away from the counter. It seems she really needs no help with her bags.\nShe may not need any help, but there are others who need hers.\nNot a moment after she steps out of the shopping mall's front doors, Swire hears a loud scream for help. She turns to the scream's direction to find a thief dashing away with a woman's handbag in his hands.\nIt so happens she is running right toward a superintendent of the L.G.D.\n'What a coincidence,' Swire thinks to herself.\nBy chance, she does not have her flail with her.\nIt so happens she just bought new lipstick today.\nWhat's more, there is one right in her pocket right now.\nShe decides to teach the thief a lesson he will never forget.\nSwire sets her shopping bags down, takes out her lipstick and removes the cap, breaking the seal, and waits for the thief to come closer.\nA few seconds later, everyone in the vicinity hears a thud, followed by the thief's wail as he stumbles to the ground under the L.G.D. patrol officer's roar.\n\nSeveral minutes later...\n'Good work, Missy. You're off duty, and you still caught a thief for us.' Hoshiguma, here to oversee the arrest of the thief, forces a smile as she greets Swire, the brave good Samaritan.\nNormally, Swire would personally take the man in herself for interrogation.\nHowever, she has the day off. This case isn't hers to deal with.\n'This fellow has got to have some real rotten luck to run into me today.'\n'It's not every day someone bumps into an off duty inspector when they go to snatch something.'\n'Hmph, whatever. You take him in. I'm going home. I'll deal with the case tomorrow.'\n'If you say so, Missy.'\n'Before you go, I have a question for you.'\n'What is it?'\nSwire turns around to find Hoshiguma writing something on her case report.\n'What should I write for how the suspect was taken down?'\nSwire can tell that Hoshiguma is asking for her opinion.\n'Just write down that it was lipstick. There is no need to pull punches for someone like him.'\n'Ahaha, okay then,' says Hoshiguma as she cheerfully scribbles on her report, 'The suspect was taken down by lipstick.'\n'I don't even want to head straight home anymore. Why don't you hurry and finish up with work? We'll get dinner together.'\n'Would you like me to escort you home and carry your bags for you, Missy? Haha.'\n'Oh, enough questions. Hurry up already.'\n'Okay, give me a second. I'll give the report to somebody else, then we can get dinner.'\n'Be sure to tell me how amazing this lipstick of yours is.'\n'Certainly.'\n\n'Why don't you carry my bags for me now? My hands are getting sore.'\n'Okay, okay. Be right with you."
+      "desc": "Swire, Senior Superintendent of the Lungmen Police Department, is off work today, so, just as always, she goes shopping at Paci Plaza.\nAfter a six-hour shopping spree across the entire mall, she is just getting ready to go home with eight big bags in her hands and a big smile on her face. That is, until she turns the corner to a Swire branded lipstick counter.\n'The usual. Five #38 Bullets. Thanks,' Swire masterfully asks the salesperson for her favorite lipstick.\nThe #38 Bullet has been her lipstick of choice for the past ten years. Naturally, the price is of no concern to her.\n'Of course, Miss Swire. Right away,' says the salesperson, who seems to be familiar with this process herself. She asks a coworker to take over at the counter and disappears into the storeroom to look for the lipsticks the princess personally requested. Before long, she returns with a wooden carton and hands it over to Swire.\n'Please confirm this is the correct amount.'\nWithout opening the box to check its contents, Swire merely acknowledges the salesperson and looks down to fish for something in her handbag.\nAfter a good while, she takes out a mini bag. To everyone else, this probably looks more like a petite handbag.\nShe unbuckles her bag, revealing five black velvet slots inside.\nIn each of those slots is a used up #38 Bullet lipstick.\nSwire removes her used lipsticks and places them on the counter before inserting four of her newly purchased lipsticks in the slots, with the fifth one going into her pocket instead.\nWhen she notices Swire placing her bags back on her shoulders again, the salesperson's heart begins to race.\n'Miss, would you like someone to help carry your bags?'\n'Oh? No need. They are hardly heavy at all.'\n'Frightfully sorry, but are you sure...?'\n'Yes, I'm sure,' Swire answers as she walks away from the counter. It seems she really needs no help with her bags.\nShe may not need any help, but there are others who need hers.\nNot a moment after she steps out of the shopping mall's front doors, Swire hears a loud scream for help. She turns to the scream's direction to find a thief dashing away with a woman's handbag in his hands.\nIt so happens she is running right toward a superintendent of the L.G.D.\n'What a coincidence,' Swire thinks to herself.\nBy chance, she does not have her flail with her.\nIt so happens she just bought new lipstick today.\nWhat's more, there is one right in her pocket right now.\nShe decides to teach the thief a lesson he will never forget.\nSwire sets her shopping bags down, takes out her lipstick and removes the cap, breaking the seal, and waits for the thief to come closer.\nA few seconds later, everyone in the vicinity hears a thud, followed by the thief's wail as he stumbles to the ground under the L.G.D. patrol officer's roar.\n\nSeveral minutes later...\n'Good work, Missy. You're off duty, and you still caught a thief for us.' Hoshiguma, here to oversee the arrest of the thief, forces a smile as she greets Swire, the brave good Samaritan.\nNormally, Swire would personally take the man in herself for interrogation.\nHowever, she has the day off. This case isn't hers to deal with.\n'This fellow has got to have some real rotten luck to run into me today.'\n'It's not every day someone bumps into an off duty inspector when they go to snatch something.'\n'Hmph, whatever. You take him in. I'm going home. I'll deal with the case tomorrow.'\n'If you say so, Missy.'\n'Before you go, I have a question for you.'\n'What is it?'\nSwire turns around to find Hoshiguma writing something on her case report.\n'What should I write for how the suspect was taken down?'\nSwire can tell that Hoshiguma is asking for her opinion.\n'Just write down that it was lipstick. There is no need to pull punches for someone like him.'\n'Ahaha, okay then,' says Hoshiguma as she cheerfully scribbles on her report, 'The suspect was taken down by lipstick.'\n'I don't even want to head straight home anymore. Why don't you hurry and finish up with work? We'll get dinner together.'\n'Would you like me to escort you home and carry your bags for you, Missy? Haha.'\n'Oh, enough questions. Hurry up already.'\n'Okay, give me a second. I'll give the report to somebody else, then we can get dinner.'\n'Be sure to tell me how amazing this lipstick of yours is.'\n'Certainly.'\n\n'Why don't you carry my bags for me now? My hands are getting sore.'\n'Okay, okay. Be right with you.",
+      "typeIcon": "ins-x",
+      "uniEquipIcon": "uniequip_002_swire",
+      "typeName1": "INS",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_swire_1",
+        "uniequip_002_swire_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Can attack enemies <@ba.kw>from range</>; When attacking enemies not blocked by self, increase ATK to <@ba.kw>{atk_scale:0%}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 145,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Can attack enemies <@ba.kw>from range</>; When attacking enemies not blocked by self, increase ATK to <@ba.kw>{atk_scale:0%}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When there are Melee allies in the 8 surrounding tiles, recover 1 SP every 4 seconds",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": "Keeping Pace",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Can attack enemies <@ba.kw>from range</>; When attacking enemies not blocked by self, increase ATK to <@ba.kw>{atk_scale:0%}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When there are Melee allies in the 8 surrounding tiles, recover 1 SP every 3 seconds",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": "Keeping Pace",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1084,5 +1622,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

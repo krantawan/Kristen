@@ -151,6 +151,36 @@
       "cost": 23
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "def",
+            "value": 2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "magic_resistance",
+            "value": 20,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_344_beewax#1",
@@ -632,16 +662,566 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+30",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 30,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 20,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "砂原の加護",
+          "description": "スキル未発動時、1秒ごとHPが最大値の2.5％回復",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.025,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "砂原の加護",
+          "description": "スキル未発動時、1秒ごとHPが最大値の4％回復",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec_by_max_hp_ratio",
+              "value": 0.04,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_beewax",
       "moduleName": "ビーズワクスの記章",
-      "desc": "ビーズワクスは機を見計らって広範囲アーツ攻撃を仕掛けることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、法陣術師の責務を担う。\n特別に本記章を授与し\nその証明とする。"
+      "desc": "ビーズワクスは機を見計らって広範囲アーツ攻撃を仕掛けることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、法陣術師の責務を担う。\n特別に本記章を授与し\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_beewax",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_beewax",
       "moduleName": "「司祭の祝福」",
-      "desc": "ロドスの小隊が奴隷商人の手から救い出した時、その十一、二歳のエラフィアの少女は泣きも騒ぎもせず、こちらからの問いかけに答えることもなかった。実直で明るい性格の隊長は対応に困り、少女の世話をビーズワクスに任せて逃げた奴隷商人の追跡へと向かった。\nビーズワクスも隊長のように社会性の高い人物だったならば、そんな状況を気まずく思ったのかもしれない。\nしかし少女に話す気がないと理解した後、ビーズワクスがしたのは新緑の芽吹く密林に目を向けることだけだった。\nしばらくぼんやりとしていたビーズワクスは、ふと少女が自分の角をじっと見つめていることに気づいた。\nつられて視線を向けると、少女はすぐに目を逸らしてしまう。そんなことを何度か繰り返した末、ビーズワクスはようやく口を開いた。\n「そんなに気になるなら、触ってもいいよ。」\n少女は大きく目を見開いた。\n「遠慮しないで。」\n少女はおずおずと立ち上がり、ビーズワクスに歩み寄った。角に触れる手つきは、まるでそこに臆病な小鳥が留まっているかのように恐る恐るとしていた。\n「きれい……」\nビーズワクスはこれまでにも何度も、角を持つ他のオペレーターからそうした言葉をかけられてきた。初めは照れと驚きを感じるばかりだったが、やがて礼儀正しく「あなたの角も素敵ですね」と返すことを覚えた。\nだが奴隷商人から救い出されたばかりのエラフィアの角は艶がなく薄汚れているばかりか、片方は折れてしまっていた。それを見たビーズワクスは、普段とは別の言葉を返すことにした。\n「君の角も、私のみたいにしてあげようか？」\nまだ少し肌寒い三月の春風の中、幼いエラフィアは地面にそのまま座り込んだ。\nビーズワクスは少女の角に絡まっていた汚い綿くずを取り除くと、角のケアセットを取り出す。それから表面の汚れを柔らかい布で拭き取り、角の分け目に詰まった汚れをブラシで払っていく。\nエラフィアはまるで何か厳かな儀式にでも参加しているかのように、目をつむって俯いていた。\nビーズワクスはあらかたの汚れを落とし、けば立ってしまっていた角質をやすりで根気強く取り除いてから、丁寧にオイルを塗った。そして一通りの作業を終えると、ケアセットから取り出したリボンを角の折れたところで蝶結びにしてあげた。\n「できたよ。」\nビーズワクスは少女に手鏡を渡した。\n初め少女は鏡を見るのを恐れていたが、細めでちらりと角を確認するやいなや、驚きのあまり大きく目を見開いた。興奮と喜びによって、そのやつれた頬も赤く染まっていった。\nビーズワクスは立ち上がって伸びをしてから、最後の仕上げがまだ終わっていないことを思い出した。\n彼女は自分の頭をこつんと叩き、懐から小さな金色の石を取り出す。それに細い縄を巻きつけ、エラフィアの折れていない方の角に結びながら、小声でこう唱えた。\n「汝に神の祝福があらんことを。汝が搾取や飢餓から遠ざかり、烈日、嵐、そして波打つ金色の砂原の如く、いつまでも強く美しくあらんことを。」"
+      "desc": "ロドスの小隊が奴隷商人の手から救い出した時、その十一、二歳のエラフィアの少女は泣きも騒ぎもせず、こちらからの問いかけに答えることもなかった。実直で明るい性格の隊長は対応に困り、少女の世話をビーズワクスに任せて逃げた奴隷商人の追跡へと向かった。\nビーズワクスも隊長のように社会性の高い人物だったならば、そんな状況を気まずく思ったのかもしれない。\nしかし少女に話す気がないと理解した後、ビーズワクスがしたのは新緑の芽吹く密林に目を向けることだけだった。\nしばらくぼんやりとしていたビーズワクスは、ふと少女が自分の角をじっと見つめていることに気づいた。\nつられて視線を向けると、少女はすぐに目を逸らしてしまう。そんなことを何度か繰り返した末、ビーズワクスはようやく口を開いた。\n「そんなに気になるなら、触ってもいいよ。」\n少女は大きく目を見開いた。\n「遠慮しないで。」\n少女はおずおずと立ち上がり、ビーズワクスに歩み寄った。角に触れる手つきは、まるでそこに臆病な小鳥が留まっているかのように恐る恐るとしていた。\n「きれい……」\nビーズワクスはこれまでにも何度も、角を持つ他のオペレーターからそうした言葉をかけられてきた。初めは照れと驚きを感じるばかりだったが、やがて礼儀正しく「あなたの角も素敵ですね」と返すことを覚えた。\nだが奴隷商人から救い出されたばかりのエラフィアの角は艶がなく薄汚れているばかりか、片方は折れてしまっていた。それを見たビーズワクスは、普段とは別の言葉を返すことにした。\n「君の角も、私のみたいにしてあげようか？」\nまだ少し肌寒い三月の春風の中、幼いエラフィアは地面にそのまま座り込んだ。\nビーズワクスは少女の角に絡まっていた汚い綿くずを取り除くと、角のケアセットを取り出す。それから表面の汚れを柔らかい布で拭き取り、角の分け目に詰まった汚れをブラシで払っていく。\nエラフィアはまるで何か厳かな儀式にでも参加しているかのように、目をつむって俯いていた。\nビーズワクスはあらかたの汚れを落とし、けば立ってしまっていた角質をやすりで根気強く取り除いてから、丁寧にオイルを塗った。そして一通りの作業を終えると、ケアセットから取り出したリボンを角の折れたところで蝶結びにしてあげた。\n「できたよ。」\nビーズワクスは少女に手鏡を渡した。\n初め少女は鏡を見るのを恐れていたが、細めでちらりと角を確認するやいなや、驚きのあまり大きく目を見開いた。興奮と喜びによって、そのやつれた頬も赤く染まっていった。\nビーズワクスは立ち上がって伸びをしてから、最後の仕上げがまだ終わっていないことを思い出した。\n彼女は自分の頭をこつんと叩き、懐から小さな金色の石を取り出す。それに細い縄を巻きつけ、エラフィアの折れていない方の角に結びながら、小声でこう唱えた。\n「汝に神の祝福があらんことを。汝が搾取や飢餓から遠ざかり、烈日、嵐、そして波打つ金色の砂原の如く、いつまでも強く美しくあらんことを。」",
+      "typeIcon": "plx-x",
+      "uniEquipIcon": "uniequip_002_beewax",
+      "typeName1": "PLX",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_beewax_1",
+        "uniequip_002_beewax_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 64,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル未発動時、最大HP+10%、1秒ごとにHPが最大値の4%回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "砂原の加護",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル未発動時、最大HP+15%、1秒ごとにHPが最大値の4%回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "砂原の加護",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1094,6 +1674,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10011_beewax_oblisk"
   ],
   "patch_info": {}
 }

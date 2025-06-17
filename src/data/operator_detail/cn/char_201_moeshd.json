@@ -154,6 +154,7 @@
       "cost": 22
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_201_moeshd#1",
@@ -655,16 +656,619 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+26",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 0,
+        "def": 60,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "奇迹力场",
+          "description": "有10%的几率抵挡物理和法术伤害。周围四格内的友方单位获得一半该效果",
+          "blackboard": [
+            {
+              "key": "moeshd_t_1[self].prob",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "moeshd_t_1[aura].prob",
+              "value": 0.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "奇迹力场",
+          "description": "有13%<@ba.talpu>（+3%）</>的几率抵挡物理和法术伤害。周围四格内的友方单位获得一半该效果",
+          "blackboard": [
+            {
+              "key": "moeshd_t_1[self].prob",
+              "value": 0.13,
+              "valueStr": null
+            },
+            {
+              "key": "moeshd_t_1[aura].prob",
+              "value": 0.065,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "奇迹力场",
+          "description": "有20%的几率抵挡物理和法术伤害。周围四格内的友方单位获得一半该效果",
+          "blackboard": [
+            {
+              "key": "moeshd_t_1[self].prob",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "moeshd_t_1[aura].prob",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "奇迹力场",
+          "description": "有23%<@ba.talpu>（+3%）</>的几率抵挡物理和法术伤害。周围四格内的友方单位获得一半该效果",
+          "blackboard": [
+            {
+              "key": "moeshd_t_1[self].prob",
+              "value": 0.23,
+              "valueStr": null
+            },
+            {
+              "key": "moeshd_t_1[aura].prob",
+              "value": 0.115,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_moeshd",
       "moduleName": "可颂证章",
-      "desc": "干员可颂擅长维持战线抵御敌人\n根据外勤部门决议\n在外勤任务中划分为重装干员，行使铁卫职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员可颂擅长维持战线抵御敌人\n根据外勤部门决议\n在外勤任务中划分为重装干员，行使铁卫职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_moeshd",
       "moduleName": "作战靴",
-      "desc": "三日\n今天龙门天气晴朗，和空一起去逛街，路过常去的装备店，发现里面的合金零件包正在促销，一时心动购入许多，呜......荷包大出血，心痛。\n七日\n一天都是大太阳，热到爆表，但最喜欢的路边摊出了新口味的糕点，在烈日下排队一个半小时，肚皮晒得通红，用了空送给我的药，非常有效，睡前不再痛了。\n十日\n天气阴，新购入一批雨伞，储蓄所剩无几，下个月得吃泡面了。早知道前几天就省着点花，好歹能留点余钱以备不时之需。\n十七日\n多云转晴，红烧排骨味的泡面味道还不错嘛，连着吃一个礼拜都不会腻！\n二十日\n晴转多云，红烧排骨味的吃完了，只有香葱烧蛋味了，还行，勉勉强强能吃。\n二十三日\n我的泡面已经吃完了......一桶都不剩了。谢谢德克萨斯把她的小饼干分享给我，那一刻，在饥饿的我眼里，她的面庞光芒四射。\n二十四日\n下暴雨啦！！起床时明明还是阳光灿烂的样子，路上的行人走过我卖伞的摊位，个个都是目不斜视直直向前。但很快，乌云赶了过来，很多人猝不及防被雨水浇了个全身湿透， 而我的伞在顷刻间被抢购一空！好耶！\n这狠赚的一笔非常难得，我应该存进银行，做一次细水长流的规划。一直以来我内心中都有一个想法——拥有一家自己的杂货店，就在龙门。\n或许是时候为它着手准备了，相比龙门价格高昂的地皮租金，这笔存款显得微不足道，但我认为，这是一个不错的开始。\n三十一日\n我最喜欢的牌子出了新款的作战靴......我不应该这样的，一时的冲动后便是无尽的悔恨，或许......我应该花一个晚上好好反思自己的行为，被欲望冲昏头脑的我一定很难看吧，好难过......\n一日\n啊，新款作战靴真的好好用，虽然花了钱很心疼，但是非常值得，一点也不亏！"
+      "desc": "三日\n今天龙门天气晴朗，和空一起去逛街，路过常去的装备店，发现里面的合金零件包正在促销，一时心动购入许多，呜......荷包大出血，心痛。\n七日\n一天都是大太阳，热到爆表，但最喜欢的路边摊出了新口味的糕点，在烈日下排队一个半小时，肚皮晒得通红，用了空送给我的药，非常有效，睡前不再痛了。\n十日\n天气阴，新购入一批雨伞，储蓄所剩无几，下个月得吃泡面了。早知道前几天就省着点花，好歹能留点余钱以备不时之需。\n十七日\n多云转晴，红烧排骨味的泡面味道还不错嘛，连着吃一个礼拜都不会腻！\n二十日\n晴转多云，红烧排骨味的吃完了，只有香葱烧蛋味了，还行，勉勉强强能吃。\n二十三日\n我的泡面已经吃完了......一桶都不剩了。谢谢德克萨斯把她的小饼干分享给我，那一刻，在饥饿的我眼里，她的面庞光芒四射。\n二十四日\n下暴雨啦！！起床时明明还是阳光灿烂的样子，路上的行人走过我卖伞的摊位，个个都是目不斜视直直向前。但很快，乌云赶了过来，很多人猝不及防被雨水浇了个全身湿透， 而我的伞在顷刻间被抢购一空！好耶！\n这狠赚的一笔非常难得，我应该存进银行，做一次细水长流的规划。一直以来我内心中都有一个想法——拥有一家自己的杂货店，就在龙门。\n或许是时候为它着手准备了，相比龙门价格高昂的地皮租金，这笔存款显得微不足道，但我认为，这是一个不错的开始。\n三十一日\n我最喜欢的牌子出了新款的作战靴......我不应该这样的，一时的冲动后便是无尽的悔恨，或许......我应该花一个晚上好好反思自己的行为，被欲望冲昏头脑的我一定很难看吧，好难过......\n一日\n啊，新款作战靴真的好好用，虽然花了钱很心疼，但是非常值得，一点也不亏！",
+      "typeIcon": "pro-y",
+      "uniEquipIcon": "uniequip_002_moeshd",
+      "typeName1": "PRO",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_moeshd_1",
+        "uniequip_002_moeshd_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "block_cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "能够阻挡四个敌人",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 275,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "block_cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "能够阻挡四个敌人",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "有24%的几率抵挡物理和法术伤害。周围四格内的友方单位获得一半该效果",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "奇迹力场",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "moeshd_t_1[self].prob",
+                      "value": 0.24,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "moeshd_t_1[aura].prob",
+                      "value": 0.12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "有27%<@ba.talpu>（+3%）</>的几率抵挡物理和法术伤害。周围四格内的友方单位获得一半该效果",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "奇迹力场",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "moeshd_t_1[self].prob",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "moeshd_t_1[aura].prob",
+                      "value": 0.135,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 350,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 68,
+              "valueStr": null
+            },
+            {
+              "key": "block_cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "能够阻挡四个敌人",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "有27%的几率抵挡物理和法术伤害。周围四格内的友方单位获得一半该效果",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "奇迹力场",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "moeshd_t_1[self].prob",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "moeshd_t_1[aura].prob",
+                      "value": 0.135,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "有30%<@ba.talpu>（+3%）</>的几率抵挡物理和法术伤害。周围四格内的友方单位获得一半该效果",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "奇迹力场",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "moeshd_t_1[self].prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "moeshd_t_1[aura].prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1118,5 +1722,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

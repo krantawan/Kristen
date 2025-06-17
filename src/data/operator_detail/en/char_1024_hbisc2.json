@@ -150,6 +150,24 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "scale",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1024_hbisc2#1",
@@ -609,16 +627,566 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +22",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 22,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Dusk and Dawn",
+          "description": "Attacks inflict 6% <$ba.magicfragile>[Arts Fragility]</> to the target for 5 seconds",
+          "blackboard": {
+            "weak[magic][limit]": 5,
+            "damage_scale": 1.06
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Dusk and Dawn",
+          "description": "Attacks inflict 8% <@ba.talpu>(+2%)</> <$ba.magicfragile>[Arts Fragility]</> to the target for 5 seconds",
+          "blackboard": {
+            "weak[magic][limit]": 5,
+            "damage_scale": 1.08
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Dusk and Dawn",
+          "description": "Attacks inflict 12% <$ba.magicfragile>[Arts Fragility]</> to the target for 5 seconds",
+          "blackboard": {
+            "weak[magic][limit]": 5,
+            "damage_scale": 1.12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Dusk and Dawn",
+          "description": "Attacks inflict 14% <@ba.talpu>(+2%)</> <$ba.magicfragile>[Arts Fragility]</> to the target for 5 seconds",
+          "blackboard": {
+            "weak[magic][limit]": 5,
+            "damage_scale": 1.14
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_hbisc2",
       "moduleName": "Hibiscus the Purifier's Badge",
-      "desc": "Operator Hibiscus the Purifier has demonstrated a remarkable aptitude for simultaneous aggression and medical treatment while casting.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Incantation Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Hibiscus the Purifier has demonstrated a remarkable aptitude for simultaneous aggression and medical treatment while casting.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Incantation Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_hbisc2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_hbisc2",
       "moduleName": "Crystal Corsage",
-      "desc": "'Got all your mail for today here! With everyone discharging soon, there's less than usual, but it'll still be a job to sort it out, Dr. Hibiscus.' A young woman's goods trolley stops by in Medical, where she unhitches a delivery and transfers it piecemeal over to the department's postal desk.\n'No, thank <i>you,</i> really. We're not meant to leave non-staff with odd jobs like this, especially not when you've just recovered from your injuries, and you're still an active Oripathy patient on top.' Hibiscus hands her a small origami floret, then takes in each parcel one by one—this one is bed 6; this letter goes to the old man in bed 13; this giant but feather-light box is for the girl in ICU 5, and inside is probably the doll they mentioned buying her last time...\n'Don't be like that! I can move around on my own two feet now—do you really want me lazing about in bed?' The woman secures her travel jacket, fastidiously fastening the topmost two buttons and nestling the paper flower in her collar. 'I'm a Messenger by trade. All this time aboard waiting to heal has been killing me—you know, Dr. Hibiscus, didn't you say getting up and about would spur my recovery?'\n'You still have to pay attention to your condition, though,' Hibiscus says, shaking the monitoring bracelet on her wrist.\nThe young woman gets the message, and taps at her own monitor, worn in the same place.\n'Will you still be working as a Messenger after your discharge?'\n'Yep. It's what I've been. Heading everywhere and back again, that's my life. A few bumps and scrapes can't do more than put that on hold.'\n'Oripathy's more than a bump and a scrape, you know. Keep your report in mind.'\n'The sun always glows its last, day after day. Life just carries on.'\n......\n'Dr. Hibiscus, I'm going to sign out and discharge after I'm done with this shipment. Do you have anything you want mailed? Now that I'm returning to work, it'd be my honor to have you as my first customer, believe me.'\n'Where's your next stop?'\n'I'm heading back to Vyseheim first—that's where I grew up. You were in the Afterglow organizing treatment for Oripathy patients back then, right?'\nHibiscus plucks her own corsage from her chest—one of Originium, long-inert. The lifeless crystal that composes it is silent and still, now no different from ash, withered branches, dried tears. There was someone who carved this with all their heart into a hibiscus, gleaming with a black luster.\n'Then could you take this flower back with you, if that's alright? Give it back to Vyseheim for me, please.'\nI hope that Vyseheim, and you, can truly make a full recovery."
+      "desc": "'Got all your mail for today here! With everyone discharging soon, there's less than usual, but it'll still be a job to sort it out, Dr. Hibiscus.' A young woman's goods trolley stops by in Medical, where she unhitches a delivery and transfers it piecemeal over to the department's postal desk.\n'No, thank <i>you,</i> really. We're not meant to leave non-staff with odd jobs like this, especially not when you've just recovered from your injuries, and you're still an active Oripathy patient on top.' Hibiscus hands her a small origami floret, then takes in each parcel one by one—this one is bed 6; this letter goes to the old man in bed 13; this giant but feather-light box is for the girl in ICU 5, and inside is probably the doll they mentioned buying her last time...\n'Don't be like that! I can move around on my own two feet now—do you really want me lazing about in bed?' The woman secures her travel jacket, fastidiously fastening the topmost two buttons and nestling the paper flower in her collar. 'I'm a Messenger by trade. All this time aboard waiting to heal has been killing me—you know, Dr. Hibiscus, didn't you say getting up and about would spur my recovery?'\n'You still have to pay attention to your condition, though,' Hibiscus says, shaking the monitoring bracelet on her wrist.\nThe young woman gets the message, and taps at her own monitor, worn in the same place.\n'Will you still be working as a Messenger after your discharge?'\n'Yep. It's what I've been. Heading everywhere and back again, that's my life. A few bumps and scrapes can't do more than put that on hold.'\n'Oripathy's more than a bump and a scrape, you know. Keep your report in mind.'\n'The sun always glows its last, day after day. Life just carries on.'\n......\n'Dr. Hibiscus, I'm going to sign out and discharge after I'm done with this shipment. Do you have anything you want mailed? Now that I'm returning to work, it'd be my honor to have you as my first customer, believe me.'\n'Where's your next stop?'\n'I'm heading back to Vyseheim first—that's where I grew up. You were in the Afterglow organizing treatment for Oripathy patients back then, right?'\nHibiscus plucks her own corsage from her chest—one of Originium, long-inert. The lifeless crystal that composes it is silent and still, now no different from ash, withered branches, dried tears. There was someone who carved this with all their heart into a hibiscus, gleaming with a black luster.\n'Then could you take this flower back with you, if that's alright? Give it back to Vyseheim for me, please.'\nI hope that Vyseheim, and you, can truly make a full recovery.",
+      "typeIcon": "inc-x",
+      "uniEquipIcon": "uniequip_002_hbisc2",
+      "typeName1": "INC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_hbisc2_1",
+        "uniequip_002_hbisc2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks inflict 17% <$ba.magicfragile>[Arts Fragility]</> to the target for 5 seconds",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Dusk and Dawn",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "weak[magic][limit]",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.17,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks inflict 19% <@ba.talpu>(+2%)</> <$ba.magicfragile>[Arts Fragility]</> to the target for 5 seconds",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Dusk and Dawn",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "weak[magic][limit]",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.19,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks inflict 20% <$ba.magicfragile>[Arts Fragility]</> to the target for 5 seconds",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Dusk and Dawn",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "weak[magic][limit]",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks inflict 22% <@ba.talpu>(+2%)</> <$ba.magicfragile>[Arts Fragility]</> to the target for 5 seconds",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Dusk and Dawn",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "weak[magic][limit]",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.22,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1072,5 +1640,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

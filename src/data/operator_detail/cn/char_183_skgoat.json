@@ -153,6 +153,28 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "sluggish",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_183_skgoat#1",
@@ -631,16 +653,544 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+21",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 21,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "地质勘探",
+          "description": "略微延长特性<$ba.sluggish>停顿</>的持续时间",
+          "blackboard": [
+            {
+              "key": "sluggish",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "地质勘探",
+          "description": "稍微延长特性<$ba.sluggish>停顿</>的持续时间",
+          "blackboard": [
+            {
+              "key": "sluggish",
+              "value": 0.13,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_skgoat",
       "moduleName": "地灵证章",
-      "desc": "干员地灵擅长牵制敌人\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使凝滞师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员地灵擅长牵制敌人\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使凝滞师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_skgoat",
       "moduleName": "待确认的申请表",
-      "desc": "报销内容：修复，并给摩托车装一台车载音乐播放器\n说明：摩托车坏了。另外，想加装一台车载音乐播放器，望批准。\n工程部综述：费尔南德二代偏三轮摩托，产于四皇会战前，是辆老古董。负责整体车况检查的灰掌大哥说，由于年代久远，原厂件难寻。从安全性而言，这样的老车也该进入博物馆，而不是在路上飞驰。灰掌向地灵说明上述情况后，地灵表示该车辆原本属于她的老师巴赫曼教授。大学时，地灵常怀抱装有石头的盒子，坐在边斗内，随自己的老师到处进行田野调查。毕业时，巴赫曼教授将这辆车赠予她，并要求她遵守一个约定。而今，巴赫曼教授已逝，唯余这辆费尔南德二代，时刻提醒着地灵勿忘约定。地灵在假期也会驾驶这辆摩托车外出，归来时边斗内通常装着各种石头，偶尔也有其他天灾信使搭便车。\n工程部意见：由于地灵所在部门的特殊性，其直属上司为博士，本文件将转交博士。\n\n报销内容：为音叉安装抑制器\n说明：似乎是矿石病的原因？那些声音最近更扰人了。需要为我的音叉安装抑制器。\n医疗部综述：地灵的矿石病在变严重这件事属实，但没有其他人听到她口中所谓的声音。根据体检结果，地灵矿石病的恶化似乎与其仍在非主动不间断地使用源石技艺有关。\n工程部综述：该音叉是地灵的老师为她在莱塔尼亚特别定制的产品，罗德岛需要相关的技术说明，才能着手研究如何限制其输出功率。\n工程部意见：由于地灵所在部门的特殊性，其直属上司为博士，本文件将转交博士。\n\n请假申请：回家\n请假时间：4月1日至4月8日\n申请时间：2月24日\n申请人：格拉西艾尔·魏格妮\n内容：很久没回家了，趁着离莱塔尼亚较近，我想回家看看。\n人事部意见：批准。地灵最近在外勤任务中受到不明人员袭击，目前正在医疗舱治疗。已与地灵再次确认，请假时间无需调整。另外，普罗旺斯、艾雅法拉会与地灵同行，但由于普罗旺斯近期没有回舰，暂未收到她的请假申请。\n*由于地灵所在部门的特殊性，其直属上司为博士，本文件将转交博士。"
+      "desc": "报销内容：修复，并给摩托车装一台车载音乐播放器\n说明：摩托车坏了。另外，想加装一台车载音乐播放器，望批准。\n工程部综述：费尔南德二代偏三轮摩托，产于四皇会战前，是辆老古董。负责整体车况检查的灰掌大哥说，由于年代久远，原厂件难寻。从安全性而言，这样的老车也该进入博物馆，而不是在路上飞驰。灰掌向地灵说明上述情况后，地灵表示该车辆原本属于她的老师巴赫曼教授。大学时，地灵常怀抱装有石头的盒子，坐在边斗内，随自己的老师到处进行田野调查。毕业时，巴赫曼教授将这辆车赠予她，并要求她遵守一个约定。而今，巴赫曼教授已逝，唯余这辆费尔南德二代，时刻提醒着地灵勿忘约定。地灵在假期也会驾驶这辆摩托车外出，归来时边斗内通常装着各种石头，偶尔也有其他天灾信使搭便车。\n工程部意见：由于地灵所在部门的特殊性，其直属上司为博士，本文件将转交博士。\n\n报销内容：为音叉安装抑制器\n说明：似乎是矿石病的原因？那些声音最近更扰人了。需要为我的音叉安装抑制器。\n医疗部综述：地灵的矿石病在变严重这件事属实，但没有其他人听到她口中所谓的声音。根据体检结果，地灵矿石病的恶化似乎与其仍在非主动不间断地使用源石技艺有关。\n工程部综述：该音叉是地灵的老师为她在莱塔尼亚特别定制的产品，罗德岛需要相关的技术说明，才能着手研究如何限制其输出功率。\n工程部意见：由于地灵所在部门的特殊性，其直属上司为博士，本文件将转交博士。\n\n请假申请：回家\n请假时间：4月1日至4月8日\n申请时间：2月24日\n申请人：格拉西艾尔·魏格妮\n内容：很久没回家了，趁着离莱塔尼亚较近，我想回家看看。\n人事部意见：批准。地灵最近在外勤任务中受到不明人员袭击，目前正在医疗舱治疗。已与地灵再次确认，请假时间无需调整。另外，普罗旺斯、艾雅法拉会与地灵同行，但由于普罗旺斯近期没有回舰，暂未收到她的请假申请。\n*由于地灵所在部门的特殊性，其直属上司为博士，本文件将转交博士。",
+      "typeIcon": "dec-y",
+      "uniEquipIcon": "uniequip_002_skgoat",
+      "typeName1": "DEC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_skgoat_1",
+        "uniequip_002_skgoat_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30023",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30083",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31033",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，并对敌人造成<@ba.kw>较长</>的<$ba.sluggish>停顿</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，并对敌人造成<@ba.kw>较长</>的<$ba.sluggish>停顿</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "延长特性<$ba.sluggish>停顿</>的持续时间",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "地质勘探",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "更加延长特性<$ba.sluggish>停顿</>的持续时间",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "地质勘探",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 0.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，并对敌人造成<@ba.kw>较长</>的<$ba.sluggish>停顿</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "进一步延长特性<$ba.sluggish>停顿</>的持续时间",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "地质勘探",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "更进一步延长特性<$ba.sluggish>停顿</>的持续时间",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "地质勘探",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 0.33,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1102,5 +1652,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

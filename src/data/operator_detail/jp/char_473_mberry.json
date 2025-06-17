@@ -150,6 +150,28 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "ep_heal_ratio",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_473_mberry#1",
@@ -639,16 +661,668 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+19",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 19,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 35,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "医療アシスタント",
+          "description": "配置中、自身以外の【医療】が1名以上配置されている時、【医療】の攻撃力+6%",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.06,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "医療アシスタント",
+          "description": "配置中、自身以外の【医療】が1名以上配置されている時、【医療】の攻撃力+7%<@ba.talpu>（+1%）</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.07,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "医療アシスタント",
+          "description": "配置中、自身以外の【医療】が1名以上配置されている時、【医療】の攻撃力+10%",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "医療アシスタント",
+          "description": "配置中、自身以外の【医療】が1名以上配置されている時、【医療】の攻撃力+11%<@ba.talpu>（+1%）</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.11,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mberry",
       "moduleName": "マルベリーの記章",
-      "desc": "マルベリーは広範囲の治療を行うと同時に、\nオペレーターの元素損傷を回復させることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、放浪医の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "マルベリーは広範囲の治療を行うと同時に、\nオペレーターの元素損傷を回復させることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、放浪医の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_mberry",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mberry",
       "moduleName": "心を静めて",
-      "desc": "ニンニンへ \n最近はちゃんと食べてるの？きちんと眠れているのかしら？前の手紙で、夜中によく目が覚めてしまうって書いていたから、パパもママもすごく心配してるわ。実はそれで、あなたの二番目のお姉ちゃんが、仕事で丹燕城に派遣されたんだけど、わざわざそこの山に行って精がつく薬草を摘んできてくれたのよ。後でトランスポーターに連絡して、あなたに届けてもらうつもりみたい。あなたの住所に変わりはない？もしあれば、次の手紙で新しい住所を教えてね。あるいは、ロドスの事務所に連絡するように、「春乾」の人に頼んでもらうって手もあるけど、どっちがいいかしら。 \n前の手紙で聞かれたことについては、パパが確かめてきてくれたわよ。山奥のほうは先月雪害があったけど、幸い怪我人はいなかったんですって。パパったら、あなたが送ってくれた防災パンフレットを大事に持って、一軒一軒配って回ったのよ。そしたら、学校の先生がそのパンフレットを見て、あなたの字を褒めていたらしいわ。撥ねや止めが綺麗だって。それを聞いて、ママもすごく嬉しくなっちゃった。だけどその後夜になったら、なんだか悲しくなってきちゃって。ニンニンはもうお家を離れて、すごく遠いところにいるんだって実感したのよ。前だったら、書き取りの練習をしているあなたの手が疲れてしまっても、私が揉んであげられたけど、今では……ママにできることなんて、手紙の中でくどくど言うことくらいになっちゃったわね。でも、あなたは昔から賢い子で、今も人の命を救うためにいろいろと学んでるわけだから、自分の面倒をどう見るかなんてママよりずっと詳しいはずよね？ \nそうだわ、この間おかしなことがあったの。来週は節句でしょ？うちのおチビさんたちがちまきを楽しみにしてるのはもとより、おばあちゃんもすごく張り切ってるのよ。お天気がいい時は、寝椅子で針仕事をしていてね。でも、目が悪いから、針に糸を通す時はやっぱり誰かが助けてあげなきゃいけないの。それである日、私が仕事の昼休みに家に戻ったら、おばあちゃんが不満そうにしていて。午前中何度も呼んだのに、全然来やしないじゃない、って言われたの。その時は何て言ったらいいのかわからなくなっちゃって、やれやれと思いながら笑ったものよ。それで結局、午後の仕事を休んで、おばあちゃんと一緒に匂い袋を二つ作ることにしたの。私は縫い針を持ったことなんてなかったから、刺繡はひどい有り様だったけどね。どっちか私の作った分かは一目でわかるはずよ。もしわからなかったら、匂いを嗅いでみて。中に干したエゾウコギが詰めてあるから。昔、あなたの枕の下によく敷いてあげてたあの薬草の葉よ。心を静める効果があるし、枕元にかければ、匂いもそんなにきつくないはずだから、これでぐっすり眠ってね。 \nこの手紙は出だしを私が書いて、結びはパパが書くことになってたんだけど、パパったら筆を咥えて何時間も机に向かっておいて、結局一文字も書けなくてね。夜が明けたらトランスポーターが来ちゃうから、全部ママが書く羽目になっちゃったわ。とにかく、家のことは何も心配しなくていいからね。私もパパも、仕事は順調よ。みんなあなたのことを話す時は、気丈で勇敢な子だって褒めてばかりいるわ。それと、最後にこれだけ。前にくれた手紙は、パパと一緒に何度も読み返しているけど、まだまだ読み足りなくって。 \nだから、時間ができたら、また返事を書いてちょうだいね。"
+      "desc": "ニンニンへ \n最近はちゃんと食べてるの？きちんと眠れているのかしら？前の手紙で、夜中によく目が覚めてしまうって書いていたから、パパもママもすごく心配してるわ。実はそれで、あなたの二番目のお姉ちゃんが、仕事で丹燕城に派遣されたんだけど、わざわざそこの山に行って精がつく薬草を摘んできてくれたのよ。後でトランスポーターに連絡して、あなたに届けてもらうつもりみたい。あなたの住所に変わりはない？もしあれば、次の手紙で新しい住所を教えてね。あるいは、ロドスの事務所に連絡するように、「春乾」の人に頼んでもらうって手もあるけど、どっちがいいかしら。 \n前の手紙で聞かれたことについては、パパが確かめてきてくれたわよ。山奥のほうは先月雪害があったけど、幸い怪我人はいなかったんですって。パパったら、あなたが送ってくれた防災パンフレットを大事に持って、一軒一軒配って回ったのよ。そしたら、学校の先生がそのパンフレットを見て、あなたの字を褒めていたらしいわ。撥ねや止めが綺麗だって。それを聞いて、ママもすごく嬉しくなっちゃった。だけどその後夜になったら、なんだか悲しくなってきちゃって。ニンニンはもうお家を離れて、すごく遠いところにいるんだって実感したのよ。前だったら、書き取りの練習をしているあなたの手が疲れてしまっても、私が揉んであげられたけど、今では……ママにできることなんて、手紙の中でくどくど言うことくらいになっちゃったわね。でも、あなたは昔から賢い子で、今も人の命を救うためにいろいろと学んでるわけだから、自分の面倒をどう見るかなんてママよりずっと詳しいはずよね？ \nそうだわ、この間おかしなことがあったの。来週は節句でしょ？うちのおチビさんたちがちまきを楽しみにしてるのはもとより、おばあちゃんもすごく張り切ってるのよ。お天気がいい時は、寝椅子で針仕事をしていてね。でも、目が悪いから、針に糸を通す時はやっぱり誰かが助けてあげなきゃいけないの。それである日、私が仕事の昼休みに家に戻ったら、おばあちゃんが不満そうにしていて。午前中何度も呼んだのに、全然来やしないじゃない、って言われたの。その時は何て言ったらいいのかわからなくなっちゃって、やれやれと思いながら笑ったものよ。それで結局、午後の仕事を休んで、おばあちゃんと一緒に匂い袋を二つ作ることにしたの。私は縫い針を持ったことなんてなかったから、刺繡はひどい有り様だったけどね。どっちか私の作った分かは一目でわかるはずよ。もしわからなかったら、匂いを嗅いでみて。中に干したエゾウコギが詰めてあるから。昔、あなたの枕の下によく敷いてあげてたあの薬草の葉よ。心を静める効果があるし、枕元にかければ、匂いもそんなにきつくないはずだから、これでぐっすり眠ってね。 \nこの手紙は出だしを私が書いて、結びはパパが書くことになってたんだけど、パパったら筆を咥えて何時間も机に向かっておいて、結局一文字も書けなくてね。夜が明けたらトランスポーターが来ちゃうから、全部ママが書く羽目になっちゃったわ。とにかく、家のことは何も心配しなくていいからね。私もパパも、仕事は順調よ。みんなあなたのことを話す時は、気丈で勇敢な子だって褒めてばかりいるわ。それと、最後にこれだけ。前にくれた手紙は、パパと一緒に何度も読み返しているけど、まだまだ読み足りなくって。 \nだから、時間ができたら、また返事を書いてちょうだいね。",
+      "typeIcon": "wdm-x",
+      "uniEquipIcon": "uniequip_002_mberry",
+      "typeName1": "WDM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_mberry_1",
+        "uniequip_002_mberry_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31064",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31084",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、自身以外の【医療】が1名以上配置されている時、【医療】の攻撃力+13%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "医療アシスタント",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.13,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、自身以外の【医療】が1名以上配置されている時、【医療】の攻撃力+14%<@ba.talpu>（+1%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "医療アシスタント",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、自身以外の【医療】が1名以上配置されている時、【医療】の攻撃力+15%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "医療アシスタント",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、自身以外の【医療】が1名以上配置されている時、【医療】の攻撃力+16%<@ba.talpu>（+1%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "医療アシスタント",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1110,5 +1784,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

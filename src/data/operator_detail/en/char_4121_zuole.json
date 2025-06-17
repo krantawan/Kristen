@@ -151,6 +151,56 @@
       "cost": 26
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 30
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 1)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 2)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 70
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4121_zuole#1",
@@ -733,16 +783,652 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +26",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 340,
+        "atk": 40,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Candlelight's Shadow",
+          "description": "Gains up to +30 ASPD and SP recovery rate +0.5/s <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 50% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 30,
+            "min_hp_ratio": 0.5,
+            "min_sp_recovery_per_sec": 0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Candlelight's Shadow",
+          "description": "Gains up to +40 ASPD and SP recovery rate +1/s <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 60% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 40,
+            "min_hp_ratio": 0.4,
+            "min_sp_recovery_per_sec": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Candlelight's Shadow",
+          "description": "Gains up to +50 ASPD and SP recovery rate +2/s <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 70% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 50,
+            "min_hp_ratio": 0.3,
+            "min_sp_recovery_per_sec": 2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Self-Evident Virtue",
+          "description": "Attacks have a 20% chance to restore 1 SP, increased to a 70% chance if below 50% HP",
+          "blackboard": {
+            "prob_1": 0.2,
+            "sp": 1,
+            "prob_2": 0.7,
+            "hp_ratio": 0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Self-Evident Virtue",
+          "description": "Attacks have a 23% <@ba.talpu>(+3%)</> chance to restore 1 SP, increased to a 75% <@ba.talpu>(+5%)</> chance if below 50% HP",
+          "blackboard": {
+            "prob_1": 0.23,
+            "sp": 1,
+            "prob_2": 0.75,
+            "hp_ratio": 0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_zuole",
       "moduleName": "Zuo Le's Badge",
-      "desc": "Operator Zuo Le has demonstrated a remarkable aptitude for solo confrontation with the enemy while far removed from support lines.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Soloblade responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Zuo Le has demonstrated a remarkable aptitude for solo confrontation with the enemy while far removed from support lines.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Soloblade responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_zuole",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_zuole",
       "moduleName": "'You Night, Be Fleeting'",
-      "desc": "Zhan Yan has realized that he is on the brink of falling and turning into mincemeat.\nHe had been arguing with his fellow Shanhaizhong fugitives a moment ago, when in the blink of an eye, they faded away one by one into the forest's faint shadows. All he could remember was that a spear had embedded itself into a tree trunk, and then he was bound by a rope that had suddenly dropped out of the sky, after which he found himself suspended above a riverside cliff.\n'Zhan Yan, male, Feline, from the eastern side of Jiangqi.'\nUpon hearing these words, the trussed-up villain stares at the young man who said them. All he sees is a Phidia youth clad in black, carrying a long box and walking alone atop the precipice.\n'You have collaborated with the Shanhaizhong, gathering in the wilderness as part of your sinister schemes... As chief among them, are you aware of which of Yan's laws you have broken?'\n'Pah! You think a limp-wristed bureaucrat like you with hardly a hair on his chest can scare me? I'll kill you, right here, right now!'\nThe river mist scatters, and the moonlight shines upon the 'bureaucrat's' iron mask.\n'Son of a-! You-You're a Sui Regulator Candleholder!' Zhan Yan's entire body breaks out into a cold sweat.\n'Since you are aware of the Sui Regulators, then you must also be aware that...' The youth takes a single step forward. 'While colluding with the Shanhaizhong, you have committed no small number of grisly and violent murders. A Candleholder has the authority to act as a substitute for a formal trial under the Three Organs of Justice, and may render their judgement on the spot.'\nThe wind blows—\nZhan Yan too was no ordinary man, and grits his teeth in defiance, waiting for the opportune moment when the Candleholder approached to hoist his body up, throwing out a fierce and mighty 'Daogua Jinzhong' kick! His dagger-like toe claw lets out a howling wind, coming dangerously close to the youth's throat while slicing apart the rope holding him aloft. The imposing villain shrugs off his tattered bonds, leaping down into a passing fishing boat below the cliff and grabbing the steersman by the arm.\n'Get this boat moving! Faster, dammit!' The boat's engine sputters to life, picking up speed as it leaves the riverbank. Thanks to his daring escape from a summary execution by the Sui Regulator, Zhan Yan can't help but proudly look back at the clifftop.\nWith the aid of the boat's aft lanterns, he clearly sees the black-clad youth take a deep breath before using the momentum of kicking off from the cliff edge to fly midair for twenty-odd zhang in a flash. The waves of the river are dotted with a multitude of white flowers, and he looks to all the world like an onyx leaf blown by a great gale, quietly landing aboard the boat.\nThe box opens, and the youth lightly clasps his scabbard.\n'This is Sui Regulator business. You will be compensated as per the law once I am done here.'\n'You—'\nZhan Yan begins to open his mouth, but is quickly shut up by the lanterns on either side of the boat being neatly sliced off by the youth's sword. The straight and sharp longsword stirs up fragments of glass in the dark, causing Zhan Yan's heart, still leaping wildly from his daring escape, to calm into icy terror. The cutting edge has not yet descended. Instead, like a lance, the youth kicks past the steersman's shoulder, his foot implanting itself into the villain's throat. Zhan Yan feels all the strength leave his body and he slams backwards onto the boat's deck, a warm river of fear between his thighs. Just before losing consciousness, he finally clearly sees the deep green eyes behind the iron mask, dark as the new moon, alongside the golden words inscribed on the inside of the box, only seen when fetching the sword—\n'Candle Bright, Stay Shining. You Night, Be Fleeting.'"
+      "desc": "Zhan Yan has realized that he is on the brink of falling and turning into mincemeat.\nHe had been arguing with his fellow Shanhaizhong fugitives a moment ago, when in the blink of an eye, they faded away one by one into the forest's faint shadows. All he could remember was that a spear had embedded itself into a tree trunk, and then he was bound by a rope that had suddenly dropped out of the sky, after which he found himself suspended above a riverside cliff.\n'Zhan Yan, male, Feline, from the eastern side of Jiangqi.'\nUpon hearing these words, the trussed-up villain stares at the young man who said them. All he sees is a Phidia youth clad in black, carrying a long box and walking alone atop the precipice.\n'You have collaborated with the Shanhaizhong, gathering in the wilderness as part of your sinister schemes... As chief among them, are you aware of which of Yan's laws you have broken?'\n'Pah! You think a limp-wristed bureaucrat like you with hardly a hair on his chest can scare me? I'll kill you, right here, right now!'\nThe river mist scatters, and the moonlight shines upon the 'bureaucrat's' iron mask.\n'Son of a-! You-You're a Sui Regulator Candleholder!' Zhan Yan's entire body breaks out into a cold sweat.\n'Since you are aware of the Sui Regulators, then you must also be aware that...' The youth takes a single step forward. 'While colluding with the Shanhaizhong, you have committed no small number of grisly and violent murders. A Candleholder has the authority to act as a substitute for a formal trial under the Three Organs of Justice, and may render their judgement on the spot.'\nThe wind blows—\nZhan Yan too was no ordinary man, and grits his teeth in defiance, waiting for the opportune moment when the Candleholder approached to hoist his body up, throwing out a fierce and mighty 'Daogua Jinzhong' kick! His dagger-like toe claw lets out a howling wind, coming dangerously close to the youth's throat while slicing apart the rope holding him aloft. The imposing villain shrugs off his tattered bonds, leaping down into a passing fishing boat below the cliff and grabbing the steersman by the arm.\n'Get this boat moving! Faster, dammit!' The boat's engine sputters to life, picking up speed as it leaves the riverbank. Thanks to his daring escape from a summary execution by the Sui Regulator, Zhan Yan can't help but proudly look back at the clifftop.\nWith the aid of the boat's aft lanterns, he clearly sees the black-clad youth take a deep breath before using the momentum of kicking off from the cliff edge to fly midair for twenty-odd zhang in a flash. The waves of the river are dotted with a multitude of white flowers, and he looks to all the world like an onyx leaf blown by a great gale, quietly landing aboard the boat.\nThe box opens, and the youth lightly clasps his scabbard.\n'This is Sui Regulator business. You will be compensated as per the law once I am done here.'\n'You—'\nZhan Yan begins to open his mouth, but is quickly shut up by the lanterns on either side of the boat being neatly sliced off by the youth's sword. The straight and sharp longsword stirs up fragments of glass in the dark, causing Zhan Yan's heart, still leaping wildly from his daring escape, to calm into icy terror. The cutting edge has not yet descended. Instead, like a lance, the youth kicks past the steersman's shoulder, his foot implanting itself into the villain's throat. Zhan Yan feels all the strength leave his body and he slams backwards onto the boat's deck, a warm river of fear between his thighs. Just before losing consciousness, he finally clearly sees the deep green eyes behind the iron mask, dark as the new moon, alongside the golden words inscribed on the inside of the box, only seen when fetching the sword—\n'Candle Bright, Stay Shining. You Night, Be Fleeting.'",
+      "typeIcon": "sbl-x",
+      "uniEquipIcon": "uniequip_002_zuole",
+      "typeName1": "SBL",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_zuole_1",
+        "uniequip_002_zuole_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains up to +60 ASPD and SP recovery rate +2.2/s <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 60% Max HP)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Candlelight's Shadow",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "min_hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_attack_speed",
+                      "value": 60,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_sp_recovery_per_sec",
+                      "value": 2.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains up to +70 ASPD and SP recovery rate +2.3/s <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 50% Max HP)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Candlelight's Shadow",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "min_hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_attack_speed",
+                      "value": 70,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_sp_recovery_per_sec",
+                      "value": 2.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1196,5 +1882,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

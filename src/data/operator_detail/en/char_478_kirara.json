@@ -151,6 +151,24 @@
       "cost": 20
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "prob",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_478_kirara#1",
@@ -621,16 +639,638 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +30",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 30,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Lonesome Protector",
+          "description": "Restores 1% HP per second. If there are no allied Operators in the surrounding 8 tiles, restores 2% HP per second instead",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.01,
+            "kirara_t_2.hp_recovery_per_sec_by_max_hp_ratio": 0.02
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Lonesome Protector",
+          "description": "Restores 1% HP per second. If there are no allied Operators in the surrounding 8 tiles, restores 2.5% <@ba.talpu>(+0.5%)</> HP per second instead",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.01,
+            "kirara_t_2.hp_recovery_per_sec_by_max_hp_ratio": 0.025
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Lonesome Protector",
+          "description": "Restores 2% HP per second. If there are no allied Operators in the surrounding 8 tiles, restores 3.5% HP per second instead",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.02,
+            "kirara_t_2.hp_recovery_per_sec_by_max_hp_ratio": 0.035
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Lonesome Protector",
+          "description": "Restores 2% HP per second. If there are no allied Operators in the surrounding 8 tiles, restores 4% <@ba.talpu>(+0.5%)</> HP per second instead",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.02,
+            "kirara_t_2.hp_recovery_per_sec_by_max_hp_ratio": 0.04
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_kirara",
       "moduleName": "Kirara's Badge",
-      "desc": "Operator Kirara has demonstrated a remarkable aptitude for bodily concealment and enemy ambush.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Ambusher responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Kirara has demonstrated a remarkable aptitude for bodily concealment and enemy ambush.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Ambusher responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_kirara",
       "moduleName": "We Will Survive 3 Online",
-      "desc": "Thank you for purchasing We Will Survive 3 Online. The following is a brief rundown of the game.\n\n■ Primer\nWe Will Survive 3 Online is an RPG that includes both competitive and cooperative gameplay. Players will play as and control different characters in-game, raising their survival rank, and battling with other players to win the Survivals.\nOf course, joining forces will also be necessary throughout many points in the game, so this is a game to enjoy with your friends.\n\n■ Controls\nPlayers must use a controller compatible with the console when controlling their chosen character.\nIf you have multiple people playing, have more controllers ready.\n\n■ Items\nAll items within the game can be obtained either through exploring the wild or through crafting.\nOnce obtained, items can be stored in your backpack. Backpack space is limited, so you can trade any items you don't need at the moment with your friends in-game, and you can opt to just send them as gifts too.\nEach item you collect also unlocks its illustration in the guidebook. If you want to unlock them all and unlock the secret achievement, get trading with players!\n\n■ Competition Phase\nDon't forget, your ultimate goal is victory in the Survivals!\nMerry cooperation goes hand-in-hand with the struggle to compete afterwards! Use your survival skills to contest and loot other players' resources. Out in the wild, you can also lie in ambush, or directly challenge people, initiating one-on-one battles with other players!\nThe higher a player's survival rank, the bigger the advantage in the fight! Decide who amongst you will be the champion of the Survivals!\n\nWith that, you should now have a decent understanding of the game. Invite your friends, plunge into a colorful world, and have a fun time playing together!"
+      "desc": "Thank you for purchasing We Will Survive 3 Online. The following is a brief rundown of the game.\n\n■ Primer\nWe Will Survive 3 Online is an RPG that includes both competitive and cooperative gameplay. Players will play as and control different characters in-game, raising their survival rank, and battling with other players to win the Survivals.\nOf course, joining forces will also be necessary throughout many points in the game, so this is a game to enjoy with your friends.\n\n■ Controls\nPlayers must use a controller compatible with the console when controlling their chosen character.\nIf you have multiple people playing, have more controllers ready.\n\n■ Items\nAll items within the game can be obtained either through exploring the wild or through crafting.\nOnce obtained, items can be stored in your backpack. Backpack space is limited, so you can trade any items you don't need at the moment with your friends in-game, and you can opt to just send them as gifts too.\nEach item you collect also unlocks its illustration in the guidebook. If you want to unlock them all and unlock the secret achievement, get trading with players!\n\n■ Competition Phase\nDon't forget, your ultimate goal is victory in the Survivals!\nMerry cooperation goes hand-in-hand with the struggle to compete afterwards! Use your survival skills to contest and loot other players' resources. Out in the wild, you can also lie in ambush, or directly challenge people, initiating one-on-one battles with other players!\nThe higher a player's survival rank, the bigger the advantage in the fight! Decide who amongst you will be the champion of the Survivals!\n\nWith that, you should now have a decent understanding of the game. Invite your friends, plunge into a colorful world, and have a fun time playing together!",
+      "typeIcon": "amb-x",
+      "uniEquipIcon": "uniequip_002_kirara",
+      "typeName1": "AMB",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_kirara_1",
+        "uniequip_002_kirara_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Slows the Movement Speed of enemies within this unit's attack range by <@ba.kw>20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 260,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Slows the Movement Speed of enemies within this unit's attack range by <@ba.kw>20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 2.5% Max HP per second. If there are no allied operators in the surrounding 8 tiles, restores 3.5% Max HP per second instead",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Lonesome Protector",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.025,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kirara_t_2.hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.035,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 2.5% Max HP per second. If there are no allied operators in the surrounding 8 tiles, restores 4% <@ba.talpu>(+0.5%)</> Max HP per second instead",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Lonesome Protector",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.025,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kirara_t_2.hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 330,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Slows the Movement Speed of enemies within this unit's attack range by <@ba.kw>20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 2.5% Max HP per second. If there are no allied operators in the surrounding 8 tiles, restores 4% Max HP per second instead",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Lonesome Protector",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.025,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kirara_t_2.hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Restores 2.5% Max HP per second. If there are no allied operators in the surrounding 8 tiles, restores 4.5% <@ba.talpu>(+0.5%)</> Max HP per second instead",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Lonesome Protector",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.025,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kirara_t_2.hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.045,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1084,5 +1724,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

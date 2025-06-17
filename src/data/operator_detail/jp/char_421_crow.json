@@ -150,6 +150,28 @@
       "cost": 22
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 50,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_421_crow#1",
@@ -624,16 +646,580 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "せーのっ",
+          "description": "敵を倒すたびに攻撃速度+2（最大8回まで）",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "せーのっ",
+          "description": "敵を倒すたびに攻撃速度+3（最大8回まで）",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "せーのっ",
+          "description": "敵を倒すたびに攻撃速度+3（最大12回まで）",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_crow",
       "moduleName": "ラ・プルマの記章",
-      "desc": "ラ・プルマは複数の敵の単独掃討に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、鎌撃士の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ラ・プルマは複数の敵の単独掃討に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、鎌撃士の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_crow",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_crow",
       "moduleName": "水色の夜明け",
-      "desc": "みんなはどうして、お酒が好きなのかな？\nバーテンダーとして働き始めたばかりの頃、ラファエラの頭にはいつもそんな疑問が浮かんでいた。\nわからないことがあったら、パパに聞けば答えが得られる。だけど、これは仕事のことだから――\nパパは普段、私に仕事の話なんてほとんどしないし、わたしもそれと同じように、パパに仕事の話をしちゃいけない、と彼女は思っていた。\nもちろん、お兄ちゃんにもこんな質問はしたくない。というか、こういう質問は特に、お兄ちゃんには訊きたくなかった。\nそれなら、お客さんに訊いてみよう！と、彼女はそう考えた。\nドッソレスには多くの人が訪れており、ラファエラはごく短期間に多くの常連と顔なじみになっていた。\n彼らは皆、ラファエラとのおしゃべりが好きなのだ。\n質問を受けた常連の答えはそれぞれだった。\nホタの曲に乗って激しく踊っては、大声でラファエラのことを「ラファ」「お嬢ちゃん」と呼ぶお客さんは、お酒の色や舌触り、風味を楽しむため、そして何より刹那的な喜びを味わうために飲んでいると答えた。\nファドの歌声の中で、バーカウンターに寄りかかりながらゆっくりと手を挙げ、ラファエラのことを「シウバさん」と呼ぶお客さんは、起きたことを忘れてひとときの安らぎを得るために飲んでいるだけだと言った。\nそうして、彼らは一様に、こんな言葉を添えた。「聞いてくれてありがとう。」\nラファエラには、こうした答えをすべて理解できているどうかはわからなかったが、決して彼らの返答を忘れることはなかった。そうあるべきだと思ったのだ。\n\nそして、時が経った。\n陸上艦が走っている時はいつも、船室のあちこちから規則的なうなり声のような音が聞こえる。\n羽獣のさえずりや、打ち寄せる波の音とはまるで違うその音に、ラファエラはまだ慣れていなかった。\nしかし、その音を不快に思うこともなかった。\nこの音については、以前ほかのオペレーターに訊ねたこともあり、彼女はすでに陸上艦の中というのはこういうものだと知っている。\n\n陸上艦には音楽の種類も豊富にあり、聞いたことがないものも多くあった。\nけれども、そんな場所にも、激しく踊りながら大声で「ラファ」「お嬢ちゃん」と呼んでくる人はやはりいた。\nそういう人に出会ったときは、注文通り、ドリンクの中に最も甘く香り高い果汁を絞り入れ、爽やかなシロップで割ってやり――\n同時にこっそりと、その一杯を一番清涼感が感じられてさっぱり飲める濃度に薄めてやるのだ。\nそうすれば、飲んだ者に刹那的な喜びと、それを楽しめるくらい明瞭な思考を与えることができるから。\nまた、同じように、バーカウンターに寄りかかりながらゆっくりと手を挙げ、彼女のことを「シウバさん」と呼んでくる人もいた。\nそんな人には、彼らがささやく通り、目の前のラックから一番苦くて強い酒を数本取り、グラスに注いでやる。\nだが同時に、現地では最高級と評されるログローニョ産の美酒を垂らすことも忘れてはいけない。\nそうすれば、その人物が苦みの強い酒を飲み干す様子を眺めつつ、喉に残るのは苦みだけではないと知ることができるから。\n「ありがとう。」\n彼らはいつもそう言ってくれた。\nそれに頷き返すこともあったが、なんだかおかしい気もして、頷かないこともあった。\nもちろん、こうしたカクテルの作り方はすべてが『ドッソレスカクテルブック』に載っているわけではなかったが、彼女は自分でレシピを書き加えていた。\nその本自体は、もうそれを持つべき人にプレゼントしてしまって、手元にはない。\nけれど彼女は決してその内容を忘れることはなかった。\nラファエラはそれでいいと思ったのだ。\nそうあるべきだ、と。"
+      "desc": "みんなはどうして、お酒が好きなのかな？\nバーテンダーとして働き始めたばかりの頃、ラファエラの頭にはいつもそんな疑問が浮かんでいた。\nわからないことがあったら、パパに聞けば答えが得られる。だけど、これは仕事のことだから――\nパパは普段、私に仕事の話なんてほとんどしないし、わたしもそれと同じように、パパに仕事の話をしちゃいけない、と彼女は思っていた。\nもちろん、お兄ちゃんにもこんな質問はしたくない。というか、こういう質問は特に、お兄ちゃんには訊きたくなかった。\nそれなら、お客さんに訊いてみよう！と、彼女はそう考えた。\nドッソレスには多くの人が訪れており、ラファエラはごく短期間に多くの常連と顔なじみになっていた。\n彼らは皆、ラファエラとのおしゃべりが好きなのだ。\n質問を受けた常連の答えはそれぞれだった。\nホタの曲に乗って激しく踊っては、大声でラファエラのことを「ラファ」「お嬢ちゃん」と呼ぶお客さんは、お酒の色や舌触り、風味を楽しむため、そして何より刹那的な喜びを味わうために飲んでいると答えた。\nファドの歌声の中で、バーカウンターに寄りかかりながらゆっくりと手を挙げ、ラファエラのことを「シウバさん」と呼ぶお客さんは、起きたことを忘れてひとときの安らぎを得るために飲んでいるだけだと言った。\nそうして、彼らは一様に、こんな言葉を添えた。「聞いてくれてありがとう。」\nラファエラには、こうした答えをすべて理解できているどうかはわからなかったが、決して彼らの返答を忘れることはなかった。そうあるべきだと思ったのだ。\n\nそして、時が経った。\n陸上艦が走っている時はいつも、船室のあちこちから規則的なうなり声のような音が聞こえる。\n羽獣のさえずりや、打ち寄せる波の音とはまるで違うその音に、ラファエラはまだ慣れていなかった。\nしかし、その音を不快に思うこともなかった。\nこの音については、以前ほかのオペレーターに訊ねたこともあり、彼女はすでに陸上艦の中というのはこういうものだと知っている。\n\n陸上艦には音楽の種類も豊富にあり、聞いたことがないものも多くあった。\nけれども、そんな場所にも、激しく踊りながら大声で「ラファ」「お嬢ちゃん」と呼んでくる人はやはりいた。\nそういう人に出会ったときは、注文通り、ドリンクの中に最も甘く香り高い果汁を絞り入れ、爽やかなシロップで割ってやり――\n同時にこっそりと、その一杯を一番清涼感が感じられてさっぱり飲める濃度に薄めてやるのだ。\nそうすれば、飲んだ者に刹那的な喜びと、それを楽しめるくらい明瞭な思考を与えることができるから。\nまた、同じように、バーカウンターに寄りかかりながらゆっくりと手を挙げ、彼女のことを「シウバさん」と呼んでくる人もいた。\nそんな人には、彼らがささやく通り、目の前のラックから一番苦くて強い酒を数本取り、グラスに注いでやる。\nだが同時に、現地では最高級と評されるログローニョ産の美酒を垂らすことも忘れてはいけない。\nそうすれば、その人物が苦みの強い酒を飲み干す様子を眺めつつ、喉に残るのは苦みだけではないと知ることができるから。\n「ありがとう。」\n彼らはいつもそう言ってくれた。\nそれに頷き返すこともあったが、なんだかおかしい気もして、頷かないこともあった。\nもちろん、こうしたカクテルの作り方はすべてが『ドッソレスカクテルブック』に載っているわけではなかったが、彼女は自分でレシピを書き加えていた。\nその本自体は、もうそれを持つべき人にプレゼントしてしまって、手元にはない。\nけれど彼女は決してその内容を忘れることはなかった。\nラファエラはそれでいいと思ったのだ。\nそうあるべきだ、と。",
+      "typeIcon": "rea-x",
+      "uniEquipIcon": "uniequip_002_crow",
+      "typeName1": "REA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_crow_1",
+        "uniequip_002_crow_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 18,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 18,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 24,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵を倒すたびに攻撃速度+3（最大12回まで）。上昇値が最大になると、攻撃力+5%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "せーのっ",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵を倒すたびに攻撃速度+3（最大12回まで）。上昇値が最大になると、攻撃力+8%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "せーのっ",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1087,5 +1673,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

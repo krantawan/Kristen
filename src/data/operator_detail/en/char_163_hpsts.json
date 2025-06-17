@@ -139,6 +139,7 @@
       "cost": 35
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_163_hpsts#1",
@@ -606,16 +607,626 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +250",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 250,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 400,
+        "atk": 50,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Self-Defense",
+          "description": "Restores HP by 4% of Max HP per second when the skill is activated",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.04,
+            "prob": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Self-Defense",
+          "description": "Restores HP by 5% <@ba.talpu>(+1%)</> of Max HP per second when the skill is activated",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.05,
+            "prob": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Self-Defense",
+          "description": "Restores HP by 4% of Max HP per second and obtains 25% Physical Melee Dodge when the skill is activated",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.04,
+            "prob": 0.25
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Self-Defense",
+          "description": "Restores HP by 5% <@ba.talpu>(+1%)</> of Max HP per second and obtains 30% <@ba.talpu>(+5%)</> Physical Melee Dodge when the skill is activated",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.05,
+            "prob": 0.3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_hpsts",
       "moduleName": "Vulcan's Badge",
-      "desc": "Operator Vulcan has demonstrated a remarkable aptitude for holding the front with minimal support.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Defender Operator during field operations to exercise Juggernaut responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Vulcan has demonstrated a remarkable aptitude for holding the front with minimal support.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Defender Operator during field operations to exercise Juggernaut responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_hpsts",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_hpsts",
       "moduleName": "The Shaper",
-      "desc": "'Imagine something like this: it has no beginning, yet no end; it is not nothingness, yet it walks with nothingness; it knows not time, yet time is its friend.' At the break of dawn, Vulcan takes her tongs in hand to pluck out a half-molten glowing red lump of iron from the forge, placing it atop the Shaper and suddenly remembering what a priest from Lachedamon once told her. 'It is destruction, a destruction that cannot be avoided.'\nShe gently flicks her wrist, then begins to beat the iron with her hammer. When Vulcan still lived in Minos, she would use any spare time she had to visit the hall where the memories of heroes of generations past were honored. There, she and her friends whiled away their time. She would say very little, preferring to listen attentively to the various sermons and debates of others.\n'As for why man pursues eternity, we strike the earth with enough fervor as to seem mad, hoping to reveal some scant ruins with a handful of phrases carved upon them, only to proceed to worship them as fragments of some eternity itself. Even were we merely to confirm that the concept of 'eternity' even exists, that alone would be comfort enough to those of us fated to die one day.'\nVulcan thinks back to the candles that stood before the statues in the hall back then. Those offered by the pilgrims in praise of their ancestors burned silently, somewhat resembling the very same people there to pray, awed and quieted by the words of the priests. Afterwards, the more their flames grew weaker, the more they danced madly out of control, much like the thoughts of those silent pilgrims. Once more she uses her tongs to pick up the iron that has just begun to take shape, and plunges it into the water. It hisses and sputters in surprise, before quieting down just as quickly. Once more she places the iron into the furnace, treating it the same way she did before, over and over again.\nVulcan truly understands the Minoans' obsession with these grandiose sentiments, for Minos was far too ancient, and yet Minos was far too young. Its history stretched back towards infinity, yet it had nearly died. Though she is not particularly interested in either the worship of eternity nor dreaded mortality, to take it a step further, she believes this to be a common point between the cultures of Sargon and Minos, one bred in both their hearts. An irrelevant, elusive dream. \nShe places the finished work upon her anvil. This unremarkable iron ingot was the daily task of Minoan blacksmiths, passed down from generation to generation. One day in the future, it will find itself in a different shape, or perhaps reforged into the already-broken spine of some equipment. She powers down the furnace, and takes out some honey biscuits she had baked at the same time. I care only for the present, she tells herself."
+      "desc": "'Imagine something like this: it has no beginning, yet no end; it is not nothingness, yet it walks with nothingness; it knows not time, yet time is its friend.' At the break of dawn, Vulcan takes her tongs in hand to pluck out a half-molten glowing red lump of iron from the forge, placing it atop the Shaper and suddenly remembering what a priest from Lachedamon once told her. 'It is destruction, a destruction that cannot be avoided.'\nShe gently flicks her wrist, then begins to beat the iron with her hammer. When Vulcan still lived in Minos, she would use any spare time she had to visit the hall where the memories of heroes of generations past were honored. There, she and her friends whiled away their time. She would say very little, preferring to listen attentively to the various sermons and debates of others.\n'As for why man pursues eternity, we strike the earth with enough fervor as to seem mad, hoping to reveal some scant ruins with a handful of phrases carved upon them, only to proceed to worship them as fragments of some eternity itself. Even were we merely to confirm that the concept of 'eternity' even exists, that alone would be comfort enough to those of us fated to die one day.'\nVulcan thinks back to the candles that stood before the statues in the hall back then. Those offered by the pilgrims in praise of their ancestors burned silently, somewhat resembling the very same people there to pray, awed and quieted by the words of the priests. Afterwards, the more their flames grew weaker, the more they danced madly out of control, much like the thoughts of those silent pilgrims. Once more she uses her tongs to pick up the iron that has just begun to take shape, and plunges it into the water. It hisses and sputters in surprise, before quieting down just as quickly. Once more she places the iron into the furnace, treating it the same way she did before, over and over again.\nVulcan truly understands the Minoans' obsession with these grandiose sentiments, for Minos was far too ancient, and yet Minos was far too young. Its history stretched back towards infinity, yet it had nearly died. Though she is not particularly interested in either the worship of eternity nor dreaded mortality, to take it a step further, she believes this to be a common point between the cultures of Sargon and Minos, one bred in both their hearts. An irrelevant, elusive dream. \nShe places the finished work upon her anvil. This unremarkable iron ingot was the daily task of Minoan blacksmiths, passed down from generation to generation. One day in the future, it will find itself in a different shape, or perhaps reforged into the already-broken spine of some equipment. She powers down the furnace, and takes out some honey biscuits she had baked at the same time. I care only for the present, she tells herself.",
+      "typeIcon": "uny-x",
+      "uniEquipIcon": "uniequip_002_hpsts",
+      "typeName1": "UNY",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_hpsts_1",
+        "uniequip_002_hpsts_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 53,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When skill is activated, immediately recovers 30% Max HP. Afterward, restores 4% Max HP per second and gains 25% Physical Melee Dodge while skill is active",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Self-Defense",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When skill is activated, immediately recovers 30% Max HP. Afterward, restores 5% <@ba.talpu>(+1%)</> Max HP per second and gains 30% <@ba.talpu>(+5%)</> Physical Melee Dodge while skill is active",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Self-Defense",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 385,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 68,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When skill is activated, immediately recovers 60% Max HP. Afterward, restores 4% Max HP per second and gains 25% Physical Melee Dodge while skill is active",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Self-Defense",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When skill is activated, immediately recovers 60% Max HP. Afterward, restores 5% <@ba.talpu>(+1%)</> Max HP per second and gains 30% <@ba.talpu>(+5%)</> Physical Melee Dodge while skill is active",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Self-Defense",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1069,5 +1680,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

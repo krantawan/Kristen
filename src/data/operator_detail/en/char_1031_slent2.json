@@ -152,6 +152,24 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "heal_scale",
+          "value": 0.75
+        }
+      ],
+      "overrideDescription": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1031_slent2#1",
@@ -713,16 +731,634 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 350,
+        "atk": 55,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Silent Sentinel",
+          "description": "Applies 8% <$ba.protect>Sanctuary</> to allies within Attack Range; effect increases as ally's HP decreases (reaches maximum of 15% <$ba.protect>Sanctuary</> when below 30% HP)",
+          "blackboard": {
+            "damage_resistance_base": 0.08,
+            "resistance_scale": 0.0125,
+            "hp_ratio": 0.01,
+            "min_hp_ratio": 0.3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Silent Sentinel",
+          "description": "Applies 10% <$ba.protect>Sanctuary</> to allies within Attack Range; effect increases as ally's HP decreases (reaches maximum gain of 24% <$ba.protect>Sanctuary</> when below 30% HP)",
+          "blackboard": {
+            "damage_resistance_base": 0.1,
+            "resistance_scale": 0.02,
+            "hp_ratio": 0.01,
+            "min_hp_ratio": 0.3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Plumes of Plenty",
+          "description": "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 5% of this unit's ATK every second; effect doubles for [Rhine Lab] Operators",
+          "blackboard": {
+            "hp_ratio": 0.5,
+            "atk_to_hp_recovery_ratio": 0.05
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Plumes of Plenty",
+          "description": "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 6% <@ba.talpu>(+1%)</> of this unit's ATK every second; effect doubles for [Rhine Lab] Operators",
+          "blackboard": {
+            "hp_ratio": 0.5,
+            "atk_to_hp_recovery_ratio": 0.06
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_slent2",
       "moduleName": "Silence the Paradigmatic's Badge",
-      "desc": "Operator Silence the Paradigmatic has demonstrated a remarkable aptitude for providing continuous protection to allies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Abjurer responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Silence the Paradigmatic has demonstrated a remarkable aptitude for providing continuous protection to allies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Abjurer responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_slent2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_slent2",
       "moduleName": "Hard to Keep Awake",
-      "desc": "In front of her is her new office.\nTwo guards from Defense flank her while carrying her luggage, as is standard for a VIP escort.\nYes. Now, she too is a Very Important Person.\nIt's on the floor directly below Control's, sprawling with all manner of administrative and executive offices. Not that she's at all a stranger to this place, but today, it suddenly hits her that the AC is a little chilly, that her shoes are very loud against the floor, and that the looks the others give her... are harshly incisive.\nShe involuntarily lets out a sigh.\nFrom behind, one of the Defense employees looks at her and sees someone who began worrying for the future of Rhine Lab the moment she assumed her post, and he can't help but feel a level of respect for her.\nAt that precise moment, his terminal rings. It's a notice; he quietly says a few words in response and hangs up.\n'What's going on?'\n'It's nothing. Apparently someone sent something through Engineering's lines. My colleagues are tracing it down; no need for you to worry.'\nIn short order, they arrive at the office. The Defense personnel spend a few seconds operating the door like second nature, then give her the universal handsign for 'go ahead.'\n'Authenticated. Welcome, Components Control Executive Consultant Olivia Silence.'\nShe opens the door and enters.\nThe Defense personnel place her luggage on the coffee table, then take their leave at her nod.\nShe surveys her surroundings. A large, standard office, so empty that Ifrit could misbehave all she wants in here, with room to spare.\nBefore she can let out an even deeper sigh, the door behind her opens then shuts again with no warning.\n'Was there anything el—' She's suddenly compelled to swallow what she was saying, for her visitor is not a person, but—\n'A Meeboo?!' Yes, in front of her, without a doubt, sits one of Mayer's proud works.\nIt's carrying a bag on its back, containing a pouch of coffee beans, a mug, and an accompanying letter.\nShe opens it. It's Mayer's handwriting.\n'Boy have I been wondering what kind of gift to get you. Joyce told me she was gonna go for coffee beans, and eureka! So I remodeled one of my Meeboos a little.\n'You left while I was still working on it, and I was gonna mail it to you, but then Components Control said you'd already had a mountain in your inbox, and just the ETA on inspection was half a month, and I'm not waiting that long, so I borrowed Engineering's lines a little.'\nThere's a knock at the door.\nDammit, thinks Silence. If they find this Meeboo—\nShe lifts her head and sees it jump onto her new desk and, through a series of elaborate transformations, morph into a coffee machine.\nThe same Defense employee as before enters apologetically. 'Sorry, Ms. Silence, whatever was sent through the pipeline apparently arrived here. Is there anything in your office that, uh, can I ask what—\n'It's just a coffee machine,' Silence replies, shooting from the hip.\n'But...'\n'It was a gift from my friend to celebrate my promotion. Is something the matter?' Silence says, picking up the beans and pouring them into the Meeboo, before attempting to pour herself a practiced cup of coffee—er, it should be this button, she imagines? Oh, wonderful, she got it right.\n'Understood. As long as there's nothing out of the ordinary. Excuse me.'\nSuspicious no longer, the Defense employee turns and leaves.\nShe lets out a third sigh, this time of relief.\nHm. Right, the letter kept going.\n'I already told you at the farewell, but you know, might as well tell you one more time. Congrats on the promotion, Silence! I promise I'll swing by next time I'm back at HQ!'\nShe feels herself relax a little. Some things have changed, that much is true, but other things feel like they'll never change at all.\nAnd with this coffee machine around, she shouldn't having trouble staying awake, at least."
+      "desc": "In front of her is her new office.\nTwo guards from Defense flank her while carrying her luggage, as is standard for a VIP escort.\nYes. Now, she too is a Very Important Person.\nIt's on the floor directly below Control's, sprawling with all manner of administrative and executive offices. Not that she's at all a stranger to this place, but today, it suddenly hits her that the AC is a little chilly, that her shoes are very loud against the floor, and that the looks the others give her... are harshly incisive.\nShe involuntarily lets out a sigh.\nFrom behind, one of the Defense employees looks at her and sees someone who began worrying for the future of Rhine Lab the moment she assumed her post, and he can't help but feel a level of respect for her.\nAt that precise moment, his terminal rings. It's a notice; he quietly says a few words in response and hangs up.\n'What's going on?'\n'It's nothing. Apparently someone sent something through Engineering's lines. My colleagues are tracing it down; no need for you to worry.'\nIn short order, they arrive at the office. The Defense personnel spend a few seconds operating the door like second nature, then give her the universal handsign for 'go ahead.'\n'Authenticated. Welcome, Components Control Executive Consultant Olivia Silence.'\nShe opens the door and enters.\nThe Defense personnel place her luggage on the coffee table, then take their leave at her nod.\nShe surveys her surroundings. A large, standard office, so empty that Ifrit could misbehave all she wants in here, with room to spare.\nBefore she can let out an even deeper sigh, the door behind her opens then shuts again with no warning.\n'Was there anything el—' She's suddenly compelled to swallow what she was saying, for her visitor is not a person, but—\n'A Meeboo?!' Yes, in front of her, without a doubt, sits one of Mayer's proud works.\nIt's carrying a bag on its back, containing a pouch of coffee beans, a mug, and an accompanying letter.\nShe opens it. It's Mayer's handwriting.\n'Boy have I been wondering what kind of gift to get you. Joyce told me she was gonna go for coffee beans, and eureka! So I remodeled one of my Meeboos a little.\n'You left while I was still working on it, and I was gonna mail it to you, but then Components Control said you'd already had a mountain in your inbox, and just the ETA on inspection was half a month, and I'm not waiting that long, so I borrowed Engineering's lines a little.'\nThere's a knock at the door.\nDammit, thinks Silence. If they find this Meeboo—\nShe lifts her head and sees it jump onto her new desk and, through a series of elaborate transformations, morph into a coffee machine.\nThe same Defense employee as before enters apologetically. 'Sorry, Ms. Silence, whatever was sent through the pipeline apparently arrived here. Is there anything in your office that, uh, can I ask what—\n'It's just a coffee machine,' Silence replies, shooting from the hip.\n'But...'\n'It was a gift from my friend to celebrate my promotion. Is something the matter?' Silence says, picking up the beans and pouring them into the Meeboo, before attempting to pour herself a practiced cup of coffee—er, it should be this button, she imagines? Oh, wonderful, she got it right.\n'Understood. As long as there's nothing out of the ordinary. Excuse me.'\nSuspicious no longer, the Defense employee turns and leaves.\nShe lets out a third sigh, this time of relief.\nHm. Right, the letter kept going.\n'I already told you at the farewell, but you know, might as well tell you one more time. Congrats on the promotion, Silence! I promise I'll swing by next time I'm back at HQ!'\nShe feels herself relax a little. Some things have changed, that much is true, but other things feel like they'll never change at all.\nAnd with this coffee machine around, she shouldn't having trouble staying awake, at least.",
+      "typeIcon": "bls-x",
+      "uniEquipIcon": "uniequip_002_slent2",
+      "typeName1": "BLS",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_slent2_1",
+        "uniequip_002_slent2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "20_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.06,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Increases the Max HP of allies within Attack Range by +6%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 6% of this unit's ATK every second; effect doubles for [Rhine Lab] Operators",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Plumes of Plenty",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.06,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Increases the Max HP of allies within Attack Range by +6%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 7% <@ba.talpu>(+1%)</> of this unit's ATK every second; effect doubles for [Rhine Lab] Operators",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Plumes of Plenty",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.07,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "20_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Increases the Max HP of allies within Attack Range by +10%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 7% of this unit's ATK every second; effect doubles for [Rhine Lab] Operators",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Plumes of Plenty",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.07,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Increases the Max HP of allies within Attack Range by +10%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 8% <@ba.talpu>(+1%)</> of this unit's ATK every second; effect doubles for [Rhine Lab] Operators",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Plumes of Plenty",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_to_hp_recovery_ratio",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1175,6 +1811,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10029_slent2_protrb"
   ],
   "patch_info": {}
 }

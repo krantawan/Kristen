@@ -169,6 +169,44 @@
       "cost": 12
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk",
+            "value": 2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "mid_stack_cnt",
+            "value": 20,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_stack_cnt",
+            "value": 40,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "通常不攻击且阻挡数为0，技能未开启时<@ba.kw>{max_stack_cnt}</>秒内攻击力逐渐提升至最高<@ba.kw>+{atk:0%}</>且技能结束时重置攻击力",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4064_mlynar#1",
@@ -765,16 +803,842 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 360,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "游侠",
+          "description": "攻击敌人时攻击力提升至105%。周围存在3名及以上敌人时攻击力提升至110%且受到的伤害减少10%",
+          "blackboard": [
+            {
+              "key": "atk_scale_base",
+              "value": 1.05,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale_up",
+              "value": 1.1,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "游侠",
+          "description": "攻击敌人时攻击力提升至108%<@ba.talpu>（+3%）</>。周围存在3名及以上敌人时攻击力提升至113%<@ba.talpu>（+3%）</>且受到的伤害减少10%",
+          "blackboard": [
+            {
+              "key": "atk_scale_base",
+              "value": 1.08,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale_up",
+              "value": 1.13,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "游侠",
+          "description": "攻击敌人时攻击力提升至110%。周围存在3名及以上敌人时攻击力提升至115%且受到的伤害减少15%",
+          "blackboard": [
+            {
+              "key": "atk_scale_base",
+              "value": 1.1,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale_up",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "游侠",
+          "description": "攻击敌人时攻击力提升至113%<@ba.talpu>（+3%）</>。周围存在3名及以上敌人时攻击力提升至118%<@ba.talpu>（+3%）</>且受到的伤害减少15%",
+          "blackboard": [
+            {
+              "key": "atk_scale_base",
+              "value": 1.13,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale_up",
+              "value": 1.18,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "无动于衷",
+          "description": "在场时，自身更容易受到攻击，所有卡西米尔干员被攻击时反弹相当于玛恩纳攻击力15%的真实伤害",
+          "blackboard": [
+            {
+              "key": "taunt_level",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "无动于衷",
+          "description": "在场时，自身更容易受到攻击，所有卡西米尔干员被攻击时反弹相当于玛恩纳攻击力18%<@ba.talpu>（+3%）</>的真实伤害",
+          "blackboard": [
+            {
+              "key": "taunt_level",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 0.18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mlynar",
       "moduleName": "玛恩纳证章",
-      "desc": "干员玛恩纳擅长待时而动以应对极端险恶的战情\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使解放者职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员玛恩纳擅长待时而动以应对极端险恶的战情\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使解放者职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_mlynar",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mlynar",
       "moduleName": "“鞘中人”",
-      "desc": "剑上刻的家训快被我磨得看不清了......但这柄剑其实已经太久没沾过血，根本不需要磨。我只是习惯了，每天应付完那些传唤，回复完那些信件，给父亲擦洗过身体，又哄孩子们睡着之后，下来车库里打磨它几下。\n父亲把这柄剑拿给我们玩的时候，我们都才几岁？他管你叫“小临光”，管我叫“小小临光”，好像他自己给我们起的名字，就只是用来应付身份文件的。他只在乎我们能不能成为合格的“临光”。毕竟，在他的时代，只要知道自己是临光家的骑士，就算是已经看清了一生的道路。\n但现在？提醒提醒我吧，我们当初那般坚信的道路，是指向何方？\n......好吧，我们都变了。我变得失意，而你变得......呵，沉默了。\n白天面试我的那个人，面试结束之后又拉我进小会议室，忧心忡忡地解释他在面试期间的一切问话都只是按章程办事。他似乎相信只要自己稍有冒犯，就会有一把闪着金光的长剑砍下他的脑袋——毕竟报纸上都说临光之名属于那些傲慢、嗜血、不分青红皂白的所谓“正义使者”。但支支吾吾一阵之后，他又隐晦地问我，愿不愿意他把临光家的故事，讲给他的孩子听。一个每周工作六天半的人，脑子里除了工作安排什么都没有，如果不是做背景调查的时候看到了些骑士故事，他能讲给孩子听的就只剩上下班路上听的那些三流的广播剧了。\n......一个可笑的人？或许。把自己都不相信的骑士故事讲给孩子听，只因为这是他所知的，唯一还像样的故事。但我哪里能耻笑他？我又何尝不是如此，否则我何必每天打磨这柄剑？我明知道它什么都砍不断。\n......呵，我真怕你都认不出我。\n玛莉娅也快到懂事的年纪了。临光之名意味着什么，她不该从一个失意者的哀叹中体会。\n剑我会带在身上。等那两个孩子都长大了......我还得再走一趟。但现在，我要是能忘了自己是个临光，才好。\n我怎么没留意过普通人都看些什么？总得往我这具空壳子里填些什么。\n......不过也是，填什么都无所谓。\n\n这番话玛恩纳或许只在心里默念，又或许讲出了声——多亏梅什科出品的车窗隔音性能过硬，地下车库里没人听见。他沉默地将剑收回鞘中，又沉默地从身下翻出一叠用来垫车座的报纸，什么都没考虑便读了起来，无所谓它是何时的新闻，也无所谓从哪里读到哪里。把那些文字填入玛恩纳，就像灌满一个气球人。"
+      "desc": "剑上刻的家训快被我磨得看不清了......但这柄剑其实已经太久没沾过血，根本不需要磨。我只是习惯了，每天应付完那些传唤，回复完那些信件，给父亲擦洗过身体，又哄孩子们睡着之后，下来车库里打磨它几下。\n父亲把这柄剑拿给我们玩的时候，我们都才几岁？他管你叫“小临光”，管我叫“小小临光”，好像他自己给我们起的名字，就只是用来应付身份文件的。他只在乎我们能不能成为合格的“临光”。毕竟，在他的时代，只要知道自己是临光家的骑士，就算是已经看清了一生的道路。\n但现在？提醒提醒我吧，我们当初那般坚信的道路，是指向何方？\n......好吧，我们都变了。我变得失意，而你变得......呵，沉默了。\n白天面试我的那个人，面试结束之后又拉我进小会议室，忧心忡忡地解释他在面试期间的一切问话都只是按章程办事。他似乎相信只要自己稍有冒犯，就会有一把闪着金光的长剑砍下他的脑袋——毕竟报纸上都说临光之名属于那些傲慢、嗜血、不分青红皂白的所谓“正义使者”。但支支吾吾一阵之后，他又隐晦地问我，愿不愿意他把临光家的故事，讲给他的孩子听。一个每周工作六天半的人，脑子里除了工作安排什么都没有，如果不是做背景调查的时候看到了些骑士故事，他能讲给孩子听的就只剩上下班路上听的那些三流的广播剧了。\n......一个可笑的人？或许。把自己都不相信的骑士故事讲给孩子听，只因为这是他所知的，唯一还像样的故事。但我哪里能耻笑他？我又何尝不是如此，否则我何必每天打磨这柄剑？我明知道它什么都砍不断。\n......呵，我真怕你都认不出我。\n玛莉娅也快到懂事的年纪了。临光之名意味着什么，她不该从一个失意者的哀叹中体会。\n剑我会带在身上。等那两个孩子都长大了......我还得再走一趟。但现在，我要是能忘了自己是个临光，才好。\n我怎么没留意过普通人都看些什么？总得往我这具空壳子里填些什么。\n......不过也是，填什么都无所谓。\n\n这番话玛恩纳或许只在心里默念，又或许讲出了声——多亏梅什科出品的车窗隔音性能过硬，地下车库里没人听见。他沉默地将剑收回鞘中，又沉默地从身下翻出一叠用来垫车座的报纸，什么都没考虑便读了起来，无所谓它是何时的新闻，也无所谓从哪里读到哪里。把那些文字填入玛恩纳，就像灌满一个气球人。",
+      "typeIcon": "lib-x",
+      "uniEquipIcon": "uniequip_002_mlynar",
+      "typeName1": "LIB",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_mlynar_1",
+        "uniequip_002_mlynar_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30165",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 225,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 18,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "部署后获得<@ba.kw>+100%</>加成",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常不攻击且阻挡数为0，技能未开启时<@ba.kw>40</>秒内攻击力逐渐提升至最高<@ba.kw>+200%</>且技能结束时重置攻击力",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "init_atk",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 270,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 27,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "部署后获得<@ba.kw>+100%</>加成",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常不攻击且阻挡数为0，技能未开启时<@ba.kw>40</>秒内攻击力逐渐提升至最高<@ba.kw>+200%</>且技能结束时重置攻击力",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击敌人时攻击力提升至115%。周围存在3名及以上敌人时攻击力提升至120%且受到的伤害减少20%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "游侠",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale_base",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_up",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击敌人时攻击力提升至118%<@ba.talpu>（+3%）</>。周围存在3名及以上敌人时攻击力提升至123%<@ba.talpu>（+3%）</>且受到的伤害减少20%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "1",
+                  "name": "游侠",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale_base",
+                      "value": 1.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_up",
+                      "value": 1.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "init_atk",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 360,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "部署后获得<@ba.kw>+100%</>加成",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常不攻击且阻挡数为0，技能未开启时<@ba.kw>40</>秒内攻击力逐渐提升至最高<@ba.kw>+200%</>且技能结束时重置攻击力",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击敌人时攻击力提升至120%。周围存在3名及以上敌人时攻击力提升至125%且受到的伤害减少25%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "游侠",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale_base",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_up",
+                      "value": 1.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击敌人时攻击力提升至123%<@ba.talpu>（+3%）</>。周围存在3名及以上敌人时攻击力提升至128%<@ba.talpu>（+3%）</>且受到的伤害减少25%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "1",
+                  "name": "游侠",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale_base",
+                      "value": 1.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_up",
+                      "value": 1.28,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "init_atk",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1228,5 +2092,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

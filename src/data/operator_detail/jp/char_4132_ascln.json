@@ -151,6 +151,28 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "prob",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4132_ascln#1",
@@ -713,16 +735,747 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "最大HP+160",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 160,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 0,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "死絶の問拷",
+          "description": "通常攻撃が敵に以下の効果を付与：18秒間、移動速度-12%、1秒ごとにアスカロンの現在の攻撃力の6%に相当する術ダメージを受ける（最大3回まで重複可能）",
+          "blackboard": [
+            {
+              "key": "move_speed",
+              "value": -0.12,
+              "valueStr": null
+            },
+            {
+              "key": "atk_ratio",
+              "value": 0.06,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "debuff_duration",
+              "value": 18,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "死絶の問拷",
+          "description": "通常攻撃が敵に以下の効果を付与：18秒間、移動速度-15%、1秒ごとにアスカロンの現在の攻撃力の8%に相当する術ダメージを受ける（最大3回まで重複可能）",
+          "blackboard": [
+            {
+              "key": "move_speed",
+              "value": -0.15,
+              "valueStr": null
+            },
+            {
+              "key": "atk_ratio",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "debuff_duration",
+              "value": 18,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "死絶の問拷",
+          "description": "通常攻撃が敵に以下の効果を付与：25秒間、移動速度-18%、1秒ごとにアスカロンの現在の攻撃力の10%に相当する術ダメージを受ける（最大3回まで重複可能）",
+          "blackboard": [
+            {
+              "key": "move_speed",
+              "value": -0.18,
+              "valueStr": null
+            },
+            {
+              "key": "atk_ratio",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "debuff_duration",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "喰光の残影",
+          "description": "攻撃速度+8、自身の隣接4マスに高台がある場合、さらに+6",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed_add",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "喰光の残影",
+          "description": "攻撃速度+10<@ba.talpu>（+2）</>、自身の隣接4マスに高台がある場合、さらに+6",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 10,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed_add",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_ascln",
       "moduleName": "アスカロンの記章",
-      "desc": "アスカロンは身を潜め、敵を待ち伏せし奇襲する戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては特殊オペレーターとして区分し、潜伏者の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。\n"
+      "desc": "アスカロンは身を潜め、敵を待ち伏せし奇襲する戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては特殊オペレーターとして区分し、潜伏者の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。\n",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_ascln",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_ascln",
       "moduleName": "「無形、無情」",
-      "desc": "暗殺者は指を折り曲げ、指先で手のひらに軽く触れる。鋭い刃は熱く照りつける日光のもとで鞘に沿って滑り出し、細かく小さな光の粒が刃とともに鞘の縁から剣先へと落ちていく。その様はまるで、溶けた鉄が音もなく鋳型に流れ込むようだった。\n熱波と、静寂。\nその静寂は、腐食羽獣の鳴き声によって破られた。烈日のもとを独り行くサルカズの老人が顔を上げると、峡谷の頂から霧が押し寄せてくるのが目に入る。駄獣はいなくなり、峡谷も見えなくなってしまった。日光のもとに唯一残された影のみが、常に熔炉を凝視し続けてきた老人の両目にまた一層灰色を被せてくる。\n間もなく、刃が彼の胸を離れた。そして次の瞬間、刺し貫かれた胸腔は血で満ちて、干乾びた大地の上で老人を溺死へと誘う。カズデルでは、こういった緩やかな死は一種の残酷な刑罰として用いられてきたことを、彼はまだ記憶に留めていた。彼は、このまま熱砂の上に仰向けに倒れ、駄獣の困惑した目に見守られながら最期を迎えるのだろうと思っていた。しかし暗殺者は、すぐさまその場を立ち去ることはせず、片膝を地面について老人の背を支えた。\n「あぁ……お前だったか。」\n老人の顔に刻まれた皺が次第に緩んでいく。彼は、その目をまだ覚えていた。あの時、熔炉の炎から視線を移したときに見た、将軍の傍らに立っていた少女だ。その少女はまだ幼かったが、戦士の目と、嵐を引き裂く手を持っていた。それから将軍は、彼女のために剣を鍛えてやれと仰ったのだ。\n「もう一度、それを見せてはくれぬか？」彼女は老人の懇願する目を見た。「先ほどは……よく見えなかったものでな。」\n暗殺者は視線を自身の腕へ移した。あの死士たちのことを彼女は今なお覚えている。彼らの優れた装備は、軍事委員会が支配下に置いた武器工場が与えたものだったが、しかし……彼女は老人の胸の前に手を差し出した。あの死に向かう無敵にして捨身の者たちは、万全の備えをしていた。カズデルの最も優れた職人が、彼らのために王殺しの刃を鍛えたのだ。\n暗殺者は指を折り曲げ、指先で手のひらに軽く触れる。鋭い刃は熱く照りつける日光のもとで鞘に沿って滑り出し、細かく小さな光の粒が刃とともに鞘の縁から剣先へと落ちていく。その光の粒に、老人は指を滑らせた。彼はその粒の正体が、攻撃を受け止める度に、刃を交える度に、刀身に残された傷だと知っていたのだ。それは、そのいずれかに彼の血が染み込んでいると、訴えかけているかのようだった。\n「わしがそれを打った時……溶炉の炎が告げてきた。いつの日か、その刃はわしの命を奪うだろうと。だが……将軍の依頼を、反故にはできぬ。」老人は上体を起こし、苦しげに息を吸って顔を見上げ、暗殺者の目を覗き込んだ。\n「お前はどうなのだ？日光の下に潜む影よ。お前のこの粛清は……誰に与えられた、任務なのだ？」\n暗殺者は答えなかった。彼女は手で老人の目を覆うと、隠し刀で彼の喉を掻き切った。腐食羽獣が峡谷の頂から空を旋回しつつ降りてくる。羽獣たちは切り立った崖の影を覆い尽くし、互いの羽毛で嘴を磨き上げていた。"
+      "desc": "暗殺者は指を折り曲げ、指先で手のひらに軽く触れる。鋭い刃は熱く照りつける日光のもとで鞘に沿って滑り出し、細かく小さな光の粒が刃とともに鞘の縁から剣先へと落ちていく。その様はまるで、溶けた鉄が音もなく鋳型に流れ込むようだった。\n熱波と、静寂。\nその静寂は、腐食羽獣の鳴き声によって破られた。烈日のもとを独り行くサルカズの老人が顔を上げると、峡谷の頂から霧が押し寄せてくるのが目に入る。駄獣はいなくなり、峡谷も見えなくなってしまった。日光のもとに唯一残された影のみが、常に熔炉を凝視し続けてきた老人の両目にまた一層灰色を被せてくる。\n間もなく、刃が彼の胸を離れた。そして次の瞬間、刺し貫かれた胸腔は血で満ちて、干乾びた大地の上で老人を溺死へと誘う。カズデルでは、こういった緩やかな死は一種の残酷な刑罰として用いられてきたことを、彼はまだ記憶に留めていた。彼は、このまま熱砂の上に仰向けに倒れ、駄獣の困惑した目に見守られながら最期を迎えるのだろうと思っていた。しかし暗殺者は、すぐさまその場を立ち去ることはせず、片膝を地面について老人の背を支えた。\n「あぁ……お前だったか。」\n老人の顔に刻まれた皺が次第に緩んでいく。彼は、その目をまだ覚えていた。あの時、熔炉の炎から視線を移したときに見た、将軍の傍らに立っていた少女だ。その少女はまだ幼かったが、戦士の目と、嵐を引き裂く手を持っていた。それから将軍は、彼女のために剣を鍛えてやれと仰ったのだ。\n「もう一度、それを見せてはくれぬか？」彼女は老人の懇願する目を見た。「先ほどは……よく見えなかったものでな。」\n暗殺者は視線を自身の腕へ移した。あの死士たちのことを彼女は今なお覚えている。彼らの優れた装備は、軍事委員会が支配下に置いた武器工場が与えたものだったが、しかし……彼女は老人の胸の前に手を差し出した。あの死に向かう無敵にして捨身の者たちは、万全の備えをしていた。カズデルの最も優れた職人が、彼らのために王殺しの刃を鍛えたのだ。\n暗殺者は指を折り曲げ、指先で手のひらに軽く触れる。鋭い刃は熱く照りつける日光のもとで鞘に沿って滑り出し、細かく小さな光の粒が刃とともに鞘の縁から剣先へと落ちていく。その光の粒に、老人は指を滑らせた。彼はその粒の正体が、攻撃を受け止める度に、刃を交える度に、刀身に残された傷だと知っていたのだ。それは、そのいずれかに彼の血が染み込んでいると、訴えかけているかのようだった。\n「わしがそれを打った時……溶炉の炎が告げてきた。いつの日か、その刃はわしの命を奪うだろうと。だが……将軍の依頼を、反故にはできぬ。」老人は上体を起こし、苦しげに息を吸って顔を見上げ、暗殺者の目を覗き込んだ。\n「お前はどうなのだ？日光の下に潜む影よ。お前のこの粛清は……誰に与えられた、任務なのだ？」\n暗殺者は答えなかった。彼女は手で老人の目を覆うと、隠し刀で彼の喉を掻き切った。腐食羽獣が峡谷の頂から空を旋回しつつ降りてくる。羽獣たちは切り立った崖の影を覆い尽くし、互いの羽毛で嘴を磨き上げていた。",
+      "typeIcon": "amb-x",
+      "uniEquipIcon": "uniequip_002_ascln",
+      "typeName1": "AMB",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_ascln_1",
+        "uniequip_002_ascln_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 230,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "通常攻撃が敵に以下の効果を付与する：27秒間、移動速度-18%、1秒ごとにアスカロンの現在の攻撃力の11%に相当する術ダメージを受ける（最大3回まで重複可能）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "死絶の問拷",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_ratio",
+                      "value": 0.11,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "debuff_duration",
+                      "value": 27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 270,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 53,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "通常攻撃が敵に以下の効果を付与する：30秒間、移動速度-18%、1秒ごとにアスカロンの現在の攻撃力の11%に相当する術ダメージを受ける（最大3回まで重複可能）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "死絶の問拷",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_ratio",
+                      "value": 0.11,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "debuff_duration",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1176,5 +1929,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

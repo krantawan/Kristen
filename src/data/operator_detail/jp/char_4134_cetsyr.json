@@ -152,6 +152,28 @@
       "cost": 10
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@atk_to_hp_recovery_ratio",
+            "value": 0.1,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "攻撃しない\n攻撃範囲内の味方全員の<@ba.kw>HP</>を継続回復(1秒ごとに攻撃力の<@ba.kw>{attack@atk_to_hp_recovery_ratio:0%}</>回復)\n自身は<$ba.inspire>鼓舞</>状態の効果を受けない",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4134_cetsyr#1",
@@ -718,16 +740,743 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 300,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "過去の塵埃",
+          "description": "配置時、自身を中心に旋回し続ける「微塵」を3個生成する。「微塵」が味方ユニットに当たると消滅し、対象が受けるシヴィライト・エテルナの特性の効果が6秒間1.2倍になる。消滅した「微塵」は6秒後に再生する",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "range_radius",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "cooldown",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "dynamic_spd",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "talent_duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "attack@trait_mul",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "過去の塵埃",
+          "description": "配置時、自身を中心に旋回し続ける「微塵」を3個生成する。「微塵」が味方ユニットに当たると消滅し、対象が受けるシヴィライト・エテルナの特性の効果が6秒間1.5倍になる。消滅した「微塵」は6秒後に再生する",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "range_radius",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "cooldown",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "dynamic_spd",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "talent_duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "attack@trait_mul",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "魔王の残響",
+          "description": "配置中、味方全員が敵【サルカズ】からの被ダメージ-10%",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "魔王の残響",
+          "description": "配置中、味方全員が敵【サルカズ】からの被ダメージ-15%<@ba.talpu>（+5%）</>",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_cetsyr",
       "moduleName": "シヴィライト・エテルナの記章",
-      "desc": "テレジアが「文明の存続」の中に残したプログラム。\n高度なシミュレーションによってその能力が再現されている。\nどこまでも広がる優しいアーツが、仲間を治癒し励ます。\n形式的な補助オペレーター試験に合格したため、アーミヤがシミュレートで構築した本記章を「授与」し、\nその記念とする。"
+      "desc": "テレジアが「文明の存続」の中に残したプログラム。\n高度なシミュレーションによってその能力が再現されている。\nどこまでも広がる優しいアーツが、仲間を治癒し励ます。\n形式的な補助オペレーター試験に合格したため、アーミヤがシミュレートで構築した本記章を「授与」し、\nその記念とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_cetsyr",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_cetsyr",
       "moduleName": "物語の結末",
-      "desc": ">ND_DWDB_READY\n>NEWUSER_CE\n>TIMEDATA_0106\nアーミヤは決して複雑な子ではない。\n彼女に関するすべてのデータをエンコードし保存したとしても、必要なメモリは一バイトにも満たない。テレジアの記憶の中にある彼女に関する内容を一緒にアーカイブしても、さほど変わらない。そのデータは、白色矮星を再び灯すための方程式と比べても、サイズに特に大きな違いはない。\n彼女が仕事を終えるまでそばにいてあげるのは、そう難しいことではない。彼女の世話は簡単だ。\nしかし、彼女が私を見つめるあの眼差し……そこに込められた感情を理解するには、もっとデータが必要だ。\n\n>TIMEDATA_0344\nアーミヤがデスクに突っ伏したまま悪夢にうなされていたため、彼女の夢に入り、傍らに寄り添った。\n悪夢を追い払う必要はない。これより恐ろしい現実をアーミヤはとっくに知っている。むしろ、彼女は夢で私に会えたことをとても喜び、おぞましい環境に囲まれながら興奮気味に最近の暮らしについて話してくれた。だけど、彼女が語るその日々の細かなことは、どれも私がすでに知り尽くしているものだ。なぜなら、私はずっと彼女のそばにいるのだから。\n唯一の失敗は、熟睡するアーミヤの口の端から流れ落ちるよだれを、どうしても拭えなかったこと。そのせいで、サインをし終えたばかりの書類がすべて台無しになってしまった。\n触れ合った時の感触から体温に至るまで、私はシミュレートすることができる……それでも、本当の意味で彼女に触れることは永遠に不可能だ。\n幸い、どうにかしてドクターに気づいてもらえたおかげで、私たちはアーミヤが起きてしまう前に、このちょっとしたトラブルを首尾よく解決できた。明け方、アーミヤとドクターはいつも通り、朝のあいさつを交わした。\nドクターは上手く隠し通したようだ。よろしい。\n\n>TIMEDATA_9032\nケルシーが私の意図に気づいた。\n彼女は秘かに私の元を訪れ、緊張した様子で、テレジアがどこか秘密の場所に未だ存在しているのではないか、確かめようとした。しかし彼女が得られたのは、またしても失望しかなかった。過去のいくつかのタイムスライスの中で、私が誰かを失望させたことは滅多になかった。だが、接触対象がケルシーとアーミヤの場合、私はあまりにも無力だ。\n夕食時、アーミヤがケルシーを慰めていた。私はアーミヤには何も話していないとケルシーに誓ったが、二人はそのことを特に気にしていないようだった。\n二人が気にしているのは、私がずっとここにいることだ。\n\n>TIMEDATA_4978\nアーミヤからどんな質問をされるのか、演算で予測するのをやめることにした。\n今や、彼女から質問を投げかけられてから、演算速度を低下させ、思考した後に回答を出力することに、すっかり慣れてしまった。\n今まで、数えきれないほどの生命体の感情モデルを分析してきたが、一度も困惑を覚えさせられたことはなかった。しかし、アーミヤは確かに私にまったく新しい感情を気づかせてくれた。それはアーミヤが特別だからか……それとも私が特別だからか。\nまさか、本当にテレジアの記憶データが、私の演算ロジックに影響を及ぼしているのだろうか？時間の果てに必ず答えはある。そして、永遠の存在である私はいつか必ずその答えに辿り着けるのだ。\n少なくとも、一つわかったことがある。アーミヤは決して複雑な子ではないということだ。\n彼女が私を見つめるあの眼差しを、私もできるようになった。\n>ND_DWDB_CLOSED\n\n「あれ、開かない……このファイルの閲覧権限ってこんなに高いんですか？中に何が入っているんですか？」\n「いくつかのデータの記録よ、アーミヤ。物語が入っているの。私の、そしてあなたの。」\nそしてそれは、私だけのものだ。"
+      "desc": ">ND_DWDB_READY\n>NEWUSER_CE\n>TIMEDATA_0106\nアーミヤは決して複雑な子ではない。\n彼女に関するすべてのデータをエンコードし保存したとしても、必要なメモリは一バイトにも満たない。テレジアの記憶の中にある彼女に関する内容を一緒にアーカイブしても、さほど変わらない。そのデータは、白色矮星を再び灯すための方程式と比べても、サイズに特に大きな違いはない。\n彼女が仕事を終えるまでそばにいてあげるのは、そう難しいことではない。彼女の世話は簡単だ。\nしかし、彼女が私を見つめるあの眼差し……そこに込められた感情を理解するには、もっとデータが必要だ。\n\n>TIMEDATA_0344\nアーミヤがデスクに突っ伏したまま悪夢にうなされていたため、彼女の夢に入り、傍らに寄り添った。\n悪夢を追い払う必要はない。これより恐ろしい現実をアーミヤはとっくに知っている。むしろ、彼女は夢で私に会えたことをとても喜び、おぞましい環境に囲まれながら興奮気味に最近の暮らしについて話してくれた。だけど、彼女が語るその日々の細かなことは、どれも私がすでに知り尽くしているものだ。なぜなら、私はずっと彼女のそばにいるのだから。\n唯一の失敗は、熟睡するアーミヤの口の端から流れ落ちるよだれを、どうしても拭えなかったこと。そのせいで、サインをし終えたばかりの書類がすべて台無しになってしまった。\n触れ合った時の感触から体温に至るまで、私はシミュレートすることができる……それでも、本当の意味で彼女に触れることは永遠に不可能だ。\n幸い、どうにかしてドクターに気づいてもらえたおかげで、私たちはアーミヤが起きてしまう前に、このちょっとしたトラブルを首尾よく解決できた。明け方、アーミヤとドクターはいつも通り、朝のあいさつを交わした。\nドクターは上手く隠し通したようだ。よろしい。\n\n>TIMEDATA_9032\nケルシーが私の意図に気づいた。\n彼女は秘かに私の元を訪れ、緊張した様子で、テレジアがどこか秘密の場所に未だ存在しているのではないか、確かめようとした。しかし彼女が得られたのは、またしても失望しかなかった。過去のいくつかのタイムスライスの中で、私が誰かを失望させたことは滅多になかった。だが、接触対象がケルシーとアーミヤの場合、私はあまりにも無力だ。\n夕食時、アーミヤがケルシーを慰めていた。私はアーミヤには何も話していないとケルシーに誓ったが、二人はそのことを特に気にしていないようだった。\n二人が気にしているのは、私がずっとここにいることだ。\n\n>TIMEDATA_4978\nアーミヤからどんな質問をされるのか、演算で予測するのをやめることにした。\n今や、彼女から質問を投げかけられてから、演算速度を低下させ、思考した後に回答を出力することに、すっかり慣れてしまった。\n今まで、数えきれないほどの生命体の感情モデルを分析してきたが、一度も困惑を覚えさせられたことはなかった。しかし、アーミヤは確かに私にまったく新しい感情を気づかせてくれた。それはアーミヤが特別だからか……それとも私が特別だからか。\nまさか、本当にテレジアの記憶データが、私の演算ロジックに影響を及ぼしているのだろうか？時間の果てに必ず答えはある。そして、永遠の存在である私はいつか必ずその答えに辿り着けるのだ。\n少なくとも、一つわかったことがある。アーミヤは決して複雑な子ではないということだ。\n彼女が私を見つめるあの眼差しを、私もできるようになった。\n>ND_DWDB_CLOSED\n\n「あれ、開かない……このファイルの閲覧権限ってこんなに高いんですか？中に何が入っているんですか？」\n「いくつかのデータの記録よ、アーミヤ。物語が入っているの。私の、そしてあなたの。」\nそしてそれは、私だけのものだ。",
+      "typeIcon": "bar-x",
+      "uniEquipIcon": "uniequip_002_cetsyr",
+      "typeName1": "BAR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_cetsyr_1",
+        "uniequip_002_cetsyr_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に他のオペレーターが2名以上いる場合、自身の攻撃力<@ba.kw>+8%</>（スキルの影響を受けない）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 238,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に他のオペレーターが2名以上いる場合、自身の攻撃力<@ba.kw>+8%</>（スキルの影響を受けない）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置時、自身を中心に旋回し続ける「微塵」を3個生成する。「微塵」が味方ユニットに当たると消滅し、対象が受けるシヴィライト・エテルナの特性の効果が6秒間1.6倍になる。消滅した「微塵」は6秒後に再生する。「微塵」がオペレーターに当たった際に対象のHPをシヴィライト・エテルナの攻撃力の20%治療する",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "過去の塵埃",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "range_radius",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cooldown",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "dynamic_spd",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_duration",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@trait_mul",
+                      "value": 1.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@ability_name",
+                      "value": 0,
+                      "valueStr": "e1"
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 280,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 27,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に他のオペレーターが2名以上いる場合、自身の攻撃力<@ba.kw>+8%</>（スキルの影響を受けない）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置時、自身を中心に旋回し続ける「微塵」を3個生成する。「微塵」が味方ユニットに当たると消滅し、対象が受けるシヴィライト・エテルナの特性の効果が6秒間1.6倍になる。消滅した「微塵」は6秒後に再生する。「微塵」がオペレーターに当たった際に対象のHPをシヴィライト・エテルナの攻撃力の30%治療する",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "過去の塵埃",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "range_radius",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cooldown",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "dynamic_spd",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_duration",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@trait_mul",
+                      "value": 1.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@ability_name",
+                      "value": 0,
+                      "valueStr": "e1"
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1619,5 +2368,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

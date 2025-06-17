@@ -150,6 +150,7 @@
       "cost": 32
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_464_cement#1",
@@ -624,16 +625,658 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+27",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 27,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 40,
+        "def": 60,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "図面チェック",
+          "description": "物理の被ダメージ-6%。配置から35秒後に効果値倍増",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.06,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance_addtion",
+              "value": 0.06,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "図面チェック",
+          "description": "物理の被ダメージ-9%<@ba.talpu>（+3%）</>。配置から35秒後に効果値倍増",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.09,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance_addtion",
+              "value": 0.09,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "図面チェック",
+          "description": "物理の被ダメージ-12%。配置から35秒後に効果値倍増",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance_addtion",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "図面チェック",
+          "description": "物理の被ダメージ-15%<@ba.talpu>（+3%）</>。配置から35秒後に効果値倍増",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance_addtion",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_cement",
       "moduleName": "セメントの記章",
-      "desc": "セメントは攻撃を防ぐと同時に敵へ攻撃を行うことに秀でている。\n外勤部門の決定に基づき\n外勤任務においては重装オペレーターとして区分し、決闘者の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "セメントは攻撃を防ぐと同時に敵へ攻撃を行うことに秀でている。\n外勤部門の決定に基づき\n外勤任務においては重装オペレーターとして区分し、決闘者の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_cement",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_cement",
       "moduleName": "工事レコーダー",
-      "desc": "「やっと見つけた、いやあ肝を冷やしたぜ。明日の現場でこいつを着けてなかったら、親方にどやされちまってた。しかし親方がみんなにこの、なんつったっけ……工事レコーダー？ってのを着けさせるのはどうしてなんだろうな。」\n「俺が知るかっての。つーかそれ、録画しっぱなしじゃねぇか。どうやって失くしたのか見てみたらどうだ？」\n「そうだな。」\n\n【モニター画面】一人の作業員が退勤に向けて服を着替える前に、工事レコーダーを外して置いていっている。\n「ハハッ、誰かに盗られたとか言ってなかったか？自分がおっちょこちょいだから失くしただけじゃねぇか。」\n「うるせえ。」\n\n【モニター画面】作業員たちが出て行った後、シャナが突然工事現場にやってくる。\n「あれ、親方じゃねぇか？」\n\n【モニター画面】シャナが備品の損耗状況をチェックしつつ、動作に不調がある工具を整備していく。それから一台のボーリングマシンの前で足を止めた彼女は、ノートを取り出して何かを書き込み始める。\n「おかしいと思ってたんだ。うちの建設隊は少人数過ぎて整備士だっていねぇのに、どの工具もいつも不備なく動いてたからな。親方がやってくれてたんだな。」\n「たしかに、おととい岩盤を掘ってた時、ブロックの奴のボーリングマシンは調子悪そうだったもんな。みんなは騙し騙し使っていこうなんて言ってたけど、親方は見逃さねぇってわけだ。」\n「うちのドリルがどこのより使いやすいのも、全部親方が改造してくれたおかげだしな。あの人は本当にプロだよ。」\n\n【モニター画面】シャナはそのまま最近の施工状況のチェックを始める。すでに施工が完了した工事のチェックをしていた時、彼女は少し考え込む様子を見せ、工事レコーダーを取り出して確認し始める。\n「あそこは確かジャレンが家族に電話しなきゃとか何とか言って、急いで終わらせてたところだよな。俺もなんとなく違和感があったんだが、忙しすぎてじっくり確認はできてなかった。」\n「シッ、親方が何か言ってるぞ……『コンクリートの厚みが三センチ足りない』だってよ。こいつはでけえ欠陥だな。なるほど、レコーダーってのはこう使うのか。」\n\n【モニター画面】シャナがチェックの合間にミントキャンディの包みを開けるも、運悪くそれを地面に落としてしまった。彼女はそれを拾い上げ、飴に付いたほこりを吹き飛ばすと、何事もなかったかのように口に入れる。\n「いやぁ、親方って普段は元気ハツラツって感じだが、採掘場に入ったら……俺たちと同じように苦労をしてんだな。」\n「あの人みたいな良い親方には、今まで働いて来た中でも一人しか会ったことねぇや。」\n「なんだ、他にもいるってのか？」\n「ああ、昔の親方でな。そこそこ歳がいった親父さんだが、俺たち感染者を差別したりしなかった。よく娘さんを採掘場に連れてきては、俺たちと一緒に飯を食べてたっけ……俺は一生あの人についていくつもりだったが、ある工事の時に事故が起きちまって、施工隊は解散に追いやられたんだ。」\n「そいつぁ残念だったな。」\n「もう十何年も前のことだけど、あの人の名字はまだ覚えてるよ。たしか……モーイマンさんだったはずだ。」\n「おい……うちの親方の名前は、シャナ・モーイマンだぞ。」"
+      "desc": "「やっと見つけた、いやあ肝を冷やしたぜ。明日の現場でこいつを着けてなかったら、親方にどやされちまってた。しかし親方がみんなにこの、なんつったっけ……工事レコーダー？ってのを着けさせるのはどうしてなんだろうな。」\n「俺が知るかっての。つーかそれ、録画しっぱなしじゃねぇか。どうやって失くしたのか見てみたらどうだ？」\n「そうだな。」\n\n【モニター画面】一人の作業員が退勤に向けて服を着替える前に、工事レコーダーを外して置いていっている。\n「ハハッ、誰かに盗られたとか言ってなかったか？自分がおっちょこちょいだから失くしただけじゃねぇか。」\n「うるせえ。」\n\n【モニター画面】作業員たちが出て行った後、シャナが突然工事現場にやってくる。\n「あれ、親方じゃねぇか？」\n\n【モニター画面】シャナが備品の損耗状況をチェックしつつ、動作に不調がある工具を整備していく。それから一台のボーリングマシンの前で足を止めた彼女は、ノートを取り出して何かを書き込み始める。\n「おかしいと思ってたんだ。うちの建設隊は少人数過ぎて整備士だっていねぇのに、どの工具もいつも不備なく動いてたからな。親方がやってくれてたんだな。」\n「たしかに、おととい岩盤を掘ってた時、ブロックの奴のボーリングマシンは調子悪そうだったもんな。みんなは騙し騙し使っていこうなんて言ってたけど、親方は見逃さねぇってわけだ。」\n「うちのドリルがどこのより使いやすいのも、全部親方が改造してくれたおかげだしな。あの人は本当にプロだよ。」\n\n【モニター画面】シャナはそのまま最近の施工状況のチェックを始める。すでに施工が完了した工事のチェックをしていた時、彼女は少し考え込む様子を見せ、工事レコーダーを取り出して確認し始める。\n「あそこは確かジャレンが家族に電話しなきゃとか何とか言って、急いで終わらせてたところだよな。俺もなんとなく違和感があったんだが、忙しすぎてじっくり確認はできてなかった。」\n「シッ、親方が何か言ってるぞ……『コンクリートの厚みが三センチ足りない』だってよ。こいつはでけえ欠陥だな。なるほど、レコーダーってのはこう使うのか。」\n\n【モニター画面】シャナがチェックの合間にミントキャンディの包みを開けるも、運悪くそれを地面に落としてしまった。彼女はそれを拾い上げ、飴に付いたほこりを吹き飛ばすと、何事もなかったかのように口に入れる。\n「いやぁ、親方って普段は元気ハツラツって感じだが、採掘場に入ったら……俺たちと同じように苦労をしてんだな。」\n「あの人みたいな良い親方には、今まで働いて来た中でも一人しか会ったことねぇや。」\n「なんだ、他にもいるってのか？」\n「ああ、昔の親方でな。そこそこ歳がいった親父さんだが、俺たち感染者を差別したりしなかった。よく娘さんを採掘場に連れてきては、俺たちと一緒に飯を食べてたっけ……俺は一生あの人についていくつもりだったが、ある工事の時に事故が起きちまって、施工隊は解散に追いやられたんだ。」\n「そいつぁ残念だったな。」\n「もう十何年も前のことだけど、あの人の名字はまだ覚えてるよ。たしか……モーイマンさんだったはずだ。」\n「おい……うちの親方の名前は、シャナ・モーイマンだぞ。」",
+      "typeIcon": "hes-x",
+      "uniEquipIcon": "uniequip_002_cement",
+      "typeName1": "HES",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_cement_1",
+        "uniequip_002_cement_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "SPの自然回復速度が遅い\n敵をブロック中のみSPの自然回復速度が通常の速度に戻る",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 42,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 75,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "SPの自然回復速度が遅い\n敵をブロック中のみSPの自然回復速度が通常の速度に戻る",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "物理の被ダメージ-14%。配置から35秒後に効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "図面チェック",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance_addtion",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "物理の被ダメージ-17%<@ba.talpu>（+3%）</>。配置から35秒後に効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "図面チェック",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.17,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance_addtion",
+                      "value": 0.17,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 57,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 100,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "SPの自然回復速度が遅い\n敵をブロック中のみSPの自然回復速度が通常の速度に戻る",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "物理の被ダメージ-16%。配置から35秒後に効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "図面チェック",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.16,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance_addtion",
+                      "value": 0.16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "物理の被ダメージ-19%<@ba.talpu>（+3%）</>。配置から35秒後に効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "図面チェック",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.19,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance_addtion",
+                      "value": 0.19,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1087,5 +1730,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -150,6 +150,7 @@
       "cost": 12
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_174_slbell#1",
@@ -620,16 +621,610 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "術耐性+8",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAGIC_RESISTANCE",
+              "formulaItem": "ADDITION",
+              "value": 8,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 65,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "弱体化",
+          "description": "攻撃範囲内のHPが40％未満の敵に15%の<$ba.fragile>脆弱</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "弱体化",
+          "description": "攻撃範囲内のHPが40％未満の敵に18%<@ba.talpu>（+3%）</>の<$ba.fragile>脆弱</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "弱体化",
+          "description": "攻撃範囲内のHPが40％未満の敵に30%の<$ba.fragile>脆弱</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "弱体化",
+          "description": "攻撃範囲内のHPが40％未満の敵に33%<@ba.talpu>（+3%）</>の<$ba.fragile>脆弱</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.33,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "ハーモニー",
+          "description": "攻撃対象数+1",
+          "blackboard": [
+            {
+              "key": "attack@max_target",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_slbell",
       "moduleName": "プラマニクスの記章",
-      "desc": "プラマニクスは鈴の音色を操って敵を弱らせることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、呪詛師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "プラマニクスは鈴の音色を操って敵を弱らせることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、呪詛師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_slbell",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_slbell",
       "moduleName": "「編み物の続き」",
-      "desc": "暗い瞑想室の中、暖炉の炎が疲れを知らずに燃え続けている。\n歴代のイェラグの巫女たちは経典の釈義を終えたあと、皆ここに座り静かに瞑想しながら、雪境の生きとし生けるものたちについて思いを巡らせるのだ。\n「エンヤ……エンヤ！」\nその声に目を覚ましたエンヤは口元を拭うと、熱気で火照った頬を擦りながらはにかんだ。\n「ごめんなさい、ヤエル……」\n「シルバーアッシュ家の当主、エンシオディスがいらしてたわよ。」\n「そうでしたか。面会の要望はありましたか？」\n「いいえ。巫女への祝福の言葉をいくつか捧げたあと、これをあなたに渡すように言って、帰っていったわ。」\nエンヤは侍女の手から、表面に細かい模様が彫られた、精巧な作りの小さな鈴を受け取った。\n彼女が鈴を軽くゆらすと、部屋中に美しい音色が響き渡る。\n「巫女への献上品ですって。シルバーアッシュ領の工場で作ったもので、谷地の田園には似たような鈴がたくさん吊るされているらしいわよ。」\nエンヤはその鈴をじっと見つめる。\nエンシオディスの言わんとすることはわかっていた。\n彼女には子供の頃、エンシオディスと一緒に、父の工場で廃棄された鉄片を使って鈴を作ったことがある。\nそのあとエンシアも連れて、完成した鈴を広大な田園に吊るし、通り過ぎる風が音色を奏でるのを待っていたものだ。\n「すみませんが、これまでの献上品と一緒にしまっておいてもらえますか。」\n言うとしばし迷ってから、彼女は侍女を呼び止めた。\n「ついでに、ベッドの横にある棚の、一番下の引き出しに入っている物を取ってきてください。」\n戻ってきた侍女の手の中には、途中まで編まれた男物のマフラーがあった。\n柔らかな毛糸がいくつも編み込まれているそれはしっかりと分厚く、針目には寸分の狂いもなく、すでに完成している部分は文句なしの出来だった。\n「これは……」\n「エンシオディスがまだヴィクトリアにいた頃、彼のために編んでいたマフラーです。彼が帰ってきた時に渡したかったのですが、色々あってまだ未完成で。」\n「こんなに長い間持っていたなんて……彼にまだほんの僅かでも期待しているのね。」\n「私は巫女になってからというもの、ここにある経典すべてを読み尽くしてきました。中にはイェラグの千年もの歴史や、果てはカランドが万物に与えた答えまでもが記されていましたが、たった一つだけ、経典に答えが記されていないことがあったのです。」\n「へえ、何かしら？」\n「織物の編み方です。」\nエンヤは急に黙り込み――昔、父が窓辺に座って顔に陽の光を浴びながら、子供たちのためにマフラーを編んでいた姿を思い出した。\nその時、兄は外で剣術の鍛錬に励み、妹は山の画集を眺めていた。\nそして父のそばに座ったエンヤは、その手の動きを静かに眺めながら、一連の動きをすべて頭に刻み込んだものだ。\n彼女はそうして編み物を覚えた。\n\n経典には多くの知識が記されているが、永遠に答えの見つからない問題もある。\nだが、彼女はすでに編み物や家族、そして未来についての答えを知っているのかもしれない。\n「明日はいよいよ三家会議の日でしたね。」\n「ええ。明日は、ほかの二家が手を組んでシルバーアッシュ家を非難するでしょうね。エンシオディスはどう対応するのかしら……」\n「彼がどうするにせよ、最終的には私が始末をつけることになるでしょう。」\n「どうしてそう言い切れるの？」\n「彼も私も……『シルバーアッシュ』ですから。」\nそこまで言うとエンヤは不意に立ち上がり、侍女の予想だにしない行動を取った。\n彼女は分厚いカーテンを思い切り開いたのだ。\n千年の時を経て、この暗い部屋に初めて日の光が差し込む。\n光に照らされた彼女の指の間で、編み針と毛糸が舞い踊る。\nすでに編み終えた糸の中に、新たな糸が織り込まれていく。\n誰のためでもなく、ただマフラーを編み終える未来へ向けて、彼女はひたすらに編み続けた。\n「シルバーアッシュ家の子らは、それぞれの道へと踏み出すのです。」"
+      "desc": "暗い瞑想室の中、暖炉の炎が疲れを知らずに燃え続けている。\n歴代のイェラグの巫女たちは経典の釈義を終えたあと、皆ここに座り静かに瞑想しながら、雪境の生きとし生けるものたちについて思いを巡らせるのだ。\n「エンヤ……エンヤ！」\nその声に目を覚ましたエンヤは口元を拭うと、熱気で火照った頬を擦りながらはにかんだ。\n「ごめんなさい、ヤエル……」\n「シルバーアッシュ家の当主、エンシオディスがいらしてたわよ。」\n「そうでしたか。面会の要望はありましたか？」\n「いいえ。巫女への祝福の言葉をいくつか捧げたあと、これをあなたに渡すように言って、帰っていったわ。」\nエンヤは侍女の手から、表面に細かい模様が彫られた、精巧な作りの小さな鈴を受け取った。\n彼女が鈴を軽くゆらすと、部屋中に美しい音色が響き渡る。\n「巫女への献上品ですって。シルバーアッシュ領の工場で作ったもので、谷地の田園には似たような鈴がたくさん吊るされているらしいわよ。」\nエンヤはその鈴をじっと見つめる。\nエンシオディスの言わんとすることはわかっていた。\n彼女には子供の頃、エンシオディスと一緒に、父の工場で廃棄された鉄片を使って鈴を作ったことがある。\nそのあとエンシアも連れて、完成した鈴を広大な田園に吊るし、通り過ぎる風が音色を奏でるのを待っていたものだ。\n「すみませんが、これまでの献上品と一緒にしまっておいてもらえますか。」\n言うとしばし迷ってから、彼女は侍女を呼び止めた。\n「ついでに、ベッドの横にある棚の、一番下の引き出しに入っている物を取ってきてください。」\n戻ってきた侍女の手の中には、途中まで編まれた男物のマフラーがあった。\n柔らかな毛糸がいくつも編み込まれているそれはしっかりと分厚く、針目には寸分の狂いもなく、すでに完成している部分は文句なしの出来だった。\n「これは……」\n「エンシオディスがまだヴィクトリアにいた頃、彼のために編んでいたマフラーです。彼が帰ってきた時に渡したかったのですが、色々あってまだ未完成で。」\n「こんなに長い間持っていたなんて……彼にまだほんの僅かでも期待しているのね。」\n「私は巫女になってからというもの、ここにある経典すべてを読み尽くしてきました。中にはイェラグの千年もの歴史や、果てはカランドが万物に与えた答えまでもが記されていましたが、たった一つだけ、経典に答えが記されていないことがあったのです。」\n「へえ、何かしら？」\n「織物の編み方です。」\nエンヤは急に黙り込み――昔、父が窓辺に座って顔に陽の光を浴びながら、子供たちのためにマフラーを編んでいた姿を思い出した。\nその時、兄は外で剣術の鍛錬に励み、妹は山の画集を眺めていた。\nそして父のそばに座ったエンヤは、その手の動きを静かに眺めながら、一連の動きをすべて頭に刻み込んだものだ。\n彼女はそうして編み物を覚えた。\n\n経典には多くの知識が記されているが、永遠に答えの見つからない問題もある。\nだが、彼女はすでに編み物や家族、そして未来についての答えを知っているのかもしれない。\n「明日はいよいよ三家会議の日でしたね。」\n「ええ。明日は、ほかの二家が手を組んでシルバーアッシュ家を非難するでしょうね。エンシオディスはどう対応するのかしら……」\n「彼がどうするにせよ、最終的には私が始末をつけることになるでしょう。」\n「どうしてそう言い切れるの？」\n「彼も私も……『シルバーアッシュ』ですから。」\nそこまで言うとエンヤは不意に立ち上がり、侍女の予想だにしない行動を取った。\n彼女は分厚いカーテンを思い切り開いたのだ。\n千年の時を経て、この暗い部屋に初めて日の光が差し込む。\n光に照らされた彼女の指の間で、編み針と毛糸が舞い踊る。\nすでに編み終えた糸の中に、新たな糸が織り込まれていく。\n誰のためでもなく、ただマフラーを編み終える未来へ向けて、彼女はひたすらに編み続けた。\n「シルバーアッシュ家の子らは、それぞれの道へと踏み出すのです。」",
+      "typeIcon": "umd-x",
+      "uniEquipIcon": "uniequip_002_slbell",
+      "typeName1": "UMD",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_slbell_1",
+        "uniequip_002_slbell_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "対象に10%の<$ba.weaken>虚弱</>効果を2秒間付与する",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": -0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "対象に10%の<$ba.weaken>虚弱</>効果を2秒間付与する",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": -0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃対象数+1、攻撃時20%の確率で対象を1秒間<$ba.cold>寒冷</>状態にする",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "ハーモニー",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@max_target",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cold",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 8,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "対象に10%の<$ba.weaken>虚弱</>効果を2秒間付与する",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": -0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃対象数+1、攻撃時25%の確率で対象を1秒間<$ba.cold>寒冷</>状態にする",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "ハーモニー",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@max_target",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cold",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1083,5 +1678,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

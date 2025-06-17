@@ -151,6 +151,28 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "sluggish",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4122_grabds#1",
@@ -625,16 +647,690 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 65,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "「いい子にしてて」",
+          "description": "攻撃速度+6。攻撃対象が【野生動物】である場合、特性による<$ba.sluggish>足止め</>効果の効果時間をやや延長",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish_addition",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "「いい子にしてて」",
+          "description": "攻撃速度+8<@ba.talpu>（+2）</>。攻撃対象が【野生動物】である場合、特性による<$ba.sluggish>足止め</>の効果時間をやや延長",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish_addition",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "「いい子にしてて」",
+          "description": "攻撃速度+10。攻撃対象が【野生動物】である場合、特性による<$ba.sluggish>足止め</>の効果時間を延長",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 10,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish_addition",
+              "value": 0.4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "「いい子にしてて」",
+          "description": "攻撃速度+12<@ba.talpu>（+2）</>。攻撃対象が【野生動物】である場合、特性による<$ba.sluggish>足止め</>の効果時間を延長",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 12,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish_addition",
+              "value": 0.4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_grabds",
       "moduleName": "グレインバッズの記章",
-      "desc": "グレインバッズは敵の牽制に秀でている \n外勤部門の決定に基づき \n外勤任務においては補助オペレーターとして区分し、緩速師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "グレインバッズは敵の牽制に秀でている \n外勤部門の決定に基づき \n外勤任務においては補助オペレーターとして区分し、緩速師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_grabds",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_grabds",
       "moduleName": "田野にて",
-      "desc": "5月10日\n巡り巡って、この社会体験研修というものは、やはり僕を大荒城へと連れてきた。気候や訛りになじめないのはもちろん、ここの酸菜（さんさい）はしょっぱいと聞いた！これから一年、一体どうなってしまうんだろう。\nここに来てからというもの、うまくいかないことばかりだ。人と話したくても、口を開けば焦って早口になってしまうし、言葉はうまく伝わらないし、牧獣にさえ逃げられてる！\n\n5月21日\n不思議な女の子に出会った。彼女はつま先立ちで牧獣の背中に立って、そこかしこを飛び回っていた。最初に見かけた時は牧獣の群れに羽獣でも舞い降りたのかと思ったほどだ。ぬかるみを慎重に一歩ずつ踏みしめて歩く僕を見て、彼女はくつくつと笑った。\n「おまぬけさん！」と彼女は言った。\n僕は思わず戸惑った。\n「靴を脱ぎなよ！」\nそう言われて、僕はさらに困惑した。\n「牧獣の背中を飛び移っていけば、泥の中を歩かなくてもいいでしょ。あたしが教えてあげる！」\nその日、僕は八回も牧獣の背中から落ちた。そのせいで口に入った泥は、一日分の食事よりも多かった。彼女は僕の背中を叩きながら、耳羽を震わせて笑っていた。災難といえば災難だけど、彼女の笑顔を見てると、なんだか悪くない気がした。\n\n7月8日\n今日、あの女の子は牧獣の囲いの近くにしゃがみ込み、頭を揺らしてオカリナを吹いていた。\n「泥壺くん！早く早く！」\n誰のことだろう、とその時は思った。\n「あなた、ここへ来たばかりでしょ？この間言いそびれちゃったね。あたしはシャオマンって言うの！」\nそこで、もしかすると、泥壺くんというのは僕のことだろうか、と察した。\n「ねぇ、牧獣と話してみたくない？あたしの特技なんだよ！他では教えてもらえないんだからね！」\n彼女は片手を僕の顔に、もう片方の手を牧獣の顔に添えて、目を合わさせた。牧獣の潤んだ瞳を間近で見た僕は牧獣にも人間と同じように喜怒哀楽があることを初めて知った。それ以降、僕の声を聞いても牧獣は逃げなくなった。道端を歩くだけでも牙獣に追いかけられる僕に、動物の友達ができるなんて想像したこともなかった。\n\n10月4日\n僕がシャオマンを探していると、彼女は学生らしき男の子と一緒に小さな骨を投げ上げては受け止めてを繰り返していた。何やら変わった遊びをしているようだ。\n「泥壺くん！一緒に遊ぼう！」\nうん、と僕は答えた。\n「この子は『でか角くん』だよ。あなたたち、まだ会ったことなかったっけ？」\nううん、と僕は答えた。\n「シュウ姉ちゃんがスープを作ってたから、出汁を取るのに使った骨をもらってきたんだ。何の骨かは知らないけど……でか角くんはどう思う？そうだ、泥壺くんにはあなたが教えてあげてよ！」\n\"牧獣の足の骨が遊び道具になるなんて、知らなかった。でも僕は下手くそで、何度やってもうまく受け止められないばかりか、二人の頭にぶつけまくってしまった。\nとはいえ、でか角くんもとてもいい人で、僕と同じく口数が多いわけではないけど、仕事の時は毎回僕を連れていってくれる。シャオマンのほうは、牧獣の背中に寝そべっていたり、木にぶら下がっていたりで、手を貸してくれることもあるけど、無理やり遊びに連れていかれることもある。\nそんな毎日を送るうちに、この果てしなく広がる田野が最近は少し馴染みのある景色に思えてきた。\"\n\n5月20日\n車に乗って大荒城を出る時、田水田を歩く牧獣の群れが目の前を通り過ぎた。あのまるまるとした生き物の姿が徐々に小さくなっていくにつれて、ちょうど一年前、初めて大荒城に来た時のような不安が再び襲ってきた。大荒城の田野や牧獣をもう見られないのはもちろん、シャオマンやでか角くんのような優しい友達は学校にはいないだろうと思った。この先の二年間、どうやって過ごせばいいんだろう。"
+      "desc": "5月10日\n巡り巡って、この社会体験研修というものは、やはり僕を大荒城へと連れてきた。気候や訛りになじめないのはもちろん、ここの酸菜（さんさい）はしょっぱいと聞いた！これから一年、一体どうなってしまうんだろう。\nここに来てからというもの、うまくいかないことばかりだ。人と話したくても、口を開けば焦って早口になってしまうし、言葉はうまく伝わらないし、牧獣にさえ逃げられてる！\n\n5月21日\n不思議な女の子に出会った。彼女はつま先立ちで牧獣の背中に立って、そこかしこを飛び回っていた。最初に見かけた時は牧獣の群れに羽獣でも舞い降りたのかと思ったほどだ。ぬかるみを慎重に一歩ずつ踏みしめて歩く僕を見て、彼女はくつくつと笑った。\n「おまぬけさん！」と彼女は言った。\n僕は思わず戸惑った。\n「靴を脱ぎなよ！」\nそう言われて、僕はさらに困惑した。\n「牧獣の背中を飛び移っていけば、泥の中を歩かなくてもいいでしょ。あたしが教えてあげる！」\nその日、僕は八回も牧獣の背中から落ちた。そのせいで口に入った泥は、一日分の食事よりも多かった。彼女は僕の背中を叩きながら、耳羽を震わせて笑っていた。災難といえば災難だけど、彼女の笑顔を見てると、なんだか悪くない気がした。\n\n7月8日\n今日、あの女の子は牧獣の囲いの近くにしゃがみ込み、頭を揺らしてオカリナを吹いていた。\n「泥壺くん！早く早く！」\n誰のことだろう、とその時は思った。\n「あなた、ここへ来たばかりでしょ？この間言いそびれちゃったね。あたしはシャオマンって言うの！」\nそこで、もしかすると、泥壺くんというのは僕のことだろうか、と察した。\n「ねぇ、牧獣と話してみたくない？あたしの特技なんだよ！他では教えてもらえないんだからね！」\n彼女は片手を僕の顔に、もう片方の手を牧獣の顔に添えて、目を合わさせた。牧獣の潤んだ瞳を間近で見た僕は牧獣にも人間と同じように喜怒哀楽があることを初めて知った。それ以降、僕の声を聞いても牧獣は逃げなくなった。道端を歩くだけでも牙獣に追いかけられる僕に、動物の友達ができるなんて想像したこともなかった。\n\n10月4日\n僕がシャオマンを探していると、彼女は学生らしき男の子と一緒に小さな骨を投げ上げては受け止めてを繰り返していた。何やら変わった遊びをしているようだ。\n「泥壺くん！一緒に遊ぼう！」\nうん、と僕は答えた。\n「この子は『でか角くん』だよ。あなたたち、まだ会ったことなかったっけ？」\nううん、と僕は答えた。\n「シュウ姉ちゃんがスープを作ってたから、出汁を取るのに使った骨をもらってきたんだ。何の骨かは知らないけど……でか角くんはどう思う？そうだ、泥壺くんにはあなたが教えてあげてよ！」\n\"牧獣の足の骨が遊び道具になるなんて、知らなかった。でも僕は下手くそで、何度やってもうまく受け止められないばかりか、二人の頭にぶつけまくってしまった。\nとはいえ、でか角くんもとてもいい人で、僕と同じく口数が多いわけではないけど、仕事の時は毎回僕を連れていってくれる。シャオマンのほうは、牧獣の背中に寝そべっていたり、木にぶら下がっていたりで、手を貸してくれることもあるけど、無理やり遊びに連れていかれることもある。\nそんな毎日を送るうちに、この果てしなく広がる田野が最近は少し馴染みのある景色に思えてきた。\"\n\n5月20日\n車に乗って大荒城を出る時、田水田を歩く牧獣の群れが目の前を通り過ぎた。あのまるまるとした生き物の姿が徐々に小さくなっていくにつれて、ちょうど一年前、初めて大荒城に来た時のような不安が再び襲ってきた。大荒城の田野や牧獣をもう見られないのはもちろん、シャオマンやでか角くんのような優しい友達は学校にはいないだろうと思った。この先の二年間、どうやって過ごせばいいんだろう。",
+      "typeIcon": "dec-x",
+      "uniEquipIcon": "uniequip_002_grabds",
+      "typeName1": "DEC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_grabds_1",
+        "uniequip_002_grabds_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵がいるとき、SPの自然回復速度+0.2sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵がいるとき、SPの自然回復速度+0.2sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃速度+12。攻撃対象が【野生動物】である場合、特性による<$ba.sluggish>足止め</>の効果時間をさらに延長",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "「いい子にしてて」",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sluggish_addition",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃速度+14<@ba.talpu>（+2）</>。攻撃対象が【野生動物】である場合、特性による<$ba.sluggish>足止め</>の効果時間をさらに延長",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "「いい子にしてて」",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 14,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sluggish_addition",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 41,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵がいるとき、SPの自然回復速度+0.2sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃速度+14。攻撃対象が【野生動物】である場合、特性による<$ba.sluggish>足止め</>の効果時間を大幅に延長",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "「いい子にしてて」",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 14,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sluggish_addition",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃速度+16<@ba.talpu>（+2）</>。攻撃対象が【野生動物】である場合、特性による<$ba.sluggish>足止め</>の効果時間を大幅に延長",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "「いい子にしてて」",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 16,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sluggish_addition",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1088,5 +1784,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

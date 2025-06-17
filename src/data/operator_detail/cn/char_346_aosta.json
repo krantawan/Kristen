@@ -153,6 +153,28 @@
       "cost": 31
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": "1-3"
+    }
+  ],
   "skins": [
     {
       "skinId": "char_346_aosta#1",
@@ -643,16 +665,622 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+26",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 65,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "尖钉",
+          "description": "攻击使未被阻挡的敌人流血，每秒受到相当于奥斯塔攻击力12%的法术伤害（不受特性影响），持续3秒",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "尖钉",
+          "description": "攻击使未被阻挡的敌人流血，每秒受到相当于奥斯塔攻击力14%<@ba.talpu>（+2%）</>的法术伤害（不受特性影响），持续3秒",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 0.14,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "尖钉",
+          "description": "攻击使未被阻挡的敌人流血，每秒受到相当于奥斯塔攻击力18%的法术伤害（不受特性影响），持续3秒",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 0.18,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "尖钉",
+          "description": "攻击使未被阻挡的敌人流血，每秒受到相当于奥斯塔攻击力20%<@ba.talpu>（+2%）</>的法术伤害（不受特性影响），持续3秒",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_aosta",
       "moduleName": "奥斯塔证章",
-      "desc": "干员奥斯塔擅长近距离射击并对复数敌人进行火力压制\n根据外勤部门决议\n在外勤任务中划分为狙击干员，行使散射手职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员奥斯塔擅长近距离射击并对复数敌人进行火力压制\n根据外勤部门决议\n在外勤任务中划分为狙击干员，行使散射手职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_aosta",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_aosta",
       "moduleName": "逃亡路上的应急小包",
-      "desc": "夜晚的拉克玛蒂瓦城街头，抄着家伙的流氓到处徘徊着。他们搜寻的目标正躲在小巷里。\n“奥斯塔，我有个主意。我们戴个假发，换身行头，混进杂技团里出城。”\n“嘘，小点声。不要把脸伸出去。”\n“你别小看我的主意，我可是动了脑的。我们刚刚把馅饼弹射到了拉克玛蒂瓦城最凶恶的老大脸上——就他干的事来说他活该。但我们一个子儿都没来得及带，现在不仅迷了路，街上还全是准备把我们剁成肉馅的人。如果不干点什么，我们就玩完了。”\n“我们没有迷路，这里是巴伦酒吧后街。我们对面，是一个可以暂时藏身的废弃仓库，里面有还能用的固定电话。”奥斯塔从他的腰包里摸出了一张城市地图。\n“这上面歪歪扭扭的线是？”\n“我们的逃生路线，你才刚刚沿着它跑过。”\n“布洛卡......你知道他计划了这些吗？！”\n“不知道，但不惊讶。”\n“固定电话，你要打给谁？”\n“上次给你们药的人。我们的车还在他那里。”说话间，奥斯塔又从腰包里掏出一张印着“罗德岛干员直角”的名片。\n“我可以帮他改装他那间无聊的办公室，当作报酬。”\n“我们都那么狼狈地逃亡过一次了，”奥斯塔又从腰包里掏出了几枚钱币，“我不会对下一次毫无准备。”\n“奥斯塔！你不是说没钱让我买改装材料吗？你居然把钱藏起来了！你腰包里还藏着什么好东西？我打赌你掏不出好吃的。唉......肚子好饿，你说的废弃仓库里能烤肉吗？”\n奥斯塔再次打开了他的腰包，掏出了两颗包装朴素的糖果。\n“我再也不说你像我的老妈了！不过......只有两颗？都给我们了，你吃什么？”\n“我不饿。”\n“妈妈的口吻......”\n“闭嘴吃糖，还要我帮你剥开吗？”\n“好吧......”\n窸窸窣窣，糖纸落地。随后，贾维的表情从感激到困惑到扭曲。\n“哕！这是什么破味道！”\n从逃亡开始就一脸严肃的白发鲁珀终于露出了微笑。\n“鼻屎味的怪味糖，抑制你不必要的食欲用的。”他竖起一根食指，“外面的流氓变少了。你们两个，准备好了吗？数到三，我们冲向那个仓库。”"
+      "desc": "夜晚的拉克玛蒂瓦城街头，抄着家伙的流氓到处徘徊着。他们搜寻的目标正躲在小巷里。\n“奥斯塔，我有个主意。我们戴个假发，换身行头，混进杂技团里出城。”\n“嘘，小点声。不要把脸伸出去。”\n“你别小看我的主意，我可是动了脑的。我们刚刚把馅饼弹射到了拉克玛蒂瓦城最凶恶的老大脸上——就他干的事来说他活该。但我们一个子儿都没来得及带，现在不仅迷了路，街上还全是准备把我们剁成肉馅的人。如果不干点什么，我们就玩完了。”\n“我们没有迷路，这里是巴伦酒吧后街。我们对面，是一个可以暂时藏身的废弃仓库，里面有还能用的固定电话。”奥斯塔从他的腰包里摸出了一张城市地图。\n“这上面歪歪扭扭的线是？”\n“我们的逃生路线，你才刚刚沿着它跑过。”\n“布洛卡......你知道他计划了这些吗？！”\n“不知道，但不惊讶。”\n“固定电话，你要打给谁？”\n“上次给你们药的人。我们的车还在他那里。”说话间，奥斯塔又从腰包里掏出一张印着“罗德岛干员直角”的名片。\n“我可以帮他改装他那间无聊的办公室，当作报酬。”\n“我们都那么狼狈地逃亡过一次了，”奥斯塔又从腰包里掏出了几枚钱币，“我不会对下一次毫无准备。”\n“奥斯塔！你不是说没钱让我买改装材料吗？你居然把钱藏起来了！你腰包里还藏着什么好东西？我打赌你掏不出好吃的。唉......肚子好饿，你说的废弃仓库里能烤肉吗？”\n奥斯塔再次打开了他的腰包，掏出了两颗包装朴素的糖果。\n“我再也不说你像我的老妈了！不过......只有两颗？都给我们了，你吃什么？”\n“我不饿。”\n“妈妈的口吻......”\n“闭嘴吃糖，还要我帮你剥开吗？”\n“好吧......”\n窸窸窣窣，糖纸落地。随后，贾维的表情从感激到困惑到扭曲。\n“哕！这是什么破味道！”\n从逃亡开始就一脸严肃的白发鲁珀终于露出了微笑。\n“鼻屎味的怪味糖，抑制你不必要的食欲用的。”他竖起一根食指，“外面的流氓变少了。你们两个，准备好了吗？数到三，我们冲向那个仓库。”",
+      "typeIcon": "rpr-x",
+      "uniEquipIcon": "uniequip_002_aosta",
+      "typeName1": "RPR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_aosta_1",
+        "uniequip_002_aosta_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击范围内的<@ba.kw>所有敌人</>，对自己前方一横排的敌人攻击力提升至<@ba.kw>160%</>",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 44,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击范围内的<@ba.kw>所有敌人</>，对自己前方一横排的敌人攻击力提升至<@ba.kw>160%</>",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使未被阻挡的敌人流血，每秒受到相当于奥斯塔攻击力23%的法术伤害（不受特性影响），持续4秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "尖钉",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使未被阻挡的敌人流血，每秒受到相当于奥斯塔攻击力25%<@ba.talpu>（+2%）</>的法术伤害（不受特性影响），持续4秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "尖钉",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击范围内的<@ba.kw>所有敌人</>，对自己前方一横排的敌人攻击力提升至<@ba.kw>160%</>",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使未被阻挡的敌人流血，每秒受到相当于奥斯塔攻击力25%的法术伤害（不受特性影响），持续5秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "尖钉",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使未被阻挡的敌人流血，每秒受到相当于奥斯塔攻击力27%<@ba.talpu>（+2%）</>的法术伤害（不受特性影响），持续5秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "尖钉",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1106,5 +1734,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

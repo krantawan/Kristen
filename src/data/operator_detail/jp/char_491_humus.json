@@ -151,6 +151,28 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 50,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_491_humus#1",
@@ -618,16 +640,633 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+35",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 35,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 30,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "再利用",
+          "description": "自身のHP回復時、最大値を超えた分のHPは等量の<$ba.barrier>バリア</>に変換される。この効果によるのバリア最大値は自身の最大HPの60%まで",
+          "blackboard": [
+            {
+              "key": "max_hp_ratio",
+              "value": 0.6,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "再利用",
+          "description": "自身のHP回復時、最大値を超えた分のHPは等量の<$ba.barrier>バリア</>に変換される。この効果によるのバリア最大値は自身の最大HPの64%<@ba.talpu>（+4%）</>まで",
+          "blackboard": [
+            {
+              "key": "max_hp_ratio",
+              "value": 0.64,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "再利用",
+          "description": "自身のHP回復時、最大値を超えた分のHPは等量の<$ba.barrier>バリア</>に変換される。この効果によるのバリア最大値は自身の最大HPの100%まで",
+          "blackboard": [
+            {
+              "key": "max_hp_ratio",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "再利用",
+          "description": "自身のHP回復時、最大値を超えた分のHPは等量の<$ba.barrier>バリア</>に変換される。この効果によるのバリア最大値は自身の最大HPの104%<@ba.talpu>（+4%）</>まで",
+          "blackboard": [
+            {
+              "key": "max_hp_ratio",
+              "value": 1.04,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_humus",
       "moduleName": "ヒューマスの記章",
-      "desc": "ヒューマスは複数の敵の単独掃討に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、鎌撃士の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ヒューマスは複数の敵の単独掃討に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、鎌撃士の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_humus",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_humus",
       "moduleName": "悪地向け奇天烈工具セット",
-      "desc": "ヒューマスが入職したばかりの頃のことだ。\nクルビアの開拓地にある廃棄物処理場の責任者が来たということで、エンジニア部の多くのオペレーターは、そんな経歴を持つ人物なら、何か特別なスキルを持っているのではないかと興味津々だった。\n実際にヒューマスが長年連れ添った工具の数々を引っ提げてエンジニア部に顔を出した時、その場にいた全員が衝撃を受けた。\nまず、工具箱の大きさが尋常ではなく、ヒューマスのような力仕事に慣れた人間でなければ、片手で持ち運ぶことなどできそうもなかったのだ。\nさらに、その工具箱には普通の工具以外にも、奇妙な形をした用途不明のものが大量に入っており、見た者を困惑させるには十分だった。\n幸い、ヒューマスは己の知識を出し惜しみしない人間であり、そのおかげで、それから数時間のうちにエンジニア部のオペレーターたちは大いに知見を広げることができた。\n「こいつは多機能リモコンなんだが、改造の余地が結構あってな。ここをこうして……こうやって……組み直せば、テレビのリモコンから爆弾の遠隔起爆装置に早変わりだ。出力もデカくて、有効距離も長いから結構使い勝手がいいぜ。」\n「こっちは普通の手回し発電機だが、一つ追加機能がある。発電しながらトウモロコシの粒を取ったり、ジャガイモの皮むきをしたり、って具合でな。処理場じゃ電気はいつも足りてなかったし、食えるもんはトウモロコシとジャガイモだけってことも多かったからさ。」\n「この鎌は、車のドアを引っぺがして作ったやつだな。ありゃなかなか大した車だったぜ。廃車になって運ばれてきてからしばらく放置されてたんだが、かなり頑丈で解体するにも骨が折れたよ。見た目に関しちゃ、わざと大袈裟に作ってある。こいつを見た相手がビビってくれりゃ、ケンカしなくて済むからな。」\nこの創意に溢れた工具の説明会が終わると、ちょうど夕食の時間を告げるチャイムが鳴った。\nそこで、頭がパンク寸前になっていたエンジニア部のオペレーターたちは、待ってましたと言わんばかりにこの一風変わった新しい仲間を食堂へと連れて行き、歓迎会を予定通りに執り行った。\nその場でヒューマスは、興味津々な同僚たちに、彼には慣れ親しんだ開拓地の人々や出来事について話してやった。\nそうして、話を聞いた者たちは、ヒューマスがどうやってあのような技術を身につけたのかをようやく知った。\n開拓地は、常人の常識だけで生きていけるような場所ではなかったのだ。"
+      "desc": "ヒューマスが入職したばかりの頃のことだ。\nクルビアの開拓地にある廃棄物処理場の責任者が来たということで、エンジニア部の多くのオペレーターは、そんな経歴を持つ人物なら、何か特別なスキルを持っているのではないかと興味津々だった。\n実際にヒューマスが長年連れ添った工具の数々を引っ提げてエンジニア部に顔を出した時、その場にいた全員が衝撃を受けた。\nまず、工具箱の大きさが尋常ではなく、ヒューマスのような力仕事に慣れた人間でなければ、片手で持ち運ぶことなどできそうもなかったのだ。\nさらに、その工具箱には普通の工具以外にも、奇妙な形をした用途不明のものが大量に入っており、見た者を困惑させるには十分だった。\n幸い、ヒューマスは己の知識を出し惜しみしない人間であり、そのおかげで、それから数時間のうちにエンジニア部のオペレーターたちは大いに知見を広げることができた。\n「こいつは多機能リモコンなんだが、改造の余地が結構あってな。ここをこうして……こうやって……組み直せば、テレビのリモコンから爆弾の遠隔起爆装置に早変わりだ。出力もデカくて、有効距離も長いから結構使い勝手がいいぜ。」\n「こっちは普通の手回し発電機だが、一つ追加機能がある。発電しながらトウモロコシの粒を取ったり、ジャガイモの皮むきをしたり、って具合でな。処理場じゃ電気はいつも足りてなかったし、食えるもんはトウモロコシとジャガイモだけってことも多かったからさ。」\n「この鎌は、車のドアを引っぺがして作ったやつだな。ありゃなかなか大した車だったぜ。廃車になって運ばれてきてからしばらく放置されてたんだが、かなり頑丈で解体するにも骨が折れたよ。見た目に関しちゃ、わざと大袈裟に作ってある。こいつを見た相手がビビってくれりゃ、ケンカしなくて済むからな。」\nこの創意に溢れた工具の説明会が終わると、ちょうど夕食の時間を告げるチャイムが鳴った。\nそこで、頭がパンク寸前になっていたエンジニア部のオペレーターたちは、待ってましたと言わんばかりにこの一風変わった新しい仲間を食堂へと連れて行き、歓迎会を予定通りに執り行った。\nその場でヒューマスは、興味津々な同僚たちに、彼には慣れ親しんだ開拓地の人々や出来事について話してやった。\nそうして、話を聞いた者たちは、ヒューマスがどうやってあのような技術を身につけたのかをようやく知った。\n開拓地は、常人の常識だけで生きていけるような場所ではなかったのだ。",
+      "typeIcon": "rea-x",
+      "uniEquipIcon": "uniequip_002_humus",
+      "typeName1": "REA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_humus_1",
+        "uniequip_002_humus_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31023",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30033",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 10,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 14,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身のHP回復時、最大値を超えた分のHPは等量のバリアに変換される。この効果によるのバリア最大値は自身の最大HPの100%まで。自身により獲得する<$ba.barrier>バリア</>の存続期間中、防御力+5%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "再利用",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身のHP回復時、最大値を超えた分のHPは等量のバリアに変換される。この効果によるのバリア最大値は自身の最大HPの104%<@ba.talpu>（+4%）</>まで。自身により獲得する<$ba.barrier>バリア</>の存続期間中、防御力+5%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "再利用",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身のHP回復時、最大値を超えた分のHPは等量のバリアに変換される。この効果によるのバリア最大値は自身の最大HPの100%まで。自身により獲得する<$ba.barrier>バリア</>の存続期間中、防御力+8%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "再利用",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身のHP回復時、最大値を超えた分のHPは等量のバリアに変換される。この効果によるのバリア最大値は自身の最大HPの104%<@ba.talpu>（+4%）</>まで。自身により獲得する<$ba.barrier>バリア</>の存続期間中、防御力+8%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "再利用",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1081,5 +1720,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

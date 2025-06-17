@@ -150,6 +150,28 @@
       "cost": 24
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "times",
+            "value": 3,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_338_iris#1",
@@ -624,16 +646,578 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+45",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 45,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 130,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "開かずの宝箱",
+          "description": "チャージした攻撃エネルギーのダメージが115％まで上昇",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "開かずの宝箱",
+          "description": "チャージした攻撃エネルギーのダメージが119%<@ba.talpu>（+4%）</>まで上昇",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.19,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "開かずの宝箱",
+          "description": "チャージした攻撃エネルギーのダメージが130%まで上昇",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "開かずの宝箱",
+          "description": "チャージした攻撃エネルギーのダメージが134%<@ba.talpu>（+4%）</>まで上昇",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.34,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_iris",
       "moduleName": "アイリスの記章",
-      "desc": "アイリスはアーツエネルギーの制御に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、秘術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "アイリスはアーツエネルギーの制御に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、秘術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_iris",
       "moduleName": "夢のお城の飛び出す絵本",
-      "desc": "「アイリスさん、俺は……あなたのやっていることがあまり信じられないんです。」\n子供たちから預かった品物をアイリスの宿舎へと運ぶ手伝いをしながら、ホアキンはついそうこぼした。\n口をついて出た言葉はたちまち後悔へと変わったが、アイリスは怒った様子もなく、真剣な眼差しで「なぜですの？」と言葉を返す。\nホアキンはそんな彼女にこう言った。\n「俺も、子供の頃ヴィクトリアでお城にまつわる童話を聞いたことがあります。」\n「大地を彷徨うとある魔女が、子供たちの一番大切な宝物を盗んでは森にあるお城に隠してしまうというお話で……もちろん一度奪われたら返してはもらえません。」\n「魔女は心の隙間を宝物で埋め、その一方で子供たちは悔しさと憎しみを抱いて大人になる――と、そう聞きました。」\n「当時の俺の宝物は、誕生日に母が作ってくれた五芒星のペンダントだったんです。」\n「だから童話を聞いて以来、ペンダントが奪われないかが心配で、毎晩それを握りしめて眠りました。」\n「……でも結局、魔女にペンダントを奪われることはありませんでした。」\n「代わりに、魔女は……俺の両親と、村のすべてを奪っていったんです。」\n「突然発生する天災に、終わらない戦争……」\n「あなたの言うような『お城』なんて、たとえ童話の中だろうと、ヴィクトリアには存在しないんですよ。」\n最後に彼はこう訊ねた。\n「アイリスさん、あなた自身にも小さい頃、『お城』に何かを預けたことがあるんですか？」\n\n今口にしたのはあまりに意地悪な質問だと、彼も頭ではわかっていた。\nそれはマジシャンに向かって「生きたまま人の首と体を切り離すことなんて、本当にできるとお思いですか？」だとか、あるいは「空っぽの帽子から小動物を生み出すことができるなんて、本気で信じているんですか？」と聞くようなものだった。\n夢の創造主というのは、当人は夢の外に身を置いて、その夢を信じこむことなどないものだ。\n無論、「信じている」と嘘をつくことはできるが。\n\nけれど、アイリスは迷う素振りもなく答えた。\n「ええ。私はお城を預けましたの。」\n「……と言ってもよくわからないでしょうし、順番にお話ししますわね。」\n「お城と言うのは、小さい頃に夢で見た場所ですの。」\n「とっても大きなお城で、たくさんお部屋があって、どのお部屋にも大きなタンスが置いてありますのよ。」\n「しかもそのタンスは特別で、時間さえも閉じ込めてしまえるの。」\n「お陰で、中に入れたものは一切劣化しませんし……本当にそんなお城があれば、大切な物を二度と失わずに済むと胸が躍ったものです。」\n「それで、目が覚めたあと、おばあ様にそのお話をしたら、夢に出てきたお城を飛び出す絵本にしてくださって……もちろん、その絵本は私の大切な宝物になりましたわ。」\n「その後ある日のこと、おばあ様は私を本物のお城に連れて行ってくださいましたの。」\n「驚いたことに、そのお城は飛び出す絵本に――つまりは、夢に出てきたお城そっくりでした。」\n「お城に入ると、私は早速一つ目のお部屋にある、夢で見た通りの大きなタンスのそばまで行って……」\n「一番上の引き出しに、宝物の絵本をしまっておきました。」\n「すると、おばあ様がこうお尋ねになりましたの。」\n「『将来このお城の主として、子供たちの助けになるつもりはないかい？』と……」\n――アイリスは嘘など言っていない。ホアキンはそう確信した。\n彼女の語る内容がどれほど信じがたくとも、彼はロドスで過ごした日々の中で、嘘と真実を見分ける洞察力を身に着けていたのだ。\nアイリスという人物は、決して夢の創造主やマジシャンの置かれる立場にはなく、むしろマジックショーに登場する小動物の如く、童話という「真実」の中に生きているように感じられた。\n……だからこそ、ロドスの子供たちも彼女を信じるのだろう。\nそんなことをつらつらと考えながら、ホアキンはキャンディの缶やおもちゃ、模型を大小に分類する仕事を続けた。\n「あの、アイリスさん。つまらないことばかり言ってしまって、ごめんなさい。」\n「お気になさらず。……あら、そのネックレス……」\nホアキンはアイリスの視線を追い、自身の胸元で鈍く輝く銀色の星を見下ろした。\nそれはあまりに長く身に着けていたせいで、元の色はもうわからなくなっている。\n「ホアキンさん、あなたのお城は、あなたご自身のようですわね。」"
+      "desc": "「アイリスさん、俺は……あなたのやっていることがあまり信じられないんです。」\n子供たちから預かった品物をアイリスの宿舎へと運ぶ手伝いをしながら、ホアキンはついそうこぼした。\n口をついて出た言葉はたちまち後悔へと変わったが、アイリスは怒った様子もなく、真剣な眼差しで「なぜですの？」と言葉を返す。\nホアキンはそんな彼女にこう言った。\n「俺も、子供の頃ヴィクトリアでお城にまつわる童話を聞いたことがあります。」\n「大地を彷徨うとある魔女が、子供たちの一番大切な宝物を盗んでは森にあるお城に隠してしまうというお話で……もちろん一度奪われたら返してはもらえません。」\n「魔女は心の隙間を宝物で埋め、その一方で子供たちは悔しさと憎しみを抱いて大人になる――と、そう聞きました。」\n「当時の俺の宝物は、誕生日に母が作ってくれた五芒星のペンダントだったんです。」\n「だから童話を聞いて以来、ペンダントが奪われないかが心配で、毎晩それを握りしめて眠りました。」\n「……でも結局、魔女にペンダントを奪われることはありませんでした。」\n「代わりに、魔女は……俺の両親と、村のすべてを奪っていったんです。」\n「突然発生する天災に、終わらない戦争……」\n「あなたの言うような『お城』なんて、たとえ童話の中だろうと、ヴィクトリアには存在しないんですよ。」\n最後に彼はこう訊ねた。\n「アイリスさん、あなた自身にも小さい頃、『お城』に何かを預けたことがあるんですか？」\n\n今口にしたのはあまりに意地悪な質問だと、彼も頭ではわかっていた。\nそれはマジシャンに向かって「生きたまま人の首と体を切り離すことなんて、本当にできるとお思いですか？」だとか、あるいは「空っぽの帽子から小動物を生み出すことができるなんて、本気で信じているんですか？」と聞くようなものだった。\n夢の創造主というのは、当人は夢の外に身を置いて、その夢を信じこむことなどないものだ。\n無論、「信じている」と嘘をつくことはできるが。\n\nけれど、アイリスは迷う素振りもなく答えた。\n「ええ。私はお城を預けましたの。」\n「……と言ってもよくわからないでしょうし、順番にお話ししますわね。」\n「お城と言うのは、小さい頃に夢で見た場所ですの。」\n「とっても大きなお城で、たくさんお部屋があって、どのお部屋にも大きなタンスが置いてありますのよ。」\n「しかもそのタンスは特別で、時間さえも閉じ込めてしまえるの。」\n「お陰で、中に入れたものは一切劣化しませんし……本当にそんなお城があれば、大切な物を二度と失わずに済むと胸が躍ったものです。」\n「それで、目が覚めたあと、おばあ様にそのお話をしたら、夢に出てきたお城を飛び出す絵本にしてくださって……もちろん、その絵本は私の大切な宝物になりましたわ。」\n「その後ある日のこと、おばあ様は私を本物のお城に連れて行ってくださいましたの。」\n「驚いたことに、そのお城は飛び出す絵本に――つまりは、夢に出てきたお城そっくりでした。」\n「お城に入ると、私は早速一つ目のお部屋にある、夢で見た通りの大きなタンスのそばまで行って……」\n「一番上の引き出しに、宝物の絵本をしまっておきました。」\n「すると、おばあ様がこうお尋ねになりましたの。」\n「『将来このお城の主として、子供たちの助けになるつもりはないかい？』と……」\n――アイリスは嘘など言っていない。ホアキンはそう確信した。\n彼女の語る内容がどれほど信じがたくとも、彼はロドスで過ごした日々の中で、嘘と真実を見分ける洞察力を身に着けていたのだ。\nアイリスという人物は、決して夢の創造主やマジシャンの置かれる立場にはなく、むしろマジックショーに登場する小動物の如く、童話という「真実」の中に生きているように感じられた。\n……だからこそ、ロドスの子供たちも彼女を信じるのだろう。\nそんなことをつらつらと考えながら、ホアキンはキャンディの缶やおもちゃ、模型を大小に分類する仕事を続けた。\n「あの、アイリスさん。つまらないことばかり言ってしまって、ごめんなさい。」\n「お気になさらず。……あら、そのネックレス……」\nホアキンはアイリスの視線を追い、自身の胸元で鈍く輝く銀色の星を見下ろした。\nそれはあまりに長く身に着けていたせいで、元の色はもうわからなくなっている。\n「ホアキンさん、あなたのお城は、あなたご自身のようですわね。」",
+      "typeIcon": "msc-x",
+      "uniEquipIcon": "uniequip_002_iris",
+      "typeName1": "MSC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_iris_1",
+        "uniequip_002_iris_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\n攻撃の対象がいない場合はエネルギーを<@ba.kw>チャージ</>して（最大4回）次の攻撃時に一斉発射する",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 68,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\n攻撃の対象がいない場合はエネルギーを<@ba.kw>チャージ</>して（最大4回）次の攻撃時に一斉発射する",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "チャージした攻撃エネルギーのダメージが135%まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "開かずの宝箱",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.35,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "チャージした攻撃エネルギーのダメージが139%<@ba.talpu>（+4%）</>まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "開かずの宝箱",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.39,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 82,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\n攻撃の対象がいない場合はエネルギーを<@ba.kw>チャージ</>して（最大4回）次の攻撃時に一斉発射する",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "チャージした攻撃エネルギーのダメージが138%まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "開かずの宝箱",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.38,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "チャージした攻撃エネルギーのダメージが142%<@ba.talpu>（+4%）</>まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "開かずの宝箱",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.42,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1087,5 +1671,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

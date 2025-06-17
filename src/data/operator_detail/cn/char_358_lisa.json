@@ -170,6 +170,28 @@
       "cost": 16
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "sluggish",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_358_lisa#1",
@@ -769,21 +791,972 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "技力光环·辅助",
+          "description": "在场时所有【辅助】干员的技力自然回复速度+0.2/秒（同类效果取最高）",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "技力光环·辅助",
+          "description": "在场时所有【辅助】干员的技力自然回复速度+0.4/秒（同类效果取最高）",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "画地为牢",
+          "description": "攻击范围内被<$ba.sluggish>停顿</>的敌人在下一瞬间起还会受到等长时间的20%的<$ba.fragile>脆弱</>效果",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 1.2,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "画地为牢",
+          "description": "攻击范围内被<$ba.sluggish>停顿</>的敌人在下一瞬间起还会受到等长时间的23%<@ba.talpu>（+3%）</>的<$ba.fragile>脆弱</>效果",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 1.23,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_lisa",
       "moduleName": "铃兰证章",
-      "desc": "干员铃兰擅长牵制敌人\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使凝滞师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员铃兰擅长牵制敌人\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使凝滞师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_lisa",
       "moduleName": "怀中御守",
-      "desc": "在把铃兰托付给罗德岛并离开前，铃兰的父母将一个“御守”郑重地交到了眼眶通红的铃兰手中。\n“等到御守里不再有嘀嗒声，我们就回来了。”\n在旁人听来，这像是个糊弄小孩子的约定。\n但铃兰抽泣着点了点头。\n“爸爸妈妈从不食言。”在那之后，铃兰是这样和朋友们说的。\n所以，她一直随身带着那沉甸甸的小布袋。\n每天到了睡觉时间，她会听听御守里的嘀嗒声，对着它说些想向父母倾诉的话，然后安然睡去。\n夜夜如此。\n曾有人怂恿铃兰拆开御守，把内里的东西关掉，但铃兰义正词严地拒绝了。\n“御守怎么可以拆开呢，拆开就不灵了呀。”\n其实她知道里面有什么，这很简单，仅凭触摸和常识就能知晓。\n但她的选择是，相信，并等待。\n一天，又一天。\n终于，在某个中午，贴身口袋里的颤动停下了。\n妈妈突然出现在身后，爸爸提着一个大袋子，脸上挂着她怀念的温和笑容。\n对于承诺，这一对父母是从来不怠慢的。\n这个家庭在罗德岛上短暂重逢，度过了数个值得铭记的日夜。\n而很快地，他们又要再次分别。\n这一次，父亲郑重地诵读了祷词并将御守启封，母亲则仔细检查表盘，并为怀表拧上发条。\n他们完成了自己的部分，随后请铃兰系紧御守的绳线。\n这场简单朴素的仪式没有持续多久，但每个人都很专注，很认真。\n一位神职，一位杀手，一位干员。\n一位父亲，一位母亲，一位女儿。\n通过这个小小的御守，三个人的灵魂紧紧联系到一起。\n因为尊重，所以信守承诺。\n因为信赖，所以愿意忍耐。\n大地将他们生生拆散。\n但爱，跨越空间与时间，赋予他们重聚的力量。\n“等到御守里不再有嘀嗒声，我们就回来了。”\n“在那之前，记得要准时睡觉哦~”\n“嗯！”\n“一路顺风！妈妈，爸爸！”"
+      "desc": "在把铃兰托付给罗德岛并离开前，铃兰的父母将一个“御守”郑重地交到了眼眶通红的铃兰手中。\n“等到御守里不再有嘀嗒声，我们就回来了。”\n在旁人听来，这像是个糊弄小孩子的约定。\n但铃兰抽泣着点了点头。\n“爸爸妈妈从不食言。”在那之后，铃兰是这样和朋友们说的。\n所以，她一直随身带着那沉甸甸的小布袋。\n每天到了睡觉时间，她会听听御守里的嘀嗒声，对着它说些想向父母倾诉的话，然后安然睡去。\n夜夜如此。\n曾有人怂恿铃兰拆开御守，把内里的东西关掉，但铃兰义正词严地拒绝了。\n“御守怎么可以拆开呢，拆开就不灵了呀。”\n其实她知道里面有什么，这很简单，仅凭触摸和常识就能知晓。\n但她的选择是，相信，并等待。\n一天，又一天。\n终于，在某个中午，贴身口袋里的颤动停下了。\n妈妈突然出现在身后，爸爸提着一个大袋子，脸上挂着她怀念的温和笑容。\n对于承诺，这一对父母是从来不怠慢的。\n这个家庭在罗德岛上短暂重逢，度过了数个值得铭记的日夜。\n而很快地，他们又要再次分别。\n这一次，父亲郑重地诵读了祷词并将御守启封，母亲则仔细检查表盘，并为怀表拧上发条。\n他们完成了自己的部分，随后请铃兰系紧御守的绳线。\n这场简单朴素的仪式没有持续多久，但每个人都很专注，很认真。\n一位神职，一位杀手，一位干员。\n一位父亲，一位母亲，一位女儿。\n通过这个小小的御守，三个人的灵魂紧紧联系到一起。\n因为尊重，所以信守承诺。\n因为信赖，所以愿意忍耐。\n大地将他们生生拆散。\n但爱，跨越空间与时间，赋予他们重聚的力量。\n“等到御守里不再有嘀嗒声，我们就回来了。”\n“在那之前，记得要准时睡觉哦~”\n“嗯！”\n“一路顺风！妈妈，爸爸！”",
+      "typeIcon": "dec-x",
+      "uniEquipIcon": "uniequip_002_lisa",
+      "typeName1": "DEC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_lisa_1",
+        "uniequip_002_lisa_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围内存在敌人时技力自然恢复速度+0.2/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围内存在敌人时技力自然恢复速度+0.2/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "在场时所有【辅助】干员的技力自然回复速度+0.4/秒（同类效果取最高），攻击力+6%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "技力光环·辅助",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.06,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围内存在敌人时技力自然恢复速度+0.2/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "在场时所有【辅助】干员的技力自然回复速度+0.4/秒（同类效果取最高），攻击力+9%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "技力光环·辅助",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.09,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_lisa",
       "moduleName": "孩子们",
-      "desc": "铃兰看见两位紧张的医疗干员，一人穿着防护服，一人拎着回收袋，在游戏室门口严阵以待。事情的起因并不复杂：一只破损的玩偶，一个焦急的男孩，一次失败的施术，本该被法术修好的玩偶于是被狰狞的源石结晶贯穿。铃兰经过时，男孩正抱着那只玩偶哭喊，不允许任何人将它抢走。\n“它只是长了石头，它没做坏事，它不危险！”\n铃兰曾经也有一个玩偶，只不过精致得多，穿着蓝色的小外套，扎着蓬松的鼷兽毛。那只玩偶身上也有过这样的结晶——她才刚抱着它入睡，一阵刺痛就粗暴地将她扯出了睡梦。\n“当初是我把它从垃圾桶里救出来的，你们不许再把它丢掉！”\n铃兰记不太清那晚的事情了，但她记得母亲温热的臂弯，也记得医生温柔的声音。没有什么被处理，也没有什么被丢弃，第二天早上，一模一样的玩偶就完好无损地出现在了她的床上。\n“爸爸妈妈被带走的时候就是这样！所有的东西都被收走、埋掉......为什么怕我，怕我们的东西！”\n铃兰也不理解为什么，在她的生活里，事情不是这样发生的。但是，她想，或许自己能让事情变成熟悉的模样。于是，不顾医疗干员的阻拦，铃兰走上前去，给男孩讲了一个故事。\n\n“你、你好......这只玩偶，我觉得它并不危险哦......”\n“真的？你也这么觉得？”\n“是呀。这些石头是来自另一片大地的琥珀，你看，它们也能透光呢。身上有这些石头的人，最后会钻进石头里睡着，像是琥珀里的小虫子。等他们醒来，就旅行到另一片大地啦。”\n“我就说那些家伙都在骗我！净说什么‘死了’，但谁都不解释，只会不耐烦地说‘死了就是死了’，我看他们根本不知道！”\n“欸，我、我也不清楚他们知不知道，但另一片大地是真的呀......身上长出石头，然后消失了的人，其实都旅行去了那里。现在他们都躺在金色的水面上，晒着很暖的太阳呢。”\n“那我们以后也会去那里吗？”\n“会的呀，不过要好好地睡着，才能旅行成功。你看，现在这只玩偶就因为这里太吵闹，睡不着了。所以，可以让它安心睡吗？”\n\n后来，游戏室里多出了一个装着玩偶的玻璃箱，上面贴着一张皱巴巴的纸条：旅行中，不要打扰。"
+      "desc": "铃兰看见两位紧张的医疗干员，一人穿着防护服，一人拎着回收袋，在游戏室门口严阵以待。事情的起因并不复杂：一只破损的玩偶，一个焦急的男孩，一次失败的施术，本该被法术修好的玩偶于是被狰狞的源石结晶贯穿。铃兰经过时，男孩正抱着那只玩偶哭喊，不允许任何人将它抢走。\n“它只是长了石头，它没做坏事，它不危险！”\n铃兰曾经也有一个玩偶，只不过精致得多，穿着蓝色的小外套，扎着蓬松的鼷兽毛。那只玩偶身上也有过这样的结晶——她才刚抱着它入睡，一阵刺痛就粗暴地将她扯出了睡梦。\n“当初是我把它从垃圾桶里救出来的，你们不许再把它丢掉！”\n铃兰记不太清那晚的事情了，但她记得母亲温热的臂弯，也记得医生温柔的声音。没有什么被处理，也没有什么被丢弃，第二天早上，一模一样的玩偶就完好无损地出现在了她的床上。\n“爸爸妈妈被带走的时候就是这样！所有的东西都被收走、埋掉......为什么怕我，怕我们的东西！”\n铃兰也不理解为什么，在她的生活里，事情不是这样发生的。但是，她想，或许自己能让事情变成熟悉的模样。于是，不顾医疗干员的阻拦，铃兰走上前去，给男孩讲了一个故事。\n\n“你、你好......这只玩偶，我觉得它并不危险哦......”\n“真的？你也这么觉得？”\n“是呀。这些石头是来自另一片大地的琥珀，你看，它们也能透光呢。身上有这些石头的人，最后会钻进石头里睡着，像是琥珀里的小虫子。等他们醒来，就旅行到另一片大地啦。”\n“我就说那些家伙都在骗我！净说什么‘死了’，但谁都不解释，只会不耐烦地说‘死了就是死了’，我看他们根本不知道！”\n“欸，我、我也不清楚他们知不知道，但另一片大地是真的呀......身上长出石头，然后消失了的人，其实都旅行去了那里。现在他们都躺在金色的水面上，晒着很暖的太阳呢。”\n“那我们以后也会去那里吗？”\n“会的呀，不过要好好地睡着，才能旅行成功。你看，现在这只玩偶就因为这里太吵闹，睡不着了。所以，可以让它安心睡吗？”\n\n后来，游戏室里多出了一个装着玩偶的玻璃箱，上面贴着一张皱巴巴的纸条：旅行中，不要打扰。",
+      "typeIcon": "dec-y",
+      "uniEquipIcon": "uniequip_003_lisa",
+      "typeName1": "DEC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_lisa_1",
+        "uniequip_003_lisa_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，并对敌人造成<@ba.kw>较长</>的<$ba.sluggish>停顿</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 43,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，并对敌人造成<@ba.kw>较长</>的<$ba.sluggish>停顿</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内被<$ba.sluggish>停顿</>的敌人在下一瞬间起还会受到等长时间的21%的<$ba.fragile>脆弱</>效果和5％<$ba.weaken>虚弱</>效果",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "画地为牢",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.95,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内被<$ba.sluggish>停顿</>的敌人在下一瞬间起还会受到等长时间的24%<@ba.talpu>（+3%）</>的<$ba.fragile>脆弱</>效果和5％<$ba.weaken>虚弱</>效果",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "画地为牢",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.24,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.95,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 46,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，并对敌人造成<@ba.kw>较长</>的<$ba.sluggish>停顿</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内被<$ba.sluggish>停顿</>的敌人在下一瞬间起还会受到等长时间的22%的<$ba.fragile>脆弱</>效果和8％<$ba.weaken>虚弱</>效果",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "画地为牢",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.22,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.92,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内被<$ba.sluggish>停顿</>的敌人在下一瞬间起还会受到等长时间的25%<@ba.talpu>（+3%）</>的<$ba.fragile>脆弱</>效果和8％<$ba.weaken>虚弱</>效果",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "画地为牢",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.92,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1237,5 +2210,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

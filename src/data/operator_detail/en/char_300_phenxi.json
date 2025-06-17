@@ -150,6 +150,7 @@
       "cost": 29
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_300_phenxi#1",
@@ -719,21 +720,930 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +35",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 35,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 100,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Sufferer of Tribulations",
+          "description": "Continually loses HP over time (HP cannot drop to 0 as a result of this effect); While HP is above 50%, this unit gains <$ba.strong>Vigor</>, increasing ATK by 15%; this effect is doubled above 80% HP.",
+          "blackboard": {
+            "interval": 0.1,
+            "hp_ratio": 0.005,
+            "phenxi_t_1[peak_1].peak_performance.atk": 0.15,
+            "phenxi_t_1[peak_1].peak_performance.hp_ratio": 0.5,
+            "phenxi_t_1[peak_2].peak_performance.atk": 0.3,
+            "phenxi_t_1[peak_2].peak_performance.hp_ratio": 0.8
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Sufferer of Tribulations",
+          "description": "Continually loses HP over time (HP cannot drop to 0 as a result of this effect); While HP is above 50%, this unit gains <$ba.strong>Vigor</>, increasing ATK by 20%; this effect is doubled above 80% HP.",
+          "blackboard": {
+            "interval": 0.1,
+            "hp_ratio": 0.005,
+            "phenxi_t_1[peak_1].peak_performance.atk": 0.2,
+            "phenxi_t_1[peak_1].peak_performance.hp_ratio": 0.5,
+            "phenxi_t_1[peak_2].peak_performance.atk": 0.4,
+            "phenxi_t_1[peak_2].peak_performance.hp_ratio": 0.8
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Sufferer of Tribulations",
+          "description": "Continually loses HP over time (HP cannot drop to 0 as a result of this effect); While HP is above 50%, this unit gains <$ba.strong>Vigor</>, increasing ATK by 25%; this effect is doubled above 80% HP.",
+          "blackboard": {
+            "interval": 0.1,
+            "hp_ratio": 0.005,
+            "phenxi_t_1[peak_1].peak_performance.atk": 0.25,
+            "phenxi_t_1[peak_1].peak_performance.hp_ratio": 0.5,
+            "phenxi_t_1[peak_2].peak_performance.atk": 0.5,
+            "phenxi_t_1[peak_2].peak_performance.hp_ratio": 0.8
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Herald of Revelations",
+          "description": "While this unit has no skill active, ASPD +27",
+          "blackboard": {
+            "attack_speed": 27
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Herald of Revelations",
+          "description": "While this unit has no skill active, ASPD +30 <@ba.talpu>(+3)</>",
+          "blackboard": {
+            "attack_speed": 30
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_phenxi",
       "moduleName": "Fiammetta's Badge",
-      "desc": "Operator Fiammetta has demonstrated a remarkable aptitude for inflicting physical casualties on multitudes of enemies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Artilleryman responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Fiammetta has demonstrated a remarkable aptitude for inflicting physical casualties on multitudes of enemies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Artilleryman responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_phenxi",
       "moduleName": "'Out-Law' Special Ammunition Surplus",
-      "desc": "It was a beautifully sunny afternoon years past, when the old man pushed a box before the still-young Liberi girl.\nShe hadn't even had time to wipe the soot off her face. She'd never had the finest control over firearms, though the Sankta her age used guns as naturally as their own limbs.\n'Fia. I'm not going to say 'it's just a racial gulf' or whatever to try to comfort you, and I'm not going to proclaim that wielding guns is a Sankta-exclusive glory, like SOME cardinals. Practice will yield results, and you've as good as brushed shoulders with those results, even if it's not gone how you'd want.'\n'But there's still a different way, or maybe you could say a different TOOL that could help you move forward. This box holds something one of my mechanics tutors left to me. He's not coming back to Laterano, ever. He violated the law.'\n'But, child, law is not our everything. Now don't look at me like that—yes, you might go 'big whoop,' but nobody would say our everything ends at food and water either, right? They're just things we're forced to rely on to survive. There's always something that transcends the law, sits beyond it, and everyone has a different idea of what it is. Some call it righteousness, some call it sensibility, and some call it a vague hope.'\n'Don't panic, and don't worry. There will be times when wanting to do something will make you unstoppable.'\n......\nThe Liberi is no longer a girl; she's been more places than can be imagined, and seen more sights than can be believed, but afternoons in Laterano will never change. The sun is as fine and beautiful as ever.\nThese two weapons have been by her side for longer than can be described; they have ensured her safety through danger, and mercilessly shot down the absurd aspirations of others.\nShe carefully cleans the grime from her old friends, oils them, inspects the pressure in every last piece of ammo, and affirms again and again their ordering by type. She'll soon face her pursuer, her enemy of eight years, and there's no such thing as being overly prepared.\nThere is always something that transcends the law.\nThere's no vengeance in her heart, and no pity either. Only this: what must be settled will be settled, and those who must bear the cost will pay the price. She understands—this is an obsession, nothing more.\nShe slots the final shell into her magazine."
+      "desc": "It was a beautifully sunny afternoon years past, when the old man pushed a box before the still-young Liberi girl.\nShe hadn't even had time to wipe the soot off her face. She'd never had the finest control over firearms, though the Sankta her age used guns as naturally as their own limbs.\n'Fia. I'm not going to say 'it's just a racial gulf' or whatever to try to comfort you, and I'm not going to proclaim that wielding guns is a Sankta-exclusive glory, like SOME cardinals. Practice will yield results, and you've as good as brushed shoulders with those results, even if it's not gone how you'd want.'\n'But there's still a different way, or maybe you could say a different TOOL that could help you move forward. This box holds something one of my mechanics tutors left to me. He's not coming back to Laterano, ever. He violated the law.'\n'But, child, law is not our everything. Now don't look at me like that—yes, you might go 'big whoop,' but nobody would say our everything ends at food and water either, right? They're just things we're forced to rely on to survive. There's always something that transcends the law, sits beyond it, and everyone has a different idea of what it is. Some call it righteousness, some call it sensibility, and some call it a vague hope.'\n'Don't panic, and don't worry. There will be times when wanting to do something will make you unstoppable.'\n......\nThe Liberi is no longer a girl; she's been more places than can be imagined, and seen more sights than can be believed, but afternoons in Laterano will never change. The sun is as fine and beautiful as ever.\nThese two weapons have been by her side for longer than can be described; they have ensured her safety through danger, and mercilessly shot down the absurd aspirations of others.\nShe carefully cleans the grime from her old friends, oils them, inspects the pressure in every last piece of ammo, and affirms again and again their ordering by type. She'll soon face her pursuer, her enemy of eight years, and there's no such thing as being overly prepared.\nThere is always something that transcends the law.\nThere's no vengeance in her heart, and no pity either. Only this: what must be settled will be settled, and those who must bear the cost will pay the price. She understands—this is an obsession, nothing more.\nShe slots the final shell into her magazine.",
+      "typeIcon": "art-y",
+      "uniEquipIcon": "uniequip_002_phenxi",
+      "typeName1": "ART",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_phenxi_1",
+        "uniequip_002_phenxi_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 48,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 26,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 100,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>AOE Physical damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 36,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 100,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>AOE Physical damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "While this unit has no skill active, ASPD +27; While this unit's skill is active, ASPD +5",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Herald of Revelations",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_e_t_2[in_skill].attack_speed",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "While this unit has no skill active, ASPD +30 <@ba.talpu>(+3)</>; While this unit's skill is active, ASPD +5",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Herald of Revelations",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_e_t_2[in_skill].attack_speed",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 43,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 100,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>AOE Physical damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "While this unit has no skill active, ASPD +30; While this unit's skill is active, ASPD +10",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Herald of Revelations",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_e_t_2[in_skill].attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "While this unit has no skill active, ASPD +33 <@ba.talpu>(+3)</>; While this unit's skill is active, ASPD +10",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Herald of Revelations",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 33,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_e_t_2[in_skill].attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_phenxi",
       "moduleName": "A Long Journey",
-      "desc": "'Relax for once, Fiammetta. Look on the bright side... next time, we can report to Lemuen about our work.'\nVelliv's poring closely over the papers, but tosses the remark out anyway, like she can read her mind. Fiammetta sighs—this is what she hates about Velliv. The Sankta get in on each other's emotions thanks to their empathy, and she's no Sankta, but she's never felt like Velliv couldn't see straight through her anyway.\nVelliv abruptly lifts her head, as if some thought has struck, and looks at her.\n'Speaking of which, Fiammetta, now's your chance.'\n'What?'\n'At independence.'\n'......'\n'The team you and Mostima had going was a real exception, organizationally speaking—basically a custom set-up just for you two, not much flexibility. But now that Lemuen's joining, we've gotta shake up how it's structured. Perfect opportunity.'\nVelliv interlaces her fingers, props her chin up, and throws her a sunny grin.\n'Who's saying this? Her? Lemuen? His Holiness? Or is it just you?'\n'I'm not the type to stick my neck out. But it's not something I <i>haven't</i> thought about, you know.' She stoops down to pull a document out from the cupboard by her foot, which Fiammetta knows at a glance is the file on Andoain. 'After the incident at the Summit of Nations, they upped the risk level on Andoain a notch. If there was any hunter out there willing to devote her heart and soul to catching him, I'd sleep better at night for it.'\n'Sometimes, I wish other Laterans would care for Laterano as much as you do.' It's not a lie. Even on the work front, Fiammetta considers Velliv an admirable example.\n'So, what do you say?'\n'I refuse.'\n'Why? There's way more efficient ways to capture Andoain than working alongside Mostima, you know that.'\n'It's because Mostima's worse.'\n'Worse as in... Andoain's always gonna be there, but Mostima's the woman who might just vanish without a trace one day?'\n'No. I haven't heard her actually speak her mind even once since His Holiness gave her her mission. I don't care if it feels like I'm the only idiot still clinging to the whole Andoain thing, and I don't blame her or Lemuen for having other ideas. <i>But,</i>' and she speaks that 'but' like she tore it off and spat it out, 'whatever she saw in that staff, whatever she's thinking, whatever the hell it is Lemuen forgives or pardons Andoain for—she can tell me, Lemuen can tell me, but they have to tell me <i>something.</i> They have to tell me everything... they owe me that much.'\n'And what if they never ever tell you?'\n'I can wait. As long as I'm their friend, as long as they're my friends.'\n'I see. Well... it's looking to be a real long road, then.'\n'Way ahead of you.'"
+      "desc": "'Relax for once, Fiammetta. Look on the bright side... next time, we can report to Lemuen about our work.'\nVelliv's poring closely over the papers, but tosses the remark out anyway, like she can read her mind. Fiammetta sighs—this is what she hates about Velliv. The Sankta get in on each other's emotions thanks to their empathy, and she's no Sankta, but she's never felt like Velliv couldn't see straight through her anyway.\nVelliv abruptly lifts her head, as if some thought has struck, and looks at her.\n'Speaking of which, Fiammetta, now's your chance.'\n'What?'\n'At independence.'\n'......'\n'The team you and Mostima had going was a real exception, organizationally speaking—basically a custom set-up just for you two, not much flexibility. But now that Lemuen's joining, we've gotta shake up how it's structured. Perfect opportunity.'\nVelliv interlaces her fingers, props her chin up, and throws her a sunny grin.\n'Who's saying this? Her? Lemuen? His Holiness? Or is it just you?'\n'I'm not the type to stick my neck out. But it's not something I <i>haven't</i> thought about, you know.' She stoops down to pull a document out from the cupboard by her foot, which Fiammetta knows at a glance is the file on Andoain. 'After the incident at the Summit of Nations, they upped the risk level on Andoain a notch. If there was any hunter out there willing to devote her heart and soul to catching him, I'd sleep better at night for it.'\n'Sometimes, I wish other Laterans would care for Laterano as much as you do.' It's not a lie. Even on the work front, Fiammetta considers Velliv an admirable example.\n'So, what do you say?'\n'I refuse.'\n'Why? There's way more efficient ways to capture Andoain than working alongside Mostima, you know that.'\n'It's because Mostima's worse.'\n'Worse as in... Andoain's always gonna be there, but Mostima's the woman who might just vanish without a trace one day?'\n'No. I haven't heard her actually speak her mind even once since His Holiness gave her her mission. I don't care if it feels like I'm the only idiot still clinging to the whole Andoain thing, and I don't blame her or Lemuen for having other ideas. <i>But,</i>' and she speaks that 'but' like she tore it off and spat it out, 'whatever she saw in that staff, whatever she's thinking, whatever the hell it is Lemuen forgives or pardons Andoain for—she can tell me, Lemuen can tell me, but they have to tell me <i>something.</i> They have to tell me everything... they owe me that much.'\n'And what if they never ever tell you?'\n'I can wait. As long as I'm their friend, as long as they're my friends.'\n'I see. Well... it's looking to be a real long road, then.'\n'Way ahead of you.'",
+      "typeIcon": "art-x",
+      "uniEquipIcon": "uniequip_003_phenxi",
+      "typeName1": "ART",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_phenxi_1",
+        "uniequip_003_phenxi_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 17,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 26,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Continually loses HP over time (HP cannot drop below 30% as a result of this effect); While HP is above 50%, this unit gains <$ba.strong>Vigor</>, increasing ATK by 28%; this effect is doubled above 80% HP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Sufferer of Tribulations",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.005,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_hp_ratio",
+                      "value": 0.302,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_t_1[peak_1].peak_performance.atk",
+                      "value": 0.28,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_t_1[peak_1].peak_performance.hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_t_1[peak_2].peak_performance.atk",
+                      "value": 0.56,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_t_1[peak_2].peak_performance.hp_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Continually loses HP over time (HP cannot drop below 50% as a result of this effect); While HP is above 50%, this unit gains <$ba.strong>Vigor</>, increasing ATK by 30%; this effect is doubled above 80% HP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Sufferer of Tribulations",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.005,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_hp_ratio",
+                      "value": 0.503,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_t_1[peak_1].peak_performance.atk",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_t_1[peak_1].peak_performance.hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_t_1[peak_2].peak_performance.atk",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phenxi_t_1[peak_2].peak_performance.hp_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1187,5 +2097,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

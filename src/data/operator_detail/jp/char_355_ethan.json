@@ -151,6 +151,28 @@
       "cost": 19
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "prob",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_355_ethan#1",
@@ -621,16 +643,603 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "最大HP+150",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 150,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 450,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "絡みつく",
+          "description": "攻撃時、25％の確率で攻撃対象を2秒間<$ba.root>バインド</>させる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.25,
+              "valueStr": null
+            },
+            {
+              "key": "frozen_duration",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "絡みつく",
+          "description": "攻撃時、25％の確率で攻撃対象を3秒間<$ba.root>バインド</>させる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.25,
+              "valueStr": null
+            },
+            {
+              "key": "frozen_duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_ethan",
       "moduleName": "イーサンの記章",
-      "desc": "イーサンは身を潜め、敵を待ち伏せし奇襲する戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、潜伏者の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "イーサンは身を潜め、敵を待ち伏せし奇襲する戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、潜伏者の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_ethan",
       "moduleName": "スーパースプレーセット",
-      "desc": "「まずはキャンバスにする壁選びだが、目立たなすぎたり綺麗すぎたりするやつや、ボロっちいやつなんかは全部アウトだ。」\n「それと、ここは街中じゃなくてロドスだってことを忘れんなよ。ブリッジや通路沿いでやると、クロージャにどやされちまうぜ。」\n「さて、次は塗料選びだな。彩度の高さはどうかとか、変なにおいがしないかとかの基準もあるが、何より大事なのは塗料の密着力とカバー力――要は色の乗りやすさだ。」\n「塗ってるそばから液だれしちまうような塗料だと、どんな超絶テクで塗っても台無しになっちまうからな。」\n「んで、三つ目は文字をどうやってド派手にアレンジするかって話だが……」\n……\n「そいで、最後は何を描くかだ。言っとくが、何をするにもただフラストレーションをぶちまけるだけじゃあダメだぜ。」\n「ペンキをやたらめったらにぶっかけるのも、暴力を他人にぶつけるのも、無意味なストレス発散でしかねぇからな。」\n「感情任せにモノを滅茶苦茶に汚してちゃ、芸術とは言えねぇ。グラフィティってのはそういうもんじゃねぇんだ。」\n「てめぇの思想や伝えたい情報を込めてこそのグラフィティだと思え……クールに、んでもってビビらずにやるのさ。」\n――ロドスで実施されたグラフィティアート講座におけるイーサンの発言より\n\n「あいつだよ、あの身体の色を変えられるサヴラが、俺たちの計画をぶち壊しやがったんだ。」\n「っていうのも、スラムはそこら中落書きだらけだろ？　下水道にこびりついた汚れみてぇに、見慣れすぎて誰もそれを不思議に思わねえのさ。」\n「だから例の暴動を計画した時、落書きを情報伝達に使うことにしたんだ。堂々としてたほうが、逆に目立たねえって考えでな。」\n「で、あのサヴラの趣味がグラフィティアートだって聞いたもんで、伝達チームに抜擢したんだよ。」\n「実際、それ自体はうまくいってた。」\n「十字路にある床屋の外壁を三回塗り替えただけで、時間と場所、それに作戦内容を――この麻痺しきった街を爆破して、報いを受けさせようってのを伝えることさえできたんだ。」\n「何もかも順調だった。だが、あいつは最後の落書きの隅っこに、『危険だからここから離れろ』、なんてメッセージを仕込みやがってよ。」\n「幸いほかの奴がすぐに気付いたから、大急ぎで真っ黒に塗りつぶして、あいつもとっ捕まえてやった。」\n「あんな落書き、俺たち以外じゃ底辺でもがいてる連中くらいしか見ねえことは奴もわかってたはずだ。」\n「つまりは、情報を拡散しようとしたって言うより、良心の呵責に耐えきれなくなって衝動的にやったんだろうな。*龍門スラング*がよ！」\n「あー、そのあとのことは知っての通りだ。あいつは見張りの隙を突き、身体の色を変えてこっそり逃げ出しやがった。」\n「だが、何をするにもビビってたあの腰抜けが、近衛局に自首しに行ったのは予想外だったな。」\n\n――龍門近衛局がレユニオン構成員に実施した、ある暴動事件の取り調べ記録より。一部イーサンに関する内容が含まれていたため、のちにロドスへと送付された。"
+      "desc": "「まずはキャンバスにする壁選びだが、目立たなすぎたり綺麗すぎたりするやつや、ボロっちいやつなんかは全部アウトだ。」\n「それと、ここは街中じゃなくてロドスだってことを忘れんなよ。ブリッジや通路沿いでやると、クロージャにどやされちまうぜ。」\n「さて、次は塗料選びだな。彩度の高さはどうかとか、変なにおいがしないかとかの基準もあるが、何より大事なのは塗料の密着力とカバー力――要は色の乗りやすさだ。」\n「塗ってるそばから液だれしちまうような塗料だと、どんな超絶テクで塗っても台無しになっちまうからな。」\n「んで、三つ目は文字をどうやってド派手にアレンジするかって話だが……」\n……\n「そいで、最後は何を描くかだ。言っとくが、何をするにもただフラストレーションをぶちまけるだけじゃあダメだぜ。」\n「ペンキをやたらめったらにぶっかけるのも、暴力を他人にぶつけるのも、無意味なストレス発散でしかねぇからな。」\n「感情任せにモノを滅茶苦茶に汚してちゃ、芸術とは言えねぇ。グラフィティってのはそういうもんじゃねぇんだ。」\n「てめぇの思想や伝えたい情報を込めてこそのグラフィティだと思え……クールに、んでもってビビらずにやるのさ。」\n――ロドスで実施されたグラフィティアート講座におけるイーサンの発言より\n\n「あいつだよ、あの身体の色を変えられるサヴラが、俺たちの計画をぶち壊しやがったんだ。」\n「っていうのも、スラムはそこら中落書きだらけだろ？　下水道にこびりついた汚れみてぇに、見慣れすぎて誰もそれを不思議に思わねえのさ。」\n「だから例の暴動を計画した時、落書きを情報伝達に使うことにしたんだ。堂々としてたほうが、逆に目立たねえって考えでな。」\n「で、あのサヴラの趣味がグラフィティアートだって聞いたもんで、伝達チームに抜擢したんだよ。」\n「実際、それ自体はうまくいってた。」\n「十字路にある床屋の外壁を三回塗り替えただけで、時間と場所、それに作戦内容を――この麻痺しきった街を爆破して、報いを受けさせようってのを伝えることさえできたんだ。」\n「何もかも順調だった。だが、あいつは最後の落書きの隅っこに、『危険だからここから離れろ』、なんてメッセージを仕込みやがってよ。」\n「幸いほかの奴がすぐに気付いたから、大急ぎで真っ黒に塗りつぶして、あいつもとっ捕まえてやった。」\n「あんな落書き、俺たち以外じゃ底辺でもがいてる連中くらいしか見ねえことは奴もわかってたはずだ。」\n「つまりは、情報を拡散しようとしたって言うより、良心の呵責に耐えきれなくなって衝動的にやったんだろうな。*龍門スラング*がよ！」\n「あー、そのあとのことは知っての通りだ。あいつは見張りの隙を突き、身体の色を変えてこっそり逃げ出しやがった。」\n「だが、何をするにもビビってたあの腰抜けが、近衛局に自首しに行ったのは予想外だったな。」\n\n――龍門近衛局がレユニオン構成員に実施した、ある暴動事件の取り調べ記録より。一部イーサンに関する内容が含まれていたため、のちにロドスへと送付された。",
+      "typeIcon": "amb-x",
+      "uniEquipIcon": "uniequip_002_ethan",
+      "typeName1": "AMB",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_ethan_1",
+        "uniequip_002_ethan_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31013",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30063",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、25%の確率で攻撃した敵を3.5秒間<$ba.root>バインド</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "絡みつく",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "frozen_duration",
+                      "value": 3.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、28%の確率で攻撃した敵を3.5秒間<$ba.root>バインド</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "絡みつく",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.28,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "frozen_duration",
+                      "value": 3.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1084,5 +1693,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

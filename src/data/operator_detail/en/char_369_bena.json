@@ -151,6 +151,32 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "duration",
+          "value": 20
+        },
+        {
+          "key": "atk",
+          "value": 0
+        },
+        {
+          "key": "max_hp",
+          "value": 0
+        }
+      ],
+      "overrideDescription": "Does not retreat upon receiving lethal damage, instead swaps to a <Substitute> (Substitute has 0 Block). Swaps back to the original after 20 seconds",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_369_bena#1",
@@ -614,16 +640,597 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 100,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Bena's Protractor",
+          "description": "<Substitute> deals Arts damage",
+          "blackboard": {
+            "damage_resistance": 0,
+            "talent_override_rangeid_flag": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Bena's Protractor",
+          "description": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 20%",
+          "blackboard": {
+            "damage_resistance": 0.2,
+            "talent_override_rangeid_flag": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Bena's Protractor",
+          "description": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 23%<@ba.talpu> (+3%)</>",
+          "blackboard": {
+            "damage_resistance": 0.23,
+            "talent_override_rangeid_flag": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Bena's Protractor",
+          "description": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 40%",
+          "blackboard": {
+            "damage_resistance": 0.4,
+            "talent_override_rangeid_flag": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Bena's Protractor",
+          "description": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 43%<@ba.talpu> (+3%)</>",
+          "blackboard": {
+            "damage_resistance": 0.43,
+            "talent_override_rangeid_flag": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_bena",
       "moduleName": "Bena's Badge",
-      "desc": "Operator Bena has demonstrated a remarkable aptitude for repeated contention with the enemy upon the battlefield.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Dollkeeper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Bena has demonstrated a remarkable aptitude for repeated contention with the enemy upon the battlefield.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Dollkeeper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_bena",
       "moduleName": "The Jeffreys Collection of Fairytales New and Old, Hardback Edition",
-      "desc": "Once upon a time, in a forest far far away, there was a castle.\nAnd in that castle, there lived a child.\nCome the wee hours of each morning, the child would take bread from the pantry, and draw water from the well, from which he would sup for the day.\nOnce the sun set, he would go to the bedroom, and fall soundly asleep on the bed.\nEach day came like the last, and each year the one before.\nThe forest outside the castle was gloomy and deep, where the wild-beasts never ceased to snarl and bay.\nBut this did not reach the child—\nFor the hardy castle protected him.\nYet there is a time for every castle to crumble.\nThough the child strived hither and thither to mend the holes, the cracks grew greater and greater.\nHow it confounded the child!\nOne day, a witch rang the bell at the castle door.\nThe child had never opened this door before.\nHe dreaded all that lay outside, from the pit of his stomach.\nYet he could not help but hear the witch beseech him, and in his kindness he let her into the castle.\nThe food of the castle was barely enough for the child to subsist, but still he shared a half of his meal with the witch.\nCome days later, the witch sought out the child.\nShe was much pleased with the child's choice, and so she pledged to him:\n—I may grant you a wish.\nA wish! The child began to think.\nHe would like to mend the castle, and continue his life from before.\nBut after the witch was gone, suppose the castle were to fall apart again; whatever would he do?\n\nHe thought and thought, until finally a perfect wish came to him:\n—I want to take the castle with me, away from the forest.\n\nHence, the child set upon the journey of his—\nAnd behind him was his tiny little castle, which seemed to look very much like him, and which forever protected him.\n\n—The Child's Castle, selected from The Jeffreys Collection of Fairytales New and Old"
+      "desc": "Once upon a time, in a forest far far away, there was a castle.\nAnd in that castle, there lived a child.\nCome the wee hours of each morning, the child would take bread from the pantry, and draw water from the well, from which he would sup for the day.\nOnce the sun set, he would go to the bedroom, and fall soundly asleep on the bed.\nEach day came like the last, and each year the one before.\nThe forest outside the castle was gloomy and deep, where the wild-beasts never ceased to snarl and bay.\nBut this did not reach the child—\nFor the hardy castle protected him.\nYet there is a time for every castle to crumble.\nThough the child strived hither and thither to mend the holes, the cracks grew greater and greater.\nHow it confounded the child!\nOne day, a witch rang the bell at the castle door.\nThe child had never opened this door before.\nHe dreaded all that lay outside, from the pit of his stomach.\nYet he could not help but hear the witch beseech him, and in his kindness he let her into the castle.\nThe food of the castle was barely enough for the child to subsist, but still he shared a half of his meal with the witch.\nCome days later, the witch sought out the child.\nShe was much pleased with the child's choice, and so she pledged to him:\n—I may grant you a wish.\nA wish! The child began to think.\nHe would like to mend the castle, and continue his life from before.\nBut after the witch was gone, suppose the castle were to fall apart again; whatever would he do?\n\nHe thought and thought, until finally a perfect wish came to him:\n—I want to take the castle with me, away from the forest.\n\nHence, the child set upon the journey of his—\nAnd behind him was his tiny little castle, which seemed to look very much like him, and which forever protected him.\n\n—The Child's Castle, selected from The Jeffreys Collection of Fairytales New and Old",
+      "typeIcon": "pum-y",
+      "uniEquipIcon": "uniequip_002_bena",
+      "typeName1": "PUM",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_bena_1",
+        "uniequip_002_bena_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but HP is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but HP is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 43%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Bena's Protractor",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.43,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 46% <@ba.talpu>(+3%)</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Bena's Protractor",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.46,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 280,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but HP is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 45%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Bena's Protractor",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.45,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 48% <@ba.talpu>(+3%)</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Bena's Protractor",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.48,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1077,5 +1684,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

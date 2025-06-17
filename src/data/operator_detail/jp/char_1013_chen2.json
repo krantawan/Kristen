@@ -151,6 +151,28 @@
       "cost": 32
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": "1-3"
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1013_chen2#1",
@@ -736,16 +758,666 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+33",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 33,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 80,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "勤倹節約",
+          "description": "配置中、自身の弾薬消費系スキルが15％の確率で弾薬を消費しない（同種の効果は高いほうのみ適用）",
+          "blackboard": [
+            {
+              "key": "spareshot_chen.prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "prob",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "勤倹節約",
+          "description": "配置中、自身の弾薬消費系スキルが17％<@ba.talpu>（+2%）</>の確率で弾薬を消費しない（同種の効果は高いほうのみ適用）",
+          "blackboard": [
+            {
+              "key": "spareshot_chen.prob",
+              "value": 0.17,
+              "valueStr": null
+            },
+            {
+              "key": "prob",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "勤倹節約",
+          "description": "配置中、自身の弾薬消費系スキルが20％の確率で弾薬を消費せず、自身以外の【狙撃】も10％の確率で弾薬を消費しない（同種の効果は高いほうのみ適用）",
+          "blackboard": [
+            {
+              "key": "spareshot_chen.prob",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "prob",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "勤倹節約",
+          "description": "配置中、自身の弾薬消費系スキルが22%<@ba.talpu>（+2%）</>の確率で弾薬を消費せず、自身以外の【狙撃】も10％の確率で弾薬を消費しない（同種の効果は高いほうのみ適用）",
+          "blackboard": [
+            {
+              "key": "spareshot_chen.prob",
+              "value": 0.22,
+              "valueStr": null
+            },
+            {
+              "key": "prob",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "海辺の遊龍",
+          "description": "攻撃速度+8、戦場中に水場がある場合効果値が+12まで上昇",
+          "blackboard": [
+            {
+              "key": "chen2_t_2[common].attack_speed",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "chen2_t_2[map].attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_chen2",
       "moduleName": "遊龍チェンの記章",
-      "desc": "遊龍チェンは近距離射撃によって複数の敵を火力で制圧することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、散弾射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "遊龍チェンは近距離射撃によって複数の敵を火力で制圧することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、散弾射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_chen2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_chen2",
       "moduleName": "ビーチ用コンバットセット",
-      "desc": "目の前の男の子を見ながら、チェンは少しうろたえる。 \n「君の母親が？密輸？」 \n「うん。でもお父さんに無理やりやらされるんだ。」 \n「私に母親を助けてほしいのか？」 \n「お父さんと仲間が広場でお母さんに会う予定なんだ。」 \n「君はどうして知っている？」 \n「……だって前は僕がやってたから。」男の子が歯を食いしばって言う。「お父さんは前に約束したんだ。お金を稼いだら虹を見に僕とお母さんをクルーズ船に連れて行ってくれるって。でも一回もその約束を守ってくれたことないし、お金稼ぎばっかで僕にも無理やりやらせたんだ。今度はお母さんまで巻き込もうとして、もう耐えられないよ。」 \nチェンは男の子の首にあるいくつかのあざに気づいた。長年の経験から、男の子は嘘を言っていないことを即座に判断した。 \n「……安心しろ。もし君の話が本当なら、君の父親と仲間には必ず相応の罰を受けさせる。」 \n「罰」という言葉を聞いて、ずっとうつむいていた子供は唐突に顔を上げこう尋ねた。「監獄に入れば人は優しくなるのかな？」 \n「……なぜそんなことを聞く？」 \n「お父さんは前こんなじゃなかったから。ドッソレスに来てから、お父さんはいつも大金を稼ぐ話ばかりして、いつからこうなっちゃったのかはわからない……もしかしたら元々こうだったのかもしれない。でも、虹を見にクルーズ船に連れて行ってやるって初めて言ってくれた時のことが忘れられないんだ。」 \n男の子を見ながら、チェンはかつての自分を思い出した。あの時、彼女はいつもあの人に自分の剣を見てほしかった。しかしいつの間にか、彼女は期待しなくなっていた。 \n「この都市は水だらけで、虹なんてどこでも見られるだろう。まだ見足りないのか？」 \n「……お父さんにクルーズ船に連れて行ってもらって見ないとダメだよ。」 \nそうだ、その人じゃないとダメなんだ。 \n「ハッ。なら今でもそう思っているのか？」 \n「うん。」男の子の目は淡い期待をたたえるも、すぐに色を失った。「でも僕一人じゃできないよ。」 \nチェンはしばらく沈黙し、自身の水銃を見せると、男の子が指し示した方向へ歩いていく。 \n行く前に、彼女は男の子に言葉を残した。 \n「ならどうにかして父親に君の話を聞かせ、優しくなってほしいとわからせるんだ。少なくとも自分の考えを理解してもらわなければならない。」 \nその日、ドッソレスで局地的な降雨が発生した。雨の中、チェンは犯罪グループから一人の女性を救い出し、犯罪者たちを制圧した。 \n人々を感嘆させたのは、犯罪グループのリーダーが頑なに抵抗しようとしたその時、一人の子供が突然彼の目の前に立ちはだかったことだ。雨はいつの間にか上がり、空には虹がかかっていた。虹の下では、リーダーが明らかにいくらか戸惑い、そして子供がリーダーに何かを言った。最終的に、リーダーは武器を下ろしたのだった。 \n近くにいた目撃者によると、また一つ密輸事件を解決したものの、チェンはうれしくなさそうな様子でただ東を向き、物思いにふけっていたという。"
+      "desc": "目の前の男の子を見ながら、チェンは少しうろたえる。 \n「君の母親が？密輸？」 \n「うん。でもお父さんに無理やりやらされるんだ。」 \n「私に母親を助けてほしいのか？」 \n「お父さんと仲間が広場でお母さんに会う予定なんだ。」 \n「君はどうして知っている？」 \n「……だって前は僕がやってたから。」男の子が歯を食いしばって言う。「お父さんは前に約束したんだ。お金を稼いだら虹を見に僕とお母さんをクルーズ船に連れて行ってくれるって。でも一回もその約束を守ってくれたことないし、お金稼ぎばっかで僕にも無理やりやらせたんだ。今度はお母さんまで巻き込もうとして、もう耐えられないよ。」 \nチェンは男の子の首にあるいくつかのあざに気づいた。長年の経験から、男の子は嘘を言っていないことを即座に判断した。 \n「……安心しろ。もし君の話が本当なら、君の父親と仲間には必ず相応の罰を受けさせる。」 \n「罰」という言葉を聞いて、ずっとうつむいていた子供は唐突に顔を上げこう尋ねた。「監獄に入れば人は優しくなるのかな？」 \n「……なぜそんなことを聞く？」 \n「お父さんは前こんなじゃなかったから。ドッソレスに来てから、お父さんはいつも大金を稼ぐ話ばかりして、いつからこうなっちゃったのかはわからない……もしかしたら元々こうだったのかもしれない。でも、虹を見にクルーズ船に連れて行ってやるって初めて言ってくれた時のことが忘れられないんだ。」 \n男の子を見ながら、チェンはかつての自分を思い出した。あの時、彼女はいつもあの人に自分の剣を見てほしかった。しかしいつの間にか、彼女は期待しなくなっていた。 \n「この都市は水だらけで、虹なんてどこでも見られるだろう。まだ見足りないのか？」 \n「……お父さんにクルーズ船に連れて行ってもらって見ないとダメだよ。」 \nそうだ、その人じゃないとダメなんだ。 \n「ハッ。なら今でもそう思っているのか？」 \n「うん。」男の子の目は淡い期待をたたえるも、すぐに色を失った。「でも僕一人じゃできないよ。」 \nチェンはしばらく沈黙し、自身の水銃を見せると、男の子が指し示した方向へ歩いていく。 \n行く前に、彼女は男の子に言葉を残した。 \n「ならどうにかして父親に君の話を聞かせ、優しくなってほしいとわからせるんだ。少なくとも自分の考えを理解してもらわなければならない。」 \nその日、ドッソレスで局地的な降雨が発生した。雨の中、チェンは犯罪グループから一人の女性を救い出し、犯罪者たちを制圧した。 \n人々を感嘆させたのは、犯罪グループのリーダーが頑なに抵抗しようとしたその時、一人の子供が突然彼の目の前に立ちはだかったことだ。雨はいつの間にか上がり、空には虹がかかっていた。虹の下では、リーダーが明らかにいくらか戸惑い、そして子供がリーダーに何かを言った。最終的に、リーダーは武器を下ろしたのだった。 \n近くにいた目撃者によると、また一つ密輸事件を解決したものの、チェンはうれしくなさそうな様子でただ東を向き、物思いにふけっていたという。",
+      "typeIcon": "rpr-x",
+      "uniEquipIcon": "uniequip_002_chen2",
+      "typeName1": "RPR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_chen2_1",
+        "uniequip_002_chen2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 37,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃し、自身の正面横3マスにいる敵を攻撃時攻撃力が<@ba.kw>160%</>まで上昇",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 42,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃し、自身の正面横3マスにいる敵を攻撃時攻撃力が<@ba.kw>160%</>まで上昇",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、自身の弾薬消費系スキルが23%の確率で弾薬を消費せず、自身以外の【狙撃】が20%の確率で弾薬を消費しなくなり、その他遠距離オペレーターが8%の確率で弾薬を消費しなくなる（同種の効果は高いほうのみ適用）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "勤倹節約",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、自身の弾薬消費系スキルが25%<@ba.talpu>（+2%）</>の確率で弾薬を消費せず、自身以外の【狙撃】が20%の確率で弾薬を消費しなくなり、その他遠距離オペレーターが8%の確率で弾薬を消費しなくなる（同種の効果は高いほうのみ適用）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "勤倹節約",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃し、自身の正面横3マスにいる敵を攻撃時攻撃力が<@ba.kw>160%</>まで上昇",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、自身の弾薬消費系スキルが25%の確率で弾薬を消費せず、自身以外の【狙撃】が20%の確率で弾薬を消費しなくなり、その他遠距離オペレーターが12%の確率で弾薬を消費しなくなる（同種の効果は高いほうのみ適用）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "勤倹節約",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、自身の弾薬消費系スキルが27%<@ba.talpu>（+2%）</>の確率で弾薬を消費せず、自身以外の【狙撃】が20%の確率で弾薬を消費しなくなり、その他遠距離オペレーターが12%の確率で弾薬を消費しなくなる（同種の効果は高いほうのみ適用）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "勤倹節約",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1207,5 +1879,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

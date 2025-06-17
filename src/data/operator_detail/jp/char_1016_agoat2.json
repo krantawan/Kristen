@@ -150,6 +150,28 @@
       "cost": 16
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "ep_heal_ratio",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1016_agoat2#1",
@@ -707,16 +729,632 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 45,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "白き雲",
+          "description": "通常治療後、対象のHPと蓄積された<$ba.dt.element>元素損傷</>を4秒間、1秒ごとに8%治療する（最大3回まで重複可能）",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "白き雲",
+          "description": "通常治療後、対象のHPと蓄積された<$ba.dt.element>元素損傷</>を6秒間、1秒ごとに10%治療する（最大3回まで重複可能）",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "火山灰療法",
+          "description": "攻撃範囲内の味方の最大HP+6%、受ける<$ba.dt.element>元素損傷</>の値-12%",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.06,
+              "valueStr": null
+            },
+            {
+              "key": "ep_damage_resistance",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "火山灰療法",
+          "description": "攻撃範囲内の味方の最大HP+8%<@ba.talpu>（+2%）</>、受ける<$ba.dt.element>元素損傷</>の値-12%",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "ep_damage_resistance",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_agoat2",
       "moduleName": "純燼エイヤフィヤトラの記章",
-      "desc": "純燼エイヤフィヤトラは広範囲の治療を行うと同時に、\nオペレーターの元素損傷を回復させることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、放浪医の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "純燼エイヤフィヤトラは広範囲の治療を行うと同時に、\nオペレーターの元素損傷を回復させることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、放浪医の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_agoat2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_agoat2",
       "moduleName": "残したい音声",
-      "desc": "【録音内容：溶岩の沸き立つ音】\nタイトル：火山の呼吸\nメモ：\n噴火が止んだ後は、またケラー先生と一緒にシエスタ火山に登って、最後のデータ採集を行いました。\nこの音を録音し終えた時、ケラー先生が突然、一緒に山頂で少し休まないかと提案してくれました。\n灰白色になった旧シエスタを眺めながら、目を潤ませた先生は、ヴォルケーノミュージアムの未来について、そして自分の引退計画を延期する可能性について語りました。先生も、私がこの先頻繁にシエスタを訪れられたらと思ってくださっているのはわかります――それも、火山の研究のためだけではなく、ということも含めて。\n\n【録音内容：音楽と歌声】\nタイトル：ケーキ屋さんで歌った歌\nメモ：\n随分久しぶりに、ここへ戻ってきました。町の時間は止まっていたかのようで、何も変わっていないようにすら感じます。\nですが、お母さんが好きだったケーキ屋さんが、改修を終えてリニューアルオープンしていることに気付きました。そのお庭には、即興の演奏をしている人がたくさんいました。\n懐かしいメロディーが聞こえて、よく聞きたいと近付いてみたら、なんと歌手の方が一緒に歌おうと誘ってくださったんです！残念なことに、私はもう歌詞を忘れてしまっていて、皆さんの発音もよく聞こえなかったので、真似して歌うこともできず、ただハミングするばかりでしたが……多分、音は外してなかったはず？\n\n【録音内容：学術討論】\nタイトル：大学の緑地での討論会\nメモ：\nシエスタ火山の観測資料を持ってウィリアム大学に戻ると、カーン先輩とほかの学者さんたちを見かけました。挨拶をしたんですが、カーン先輩はなんだか気まずそうで。気にしないでほしいと伝えようとしたのですが、それでもぎこちない態度のままでした。\n幸い、簡単な挨拶のあとはすぐ火山の研究に話題が移ったので、カーン先輩も緊張がほぐれたようです。\nおかげで楽しくお話しできました。そこが教室でも実験室でも会議室でもなく、大学の緑地にある小道だということなんて少しも意識しないくらいに。\n本当に、楽しかったです。\n\n【録音内容：幼い頃の映像の音声ダビング】\nタイトル：今でも覚えているあの願い\nメモ：\n大学を後にしたついでに、お家へ戻ってきました。\nカーテンを新しいものに替えて、もう必要のないものを整理していたら、小さい頃の映像が記録されたディスクを偶然見つけました。残念ながら映像自体はほとんどがダメになっていましたが、運良く音声には問題がなかったので、このテープにダビングすることができました。\nこれは、お父さんとお母さんがバースデーソングを歌ってくれて、誕生日のお願いごとを聞かれたときのものです。録音の中の私は願いを口にはしませんでしたが、今でも何を願っていたのか覚えています――\n今の私は、その願いを叶えている途中なんです。\n\n【録音内容：友人たちの笑い声】\nタイトル：みんなが歓迎会をしてくれました！\nメモ：\nお家のことが全部終わってから、定期検診を受けに久しぶりにロドスへ戻りました。するとなんと、みんなが歓迎会をしてくれたんです。\nプロヴァンスお姉さんとアンジェリーナさんが、クラッカーを鳴らす時に少し失敗して、ぬいぐるみの山を崩してしまっていました。そうしたらどこからか、ちびめーちゃんたちが湧いてきて、歓迎会が大混乱に……でも、みんなでいっぱい、いっぱい笑いました。\nみんなと過ごす日々が、もう少し長く続きますように。\n\n【録音内容：なし】\nタイトル：未定\nメモ：\n次回の実地調査用に残した予備テープ。\nチャンスがあれば、もっともっと録音したいです――溶岩の音も、風雨の音も、私の周りのみんなの声も。"
+      "desc": "【録音内容：溶岩の沸き立つ音】\nタイトル：火山の呼吸\nメモ：\n噴火が止んだ後は、またケラー先生と一緒にシエスタ火山に登って、最後のデータ採集を行いました。\nこの音を録音し終えた時、ケラー先生が突然、一緒に山頂で少し休まないかと提案してくれました。\n灰白色になった旧シエスタを眺めながら、目を潤ませた先生は、ヴォルケーノミュージアムの未来について、そして自分の引退計画を延期する可能性について語りました。先生も、私がこの先頻繁にシエスタを訪れられたらと思ってくださっているのはわかります――それも、火山の研究のためだけではなく、ということも含めて。\n\n【録音内容：音楽と歌声】\nタイトル：ケーキ屋さんで歌った歌\nメモ：\n随分久しぶりに、ここへ戻ってきました。町の時間は止まっていたかのようで、何も変わっていないようにすら感じます。\nですが、お母さんが好きだったケーキ屋さんが、改修を終えてリニューアルオープンしていることに気付きました。そのお庭には、即興の演奏をしている人がたくさんいました。\n懐かしいメロディーが聞こえて、よく聞きたいと近付いてみたら、なんと歌手の方が一緒に歌おうと誘ってくださったんです！残念なことに、私はもう歌詞を忘れてしまっていて、皆さんの発音もよく聞こえなかったので、真似して歌うこともできず、ただハミングするばかりでしたが……多分、音は外してなかったはず？\n\n【録音内容：学術討論】\nタイトル：大学の緑地での討論会\nメモ：\nシエスタ火山の観測資料を持ってウィリアム大学に戻ると、カーン先輩とほかの学者さんたちを見かけました。挨拶をしたんですが、カーン先輩はなんだか気まずそうで。気にしないでほしいと伝えようとしたのですが、それでもぎこちない態度のままでした。\n幸い、簡単な挨拶のあとはすぐ火山の研究に話題が移ったので、カーン先輩も緊張がほぐれたようです。\nおかげで楽しくお話しできました。そこが教室でも実験室でも会議室でもなく、大学の緑地にある小道だということなんて少しも意識しないくらいに。\n本当に、楽しかったです。\n\n【録音内容：幼い頃の映像の音声ダビング】\nタイトル：今でも覚えているあの願い\nメモ：\n大学を後にしたついでに、お家へ戻ってきました。\nカーテンを新しいものに替えて、もう必要のないものを整理していたら、小さい頃の映像が記録されたディスクを偶然見つけました。残念ながら映像自体はほとんどがダメになっていましたが、運良く音声には問題がなかったので、このテープにダビングすることができました。\nこれは、お父さんとお母さんがバースデーソングを歌ってくれて、誕生日のお願いごとを聞かれたときのものです。録音の中の私は願いを口にはしませんでしたが、今でも何を願っていたのか覚えています――\n今の私は、その願いを叶えている途中なんです。\n\n【録音内容：友人たちの笑い声】\nタイトル：みんなが歓迎会をしてくれました！\nメモ：\nお家のことが全部終わってから、定期検診を受けに久しぶりにロドスへ戻りました。するとなんと、みんなが歓迎会をしてくれたんです。\nプロヴァンスお姉さんとアンジェリーナさんが、クラッカーを鳴らす時に少し失敗して、ぬいぐるみの山を崩してしまっていました。そうしたらどこからか、ちびめーちゃんたちが湧いてきて、歓迎会が大混乱に……でも、みんなでいっぱい、いっぱい笑いました。\nみんなと過ごす日々が、もう少し長く続きますように。\n\n【録音内容：なし】\nタイトル：未定\nメモ：\n次回の実地調査用に残した予備テープ。\nチャンスがあれば、もっともっと録音したいです――溶岩の音も、風雨の音も、私の周りのみんなの声も。",
+      "typeIcon": "wdm-x",
+      "uniEquipIcon": "uniequip_002_agoat2",
+      "typeName1": "WDM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_agoat2_1",
+        "uniequip_002_agoat2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 36,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の味方の最大HP+6%、受ける<$ba.dt.element>元素損傷</>の値-14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "火山灰療法",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.06,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の味方の最大HP+8%<@ba.talpu>（+2%）</>、受ける<$ba.dt.element>元素損傷</>の値-14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "火山灰療法",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 44,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の味方の最大HP+8%、受ける<$ba.dt.element>元素損傷</>の値-14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "火山灰療法",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の味方の最大HP+10%<@ba.talpu>（+2%）</>、受ける<$ba.dt.element>元素損傷</>の値-14%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "火山灰療法",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1178,5 +1816,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

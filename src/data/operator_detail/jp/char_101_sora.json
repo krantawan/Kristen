@@ -151,6 +151,28 @@
       "cost": 7
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@atk_to_hp_recovery_ratio",
+            "value": 0.1,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "攻撃しない\n攻撃範囲内の味方全員の<@ba.kw>HP</>を継続回復(1秒ごとに攻撃力の<@ba.kw>{attack@atk_to_hp_recovery_ratio:0%}</>回復)\n自身は<$ba.inspire>鼓舞</>状態の効果を受けない",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_101_sora#1",
@@ -628,16 +650,618 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "最大HP+140",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 140,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 20,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "アンコール",
+          "description": "スキル終了後、50%の確率でSPが最大値の25%回復",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "sp",
+              "value": 0.25,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "アンコール",
+          "description": "スキル終了後、50%の確率でSPが最大値の50%回復",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "sp",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_sora",
       "moduleName": "ソラの記章",
-      "desc": "ソラは付近の味方を支援しつつ徐々に回復させることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、吟遊者の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ソラは付近の味方を支援しつつ徐々に回復させることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、吟遊者の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_sora",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_sora",
       "moduleName": "「ユニゾン」",
-      "desc": "銀色の輸送車が、ペンギン急便のとあるセーフハウスにほど近いピックアップポイントへと到着した。大小さまざまな荷物が、輸送車から運び出されていく。\nその様子は明らかに、荷物の持ち主がこの場所に長期滞在すると決めていることを意味していた。ようやくすべての荷物がセーフハウスの中に運び込まれると、待ちくたびれた様子のループスが荷物の側に立つ現役のアイドルのほうに歩み寄り、開いたダンボールの前で腰をかがめて、合成樹脂でできた一対の棒のような物を拾い上げた。\n「私の記憶違いでなければ……これはたしか、ファンがライブで振るペンライトだな？」\n「――え？あ、そうです。そのペンライトはファンから記念にもらったものなんですけど……テキサスさんが使い方を知ってるなんて、ちょっと意外でした。」\n「……お前のライブには行ったことがあるからな。それに映像でも見た。暗闇の中であれほど光る物に気づかないほうが難しいさ。」\n「それはたしかに。」ソラはつぶやきながらきょろきょろとあたりを見回し、再び視線をテキサスに戻した。\n「そうだ、テキサスさん。生のライブをもう一度見たくありませんか？」\n「いつ見られる？」\n「今すぐ。それか明日でも。ほら、あそこを見てください――」ソラの手はペンライトの向こう側、先程見回していた荷物のほうを指差した。「あの箱の中にあるのは、どれもライブをするための必需品。あたしがアイドルとして生きている証そのものです。」\n「今回、これを持ってきたのは――ペンギン急便限定のシークレットライブに、テキサスさんやほかのみんなを招待したかったからなんです！」\nすぐに即席ステージが木箱で組み立てられ、スピーカーと照明は貨物用のラックに据え付けられた。ソラはこれまでのアルバムからヒットナンバーを一曲ずつ選んでセットリストを作ると、感謝と情熱、そしてこの先の未来への願い、そのすべてを込めた歌唱とダンスを披露した。ステージの大きさや観客の数を除けば、そのライブはこれまでとなんら変わることはなく、ステージ下の観客たちの声援も――\n……待って、一体これはどういうこと？\nソラは目を見張った――その視線の先では、エクシアがステージ両脇の柱に掛けられた鉄板を銃で撃っていた。屋根裏まで響き渡るその音は、巧みなまでに曲のリズムと調和していた。その隣ではクロワッサンが、マラカスで盾を打ち鳴らし、さらにテキサスまで、剣を振る要領でペンライトを振り回している。険しく真剣な表情をしていたが、なんとも笑いを誘う姿だった。\nただ一人、エンペラーだけがこのナンセンスな空間の外に腰かけて、静かに耳を傾けていた。どうやら、この場で唯一の真面目な聴衆のようだ。\nソラは頭の中にコメディさながらのラフトラックが響いたような気がして、つられたように笑い声を上げた。これはみんなで創り上げるライブ――ペンギン急便のユニゾンなのだ。\n\n「これまでで一番忘れられないライブになったな。」\n「いやぁ～ソラはんがこんなに手のかかったスペシャルライブを用意してくれはったんやで。ウチらもただ見てるってわけにはいかんやろ。なぁ、ボス？」\n「まあ、ポップシンガーにしちゃ悪くなかったぜ。」\n「これってさぁ、たぶんボスは『ソラ、最高の歌だったぜ！』って言ってるんだよね〜」\n「そうだな。私もとても良かったと思う。」\n「とーぜん、あたしらの伴奏も最高だったでしょ！」\nソラはやれやれと首を横に振った。それから頷き、そしてまた大きく頷いた。そうして笑い出した彼女は、感謝の気持ちを胸に、友人たちが作る大きな抱擁の中へと飛び込んでいった。"
+      "desc": "銀色の輸送車が、ペンギン急便のとあるセーフハウスにほど近いピックアップポイントへと到着した。大小さまざまな荷物が、輸送車から運び出されていく。\nその様子は明らかに、荷物の持ち主がこの場所に長期滞在すると決めていることを意味していた。ようやくすべての荷物がセーフハウスの中に運び込まれると、待ちくたびれた様子のループスが荷物の側に立つ現役のアイドルのほうに歩み寄り、開いたダンボールの前で腰をかがめて、合成樹脂でできた一対の棒のような物を拾い上げた。\n「私の記憶違いでなければ……これはたしか、ファンがライブで振るペンライトだな？」\n「――え？あ、そうです。そのペンライトはファンから記念にもらったものなんですけど……テキサスさんが使い方を知ってるなんて、ちょっと意外でした。」\n「……お前のライブには行ったことがあるからな。それに映像でも見た。暗闇の中であれほど光る物に気づかないほうが難しいさ。」\n「それはたしかに。」ソラはつぶやきながらきょろきょろとあたりを見回し、再び視線をテキサスに戻した。\n「そうだ、テキサスさん。生のライブをもう一度見たくありませんか？」\n「いつ見られる？」\n「今すぐ。それか明日でも。ほら、あそこを見てください――」ソラの手はペンライトの向こう側、先程見回していた荷物のほうを指差した。「あの箱の中にあるのは、どれもライブをするための必需品。あたしがアイドルとして生きている証そのものです。」\n「今回、これを持ってきたのは――ペンギン急便限定のシークレットライブに、テキサスさんやほかのみんなを招待したかったからなんです！」\nすぐに即席ステージが木箱で組み立てられ、スピーカーと照明は貨物用のラックに据え付けられた。ソラはこれまでのアルバムからヒットナンバーを一曲ずつ選んでセットリストを作ると、感謝と情熱、そしてこの先の未来への願い、そのすべてを込めた歌唱とダンスを披露した。ステージの大きさや観客の数を除けば、そのライブはこれまでとなんら変わることはなく、ステージ下の観客たちの声援も――\n……待って、一体これはどういうこと？\nソラは目を見張った――その視線の先では、エクシアがステージ両脇の柱に掛けられた鉄板を銃で撃っていた。屋根裏まで響き渡るその音は、巧みなまでに曲のリズムと調和していた。その隣ではクロワッサンが、マラカスで盾を打ち鳴らし、さらにテキサスまで、剣を振る要領でペンライトを振り回している。険しく真剣な表情をしていたが、なんとも笑いを誘う姿だった。\nただ一人、エンペラーだけがこのナンセンスな空間の外に腰かけて、静かに耳を傾けていた。どうやら、この場で唯一の真面目な聴衆のようだ。\nソラは頭の中にコメディさながらのラフトラックが響いたような気がして、つられたように笑い声を上げた。これはみんなで創り上げるライブ――ペンギン急便のユニゾンなのだ。\n\n「これまでで一番忘れられないライブになったな。」\n「いやぁ～ソラはんがこんなに手のかかったスペシャルライブを用意してくれはったんやで。ウチらもただ見てるってわけにはいかんやろ。なぁ、ボス？」\n「まあ、ポップシンガーにしちゃ悪くなかったぜ。」\n「これってさぁ、たぶんボスは『ソラ、最高の歌だったぜ！』って言ってるんだよね〜」\n「そうだな。私もとても良かったと思う。」\n「とーぜん、あたしらの伴奏も最高だったでしょ！」\nソラはやれやれと首を横に振った。それから頷き、そしてまた大きく頷いた。そうして笑い出した彼女は、感謝の気持ちを胸に、友人たちが作る大きな抱擁の中へと飛び込んでいった。",
+      "typeIcon": "bar-x",
+      "uniEquipIcon": "uniequip_002_sora",
+      "typeName1": "BAR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_sora_1",
+        "uniequip_002_sora_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31074",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 142,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 13,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に他のオペレーターが2名以上いる場合、自身の攻撃力<@ba.kw>+8%</>（スキルの影響を受けない）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 172,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 18,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に他のオペレーターが2名以上いる場合、自身の攻撃力<@ba.kw>+8%</>（スキルの影響を受けない）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル終了後、60%の確率でSPが最大値の50%回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "アンコール",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に他のオペレーターが2名以上いる場合、自身の攻撃力<@ba.kw>+8%</>（スキルの影響を受けない）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル終了後、60%の確率でSPが最大値の60%回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "アンコール",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1091,5 +1715,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

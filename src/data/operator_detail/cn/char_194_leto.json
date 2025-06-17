@@ -169,6 +169,28 @@
       "cost": 19
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_194_leto#1",
@@ -636,16 +658,669 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+26",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 210,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "快点快点！",
+          "description": "开启技能时，【乌萨斯学生自治团】干员攻击速度+10，持续至技能结束",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "快点快点！",
+          "description": "开启技能时，【乌萨斯学生自治团】干员攻击速度+13<@ba.talpu>（+3）</>，持续至技能结束",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 13,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "快点快点！",
+          "description": "开启技能时，【乌萨斯学生自治团】干员攻击速度+21，持续至技能结束",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 21,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "快点快点！",
+          "description": "开启技能时，【乌萨斯学生自治团】干员攻击速度+24<@ba.talpu>（+3）</>，持续至技能结束",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_leto",
       "moduleName": "烈夏证章",
-      "desc": "干员烈夏擅长在较大范围内阻击敌人\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使领主职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员烈夏擅长在较大范围内阻击敌人\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使领主职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_leto",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_leto",
       "moduleName": "旧衣服",
-      "desc": "大家一开始相处得并不好。\n这也是理所当然的事情。\n拉达起初经常躲在索尼娅的背后一句话也不说。安娜的状况也好不到哪里去，她虽然在极力克制自己的情绪，但我看得出来，她也很慌张。索尼娅觉得她有责任保护其他人，整天都把她那把斧子握得很紧，我猜，总有一天她会不小心松手的。\n这样的氛围下，大家都很敏感，更糟糕的是，大家都不知道自己在做的事情对不对，好不好。\n拉达想要让自己变得有用——她觉得自己总是受到索尼娅的庇护，害怕哪天就被抛下——她想要去找一些食物回来，但总是碰壁。安娜想要让这个团体变得更“安定”，经常找各种人对话，可对话的结果往往不如她所愿。索尼娅虽然还挺精神，但她的身上隔一段时间就会多一道伤口。\n大家都在拼命让自己做些事情，仿佛不这么做就会疯掉——好吧，也许可以去掉“仿佛”两个字。\n至于我，虽然我一开始就不怎么害怕，但要是真的死在这里，那我是不乐意的。我也不希望失去索尼娅她们，我们已经是朋友了。所以，我也去做了许多我能做的事——带回一些物资，帮索尼娅收拾几个人，还悄悄教训了那些想要对安娜动手的家伙。\n我原本以为这样会变得好一点，结果反而变得糟糕了，拉达和安娜看我的眼神变得有些躲闪，索尼娅有时也会盯着我看。这时，我明白了，我抢了她们想做的事。\n但是，这些事原本就是我更加擅长，为什么不能由我来做呢？\n当然，我也没有这么小心眼，就好像拉达和安娜也没有因此对我做什么——我知道她们都很好，只是我们那时候还不知道如何相处。直到有一天，索尼娅因为和人发生冲突，校服上被狠狠地划了一道口子，安娜用我找来的针线包帮她把衣服缝好，我才忽然明白了我该做什么。\n我偷偷溜进仓库，找来一些大衣，交给安娜，希望她能帮我们改造成更加耐寒的衣服，天气变得更冷了，接下来用得着。果然，安娜一听，就高兴了起来。\n接着，我又冒险去偷了些整合运动的厨具给拉达，让她能更好地做菜，当然，最好是偷偷地做。拉达也一下子高兴了起来。\n我还给大家找来了一些防身的玩意，和索尼娅一边讨论，一边改造。我拍着胸脯和索尼娅说，想要什么就告诉我，我去帮大家弄。索尼娅盯了我一会儿，这回，她点了点头。\n现在想起来，大概是从那时候起，我们的团队才真正有了一个雏形吧。"
+      "desc": "大家一开始相处得并不好。\n这也是理所当然的事情。\n拉达起初经常躲在索尼娅的背后一句话也不说。安娜的状况也好不到哪里去，她虽然在极力克制自己的情绪，但我看得出来，她也很慌张。索尼娅觉得她有责任保护其他人，整天都把她那把斧子握得很紧，我猜，总有一天她会不小心松手的。\n这样的氛围下，大家都很敏感，更糟糕的是，大家都不知道自己在做的事情对不对，好不好。\n拉达想要让自己变得有用——她觉得自己总是受到索尼娅的庇护，害怕哪天就被抛下——她想要去找一些食物回来，但总是碰壁。安娜想要让这个团体变得更“安定”，经常找各种人对话，可对话的结果往往不如她所愿。索尼娅虽然还挺精神，但她的身上隔一段时间就会多一道伤口。\n大家都在拼命让自己做些事情，仿佛不这么做就会疯掉——好吧，也许可以去掉“仿佛”两个字。\n至于我，虽然我一开始就不怎么害怕，但要是真的死在这里，那我是不乐意的。我也不希望失去索尼娅她们，我们已经是朋友了。所以，我也去做了许多我能做的事——带回一些物资，帮索尼娅收拾几个人，还悄悄教训了那些想要对安娜动手的家伙。\n我原本以为这样会变得好一点，结果反而变得糟糕了，拉达和安娜看我的眼神变得有些躲闪，索尼娅有时也会盯着我看。这时，我明白了，我抢了她们想做的事。\n但是，这些事原本就是我更加擅长，为什么不能由我来做呢？\n当然，我也没有这么小心眼，就好像拉达和安娜也没有因此对我做什么——我知道她们都很好，只是我们那时候还不知道如何相处。直到有一天，索尼娅因为和人发生冲突，校服上被狠狠地划了一道口子，安娜用我找来的针线包帮她把衣服缝好，我才忽然明白了我该做什么。\n我偷偷溜进仓库，找来一些大衣，交给安娜，希望她能帮我们改造成更加耐寒的衣服，天气变得更冷了，接下来用得着。果然，安娜一听，就高兴了起来。\n接着，我又冒险去偷了些整合运动的厨具给拉达，让她能更好地做菜，当然，最好是偷偷地做。拉达也一下子高兴了起来。\n我还给大家找来了一些防身的玩意，和索尼娅一边讨论，一边改造。我拍着胸脯和索尼娅说，想要什么就告诉我，我去帮大家弄。索尼娅盯了我一会儿，这回，她点了点头。\n现在想起来，大概是从那时候起，我们的团队才真正有了一个雏形吧。",
+      "typeIcon": "lor-y",
+      "uniEquipIcon": "uniequip_002_leto",
+      "typeName1": "LOR",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_leto_1",
+        "uniequip_002_leto_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围内存在2名及以上敌人时攻击速度<@ba.vup>+12</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 52,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 39,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围内存在2名及以上敌人时攻击速度<@ba.vup>+12</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "开启技能时，【乌萨斯学生自治团】干员攻击速度+27，持续至技能结束",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "快点快点！",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 27,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "开启技能时，【乌萨斯学生自治团】干员攻击速度+30<@ba.talpu>（+3）</>，持续至技能结束",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "快点快点！",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 59,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围内存在2名及以上敌人时攻击速度<@ba.vup>+12</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "开启技能时，【乌萨斯学生自治团】干员攻击速度+32，持续至技能结束",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "快点快点！",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 32,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "开启技能时，【乌萨斯学生自治团】干员攻击速度+35<@ba.talpu>（+3）</>，持续至技能结束",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "快点快点！",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 35,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1099,5 +1774,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

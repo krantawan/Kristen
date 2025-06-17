@@ -152,6 +152,7 @@
       "cost": 21
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_400_weedy#1",
@@ -756,21 +757,916 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ASPD +8",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 8,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +140",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 140,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 45,
+        "def": 45,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Industrial Water Cannon",
+          "description": "Can deploy a Reserve Water Cannon that lasts for 15s; the Water Cannon can attack 1 target and push it away slightly",
+          "blackboard": {
+            "cnt": 1
+          },
+          "tokenKey": "token_10009_weedy_cannon",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Industrial Water Cannon",
+          "description": "Can deploy a Reserve Water Cannon that lasts for 20s; the Water Cannon can attack 1 target and push it away slightly",
+          "blackboard": {
+            "cnt": 1
+          },
+          "tokenKey": "token_10009_weedy_cannon",
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Upgraded Water Cannon",
+          "description": "Increases the shift level of the Water Cannon's normal attacks and skills by 1, and Weedy will restore 1 SP per 3 seconds if the Water Cannon is located within 4 tiles around her",
+          "blackboard": {},
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_weedy",
       "moduleName": "Weedy's Badge",
-      "desc": "Operator Weedy has demonstrated a remarkable aptitude for physically distancing the enemy via applied force so as to preserve the front.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Push Stroker responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Weedy has demonstrated a remarkable aptitude for physically distancing the enemy via applied force so as to preserve the front.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Push Stroker responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_weedy",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_weedy",
       "moduleName": "Custom Bionic Seadragon",
-      "desc": "Bionic Seadragon Development Log 02\nResearch lab is carrying out reaction tests on new biomaterial. Data collection is still ETA five hours. In the meantime, I'm attempting to remodel the Bionic Seadragon—strengthen connectivity between the internal conductor unit and water cannon lock-on system. In future battles, with support from Leaf and his friends, the water cannon's going to be much more accurate.\n\nBionic Seadragon Development Log 04\nBeen asked by an operator about the names again. It really is just for differentiating. Fundamentally, using '-1' or '-X' or '-β' on their serials would be fine, but using names like Leaf makes things a little more convenient... I don't really get what everyone's so curious about.\n\nBionic Seadragon Development Log 06\nTwo Bionic Seadragon core components damaged, can't be reused. Seems I'll have to iterate on their entirety. Closure wants to take the opportunity to customize them, and I refused. Lancet-2 and Castle-3 are very cute, and Operator Mayer's Meeboos have very fun interaction patterns, but I can't picture Leaf and his friends fitted with voice modules. They're doing fine as is.\n\nBionic Seadragon Development Log 09\nI've had contact with new onboards Operator Irene and Operator Lumen, so roughly got the picture of what's happened and what's happening in Iberia. The locked drawers are opened wide. As the forbidden zones start to expand, any 'secrets' will automatically reveal themselves to the people, and cause either a crisis that'll take everyone's collective effort to deal with, or a nightmare no one could escape... Sealing it away is meaningless now. No one can stand forever on the shore.\nOperator Irene took note of Leaf—not for her functionality, obviously. She's sharp for a young Inquisitor. The Bionic Seadragon was indeed created referencing designs handed down within my family. I've conjectured how those designs were formed, what they represent, what special meaning they hold, what information they hide. Perhaps I should say, what they were modeling... Of course, since leaving Iberia, they haven't been very meaningful conjectures, or very concrete. What if they do have something to do with my family, and Iberia, and the ocean's past? More importantly, with the tide surging onto the land, is there any possibility it could concern the future?\n......\nMaybe I should go have another talk with Irene. Maybe I should add a few new items to the Bionic Seadragon research project."
+      "desc": "Bionic Seadragon Development Log 02\nResearch lab is carrying out reaction tests on new biomaterial. Data collection is still ETA five hours. In the meantime, I'm attempting to remodel the Bionic Seadragon—strengthen connectivity between the internal conductor unit and water cannon lock-on system. In future battles, with support from Leaf and his friends, the water cannon's going to be much more accurate.\n\nBionic Seadragon Development Log 04\nBeen asked by an operator about the names again. It really is just for differentiating. Fundamentally, using '-1' or '-X' or '-β' on their serials would be fine, but using names like Leaf makes things a little more convenient... I don't really get what everyone's so curious about.\n\nBionic Seadragon Development Log 06\nTwo Bionic Seadragon core components damaged, can't be reused. Seems I'll have to iterate on their entirety. Closure wants to take the opportunity to customize them, and I refused. Lancet-2 and Castle-3 are very cute, and Operator Mayer's Meeboos have very fun interaction patterns, but I can't picture Leaf and his friends fitted with voice modules. They're doing fine as is.\n\nBionic Seadragon Development Log 09\nI've had contact with new onboards Operator Irene and Operator Lumen, so roughly got the picture of what's happened and what's happening in Iberia. The locked drawers are opened wide. As the forbidden zones start to expand, any 'secrets' will automatically reveal themselves to the people, and cause either a crisis that'll take everyone's collective effort to deal with, or a nightmare no one could escape... Sealing it away is meaningless now. No one can stand forever on the shore.\nOperator Irene took note of Leaf—not for her functionality, obviously. She's sharp for a young Inquisitor. The Bionic Seadragon was indeed created referencing designs handed down within my family. I've conjectured how those designs were formed, what they represent, what special meaning they hold, what information they hide. Perhaps I should say, what they were modeling... Of course, since leaving Iberia, they haven't been very meaningful conjectures, or very concrete. What if they do have something to do with my family, and Iberia, and the ocean's past? More importantly, with the tide surging onto the land, is there any possibility it could concern the future?\n......\nMaybe I should go have another talk with Irene. Maybe I should add a few new items to the Bionic Seadragon research project.",
+      "typeIcon": "pus-x",
+      "uniEquipIcon": "uniequip_002_weedy",
+      "typeName1": "PUS",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_weedy_1",
+        "uniequip_002_weedy_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Simultaneously attacks <@ba.kw>all blocked enemies</>\nCan be deployed on ranged tiles, and refunds half the DP cost of this deployment",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 64,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Simultaneously attacks <@ba.kw>all blocked enemies</>\nCan be deployed on ranged tiles, and refunds half the DP cost of this deployment",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Normal attacks and skills have +1 shift level; restores 1 SP per 2.5 seconds to Weedy if located within 4 tiles around her and additionally grants +15% ATK",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Upgraded Water Cannon",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "base_force_level",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 2.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Increases the shift level of the Water Cannon's normal attacks and skills by 1; Weedy gains +15% ATK and restores 1 SP per 2.5 seconds if the Water Cannon is located within 4 tiles around her",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Upgraded Water Cannon",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 72,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Simultaneously attacks <@ba.kw>all blocked enemies</>\nCan be deployed on ranged tiles, and refunds half the DP cost of this deployment",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Normal attacks and skills have +1 shift level; restores 1 SP per 2 seconds to Weedy if located within 4 tiles around her and additionally grants +20% ATK",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Upgraded Water Cannon",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "base_force_level",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Increases the shift level of the Water Cannon's normal attacks and skills by 1; Weedy gains +20% ATK and restores 1 SP per 2 seconds if the Water Cannon is located within 4 tiles around her",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Upgraded Water Cannon",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_weedy",
       "moduleName": "New Bionic Prototype",
-      "desc": "'From a scientific perspective, this great land we presently inhabit is abundant with mediums of complex composition. Here on Terra, the medium is commonly known as air, and it isn't substantially different from the liquid medium filling the ocean. Ægir living in inland Iberia often make use of their analogous knowledge of the sea to produce toys like this, that drift unimpeded through the air.'\nSuch was the answer Weedy gave, when the operators of Rhodes discovered the N.B.P. floating about in a cabin, to explain the origins of the seemingly unattested equipment.\n'Is it some kind of common sea custom?'\nWeedy silently watches the prototype lilt back down to the ground. The urge hit her out of nowhere to tell them that Iberia wasn't nearly the seaside place most thought of it as, but had vast and arid lands to its name as well. Still, even at Rhodes Island, some were still caught up in the impression of stiffness that the tense, fiercely isolationist nation tended to leave.\nShe folded up the N.B.P.'s soft wings and stowed it back in its box. 'To clarify, I've never been back to the sea before, and don't know much about the Ægir. Like you, I've never been to Ægir itself either. I may have been born an Ægir, but what I know is sandstorms, misty dawns and thick jungles, the dry inland—less so the coral on the coast. When I was still young, I went out into our desertified lands with my mother, using bioengineering to treat it with technology. When we had downtime from our field work, she'd fly toys like these for us to run after. There wasn't any kind of special significance to it—it was just a pastime.'\nShe thought back to her home soil of Iberia. The Profound Silence was merciless in revising their place in the country, especially after the Inquisition 'visited' their doorstep to forbid the family from 'spreading dangerous Ægir technology.' As far as most Ægir living in Iberia were now concerned, 'Ægir' was no more than the name that branded them, and ever more vaguely at that.\n'You already had bionic technology this developed back then?'\n'What you see here is actually a successor model I made recently. It now has the propulsion capacity to 'float' in quicksand, and... also some flaws.' With that, Weedy picked up the box and left the cabin.\nOnly she knew that this improved model, the spitting image of an aquatic creature, had lost all ability to enter the water."
+      "desc": "'From a scientific perspective, this great land we presently inhabit is abundant with mediums of complex composition. Here on Terra, the medium is commonly known as air, and it isn't substantially different from the liquid medium filling the ocean. Ægir living in inland Iberia often make use of their analogous knowledge of the sea to produce toys like this, that drift unimpeded through the air.'\nSuch was the answer Weedy gave, when the operators of Rhodes discovered the N.B.P. floating about in a cabin, to explain the origins of the seemingly unattested equipment.\n'Is it some kind of common sea custom?'\nWeedy silently watches the prototype lilt back down to the ground. The urge hit her out of nowhere to tell them that Iberia wasn't nearly the seaside place most thought of it as, but had vast and arid lands to its name as well. Still, even at Rhodes Island, some were still caught up in the impression of stiffness that the tense, fiercely isolationist nation tended to leave.\nShe folded up the N.B.P.'s soft wings and stowed it back in its box. 'To clarify, I've never been back to the sea before, and don't know much about the Ægir. Like you, I've never been to Ægir itself either. I may have been born an Ægir, but what I know is sandstorms, misty dawns and thick jungles, the dry inland—less so the coral on the coast. When I was still young, I went out into our desertified lands with my mother, using bioengineering to treat it with technology. When we had downtime from our field work, she'd fly toys like these for us to run after. There wasn't any kind of special significance to it—it was just a pastime.'\nShe thought back to her home soil of Iberia. The Profound Silence was merciless in revising their place in the country, especially after the Inquisition 'visited' their doorstep to forbid the family from 'spreading dangerous Ægir technology.' As far as most Ægir living in Iberia were now concerned, 'Ægir' was no more than the name that branded them, and ever more vaguely at that.\n'You already had bionic technology this developed back then?'\n'What you see here is actually a successor model I made recently. It now has the propulsion capacity to 'float' in quicksand, and... also some flaws.' With that, Weedy picked up the box and left the cabin.\nOnly she knew that this improved model, the spitting image of an aquatic creature, had lost all ability to enter the water.",
+      "typeIcon": "pus-y",
+      "uniEquipIcon": "uniequip_003_weedy",
+      "typeName1": "PUS",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_weedy_1",
+        "uniequip_003_weedy_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 46,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "base_force_level",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Simultaneously attacks <@ba.kw>all blocked enemies</>; When blocking 2 or more enemies, increases shift level by 1\nCan be deployed on ranged tiles",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 36,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10009_weedy_cannon": [
+              {
+                "key": "respawn_time",
+                "value": -5,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "base_force_level",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Simultaneously attacks <@ba.kw>all blocked enemies</>; When blocking 2 or more enemies, increases shift level by 1\nCan be deployed on ranged tiles",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Can deploy a Reserve Water Cannon that lasts for 20s; the Water Cannon can attack 1 target and push it away slightly; Water Cannon redeployment time reduced by 5s",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Industrial Water Cannon",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": "token_10009_weedy_cannon",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 68,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10009_weedy_cannon": [
+              {
+                "key": "respawn_time",
+                "value": -8,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "base_force_level",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Simultaneously attacks <@ba.kw>all blocked enemies</>; When blocking 2 or more enemies, increases shift level by 1\nCan be deployed on ranged tiles",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Can deploy a Reserve Water Cannon that lasts for 20s; the Water Cannon can attack 1 target and push it away slightly; Water Cannon redeployment time reduced by 8s",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Industrial Water Cannon",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": "token_10009_weedy_cannon",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1223,6 +2119,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10009_weedy_cannon"
   ],
   "patch_info": {}
 }

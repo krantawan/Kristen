@@ -151,6 +151,24 @@
       "cost": 32
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.5
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": "1-3"
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1013_chen2#1",
@@ -736,16 +754,606 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +33",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 33,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 80,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Frugality",
+          "description": "When deployed, Ch'en's ammo-based skills have 15% chance to not consume the corresponding ammo for each shot (only the highest effect of this type will be applied)",
+          "blackboard": {
+            "spareshot_chen.prob": 0.15,
+            "prob": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Frugality",
+          "description": "When deployed, Ch'en's ammo-based skills have 17% <@ba.talpu>(+2%)</> chance to not consume the corresponding ammo for each shot (only the highest effect of this type will be applied)",
+          "blackboard": {
+            "spareshot_chen.prob": 0.17,
+            "prob": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Frugality",
+          "description": "When deployed, Ch'en's ammo-based skills have 20% chance to not consume the corresponding ammo for each shot; Other Sniper Operators' ammo-based skills have 10% chance instead (only the highest effect of this type will be applied)",
+          "blackboard": {
+            "spareshot_chen.prob": 0.2,
+            "prob": 0.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Frugality",
+          "description": "When deployed, Ch'en's ammo-based skills have 22% <@ba.talpu>(+2%)</> chance to not consume the corresponding ammo for each shot; Other Sniper Operators' ammo-based skills have 10% chance instead (only the highest effect of this type will be applied)",
+          "blackboard": {
+            "spareshot_chen.prob": 0.22,
+            "prob": 0.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Vestiges of Vacation",
+          "description": "ASPD +8, when there is water terrain on the battlefield, the effect becomes ASPD +12",
+          "blackboard": {
+            "chen2_t_2[common].attack_speed": 8,
+            "chen2_t_2[map].attack_speed": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_chen2",
       "moduleName": "Ch'en the Holungday's Badge",
-      "desc": "Operator Ch'en the Holungday has demonstrated a remarkable aptitude for closing distance whilst conducting suppressive fire against multitudes of enemies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Spreadshooter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Ch'en the Holungday has demonstrated a remarkable aptitude for closing distance whilst conducting suppressive fire against multitudes of enemies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Spreadshooter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_chen2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_chen2",
       "moduleName": "Beach Combat Suit",
-      "desc": "Looking at the boy in front of her, Ch'en is somewhat taken aback.\n'Your mother? Smuggling?'\n'Yes. But she was forced into it by my dad.'\n'And you want me to save her?'\n'My dad and his associates will be waiting for her in the square.'\n'How do you know that?'\n'...I used to be the one helping him with this.' The boy gritted his teeth. 'My dad once promised that after making enough money, he'd take my mom and me on a cruise, and we could see a rainbow over the sea from there. But he never kept his word. He just kept chasing dirty money, forcing me to work with him, and now he wants to drag my mom down with him too. I can't stand it anymore.'\nCh'en notices bruises on the boy's neck. With her years of experience, she instantly knew he was telling the truth.\n'...Don't worry. If what you say is true, I'll make sure your father and his crew get the punishment they deserve.'\nAt the word 'punishment,' the boy, who had kept his head down, suddenly looks up. 'Does prison really change people?'\n'...Why do you ask?'\n'My dad wasn't like this before. Ever since we came to Dossoles, he's been obsessed with making money. I don't even know when he changed... maybe he's always been this way. But I can't forget the look in his eyes when he first told me he'd take me on a cruise to see a rainbow.'\nLooking at the boy, Ch'en is reminded of her past self. Back then, she had always wanted a certain someone to notice her sword. But at some point, she stopped hoping for that.\n'This city is surrounded by water. Rainbows should be easy to find here. Haven't you seen enough of them?'\n'...No. I have to see a rainbow with him, on a cruise; nothing else counts.'\nYes, it only counts if he's there.\n'Hah. And you still want that, even now?'\n'Yeah.' There is a faint glimmer of hope in the boy's eyes, but it quickly fades. 'But I can't do it alone.'\nCh'en is silent for a moment, then grabs her water gun and walks in the direction the boy had indicated. Before going, she leaves him with a final piece of advice.\n'Then you'll have to find a way to make your father listen to you. Make him understand that you want him to change... At the very least, let him know what you're thinking.'\nThat day, there was a sudden downpour in Dossoles. In the rain, Ch'en saved a woman from a group of criminals and subdued the culprits.\nStrangely, just as the gang leader was about to fight back, a child suddenly stepped between him and Ch'en. The rain had stopped at some point, and a rainbow arched across the sky. Beneath it, the gang leader hesitated, and the child seemed to say something to him. Finally, the leader lowered his weapon.\nWitnesses nearby reported that, although Ch'en had successfully resolved another smuggling case, she didn't seem happy. She simply looked off to the east, lost in thought."
+      "desc": "Looking at the boy in front of her, Ch'en is somewhat taken aback.\n'Your mother? Smuggling?'\n'Yes. But she was forced into it by my dad.'\n'And you want me to save her?'\n'My dad and his associates will be waiting for her in the square.'\n'How do you know that?'\n'...I used to be the one helping him with this.' The boy gritted his teeth. 'My dad once promised that after making enough money, he'd take my mom and me on a cruise, and we could see a rainbow over the sea from there. But he never kept his word. He just kept chasing dirty money, forcing me to work with him, and now he wants to drag my mom down with him too. I can't stand it anymore.'\nCh'en notices bruises on the boy's neck. With her years of experience, she instantly knew he was telling the truth.\n'...Don't worry. If what you say is true, I'll make sure your father and his crew get the punishment they deserve.'\nAt the word 'punishment,' the boy, who had kept his head down, suddenly looks up. 'Does prison really change people?'\n'...Why do you ask?'\n'My dad wasn't like this before. Ever since we came to Dossoles, he's been obsessed with making money. I don't even know when he changed... maybe he's always been this way. But I can't forget the look in his eyes when he first told me he'd take me on a cruise to see a rainbow.'\nLooking at the boy, Ch'en is reminded of her past self. Back then, she had always wanted a certain someone to notice her sword. But at some point, she stopped hoping for that.\n'This city is surrounded by water. Rainbows should be easy to find here. Haven't you seen enough of them?'\n'...No. I have to see a rainbow with him, on a cruise; nothing else counts.'\nYes, it only counts if he's there.\n'Hah. And you still want that, even now?'\n'Yeah.' There is a faint glimmer of hope in the boy's eyes, but it quickly fades. 'But I can't do it alone.'\nCh'en is silent for a moment, then grabs her water gun and walks in the direction the boy had indicated. Before going, she leaves him with a final piece of advice.\n'Then you'll have to find a way to make your father listen to you. Make him understand that you want him to change... At the very least, let him know what you're thinking.'\nThat day, there was a sudden downpour in Dossoles. In the rain, Ch'en saved a woman from a group of criminals and subdued the culprits.\nStrangely, just as the gang leader was about to fight back, a child suddenly stepped between him and Ch'en. The rain had stopped at some point, and a rainbow arched across the sky. Beneath it, the gang leader hesitated, and the child seemed to say something to him. Finally, the leader lowered his weapon.\nWitnesses nearby reported that, although Ch'en had successfully resolved another smuggling case, she didn't seem happy. She simply looked off to the east, lost in thought.",
+      "typeIcon": "rpr-x",
+      "uniEquipIcon": "uniequip_002_chen2",
+      "typeName1": "RPR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_chen2_1",
+        "uniequip_002_chen2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 37,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks <@ba.kw>all enemies</> within range, and deals <@ba.kw>160%</> damage to enemies in the row directly in front of this unit.",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 42,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks <@ba.kw>all enemies</> within range, and deals <@ba.kw>160%</> damage to enemies in the row directly in front of this unit.",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deployed, Ch'en's ammo-based skills have 23% chance to not consume the corresponding ammo; other Sniper Operators' ammo-based skills have 20% chance instead, while other Ranged Operators have 8% chance (only the highest effect of this type will be applied)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Frugality",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deployed, Ch'en's ammo-based skills have 25% <@ba.talpu>(+2%)</> chance to not consume the corresponding ammo; other Sniper Operators' ammo-based skills have 20% chance instead, while other Ranged Operators have 8% chance (only the highest effect of this type will be applied)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Frugality",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks <@ba.kw>all enemies</> within range, and deals <@ba.kw>160%</> damage to enemies in the row directly in front of this unit.",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deployed, Ch'en's ammo-based skills have 25% chance to not consume the corresponding ammo; other Sniper Operators' ammo-based skills have 20% chance instead, while other Ranged Operators have 12% chance (only the highest effect of this type will be applied)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Frugality",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deployed, Ch'en's ammo-based skills have 27% <@ba.talpu>(+2%)</> chance to not consume the corresponding ammo; other Sniper Operators' ammo-based skills have 20% chance instead, while other Ranged Operators have 12% chance (only the highest effect of this type will be applied)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Frugality",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1207,5 +1815,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

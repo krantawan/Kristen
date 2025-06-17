@@ -151,6 +151,24 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "cost",
+          "value": 1
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_496_wildmn#1",
@@ -617,16 +635,572 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Forward March",
+          "description": "After the first deployment, all undeployed Guard Operators get DP Cost -1",
+          "blackboard": {
+            "flag": 0,
+            "value": -1,
+            "max_stack_cnt": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Forward March",
+          "description": "After deployment, all undeployed Guard Operators get DP Cost -1 (each Operator can have a maximum of -5 DP Cost before each deployment)",
+          "blackboard": {
+            "flag": 1,
+            "value": -1,
+            "max_stack_cnt": 5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_wildmn",
       "moduleName": "Wild Mane's Badge",
-      "desc": "Operator Wild Mane has demonstrated a remarkable aptitude in preemptive penetration of the battlefield situation so as to secure leeway for deployment.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Vanguard Operator during field operations to exercise Charger responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Wild Mane has demonstrated a remarkable aptitude in preemptive penetration of the battlefield situation so as to secure leeway for deployment.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Vanguard Operator during field operations to exercise Charger responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_wildmn",
       "moduleName": "Spear Replacement Suit",
-      "desc": "Iwona Krukowska's greatest regret is that she was unable to take the wine chalice in her room with her when she left Kazimierz.\nThat goblet forged of gold was a coming-of-age present. No child at that point in the Krukowska family was as gallant as her, and she became the knight they placed their hopes in.\nIwona was used to long-term life in the camp. Scarce on modern means of entertainment, she upheld the strictest work-rest cycle and physical training, all of it for one purpose, becoming a campaign knight—the bravest campaign knight of them all.\nTo the Krukowska family, attaining service as a campaign knight is the highest honor of them all. The ancient family defends at the borderlands, their backs to the prosperous clamor of Kazimierz's cities, facing the frostbitten winters of Ursus. Iwona grew up on stories of heroism, and grew a pure fear and longing for that dangerous, tumultuous battlefield like nothing else.\nThe day her family Knight Primus granted her the chalice, it ensured Iwona had no second thoughts. She beat pure hot blood with every pulse. She signed up to every arduous training regimen with no care for the risk, and improved herself through it. She never took notice of whatever grimy deals and nonsense slander laid behind those majestic ideals. She...\nShe ran too fast, forgot precautions were always called for in perilous circumstances, and just one negligent second would be all it took to brew a tremendous tragedy.\nIwona only forgot this one thing. Just one time.\nShe was mercilessly thrown to the ground in the open country. A lone person hurrying, a lone person wounded, a lone person helpless. Those wild beasts growing Originium crystals wailed at her in their death throes, piercing her eardrums. Those sharp Originium crystals, sent every way by the explosion, skewered a body that wouldn't move as she asked.\nMaking it on willpower until aid came running, Iwona was lucky to survive. But after that, she was thoroughly cut away from the life she used to live.\nThat chalice was placed in her display cabinet, separated by a glass door, and every time Iwona came home, she would wipe it clean.\nShe tried returning to her family afterwards, to at least see her own mother and father again one more time, go back into her room, take away some memories of hers—\nNot once more has she set foot through that heavy wooden door."
+      "desc": "Iwona Krukowska's greatest regret is that she was unable to take the wine chalice in her room with her when she left Kazimierz.\nThat goblet forged of gold was a coming-of-age present. No child at that point in the Krukowska family was as gallant as her, and she became the knight they placed their hopes in.\nIwona was used to long-term life in the camp. Scarce on modern means of entertainment, she upheld the strictest work-rest cycle and physical training, all of it for one purpose, becoming a campaign knight—the bravest campaign knight of them all.\nTo the Krukowska family, attaining service as a campaign knight is the highest honor of them all. The ancient family defends at the borderlands, their backs to the prosperous clamor of Kazimierz's cities, facing the frostbitten winters of Ursus. Iwona grew up on stories of heroism, and grew a pure fear and longing for that dangerous, tumultuous battlefield like nothing else.\nThe day her family Knight Primus granted her the chalice, it ensured Iwona had no second thoughts. She beat pure hot blood with every pulse. She signed up to every arduous training regimen with no care for the risk, and improved herself through it. She never took notice of whatever grimy deals and nonsense slander laid behind those majestic ideals. She...\nShe ran too fast, forgot precautions were always called for in perilous circumstances, and just one negligent second would be all it took to brew a tremendous tragedy.\nIwona only forgot this one thing. Just one time.\nShe was mercilessly thrown to the ground in the open country. A lone person hurrying, a lone person wounded, a lone person helpless. Those wild beasts growing Originium crystals wailed at her in their death throes, piercing her eardrums. Those sharp Originium crystals, sent every way by the explosion, skewered a body that wouldn't move as she asked.\nMaking it on willpower until aid came running, Iwona was lucky to survive. But after that, she was thoroughly cut away from the life she used to live.\nThat chalice was placed in her display cabinet, separated by a glass door, and every time Iwona came home, she would wipe it clean.\nShe tried returning to her family afterwards, to at least see her own mother and father again one more time, go back into her room, take away some memories of hers—\nNot once more has she set foot through that heavy wooden door.",
+      "typeIcon": "chg-x",
+      "uniEquipIcon": "uniequip_002_wildmn",
+      "typeName1": "CHG",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_wildmn_1",
+        "uniequip_002_wildmn_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cost",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Generates <@ba.vup>{cost:0}</> DP after this unit defeats an enemy; Refunds the <@ba.kw>current</> DP Cost when retreated",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "withdraw_cost_recover_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cost",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Generates <@ba.vup>{cost:0}</> DP after this unit defeats an enemy; Refunds the <@ba.kw>current</> DP Cost when retreated",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "withdraw_cost_recover_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Redeployment Time -10 seconds. On deployment, all undeployed Guard Operators get DP cost -1 (each operator can have a maximum of -5 DP cost before each deployment)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "Forward March",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cost",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Generates <@ba.vup>{cost:0}</> DP after this unit defeats an enemy; Refunds the <@ba.kw>current</> DP Cost when retreated",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "withdraw_cost_recover_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Redeployment Time -15 seconds. On deployment, all undeployed Guard Operators get DP cost -1 (each operator can have a maximum of -5 DP cost before each deployment)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "Forward March",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1080,5 +1654,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

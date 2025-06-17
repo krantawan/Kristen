@@ -138,6 +138,24 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "sluggish",
+          "value": 0.8
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_195_glassb#1",
@@ -604,16 +622,554 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +23",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 65,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Explorer",
+          "description": "DEF -35%; ASPD +18",
+          "blackboard": {
+            "def": -0.35,
+            "attack_speed": 18
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Explorer",
+          "description": "DEF -35%; ASPD +21 <@ba.talpu>(+3)</>",
+          "blackboard": {
+            "def": -0.35,
+            "attack_speed": 21
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_glassb",
       "moduleName": "Istina's Badge",
-      "desc": "Operator Istina has demonstrated a remarkable aptitude for impeding the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Decel Binder responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Istina has demonstrated a remarkable aptitude for impeding the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Decel Binder responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_glassb",
       "moduleName": "Reading Notes",
-      "desc": "Pastry flour 180g; cystymilk 120g; icing sugar 90g; dried berries 60g; fowl yolk 22g; salt 1g\nThey might be the most basic cookies, but Gummy loves these.\nLet cystymilk sit at room temperature, then add the icing sugar. Once evenly folded in, add the fowl yolk. Dice the dried berries finely (full chunks will be slightly sour). Sift in pastry flour, knead until smooth, then trim and cut into 4 x 4cm squares.\nNB: If these are for Sonya, make bigger. Natalya likes more salt in hers. Drizzle honey for Rosalind's.\nPlace in freezer to rest for 1hr, then transfer straight into a preheated 170°C oven for 20min until done.\n......\nI see... And I thought all along the chief would turn out to be the true mastermind! Now that I look back at previous descriptions, he did plenty that he wouldn't have done otherwise. Blatantly letting the protagonist go on with the investigation, making such a solemn vow at the meeting, and him and his wife truly being in love all along, not a political marriage... He even began by committing suicide...\nThe author's deliberately crafted narrative tricks may have had their impact, but I did still let first impressions blind me to many unusual details.\nIt may be that people truly can be affected by information from all sides given specific circumstances, and end up overlooking facts that should have been obvious.\nI've overlooked a lot, that much is true.\nThis is something I'll have to reflect on frequently in future.\n......\nI've borrowed several books from the Doctor throughout my time here at Rhodes Island. As a student, I've certainly been through things most others my age have not yet. It's beyond me to more deeply comprehend some conundrums posed in books with my current level of knowledge, but with my experiences, perhaps the author's intent is something I can feel out.\nPertinently, the passage on the 'mass' in Chashcha Lesa: 'Those who have done wrong once find they are not punished, for those around them who know of it will opt to turn one's blind eye to carry on living one's 'days of well-being,' so accordingly the wrongdoers will then go to do wrong a second and third time. May there merely be one willing to fix their firm eye and raise their voice, and this chaos can be dispelled.'\nMay there merely be one willing to fix their firm eye and raise their voice, and this chaos can be dispelled.\n\n—Excerpts from Istina's reading notes"
+      "desc": "Pastry flour 180g; cystymilk 120g; icing sugar 90g; dried berries 60g; fowl yolk 22g; salt 1g\nThey might be the most basic cookies, but Gummy loves these.\nLet cystymilk sit at room temperature, then add the icing sugar. Once evenly folded in, add the fowl yolk. Dice the dried berries finely (full chunks will be slightly sour). Sift in pastry flour, knead until smooth, then trim and cut into 4 x 4cm squares.\nNB: If these are for Sonya, make bigger. Natalya likes more salt in hers. Drizzle honey for Rosalind's.\nPlace in freezer to rest for 1hr, then transfer straight into a preheated 170°C oven for 20min until done.\n......\nI see... And I thought all along the chief would turn out to be the true mastermind! Now that I look back at previous descriptions, he did plenty that he wouldn't have done otherwise. Blatantly letting the protagonist go on with the investigation, making such a solemn vow at the meeting, and him and his wife truly being in love all along, not a political marriage... He even began by committing suicide...\nThe author's deliberately crafted narrative tricks may have had their impact, but I did still let first impressions blind me to many unusual details.\nIt may be that people truly can be affected by information from all sides given specific circumstances, and end up overlooking facts that should have been obvious.\nI've overlooked a lot, that much is true.\nThis is something I'll have to reflect on frequently in future.\n......\nI've borrowed several books from the Doctor throughout my time here at Rhodes Island. As a student, I've certainly been through things most others my age have not yet. It's beyond me to more deeply comprehend some conundrums posed in books with my current level of knowledge, but with my experiences, perhaps the author's intent is something I can feel out.\nPertinently, the passage on the 'mass' in Chashcha Lesa: 'Those who have done wrong once find they are not punished, for those around them who know of it will opt to turn one's blind eye to carry on living one's 'days of well-being,' so accordingly the wrongdoers will then go to do wrong a second and third time. May there merely be one willing to fix their firm eye and raise their voice, and this chaos can be dispelled.'\nMay there merely be one willing to fix their firm eye and raise their voice, and this chaos can be dispelled.\n\n—Excerpts from Istina's reading notes",
+      "typeIcon": "dec-y",
+      "uniEquipIcon": "uniequip_002_glassb",
+      "typeName1": "DEC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_glassb_1",
+        "uniequip_002_glassb_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts damage</>, and <$ba.sluggish>Slow</> the enemy for a <@ba.kw>moderate</> period of time",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts damage</>, and <$ba.sluggish>Slow</> the enemy for a <@ba.kw>moderate</> period of time",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "DEF -35%; ASPD +21. While this unit's skill is active, further increase ASPD by 5",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Explorer",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": -0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "glassb_e_t_1[skill].attack_speed",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "DEF -35%; ASPD +24 <@ba.talpu>(+3)</>. While this unit's skill is active, further increase ASPD by 5",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Explorer",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": -0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 24,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "glassb_e_t_1[skill].attack_speed",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts damage</>, and <$ba.sluggish>Slow</> the enemy for a <@ba.kw>moderate</> period of time",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "DEF -35%; ASPD +21. While this unit's skill is active, further increase ASPD by 10",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Explorer",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": -0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "glassb_e_t_1[skill].attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "DEF -35%; ASPD +24 <@ba.talpu>(+3)</>. While this unit's skill is active, further increase ASPD by 10",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Explorer",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": -0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 24,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "glassb_e_t_1[skill].attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1067,5 +1623,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

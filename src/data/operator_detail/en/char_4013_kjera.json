@@ -151,6 +151,36 @@
       "cost": 23
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "init_atk_scale",
+          "value": 0.2
+        },
+        {
+          "key": "delta_atk_scale",
+          "value": 0.15
+        },
+        {
+          "key": "max_atk_scale",
+          "value": 1.1
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 6
+        }
+      ],
+      "overrideDescription": "Controls a <@ba.kw>Drone</> that deals <@ba.kw>Arts damage</>; When the Drone attacks the same enemy, its damage will increase (up to 110% of the operator's ATK)",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4013_kjera#1",
@@ -625,16 +655,635 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Deference",
+          "description": "ATK +5%, when there are two or more ground tiles within Attack Range, the effect becomes ATK +11%",
+          "blackboard": {
+            "atk": 0.05,
+            "cnt": 2,
+            "kjera_t_1[high].atk": 0.11
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Deference",
+          "description": "ATK +8% <@ba.talpu>(+3%)</>, when there are two or more ground tiles within Attack Range, the effect becomes ATK +14% <@ba.talpu>(+3%)</>",
+          "blackboard": {
+            "atk": 0.08,
+            "cnt": 2,
+            "kjera_t_1[high].atk": 0.14
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Deference",
+          "description": "ATK +10%, when there are two or more ground tiles within Attack Range, the effect becomes ATK +16%",
+          "blackboard": {
+            "atk": 0.1,
+            "cnt": 2,
+            "kjera_t_1[high].atk": 0.16
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Deference",
+          "description": "ATK +13% <@ba.talpu>(+3%)</>, when there are two or more ground tiles within Attack Range, the effect becomes ATK +19% <@ba.talpu>(+3%)</>",
+          "blackboard": {
+            "atk": 0.13,
+            "cnt": 2,
+            "kjera_t_1[high].atk": 0.19
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_kjera",
       "moduleName": "Kjera's Badge",
-      "desc": "Operator Kjera has demonstrated a remarkable aptitude for manipulating hovering units to combat and pursue the enemy in concert.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Mech-accord Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Kjera has demonstrated a remarkable aptitude for manipulating hovering units to combat and pursue the enemy in concert.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Mech-accord Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_kjera",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_kjera",
       "moduleName": "In the Woolen of Snow",
-      "desc": "To Her, there returned a distant and long-lost feeling.\nAnd the air flowed, and flowed together into wind. And wind came forth in great gusts, and rolled over Her shoulders and Her back, and through the interstices of Her fingers, howling as it did. To the people of Kjerag, this wind would be felt a colder one.\nThen wind's howls turned to chaos, its tight shrieks ushered to fray by words of somnolence, as a song rent and shattered over a million risings and settings of the sun and flew about Her forever. So the chatter grew and grew in the air, till it reached out with a black thorn. And a black raindrop hung upon the thorn's tip, and it seemed that it would fall to the land, and fall betwixt the mountains and the trees, and see that the mountains and the trees would become of its likeness. It was cacophony, and it was infinitely hostile, and it heeded no disobedience. This was Danger.\nSo She thought to stir, yet She found it now took considerable energy, which it had not done before.\nThereupon She forged into the snow of a million suns, and She sought as if seeking the tail of a threadmade cloth, and about Her finger wound a tail of this thread. And so the air changed in its flow, and the snow flew to the air by Her will, and thus was woven a curtain of it. And She put this curtain to the black rain, and drove it from the land at Her feet, in the manner She had done countless times before.\n'Kjarr? Kjarr?'\nThrough the curtain of wind and snow, a soft calling breaks, and reaches her ears again. Kjarr snaps out of her brief daze, half-woven cloth nestled in her lap. She finds her needle still in one hand, yet the tail of her thread fallen from the other, back into the pile.\n'I'm sorry, Saintess, I believe my mind wandered.'\nThis is her third day learning weaving from the Saintess. The chamber of the Vine-Bear Court they're in is hung with tapestries woven by Enya's own hand. For Enya, pursuing textiles is just another part of her spiritual devotions.\n'Oh... I see. Perhaps I'm teaching a little too fast for you?'\nSat face to face with Kjarr, there is absolutely no blame in Enya's words, her face almost twisted with humble apology. She holds her own needle and wound thread, with a cloth much like Kjarr's draped over the crook of her arm, but hers is far more complete, it seems, far more beautiful.\n'I wouldn't say that. Certainly easier to follow than your recitations of the scriptures.'\nHearing that, Enya smiles as she reaches into the wool pile, picks out the loose tail, and hands it back to Kjarr.\n'And yet I hardly leave you so lost in thought when I recite.'\nKjarr takes the tail, the warmth of Enya's intent lingering at her fingertips. She'll be finishing this cloth.\n'It strikes me, Saintess, that your stitch, and Her stitch of the blizzard, might in some ways be not so different.'\nAnd the blizzard whips up outside the window, almost hard enough to stir the tapestries inside.\nTo her, there returns a close and longed-for feeling."
+      "desc": "To Her, there returned a distant and long-lost feeling.\nAnd the air flowed, and flowed together into wind. And wind came forth in great gusts, and rolled over Her shoulders and Her back, and through the interstices of Her fingers, howling as it did. To the people of Kjerag, this wind would be felt a colder one.\nThen wind's howls turned to chaos, its tight shrieks ushered to fray by words of somnolence, as a song rent and shattered over a million risings and settings of the sun and flew about Her forever. So the chatter grew and grew in the air, till it reached out with a black thorn. And a black raindrop hung upon the thorn's tip, and it seemed that it would fall to the land, and fall betwixt the mountains and the trees, and see that the mountains and the trees would become of its likeness. It was cacophony, and it was infinitely hostile, and it heeded no disobedience. This was Danger.\nSo She thought to stir, yet She found it now took considerable energy, which it had not done before.\nThereupon She forged into the snow of a million suns, and She sought as if seeking the tail of a threadmade cloth, and about Her finger wound a tail of this thread. And so the air changed in its flow, and the snow flew to the air by Her will, and thus was woven a curtain of it. And She put this curtain to the black rain, and drove it from the land at Her feet, in the manner She had done countless times before.\n'Kjarr? Kjarr?'\nThrough the curtain of wind and snow, a soft calling breaks, and reaches her ears again. Kjarr snaps out of her brief daze, half-woven cloth nestled in her lap. She finds her needle still in one hand, yet the tail of her thread fallen from the other, back into the pile.\n'I'm sorry, Saintess, I believe my mind wandered.'\nThis is her third day learning weaving from the Saintess. The chamber of the Vine-Bear Court they're in is hung with tapestries woven by Enya's own hand. For Enya, pursuing textiles is just another part of her spiritual devotions.\n'Oh... I see. Perhaps I'm teaching a little too fast for you?'\nSat face to face with Kjarr, there is absolutely no blame in Enya's words, her face almost twisted with humble apology. She holds her own needle and wound thread, with a cloth much like Kjarr's draped over the crook of her arm, but hers is far more complete, it seems, far more beautiful.\n'I wouldn't say that. Certainly easier to follow than your recitations of the scriptures.'\nHearing that, Enya smiles as she reaches into the wool pile, picks out the loose tail, and hands it back to Kjarr.\n'And yet I hardly leave you so lost in thought when I recite.'\nKjarr takes the tail, the warmth of Enya's intent lingering at her fingertips. She'll be finishing this cloth.\n'It strikes me, Saintess, that your stitch, and Her stitch of the blizzard, might in some ways be not so different.'\nAnd the blizzard whips up outside the window, almost hard enough to stir the tapestries inside.\nTo her, there returns a close and longed-for feeling.",
+      "typeIcon": "fun-y",
+      "uniEquipIcon": "uniequip_002_kjera",
+      "typeName1": "FUN",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_kjera_1",
+        "uniequip_002_kjera_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 18,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (deals up to 120% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (deals up to 120% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +15%, when there are two or more ground tiles within Attack Range, the effect becomes ATK +21%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Deference",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.21,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +18% <@ba.talpu>(+3%)</>, when there are two or more ground tiles within Attack Range, the effect becomes ATK +24% <@ba.talpu>(+3%)</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Deference",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.24,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 102,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (deals up to 120% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +18%, when there are two or more ground tiles within Attack Range, the effect becomes ATK +24%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Deference",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.24,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +21% <@ba.talpu>(+3%)</>, when there two or more ground tiles within Attack Range, the effect becomes ATK +27% <@ba.talpu>(+3%)</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Deference",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.27,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1096,5 +1745,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

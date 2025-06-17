@@ -150,6 +150,36 @@
       "cost": 26
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "times",
+            "value": 3,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "times_2",
+            "value": 0,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4110_delphn#1",
@@ -617,16 +647,718 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 130,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "血で刃を濯ぐ",
+          "description": "HPが80％以上の敵への与ダメージ+10％",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.8,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "血で刃を濯ぐ",
+          "description": "HPが80％以上の敵への与ダメージ+12%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.8,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "血で刃を濯ぐ",
+          "description": "HPが80％以上の敵への与ダメージ+18％",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.8,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "血で刃を濯ぐ",
+          "description": "HPが80％以上の敵への与ダメージ+20%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.8,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "仇討ちの決意",
+          "description": "【悪兆渦流】において、敵【サルカズ】を攻撃時、攻撃力が120%まで上昇する。さらに、特性によりチャージできるエネルギーのほか、【サルカズ】への攻撃時にのみに発射されるエネルギーを追加で1回分チャージできる",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.2,
+              "valueStr": null
+            },
+            {
+              "key": "times_2",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_delphn",
       "moduleName": "デルフィーンの記章",
-      "desc": "デルフィーンはアーツエネルギーの制御に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては術師オペレーターとして区分し、秘術師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "デルフィーンはアーツエネルギーの制御に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては術師オペレーターとして区分し、秘術師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_delphn",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_delphn",
       "moduleName": "ほの暗い正義",
-      "desc": "『外勤任務に就いて231日目。周りのすべてが慣れ親しんだものとはかけ離れており』――\n明け方、デルフィーンはまだ燃え尽きず残っていた焚き火のわずかな光を借りて日記を書き始め……ほどなくして筆を止めた。というのは、ロンディニウムでの大戦から早くも一年近くが過ぎたことにふと気付いたからだ。\n遊侠としてヴィクトリアへ戻り、辺境を渡り歩き始めて以来、彼女は今まで気付きもしなかった不公平をあまりにも多く目撃するようになった。それに伴い、剣で自らの信じる正義を執行することにも、次第に慣れてきていた。\nそれゆえ、この近くにサルカズの流れ者が集団で隠れ住み、住民の安全を脅かすのみならず方々で略奪をしているという話を聞いた彼女は、すぐさま次の目的地を定めた。\n「恐らく、その人たちはロンディニウムを目指す途中で終戦を知った不運な人々なのでしょうけどね。」\n――と、その時、後ろから声がした。\n「たすけて……」\n声に振り向けば、幼いフェリーンの少女が物陰から顔を覗かせている。\n少女は震えながら遠くの黒い地平線を指さし、そちらを見たデルフィーンは、刀を提げて近付いてくる四つの人影に気付いた。\n「あの人たち、みんな魔族なの。お願い、お家まで送ってもらえない？」と少女は言った。\nデルフィーンが母の形見たる長剣を抜けば、その刀身にはアーツが流れ輝いて、少女の怯える顔を照らし出す。そこには、鞭打たれたらしきいくつかの傷跡と黒い結晶が見て取れた。\n一方で、遠い人影は皆足を止め、その後身をひるがえして地平線の先に広がる闇へと姿を消した。\n「お家まで送ってほしいと言いましたか？」\nデルフィーンの鋭い眼差しをその少女は直視できないようで、少しためらってから頭を垂れたままうなずいた。\nしかし、いざ少女をつれて野営地まで向かってみれば、なぜだか彼女は締め出されてしまった。どうやらそこの頭目はデルフィーンのことを警戒しているらしい。\nそして、野営地を一目見たデルフィーンのほうは、そこでフェリーンの感染者たちがひと固まりになり、鞭と震える四人のサルカズの子を隠そうとしているのを見た。\n彼女の胸には怒りの炎が燃え上がった。\n「こうして罪のない子供たちに追い立てられたふりをさせ、他人を騙しておびき寄せては餌食にしているんですね。」\n「さあ、あなたは戻りなさい。」デルフィーンは女の子を放してやると、野営地の頭目を指さし、こう言った。「あなたはついてきてください。これまでにあなたたちが傷つけてきた無辜の人々のため、報いを受けてもらわねばなりませんので。」\n「報いだと？俺は手下たちに食わせるためにやってるんだぞ。」\nその言葉に、彼女は首を横に振った。\n「それは言い訳になどなりません。その子たちが大人になった時、どんな人間になってしまうかを考えたことはないのですか？」\nそうしてデルフィーンは頭目を連れ、野営地からは決して目が届かないほど遠くまで歩いて行った。\n「野営地の人々のことは、私がロドスに掛け合って助けてもらえるよう頼んでみます。――さあ、剣を構えなさい。」\n外勤任務に就いて231日目。デルフィーンが剣を収めたその箱にはまた一つ傷跡が増え、彼女はヴィクトリアからさらに遠ざかるその道を進んでいった。"
+      "desc": "『外勤任務に就いて231日目。周りのすべてが慣れ親しんだものとはかけ離れており』――\n明け方、デルフィーンはまだ燃え尽きず残っていた焚き火のわずかな光を借りて日記を書き始め……ほどなくして筆を止めた。というのは、ロンディニウムでの大戦から早くも一年近くが過ぎたことにふと気付いたからだ。\n遊侠としてヴィクトリアへ戻り、辺境を渡り歩き始めて以来、彼女は今まで気付きもしなかった不公平をあまりにも多く目撃するようになった。それに伴い、剣で自らの信じる正義を執行することにも、次第に慣れてきていた。\nそれゆえ、この近くにサルカズの流れ者が集団で隠れ住み、住民の安全を脅かすのみならず方々で略奪をしているという話を聞いた彼女は、すぐさま次の目的地を定めた。\n「恐らく、その人たちはロンディニウムを目指す途中で終戦を知った不運な人々なのでしょうけどね。」\n――と、その時、後ろから声がした。\n「たすけて……」\n声に振り向けば、幼いフェリーンの少女が物陰から顔を覗かせている。\n少女は震えながら遠くの黒い地平線を指さし、そちらを見たデルフィーンは、刀を提げて近付いてくる四つの人影に気付いた。\n「あの人たち、みんな魔族なの。お願い、お家まで送ってもらえない？」と少女は言った。\nデルフィーンが母の形見たる長剣を抜けば、その刀身にはアーツが流れ輝いて、少女の怯える顔を照らし出す。そこには、鞭打たれたらしきいくつかの傷跡と黒い結晶が見て取れた。\n一方で、遠い人影は皆足を止め、その後身をひるがえして地平線の先に広がる闇へと姿を消した。\n「お家まで送ってほしいと言いましたか？」\nデルフィーンの鋭い眼差しをその少女は直視できないようで、少しためらってから頭を垂れたままうなずいた。\nしかし、いざ少女をつれて野営地まで向かってみれば、なぜだか彼女は締め出されてしまった。どうやらそこの頭目はデルフィーンのことを警戒しているらしい。\nそして、野営地を一目見たデルフィーンのほうは、そこでフェリーンの感染者たちがひと固まりになり、鞭と震える四人のサルカズの子を隠そうとしているのを見た。\n彼女の胸には怒りの炎が燃え上がった。\n「こうして罪のない子供たちに追い立てられたふりをさせ、他人を騙しておびき寄せては餌食にしているんですね。」\n「さあ、あなたは戻りなさい。」デルフィーンは女の子を放してやると、野営地の頭目を指さし、こう言った。「あなたはついてきてください。これまでにあなたたちが傷つけてきた無辜の人々のため、報いを受けてもらわねばなりませんので。」\n「報いだと？俺は手下たちに食わせるためにやってるんだぞ。」\nその言葉に、彼女は首を横に振った。\n「それは言い訳になどなりません。その子たちが大人になった時、どんな人間になってしまうかを考えたことはないのですか？」\nそうしてデルフィーンは頭目を連れ、野営地からは決して目が届かないほど遠くまで歩いて行った。\n「野営地の人々のことは、私がロドスに掛け合って助けてもらえるよう頼んでみます。――さあ、剣を構えなさい。」\n外勤任務に就いて231日目。デルフィーンが剣を収めたその箱にはまた一つ傷跡が増え、彼女はヴィクトリアからさらに遠ざかるその道を進んでいった。",
+      "typeIcon": "msc-y",
+      "uniEquipIcon": "uniequip_002_delphn",
+      "typeName1": "MSC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_delphn_1",
+        "uniequip_002_delphn_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 95,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃エネルギーがある時、攻撃速度+30",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃エネルギーがある時、攻撃速度+30",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが80%以上の敵への与ダメージ+21%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "血で刃を濯ぐ",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.21,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが80%以上の敵への与ダメージ+23%<@ba.talpu>（+2%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "血で刃を濯ぐ",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 92,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃エネルギーがある時、攻撃速度+30",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが80%以上の敵への与ダメージ+23%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "血で刃を濯ぐ",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが80%以上の敵への与ダメージ+25%<@ba.talpu>（+2%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "血で刃を濯ぐ",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1080,5 +1812,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

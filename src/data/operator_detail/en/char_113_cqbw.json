@@ -151,6 +151,7 @@
       "cost": 29
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_113_cqbw#1",
@@ -712,21 +713,1115 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +35",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 35,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 100,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Ambush",
+          "description": "After remaining deployed for 10 seconds, obtains 40% Physical and Arts Dodge, and is less likely to be targeted by enemies",
+          "blackboard": {
+            "interval": 10,
+            "prob": 0.4,
+            "taunt_level": -1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Ambush",
+          "description": "After remaining deployed for 10 seconds, obtains 60% Physical and Arts Dodge, and is less likely to be targeted by enemies",
+          "blackboard": {
+            "interval": 10,
+            "prob": 0.6,
+            "taunt_level": -1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Insult to Injury",
+          "description": "Enemies in range take +18% Physical damage when <$ba.stun>Stunned</>",
+          "blackboard": {
+            "damage_scale": 1.18
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Insult to Injury",
+          "description": "Enemies in range take +21% <@ba.talpu>(+3%)</> Physical damage when <$ba.stun>Stunned</>",
+          "blackboard": {
+            "damage_scale": 1.21
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_cqbw",
       "moduleName": "W's Badge",
-      "desc": "Operator W has demonstrated a remarkable aptitude for inflicting physical casualties on multitudes of enemies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Artilleryman responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator W has demonstrated a remarkable aptitude for inflicting physical casualties on multitudes of enemies.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Artilleryman responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_cqbw",
       "moduleName": "Mercenary's Bag",
-      "desc": "The mercenary's bag has an interlayer, and within it go things she doesn't normally bring out.\nYoung, wandering children are all too common a sight across these lands, most clinging onto their bitter lives. A little girl pleads with a group of monsters, hoping to be spared some food.\n'Please, please, help me!' says the little girl, 'I can do a lot of things, I can help you too.'\nThe monsters take pity on this wasteland vagabond, and they accept her, allowing her into a small den she can call home.\n'You're so nice!' she says, with her tiny cloth bundle. 'I can hunt—I'll bring back even more food for you.'\nThe skies grow dark, and dark means unsafe. She shrinks into her hiding spot, looking out at the dim sky.\n'We don't have enough food. You said you would hunt. Now's the time.' The leader of the squad of monsters brushes its hair out of its eyes, and says to the girl, 'Bring back more food.'\nThe girl journeys out alone into the dark, and all the creatures under the night sky tuck themselves away, leaving her with nothing. But, far in the distance, she catches sight of a small campfire, a bag of food full enough for several days, and a seemingly very listless mercenary.\n'Take it.' The thought pops into her head. Finally, she reaches out and manages to grasp the bag. Inside is something she hasn't eaten in a long time—real food.\nSnatch it, steal it, whatever it takes. Getting it is the only way the monsters will recognize her; taking it is the only way they will let her stay. She clutches it tight and starts to run.\nWith the mercenary giving chase, the girl runs all the way back to the squad of monsters, and they rush at the mercenary, claws out.\nBut the wails she imagines never come. The mercenary seems to be saying something in a loud voice. The girl peeks out from behind the bonfire. The mercenary takes the monsters once more into the black night, and after a brief departure, they come back.\nThe monsters are delighted, crying out in celebration, as they haul a modest convoy of supplies out from the night. Time passes, growing darker still, and it comes time to rest.\nThe girl lies down in relief, the mercenary takes watch duty, and after they are done celebrating, the monsters too sleep beside the bonfire.\nShe takes stock of this newcomer, and the newcomer returns her gaze. After a brief moment of eye contact, she turns away and shuts her eyes.\nThe monsters murmur as they dream, and the mercenary adds some wood to the fire. Only one pair of eyes is open, glinting in the flames, and they size up the camp.\nWhen the only sound to be heard by the bonfire is steady breathing, the girl opens her eyes.\nOnce all the other sounds completely disappear, she emerges from her hiding spot.\n'We make a good team.' In the mercenary's hand is a blade, slicked with a liquid, thick and red. The girl looks around, taking in the state of the camp.\nShe finds a patch of ground to sit down on, still more or less clean. The mercenary starts moving the things back to their camp, and, left alone, she looks up at the moons.\n'...Traitor!' The sole remaining monster charges out from some corner, breath ragged and letting out an incomprehensible voice. It grapples the girl.\n'I'm going to die like this,' thinks the girl as she struggles desperately. 'I can't die.'\nA hole is made in her little bundle; a shard of a blade cuts through the cloth in her grip and slices her hand. She grips this shard tight, and thrusts it into the night over and over, until the monster can no longer hold of its weapon. Thick, sticky, red liquid trickles to the floor.\nSurvive.\nInside the interlayer of the mercenary's bag is the shard of a blade, something she placed in there even before she was a mercenary."
+      "desc": "The mercenary's bag has an interlayer, and within it go things she doesn't normally bring out.\nYoung, wandering children are all too common a sight across these lands, most clinging onto their bitter lives. A little girl pleads with a group of monsters, hoping to be spared some food.\n'Please, please, help me!' says the little girl, 'I can do a lot of things, I can help you too.'\nThe monsters take pity on this wasteland vagabond, and they accept her, allowing her into a small den she can call home.\n'You're so nice!' she says, with her tiny cloth bundle. 'I can hunt—I'll bring back even more food for you.'\nThe skies grow dark, and dark means unsafe. She shrinks into her hiding spot, looking out at the dim sky.\n'We don't have enough food. You said you would hunt. Now's the time.' The leader of the squad of monsters brushes its hair out of its eyes, and says to the girl, 'Bring back more food.'\nThe girl journeys out alone into the dark, and all the creatures under the night sky tuck themselves away, leaving her with nothing. But, far in the distance, she catches sight of a small campfire, a bag of food full enough for several days, and a seemingly very listless mercenary.\n'Take it.' The thought pops into her head. Finally, she reaches out and manages to grasp the bag. Inside is something she hasn't eaten in a long time—real food.\nSnatch it, steal it, whatever it takes. Getting it is the only way the monsters will recognize her; taking it is the only way they will let her stay. She clutches it tight and starts to run.\nWith the mercenary giving chase, the girl runs all the way back to the squad of monsters, and they rush at the mercenary, claws out.\nBut the wails she imagines never come. The mercenary seems to be saying something in a loud voice. The girl peeks out from behind the bonfire. The mercenary takes the monsters once more into the black night, and after a brief departure, they come back.\nThe monsters are delighted, crying out in celebration, as they haul a modest convoy of supplies out from the night. Time passes, growing darker still, and it comes time to rest.\nThe girl lies down in relief, the mercenary takes watch duty, and after they are done celebrating, the monsters too sleep beside the bonfire.\nShe takes stock of this newcomer, and the newcomer returns her gaze. After a brief moment of eye contact, she turns away and shuts her eyes.\nThe monsters murmur as they dream, and the mercenary adds some wood to the fire. Only one pair of eyes is open, glinting in the flames, and they size up the camp.\nWhen the only sound to be heard by the bonfire is steady breathing, the girl opens her eyes.\nOnce all the other sounds completely disappear, she emerges from her hiding spot.\n'We make a good team.' In the mercenary's hand is a blade, slicked with a liquid, thick and red. The girl looks around, taking in the state of the camp.\nShe finds a patch of ground to sit down on, still more or less clean. The mercenary starts moving the things back to their camp, and, left alone, she looks up at the moons.\n'...Traitor!' The sole remaining monster charges out from some corner, breath ragged and letting out an incomprehensible voice. It grapples the girl.\n'I'm going to die like this,' thinks the girl as she struggles desperately. 'I can't die.'\nA hole is made in her little bundle; a shard of a blade cuts through the cloth in her grip and slices her hand. She grips this shard tight, and thrusts it into the night over and over, until the monster can no longer hold of its weapon. Thick, sticky, red liquid trickles to the floor.\nSurvive.\nInside the interlayer of the mercenary's bag is the shard of a blade, something she placed in there even before she was a mercenary.",
+      "typeIcon": "art-x",
+      "uniEquipIcon": "uniequip_002_cqbw",
+      "typeName1": "ART",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_cqbw_1",
+        "uniequip_002_cqbw_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 54,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>AOE Physical damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 68,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>AOE Physical damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Enemies in range take +21% Physical damage when <$ba.stun>Stunned</>. Recover 1 SP when defeating an enemy",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Insult to Injury",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Enemies in range take +24% <@ba.talpu>(+3%)</> Physical damage when <$ba.stun>Stunned</>. Recover 1 SP when defeating an enemy",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Insult to Injury",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.24,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 78,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>AOE Physical damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Enemies in range take +24% Physical damage when <$ba.stun>Stunned</>. Recover 1 SP when defeating an enemy",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Insult to Injury",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.24,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Enemies in range take +27% <@ba.talpu>(+3%)</> Physical damage when <$ba.stun>Stunned</>. Recover 1 SP when defeating an enemy",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Insult to Injury",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_cqbw",
       "moduleName": "Lost Dull Knife",
-      "desc": "A hungry slave stumbled through the desolate wastes beneath a starry sky, spotting a silent mercenary by a campfire in the distance.\n'I'm searching for an unstoppable giant ship in the wilderness. I've heard that the ship's master will give us sanctuary.'\nThe slave nervously prostrated himself on the ground, offering his only weapon.\n'Who are you?' The mercenary didn't even look at him.\n'I'm an escaped slave from the Scar Market. I accidentally injured a guard and can't go back, but I want to live.'\nThe mercenary gazed at the campfire in silence for a moment. 'I know where the giant ship will pass tomorrow. After daybreak, I'll take you there.'\nThe slave expressed gratitude to the mercenary, set down his weapon, and attempted to sleep where he stood.\nThe one-armed guard shuffled through the starlit wasteland, spotting the silent mercenary by a campfire in the distance.\n'I'm searching for an unstoppable giant ship in the wilderness. I've heard that the ship's owner will give us sanctuary.'\nThe guard nervously stood still, holding no weapon to protect himself.\n'Who are you?' The mercenary didn't even look at him.\n'I'm an escaped guard from the Scar Market. I let a slave go out of compassion and can't go back, but I'm willing to serve a new master.'\nThe mercenary gazed at the campfire in silence for a moment. 'I know where the giant ship will pass tomorrow. After daybreak, I'll take you there.'\nThe guard expressed gratitude to the mercenary, concealed his severed arm, and tried to sleep where he stood.\n'However, only one of you can go.' The mercenary stood up, a disgusted expression illuminated by the campfire.\nIn the firelight, the slave and the guard saw each other's eyes.\n'I'll be back after daybreak.' The mercenary left the camp and vanished into the starlit wilderness.\nWhen the first beam of light fell upon the wastes, the mercenary returned to the extinguished campfire.\nBoth the guard and the slave had disappeared, leaving behind only a lone weapon.\nWith the weapon in hand, the mercenary returned to the giant ship. The giant watching the gate was curious about their fate.\n'I don't care. They were never qualified to serve Her Majesty.'\n'And what's your standard, how are you so sure?' The giant playfully teased the mercenary.\n'For as much as she's ever reprimanded me, she never considered kicking me out.' The mercenary laughed and said, 'The standard, of course, is me.'"
+      "desc": "A hungry slave stumbled through the desolate wastes beneath a starry sky, spotting a silent mercenary by a campfire in the distance.\n'I'm searching for an unstoppable giant ship in the wilderness. I've heard that the ship's master will give us sanctuary.'\nThe slave nervously prostrated himself on the ground, offering his only weapon.\n'Who are you?' The mercenary didn't even look at him.\n'I'm an escaped slave from the Scar Market. I accidentally injured a guard and can't go back, but I want to live.'\nThe mercenary gazed at the campfire in silence for a moment. 'I know where the giant ship will pass tomorrow. After daybreak, I'll take you there.'\nThe slave expressed gratitude to the mercenary, set down his weapon, and attempted to sleep where he stood.\nThe one-armed guard shuffled through the starlit wasteland, spotting the silent mercenary by a campfire in the distance.\n'I'm searching for an unstoppable giant ship in the wilderness. I've heard that the ship's owner will give us sanctuary.'\nThe guard nervously stood still, holding no weapon to protect himself.\n'Who are you?' The mercenary didn't even look at him.\n'I'm an escaped guard from the Scar Market. I let a slave go out of compassion and can't go back, but I'm willing to serve a new master.'\nThe mercenary gazed at the campfire in silence for a moment. 'I know where the giant ship will pass tomorrow. After daybreak, I'll take you there.'\nThe guard expressed gratitude to the mercenary, concealed his severed arm, and tried to sleep where he stood.\n'However, only one of you can go.' The mercenary stood up, a disgusted expression illuminated by the campfire.\nIn the firelight, the slave and the guard saw each other's eyes.\n'I'll be back after daybreak.' The mercenary left the camp and vanished into the starlit wilderness.\nWhen the first beam of light fell upon the wastes, the mercenary returned to the extinguished campfire.\nBoth the guard and the slave had disappeared, leaving behind only a lone weapon.\nWith the weapon in hand, the mercenary returned to the giant ship. The giant watching the gate was curious about their fate.\n'I don't care. They were never qualified to serve Her Majesty.'\n'And what's your standard, how are you so sure?' The giant playfully teased the mercenary.\n'For as much as she's ever reprimanded me, she never considered kicking me out.' The mercenary laughed and said, 'The standard, of course, is me.'",
+      "typeIcon": "art-y",
+      "uniEquipIcon": "uniequip_003_cqbw",
+      "typeName1": "ART",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_cqbw_1",
+        "uniequip_003_cqbw_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 100,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>AOE Physical damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 100,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>AOE Physical damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After remaining deployed for 10 seconds, obtains 60% Physical and Arts Dodge, and is less likely to be targeted by enemies. When no damage is taken, ATK gradually increases to +10% over 20 seconds, resetting upon taking damage",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Ambush",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 2,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "21",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.005,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 20,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 100,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Deals <@ba.kw>AOE Physical damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After remaining deployed for 8 seconds, obtains 60% Physical and Arts Dodge, and is less likely to be targeted by enemies. When no damage is taken, ATK gradually increases to +20% over 16 seconds, resetting upon taking damage",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Ambush",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 2,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "21",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.0125,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1188,5 +2283,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

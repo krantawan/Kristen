@@ -151,6 +151,7 @@
       "cost": 21
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_4109_baslin#1",
@@ -625,16 +626,591 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "最大HP+200",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 200,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "大権の教え",
+          "description": "術耐性+6、周囲8マス内に味方オペレーターが存在する場合、追加で術耐性+2",
+          "blackboard": [
+            {
+              "key": "baslin_t[self].magic_resistance",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "baslin_t[ally].magic_resistance",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "大権の教え",
+          "description": "術耐性+12、周囲8マス内に味方オペレーターが存在する場合、追加で術耐性+4",
+          "blackboard": [
+            {
+              "key": "baslin_t[self].magic_resistance",
+              "value": 12,
+              "valueStr": null
+            },
+            {
+              "key": "baslin_t[ally].magic_resistance",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_baslin",
       "moduleName": "ベースラインの記章",
-      "desc": "ベースラインは戦線を維持すると同時に、友軍への医療支援も行う。 \n外勤部門の決定に基づき \n外勤任務においては重装オペレーターとして区分し、庇護衛士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ベースラインは戦線を維持すると同時に、友軍への医療支援も行う。 \n外勤部門の決定に基づき \n外勤任務においては重装オペレーターとして区分し、庇護衛士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_baslin",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_baslin",
       "moduleName": "下賜されたおもちゃ",
-      "desc": "蝋燭の火を扇いで消すように、ミヒャは結晶状のナイトライトに手をかざした。灯りはすぐに消え、高塔の書斎は暗くなり、光源は窓の外、沈みゆく夕陽だけになる。\nツヴィリングトゥルムの空は暮れゆき、厚さ数フィートの塔の外壁を抜けて霧のような音楽が聞こえてくる。それは重厚でありながらおぼろげで、存在していないようにも聞こえ、掴みどころがないものだ。\nしかし、ミヒャにはすぐに理解が及んだ。それはフォートガング・フィルハーモニーが奏でる、バッハの交響曲第12番「夕映え」の第三楽章だ。指揮はリチェルカーレのスタイルに近く感じるが、ロッツマン伯爵のようでもある――いや、伯爵は今となってはツヴィリングトゥルムには来られないのではなかったか？グリムマハトは彼を黒の屋敷送りにしたはずだ。十三ヶ月前、ミヒャ自身が文書を届けたのだから…… \n耳元にくぐもった音が響く。ミヒャはその音をよく知っていた。それは彼自身のアーツだ。無音の波が彼を中心に拡がっていき、「夕映え」の音を押しのけ、書斎の隅々までを包み込む。部屋は音を遮断し、ミヒャの思考にも雑念が入らなくなった。\nそうして、彼は例のカスタネットを手に取った。普通のものよりずっと重量のあるそれは、一般的なカスタネットよりよほど分厚い木材で作られている。そこにはめ込まれた――あるいは、はめ込まれていたというべき金線は、楽器の音響構造を完全に無視したものであり、カスタネット本来の音色を台無しにしていた。無論その表面を飾る仰々しい宝石など言うまでもないだろう。\nそうしたもののお陰で、そのカスタネットは豪華で高貴なものにこそ見えたが、本来あるべき音を出せなくなっていた。それはもはや楽器とは呼べず、「素晴らしき」賜り物、あるいは「類まれなる」おもちゃでしかない。\nカスタネットを下賜されて以来、ミヒャはそれを真の意味で大切にしたことなどなかった。正常な音色を奏でられない楽器など少しも欲しくはない――これを渡してきたあの人は、まさに言外にそう伝えてきていたのだと、彼は知っていた。そのため、ミヒャはそのカスタネットを恐れ、憎み、それが目に入るたびに神経を逆なでされるような思いに苦しめられてきたのだ。\n彼はそれをそばに置くのも嫌だった。ゆえにただのおもちゃと見なして、金線が剥がれ落ち、滑らかな黒い表面が傷だらけになるまでぞんざいに扱ってきた。それどころか、いっそ投げ捨てたいと考えたことすらある。山の中に、風の中に、凝り固まった夕景の中に放り投げられたとしたら、どんなにいいだろうか、と。\n「それは手元に置いておけ。お前は、たかがおもちゃなどに傷つけられる人間ではないだろう。その事実を証明するために持っておくことだ。ループカーンのためではなく、お前自身のために。」そう話す声はすぐ近くにあるようでいて、どんな声より遠かった。ミヒャがカスタネットを残しておく理由はその声にある。かつてあの高塔を臨むたび、塔の落とした黒い影が自分を強くしてくれたことを今もなお覚えているのだ。\nミヒャは窓の外へと目を向けた。そこに見えるのは、金色の夕景だけだった。"
+      "desc": "蝋燭の火を扇いで消すように、ミヒャは結晶状のナイトライトに手をかざした。灯りはすぐに消え、高塔の書斎は暗くなり、光源は窓の外、沈みゆく夕陽だけになる。\nツヴィリングトゥルムの空は暮れゆき、厚さ数フィートの塔の外壁を抜けて霧のような音楽が聞こえてくる。それは重厚でありながらおぼろげで、存在していないようにも聞こえ、掴みどころがないものだ。\nしかし、ミヒャにはすぐに理解が及んだ。それはフォートガング・フィルハーモニーが奏でる、バッハの交響曲第12番「夕映え」の第三楽章だ。指揮はリチェルカーレのスタイルに近く感じるが、ロッツマン伯爵のようでもある――いや、伯爵は今となってはツヴィリングトゥルムには来られないのではなかったか？グリムマハトは彼を黒の屋敷送りにしたはずだ。十三ヶ月前、ミヒャ自身が文書を届けたのだから…… \n耳元にくぐもった音が響く。ミヒャはその音をよく知っていた。それは彼自身のアーツだ。無音の波が彼を中心に拡がっていき、「夕映え」の音を押しのけ、書斎の隅々までを包み込む。部屋は音を遮断し、ミヒャの思考にも雑念が入らなくなった。\nそうして、彼は例のカスタネットを手に取った。普通のものよりずっと重量のあるそれは、一般的なカスタネットよりよほど分厚い木材で作られている。そこにはめ込まれた――あるいは、はめ込まれていたというべき金線は、楽器の音響構造を完全に無視したものであり、カスタネット本来の音色を台無しにしていた。無論その表面を飾る仰々しい宝石など言うまでもないだろう。\nそうしたもののお陰で、そのカスタネットは豪華で高貴なものにこそ見えたが、本来あるべき音を出せなくなっていた。それはもはや楽器とは呼べず、「素晴らしき」賜り物、あるいは「類まれなる」おもちゃでしかない。\nカスタネットを下賜されて以来、ミヒャはそれを真の意味で大切にしたことなどなかった。正常な音色を奏でられない楽器など少しも欲しくはない――これを渡してきたあの人は、まさに言外にそう伝えてきていたのだと、彼は知っていた。そのため、ミヒャはそのカスタネットを恐れ、憎み、それが目に入るたびに神経を逆なでされるような思いに苦しめられてきたのだ。\n彼はそれをそばに置くのも嫌だった。ゆえにただのおもちゃと見なして、金線が剥がれ落ち、滑らかな黒い表面が傷だらけになるまでぞんざいに扱ってきた。それどころか、いっそ投げ捨てたいと考えたことすらある。山の中に、風の中に、凝り固まった夕景の中に放り投げられたとしたら、どんなにいいだろうか、と。\n「それは手元に置いておけ。お前は、たかがおもちゃなどに傷つけられる人間ではないだろう。その事実を証明するために持っておくことだ。ループカーンのためではなく、お前自身のために。」そう話す声はすぐ近くにあるようでいて、どんな声より遠かった。ミヒャがカスタネットを残しておく理由はその声にある。かつてあの高塔を臨むたび、塔の落とした黒い影が自分を強くしてくれたことを今もなお覚えているのだ。\nミヒャは窓の外へと目を向けた。そこに見えるのは、金色の夕景だけだった。",
+      "typeIcon": "gua-y",
+      "uniEquipIcon": "uniequip_002_baslin",
+      "typeName1": "GUA",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_baslin_1",
+        "uniequip_002_baslin_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 265,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "被ダメージ<@ba.kw>-15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 345,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "被ダメージ<@ba.kw>-15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "術耐性+12、周囲8マス内に味方オペレーターが存在する場合、追加で自身と対象の味方の術耐性+4",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "大権の教え",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "baslin_t[self].magic_resistance",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "baslin_t[ally].magic_resistance",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resistance",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 410,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "被ダメージ<@ba.kw>-15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "術耐性+14、周囲8マス内に味方オペレーターが存在する場合、追加で自身と対象の味方の術耐性+5",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "大権の教え",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "baslin_t[self].magic_resistance",
+                      "value": 14,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "baslin_t[ally].magic_resistance",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resistance",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1096,5 +1672,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

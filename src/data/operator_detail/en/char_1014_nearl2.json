@@ -150,6 +150,7 @@
       "cost": 19
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_1014_nearl2#1",
@@ -727,21 +728,1070 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +35",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 35,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 85,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Brave the Darkness",
+          "description": "When deploying, deals 50% ATK as True damage to enemies in the four adjacent tiles and <$ba.stun>Stuns</> them for 2 seconds. If the previously deployed Operator is from Kazimierz, deals an additional hit",
+          "blackboard": {
+            "atk_scale": 0.5,
+            "stun": 2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Brave the Darkness",
+          "description": "When deploying, deals 80% ATK as True damage to enemies in the four adjacent tiles and <$ba.stun>Stuns</> them for 3 seconds. If the previously deployed Operator is from Kazimierz, deals an additional hit",
+          "blackboard": {
+            "atk_scale": 0.8,
+            "stun": 3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Daybreak",
+          "description": "Attacks ignore 20% DEF",
+          "blackboard": {
+            "def_penetrate": 0.2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Daybreak",
+          "description": "Attacks ignore 23% <@ba.talpu>(+3%)</> DEF",
+          "blackboard": {
+            "def_penetrate": 0.23
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_nearl2",
       "moduleName": "Nearl the Radiant Knight’s Badge",
-      "desc": "Operator Nearl the Radiant Knight has demonstrated a remarkable aptitude in using her swordstaff to penetrate enemy formations.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Dreadnought responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Nearl the Radiant Knight has demonstrated a remarkable aptitude in using her swordstaff to penetrate enemy formations.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Dreadnought responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_nearl2",
       "moduleName": "Blade of Blazing Sun",
-      "desc": "Margaret, clad in a full suit of armor, clutches a wooden swordstaff in hand, focusing her attention on confronting the man in front of her. \nThe wooden sword swaying gently in his hands reveals no hostility at all, but Margaret knows that if she lets her guard down even for a second, that sword would bypass her swordstaff and lightly tap her on the head. \nUsing the range advantage of her swordstaff, Margaret repeatedly probes her opponent. As usual, her opponent momentarily leaves an opening for her, and she seizes the opportunity and thrusts forward with her swordstaff.\n'Well done, Margaret.' Schnitz Nearl falls to the ground, pretending to be helpless, lying there as he smiles and shows his daughter a thumbs-up. \n'Father...'\nSince she began her combat training, Margaret has rarely landed a blow on the man.\nBut this time...\n'Did, did I do it right?'\n'You did. You did a great job, Margaret.'\n'Do you think you can help me up now?'\n'S-Sure. I'm sorry, Father.' Margaret hurriedly sets down her swordstaff and grabs her father's hand with both of hers, using all her strength to pull him off the ground. \n'A good showing, young foal. Now even your father is no match for you.'\nMargaret's mother, Yolanta, appears at the training area's entrance carrying Maria, who is still a baby, in a swaddle blanket.\n'Haha, you should've seen how much momentum she had behind that last thrust.'\n\n'Mother, what brings you here?' \nIt is late at night, but Margaret sees that her mother is neatly-dressed and carrying a suitcase, as if getting ready to go out.\n'It's almost time, Schnitz. Put yourself together.'\n'Alright, give me five minutes.'\nThe father takes off his training pads, revealing the suit of armor underneath.\n'Mother, Father, where are you going?'\n'I'm sorry, my child, but we can't tell you.'\n'Just imagine we're heading up north to buy you some souvenirs.'\n'A-Are you going to be gone for a long time?'\n'Yes...' Margaret's father is deep in thought for a moment. 'It might take a bit of time.'\n'So, can we ask you for a little favor, Margaret?'\n'I'm listening, Mother. I promise I'll do whatever I can!'\n'First of all...' the mother squats down and hands the sleeping Maria to the young girl. 'I'll need you to take care of your little sister and your grandpa.'\nThough Maria was not heavy at the time, when Margaret held her, she gripped her carefully for fear that her sister would fall from her arms.\n'If you have any questions about combat techniques, you can ask your uncle. He has much more experience than your father does.'\n'Yes, Father...'\n......\n'Is there anything else you want to say?'\n'That's about it.'\nKnock, knock, knock––\nSomeone is at the door.\nShe feels each knock pounding at her heart, striking her with fear.\nHer parents are about to leave.\nHer father readies his swordstaff, and her mother readies her bow. Margaret follows them to the door.\nWhen it opens, two campaign knights in silver armor stand before them.\nTo Margaret, they look like a pair of man-eating monsters.\n'Lord Schnitz, Lady Yolanta, we have instructions to escort you out of the Grand Knight Territory.\nThe parents agree in hushed voices, then turn back to Margaret.\nSchnitz hugs Margaret and Maria tightly.\nYolanta leaves a heavy kiss on their cheeks.\nMargaret stands in the doorway, watching her parents' figures grow fainter and fainter.\nThe whole time, she expected her parents to suddenly turn back to tell her it was all a prank.\nShe expected her uncle, who had watched her parents depart from outside the door, would go bring them back to the warmth of their family. \nShe even expected her sickly grandfather upstairs to rush down and drive away the troublemaking campaign knights.\nBut her expectations were dashed.\nHer pride and her sunlight slowly disappeared to the edge of the Grand Knight Territory, never to be seen again.\nMargaret feels an emptiness inside.\nAll she can do is close the door behind her and hug her sister tightly.\nNothing more."
+      "desc": "Margaret, clad in a full suit of armor, clutches a wooden swordstaff in hand, focusing her attention on confronting the man in front of her. \nThe wooden sword swaying gently in his hands reveals no hostility at all, but Margaret knows that if she lets her guard down even for a second, that sword would bypass her swordstaff and lightly tap her on the head. \nUsing the range advantage of her swordstaff, Margaret repeatedly probes her opponent. As usual, her opponent momentarily leaves an opening for her, and she seizes the opportunity and thrusts forward with her swordstaff.\n'Well done, Margaret.' Schnitz Nearl falls to the ground, pretending to be helpless, lying there as he smiles and shows his daughter a thumbs-up. \n'Father...'\nSince she began her combat training, Margaret has rarely landed a blow on the man.\nBut this time...\n'Did, did I do it right?'\n'You did. You did a great job, Margaret.'\n'Do you think you can help me up now?'\n'S-Sure. I'm sorry, Father.' Margaret hurriedly sets down her swordstaff and grabs her father's hand with both of hers, using all her strength to pull him off the ground. \n'A good showing, young foal. Now even your father is no match for you.'\nMargaret's mother, Yolanta, appears at the training area's entrance carrying Maria, who is still a baby, in a swaddle blanket.\n'Haha, you should've seen how much momentum she had behind that last thrust.'\n\n'Mother, what brings you here?' \nIt is late at night, but Margaret sees that her mother is neatly-dressed and carrying a suitcase, as if getting ready to go out.\n'It's almost time, Schnitz. Put yourself together.'\n'Alright, give me five minutes.'\nThe father takes off his training pads, revealing the suit of armor underneath.\n'Mother, Father, where are you going?'\n'I'm sorry, my child, but we can't tell you.'\n'Just imagine we're heading up north to buy you some souvenirs.'\n'A-Are you going to be gone for a long time?'\n'Yes...' Margaret's father is deep in thought for a moment. 'It might take a bit of time.'\n'So, can we ask you for a little favor, Margaret?'\n'I'm listening, Mother. I promise I'll do whatever I can!'\n'First of all...' the mother squats down and hands the sleeping Maria to the young girl. 'I'll need you to take care of your little sister and your grandpa.'\nThough Maria was not heavy at the time, when Margaret held her, she gripped her carefully for fear that her sister would fall from her arms.\n'If you have any questions about combat techniques, you can ask your uncle. He has much more experience than your father does.'\n'Yes, Father...'\n......\n'Is there anything else you want to say?'\n'That's about it.'\nKnock, knock, knock––\nSomeone is at the door.\nShe feels each knock pounding at her heart, striking her with fear.\nHer parents are about to leave.\nHer father readies his swordstaff, and her mother readies her bow. Margaret follows them to the door.\nWhen it opens, two campaign knights in silver armor stand before them.\nTo Margaret, they look like a pair of man-eating monsters.\n'Lord Schnitz, Lady Yolanta, we have instructions to escort you out of the Grand Knight Territory.\nThe parents agree in hushed voices, then turn back to Margaret.\nSchnitz hugs Margaret and Maria tightly.\nYolanta leaves a heavy kiss on their cheeks.\nMargaret stands in the doorway, watching her parents' figures grow fainter and fainter.\nThe whole time, she expected her parents to suddenly turn back to tell her it was all a prank.\nShe expected her uncle, who had watched her parents depart from outside the door, would go bring them back to the warmth of their family. \nShe even expected her sickly grandfather upstairs to rush down and drive away the troublemaking campaign knights.\nBut her expectations were dashed.\nHer pride and her sunlight slowly disappeared to the edge of the Grand Knight Territory, never to be seen again.\nMargaret feels an emptiness inside.\nAll she can do is close the door behind her and hug her sister tightly.\nNothing more.",
+      "typeIcon": "dre-x",
+      "uniEquipIcon": "uniequip_002_nearl2",
+      "typeName1": "DRE",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_nearl2_1",
+        "uniequip_002_nearl2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 230,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 290,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 95,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 25% DEF",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Daybreak",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 28% <@ba.talpu>(+3%)</> DEF",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Daybreak",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate",
+                      "value": 0.28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 330,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 105,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 28% DEF",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Daybreak",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate",
+                      "value": 0.28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 31% <@ba.talpu>(+3%)</> DEF",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Daybreak",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate",
+                      "value": 0.31,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_nearl2",
       "moduleName": "'A Knightly House'",
-      "desc": "We find ourselves in the shadows, as it always has been.\nIt is midnight, and naught in the tavern but a dim light shines on The Radiant Knight's face. I recall when first we met... it was rare to see someone so composed, so at peace. That, Liz and I knew better than anybody. Here, her sister sleeps over her knees, muttering a word or two from time to time, but The Radiant Knight holds still, unstirring. Estranged for so many years, she elects, quietly, simply, to watch over her family. Whislash—Zofia—does not disturb the two. In fact, she combs Nearl's hair and tail for her. The Radiant Knight's locks are matted with blood, blood of the shadows. Shadows whose echoes are stayed outside of this bar, peaceful as it is, for a time.\nLiz is somewhat drowsy, but adamant not to rest. We have much to say to The Radiant Knight, to Operator Nearl of Rhodes Island, to Margaret. Fortunate or misfortunate it may be, but I am familiar with her entirety, her every part. Hence, I knew long ago this day would come. Hence, I've harbored since long ago this quiet hint of unease. Reluctance.\nI know we won't truly be parting. Yet we each have our own matters to face, and indeed, these matters are leagues unalike.\nMaria wakes, comes to find she's been sleeping on her sister, and flushes somewhat. Zofia makes sharp barbs, scolds the two on their less than model appearances. She is dwarfed by Nearl by some centimeters, and without realizing, always cranes her head to speak to her; the posture seems a strain. It <i>is</i> rude of me, but I cannot help scrutinizing Whislash's expression as she stands before The Radiant Knight. Is there defiance in what she feels? Does she long to fight alongside her, shoulder to shoulder? Does she place her ideals and convictions into this knight of flesh and bone?\nAnd how is it that <i>I</i> see Margaret? As... a companion of the Followers? We break bread together, suffer together, no part of us reserved. We...\nMargaret claps my shoulder. She tells me she's been wanting to borrow my ear herself. She's back home, back to Kazimierz, where she began. But <i>we</i> began elsewhere: in Kazdel, in Sargon, in Londinium... Our guilt, our tribulations, do not lie here. It has me curious then, very much so, about what those led to set forth by her light see when they lift their heads, and look to the dark night.\nA pang of regret strikes me. It makes sense; I've always detested my lineage, its supposed beauty something I've never tasted. Such love, such meaning in family, by all rights belong to her, and are to be celebrated and kept in sight. While by all the same rights, I do not belong here, and should find my own path. In coming here, her radiance will certainly be gone for a time from the tower that is her corporeal self, to see to the countless promises we made in the barrens, in the battlefield, in Rhodes Island.\nYes... Hence, I've given up on saying what need not be said. I smile silently back at her, and that is all.\nThe original sin of a Confessarius is not in a place of pure darkness. Light has been foretold.\nWe find ourselves in the shadows. This, in spite of each of our shadows' oracles being our own, each a different soothsayer.\nMargaret pushes the tavern door open, saying what comes to mind. —A knight should examine herself, survey herself, to discipline as disciplined. We must become our own light. Once we are set aflame, all will find that the shadows never bound them—\n\n—As it always has been."
+      "desc": "We find ourselves in the shadows, as it always has been.\nIt is midnight, and naught in the tavern but a dim light shines on The Radiant Knight's face. I recall when first we met... it was rare to see someone so composed, so at peace. That, Liz and I knew better than anybody. Here, her sister sleeps over her knees, muttering a word or two from time to time, but The Radiant Knight holds still, unstirring. Estranged for so many years, she elects, quietly, simply, to watch over her family. Whislash—Zofia—does not disturb the two. In fact, she combs Nearl's hair and tail for her. The Radiant Knight's locks are matted with blood, blood of the shadows. Shadows whose echoes are stayed outside of this bar, peaceful as it is, for a time.\nLiz is somewhat drowsy, but adamant not to rest. We have much to say to The Radiant Knight, to Operator Nearl of Rhodes Island, to Margaret. Fortunate or misfortunate it may be, but I am familiar with her entirety, her every part. Hence, I knew long ago this day would come. Hence, I've harbored since long ago this quiet hint of unease. Reluctance.\nI know we won't truly be parting. Yet we each have our own matters to face, and indeed, these matters are leagues unalike.\nMaria wakes, comes to find she's been sleeping on her sister, and flushes somewhat. Zofia makes sharp barbs, scolds the two on their less than model appearances. She is dwarfed by Nearl by some centimeters, and without realizing, always cranes her head to speak to her; the posture seems a strain. It <i>is</i> rude of me, but I cannot help scrutinizing Whislash's expression as she stands before The Radiant Knight. Is there defiance in what she feels? Does she long to fight alongside her, shoulder to shoulder? Does she place her ideals and convictions into this knight of flesh and bone?\nAnd how is it that <i>I</i> see Margaret? As... a companion of the Followers? We break bread together, suffer together, no part of us reserved. We...\nMargaret claps my shoulder. She tells me she's been wanting to borrow my ear herself. She's back home, back to Kazimierz, where she began. But <i>we</i> began elsewhere: in Kazdel, in Sargon, in Londinium... Our guilt, our tribulations, do not lie here. It has me curious then, very much so, about what those led to set forth by her light see when they lift their heads, and look to the dark night.\nA pang of regret strikes me. It makes sense; I've always detested my lineage, its supposed beauty something I've never tasted. Such love, such meaning in family, by all rights belong to her, and are to be celebrated and kept in sight. While by all the same rights, I do not belong here, and should find my own path. In coming here, her radiance will certainly be gone for a time from the tower that is her corporeal self, to see to the countless promises we made in the barrens, in the battlefield, in Rhodes Island.\nYes... Hence, I've given up on saying what need not be said. I smile silently back at her, and that is all.\nThe original sin of a Confessarius is not in a place of pure darkness. Light has been foretold.\nWe find ourselves in the shadows. This, in spite of each of our shadows' oracles being our own, each a different soothsayer.\nMargaret pushes the tavern door open, saying what comes to mind. —A knight should examine herself, survey herself, to discipline as disciplined. We must become our own light. Once we are set aflame, all will find that the shadows never bound them—\n\n—As it always has been.",
+      "typeIcon": "dre-y",
+      "uniEquipIcon": "uniequip_003_nearl2",
+      "typeName1": "DRE",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_nearl2_1",
+        "uniequip_003_nearl2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 79,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deploying and when defeated for the first time, deals 80% ATK as True damage to enemies in the four adjacent tiles and <$ba.stun>Stuns</> them for 3s. If the previously deployed operator is from [Kazimierz], deals an additional hit",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Brave the Darkness",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deploying and when defeated for the first time, deals 100% ATK as True damage to enemies in the four adjacent tiles and <$ba.stun>Stuns</> them for 4s. If the previously deployed operator is from [Kazimierz], deals an additional hit",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Brave the Darkness",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1194,6 +2244,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10019_nearl2_sword"
   ],
   "patch_info": {}
 }

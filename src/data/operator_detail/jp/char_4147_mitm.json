@@ -151,6 +151,28 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4147_mitm#1",
@@ -638,16 +660,775 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃速度+8",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 8,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ガラクタの戦車",
+          "description": "戦術召集点にチェリー3号を援軍として召喚可能\n援軍が倒された時、その隣接4マスに残骸を生成し、20秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10037_mitm_trshrb",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ガラクタの戦車",
+          "description": "戦術召集点にチェリー3号を援軍として召喚可能\n援軍が倒された時、その隣接4マスに残骸を生成し、17秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10037_mitm_trshrb",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ガラクタの戦車",
+          "description": "戦術召集点にチェリー3号を援軍として召喚可能\n援軍が倒された時、その隣接4マスに残骸を生成し、15秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10037_mitm_trshrb",
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mitm",
       "moduleName": "ミトムの記章",
-      "desc": "ミトムは戦術召集点を設置して援軍を呼び、後続の展開に余裕を持たせる戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては先鋒オペレーターとして区分し、戦術家の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ミトムは戦術召集点を設置して援軍を呼び、後続の展開に余裕を持たせる戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては先鋒オペレーターとして区分し、戦術家の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_mitm",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mitm",
       "moduleName": "秘められた鋭さ",
-      "desc": "「こんなにたくさん買って、購買資格証は足りるのか？」生活用品を選んでいたオペレーターはそのパンパンに詰まった買い物袋を見て、思わずミトムを心配する。 \n「有効期限が切れそうなクーポンがあるんだ、さっさと使わないとだろ。」ミトムがあふれ出そうなショッピングカートを棚の奥から引きずってきた。 \n「まだそんなにあったのか？ダメだ、先にお会計しないと！絶対にお前の後ろに並んでられない。」 \nミトムがレジに到着した時、すでに野次馬が取り囲んでいた。 \n会計を担当する支援オペレーターはすでに準備万端だ。「こちらへどうぞ！」 \nレジはピピピと音が鳴りやまず、画面の数字は異常なスピードで増加していく。 \n「合計……997.5龍門幣になります！」 \n「待ってくれ、今……」ミトムがコートの内ポケットに手を伸ばす。 \n「オペレーター個人ポイントでのお支払いですか？ポイント払いの5%引きはすでに適用済みです。」 \n群衆からまばらに拍手が起こる。しかしその支援オペレーターの顔に笑顔はない。彼にはこの戦いは始まったばかりだと知っているからだ。 \n「そっか……」ミトムはコートから色とりどりの券の山を取り出す。「このクーポン券、使ってくれよ。」 \n周りで見ていた人々がざわめき出す。 \n「周年記念限定割引券、それと新人オペレーター朝食引換券は期限切れとなっています。」支援オペレーターは券の山の中から数枚を慎重により分ける。 \nレジが再びピピピと音を鳴らし、今度は数字が減り始めた―― \n十五分後。 \n「103龍門幣です。」支援オペレーターはついに笑みをほころばせる。「100龍門幣の大台は守り切った。」 \nミトムは眉をひそめ、辺りを見渡すと、向かいにある掛け時計に視線が止まった。 \n「これもお願い。」ミトムはガムを一つ手に取り、支援オペレーターに渡すとこう言った、「それと、今は夜の八時を一分過ぎた。八時以降、フルーツと惣菜は半額だろ。」 \n支援オペレーターの顔に浮かぶ笑顔が固まった。画面の数字は急激に変動し、84.75になった。 \n群衆から歓声が湧き起こる。 \n「お待ちください！」支援オペレーターはまだ諦めていない。彼はミトムの尻尾に掛かる買い物袋を見つめて言う。「その袋、お会計まだですよね？」 \nミトムは顔色を変えた。「これは私物だっての！」 \n「見ましたよ！システィミルクに洗剤……少なくとも30龍門幣はあります。私はまだ負けていません！」 \n支援オペレーターが飛び掛かって、ミトムは尻尾を振ると、買い物袋が高く放り出された―― \nシスティミルクパックは空中で回転し、側面のヒンジが外れ、中に隠されていた刃があらわになった。洗剤ボトルは開かれて、はめられていたミニラジコンと予備エネルギー貯蔵ユニットがさらされた。 \n一瞬にして、刃や様々な金属工具が飛び散った…… \n「だから私物だって言っただろ！」 \n「あんな危険なものをミルクパックやボトルの中に隠している方が悪いんです！ほかの人みたいに普通の工具箱を使えないんですか？」 \n「これは『偽装』って言うんだよ！工具箱を持ってたら、中に武器が隠されてるって子供でさえわかんだろ。」"
+      "desc": "「こんなにたくさん買って、購買資格証は足りるのか？」生活用品を選んでいたオペレーターはそのパンパンに詰まった買い物袋を見て、思わずミトムを心配する。 \n「有効期限が切れそうなクーポンがあるんだ、さっさと使わないとだろ。」ミトムがあふれ出そうなショッピングカートを棚の奥から引きずってきた。 \n「まだそんなにあったのか？ダメだ、先にお会計しないと！絶対にお前の後ろに並んでられない。」 \nミトムがレジに到着した時、すでに野次馬が取り囲んでいた。 \n会計を担当する支援オペレーターはすでに準備万端だ。「こちらへどうぞ！」 \nレジはピピピと音が鳴りやまず、画面の数字は異常なスピードで増加していく。 \n「合計……997.5龍門幣になります！」 \n「待ってくれ、今……」ミトムがコートの内ポケットに手を伸ばす。 \n「オペレーター個人ポイントでのお支払いですか？ポイント払いの5%引きはすでに適用済みです。」 \n群衆からまばらに拍手が起こる。しかしその支援オペレーターの顔に笑顔はない。彼にはこの戦いは始まったばかりだと知っているからだ。 \n「そっか……」ミトムはコートから色とりどりの券の山を取り出す。「このクーポン券、使ってくれよ。」 \n周りで見ていた人々がざわめき出す。 \n「周年記念限定割引券、それと新人オペレーター朝食引換券は期限切れとなっています。」支援オペレーターは券の山の中から数枚を慎重により分ける。 \nレジが再びピピピと音を鳴らし、今度は数字が減り始めた―― \n十五分後。 \n「103龍門幣です。」支援オペレーターはついに笑みをほころばせる。「100龍門幣の大台は守り切った。」 \nミトムは眉をひそめ、辺りを見渡すと、向かいにある掛け時計に視線が止まった。 \n「これもお願い。」ミトムはガムを一つ手に取り、支援オペレーターに渡すとこう言った、「それと、今は夜の八時を一分過ぎた。八時以降、フルーツと惣菜は半額だろ。」 \n支援オペレーターの顔に浮かぶ笑顔が固まった。画面の数字は急激に変動し、84.75になった。 \n群衆から歓声が湧き起こる。 \n「お待ちください！」支援オペレーターはまだ諦めていない。彼はミトムの尻尾に掛かる買い物袋を見つめて言う。「その袋、お会計まだですよね？」 \nミトムは顔色を変えた。「これは私物だっての！」 \n「見ましたよ！システィミルクに洗剤……少なくとも30龍門幣はあります。私はまだ負けていません！」 \n支援オペレーターが飛び掛かって、ミトムは尻尾を振ると、買い物袋が高く放り出された―― \nシスティミルクパックは空中で回転し、側面のヒンジが外れ、中に隠されていた刃があらわになった。洗剤ボトルは開かれて、はめられていたミニラジコンと予備エネルギー貯蔵ユニットがさらされた。 \n一瞬にして、刃や様々な金属工具が飛び散った…… \n「だから私物だって言っただろ！」 \n「あんな危険なものをミルクパックやボトルの中に隠している方が悪いんです！ほかの人みたいに普通の工具箱を使えないんですか？」 \n「これは『偽装』って言うんだよ！工具箱を持ってたら、中に武器が隠されてるって子供でさえわかんだろ。」",
+      "typeIcon": "tac-y",
+      "uniEquipIcon": "uniequip_002_mitm",
+      "typeName1": "TAC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_mitm_1",
+        "uniequip_002_mitm_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が165%まで上昇\n援軍がブロックしている敵は味方ユニットから狙われやすくなる",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が165%まで上昇\n援軍がブロックしている敵は味方ユニットから狙われやすくなる",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "戦車状態で撃破された時、隣接4マスに最大HPがより高い残骸を生成し、15秒後に再召喚される。残骸状態の時、敵を1体ブロックできる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ガラクタの戦車",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].max_hp",
+                      "value": -0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].def",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].atk",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "戦術召集点にチェリー3号を援軍として召喚可能\n援軍が倒された時、その隣接4マスに最大HPがより高い残骸を生成し、15秒後に再召喚される",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ガラクタの戦車",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10037_mitm_trshrb",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が165%まで上昇\n援軍がブロックしている敵は味方ユニットから狙われやすくなる",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "戦車状態で撃破された時、隣接4マスに最大HPがさらに高い残骸を生成し、15秒後に再召喚される。残骸状態の時、敵を1体ブロックできる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ガラクタの戦車",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].max_hp",
+                      "value": -0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].def",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "trshrb_t_1[trash_born].atk",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "戦術召集点にチェリー3号を援軍として召喚可能\n援軍が倒された時、その隣接4マスに最大HPがさらに高い残骸を生成し、15秒後に再召喚される",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ガラクタの戦車",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10037_mitm_trshrb",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1100,6 +1881,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10037_mitm_trshrb"
   ],
   "patch_info": {}
 }

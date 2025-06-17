@@ -151,6 +151,36 @@
       "cost": 20
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "init_atk_scale",
+          "value": 0.2
+        },
+        {
+          "key": "delta_atk_scale",
+          "value": 0.15
+        },
+        {
+          "key": "max_atk_scale",
+          "value": 1.1
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 6
+        }
+      ],
+      "overrideDescription": "Controls a <@ba.kw>Drone</> that deals <@ba.kw>Arts damage</>; When the Drone attacks the same enemy, its damage will increase (up to 110% of the operator's ATK)",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_328_cammou#1",
@@ -621,16 +651,523 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ASPD +6",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -6 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Coordinated",
+          "description": "Click and her Drones gain +6 ASPD",
+          "blackboard": {
+            "attack_speed": 6
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Coordinated",
+          "description": "Click and her Drones gain +12 ASPD",
+          "blackboard": {
+            "attack_speed": 12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_cammou",
       "moduleName": "Click's Badge",
-      "desc": "Operator Click has demonstrated a remarkable aptitude for manipulating hovering units to combat and pursue the enemy in concert.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Mech-accord Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Click has demonstrated a remarkable aptitude for manipulating hovering units to combat and pursue the enemy in concert.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Mech-accord Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_cammou",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_cammou",
       "moduleName": "Big Feline Desensitization Experiment",
-      "desc": "<Video script: Click's Big Feline Desensitization Experiment>\n1. Daytime - Rhodes Island deck - Panoramic - Click does greeting and cheerfully introduces the video\n'Cool, I think this take's good!\n'You alright, Click? You look kinda nervous. Relax, you're a professional, and fanservice comedy uploads like this are easy money. Just follow the script and it'll go great. Let's have fun with this collab!\n'...You know you're smiling kind of awkward?'\n2. Daytime - Training Room - Close-up - Indra's just come out of training, Click bravely challenges her to a boxing match\n'Nice, good stuff. Uhh, why did you run away after you challenged her, though?\n'Let's try one more, and don't shake your legs this time, Click... no noises either!'\n3. Daytime - Training Room - Close-up - Click and Broca train together, then arm-wrestle\n'Three, two, one—go! You got this, Click! Do it! You don't have to win, what matters is how brave you were!\n'...Oh, shit, stopstopstop! Broca, when you win, don't lift her like a trophy! Oh my god, she's gone rigid!'\n4. Daytime - Library - Close-up - Click and Mountain read during a comfy afternoon\n'Okay, she's finally calming down, thank god we did this in a library...\n'Click, stay exactly like that, just do a little presentation to the camera? Comfy afternoon, tell us what you're reading?\n'...100 Ways to Die Suddenly?! ...Cut!!'\n5. Evening - Reception Room - Close-up - Click sits down with a phenomenal Kjerag entrepreneur to talk over a game of chess\n'Mr. SilverAsh, huge apologies for the delays to your shoot, we had some accidents... but we <i>are</i> rolling now, um, is there any reason you're standing out here? Then who's inside playing against Click?\n'...Tenzin?!'\n6. Evening - Rhodes Island corridor - Close-up - Click ■■■■■■ (paper torn here)\n'Cut, cut! Blaze, <i>what</i> is your deal? That's not how the script goes! ...I'm sorry, Click <i>just</i> discussed this with you? And I'm supposed to just stand there and shoot? Excuse me?\n'Click, I don't know if this means anything, but your eyes are red...\n'Do we <i>need</i> the window open, Blaze? What's the point of you carrying Click? Wait, did you just jump—\n'BLAGH! THAT—OH, THAT KILLS PEOPLE!! CLICK!!! I AM NEVER COLLABING WITH YOU EVER AGAIN!!!'"
+      "desc": "<Video script: Click's Big Feline Desensitization Experiment>\n1. Daytime - Rhodes Island deck - Panoramic - Click does greeting and cheerfully introduces the video\n'Cool, I think this take's good!\n'You alright, Click? You look kinda nervous. Relax, you're a professional, and fanservice comedy uploads like this are easy money. Just follow the script and it'll go great. Let's have fun with this collab!\n'...You know you're smiling kind of awkward?'\n2. Daytime - Training Room - Close-up - Indra's just come out of training, Click bravely challenges her to a boxing match\n'Nice, good stuff. Uhh, why did you run away after you challenged her, though?\n'Let's try one more, and don't shake your legs this time, Click... no noises either!'\n3. Daytime - Training Room - Close-up - Click and Broca train together, then arm-wrestle\n'Three, two, one—go! You got this, Click! Do it! You don't have to win, what matters is how brave you were!\n'...Oh, shit, stopstopstop! Broca, when you win, don't lift her like a trophy! Oh my god, she's gone rigid!'\n4. Daytime - Library - Close-up - Click and Mountain read during a comfy afternoon\n'Okay, she's finally calming down, thank god we did this in a library...\n'Click, stay exactly like that, just do a little presentation to the camera? Comfy afternoon, tell us what you're reading?\n'...100 Ways to Die Suddenly?! ...Cut!!'\n5. Evening - Reception Room - Close-up - Click sits down with a phenomenal Kjerag entrepreneur to talk over a game of chess\n'Mr. SilverAsh, huge apologies for the delays to your shoot, we had some accidents... but we <i>are</i> rolling now, um, is there any reason you're standing out here? Then who's inside playing against Click?\n'...Tenzin?!'\n6. Evening - Rhodes Island corridor - Close-up - Click ■■■■■■ (paper torn here)\n'Cut, cut! Blaze, <i>what</i> is your deal? That's not how the script goes! ...I'm sorry, Click <i>just</i> discussed this with you? And I'm supposed to just stand there and shoot? Excuse me?\n'Click, I don't know if this means anything, but your eyes are red...\n'Do we <i>need</i> the window open, Blaze? What's the point of you carrying Click? Wait, did you just jump—\n'BLAGH! THAT—OH, THAT KILLS PEOPLE!! CLICK!!! I AM NEVER COLLABING WITH YOU EVER AGAIN!!!'",
+      "typeIcon": "fun-y",
+      "uniEquipIcon": "uniequip_002_cammou",
+      "typeName1": "FUN",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_cammou_1",
+        "uniequip_002_cammou_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31053",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30053",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (deals up to 120% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 13,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (deals up to 120% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "This unit and Drones gain +15 ASPD",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Coordinated",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (deals up to 120% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "This unit and Drones gain +18 ASPD",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Coordinated",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 18,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1084,5 +1621,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

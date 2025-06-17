@@ -152,6 +152,7 @@
       "cost": 10
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_250_phatom#1",
@@ -740,26 +741,1351 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +22",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 22,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -2 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -2,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +130",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 130,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Phantom in the Mirror",
+          "description": "Can summon a clone with the same abilities as Phantom, but has its own redeployment time",
+          "blackboard": {
+            "cnt": 1
+          },
+          "tokenKey": "token_10007_phatom_twin",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Phantom in the Mirror",
+          "description": "Can summon a stronger clone with the same abilities as Phantom, but has its own redeployment time",
+          "blackboard": {
+            "cnt": 1
+          },
+          "tokenKey": "token_10007_phatom_twin",
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "#",
+          "name": "Phantom Mastery",
+          "description": "Redeployment time of clone is reduced by 10 seconds",
+          "blackboard": {},
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_phatom",
       "moduleName": "Phantom's Badge",
-      "desc": "Operator Phantom has demonstrated a remarkable aptitude in repeated battlefield penetration.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Executor responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Phantom has demonstrated a remarkable aptitude in repeated battlefield penetration.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Executor responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_phatom",
       "moduleName": "Miss Christine's Felt",
-      "desc": "The performer does always visit a certain street corner when evening descends. \nOn it there are few, and it is calm, and the shop of the corner has a canopy over its door, such that the twilight of the setting sun finds itself obstructed, but casts a deep, shallow warmth instead over the uneven cobble. \nWhen work is over, and no rehearsal is upcoming, the performer avoids the gazes, and is in love with coming here these days. \nHe is a quiet one off the stage, fond of drinking floral teas. With cup cradled, he stares out at the emptiest street in gold, squints ever so slightly, and under the loop of his collar the crystals at his throat, grown distinct these recent evenings, faintly stings. \nHe remembers the ringleader, who rarely shows in person beyond giving him instruction, raising the matter with him not long ago. \nComing with praise, eager to see the day he truly joins. \nSaying, I hope you reserve nothing for this play. \n—It will be his stage alone. \nAt times, the performer feels a whisper of anxiety, source unknown. But beneath that unease pallid as the Victorian mist, it is clear to realize for him that he cannot hold back the feeling of joy. \nThis will be no ordinary play, a play like no other the traveling troupe has hitherto performed, unlike any stage he has trodden before. \nThis will be his play, and his entire life, his kismet... \n\n'Mew.' \nA black kitten appears on the street corner. Few have seen a being beautiful as it, as if a certain legend where at times they show before others as they please, a legend as if the black cat here now. \nThe performer's train of thought is broken. The uncanny fervor in his eyes dissipates, and his look relaxes, watching the cat delicately pace towards him, and he lets out a smile unawares. \nHe is in love with coming to this little town's street corner these days. On it there are few, and it is calm, and the tea is not exceptional, but a black cat does always patron it, placing golden sunsets underfoot with its perfect composure, on its leisurely stroll. \n'Meow.' \nIts tail elegantly sways, approaches his side. \nThe performer tries to reach a hand out to the black cat, and it gives an askance look, its ears shake a shiver, but it does not show immediate refusal. Thus he carefully strokes its finely sheened fur, the sunset that lingers on this kitten soaking into his fingertips. \nHis smile supplants all other mood in his vision; the performer has long since had a fine name in mind for his unusual new friend, and merely has not given it yet. \nHe has decided, if this black cat keep coming forevermore, he will ask her: would you like to walk with me?"
+      "desc": "The performer does always visit a certain street corner when evening descends. \nOn it there are few, and it is calm, and the shop of the corner has a canopy over its door, such that the twilight of the setting sun finds itself obstructed, but casts a deep, shallow warmth instead over the uneven cobble. \nWhen work is over, and no rehearsal is upcoming, the performer avoids the gazes, and is in love with coming here these days. \nHe is a quiet one off the stage, fond of drinking floral teas. With cup cradled, he stares out at the emptiest street in gold, squints ever so slightly, and under the loop of his collar the crystals at his throat, grown distinct these recent evenings, faintly stings. \nHe remembers the ringleader, who rarely shows in person beyond giving him instruction, raising the matter with him not long ago. \nComing with praise, eager to see the day he truly joins. \nSaying, I hope you reserve nothing for this play. \n—It will be his stage alone. \nAt times, the performer feels a whisper of anxiety, source unknown. But beneath that unease pallid as the Victorian mist, it is clear to realize for him that he cannot hold back the feeling of joy. \nThis will be no ordinary play, a play like no other the traveling troupe has hitherto performed, unlike any stage he has trodden before. \nThis will be his play, and his entire life, his kismet... \n\n'Mew.' \nA black kitten appears on the street corner. Few have seen a being beautiful as it, as if a certain legend where at times they show before others as they please, a legend as if the black cat here now. \nThe performer's train of thought is broken. The uncanny fervor in his eyes dissipates, and his look relaxes, watching the cat delicately pace towards him, and he lets out a smile unawares. \nHe is in love with coming to this little town's street corner these days. On it there are few, and it is calm, and the tea is not exceptional, but a black cat does always patron it, placing golden sunsets underfoot with its perfect composure, on its leisurely stroll. \n'Meow.' \nIts tail elegantly sways, approaches his side. \nThe performer tries to reach a hand out to the black cat, and it gives an askance look, its ears shake a shiver, but it does not show immediate refusal. Thus he carefully strokes its finely sheened fur, the sunset that lingers on this kitten soaking into his fingertips. \nHis smile supplants all other mood in his vision; the performer has long since had a fine name in mind for his unusual new friend, and merely has not given it yet. \nHe has decided, if this black cat keep coming forevermore, he will ask her: would you like to walk with me?",
+      "typeIcon": "exe-x",
+      "uniEquipIcon": "uniequip_002_phatom",
+      "typeName1": "EXE",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_phatom_1",
+        "uniequip_002_phatom_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "withdraw_cost_recover_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 62,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "withdraw_cost_recover_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Redeployment time of clone is reduced by 14 seconds",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Phantom Mastery",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Redeployment Time -14 sec",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Phantom Mastery",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 73,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "withdraw_cost_recover_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Redeployment time of clone is reduced by 16 seconds",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Phantom Mastery",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Redeployment Time -16 sec",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Phantom Mastery",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_phatom",
       "moduleName": "'Think of Me'",
-      "desc": "What is death?\nThe teachers described it thus: dramatic, unexpected, shrouded.\nA character's death was artistic, and by and large the play's climax. A heartracing, fascinating thing.\nThe audience hoped for it so—sensuously, madly, excitedly, rapturously...\nThey were drunk, doped on the stories that lead up to those deaths.\nArt, all for art.\nSo he was taught; so he held.\nAs he witnessed with his own eyes his teachers demonstrate to him such artistic deaths, one after another, so too did he experience the emotions behind those deaths.\nHe was a child of art. He knew himself, believed himself, and considered himself born unto the stage.\nAnd yet. Yet—\nThe moment he truly took the stage as the star, the moment he ushered in the very first production he owned, the moment he could truly exhibit the technique cut into every bone of his body, the moment the sharpened edge would play with grace across the artery—\nHe came to realize with open eyes his own opinion—death was simply death, no more.\nIt held no artistry. It bore no hope. Its only meaning was the passing of a life.\nIn that moment, everything changed.\nThe art once held aloft was lofty no longer. The hopes once shouldered became barbs upon his back. His teachers were no teachers now, but murderers.\nAh, indeed. Mere murderers.\nAnd he, a mere murderer too.\nThe performers upon the stage, the spectators off it, all simply murderers.\nBut in every story, murderers should receive their just desert in the end.\nThe familiar weight upon his shoulders stops his racing mind. It is the black cat. He tilts his head, and she stares right back.\nEver since they met, she has frequented his side. At times, even he knows not how the black cat manages to slip close to him.\nTo him, tonight is a night of utmost importance. And so, he asks the question.\n'Would you walk with me?'\nThe black cat licks at her paws, yawns, and seems to entirely lack interest in the question.\n'How would the name... Christine strike you?'\n'Meow.'\nThe black cat—no—Miss Christine now seems much more enthused. With a few short hops she descends from the windowsill, and turns back to glance at him. Oddly, the notion strikes him that Miss Christine is concerned for him.\n'Don't worry.'\nYes. Do not worry.\nHis decision has been ever resolute.\nThe curtain slowly opens, the spotlights hang above center stage, the seats below are packed, and all await the play with high hopes.\nTo center stage, he paces.\nFor murderers, a trial at times comes from a place of righteous anger, and at others from introspective guilt, but all are equal in their exit from the stage.\nHe clears his throat.\nTonight, death will come equal."
+      "desc": "What is death?\nThe teachers described it thus: dramatic, unexpected, shrouded.\nA character's death was artistic, and by and large the play's climax. A heartracing, fascinating thing.\nThe audience hoped for it so—sensuously, madly, excitedly, rapturously...\nThey were drunk, doped on the stories that lead up to those deaths.\nArt, all for art.\nSo he was taught; so he held.\nAs he witnessed with his own eyes his teachers demonstrate to him such artistic deaths, one after another, so too did he experience the emotions behind those deaths.\nHe was a child of art. He knew himself, believed himself, and considered himself born unto the stage.\nAnd yet. Yet—\nThe moment he truly took the stage as the star, the moment he ushered in the very first production he owned, the moment he could truly exhibit the technique cut into every bone of his body, the moment the sharpened edge would play with grace across the artery—\nHe came to realize with open eyes his own opinion—death was simply death, no more.\nIt held no artistry. It bore no hope. Its only meaning was the passing of a life.\nIn that moment, everything changed.\nThe art once held aloft was lofty no longer. The hopes once shouldered became barbs upon his back. His teachers were no teachers now, but murderers.\nAh, indeed. Mere murderers.\nAnd he, a mere murderer too.\nThe performers upon the stage, the spectators off it, all simply murderers.\nBut in every story, murderers should receive their just desert in the end.\nThe familiar weight upon his shoulders stops his racing mind. It is the black cat. He tilts his head, and she stares right back.\nEver since they met, she has frequented his side. At times, even he knows not how the black cat manages to slip close to him.\nTo him, tonight is a night of utmost importance. And so, he asks the question.\n'Would you walk with me?'\nThe black cat licks at her paws, yawns, and seems to entirely lack interest in the question.\n'How would the name... Christine strike you?'\n'Meow.'\nThe black cat—no—Miss Christine now seems much more enthused. With a few short hops she descends from the windowsill, and turns back to glance at him. Oddly, the notion strikes him that Miss Christine is concerned for him.\n'Don't worry.'\nYes. Do not worry.\nHis decision has been ever resolute.\nThe curtain slowly opens, the spotlights hang above center stage, the seats below are packed, and all await the play with high hopes.\nTo center stage, he paces.\nFor murderers, a trial at times comes from a place of righteous anger, and at others from introspective guilt, but all are equal in their exit from the stage.\nHe clears his throat.\nTonight, death will come equal.",
+      "typeIcon": "exe-y",
+      "uniEquipIcon": "uniequip_003_phatom",
+      "typeName1": "EXE",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_phatom_1",
+        "uniequip_003_phatom_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Can summon a stronger clone with the same abilities as Phantom, but has its own redeployment time; while both Phantom and the clone are present, both have +10% ATK",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Phantom in the Mirror",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10007_phatom_twin",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10007_phatom_twin": [
+              {
+                "key": "max_hp",
+                "value": 100,
+                "valueStr": null
+              },
+              {
+                "key": "atk",
+                "value": 60,
+                "valueStr": null
+              },
+              {
+                "key": "def",
+                "value": 40,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Can summon an even stronger clone with the same abilities as Phantom, but has its own redeployment time; while both Phantom and the clone are present, both have +10% ATK",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Phantom in the Mirror",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10007_phatom_twin",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_004_phatom",
       "moduleName": "Phantom's Specialized Badge",
-      "desc": "In light of special permissions granted, the Field Operations Department has hence passed the following resolution with respect to Operator Phantom:\nWhere the entailing mission would fall under Integrated Strategies scope, this operator shall be pursuant to tactics of a reinforced nature in meeting the enemy.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.\n'We bid the night be sweet. Would any hand dare reach to lift the crimson curtain, sever it.'"
+      "desc": "In light of special permissions granted, the Field Operations Department has hence passed the following resolution with respect to Operator Phantom:\nWhere the entailing mission would fall under Integrated Strategies scope, this operator shall be pursuant to tactics of a reinforced nature in meeting the enemy.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.\n'We bid the night be sweet. Would any hand dare reach to lift the crimson curtain, sever it.'",
+      "typeIcon": "isw-a",
+      "uniEquipIcon": "uniequip_004_phatom",
+      "typeName1": "ISW",
+      "typeName2": "A",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 37,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of his summons) by <@ba.kw>1</> second when attacking; this effect also applies to his summons",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of its associated Operator) by <@ba.kw>1</> second when attacking",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of his summons) by <@ba.kw>1</> second when attacking; this effect also applies to his summons",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of its associated Operator) by <@ba.kw>1</> second when attacking",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Can summon a stronger clone with the same abilities as Phantom, but has its own redeployment time; in <@ba.kw>Integrated Strategies</>, deploying the clone will refresh Phantom's skill (can stack skill effect up to 8 times)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Phantom in the Mirror",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10007_phatom_twin",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "In <@ba.kw>Integrated Strategies</>, deployment will refresh Phantom's skill",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "#",
+                  "name": "Phantom in the Mirror",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 71,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of his summons) by <@ba.kw>1</> second when attacking; this effect also applies to his summons",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of its associated Operator) by <@ba.kw>1</> second when attacking",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Can summon a stronger clone with the same abilities as Phantom, but has its own redeployment time; in <@ba.kw>Integrated Strategies</>, the clone does not take up a deployment slot, and deploying the clone will refresh Phantom's skill (can stack skill effect up to 8 times)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Phantom in the Mirror",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10007_phatom_twin",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "In <@ba.kw>Integrated Strategies</>, does not take up a deployment slot, and deployment will refresh Phantom's skill",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "#",
+                  "name": "Phantom in the Mirror",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1212,6 +2538,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10007_phatom_twin"
   ],
   "patch_info": {}
 }

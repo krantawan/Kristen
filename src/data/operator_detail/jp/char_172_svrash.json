@@ -151,6 +151,28 @@
       "cost": 20
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_172_svrash#1",
@@ -738,16 +760,740 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+26",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 50,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "カリスマ",
+          "description": "攻撃力+5%。編成中、味方全員の再配置時間-5%",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "respawn_time",
+              "value": -0.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "カリスマ",
+          "description": "攻撃力+7%<@ba.talpu>（+2%）</>。編成中、味方全員の再配置時間-7%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.07,
+              "valueStr": null
+            },
+            {
+              "key": "respawn_time",
+              "value": -0.07,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "カリスマ",
+          "description": "攻撃力+10%。編成中、味方全員の再配置時間-10%",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "respawn_time",
+              "value": -0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "カリスマ",
+          "description": "攻撃力+12%<@ba.talpu>（+2%）</>。編成中、味方全員の再配置時間-12%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "respawn_time",
+              "value": -0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "ホークビジョン",
+          "description": "攻撃範囲内の敵の<$ba.invisible>ステルス</>状態を無効にする",
+          "blackboard": [],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_svrash",
       "moduleName": "シルバーアッシュの記章",
-      "desc": "シルバーアッシュは比較的広い範囲で敵を迎え撃つ戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、領主の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "シルバーアッシュは比較的広い範囲で敵を迎え撃つ戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、領主の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_svrash",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_svrash",
       "moduleName": "雪境羽獣お手入れセット",
-      "desc": "その羽獣は、目覚めてみれば、どこか暖かな部屋で横たわっていた。\nそして、見知らぬ環境に怯えてそこを離れようとしたものの、強い痛みで身体が動かせないことに気が付いた。\nそこへ部屋のドアが開き、たくましい尻尾を持つ銀髪のフェリーンの少年が入ってきた。彼は薬と包帯を携えて近づいてくると、薬瓶に入った薬を傷口に塗り込んだあと、包帯を巻いて手当をしてくれた。\n羽獣は初めこそ少し暴れて抵抗したが、あまりにも弱っていたために、結局は渋々と少年の治療を受け、その後深い眠りに落ちた。\n翌日、少年は羽獣を見つけた場所へと連れて行った。彼らは森の中を朝から晩まで彷徨って、少年がひどく呼吸を乱すほど疲れ果てるまで探し回ったが、結局見つかったのは大人の羽獣二匹の死骸だけだった。少年はその羽獣たちのために墓を立てると、連れてきた羽獣に目を向けてこう言った。\n「お互い、似た者同士になってしまったな。」\n羽獣は少年の手で部屋へと連れ戻され、部屋に設けられた小さな巣を新たな住処とすることになった。\nその後、少年は毎日羽獣の様子を見に来た。彼は訪れるたび積極的に羽を手入れし、その傍ら、羽獣が言葉を理解しているかどうかなど気にもせず、いつも話しかけていた。\n……\nたとえばある夕方のこと、少年は沈んだ顔で羽獣のもとへやってきて、こう言った。\n「良き当主になる自信も、良き兄になる自信もある。それでも、その両方を同時に務められるという保証はできそうにないんだ。」\n少年はそうこぼしてため息をつくと、あれこれ頭を巡らせた末に部屋を出て、いい香りのする箱を持ってきた。その中には、彼の妹の大好きな料理が入っていた。\n……\nまたある日の午後、少年は少し憂鬱そうにこう言った。\n「ノーシスが新天地で存分に活躍できることを惜しみなく祝いたくはあるんだが、本当のことを言えば、行ってほしくないんだ。」\nあまりにも長く我慢をしてきたせいなのか、それから少年は30分ほど、その頃エーデルワイス家が置かれていた境遇や、友人のノーシスが直面している困難、そして親友と離ればなれになりたくないという願いを事細かに語った。そうして語り終えた最後に、少年は溜息をついた。「はぁ、こんなことを話せるのはお前だけだよ。ノーシスのために、お別れのプレゼントを考えておかないとな。」\n……\nさらにまたある日、羽獣のケガがすっかり治った頃のこと。少年は、雪原で飛ぶ練習をさせようと羽獣を連れ出した。そして羽獣が再び飛び立とうとした時、少年は黒色のスカーフを取り出して、その首にかけるとこう問いかけた。\n「俺と一緒に来るか？」\n――その時すでに、少年は当主の重荷を肩からおろして、雪境の外へと遊学に赴く決意をしていた。\n羽獣は少年を見つめ、首を傾げる。\nその羽獣には、少年がいつも何に思い悩み、何を憂い、何に悲しみを覚えてきたのかはわからない。\nだがおそらく、羽獣は感じ取っていた。少年も自分と同じように、ただ暖かな部屋にいるのではなく、青空の下を飛び回りたいのだと――\n羽獣は翼を広げると、少年に強く羽ばたく姿を見せた。\nそうして彼の驚きが混ざったかけ声を浴びながら、風に乗った。\nその日、羽獣は再び飛ぶことを覚えたのである。"
+      "desc": "その羽獣は、目覚めてみれば、どこか暖かな部屋で横たわっていた。\nそして、見知らぬ環境に怯えてそこを離れようとしたものの、強い痛みで身体が動かせないことに気が付いた。\nそこへ部屋のドアが開き、たくましい尻尾を持つ銀髪のフェリーンの少年が入ってきた。彼は薬と包帯を携えて近づいてくると、薬瓶に入った薬を傷口に塗り込んだあと、包帯を巻いて手当をしてくれた。\n羽獣は初めこそ少し暴れて抵抗したが、あまりにも弱っていたために、結局は渋々と少年の治療を受け、その後深い眠りに落ちた。\n翌日、少年は羽獣を見つけた場所へと連れて行った。彼らは森の中を朝から晩まで彷徨って、少年がひどく呼吸を乱すほど疲れ果てるまで探し回ったが、結局見つかったのは大人の羽獣二匹の死骸だけだった。少年はその羽獣たちのために墓を立てると、連れてきた羽獣に目を向けてこう言った。\n「お互い、似た者同士になってしまったな。」\n羽獣は少年の手で部屋へと連れ戻され、部屋に設けられた小さな巣を新たな住処とすることになった。\nその後、少年は毎日羽獣の様子を見に来た。彼は訪れるたび積極的に羽を手入れし、その傍ら、羽獣が言葉を理解しているかどうかなど気にもせず、いつも話しかけていた。\n……\nたとえばある夕方のこと、少年は沈んだ顔で羽獣のもとへやってきて、こう言った。\n「良き当主になる自信も、良き兄になる自信もある。それでも、その両方を同時に務められるという保証はできそうにないんだ。」\n少年はそうこぼしてため息をつくと、あれこれ頭を巡らせた末に部屋を出て、いい香りのする箱を持ってきた。その中には、彼の妹の大好きな料理が入っていた。\n……\nまたある日の午後、少年は少し憂鬱そうにこう言った。\n「ノーシスが新天地で存分に活躍できることを惜しみなく祝いたくはあるんだが、本当のことを言えば、行ってほしくないんだ。」\nあまりにも長く我慢をしてきたせいなのか、それから少年は30分ほど、その頃エーデルワイス家が置かれていた境遇や、友人のノーシスが直面している困難、そして親友と離ればなれになりたくないという願いを事細かに語った。そうして語り終えた最後に、少年は溜息をついた。「はぁ、こんなことを話せるのはお前だけだよ。ノーシスのために、お別れのプレゼントを考えておかないとな。」\n……\nさらにまたある日、羽獣のケガがすっかり治った頃のこと。少年は、雪原で飛ぶ練習をさせようと羽獣を連れ出した。そして羽獣が再び飛び立とうとした時、少年は黒色のスカーフを取り出して、その首にかけるとこう問いかけた。\n「俺と一緒に来るか？」\n――その時すでに、少年は当主の重荷を肩からおろして、雪境の外へと遊学に赴く決意をしていた。\n羽獣は少年を見つめ、首を傾げる。\nその羽獣には、少年がいつも何に思い悩み、何を憂い、何に悲しみを覚えてきたのかはわからない。\nだがおそらく、羽獣は感じ取っていた。少年も自分と同じように、ただ暖かな部屋にいるのではなく、青空の下を飛び回りたいのだと――\n羽獣は翼を広げると、少年に強く羽ばたく姿を見せた。\nそうして彼の驚きが混ざったかけ声を浴びながら、風に乗った。\nその日、羽獣は再び飛ぶことを覚えたのである。",
+      "typeIcon": "lor-x",
+      "uniEquipIcon": "uniequip_002_svrash",
+      "typeName1": "LOR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_svrash_1",
+        "uniequip_002_svrash_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 190,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に追加で攻撃力の<@ba.vup>{atk_scale_m:0%}</>の術ダメージを与える",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 270,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に追加で攻撃力の<@ba.vup>{atk_scale_m:0%}</>の術ダメージを与える",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+20%、敵【エリート】・【ボス】を攻撃する際は攻撃力が110%まで上昇する。編成中、味方全員の再配置時間-10%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "カリスマ",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "respawn_time",
+                      "value": -0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+22%<@ba.talpu>（+2%）</>、敵【エリート】・【ボス】を攻撃する際は攻撃力が110%まで上昇する。編成中、味方全員の再配置時間-12%<@ba.talpu>（+2%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "カリスマ",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.22,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "respawn_time",
+                      "value": -0.12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 330,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に追加で攻撃力の<@ba.vup>{atk_scale_m:0%}</>の術ダメージを与える",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+25%、敵【エリート】・【ボス】を攻撃する際は攻撃力が115%まで上昇する。編成中、味方全員の再配置時間-10%、シルバーアッシュ自身およびその周囲8マス内にいる味方が撤退した場合、対象の再配置時間をさらに-10%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "カリスマ",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "respawn_time",
+                      "value": -0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+27%<@ba.talpu>（+2%）</>、敵【エリート】・【ボス】を攻撃する際は攻撃力が115%まで上昇する。編成中、味方全員の再配置時間-12%<@ba.talpu>（+2%）</>、シルバーアッシュ自身およびその周囲8マス内にいる味方が撤退した場合、対象の再配置時間はさらに-10%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "カリスマ",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "respawn_time",
+                      "value": -0.12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1201,5 +1947,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

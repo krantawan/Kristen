@@ -151,6 +151,28 @@
       "cost": 8
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "interval",
+          "value": 3
+        },
+        {
+          "key": "cost",
+          "value": -3
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4155_talr#1",
@@ -618,16 +640,557 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -3 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -3,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +25",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 25,
+        "def": 20,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Select Your Customers!",
+          "description": "Deals +10% damage when attacking enemies that are not blocked by this unit",
+          "blackboard": {
+            "damage_scale": 1.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Select Your Customers!",
+          "description": "Deals +15% <@ba.talpu>(+5%)</> damage when attacking enemies that are not blocked by this unit",
+          "blackboard": {
+            "damage_scale": 1.15
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Select Your Customers!",
+          "description": "Deals +20% damage when attacking enemies that are not blocked by this unit",
+          "blackboard": {
+            "damage_scale": 1.2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Select Your Customers!",
+          "description": "Deals +25% <@ba.talpu>(+5%)</> damage when attacking enemies that are not blocked by this unit",
+          "blackboard": {
+            "damage_scale": 1.25
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_talr",
       "moduleName": "Figurino's Badge",
-      "desc": "Operator Figurino has demonstrated a remarkable aptitude in repeated battlefield penetration.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Merchant responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Figurino has demonstrated a remarkable aptitude in repeated battlefield penetration.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Merchant responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_talr",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_talr",
       "moduleName": "'The Big Shot'",
-      "desc": "The man came into the shop just as it started raining.\nHe looked about sixty. Exquisite attire, stern expression, seemingly quite the panache. His satin coat was blotched with water; as Luchino welcomed him in, he helped him remove it with deft, practiced motions. The man looked him over, stared for a few blank seconds, then quickly made his way into the atelier where old Umberto had been waiting.\nLuchino would never butt in on a client meeting his nonno; he went to hang the coat on the rack instead. It was a finely made coat, sumptuous material, and most importantly, had a polished black portable crossbow in one of its inside pockets. <i>What a big shot this guy must be,</i> Luchino thought to himself.\nBefore long, an argument arose from the atelier. Fragments of speech stole their way through the door's cracks, and slipped into Luchino's ears.\n'...Luca's stuff... it ends here...'\n'...you're the one... did it... how could you...'\n'...Masina... only girl...'\n<i>Were those my mamma and papà's names?</i> Unable to help his curiosity, Luchino stuck his ear to the atelier wall, but all he caught was the sound of things falling to the floor, and the yelling of that man. '...MY flesh and blood too!'\nThe atelier door burst open, and there the man stood like a wall between him and his nonno. He opened his clenched hand, revealing a silver thumb ring in his palm.\n'This was Luca's thumb ring. It's time you took it.' The man offered it to him, the look in his eyes and tone of his words brimming with expectation.\nPast the man's shoulder, Luchino saw the once-orderly atelier in a state of disarray, fabric bolts and tape measures strewn across the floor, and Umberto shrinking away inside. Luchino had never seen his nonno quite so... weary. He was about to take the ring, but at this moment red-hot rage supplanted all his curiosity. Luchino pushed the man's hand aside, the thumb ring falling onto the rug.\n'Who are you? Nonno and I don't accept rude clients.'\nThe man's expectation promptly vanished, and his expression twisted with anger, his eyes shining green. Luchino realized—he and this man had the same eyes.\n'You are not welcome at De Montano.' Summoning all his courage, Luchino stood up straight, and repeated himself. 'Please leave.'\nThe order cut straight through the air. Luchino shocked even himself to see his words put out the fury in the man's brow. He sensed a hint of discouragement in the corners of the stranger's familiar eyes, but quickly it was covered back up beneath his solemn mask.\n'...As you wish, tailor boy. Arrivederci.' The man put his waterlogged coat back on, then took one final look at Luchino. Then, he exited the shop door and vanished into the rainy black of night.\n'Nonno, who <i>was</i> that man?'\n'A father who'd kill his own daughter. You don't need to know his name.\n'He wants to play Siracusan games, he wants to be a big shot. This is the punishment he deserves.'"
+      "desc": "The man came into the shop just as it started raining.\nHe looked about sixty. Exquisite attire, stern expression, seemingly quite the panache. His satin coat was blotched with water; as Luchino welcomed him in, he helped him remove it with deft, practiced motions. The man looked him over, stared for a few blank seconds, then quickly made his way into the atelier where old Umberto had been waiting.\nLuchino would never butt in on a client meeting his nonno; he went to hang the coat on the rack instead. It was a finely made coat, sumptuous material, and most importantly, had a polished black portable crossbow in one of its inside pockets. <i>What a big shot this guy must be,</i> Luchino thought to himself.\nBefore long, an argument arose from the atelier. Fragments of speech stole their way through the door's cracks, and slipped into Luchino's ears.\n'...Luca's stuff... it ends here...'\n'...you're the one... did it... how could you...'\n'...Masina... only girl...'\n<i>Were those my mamma and papà's names?</i> Unable to help his curiosity, Luchino stuck his ear to the atelier wall, but all he caught was the sound of things falling to the floor, and the yelling of that man. '...MY flesh and blood too!'\nThe atelier door burst open, and there the man stood like a wall between him and his nonno. He opened his clenched hand, revealing a silver thumb ring in his palm.\n'This was Luca's thumb ring. It's time you took it.' The man offered it to him, the look in his eyes and tone of his words brimming with expectation.\nPast the man's shoulder, Luchino saw the once-orderly atelier in a state of disarray, fabric bolts and tape measures strewn across the floor, and Umberto shrinking away inside. Luchino had never seen his nonno quite so... weary. He was about to take the ring, but at this moment red-hot rage supplanted all his curiosity. Luchino pushed the man's hand aside, the thumb ring falling onto the rug.\n'Who are you? Nonno and I don't accept rude clients.'\nThe man's expectation promptly vanished, and his expression twisted with anger, his eyes shining green. Luchino realized—he and this man had the same eyes.\n'You are not welcome at De Montano.' Summoning all his courage, Luchino stood up straight, and repeated himself. 'Please leave.'\nThe order cut straight through the air. Luchino shocked even himself to see his words put out the fury in the man's brow. He sensed a hint of discouragement in the corners of the stranger's familiar eyes, but quickly it was covered back up beneath his solemn mask.\n'...As you wish, tailor boy. Arrivederci.' The man put his waterlogged coat back on, then took one final look at Luchino. Then, he exited the shop door and vanished into the rainy black of night.\n'Nonno, who <i>was</i> that man?'\n'A father who'd kill his own daughter. You don't need to know his name.\n'He wants to play Siracusan games, he wants to be a big shot. This is the punishment he deserves.'",
+      "typeIcon": "mer-x",
+      "uniEquipIcon": "uniequip_002_talr",
+      "typeName1": "MER",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_talr_1",
+        "uniequip_002_talr_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Has <@ba.kw>reduced</> Redeployment Time, but <@ba.kw>DP Cost</> is not refunded upon retreating; While deployed, <@ba.kw>2 DP</> are consumed every 3 seconds (automatically retreats without sufficient DP)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 62,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Has <@ba.kw>reduced</> Redeployment Time, but <@ba.kw>DP Cost</> is not refunded upon retreating; While deployed, <@ba.kw>2 DP</> are consumed every 3 seconds (automatically retreats without sufficient DP)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Deals +27% damage when attacking enemies that are not blocked by this unit",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Select Your Customers!",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.27,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Deals +32% <@ba.talpu>(+5%)</> damage when attacking enemies that are not blocked by this unit",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Select Your Customers!",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.32,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 220,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Has <@ba.kw>reduced</> Redeployment Time, but <@ba.kw>DP Cost</> is not refunded upon retreating; While deployed, <@ba.kw>2 DP</> are consumed every 3 seconds (automatically retreats without sufficient DP)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Deals +30% damage when attacking enemies that are not blocked by this unit",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Select Your Customers!",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Deals +35% <@ba.talpu>(+5%)</> damage when attacking enemies that are not blocked by this unit",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Select Your Customers!",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.35,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1081,5 +1644,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

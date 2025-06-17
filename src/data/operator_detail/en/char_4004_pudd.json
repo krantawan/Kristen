@@ -150,6 +150,48 @@
       "cost": 31
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "attack@max_target",
+          "value": 3
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</> (Upgraded after reaching Elite 2)",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "attack@max_target",
+          "value": 4
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</>",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4004_pudd#1",
@@ -616,16 +658,508 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +23",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -6 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Electromagnetic Waves",
+          "description": "ATK +8%",
+          "blackboard": {
+            "atk": 0.08
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Electromagnetic Waves",
+          "description": "ATK +10%",
+          "blackboard": {
+            "atk": 0.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_pudd",
       "moduleName": "Pudding's Badge",
-      "desc": "Operator Pudding has demonstrated a remarkable aptitude for controlling apparatus to attack multiple enemies in series.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Chain Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Pudding has demonstrated a remarkable aptitude for controlling apparatus to attack multiple enemies in series.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Chain Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_pudd",
       "moduleName": "Portable Electrical Measuring Equipment",
-      "desc": "To Pudding, nothing beats the time spent kicking back and relaxing in a Sami cabin. \nOn Sami's south border, Columbians have obtained land and resources from the Sami through trade, nomadic cities following caravans and mining ships crossing age-old tundra. The founding of trade enclaves represents the first time in a century the Sami have opened borders, Columbian caravans and corporate engineer teams becoming frequent guests at Sami's frontier. Ever since she was young, Pudding's frequently gone with her parents to Sami, headed for that ancient land. \nIce and snow blanket the earth wide, sunshine spilling over and refracting, as if a realm paved full with gems. But this is only one corner of Sami. \n'On the tundras of Sami far from civilization, in the forever hibernal Fjal Vetrtonn, most Sami by far still carry on their millennium-old ancient way of life. They're far removed from the Columbian enclave, indifferently surveying all from the Fjal Vetrtonn and bone-chilling winds. Time freezes upon their skin,' says the Sarkaz owner of the coffee shop. 'Don't you want to go deeper and see? See the sights of those tundras and mountains, how the Sami get along with nature in the wilderness.' \n'Am I allowed to?' Pudding hesitantly asks. 'I'm not sure if they'd welcome a city person like me...' \n'Sami does not defy its own fate. We know what it faces, and know how it will respond.' \nAnd so Pudding signs up to join a local supporting construction project, departing early morning one day, going with the team of Columbian engineers into the Myrkwood that she once only gazed at from afar. \nIn the primordial woods, the Sami steadfastly distance from modern technology. Only one subset, a wetland settlement near to the autonomous region, is willing to receive the Columbian engineers' help. \nConstructing a base station, connecting cables, turning on the village's first bulbs... Pudding stares at the faint lights, and the grin of satisfied wonderment on some Sami faces, and it suddenly hits her just what technology means to these people. \nBut it's only in places more remote still, where the true secrets of the Sami lie, a land the Columbians cannot pry into. \nPudding's vacation will be over very soon. She writes up her experiences in the village into a report, and puts it inside her suitcase, ready to take it back to Columbia. \nI'll come back again very soon, she thinks happily. \nYet because of one accident, this hope, ordinary by all rights, spends a long, long time delayed, before she can make good on it."
+      "desc": "To Pudding, nothing beats the time spent kicking back and relaxing in a Sami cabin. \nOn Sami's south border, Columbians have obtained land and resources from the Sami through trade, nomadic cities following caravans and mining ships crossing age-old tundra. The founding of trade enclaves represents the first time in a century the Sami have opened borders, Columbian caravans and corporate engineer teams becoming frequent guests at Sami's frontier. Ever since she was young, Pudding's frequently gone with her parents to Sami, headed for that ancient land. \nIce and snow blanket the earth wide, sunshine spilling over and refracting, as if a realm paved full with gems. But this is only one corner of Sami. \n'On the tundras of Sami far from civilization, in the forever hibernal Fjal Vetrtonn, most Sami by far still carry on their millennium-old ancient way of life. They're far removed from the Columbian enclave, indifferently surveying all from the Fjal Vetrtonn and bone-chilling winds. Time freezes upon their skin,' says the Sarkaz owner of the coffee shop. 'Don't you want to go deeper and see? See the sights of those tundras and mountains, how the Sami get along with nature in the wilderness.' \n'Am I allowed to?' Pudding hesitantly asks. 'I'm not sure if they'd welcome a city person like me...' \n'Sami does not defy its own fate. We know what it faces, and know how it will respond.' \nAnd so Pudding signs up to join a local supporting construction project, departing early morning one day, going with the team of Columbian engineers into the Myrkwood that she once only gazed at from afar. \nIn the primordial woods, the Sami steadfastly distance from modern technology. Only one subset, a wetland settlement near to the autonomous region, is willing to receive the Columbian engineers' help. \nConstructing a base station, connecting cables, turning on the village's first bulbs... Pudding stares at the faint lights, and the grin of satisfied wonderment on some Sami faces, and it suddenly hits her just what technology means to these people. \nBut it's only in places more remote still, where the true secrets of the Sami lie, a land the Columbians cannot pry into. \nPudding's vacation will be over very soon. She writes up her experiences in the village into a report, and puts it inside her suitcase, ready to take it back to Columbia. \nI'll come back again very soon, she thinks happily. \nYet because of one accident, this hope, ordinary by all rights, spends a long, long time delayed, before she can make good on it.",
+      "typeIcon": "cha-y",
+      "uniEquipIcon": "uniequip_002_pudd",
+      "typeName1": "CHA",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_pudd_1",
+        "uniequip_002_pudd_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30063",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30013",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30033",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@max_target}</> enemies. Each jump <@ba.kw>no longer deals less damage</> and inflicts a brief <$ba.sluggish>Slow</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@max_target}</> enemies. Each jump <@ba.kw>no longer deals less damage</> and inflicts a brief <$ba.sluggish>Slow</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +13%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Electromagnetic Waves",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.13,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@max_target}</> enemies. Each jump <@ba.kw>no longer deals less damage</> and inflicts a brief <$ba.sluggish>Slow</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +16%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Electromagnetic Waves",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1079,5 +1613,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

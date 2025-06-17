@@ -151,6 +151,68 @@
       "cost": 26
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 30,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n敵を攻撃する度自身のHPを<@ba.kw>{value}</>回復(昇進1で効果強化)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 50,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n敵を攻撃する度自身のHPを<@ba.kw>{value}</>回復(昇進2で効果強化)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 70,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n敵を攻撃する度自身のHPを<@ba.kw>{value}</>回復",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4121_zuole#1",
@@ -733,16 +795,740 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+26",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 340,
+        "atk": 40,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "持燭人",
+          "description": "配置中、最大で攻撃速度+30とSP自然回復速度+0.5sp/秒の<$ba.berserk>不屈</>状態を獲得（HPが最大値の50%減少時、効果最大）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "min_sp_recovery_per_sec",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "持燭人",
+          "description": "配置中、最大で攻撃速度+40とSP自然回復速度+1sp/秒の<$ba.berserk>不屈</>状態を獲得（HPが最大値の60%減少時、効果最大）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "min_sp_recovery_per_sec",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "持燭人",
+          "description": "配置中、最大で攻撃速度+50とSP自然回復速度+2sp/秒の<$ba.berserk>不屈</>状態を獲得（HPが最大値の70%減少時、効果最大）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "min_sp_recovery_per_sec",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "守正自明",
+          "description": "攻撃時、20%の確率でSPを1回復。HPが最大値の50%を下回った場合、その確率は70%になる",
+          "blackboard": [
+            {
+              "key": "prob_1",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "sp",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "prob_2",
+              "value": 0.7,
+              "valueStr": null
+            },
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "守正自明",
+          "description": "攻撃時、23%<@ba.talpu>（+3%）</>の確率でSPを1回復。HPが最大値の50%を下回った場合、その確率は75%<@ba.talpu>（+5%）</>になる",
+          "blackboard": [
+            {
+              "key": "prob_1",
+              "value": 0.23,
+              "valueStr": null
+            },
+            {
+              "key": "sp",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "prob_2",
+              "value": 0.75,
+              "valueStr": null
+            },
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_zuole",
       "moduleName": "ズオ・ラウの記章",
-      "desc": "ズオ・ラウは支援抜きの単独戦闘に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、武者の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ズオ・ラウは支援抜きの単独戦闘に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、武者の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_zuole",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_zuole",
       "moduleName": "「豈に夜の長きに苦しまんや」",
-      "desc": "占広（ジャン・グァン）は、自分がまもなくミンチにされるかもしれないことを悟った。\n共に逃亡していた山海衆はついさっきまで大声で罵声を上げていたが、瞬く間に一人、また一人とほの暗い森の中で静かになっていった。そして彼は鏢が木の幹に打ち込まれたことと、空から降ってきた縄によって江畔の崖際に吊るされたことだけは覚えていた。\n「占広。男、フェリーン、姜斉の東出身。」\n縛られた凶漢は、聞こえた声に目を向けた。そこには、黒い服を身に纏い、腰の後ろに長方形の箱を携えたフィディアの少年が断崖へと歩み寄ってきていた。\n「山海衆と結託し、無法者を集めて悪事を働こうとした主犯として……炎国の法において、あなたがどのような罪に問われるかは知っていますね？」\n「チッ、毛も生えそろってねえような若造の小役人が、俺様をどうにかしようってか？殺されてえのかよ！」\nその時、河にかかった霧が晴れ、月明かりが「小役人」の鉄仮面を照らした。\n「クソッ！て、てめえ、司歳台の持燭人か！」占広の全身から冷や汗が吹き出す。\n「司歳台を知っているのなら、この事実も知っているでしょう……」少年は一歩前に出た。\n「山海衆と結託し、多くの命を奪った凶漢に対しては、持燭人であれば、三法司に代わってその場で裁きを下すこともできる。」\n\nしかし占広もただ者ではない。彼は歯を食いしばると、持燭人が近づいてきたタイミングを見計らって身体をのけぞらせ、宙返りするように強力な蹴りを繰り出した。\nシュッ、と短剣のように鋭い足の爪が風を切り、少年の喉元ギリギリをかすめると勢いそのまま縄を切断する。そして凶漢は、崖の下を通りかかった漁船目がけて飛び降りると、漁夫を人質に取ってしまった。\n「船を出せ！さっさとしろ！」エンジンがかかると、船は速度を上げながら川のほとりを離れていく。司歳台を相手に九死に一生を得た凶漢は、思わず勝ち誇ったように振り返った。\nその時、占広は、船尾の明かりが照らし出す光景を目の当たりにした――あの黒衣の少年が、断崖を下る勢いを利用して、一息で二十丈もの距離を、川面を滑るようにして跳んだのだ。そうして彼は、波に点々と白い花を咲かせながら、まるで疾風に舞う黒い葉の如く、静かに船の甲板に着地した。\n腰の後ろの箱を開くと、少年はそっと刀の鞘に触れた。\n「司歳台の公務によって発生した損害は、法に基づき賠償がなされます。」\n「てめえ――」\n占広が言葉を続ける間もなく、船の両側のライトは一瞬で細切れにされてしまった。真っ直ぐで鋭い長刀が、暗闇の中でガラスの破片を巻き上げて、占広の命からがら逃れたばかりでまだ高鳴っていた心臓を再び凍り付かせた。その鋭い刃を届かせる前に、少年が長槍のような蹴りを繰り出すと、それは漁夫の肩をかすめ、凶漢の喉を貫いた。全身の力が抜けた占広は、そのまま甲板に背中から倒れ込み、彼の股からは温かいものが流れ出ていった。\n意識を失う前、彼は鉄仮面の奥にある暗月のように深い青をした眼差しと、腰の箱の内側に小さく刻まれた、刀を取り出す時でなければ見えないような金色の文字を見た――\n「秉明燭者、豈苦夜長」\n――明るい燭火を持つ者ならば、夜の長きをどうして辛いと感じようか。"
+      "desc": "占広（ジャン・グァン）は、自分がまもなくミンチにされるかもしれないことを悟った。\n共に逃亡していた山海衆はついさっきまで大声で罵声を上げていたが、瞬く間に一人、また一人とほの暗い森の中で静かになっていった。そして彼は鏢が木の幹に打ち込まれたことと、空から降ってきた縄によって江畔の崖際に吊るされたことだけは覚えていた。\n「占広。男、フェリーン、姜斉の東出身。」\n縛られた凶漢は、聞こえた声に目を向けた。そこには、黒い服を身に纏い、腰の後ろに長方形の箱を携えたフィディアの少年が断崖へと歩み寄ってきていた。\n「山海衆と結託し、無法者を集めて悪事を働こうとした主犯として……炎国の法において、あなたがどのような罪に問われるかは知っていますね？」\n「チッ、毛も生えそろってねえような若造の小役人が、俺様をどうにかしようってか？殺されてえのかよ！」\nその時、河にかかった霧が晴れ、月明かりが「小役人」の鉄仮面を照らした。\n「クソッ！て、てめえ、司歳台の持燭人か！」占広の全身から冷や汗が吹き出す。\n「司歳台を知っているのなら、この事実も知っているでしょう……」少年は一歩前に出た。\n「山海衆と結託し、多くの命を奪った凶漢に対しては、持燭人であれば、三法司に代わってその場で裁きを下すこともできる。」\n\nしかし占広もただ者ではない。彼は歯を食いしばると、持燭人が近づいてきたタイミングを見計らって身体をのけぞらせ、宙返りするように強力な蹴りを繰り出した。\nシュッ、と短剣のように鋭い足の爪が風を切り、少年の喉元ギリギリをかすめると勢いそのまま縄を切断する。そして凶漢は、崖の下を通りかかった漁船目がけて飛び降りると、漁夫を人質に取ってしまった。\n「船を出せ！さっさとしろ！」エンジンがかかると、船は速度を上げながら川のほとりを離れていく。司歳台を相手に九死に一生を得た凶漢は、思わず勝ち誇ったように振り返った。\nその時、占広は、船尾の明かりが照らし出す光景を目の当たりにした――あの黒衣の少年が、断崖を下る勢いを利用して、一息で二十丈もの距離を、川面を滑るようにして跳んだのだ。そうして彼は、波に点々と白い花を咲かせながら、まるで疾風に舞う黒い葉の如く、静かに船の甲板に着地した。\n腰の後ろの箱を開くと、少年はそっと刀の鞘に触れた。\n「司歳台の公務によって発生した損害は、法に基づき賠償がなされます。」\n「てめえ――」\n占広が言葉を続ける間もなく、船の両側のライトは一瞬で細切れにされてしまった。真っ直ぐで鋭い長刀が、暗闇の中でガラスの破片を巻き上げて、占広の命からがら逃れたばかりでまだ高鳴っていた心臓を再び凍り付かせた。その鋭い刃を届かせる前に、少年が長槍のような蹴りを繰り出すと、それは漁夫の肩をかすめ、凶漢の喉を貫いた。全身の力が抜けた占広は、そのまま甲板に背中から倒れ込み、彼の股からは温かいものが流れ出ていった。\n意識を失う前、彼は鉄仮面の奥にある暗月のように深い青をした眼差しと、腰の箱の内側に小さく刻まれた、刀を取り出す時でなければ見えないような金色の文字を見た――\n「秉明燭者、豈苦夜長」\n――明るい燭火を持つ者ならば、夜の長きをどうして辛いと感じようか。",
+      "typeIcon": "sbl-x",
+      "uniEquipIcon": "uniequip_002_zuole",
+      "typeName1": "SBL",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_zuole_1",
+        "uniequip_002_zuole_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の時、25%の<$ba.protect>加護</>状態を獲得",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の時、25%の<$ba.protect>加護</>状態を獲得",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、最大で攻撃速度+60とSP自然回復速度+2.2sp/秒の<$ba.berserk>不屈</>状態を獲得（HPが最大値の60%減少時、効果最大）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "持燭人",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "min_hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_attack_speed",
+                      "value": 60,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_sp_recovery_per_sec",
+                      "value": 2.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の時、25%の<$ba.protect>加護</>状態を獲得",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、最大で攻撃速度+70とSP自然回復速度+2.3sp/秒の<$ba.berserk>不屈</>状態を獲得（HPが最大値の50%減少時、効果最大）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "持燭人",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "min_hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_attack_speed",
+                      "value": 70,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_sp_recovery_per_sec",
+                      "value": 2.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1196,5 +1982,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

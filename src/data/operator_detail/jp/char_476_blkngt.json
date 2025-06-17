@@ -151,6 +151,28 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_476_blkngt#1",
@@ -652,16 +674,617 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃速度+8",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 8,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "夜行",
+          "description": "戦術召集点に眠獣を援軍として召喚可能\n援軍が倒された時、20秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10021_blkngt_hypnos",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "夜行",
+          "description": "戦術召集点に眠獣を援軍として召喚可能\n援軍が倒された時、17秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10021_blkngt_hypnos",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "夜行",
+          "description": "戦術召集点に眠獣を援軍として召喚可能\n援軍が倒された時、15秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10021_blkngt_hypnos",
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_blkngt",
       "moduleName": "ブラックナイトの記章",
-      "desc": "ブラックナイトは戦術召集点を設置して援軍を呼び、後続の展開に余裕を持たせる戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては先鋒オペレーターとして区分し、戦術家の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ブラックナイトは戦術召集点を設置して援軍を呼び、後続の展開に余裕を持たせる戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては先鋒オペレーターとして区分し、戦術家の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_bstalk",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_blkngt",
       "moduleName": "星々と寝坊助",
-      "desc": "この長鼻眠獣は今夜、まともに眠れはしないだろう。それは彼女も同じことだ。\n彼女はこれまで生物学の講義など受けたことはないし、それゆえ長鼻眠獣にとって、不眠がどれほど致命的な問題なのかを知らない。だが、もし毎日十六時間の睡眠が確保できなければ、長鼻眠獣は神経障害と臓器不全で命を落としてしまうのだ。\nとはいえ、彼女は狩人だ。砂地に残された痕跡を観察すれば、この幼い眠獣たちはつい先ほど両親を失ったのだと察することができた。掘り起こされた巣穴の奥から、爪痕と血痕が伸びている。甲殻が低木を擦る音と、次第に遠ざかっていく足音が聞こえる。ちょうど彼女と入れ違いで、二頭のサンドビーストが先んじて獲物を手に入れて、颯爽と立ち去っていったのだ。\n狩人は決して、手ぶらで帰ることを良しとはできない。\nそこで彼女はブーツの横からナイフを抜き取り、足音を殺し、小さく鳴いている幼獣のもとへ近付いていく。彼女の育ての両親は、これまで何度も教えてくれた。荒野に生きるすべてのものに、相応の価値があることを。熟練の狩人の手にかかれば、他の獣を誘き寄せるにせよ、危険な捕食者を前にした時囮にするにせよ、この瀕死の幼獣たちは役に立ってくれるだろう。\n星々は依然夜空に燦然と輝いており、地平線はまだ白んでもいない。約束通り野営地へと戻ってきた狩人は、合図の口笛を吹いた。すると、彼女より少し年下の子供たちが現れて、クロスボウやら罠やらをしまい込み、嬉々として彼女の肩から獲物を受け取る。彼らはすぐさま皮剥ぎ用のナイフと骨砕き用の斧を研ぎ始め、荒野の真ん中に設営された小さなキャンプは賑やかになっていく。ほどなくして、毛皮と内臓は何とも言えないような生臭い蒸気に変化し、焚き火の中から空へと立ち上っていった。\n\"熱い茶をすすり一息つくと、狩人は自分のテントへ戻った。彼女は懐を探ると、幼い眠獣の柔らかく暖かい身体を優しく抱きかかえた。眠獣はもはや悲し気に泣くことはなく、狩人の腕の中で静かに微睡んでいる。その顔を見れば、まっすぐに伸びた黒と白の模様が両目の間を走っていた。この子はさきほどの狩りの中で唯一生き残った幼獣だ。強かで勇ましいこの眠獣は狩られていた時、他のきょうだいより多くの催眠物質を分泌していた。\n狩人も、そして野営地にいる他の子供たちも、移動都市のおとぎ話とはかけ離れた暮らしをしている。困窮している上に、放浪を強いられるこの暮らしには、飼い慣らされたペットではなく、共に手を携える仲間が必要なのだと、狩人は重々承知していた。\"\nやがて彼女は小さなフェルト生地を取り出すと、安らかに眠る幼い眠獣をその上に置き、疲労で張り詰めた指に鞭打って針を持った。テントの外に光る焚火と星光を頼りにして、日の出前にはこの寝坊助のために帽子を縫ってやらなければ……\nよし、今日からこの子の名前は「メット」だ。"
+      "desc": "この長鼻眠獣は今夜、まともに眠れはしないだろう。それは彼女も同じことだ。\n彼女はこれまで生物学の講義など受けたことはないし、それゆえ長鼻眠獣にとって、不眠がどれほど致命的な問題なのかを知らない。だが、もし毎日十六時間の睡眠が確保できなければ、長鼻眠獣は神経障害と臓器不全で命を落としてしまうのだ。\nとはいえ、彼女は狩人だ。砂地に残された痕跡を観察すれば、この幼い眠獣たちはつい先ほど両親を失ったのだと察することができた。掘り起こされた巣穴の奥から、爪痕と血痕が伸びている。甲殻が低木を擦る音と、次第に遠ざかっていく足音が聞こえる。ちょうど彼女と入れ違いで、二頭のサンドビーストが先んじて獲物を手に入れて、颯爽と立ち去っていったのだ。\n狩人は決して、手ぶらで帰ることを良しとはできない。\nそこで彼女はブーツの横からナイフを抜き取り、足音を殺し、小さく鳴いている幼獣のもとへ近付いていく。彼女の育ての両親は、これまで何度も教えてくれた。荒野に生きるすべてのものに、相応の価値があることを。熟練の狩人の手にかかれば、他の獣を誘き寄せるにせよ、危険な捕食者を前にした時囮にするにせよ、この瀕死の幼獣たちは役に立ってくれるだろう。\n星々は依然夜空に燦然と輝いており、地平線はまだ白んでもいない。約束通り野営地へと戻ってきた狩人は、合図の口笛を吹いた。すると、彼女より少し年下の子供たちが現れて、クロスボウやら罠やらをしまい込み、嬉々として彼女の肩から獲物を受け取る。彼らはすぐさま皮剥ぎ用のナイフと骨砕き用の斧を研ぎ始め、荒野の真ん中に設営された小さなキャンプは賑やかになっていく。ほどなくして、毛皮と内臓は何とも言えないような生臭い蒸気に変化し、焚き火の中から空へと立ち上っていった。\n\"熱い茶をすすり一息つくと、狩人は自分のテントへ戻った。彼女は懐を探ると、幼い眠獣の柔らかく暖かい身体を優しく抱きかかえた。眠獣はもはや悲し気に泣くことはなく、狩人の腕の中で静かに微睡んでいる。その顔を見れば、まっすぐに伸びた黒と白の模様が両目の間を走っていた。この子はさきほどの狩りの中で唯一生き残った幼獣だ。強かで勇ましいこの眠獣は狩られていた時、他のきょうだいより多くの催眠物質を分泌していた。\n狩人も、そして野営地にいる他の子供たちも、移動都市のおとぎ話とはかけ離れた暮らしをしている。困窮している上に、放浪を強いられるこの暮らしには、飼い慣らされたペットではなく、共に手を携える仲間が必要なのだと、狩人は重々承知していた。\"\nやがて彼女は小さなフェルト生地を取り出すと、安らかに眠る幼い眠獣をその上に置き、疲労で張り詰めた指に鞭打って針を持った。テントの外に光る焚火と星光を頼りにして、日の出前にはこの寝坊助のために帽子を縫ってやらなければ……\nよし、今日からこの子の名前は「メット」だ。",
+      "typeIcon": "tac-x",
+      "uniEquipIcon": "uniequip_002_bstalk",
+      "typeName1": "TAC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_blkngt_1",
+        "uniequip_002_blkngt_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が150%まで上昇\n援軍はブロックしている敵からの被ダメージ-<@ba.kw>15%</>。",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 17,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が150%まで上昇\n援軍はブロックしている敵からの被ダメージ-<@ba.kw>15%</>。",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内に睡眠状態にある敵が存在する場合、自身と眠獣の攻撃力+5%",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "夢見",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が150%まで上昇\n援軍はブロックしている敵からの被ダメージ-<@ba.kw>15%</>。",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内に睡眠状態にある敵が存在する場合、自身と眠獣の攻撃力+10%",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "夢見",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1114,6 +1737,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10021_blkngt_hypnos"
   ],
   "patch_info": {}
 }

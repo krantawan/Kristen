@@ -150,6 +150,64 @@
       "cost": 34
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@chain.max_target",
+            "value": 3,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "attack@sluggish",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>{attack@chain.max_target}</>体目まで跳躍していく<@ba.kw>術ダメージ</>を敵に与え、跳躍する度ダメージが15%減衰し、敵を一瞬<$ba.sluggish>足止め</>（昇進2で効果強化）",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@chain.max_target",
+            "value": 4,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "attack@sluggish",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>{attack@chain.max_target}</>体目まで跳躍していく<@ba.kw>術ダメージ</>を敵に与え、跳躍する度ダメージが15%減衰し、敵を一瞬<$ba.sluggish>足止め</>",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_135_halo#1",
@@ -632,16 +690,596 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+28",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 28,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "研究熱心",
+          "description": "配置中、15秒ごとに攻撃速度+3、最大5回まで",
+          "blackboard": [
+            {
+              "key": "max_stack_cnt",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "研究熱心",
+          "description": "配置中、15秒ごとに攻撃速度+4、最大5回まで",
+          "blackboard": [
+            {
+              "key": "max_stack_cnt",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_halo",
       "moduleName": "アステジーニの記章",
-      "desc": "アステジーニはアーツによる複数の敵への連鎖攻撃に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、連鎖術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "アステジーニはアーツによる複数の敵への連鎖攻撃に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、連鎖術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_halo",
       "moduleName": "未完成の時計",
-      "desc": "これはアステシアが妹のために選んだプレゼントだ。\n一年前、彼女は自分で描いた完成予想図を基にして、妹行きつけの工房に時計のパーツを一式注文した。\nそうして、パーツの型や細部のディテールについてはアステジーニが誰より信頼を置く工匠にすべて任せて作ってもらったのだ。\n元々は誕生日パーティーで直接手渡ししようと思っていたのだが、どうにも気の利かないアステシアは、家で誕生日を祝うことなどしばらくやっていなかった。\nそのため彼女は、ちょうどいいタイミングが来るまで待つことにして……\n結局、それはアステジーニの大学進学祝いとして、その当日贈られることとなったのだ。\nアステシアは、きっと妹は喜んでくれるに違いないとそう思った。\n\n実際、アステジーニ――エレナは喜んだし、それをすぐにも組み立てたいと思っていた。\nしかしその未完成の芸術品を前にした時、彼女はふとそれを一人で完成させるべきではないように感じた。\n何とかして時間を作り、姉を少しだけ独り占めして、二人で一緒に組み立てたい……\nそう考えた彼女は、自分のノートにメモをすると、大学の果てなき課題とプロジェクトの数々へと真っ向から飛び込んでいったのだ。\n\n彼女はその後も、ずっとそのことを覚えていた。\n姉に会うたび、彼女を宿舎へ連れて行って、あのプレゼントを一緒に完成させたいと思っていた。\nけれど、彼女の持ちうる時間はどれもあっという間に、論文の締め切りやら、発表のリクエストやら、プロジェクトのプレッシャーやらに奪われてしまうのだ。\nゆえにそれをいくら思っていようと、彼女は現実に抑圧され、自らの衝動を抑え込んでしまっていた。\n時が過ぎても消えない望みもあるものだが、それを叶えるための時間は、生活と仕事のために幾度となく先延ばしになっていった。\n……\nそして今、ある事情により彼女はライン生命からロドスへと赴任してきた。\nライン生命の同僚たちが荷物をまとめておいてくれたため、アステジーニはまだ空っぽの新しい宿舎に、小高い山のごとく私物を積んだり、実験用具を一つ一つ広げたりしているところだ。\nそんな時、彼女はほこりを被った箱を見つけた。\nしかし、あの実験室で一心不乱に研究に励む石頭の同僚たちはほこりを拭う雑巾すらも用意してくれていなかった。\nそこで、彼女は仕方なく、隣の宿舎の扉を叩くことにした。\n隣人への挨拶を済ませて、雑巾を貸してもらうために。\n\nノックのあとに、扉が開く。\nそこにはアステシアが立っており――唖然とする妹の手にきれいな布巾を握らせて、工具箱を一つ持たせてくれた。\n……\n姉妹が部屋を片付け終えたら、きっと時計の鳴る音が聞こえ始めることだろう。"
+      "desc": "これはアステシアが妹のために選んだプレゼントだ。\n一年前、彼女は自分で描いた完成予想図を基にして、妹行きつけの工房に時計のパーツを一式注文した。\nそうして、パーツの型や細部のディテールについてはアステジーニが誰より信頼を置く工匠にすべて任せて作ってもらったのだ。\n元々は誕生日パーティーで直接手渡ししようと思っていたのだが、どうにも気の利かないアステシアは、家で誕生日を祝うことなどしばらくやっていなかった。\nそのため彼女は、ちょうどいいタイミングが来るまで待つことにして……\n結局、それはアステジーニの大学進学祝いとして、その当日贈られることとなったのだ。\nアステシアは、きっと妹は喜んでくれるに違いないとそう思った。\n\n実際、アステジーニ――エレナは喜んだし、それをすぐにも組み立てたいと思っていた。\nしかしその未完成の芸術品を前にした時、彼女はふとそれを一人で完成させるべきではないように感じた。\n何とかして時間を作り、姉を少しだけ独り占めして、二人で一緒に組み立てたい……\nそう考えた彼女は、自分のノートにメモをすると、大学の果てなき課題とプロジェクトの数々へと真っ向から飛び込んでいったのだ。\n\n彼女はその後も、ずっとそのことを覚えていた。\n姉に会うたび、彼女を宿舎へ連れて行って、あのプレゼントを一緒に完成させたいと思っていた。\nけれど、彼女の持ちうる時間はどれもあっという間に、論文の締め切りやら、発表のリクエストやら、プロジェクトのプレッシャーやらに奪われてしまうのだ。\nゆえにそれをいくら思っていようと、彼女は現実に抑圧され、自らの衝動を抑え込んでしまっていた。\n時が過ぎても消えない望みもあるものだが、それを叶えるための時間は、生活と仕事のために幾度となく先延ばしになっていった。\n……\nそして今、ある事情により彼女はライン生命からロドスへと赴任してきた。\nライン生命の同僚たちが荷物をまとめておいてくれたため、アステジーニはまだ空っぽの新しい宿舎に、小高い山のごとく私物を積んだり、実験用具を一つ一つ広げたりしているところだ。\nそんな時、彼女はほこりを被った箱を見つけた。\nしかし、あの実験室で一心不乱に研究に励む石頭の同僚たちはほこりを拭う雑巾すらも用意してくれていなかった。\nそこで、彼女は仕方なく、隣の宿舎の扉を叩くことにした。\n隣人への挨拶を済ませて、雑巾を貸してもらうために。\n\nノックのあとに、扉が開く。\nそこにはアステシアが立っており――唖然とする妹の手にきれいな布巾を握らせて、工具箱を一つ持たせてくれた。\n……\n姉妹が部屋を片付け終えたら、きっと時計の鳴る音が聞こえ始めることだろう。",
+      "typeIcon": "cha-y",
+      "uniEquipIcon": "uniequip_002_halo",
+      "typeName1": "CHA",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_halo_1",
+        "uniequip_002_halo_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@chain.max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>{attack@chain.max_target}</>体目まで跳躍していく<@ba.kw>術ダメージ</>を敵に与え、跳躍する度ダメージが<@ba.kw>減衰しなくなり</>、敵を一瞬<$ba.sluggish>足止め</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 62,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@chain.max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>{attack@chain.max_target}</>体目まで跳躍していく<@ba.kw>術ダメージ</>を敵に与え、跳躍する度ダメージが<@ba.kw>減衰しなくなり</>、敵を一瞬<$ba.sluggish>足止め</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、10秒ごとに攻撃速度+4、最大6回まで",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "研究熱心",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 74,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@chain.max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>{attack@chain.max_target}</>体目まで跳躍していく<@ba.kw>術ダメージ</>を敵に与え、跳躍する度ダメージが<@ba.kw>減衰しなくなり</>、敵を一瞬<$ba.sluggish>足止め</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、10秒ごとに攻撃速度+4、最大7回まで",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "研究熱心",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1095,5 +1733,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

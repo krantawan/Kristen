@@ -151,6 +151,36 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "duration",
+          "value": 20
+        },
+        {
+          "key": "atk",
+          "value": 0
+        },
+        {
+          "key": "max_hp",
+          "value": 0
+        },
+        {
+          "key": "talent_override_rangeid_flag",
+          "value": 1
+        }
+      ],
+      "overrideDescription": "Does not retreat upon receiving lethal damage, instead swaps to a <Substitute> (Substitute has 0 Block). Swaps back to the original after 20 seconds",
+      "prefabKey": "-1",
+      "rangeId": "x-4"
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4016_kazema#1",
@@ -621,16 +651,602 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +27",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 27,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 80,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "From Paper Comes Life",
+          "description": "When <Substitute> is summoned, it will deal 150% of its ATK as Arts Damage to enemies in the surrounding 8 tiles",
+          "blackboard": {
+            "damage_scale": 1.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "From Paper Comes Life",
+          "description": "When <Substitute> is summoned, it will deal 155% <@ba.talpu>(+5%)</> of its ATK as Arts Damage to enemies in the surrounding 8 tiles",
+          "blackboard": {
+            "damage_scale": 1.55
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "From Paper Comes Life",
+          "description": "When <Substitute> is summoned, it will deal 225% of its ATK as Arts Damage to enemies in the surrounding 8 tiles",
+          "blackboard": {
+            "damage_scale": 2.25
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "From Paper Comes Life",
+          "description": "When <Substitute> is summoned, it will deal 230% <@ba.talpu>(+5%)</> of its ATK as Arts Damage to enemies in the surrounding 8 tiles",
+          "blackboard": {
+            "damage_scale": 2.3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "From Paper Comes Life",
+          "description": "When <Substitute> is summoned, it will deal 270% of its ATK as Arts Damage to enemies in the surrounding 8 tiles",
+          "blackboard": {
+            "damage_scale": 2.7
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "From Paper Comes Life",
+          "description": "When <Substitute> is summoned, it will deal 275% <@ba.talpu>(+5%)</> of its ATK as Arts Damage to enemies in the surrounding 8 tiles",
+          "blackboard": {
+            "damage_scale": 2.75
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_kazema",
       "moduleName": "Kazemaru's Badge",
-      "desc": "Operator Kazemaru has demonstrated a remarkable aptitude for repeated contention with the enemy upon the battlefield.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Dollkeeper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Kazemaru has demonstrated a remarkable aptitude for repeated contention with the enemy upon the battlefield.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Dollkeeper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_kazema",
       "moduleName": "An Old Thing",
-      "desc": "A Kazemaru with head covered in mud seeks out her parents.\nShe's been trained to become a shinobi since she was five. Family, loyalty, freedom, future, she has no clear awareness of any of it at that age. She just grits her teeth and endures training too ruthless in some measures for a child, and in her wide eyes gleams light—she wants to be what her strongest senpais are, reach the top, offer her loyalty to the lord.\nBut she doesn't know what 'offer her loyalty' means. She just knows it's an honor, it's what her parents and herself want to do, so she has to do it.\n\nA Kazemaru no longer cleaning the mud from her head again seeks out the young lord.\nShe has become the lord's shinobi. Her hair is bound beneath her hat, her nails orderly trimmed, and missions arrive secretly one after another from the bamboo tubes into her hands. Kazemaru pulls out the scroll inside, and silently looks over. The name she has no recognition of written at the top of that scroll is about to silently lose everything he originally possessed, all before a single fowl is startled.\n'Well done.'\nSo the lord often commends her, but while in hiding, she hears a mother in another courtyard scolding her crying child: 'Keep crying, and the people in black will take you away!'\n\nThe young lord looks at his employee whose head is covered in mud.\nShe changes out of the black bodysuit, and will no longer receives scrolls in bamboo tubes. The old lord has passed, and Kazemaru has a new outfit.\nThe meeting room isn't secret, but it's cramped and inaccessible; contracts fly back and forth in the open, but it's all too smooth and steady. As the days wear on, Kazemaru flexes her stiffened spine at her office desk, joints chafing with a 'krrk,' and the last time she heard that noise, it was like a hidden weapon scraped at her bones.\nShe doesn't like sitting, nor becoming one of the 'people in black' which that mother had tried to spook her child with.\nThis isn't what she's meant to do. This isn't what she likes to do. She wants to do actual good work. She doesn't want to neglect her skills like this. She wants a new way out, but she still hasn't found the full resolve to take the step.\n\nThe young lord reaches out, brushes away the grime caking Kazemaru's pale hair, and hands her a contract termination, along with a business card for Rhodes Island.\nOne time when returning from work, an unsteady flowerpot was blown into the air, crumbs of soil and leaf fragments flying out to form a graceful arc, and the planter compacted with soil plummeted down and crashed straight onto Kazemaru's head.\nHead covered in soil and ceramic chips, Kazemaru was struck awake—she needed to leave. She had to leave."
+      "desc": "A Kazemaru with head covered in mud seeks out her parents.\nShe's been trained to become a shinobi since she was five. Family, loyalty, freedom, future, she has no clear awareness of any of it at that age. She just grits her teeth and endures training too ruthless in some measures for a child, and in her wide eyes gleams light—she wants to be what her strongest senpais are, reach the top, offer her loyalty to the lord.\nBut she doesn't know what 'offer her loyalty' means. She just knows it's an honor, it's what her parents and herself want to do, so she has to do it.\n\nA Kazemaru no longer cleaning the mud from her head again seeks out the young lord.\nShe has become the lord's shinobi. Her hair is bound beneath her hat, her nails orderly trimmed, and missions arrive secretly one after another from the bamboo tubes into her hands. Kazemaru pulls out the scroll inside, and silently looks over. The name she has no recognition of written at the top of that scroll is about to silently lose everything he originally possessed, all before a single fowl is startled.\n'Well done.'\nSo the lord often commends her, but while in hiding, she hears a mother in another courtyard scolding her crying child: 'Keep crying, and the people in black will take you away!'\n\nThe young lord looks at his employee whose head is covered in mud.\nShe changes out of the black bodysuit, and will no longer receives scrolls in bamboo tubes. The old lord has passed, and Kazemaru has a new outfit.\nThe meeting room isn't secret, but it's cramped and inaccessible; contracts fly back and forth in the open, but it's all too smooth and steady. As the days wear on, Kazemaru flexes her stiffened spine at her office desk, joints chafing with a 'krrk,' and the last time she heard that noise, it was like a hidden weapon scraped at her bones.\nShe doesn't like sitting, nor becoming one of the 'people in black' which that mother had tried to spook her child with.\nThis isn't what she's meant to do. This isn't what she likes to do. She wants to do actual good work. She doesn't want to neglect her skills like this. She wants a new way out, but she still hasn't found the full resolve to take the step.\n\nThe young lord reaches out, brushes away the grime caking Kazemaru's pale hair, and hands her a contract termination, along with a business card for Rhodes Island.\nOne time when returning from work, an unsteady flowerpot was blown into the air, crumbs of soil and leaf fragments flying out to form a graceful arc, and the planter compacted with soil plummeted down and crashed straight onto Kazemaru's head.\nHead covered in soil and ceramic chips, Kazemaru was struck awake—she needed to leave. She had to leave.",
+      "typeIcon": "pum-x",
+      "uniEquipIcon": "uniequip_002_kazema",
+      "typeName1": "PUM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_kazema_1",
+        "uniequip_002_kazema_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but ATK is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": "x-4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but ATK is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": "x-4"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When <Substitute> is summoned, it will deal 280% of its ATK as Arts Damage to enemies in the surrounding 8 tiles",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "From Paper Comes Life",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 2.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When <Substitute> is summoned, it will deal 285% <@ba.talpu>(+5%)</> of its ATK as Arts Damage to enemies in the surrounding 8 tiles",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "From Paper Comes Life",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 2.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but ATK is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": "x-4"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When <Substitute> is summoned, it will deal 285% of its ATK as Arts Damage to enemies in the surrounding 8 tiles",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "From Paper Comes Life",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 2.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When <Substitute> is summoned, it will deal 290% <@ba.talpu>(+5%)</> of its ATK as Arts Damage to enemies in the surrounding 8 tiles",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "From Paper Comes Life",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 2.9,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1084,5 +1700,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -150,6 +150,24 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "ep_heal_ratio",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4114_harold#1",
@@ -601,16 +619,542 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 35,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "I Am the Camp",
+          "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 12% less <$ba.dt.element>Elemental Injury</>",
+          "blackboard": {
+            "ep_damage_resistance": 0.12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "I Am the Camp",
+          "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 15% <@ba.talpu>(+3%)</> less <$ba.dt.element>Elemental Injury</>",
+          "blackboard": {
+            "ep_damage_resistance": 0.15
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "I Am the Camp",
+          "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 15% less <$ba.dt.element>Elemental Injury</>",
+          "blackboard": {
+            "ep_damage_resistance": 0.15
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "I Am the Camp",
+          "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 18% <@ba.talpu>(+3%)</> less <$ba.dt.element>Elemental Injury</>",
+          "blackboard": {
+            "ep_damage_resistance": 0.18
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_harold",
       "moduleName": "Harold's Badge",
-      "desc": "Operator Harold has demonstrated a remarkable aptitude for wide-range healing in tandem with remedying Operators of their accrued Elemental Injurys.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Wandering Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Harold has demonstrated a remarkable aptitude for wide-range healing in tandem with remedying Operators of their accrued Elemental Injurys.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Wandering Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_harold",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_harold",
       "moduleName": "Legs Care Kit",
-      "desc": "Lisburn,\nI received the Legs Care Kit you so kindly sent my way. It works splendidly! This old soldier, with but one leg to his name, no longer must weather the winter's bite in agony. But I must admit, I was taken aback to learn it hails from the pharmaceutical venture recently founded by Freya's brother. Why, that poor lad was still dwelling in squalor when I was on assignment in Kjerag! It seems he's amassed quite a fortune from peddling his medicines to the Victorians, hasn't he? A new company and all its trappings!\nHowever, upon scrutinizing the spray's formula, I couldn't help but notice its striking resemblance to the concoction I once used for mending fractures on burdenbeasts. Just a few additional herbs from Kjerag, and it performs like no other remedy I've encountered. Truly, you must be under Kjeragandr's divine protection.\nEverything good with you and Freya? How is the burdenbeast rental business going? You mentioned plans to build an abode by the Lake Silberneherze—why have I not yet seen any photographs of this endeavor? I eagerly await the day I can pay a visit to you both. And some good news: I spoke with the Chief of the Silverash Family about you and Freya, and I am pleased to report he did not oppose your union. Live your lives well, my friend.\nSpeaking of which, I find it quite difficult to fathom the intricacies of a Kjerag wedding. Forgive my curiosity, but do you exchange your vows by the serene waters of Lake Silberneherze or in Hoff Angrsaal? Before the revered statue of Kjeragandr? Must the parents of the betrothed be present as well? Regardless, I wish you a joyous marriage. And should any of your burdenbeasts suffer a broken leg once more, simply let me know.\nAfter all, when people's fortune in war is as grim as mine, we have no other choice but to help each other 'replant legs', and carry on. I may be a noble, but a fancy hat does not change the nature of this hapless creature underneath. I may possess the knowledge to mend the limbs of burdenbeasts, yet I remain at a loss when it comes to mending my own, or those of others. Allow this old cripple to extend his pity to his 'own kind'—Might you, through your pharmaceutical connections, explore whether there are other Victorian soldiers in need of their legs 'replanted'?\nI earnestly hope that, in the near future, everyone may walk on strong, healthy legs.\nHarold"
+      "desc": "Lisburn,\nI received the Legs Care Kit you so kindly sent my way. It works splendidly! This old soldier, with but one leg to his name, no longer must weather the winter's bite in agony. But I must admit, I was taken aback to learn it hails from the pharmaceutical venture recently founded by Freya's brother. Why, that poor lad was still dwelling in squalor when I was on assignment in Kjerag! It seems he's amassed quite a fortune from peddling his medicines to the Victorians, hasn't he? A new company and all its trappings!\nHowever, upon scrutinizing the spray's formula, I couldn't help but notice its striking resemblance to the concoction I once used for mending fractures on burdenbeasts. Just a few additional herbs from Kjerag, and it performs like no other remedy I've encountered. Truly, you must be under Kjeragandr's divine protection.\nEverything good with you and Freya? How is the burdenbeast rental business going? You mentioned plans to build an abode by the Lake Silberneherze—why have I not yet seen any photographs of this endeavor? I eagerly await the day I can pay a visit to you both. And some good news: I spoke with the Chief of the Silverash Family about you and Freya, and I am pleased to report he did not oppose your union. Live your lives well, my friend.\nSpeaking of which, I find it quite difficult to fathom the intricacies of a Kjerag wedding. Forgive my curiosity, but do you exchange your vows by the serene waters of Lake Silberneherze or in Hoff Angrsaal? Before the revered statue of Kjeragandr? Must the parents of the betrothed be present as well? Regardless, I wish you a joyous marriage. And should any of your burdenbeasts suffer a broken leg once more, simply let me know.\nAfter all, when people's fortune in war is as grim as mine, we have no other choice but to help each other 'replant legs', and carry on. I may be a noble, but a fancy hat does not change the nature of this hapless creature underneath. I may possess the knowledge to mend the limbs of burdenbeasts, yet I remain at a loss when it comes to mending my own, or those of others. Allow this old cripple to extend his pity to his 'own kind'—Might you, through your pharmaceutical connections, explore whether there are other Victorian soldiers in need of their legs 'replanted'?\nI earnestly hope that, in the near future, everyone may walk on strong, healthy legs.\nHarold",
+      "typeIcon": "wdm-x",
+      "uniEquipIcon": "uniequip_002_harold",
+      "typeName1": "WDM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_harold_1",
+        "uniequip_002_harold_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 27,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Targets within Attack Range that have taken more than 50% Elemental Injury take 20% less <$ba.dt.element>Elemental Injury</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "I Am the Camp",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Targets within Attack Range that have taken more than 50% Elemental Injury take 23%<$ba.dt.element> (+3%)</> less <@ba.talpu>Elemental Injury</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "I Am the Camp",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Targets within Attack Range that have taken more than 50% Elemental Injury take 23% less <$ba.dt.element>Elemental Injury</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "I Am the Camp",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Targets within Attack Range that have taken more than 50% Elemental Injury take 26%<$ba.dt.element> (+3%)</> less <@ba.talpu>Elemental Injury</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "I Am the Camp",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.26,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1064,5 +1608,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

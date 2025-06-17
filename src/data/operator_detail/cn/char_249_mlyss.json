@@ -169,6 +169,28 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_249_mlyss#1",
@@ -781,21 +803,1336 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 40,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "净水即生命",
+          "description": "可召唤流形来复制待部署干员的少量属性（生命上限、攻击、防御、法抗、阻挡数、攻击间隔、攻击范围、伤害类型、根据近/远程位获得特殊特性）协助作战，其被击败后会在30秒后自动刷新",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10030_mlyss_wtrman",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "净水即生命",
+          "description": "可召唤流形来复制待部署干员的部分属性（生命上限、攻击、防御、法抗、阻挡数、攻击间隔、攻击范围、伤害类型、根据近/远程位获得特殊特性）协助作战，其被击败后会在28秒后自动刷新",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10030_mlyss_wtrman",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "净水即生命",
+          "description": "可召唤流形来复制待部署干员的大部分属性（生命上限、攻击、防御、法抗、阻挡数、攻击间隔、攻击范围、伤害类型、根据近/远程位获得特殊特性）协助作战，其被击败后会在25秒后自动刷新",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10030_mlyss_wtrman",
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "开源节流",
+          "description": "携带时【莱茵生命】干员部署费用-2，首名【莱茵生命】干员部署费用额外-1",
+          "blackboard": [
+            {
+              "key": "cost",
+              "value": -2,
+              "valueStr": null
+            },
+            {
+              "key": "runtime_cost",
+              "value": -1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "开源节流",
+          "description": "携带时【莱茵生命】干员部署费用-2，首名【莱茵生命】干员部署费用额外-2<@ba.talpu>（+1）</>",
+          "blackboard": [
+            {
+              "key": "cost",
+              "value": -2,
+              "valueStr": null
+            },
+            {
+              "key": "runtime_cost",
+              "value": -2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mlyss",
       "moduleName": "缪尔赛思证章",
-      "desc": "干员缪尔赛思擅长布设战术点召唤援军来争取部署空间\n根据外勤部门决议\n在外勤任务中划分为先锋干员，行使战术家职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员缪尔赛思擅长布设战术点召唤援军来争取部署空间\n根据外勤部门决议\n在外勤任务中划分为先锋干员，行使战术家职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_mlyss",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mlyss",
       "moduleName": "梳妆流形",
-      "desc": "时间还早，生态科的职员们还没上班，一个身影已经在生态园里闲逛了。喷口刚刚打开，整个生态园很快就满是水雾。那个身影感到很自在，她轻快地跳着，掠过一株株植物，时不时在怀里的终端上点几下，又飘向了下一个区域。就这样在整个生态园里逛了一圈后，她把终端丢进了会议室，“啵”的一声消失得无影无踪。\n\n天刚蒙蒙亮，特里蒙的一家面包店门前就已排起了长队。虽然大部分科研人员对食物的要求是能填饱肚子，但总有那么些人，愿意多花些时间来计较吃喝。她的身影也在队列中，她想要吃新鲜出炉的面包，特别是这家店的脆皮盐面包。看了一眼前面的队伍，又瞥了眼街对面的大钟，她开始盘算自己还得等多久才能一饱口福......\n\n缪尔赛思坐在梳妆台前，一边看着流形，一边梳着头发。\n半小时后她就得列席生态科的内部会议，但她似乎并不着急。\n小小的流形被当作镜子，随着本体的动作摇晃，偶尔起了玩心，流形也会摆个姿势，逗弄一下正在化妆的本体。\n在纠结完今天梳什么发型，出门戴什么首饰后，缪尔赛思把润唇膏丢进口袋里，挥手让流形重新变回了喷泉。\n打开房门，缪尔赛思看到了桌上的面包，除此之外，还有一份色拉，以及一杯清水。\n\n一走进生态科，职员们便围了上来，簇拥着她向会议室走去。新来的职员还在惊讶主任什么都不拿就直接开始宣讲，老职员们早就对此习以为常了。\n毕竟，他们生态科的主任是缪尔赛思，想要猜准她做了什么，想做什么，怕是比登天还难。\n因此，他们大概也想象不到，在这个时间点——\n她在生态园的一株植物的叶片下看着叶尖上的露水。\n她在城市公园的喷泉旁，喂食着聚集在此的羽兽。\n她在自己梳妆台的喷泉里继续睡着大觉。\n她在——\n\n“我在这里，在罗德岛上，陪你喝咖啡。\n“怎么样，是不是很厉害？”\n看缪尔赛思手叉着腰，把头昂得高高的，你也忙不迭地送上赞美之词。毕竟，她那神乎其神的本事你都亲眼见过，只不过，在一些“小细节”上，和你的见闻有点出入——\n你见过她在操控终端时摁错键，弄得生态科的职员们在生态园里到处找地方躲雨。\n你见过她在公园喂羽兽，鬼使神差地把羽食塞进了自己嘴里。\n你甚至见过她拿着润唇膏，在下巴上画了一道弧线。\n熟练的操作员在操控多个终端时都会出错，何况操控多个流形的缪尔赛思呢？\n但你想到她之前拿着勺子在咖啡杯上空搅拌的样子，还是不禁笑了出来。\n于是，理所当然地，你遭受了一顿来自缪尔赛思的流形连击。"
+      "desc": "时间还早，生态科的职员们还没上班，一个身影已经在生态园里闲逛了。喷口刚刚打开，整个生态园很快就满是水雾。那个身影感到很自在，她轻快地跳着，掠过一株株植物，时不时在怀里的终端上点几下，又飘向了下一个区域。就这样在整个生态园里逛了一圈后，她把终端丢进了会议室，“啵”的一声消失得无影无踪。\n\n天刚蒙蒙亮，特里蒙的一家面包店门前就已排起了长队。虽然大部分科研人员对食物的要求是能填饱肚子，但总有那么些人，愿意多花些时间来计较吃喝。她的身影也在队列中，她想要吃新鲜出炉的面包，特别是这家店的脆皮盐面包。看了一眼前面的队伍，又瞥了眼街对面的大钟，她开始盘算自己还得等多久才能一饱口福......\n\n缪尔赛思坐在梳妆台前，一边看着流形，一边梳着头发。\n半小时后她就得列席生态科的内部会议，但她似乎并不着急。\n小小的流形被当作镜子，随着本体的动作摇晃，偶尔起了玩心，流形也会摆个姿势，逗弄一下正在化妆的本体。\n在纠结完今天梳什么发型，出门戴什么首饰后，缪尔赛思把润唇膏丢进口袋里，挥手让流形重新变回了喷泉。\n打开房门，缪尔赛思看到了桌上的面包，除此之外，还有一份色拉，以及一杯清水。\n\n一走进生态科，职员们便围了上来，簇拥着她向会议室走去。新来的职员还在惊讶主任什么都不拿就直接开始宣讲，老职员们早就对此习以为常了。\n毕竟，他们生态科的主任是缪尔赛思，想要猜准她做了什么，想做什么，怕是比登天还难。\n因此，他们大概也想象不到，在这个时间点——\n她在生态园的一株植物的叶片下看着叶尖上的露水。\n她在城市公园的喷泉旁，喂食着聚集在此的羽兽。\n她在自己梳妆台的喷泉里继续睡着大觉。\n她在——\n\n“我在这里，在罗德岛上，陪你喝咖啡。\n“怎么样，是不是很厉害？”\n看缪尔赛思手叉着腰，把头昂得高高的，你也忙不迭地送上赞美之词。毕竟，她那神乎其神的本事你都亲眼见过，只不过，在一些“小细节”上，和你的见闻有点出入——\n你见过她在操控终端时摁错键，弄得生态科的职员们在生态园里到处找地方躲雨。\n你见过她在公园喂羽兽，鬼使神差地把羽食塞进了自己嘴里。\n你甚至见过她拿着润唇膏，在下巴上画了一道弧线。\n熟练的操作员在操控多个终端时都会出错，何况操控多个流形的缪尔赛思呢？\n但你想到她之前拿着勺子在咖啡杯上空搅拌的样子，还是不禁笑了出来。\n于是，理所当然地，你遭受了一顿来自缪尔赛思的流形连击。",
+      "typeIcon": "tac-x",
+      "uniEquipIcon": "uniequip_002_mlyss",
+      "typeName1": "TAC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_mlyss_1",
+        "uniequip_002_mlyss_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军受到来自自身阻挡单位的伤害降低<@ba.kw>15%</>，自身攻击援军阻挡的敌人时攻击力提升至150%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军受到来自自身阻挡单位的伤害降低<@ba.kw>15%</>，自身攻击援军阻挡的敌人时攻击力提升至150%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "可召唤流形来复制待部署干员的大部分属性（生命上限、攻击、防御、法抗、阻挡数、攻击间隔、攻击范围、伤害类型、根据近/远程位获得特殊特性）协助作战，首次部署后立即获得5点技力，其被击败后会在25秒后自动刷新",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "净水即生命",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10030_mlyss_wtrman",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能开启时复制目标90%的生命值、攻击力、防御力、法抗，以及阻挡数、攻击间隔、攻击范围、初始伤害类型（不攻击、治疗类型则不继承）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "scale",
+                      "value": 0.9,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 190,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军受到来自自身阻挡单位的伤害降低<@ba.kw>15%</>，自身攻击援军阻挡的敌人时攻击力提升至150%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "可召唤流形来复制待部署干员的全部属性（生命上限、攻击、防御、法抗、阻挡数、攻击间隔、攻击范围、伤害类型、根据近/远程位获得特殊特性）协助作战，首次部署后立即获得5点技力，其被击败后会在25秒后自动刷新",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "净水即生命",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10030_mlyss_wtrman",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能开启时复制目标100%的生命值、攻击力、防御力、法抗，以及阻挡数、攻击间隔、攻击范围、初始伤害类型（不攻击、治疗类型则不继承）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_mlyss",
       "moduleName": "落叶四季",
-      "desc": "随身携带一把漂亮的好伞，是轻松开启社交最好的方式。\n人们会问起这把树叶伞，然后把话题延展向他们自己，与你一同感叹四季轮换，春天总会到来。绝口不提冬天，让聊天终止于愉快的展望。最后你们去跳舞。聚会总是要跳舞的。许多关系都是由一曲共舞开始，缪尔赛思从不错过任何机会。\n但——她真的需要那些所谓的“社交”带来“机会”吗？\n这个问题像是没打成水漂的石头，咕咚一声闷闷沉下水去，永无止境地坠落。\n她对面的舞伴换了一个，又换了一个，她的舞步也愈加熟练。缪尔赛思一度认为，她已经能够跳好所有舞蹈。缪尔赛思也一度认为，她身边拥有许多“朋友”。而后，克丽斯腾与塞雷娅出现了。\n水底那颗沉寂的石子成了床垫下的豌豆。它隐没许久，终于可以开始高声喊叫——嘿？事情果真如此吗？颠覆自己吧，瞧瞧什么是真的，什么是假的！是时候了，命运会带给你一些真正的“志同道合”之人！\n那是导师打发她去应付的会面，对方是个只有两个人的小型实验室。\n结局我们都知道了，两个人的实验室变成了三个人的实验室，她是最初的加入者。“莱茵”就此成立。\n“不不不，你们这个不对......”那时她刚赶完结课论文，连续半个月没睡一个囫囵觉，软趴趴地伏在桌子上，“......我们，应该先尝试这个方向，这个成功率更大！”\n“这就是三个人的优势了，投票吧。”桌子另一侧的克丽斯腾又喝了一口咖啡，她的黑眼圈不浅。塞雷娅沉默地点头。\n“那，同意方案A的，请举手。”\n克丽斯腾举起手，塞雷娅也举起了手。缪尔赛思困倦的脸上浮现出一个皱皱巴巴的表情。\n“唔......支持、支持方案B的，举手！”她举起手，一只孤零零的手臂在空中立着。\n紧接着，水声之中又一只手举了起来。然后又一只。然后又一只。面目相同的水分身们看向两位伙伴，精灵姑娘咧开嘴一笑：“嘿嘿，四比二，如何呢？”\n“考虑到我们的诉求是公平......”\n“四比二，这很公平。这个缪尔赛思，还有这个缪尔赛思，以及这个缪尔赛斯，都是莱茵的成员。她们具有投票权。”\n很有道理的论点。很可靠的朋友们。虽然形式诡异，但这确实是莱茵人开玩笑的方式。至于后续，得胜的水分身们一齐欢呼，打翻咖啡彻底毁了克丽斯腾那件漂亮风衣的事情......我们下次再谈。\n尖叫和抱歉声的吵闹之中，缪尔赛思听见一种声响，安静的、细微的、湿润的声响。植物胚芽从土壤中生长而出的声响。\n是那颗豌豆，它找到了土壤，它开始生根，开始发芽。\n四季轮换，春天总会到来。"
+      "desc": "随身携带一把漂亮的好伞，是轻松开启社交最好的方式。\n人们会问起这把树叶伞，然后把话题延展向他们自己，与你一同感叹四季轮换，春天总会到来。绝口不提冬天，让聊天终止于愉快的展望。最后你们去跳舞。聚会总是要跳舞的。许多关系都是由一曲共舞开始，缪尔赛思从不错过任何机会。\n但——她真的需要那些所谓的“社交”带来“机会”吗？\n这个问题像是没打成水漂的石头，咕咚一声闷闷沉下水去，永无止境地坠落。\n她对面的舞伴换了一个，又换了一个，她的舞步也愈加熟练。缪尔赛思一度认为，她已经能够跳好所有舞蹈。缪尔赛思也一度认为，她身边拥有许多“朋友”。而后，克丽斯腾与塞雷娅出现了。\n水底那颗沉寂的石子成了床垫下的豌豆。它隐没许久，终于可以开始高声喊叫——嘿？事情果真如此吗？颠覆自己吧，瞧瞧什么是真的，什么是假的！是时候了，命运会带给你一些真正的“志同道合”之人！\n那是导师打发她去应付的会面，对方是个只有两个人的小型实验室。\n结局我们都知道了，两个人的实验室变成了三个人的实验室，她是最初的加入者。“莱茵”就此成立。\n“不不不，你们这个不对......”那时她刚赶完结课论文，连续半个月没睡一个囫囵觉，软趴趴地伏在桌子上，“......我们，应该先尝试这个方向，这个成功率更大！”\n“这就是三个人的优势了，投票吧。”桌子另一侧的克丽斯腾又喝了一口咖啡，她的黑眼圈不浅。塞雷娅沉默地点头。\n“那，同意方案A的，请举手。”\n克丽斯腾举起手，塞雷娅也举起了手。缪尔赛思困倦的脸上浮现出一个皱皱巴巴的表情。\n“唔......支持、支持方案B的，举手！”她举起手，一只孤零零的手臂在空中立着。\n紧接着，水声之中又一只手举了起来。然后又一只。然后又一只。面目相同的水分身们看向两位伙伴，精灵姑娘咧开嘴一笑：“嘿嘿，四比二，如何呢？”\n“考虑到我们的诉求是公平......”\n“四比二，这很公平。这个缪尔赛思，还有这个缪尔赛思，以及这个缪尔赛斯，都是莱茵的成员。她们具有投票权。”\n很有道理的论点。很可靠的朋友们。虽然形式诡异，但这确实是莱茵人开玩笑的方式。至于后续，得胜的水分身们一齐欢呼，打翻咖啡彻底毁了克丽斯腾那件漂亮风衣的事情......我们下次再谈。\n尖叫和抱歉声的吵闹之中，缪尔赛思听见一种声响，安静的、细微的、湿润的声响。植物胚芽从土壤中生长而出的声响。\n是那颗豌豆，它找到了土壤，它开始生根，开始发芽。\n四季轮换，春天总会到来。",
+      "typeIcon": "tac-y",
+      "uniEquipIcon": "uniequip_003_mlyss",
+      "typeName1": "TAC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_mlyss_1",
+        "uniequip_003_mlyss_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30165",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 142,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 21,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 17,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军阻挡的敌人更容易受到我方的攻击，自身攻击援军阻挡的敌人时攻击力提升至165%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 155,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军阻挡的敌人更容易受到我方的攻击，自身攻击援军阻挡的敌人时攻击力提升至165%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带时【莱茵生命】干员部署费用-2，首名【莱茵生命】干员部署费用额外-1。使用流形复制【莱茵生命】干员时，缪尔赛思立刻获得8技力",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "开源节流",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "runtime_cost",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带时【莱茵生命】干员部署费用-2，首名【莱茵生命】干员部署费用额外-2<@ba.talpu>（+1）</>。使用流形复制【莱茵生命】干员时，缪尔赛思立刻获得8技力",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "开源节流",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "runtime_cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，援军阻挡的敌人更容易受到我方的攻击，自身攻击援军阻挡的敌人时攻击力提升至165%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带时【莱茵生命】干员部署费用-2，首名【莱茵生命】干员部署费用额外-1。使用流形复制【莱茵生命】干员时，缪尔赛思立刻获得10技力；且部署当前复制的【莱茵生命】干员时使其立刻获得10技力",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "开源节流",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "runtime_cost",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带时【莱茵生命】干员部署费用-2，首名【莱茵生命】干员部署费用额外-2<@ba.talpu>（+1）</>。使用流形复制【莱茵生命】干员时，缪尔赛思立刻获得10技力；且部署当前复制的【莱茵生命】干员时使其立刻获得10技力",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "开源节流",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "runtime_cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "12_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp_other",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1248,6 +2585,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10030_mlyss_wtrman"
   ],
   "patch_info": {}
 }

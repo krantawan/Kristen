@@ -150,6 +150,28 @@
       "cost": 23
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 50,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1032_excu2#1",
@@ -747,16 +769,681 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+22",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 22,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+26",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "選ばれし者",
+          "description": "攻撃時、10%の確率で追加でもう一度攻撃する。スキル発動中に消費した弾丸1発につき、追加攻撃の発生確率+3%。スキル終了時、発生確率はリセットされる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "prob_add",
+              "value": 0.03,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "選ばれし者",
+          "description": "攻撃時、13%<@ba.talpu>（+3%）</>の確率で追加でもう一度攻撃する。スキル発動中に消費した弾丸1発につき、追加攻撃の発生確率+3%。スキル終了時、発生確率はリセットされる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.13,
+              "valueStr": null
+            },
+            {
+              "key": "prob_add",
+              "value": 0.03,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "選ばれし者",
+          "description": "攻撃時、20%の確率で追加でもう一度攻撃する。スキル発動中に消費した弾丸1発につき、追加攻撃の発生確率+5%。スキル終了時、発生確率はリセットされる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "prob_add",
+              "value": 0.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "選ばれし者",
+          "description": "攻撃時、23%<@ba.talpu>（+3%）</>の確率で追加でもう一度攻撃する。スキル発動中に消費した弾丸1発につき、追加攻撃の発生確率+5%。スキル終了時、発生確率はリセットされる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.23,
+              "valueStr": null
+            },
+            {
+              "key": "prob_add",
+              "value": 0.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "銃弾の共感",
+          "description": "配置中の味方【ラテラーノ】1名につき、自身の弾薬消費系スキルの弾薬上限+1（最大+4まで）",
+          "blackboard": [
+            {
+              "key": "add_count",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "add_count_max_stack",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_excu2",
       "moduleName": "聖約イグゼキュターの記章",
-      "desc": "聖約イグゼキュターは複数の敵の単独掃討に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、鎌撃士の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "聖約イグゼキュターは複数の敵の単独掃討に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、鎌撃士の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_excu2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_excu2",
       "moduleName": "回答を求めて",
-      "desc": "「フェデリコ、こいつはどうだ？」\n「アンブロシウス修道院の外壁に設置されていた、サーチライトのカバーでしょう。少なくとも一年以上は使われていないものと思われます。」\n「少し埃をかぶってるが、サイズは丁度よさそうだな。あとはこいつを真ん中で切って綺麗に拭いてやれば、あの花のケースに使えるだろ。」\n「住民の同意は得られたのですか？」\n「オレンが特殊部隊を寄越した時、物資を運び込んでたおかげで、ここの住民たちにはもうこんながらくた必要なくなってるよ。まあ、切る作業は俺に任せとけ。お前が素手でカチ割るところなんて見たくないからな。」\n「ですが、修道院が移動を再開するまで、長くともあと一時間ほどしかありませんよ。」\n「間に合うさ。けどよ、フェデリコ……」\n「何でしょうか？」\n「あのガーデナーは特に遺言を残さなかったんだろ。」\n「ええ。修道院の住民だったクレマン・デュボワ氏は、すでに滞りなく埋葬されました。執行可能な遺言や個人的な遺産などは一切遺されていません。」\n「そうじゃなくて……俺の訊きたいことはわかってんだろ？」\n「私がこの花を残そうとする目的を探っているのでしょう。」\n「お前がこういう内情のややこしい任務をこなすのは初めてでもない。なのに、何か物を残そうとするのなんか初めて見たからな。……お前、どうしちまったんだ？」\n「任務は完了しましたが、アンブロシウス修道院が残した疑問の答えがまだ見つかっていませんので。」\n「俺の記憶が確かなら、どっかの聖徒がありがたいお言葉を残してたと思うんだけどな。『銃には目標が必要だが、すべての問題に必ずしも答えがあるとは限らない』なんてやつをさ。」\n「しかし、疑問点をそのままにしておくのは賢明とは言えません。その後の任務の執行結果に直接影響を与えかねませんから。」\n「あーそうかい、余計なお世話だったな。いや待て、お前まさか任務の進捗報告の時にでも、教皇聖下に直接聞いたりなんかしてないよな？」\n「しましたが、答えを得ることはできませんでした。」\n「それでそんなほとんど丸焦げの花をドライフラワーにして保存しようなんて考えたわけか。合点がいったよ。ただ、一言言わせてもらうと、その花をそのままの姿で残しておけるかは、俺が今切ってるカバーのあるなしで決まるようなもんじゃないぜ。その花はもう死んでる。もうこれまでとは別物になっちまってるんだよ、フェデリコ。」\n「リケーレ、今回の対話であなたが口にした言葉の文字数は、平均値を大幅に上回っています。」\n「はははっ。こいつはただの雑談だし、その平均値とやらの出処もひとまず置いとくとしようか。よし、できたぜ。あとは洗って台座をつければ完成だ。店に並んでるやつと比べても遜色ないぞ。」\n「ありがとうございます。」フェデリコは同僚から汚れたガラスのカバーを受け取ると、がらくたが積まれた物置部屋を後にした。\n「さーて、ラテラーノの新たな聖徒様はどんな答えを見つけるんだろうな。」"
+      "desc": "「フェデリコ、こいつはどうだ？」\n「アンブロシウス修道院の外壁に設置されていた、サーチライトのカバーでしょう。少なくとも一年以上は使われていないものと思われます。」\n「少し埃をかぶってるが、サイズは丁度よさそうだな。あとはこいつを真ん中で切って綺麗に拭いてやれば、あの花のケースに使えるだろ。」\n「住民の同意は得られたのですか？」\n「オレンが特殊部隊を寄越した時、物資を運び込んでたおかげで、ここの住民たちにはもうこんながらくた必要なくなってるよ。まあ、切る作業は俺に任せとけ。お前が素手でカチ割るところなんて見たくないからな。」\n「ですが、修道院が移動を再開するまで、長くともあと一時間ほどしかありませんよ。」\n「間に合うさ。けどよ、フェデリコ……」\n「何でしょうか？」\n「あのガーデナーは特に遺言を残さなかったんだろ。」\n「ええ。修道院の住民だったクレマン・デュボワ氏は、すでに滞りなく埋葬されました。執行可能な遺言や個人的な遺産などは一切遺されていません。」\n「そうじゃなくて……俺の訊きたいことはわかってんだろ？」\n「私がこの花を残そうとする目的を探っているのでしょう。」\n「お前がこういう内情のややこしい任務をこなすのは初めてでもない。なのに、何か物を残そうとするのなんか初めて見たからな。……お前、どうしちまったんだ？」\n「任務は完了しましたが、アンブロシウス修道院が残した疑問の答えがまだ見つかっていませんので。」\n「俺の記憶が確かなら、どっかの聖徒がありがたいお言葉を残してたと思うんだけどな。『銃には目標が必要だが、すべての問題に必ずしも答えがあるとは限らない』なんてやつをさ。」\n「しかし、疑問点をそのままにしておくのは賢明とは言えません。その後の任務の執行結果に直接影響を与えかねませんから。」\n「あーそうかい、余計なお世話だったな。いや待て、お前まさか任務の進捗報告の時にでも、教皇聖下に直接聞いたりなんかしてないよな？」\n「しましたが、答えを得ることはできませんでした。」\n「それでそんなほとんど丸焦げの花をドライフラワーにして保存しようなんて考えたわけか。合点がいったよ。ただ、一言言わせてもらうと、その花をそのままの姿で残しておけるかは、俺が今切ってるカバーのあるなしで決まるようなもんじゃないぜ。その花はもう死んでる。もうこれまでとは別物になっちまってるんだよ、フェデリコ。」\n「リケーレ、今回の対話であなたが口にした言葉の文字数は、平均値を大幅に上回っています。」\n「はははっ。こいつはただの雑談だし、その平均値とやらの出処もひとまず置いとくとしようか。よし、できたぜ。あとは洗って台座をつければ完成だ。店に並んでるやつと比べても遜色ないぞ。」\n「ありがとうございます。」フェデリコは同僚から汚れたガラスのカバーを受け取ると、がらくたが積まれた物置部屋を後にした。\n「さーて、ラテラーノの新たな聖徒様はどんな答えを見つけるんだろうな。」",
+      "typeIcon": "rea-x",
+      "uniEquipIcon": "uniequip_002_excu2",
+      "typeName1": "REA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_excu2_1",
+        "uniequip_002_excu2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 24,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 32,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、30%の確率で対象に防御力を150無視する攻撃を追加で1回行う。スキル発動中に消費した弾丸1発につき、追加攻撃の発生確率+5%。スキル終了時、発生確率はリセットされる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "選ばれし者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob_add",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 150,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、33%<@ba.talpu>（+3%）</>の確率でその対象に防御力を150無視する攻撃を追加で1回行う。スキル発動中に消費した弾丸1発につき、追加攻撃の発生確率+5%。スキル終了時、発生確率はリセットされる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "選ばれし者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.33,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob_add",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 150,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方の治療対象にならない\n攻撃は<@ba.kw>範囲物理ダメージ</>を与え、敵を1体攻撃する度自身のHPを<@ba.kw>{value}</>回復（攻撃毎の最大回復回数はブロック数と同じ）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、35%の確率で追加でその対象に防御力を300無視する攻撃を1回与える。スキル発動中に消費した弾丸1発につき、追加攻撃の発生確率+5%。スキル終了時、発生確率はリセットされる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "選ばれし者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob_add",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 300,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、38%<@ba.talpu>（+3%）</>の確率でその対象に防御力を300無視する攻撃を追加で1回行う。スキル発動中に消費した弾丸1発につき、追加攻撃の発生確率+5%。スキル終了時、発生確率はリセットされる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "選ばれし者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.38,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob_add",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 300,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1218,5 +1905,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

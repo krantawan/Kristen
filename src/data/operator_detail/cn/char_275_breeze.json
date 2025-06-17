@@ -169,6 +169,7 @@
       "cost": 17
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_275_breeze#1",
@@ -632,16 +633,589 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+20",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 20,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "医疗班保护",
+          "description": "技能开启时，所有【医疗】干员获得<$ba.buffres>抵抗</>",
+          "blackboard": [
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            },
+            {
+              "key": "max_hp",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1+",
+          "name": "医疗班保护",
+          "description": "技能开启时，所有【医疗】和【辅助】干员获得<$ba.buffres>抵抗</>",
+          "blackboard": [
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            },
+            {
+              "key": "max_hp",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_breeze",
       "moduleName": "微风证章",
-      "desc": "干员微风擅长在短时间内为数位干员提供治疗\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使群愈师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员微风擅长在短时间内为数位干员提供治疗\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使群愈师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_breeze",
       "moduleName": "外科医疗套组",
-      "desc": "格蕾丝，我的宝贝。\n自你离家到现在，你都没有联系过我们。\n起初我们以为是你还在为那次争吵生气，后来，我们才知道在你身上发生的事。\n之前我们没法为你过生日，但现在，我们知道了你工作的地址。\n生日快乐，我的格蕾丝。\n这份包裹里是我送给你的生日礼物，一个工具包。\n我年轻时，一直很想去远方冒险，就找伦蒂尼姆有名的皮匠制作了这个工具包。它可以装很多东西，而且非常耐用。\n之后，我回归了父母为我规划好的生活，从来没有机会真正使用它。\n纵使这片大地上有许多因素会使人止步，但我相信，你可以比我走得更远。\n你的爸爸非常自责，他想去罗德岛找你，但又不知道该怎么面对你，也不知道如何面对之后的事情。如果你见到他，你们最好静下心来好好谈谈。\n我的女儿，无论如何，我都支持你的选择，支持你的理想。\n亨利如果不同意，我会帮你一起说服他。\n注：你爸好像找人给你做了很多你小时候爱吃的甜食，明明当时不允许你吃的也是他……如果收到那些甜食，不要一次吃太多！\n\n——碧娅特丽丝·亚利桑那\n\n\n格蕾丝，我去了罗德岛一趟，你的同事说你正在出外勤，还去了特别危险的地方，说什么为罗德岛提供战场医疗救护服务。\n根据我的了解，罗德岛可能确实是这片大地上数一数二的，但你留在这边，理应作为一个病人接受治疗，而不是像现在这样到处乱跑。\n我们能负担治疗所需的费用，但我不能接受再一次失去你。\n我带了一些吃和用的过来，有一些保质期很短，别忘了吃。\n你需要什么，就跟我说。\n碧娅特丽丝要我和你面对面好好谈谈，所以下个月我会再来一次。\n还有，记得多给你老妈写信。\n你宿舍的书桌抽屉坏了，我已帮你修好。别往抽屉里塞太多东西。\n\n——亨利·亚利桑那"
+      "desc": "格蕾丝，我的宝贝。\n自你离家到现在，你都没有联系过我们。\n起初我们以为是你还在为那次争吵生气，后来，我们才知道在你身上发生的事。\n之前我们没法为你过生日，但现在，我们知道了你工作的地址。\n生日快乐，我的格蕾丝。\n这份包裹里是我送给你的生日礼物，一个工具包。\n我年轻时，一直很想去远方冒险，就找伦蒂尼姆有名的皮匠制作了这个工具包。它可以装很多东西，而且非常耐用。\n之后，我回归了父母为我规划好的生活，从来没有机会真正使用它。\n纵使这片大地上有许多因素会使人止步，但我相信，你可以比我走得更远。\n你的爸爸非常自责，他想去罗德岛找你，但又不知道该怎么面对你，也不知道如何面对之后的事情。如果你见到他，你们最好静下心来好好谈谈。\n我的女儿，无论如何，我都支持你的选择，支持你的理想。\n亨利如果不同意，我会帮你一起说服他。\n注：你爸好像找人给你做了很多你小时候爱吃的甜食，明明当时不允许你吃的也是他……如果收到那些甜食，不要一次吃太多！\n\n——碧娅特丽丝·亚利桑那\n\n\n格蕾丝，我去了罗德岛一趟，你的同事说你正在出外勤，还去了特别危险的地方，说什么为罗德岛提供战场医疗救护服务。\n根据我的了解，罗德岛可能确实是这片大地上数一数二的，但你留在这边，理应作为一个病人接受治疗，而不是像现在这样到处乱跑。\n我们能负担治疗所需的费用，但我不能接受再一次失去你。\n我带了一些吃和用的过来，有一些保质期很短，别忘了吃。\n你需要什么，就跟我说。\n碧娅特丽丝要我和你面对面好好谈谈，所以下个月我会再来一次。\n还有，记得多给你老妈写信。\n你宿舍的书桌抽屉坏了，我已帮你修好。别往抽屉里塞太多东西。\n\n——亨利·亚利桑那",
+      "typeIcon": "rin-x",
+      "uniEquipIcon": "uniequip_002_breeze",
+      "typeName1": "RIN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_001_breeze_13",
+        "uniequip_002_breeze_14"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围<@ba.kw>扩大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围<@ba.kw>扩大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能开启时，所有【医疗】和【辅助】干员生命上限+10%并获得<$ba.buffres>抵抗</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1+",
+                  "name": "医疗班保护",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围<@ba.kw>扩大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能开启时，所有【医疗】和【辅助】干员生命上限+15%并获得<$ba.buffres>抵抗</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1+",
+                  "name": "医疗班保护",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1085,5 +1659,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

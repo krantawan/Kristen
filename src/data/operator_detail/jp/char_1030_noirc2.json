@@ -151,6 +151,68 @@
       "cost": 25
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 30,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n敵を攻撃する度自身のHPを<@ba.kw>{value}</>回復(昇進1で効果強化)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 50,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n敵を攻撃する度自身のHPを<@ba.kw>{value}</>回復(昇進2で効果強化)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 70,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方の治療対象にならない\n敵を攻撃する度自身のHPを<@ba.kw>{value}</>回復",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1030_noirc2#1",
@@ -622,16 +684,776 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃速度+5",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 5,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 40,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "剛毅",
+          "description": "配置中、最大で攻撃速度+30と最大で防御力+30%の<$ba.berserk>不屈</>状態を獲得する（HPが最大値の50%減少時、効果最大）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "min_def",
+              "value": 0.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "剛毅",
+          "description": "配置中、最大で攻撃速度+40と最大で防御力+40%の<$ba.berserk>不屈</>状態を獲得する（HPが最大値の60%減少時、効果最大）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "min_def",
+              "value": 0.4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "剛毅",
+          "description": "配置中、最大で攻撃速度+50と最大で防御力+50%の<$ba.berserk>不屈</>状態を獲得する（HPが最大値の70%減少時、効果最大）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "min_def",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "練気",
+          "description": "スキル未発動時、5回連続で攻撃するたびに自身の攻撃力+3%（最大3回まで）",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.03,
+              "valueStr": null
+            },
+            {
+              "key": "hit_num",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@clear_attackcount_time",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "練気",
+          "description": "スキル未発動時、5回連続で攻撃するたびに自身の攻撃力+5%（最大3回まで）",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "hit_num",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@clear_attackcount_time",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "練気",
+          "description": "スキル未発動時、5回連続で攻撃するたびに自身の攻撃力+7%（最大3回まで）",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.07,
+              "valueStr": null
+            },
+            {
+              "key": "hit_num",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@clear_attackcount_time",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_noirc2",
       "moduleName": "レウスSノイルホーンの記章",
-      "desc": "特別な装いに身を包んだノイルホーンは支援抜きの単独戦闘に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、武者の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "特別な装いに身を包んだノイルホーンは支援抜きの単独戦闘に秀でている。\n外勤部門の決定に基づき\n外勤任務においては前衛オペレーターとして区分し、武者の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_noirc2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_noirc2",
       "moduleName": "ノイルホーンのメモ帳",
-      "desc": "▼地図はしっかり読め！\n……\n2.ロドスの施設案内図\n（手描きの図が描かれており、よれよれの線から辛うじてロドス内の施設配置が読み取れる。訓練室の位置が大きな赤丸で囲われている）\nヤトウが訓練したあとは、必ず設備が破損してないかをチェックして、もしあればすぐに修理を依頼すること！\n……\n5.龍門の地図\n（新聞から切り取られた一枚の地図。ロドスの事務所とセーフハウスの位置にマークがついている）\n何かあったらまず事務所を訪ねろってヤトウに言っとくこと！\n補足：事務所をノックしても反応がない時、ヤトウが扉を蹴破ろうとするのは絶対止めること！\n……\n▼厄介な敵の図鑑\n……\n3.バクダンムシ\n（かなり画質の粗い写真がついている）\n腹が黄色く光ってるオリジムシ。\n見た目からしてろくでもねえ奴だが、実際倒されるとところ構わず爆発しやがる。\n当たるとめちゃくちゃ痛いから用心しろ。ヤトウには、いきなり斬りかからないように言い聞かせること！\n注意：アイツがもう突っ込んじまってた時は、急いで盾を構えること！\n……\n27.ハガネガニ\n（非常に抽象的な手描きの図がついている）\n全身光を反射してギラギラしてる感染生物。\n弱点はよくわからんが、とにかく必死に殴りまくってればいける。\nスペシャルアドバイス：こいつはヤトウに頼んでOK！\n……\n▼武器の使い方\n……\n2.盾\n（何かの百科事典から切り抜いてきたらしい、長い紹介文が貼り付けられている）\nこいつのことはよくわかってる。\n何か音が聞こえた方向とか、何かが見えた方向に構えればいい。\n仲間を守ってそこに立ったら、一歩だってあとには引けねえ。\n……\n▼日常で役立つ知識の覚書\n……\n53.人へのアドバイスの仕方\n大体の奴が相手なら、普通にどうすべきか伝えればいいだけだ。\nけど、ヤトウは気が短いから、口で言っても聞いてくれねえことが結構ある。\nそういう時はまず落ち着かせて座らせてから、きちんと理由を説明してわかってもらえばなんとかなる。\n……\n237.日差しに注意！\nヤトウの肌は太陽の光にかなり弱い。日差しにはよく注意して守ってやること。\n→新しい装備に換えてからは、その必要もなくなったみたいだ。本当によかった。\n……\n561.ヤトウの誕生日\n5月14日。\nこれはついでにメモしといたやつだ。\nけど、万が一次の任務で何かが起きて、急に色々忘れちまったら困るだろうし、まあ、一応な。\n……\n（ノートの見開きに何か書かれている）\nこの手帳を拾った人へ\n俺はノイルホーン。この手帳の持ち主だ。\nこれを拾ってくれたあんたが俺を見つけられなかった時は、俺の代わりに、ロドスにいるヤトウって奴に渡してほしい。\nそれと悪いが、あいつに伝えてやってくれ。\n何かあったらこの手帳をよく読むように、ってな。\nそうすれば、俺がそばにいなくても、あいつのことを助けてやれるから。\nよろしく頼むぜ。"
+      "desc": "▼地図はしっかり読め！\n……\n2.ロドスの施設案内図\n（手描きの図が描かれており、よれよれの線から辛うじてロドス内の施設配置が読み取れる。訓練室の位置が大きな赤丸で囲われている）\nヤトウが訓練したあとは、必ず設備が破損してないかをチェックして、もしあればすぐに修理を依頼すること！\n……\n5.龍門の地図\n（新聞から切り取られた一枚の地図。ロドスの事務所とセーフハウスの位置にマークがついている）\n何かあったらまず事務所を訪ねろってヤトウに言っとくこと！\n補足：事務所をノックしても反応がない時、ヤトウが扉を蹴破ろうとするのは絶対止めること！\n……\n▼厄介な敵の図鑑\n……\n3.バクダンムシ\n（かなり画質の粗い写真がついている）\n腹が黄色く光ってるオリジムシ。\n見た目からしてろくでもねえ奴だが、実際倒されるとところ構わず爆発しやがる。\n当たるとめちゃくちゃ痛いから用心しろ。ヤトウには、いきなり斬りかからないように言い聞かせること！\n注意：アイツがもう突っ込んじまってた時は、急いで盾を構えること！\n……\n27.ハガネガニ\n（非常に抽象的な手描きの図がついている）\n全身光を反射してギラギラしてる感染生物。\n弱点はよくわからんが、とにかく必死に殴りまくってればいける。\nスペシャルアドバイス：こいつはヤトウに頼んでOK！\n……\n▼武器の使い方\n……\n2.盾\n（何かの百科事典から切り抜いてきたらしい、長い紹介文が貼り付けられている）\nこいつのことはよくわかってる。\n何か音が聞こえた方向とか、何かが見えた方向に構えればいい。\n仲間を守ってそこに立ったら、一歩だってあとには引けねえ。\n……\n▼日常で役立つ知識の覚書\n……\n53.人へのアドバイスの仕方\n大体の奴が相手なら、普通にどうすべきか伝えればいいだけだ。\nけど、ヤトウは気が短いから、口で言っても聞いてくれねえことが結構ある。\nそういう時はまず落ち着かせて座らせてから、きちんと理由を説明してわかってもらえばなんとかなる。\n……\n237.日差しに注意！\nヤトウの肌は太陽の光にかなり弱い。日差しにはよく注意して守ってやること。\n→新しい装備に換えてからは、その必要もなくなったみたいだ。本当によかった。\n……\n561.ヤトウの誕生日\n5月14日。\nこれはついでにメモしといたやつだ。\nけど、万が一次の任務で何かが起きて、急に色々忘れちまったら困るだろうし、まあ、一応な。\n……\n（ノートの見開きに何か書かれている）\nこの手帳を拾った人へ\n俺はノイルホーン。この手帳の持ち主だ。\nこれを拾ってくれたあんたが俺を見つけられなかった時は、俺の代わりに、ロドスにいるヤトウって奴に渡してほしい。\nそれと悪いが、あいつに伝えてやってくれ。\n何かあったらこの手帳をよく読むように、ってな。\nそうすれば、俺がそばにいなくても、あいつのことを助けてやれるから。\nよろしく頼むぜ。",
+      "typeIcon": "sbl-x",
+      "uniEquipIcon": "uniequip_002_noirc2",
+      "typeName1": "SBL",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_noirc2_1",
+        "uniequip_002_noirc2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の時、25%の<$ba.protect>加護</>状態を獲得",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の時、25%の<$ba.protect>加護</>状態を獲得",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル未発動時、5回連続で攻撃するたびに自身の攻撃力+8%（最大3回まで）",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "練気",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hit_num",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@clear_attackcount_time",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 500,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 36,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の時、25%の<$ba.protect>加護</>状態を獲得",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル未発動時、5回連続で攻撃するたびに自身の攻撃力+9%（最大3回まで）",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "練気",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.09,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hit_num",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@clear_attackcount_time",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1055,5 +1877,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

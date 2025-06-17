@@ -168,6 +168,28 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "ep_heal_ratio",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_449_glider#1",
@@ -669,16 +691,582 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+19",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 19,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 35,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "集体意识",
+          "description": "攻击范围内的远程干员最大生命值+5%",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "集体意识",
+          "description": "攻击范围内的远程干员最大生命值+7%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.07,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "集体意识",
+          "description": "攻击范围内的远程干员最大生命值+10%",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "集体意识",
+          "description": "攻击范围内的远程干员最大生命值+12%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "max_hp",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_glider",
       "moduleName": "蜜莓证章",
-      "desc": "干员蜜莓擅长大范围治疗并为干员恢复元素损伤\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使行医职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员蜜莓擅长大范围治疗并为干员恢复元素损伤\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使行医职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_glider",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_glider",
       "moduleName": "落地之后",
-      "desc": "她第一次因为外勤问题和母亲闹了别扭。\n几个月前的某次外勤过后，缝补斗篷时，母亲忽然问她能不能不再参加外勤。她试图说服母亲外勤没有危险，但母亲异常执拗。劝告演变成争执，争执积聚成一根钝刺。直到现在，佐伊·伯里斯站在陡崖前，身后是喊叫声，但她仍然想着自己这次离开罗德岛时母亲的眼神。\n追赶者渐渐逼近，佐伊从崖上一跃而下。一支弩箭从身边飞过，她突然意识到，在母亲心里，擦破的下摆意味着摔伤，破洞意味着弩箭避过了要害，而裂口可能意味着侥幸保住一条手臂。\n她第一次因为外勤问题惹了女儿不开心。\n就算女儿多次跟她解释过外勤有多安全，她仍然无法摆脱那些不祥的梦境。直到现在，她打开房门，佐伊就站在门外，破破烂烂的斗篷上沾满了灰尘。\n她突然感到后悔。自己是受照顾的病人，是女儿将一切打理得井井有条。生活早就不是佐伊为自己分忧，而是自己为佐伊分忧了。\n她招呼佐伊脱下斗篷，说自己之前想太多了。可佐伊并未接话，而是拉着母亲坐下，一处一处地讲述那些破损的来历——树枝、砂石，甚至鳞兽......一直讲到那处被弩箭撕开的裂口。\n她看见母亲冲自己轻轻摇了摇头，神色不像制止，倒像恳求。但她还是说了下去，从一个无人愿意伸手相助，差点就沦为奴隶的感染者男人说起，一直说到奴隶贩子为泄愤射出的弩箭。\n“每次外勤，我们其实都帮助了一些人，一些只是比爸爸幸运一点，没有无声无息地消失的人。而斗篷上的破损也不总是武器造成的，就像这次，就只有这一支弩箭......我一定能照顾好自己的，您......能够放心吗？”\n佐伊·伯里斯咬住嘴唇看着母亲，而母亲的脸上现出悲伤与骄傲混杂的神色。最后，母亲默默拍了拍她的头，从佐伊身上解下斗篷，把先前补好的那件披在她的肩膀上。\n缝纫机运转的声音响起，佐伊披着精心补好的斗篷，轻手轻脚地离开母亲的房间，在心里为把刀锋说成鳞兽向母亲道歉。\n而在她身后，缝纫机的声音停顿了片刻——那是母亲发现裂口平滑得不自然的瞬间——随后又像先前一样，悲伤而骄傲地响了起来。"
+      "desc": "她第一次因为外勤问题和母亲闹了别扭。\n几个月前的某次外勤过后，缝补斗篷时，母亲忽然问她能不能不再参加外勤。她试图说服母亲外勤没有危险，但母亲异常执拗。劝告演变成争执，争执积聚成一根钝刺。直到现在，佐伊·伯里斯站在陡崖前，身后是喊叫声，但她仍然想着自己这次离开罗德岛时母亲的眼神。\n追赶者渐渐逼近，佐伊从崖上一跃而下。一支弩箭从身边飞过，她突然意识到，在母亲心里，擦破的下摆意味着摔伤，破洞意味着弩箭避过了要害，而裂口可能意味着侥幸保住一条手臂。\n她第一次因为外勤问题惹了女儿不开心。\n就算女儿多次跟她解释过外勤有多安全，她仍然无法摆脱那些不祥的梦境。直到现在，她打开房门，佐伊就站在门外，破破烂烂的斗篷上沾满了灰尘。\n她突然感到后悔。自己是受照顾的病人，是女儿将一切打理得井井有条。生活早就不是佐伊为自己分忧，而是自己为佐伊分忧了。\n她招呼佐伊脱下斗篷，说自己之前想太多了。可佐伊并未接话，而是拉着母亲坐下，一处一处地讲述那些破损的来历——树枝、砂石，甚至鳞兽......一直讲到那处被弩箭撕开的裂口。\n她看见母亲冲自己轻轻摇了摇头，神色不像制止，倒像恳求。但她还是说了下去，从一个无人愿意伸手相助，差点就沦为奴隶的感染者男人说起，一直说到奴隶贩子为泄愤射出的弩箭。\n“每次外勤，我们其实都帮助了一些人，一些只是比爸爸幸运一点，没有无声无息地消失的人。而斗篷上的破损也不总是武器造成的，就像这次，就只有这一支弩箭......我一定能照顾好自己的，您......能够放心吗？”\n佐伊·伯里斯咬住嘴唇看着母亲，而母亲的脸上现出悲伤与骄傲混杂的神色。最后，母亲默默拍了拍她的头，从佐伊身上解下斗篷，把先前补好的那件披在她的肩膀上。\n缝纫机运转的声音响起，佐伊披着精心补好的斗篷，轻手轻脚地离开母亲的房间，在心里为把刀锋说成鳞兽向母亲道歉。\n而在她身后，缝纫机的声音停顿了片刻——那是母亲发现裂口平滑得不自然的瞬间——随后又像先前一样，悲伤而骄傲地响了起来。",
+      "typeIcon": "wdm-x",
+      "uniEquipIcon": "uniequip_002_glider",
+      "typeName1": "WDM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_glider_1",
+        "uniequip_002_glider_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 145,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内的远程干员最大生命值+13%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "集体意识",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.13,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内的远程干员最大生命值+15%<@ba.talpu>（+2%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "集体意识",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内的远程干员最大生命值+15%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "集体意识",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击范围内的远程干员最大生命值+17%<@ba.talpu>（+2%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "集体意识",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.17,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1140,5 +1728,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -150,6 +150,52 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "init_atk_scale",
+            "value": 0.2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "delta_atk_scale",
+            "value": 0.15,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_atk_scale",
+            "value": 1.1,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "3",
+          "value": {
+            "key": "max_stack_cnt",
+            "value": 6,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（最大は攻撃力の110%まで）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4040_rockr#1",
@@ -624,16 +670,781 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+24",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 24,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "礎石",
+          "description": "配置中、15秒ごとに攻撃力+2%、最大3回まで",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.02,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "礎石",
+          "description": "配置中、15秒ごとに攻撃力+3%<@ba.talpu>（+1%）</>、最大3回まで",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.03,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "礎石",
+          "description": "配置中、15秒ごとに攻撃力+4%、最大4回まで",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.04,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "礎石",
+          "description": "配置中、15秒ごとに攻撃力+5%<@ba.talpu>（+1%）</>、最大4回まで",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_rockr",
       "moduleName": "ロックロックの記章",
-      "desc": "ロックロックは浮遊ユニットを操り、敵を追撃することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては術師オペレーターとして区分し、操機術師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。\n"
+      "desc": "ロックロックは浮遊ユニットを操り、敵を追撃することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては術師オペレーターとして区分し、操機術師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。\n",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_rockr",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_rockr",
       "moduleName": "名付けされていないドローン",
-      "desc": "「やっほー、ロックロック！あたしからのちょっとしたプレゼントだよ！説明書を書いてあげようと思ったけど、材料をくれたステインレスが、このドローンのことは文字で説明しない方がいいって言うから、オーディオメッセージにしてみたよ！まずは……」\nロドスの訓練場にやってきたロックロックは、クロージャのメッセージに従ってサプライズプレゼントのドローンを操縦していた。戦場のシミュレーション空間を素早く駆け回るドローンは、地面に小さな影を落としている。\n加速力は充分、方向転換速度も優秀、上昇・下降速度も秀でており、操作遅延は少なく、ホバリングも安定している。優れた戦術ドローンと言って差し支えなさそうだ。しかし、ロックロックは、改良の余地があると感じていた。同時にそう思ったこと自体にも、彼女は強い興味を抱いた。きっとハンドメイド機器をつぶさに観察する習慣と、職人としての真摯な熱意が彼女をそうさせているのだろう。\n宿舎に戻ると、さっそくロックロックはプレゼントされたドローンを解体しはじめた。その過程で彼女は設計の妙に何度も唸らされた。フレームは極めて優れた技術がなければ作れない構造であり、切断の精密さや材料の品質を見れば、先進的な機器を用いているとわかる。各パーツをつなぐ配線も非常に合理的で、空間を最大限に有効活用している。これらは全て、ロックロックの操作の癖に合わせて特別に設計されたものだろう。何より、彼女は大型の機器やドローンを好まないことが反映されていた。しかし、まさにそのことが彼女の頭を悩ませた。コンパクトさを追求した構造の最新モデルは、エネルギーを十全に発揮できないものだ。そのため、ロックロックのもう一つの直感に反しているように感じた。それはなぜクロージャがこのようならしくない設計にしたのか、というものである。\nさらに詳しく調べるうちに、ロックロックはまた驚かされた。ドローンのフレームに小さな箱がはめ込まれており、回路や部品がすべてその箱を避けるようにして配置されているのである。設計者はコンパクトな設計を心がけたうえで、さらにわざわざ箱をはめ込む空間を作っているようなのだ。開けてみると、中にはクロージャとロックロックが描かれたふせんが詰められ、ひと言メッセージが添えられていた。「クロージャからロックロックへ！」と。\nふせんを眺めていると、言葉にしがたい感情がロックロックの胸に湧き上がってきた。それは、職人同士にしか通じないある種の暗号――本当のプレゼントを見つけてくれるはずという信頼だった。そのプレゼントを取り出すと、ドローンそのものが新たなプレゼントになった。空いた部分はどうするべきだろう。動力の調整に充てるのがいいだろうか？いっそのこと全体を再配置し直してみようか？ロックロックはしばらく考え込んだ。 \nそして同時にもう一つ考えねばならないことがあると気づく……次にクロージャとフェイストに会う時は、本当に贈りたい物をどこに入れておくのがいいだろうか？\n"
+      "desc": "「やっほー、ロックロック！あたしからのちょっとしたプレゼントだよ！説明書を書いてあげようと思ったけど、材料をくれたステインレスが、このドローンのことは文字で説明しない方がいいって言うから、オーディオメッセージにしてみたよ！まずは……」\nロドスの訓練場にやってきたロックロックは、クロージャのメッセージに従ってサプライズプレゼントのドローンを操縦していた。戦場のシミュレーション空間を素早く駆け回るドローンは、地面に小さな影を落としている。\n加速力は充分、方向転換速度も優秀、上昇・下降速度も秀でており、操作遅延は少なく、ホバリングも安定している。優れた戦術ドローンと言って差し支えなさそうだ。しかし、ロックロックは、改良の余地があると感じていた。同時にそう思ったこと自体にも、彼女は強い興味を抱いた。きっとハンドメイド機器をつぶさに観察する習慣と、職人としての真摯な熱意が彼女をそうさせているのだろう。\n宿舎に戻ると、さっそくロックロックはプレゼントされたドローンを解体しはじめた。その過程で彼女は設計の妙に何度も唸らされた。フレームは極めて優れた技術がなければ作れない構造であり、切断の精密さや材料の品質を見れば、先進的な機器を用いているとわかる。各パーツをつなぐ配線も非常に合理的で、空間を最大限に有効活用している。これらは全て、ロックロックの操作の癖に合わせて特別に設計されたものだろう。何より、彼女は大型の機器やドローンを好まないことが反映されていた。しかし、まさにそのことが彼女の頭を悩ませた。コンパクトさを追求した構造の最新モデルは、エネルギーを十全に発揮できないものだ。そのため、ロックロックのもう一つの直感に反しているように感じた。それはなぜクロージャがこのようならしくない設計にしたのか、というものである。\nさらに詳しく調べるうちに、ロックロックはまた驚かされた。ドローンのフレームに小さな箱がはめ込まれており、回路や部品がすべてその箱を避けるようにして配置されているのである。設計者はコンパクトな設計を心がけたうえで、さらにわざわざ箱をはめ込む空間を作っているようなのだ。開けてみると、中にはクロージャとロックロックが描かれたふせんが詰められ、ひと言メッセージが添えられていた。「クロージャからロックロックへ！」と。\nふせんを眺めていると、言葉にしがたい感情がロックロックの胸に湧き上がってきた。それは、職人同士にしか通じないある種の暗号――本当のプレゼントを見つけてくれるはずという信頼だった。そのプレゼントを取り出すと、ドローンそのものが新たなプレゼントになった。空いた部分はどうするべきだろう。動力の調整に充てるのがいいだろうか？いっそのこと全体を再配置し直してみようか？ロックロックはしばらく考え込んだ。 \nそして同時にもう一つ考えねばならないことがあると気づく……次にクロージャとフェイストに会う時は、本当に贈りたい物をどこに入れておくのがいいだろうか？\n",
+      "typeIcon": "fun-x",
+      "uniEquipIcon": "uniequip_002_rockr",
+      "typeName1": "FUN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_rockr_1",
+        "uniequip_002_rockr_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 13,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 11,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（浮遊ユニットの初期与ダメージ上昇。最大は攻撃力の110%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 14,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（浮遊ユニットの初期与ダメージ上昇。最大は攻撃力の110%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、10秒ごとに攻撃力+4%、最大4回まで",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "礎石",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、10秒ごとに攻撃力+5%<@ba.talpu>（+1%）</>、最大4回まで",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "礎石",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 18,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 16,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（浮遊ユニットの初期与ダメージ上昇。最大は攻撃力の110%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、10秒ごとに攻撃力+4%、最大4回まで。上昇値が最大になると、攻撃速度+5",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "礎石",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、10秒ごとに攻撃力+5%<@ba.talpu>（+1%）</>、最大4回まで。上昇値が最大になると、攻撃速度+5",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "礎石",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1087,5 +1898,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

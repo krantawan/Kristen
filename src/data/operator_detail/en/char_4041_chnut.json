@@ -150,6 +150,24 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "ep_heal_ratio",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4041_chnut#1",
@@ -620,16 +638,542 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +15",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 15,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 100,
+        "atk": 35,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Solidly Grounded",
+          "description": "<$ba.dt.element>Elemental Injury</> recovery +10% when healing ground units",
+          "blackboard": {
+            "ep_heal_scale": 1.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Solidly Grounded",
+          "description": "<$ba.dt.element>Elemental Injury</> recovery +13% <@ba.talpu>(+3%)</> when healing ground units",
+          "blackboard": {
+            "ep_heal_scale": 1.13
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Solidly Grounded",
+          "description": "<$ba.dt.element>Elemental Injury</> recovery +20% when healing ground units",
+          "blackboard": {
+            "ep_heal_scale": 1.2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Solidly Grounded",
+          "description": "<$ba.dt.element>Elemental Injury</> recovery +23%<@ba.talpu>(+3%)</> when healing ground units",
+          "blackboard": {
+            "ep_heal_scale": 1.23
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_chnut",
       "moduleName": "Chestnut's Badge",
-      "desc": "Operator Chestnut has demonstrated a remarkable aptitude for wide-range healing in tandem with remedying Operators of their accrued Elemental Injurys.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Wandering Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Chestnut has demonstrated a remarkable aptitude for wide-range healing in tandem with remedying Operators of their accrued Elemental Injurys.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Wandering Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_chnut",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_chnut",
       "moduleName": "Ground Journey Commemorative Light",
-      "desc": "A shard of Kjerag ice crystal. Chestnut found himself comfortably seated in a baby carrier on a burdenbeast, snugly wrapped in a coat he 'rented' from a shopkeeper. Well, the smallest size fit him like a trailing robe, prompting the generous shopkeeper to let him keep it for free. Upon reaching the summit at dawn, golden sunlight filtered through the ice crystal onto his face. Lifted high by the jubilant crowd, he basked in their cheers.\nA piece of Rim Billiton pyrite. Coming to observe the geysers, Chestnut was greeted with an unexpected subterranean eruption followed by a mine collapse. Amid the chaos, he pushed through the fleeing masses, brandishing his medical license as he advanced against the current. After a long night of aid, he declined the grimy coins offered by the grateful miners, accepting instead a pristine piece of pyrite.\nA fossilized tree root from Sami. Traveling aimlessly to the far north, Chestnut clutched the fossil and sought a local diviner. They interpreted the ancient tree root, hidden for millennia, to say: 'The expansive land surpasses your wildest dreams. Never cease your journey.'\nAn uncut jade from Yan. At a bustling food stall, Chestnut used money pawned from the jade to treat two feuding groups of youths to local delicacies. Post-meal, the young men reconciled, chipped in for the jade back. If only all conflicts could resolve so straightforwardly, thought Chestnut, wishing to heal rather than witness needless strife.\nA chunk of amber. In Columbia, Chestnut stumbled upon a piece of amber encasing an insect. Earthspirit and Eyjafjalla scrutinized it, revealing that the creature hailed from Sargon, mystified at its presence in Columbia. They stood on the Rhodes Island landship, traversing the desert towards Sargon's boundless sands.\nChestnut pocketed the amber, realizing it was time to return home.\nBack underground, he revisited the familiar stone falls. Clumps of fluorescent mushrooms adorned the moist rock faces. Chestnut stood on his toes, measuring himself against the fungi. Little heads clustered around, eager for tales of his surface stories.\nA line of ore lamps shed gentle light on curious gazes, reminiscent of his childhood days, though now he was the storyteller. Chestnut grinned.\n'Every one of these minerals come from distinct landscapes. Which story would you like to hear first?'"
+      "desc": "A shard of Kjerag ice crystal. Chestnut found himself comfortably seated in a baby carrier on a burdenbeast, snugly wrapped in a coat he 'rented' from a shopkeeper. Well, the smallest size fit him like a trailing robe, prompting the generous shopkeeper to let him keep it for free. Upon reaching the summit at dawn, golden sunlight filtered through the ice crystal onto his face. Lifted high by the jubilant crowd, he basked in their cheers.\nA piece of Rim Billiton pyrite. Coming to observe the geysers, Chestnut was greeted with an unexpected subterranean eruption followed by a mine collapse. Amid the chaos, he pushed through the fleeing masses, brandishing his medical license as he advanced against the current. After a long night of aid, he declined the grimy coins offered by the grateful miners, accepting instead a pristine piece of pyrite.\nA fossilized tree root from Sami. Traveling aimlessly to the far north, Chestnut clutched the fossil and sought a local diviner. They interpreted the ancient tree root, hidden for millennia, to say: 'The expansive land surpasses your wildest dreams. Never cease your journey.'\nAn uncut jade from Yan. At a bustling food stall, Chestnut used money pawned from the jade to treat two feuding groups of youths to local delicacies. Post-meal, the young men reconciled, chipped in for the jade back. If only all conflicts could resolve so straightforwardly, thought Chestnut, wishing to heal rather than witness needless strife.\nA chunk of amber. In Columbia, Chestnut stumbled upon a piece of amber encasing an insect. Earthspirit and Eyjafjalla scrutinized it, revealing that the creature hailed from Sargon, mystified at its presence in Columbia. They stood on the Rhodes Island landship, traversing the desert towards Sargon's boundless sands.\nChestnut pocketed the amber, realizing it was time to return home.\nBack underground, he revisited the familiar stone falls. Clumps of fluorescent mushrooms adorned the moist rock faces. Chestnut stood on his toes, measuring himself against the fungi. Little heads clustered around, eager for tales of his surface stories.\nA line of ore lamps shed gentle light on curious gazes, reminiscent of his childhood days, though now he was the storyteller. Chestnut grinned.\n'Every one of these minerals come from distinct landscapes. Which story would you like to hear first?'",
+      "typeIcon": "wdm-x",
+      "uniEquipIcon": "uniequip_002_chnut",
+      "typeName1": "WDM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_chnut_1",
+        "uniequip_002_chnut_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30103",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30023",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<$ba.dt.element>Elemental Injury</> recovery +25% when healing ground units",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Solidly Grounded",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<$ba.dt.element>Elemental Injury</> recovery +28%<@ba.talpu>(+3%)</> when healing ground units",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Solidly Grounded",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<$ba.dt.element>Elemental Injury</> recovery +27% when healing ground units",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Solidly Grounded",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.27,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<$ba.dt.element>Elemental Injury</> recovery +30%<@ba.talpu>(+3%)</> when healing ground units",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Solidly Grounded",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1083,5 +1627,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

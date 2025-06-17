@@ -151,6 +151,7 @@
       "cost": 23
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_010_chen#1",
@@ -727,21 +728,926 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +23",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 50,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Scolding",
+          "description": "Every 5 seconds when deployed, restores 1 Skill Point to all deployed allies that have an ATK Recovery or DEF Recovery skill.",
+          "blackboard": {
+            "interval": 5,
+            "sp": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Scolding",
+          "description": "Every 4 seconds when deployed, restores 1 Skill Point to all deployed allies that have an ATK Recovery or DEF Recovery skill.",
+          "blackboard": {
+            "interval": 4,
+            "sp": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Blade Art",
+          "description": "ATK +5%; DEF +5%; Physical Dodge +10%",
+          "blackboard": {
+            "atk": 0.05,
+            "def": 0.05,
+            "prob": 0.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Blade Art",
+          "description": "ATK +6% <@ba.talpu>(+1%)</>; DEF +6% <@ba.talpu>(+1%)</>; Physical Dodge +13% <@ba.talpu>(+3%)</>",
+          "blackboard": {
+            "atk": 0.06,
+            "def": 0.06,
+            "prob": 0.13
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_chen",
       "moduleName": "Ch’en’s Badge",
-      "desc": "Operator Ch'en has demonstrated a remarkable aptitude for inflicting multistage damage to the enemy in close-quarters combat.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Swordmaster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Ch'en has demonstrated a remarkable aptitude for inflicting multistage damage to the enemy in close-quarters combat.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Swordmaster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_chen",
       "moduleName": "Rhodes Island Standard Combat Sword",
-      "desc": "7th of July, clear. On her birthday, she was excited to show Wei Yenwu the unsheathing, but couldn't find a trace of him anywhere. After three days, she waited no longer.\n13th of May, cloudy. She cut down a thirty-year-old tree in the courtyard with Tearrender, smashing the roof in. Wei Yenwu did not appear, and merely sent someone to plant a new tree. She never hoped for Wei Yenwu's acknowledgement again.\n1st of January, heavy rain. On a New Year's visit, in the downpour, she saw an injustice on her way to the slums, struck out in anger, and took fifteen on her own. In this moment of mortality, she fled into the night by her hilted sword, harming seven, repulsing eight. When she landed atop, Wei Yenwu made a rare appearance, saw the sword marks, and gave her a single look before leaving. She's forgotten why she struck out at the time, but will never forget the disappointment in that look.\n25th of December, clear. Acted in bravery while heading home from the Royal Guard Academy, totally fearless, slashing grand and bold, sparing as called for. She was high on spirit, believed she could hew away all injustice in the land.\n30th of July, cloudy. At the cost of five days unconscious, let out Shadowless, ultimately cutting down a major fugitive. Lungmen's Ch'en Hui-chieh, shining in prominence. After waking up, Chi Xiao was placed by her bedside, and Wei Yenwu hadn't once come to visit her.\n13th of August, overcast. Midway pursuing an Infected criminal, was eager to strike out with Chi Xiao. Chi Xiao did not budge one hair. Subsequently, in this moment of mortality, inspiration struck, Chi Xiao was unsheathed, and cut half a subterranean garage down. She sought Wei Yenwu to find out why Chi Xiao had and hadn't, but Wei Yenwu did not meet her.\n30th of September, clear. Chi Xiao was unsheathed a second time, cut open a treasury door, and saved the hostages within. She began to understand, Chi Xiao was a sword of will. She thought she had always done more than enough, but had in actuality done too little. She had to be faster, and mightier.\n7th of July, cloudy. On her birthday, over a decade coming, Wei Yenwu asked for the first time to see her swordplay. She condensed all she'd learned, and made an incomplete Cloudsplitter her final examination's answer. Wei Yenwu did not comment.\n1st of January, clear. Left Lungmen together with Rhodes Island. From here on forth, Chi Xiao will rarely be unsheathed."
+      "desc": "7th of July, clear. On her birthday, she was excited to show Wei Yenwu the unsheathing, but couldn't find a trace of him anywhere. After three days, she waited no longer.\n13th of May, cloudy. She cut down a thirty-year-old tree in the courtyard with Tearrender, smashing the roof in. Wei Yenwu did not appear, and merely sent someone to plant a new tree. She never hoped for Wei Yenwu's acknowledgement again.\n1st of January, heavy rain. On a New Year's visit, in the downpour, she saw an injustice on her way to the slums, struck out in anger, and took fifteen on her own. In this moment of mortality, she fled into the night by her hilted sword, harming seven, repulsing eight. When she landed atop, Wei Yenwu made a rare appearance, saw the sword marks, and gave her a single look before leaving. She's forgotten why she struck out at the time, but will never forget the disappointment in that look.\n25th of December, clear. Acted in bravery while heading home from the Royal Guard Academy, totally fearless, slashing grand and bold, sparing as called for. She was high on spirit, believed she could hew away all injustice in the land.\n30th of July, cloudy. At the cost of five days unconscious, let out Shadowless, ultimately cutting down a major fugitive. Lungmen's Ch'en Hui-chieh, shining in prominence. After waking up, Chi Xiao was placed by her bedside, and Wei Yenwu hadn't once come to visit her.\n13th of August, overcast. Midway pursuing an Infected criminal, was eager to strike out with Chi Xiao. Chi Xiao did not budge one hair. Subsequently, in this moment of mortality, inspiration struck, Chi Xiao was unsheathed, and cut half a subterranean garage down. She sought Wei Yenwu to find out why Chi Xiao had and hadn't, but Wei Yenwu did not meet her.\n30th of September, clear. Chi Xiao was unsheathed a second time, cut open a treasury door, and saved the hostages within. She began to understand, Chi Xiao was a sword of will. She thought she had always done more than enough, but had in actuality done too little. She had to be faster, and mightier.\n7th of July, cloudy. On her birthday, over a decade coming, Wei Yenwu asked for the first time to see her swordplay. She condensed all she'd learned, and made an incomplete Cloudsplitter her final examination's answer. Wei Yenwu did not comment.\n1st of January, clear. Left Lungmen together with Rhodes Island. From here on forth, Chi Xiao will rarely be unsheathed.",
+      "typeIcon": "swo-x",
+      "uniEquipIcon": "uniequip_002_chen",
+      "typeName1": "SWO",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_chen_1",
+        "uniequip_002_chen_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Deals <@ba.vup>{value:0%}</> more damage with skills",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Deals <@ba.vup>{value:0%}</> more damage with skills",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Every 3 seconds when deployed, restores 1 SP to all deployed allies that have an ATK Recovery or DEF Recovery skill.",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Scolding",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Deals <@ba.vup>{value:0%}</> more damage with skills",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Every 3 seconds when deployed, restores 1 SP to all deployed allies that have an ATK Recovery or DEF Recovery skill; Ch'en recovers 1 additional SP to herself",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Scolding",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_chen",
       "moduleName": "Good Old School Days",
-      "desc": "The scars on the earth came blitzing in from the horizon, striking true at the Victorian-style complex. The buildings are like a forest torn apart by a whirlwind, collapsed in a radius surrounding a singular point. In these ruins of the Empire, two figures turn over a toppled stele, attempting to find higher ground.\n'How long has this place been empty?' Ch'en stands atop the rubble and looks into the distance. The names on the stele behind her once stood for glory, now all but worn away.\nBagpipe's voice comes from somewhere below. 'This school buildin's been abandoned since the war broke out. All the students who didn't complete their course yet got sent off to new campuses, finished the rest out there... Chenchen, that's our old trainin' grounds up in front. You remember?'\n'Especially well. I feel like my time as a student was defined by missing out on things. The moment I graduated, they finished repairing the roads, <i>and</i> the training grounds.'\nThe training grounds have been blown by the shockwave into a plate of jagged protrusions. Ch'en picks up a stone, flings it into a shrub sticking out of a crack in the plate, and a fowlbeast hiding within flies off for somewhere far away, screeching and cawing all the while.\n'Things were good enough as is, back then.' Bagpipe's voice comes in close as she stops and stands by Ch'en's ear.\n'True. It was probably the simplest time of my life. I didn't have all these issues weighing on my mind, I just had to focus purely on training and studying.'\n'That's what drove you? You trained like a maniac every day, got As on every standard subject and all.' Bagpipe clasps her hands on Ch'en's shoulders, and gently rocks back and forth.\n'After I returned, I realized just how many things couldn't be solved with swords. There were times I felt far too insignificant, and that even though I worked hard, I couldn't change all that much—sometimes, taking out the enemy doesn't do a thing to address the problem.' Ch'en shakes her head, as if trying to throw her tangled mess of feelings about the past straight out of her brain.\nThe two of them head up a steep slope. The flowerbed is still where they remember it.\nHalf of the logo of the once-eminent Royal Guard Academy is submerged in the mud, the other half resting against a fractured stone pillar. Sunset spills across, the light pouring over the symbol now mottled with rust, and what remaining metallic shine there is speaks to the place's former glory.\n'It's all changed. Victoria's changed too, hasn't it?' Ch'en mumbles to herself, staring at the crest.\n'Some people haven't changed. I went to go visit Instructor Tyrell a few days ago 'cause I knew you were comin'. You were gone in such a hurry back then, you just left all your papers and stuff in the dorms—she's been keepin' them safe all these years. All this is proof of you passin' your studies. Oh, aye, and this too!'\nBagpipe fishes out a stack of documents from her bag, as well as a wooden sword.\n'Here's the trainin' sword you used back then. Was meant to go back, technically speakin', but you did so smashin' the instructors were goin' to give you it, y'know, as a surprise for you...'\n'Give her my thanks. I left too quickly...'\n'At least you've come back now. So many of our year never have, even after all this time.'\nThe two fall silent.\n'Where do you think you'll be in ten years?'\n'Who knows? We should be heading back soon. There's still a lot to do.' Ch'en gazes into the distance, off in the direction of Lungmen. 'They arranged everything for me, whether it was going to this school or leaving it. Now, I'm going to go back by myself.'"
+      "desc": "The scars on the earth came blitzing in from the horizon, striking true at the Victorian-style complex. The buildings are like a forest torn apart by a whirlwind, collapsed in a radius surrounding a singular point. In these ruins of the Empire, two figures turn over a toppled stele, attempting to find higher ground.\n'How long has this place been empty?' Ch'en stands atop the rubble and looks into the distance. The names on the stele behind her once stood for glory, now all but worn away.\nBagpipe's voice comes from somewhere below. 'This school buildin's been abandoned since the war broke out. All the students who didn't complete their course yet got sent off to new campuses, finished the rest out there... Chenchen, that's our old trainin' grounds up in front. You remember?'\n'Especially well. I feel like my time as a student was defined by missing out on things. The moment I graduated, they finished repairing the roads, <i>and</i> the training grounds.'\nThe training grounds have been blown by the shockwave into a plate of jagged protrusions. Ch'en picks up a stone, flings it into a shrub sticking out of a crack in the plate, and a fowlbeast hiding within flies off for somewhere far away, screeching and cawing all the while.\n'Things were good enough as is, back then.' Bagpipe's voice comes in close as she stops and stands by Ch'en's ear.\n'True. It was probably the simplest time of my life. I didn't have all these issues weighing on my mind, I just had to focus purely on training and studying.'\n'That's what drove you? You trained like a maniac every day, got As on every standard subject and all.' Bagpipe clasps her hands on Ch'en's shoulders, and gently rocks back and forth.\n'After I returned, I realized just how many things couldn't be solved with swords. There were times I felt far too insignificant, and that even though I worked hard, I couldn't change all that much—sometimes, taking out the enemy doesn't do a thing to address the problem.' Ch'en shakes her head, as if trying to throw her tangled mess of feelings about the past straight out of her brain.\nThe two of them head up a steep slope. The flowerbed is still where they remember it.\nHalf of the logo of the once-eminent Royal Guard Academy is submerged in the mud, the other half resting against a fractured stone pillar. Sunset spills across, the light pouring over the symbol now mottled with rust, and what remaining metallic shine there is speaks to the place's former glory.\n'It's all changed. Victoria's changed too, hasn't it?' Ch'en mumbles to herself, staring at the crest.\n'Some people haven't changed. I went to go visit Instructor Tyrell a few days ago 'cause I knew you were comin'. You were gone in such a hurry back then, you just left all your papers and stuff in the dorms—she's been keepin' them safe all these years. All this is proof of you passin' your studies. Oh, aye, and this too!'\nBagpipe fishes out a stack of documents from her bag, as well as a wooden sword.\n'Here's the trainin' sword you used back then. Was meant to go back, technically speakin', but you did so smashin' the instructors were goin' to give you it, y'know, as a surprise for you...'\n'Give her my thanks. I left too quickly...'\n'At least you've come back now. So many of our year never have, even after all this time.'\nThe two fall silent.\n'Where do you think you'll be in ten years?'\n'Who knows? We should be heading back soon. There's still a lot to do.' Ch'en gazes into the distance, off in the direction of Lungmen. 'They arranged everything for me, whether it was going to this school or leaving it. Now, I'm going to go back by myself.'",
+      "typeIcon": "swo-y",
+      "uniEquipIcon": "uniequip_003_chen",
+      "typeName1": "SWO",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_chen_1",
+        "uniequip_003_chen_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 52,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 68,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 36,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +11%, DEF +11%, Physical dodge +15%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Blade Art",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.11,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.11,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +12% <@ba.talpu>(+1%)</>, DEF +12% <@ba.talpu>(+1%)</>, Physical dodge +18% <@ba.talpu>(+3%)</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Blade Art",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 42,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +15%, DEF +15%, Physical dodge +18%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Blade Art",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +16% <@ba.talpu>(+1%)</>, DEF +16% <@ba.talpu>(+1%)</>, Physical dodge +21% <@ba.talpu>(+3%)</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Blade Art",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.16,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.16,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.21,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1195,5 +2101,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -169,6 +169,36 @@
       "cost": 20
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@ability_range_radius",
+            "value": 1,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "attack@atk_scale_2",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "攻击使目标周围的其他敌人受到相当于攻击力<@ba.kw>{attack@atk_scale_2:0%}</>的<@ba.kw>群体</>物理伤害",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4058_pepe#1",
@@ -747,16 +777,692 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+35",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 35,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 45,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "往昔传承",
+          "description": "技能期间每击倒1名敌人，技能结束时获得1点技力，至多回复10点",
+          "blackboard": [
+            {
+              "key": "sp",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "max_sp",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "往昔传承",
+          "description": "技能期间每击倒1名敌人，技能结束时获得1点技力，至多回复13<@ba.talpu>（+3）</>点",
+          "blackboard": [
+            {
+              "key": "sp",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "max_sp",
+              "value": 13,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "往昔传承",
+          "description": "技能期间每击倒1名敌人，技能结束时获得1点技力，至多回复14点",
+          "blackboard": [
+            {
+              "key": "sp",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "max_sp",
+              "value": 14,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "往昔传承",
+          "description": "技能期间每击倒1名敌人，技能结束时获得1点技力，至多回复17<@ba.talpu>（+3）</>点",
+          "blackboard": [
+            {
+              "key": "sp",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "max_sp",
+              "value": 17,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "弥漫莲香",
+          "description": "在场时，所有【近卫】干员的攻击力+16%",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.16,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "2",
+          "name": "弥漫莲香",
+          "description": "在场时，所有【近卫】干员的攻击力+20%<@ba.talpu>（+4%）</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_pepe",
       "moduleName": "佩佩证章",
-      "desc": "干员佩佩擅长近距离作战并造成大范围物理伤害\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使撼地者职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员佩佩擅长近距离作战并造成大范围物理伤害\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使撼地者职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_pepe",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_pepe",
       "moduleName": "晴雨",
-      "desc": "佩佩抱起双臂，厚重的窗帘垂在窗边，底端的布微不可察地动了下，随即恢复平静。\n“你输了......我找到你了。”\n叹口气，佩佩径直走上前掀开窗帘，一只云兽探出头来，跳下窗台踩着她的脚离开。\n“你输了......我不在那里。”\n墙角的柜子里传来动静，柜门打开，一个男孩走了出来。\n“你不该躲在母亲的房间，父亲知道了会生气的。”\n“才不会，对着我的脸他只会沉默和叹气，更何况有时候他也会偷偷躲到这里来。”\n“咱们还真是一家人......你赢了，想要什么？”\n男孩沉默地思考，扣了扣手指，然后回答——\n“妈妈的香水在你那里吗？”\n“想都别想，那是她留给我的。”\n“有两瓶，至少分给我一瓶。”\n“那可是一对，怎么可能分开来？”\n“......好吧，她从没抱过我，我不知道她闻起来是什么样的......我只是有些好奇。”\n看见那张酷似母亲的面庞露出惆怅的表情，佩佩陷入回忆与沉默。\n她不想告诉弟弟，数年过去，瓶中香水如今早已挥发，只剩下两个空空的香水瓶摆在抽屉里。\n她也不想告诉他，自己也记不清母亲闻起来是什么味道了，留在她脑海里的气味也随着岁月挥发干净了。\n如果还有什么能提醒她和母亲相依的日子有多美好，就只剩下眼前这张脸了。\n“母亲......还给过我一对天气瓶，我分给你一个好不好？”\n“嗯......如果天气有变化，侍女会告诉我。”\n“别蹬鼻子上脸，不要就算了。”\n男孩噘起嘴，就在佩佩以为他又要抱怨些什么时，他却展露出灿烂的笑容，凑上前来在她脸侧落下一个响亮的吻。\n“你最好了，姐姐。”\n窗外正在下雨，瓶中的溶液朦胧，悬浮着小的星状结晶。\n佩佩抱起双臂，侍女安静地站在她的身边，一只云兽在她两脚间蹭来蹭去。\n“他走的时候没带上这个天气瓶吗？”\n侍女沉默片刻，随后开口。\n“塞尼德少爷认为......这和您的天气瓶是一对，不应该分开来。”\n佩佩叹口气，看向侍女。\n“那他带走什么了？”\n“几件衣服、几本书、几支笔，还有......\n“还有一幅您的肖像。”"
+      "desc": "佩佩抱起双臂，厚重的窗帘垂在窗边，底端的布微不可察地动了下，随即恢复平静。\n“你输了......我找到你了。”\n叹口气，佩佩径直走上前掀开窗帘，一只云兽探出头来，跳下窗台踩着她的脚离开。\n“你输了......我不在那里。”\n墙角的柜子里传来动静，柜门打开，一个男孩走了出来。\n“你不该躲在母亲的房间，父亲知道了会生气的。”\n“才不会，对着我的脸他只会沉默和叹气，更何况有时候他也会偷偷躲到这里来。”\n“咱们还真是一家人......你赢了，想要什么？”\n男孩沉默地思考，扣了扣手指，然后回答——\n“妈妈的香水在你那里吗？”\n“想都别想，那是她留给我的。”\n“有两瓶，至少分给我一瓶。”\n“那可是一对，怎么可能分开来？”\n“......好吧，她从没抱过我，我不知道她闻起来是什么样的......我只是有些好奇。”\n看见那张酷似母亲的面庞露出惆怅的表情，佩佩陷入回忆与沉默。\n她不想告诉弟弟，数年过去，瓶中香水如今早已挥发，只剩下两个空空的香水瓶摆在抽屉里。\n她也不想告诉他，自己也记不清母亲闻起来是什么味道了，留在她脑海里的气味也随着岁月挥发干净了。\n如果还有什么能提醒她和母亲相依的日子有多美好，就只剩下眼前这张脸了。\n“母亲......还给过我一对天气瓶，我分给你一个好不好？”\n“嗯......如果天气有变化，侍女会告诉我。”\n“别蹬鼻子上脸，不要就算了。”\n男孩噘起嘴，就在佩佩以为他又要抱怨些什么时，他却展露出灿烂的笑容，凑上前来在她脸侧落下一个响亮的吻。\n“你最好了，姐姐。”\n窗外正在下雨，瓶中的溶液朦胧，悬浮着小的星状结晶。\n佩佩抱起双臂，侍女安静地站在她的身边，一只云兽在她两脚间蹭来蹭去。\n“他走的时候没带上这个天气瓶吗？”\n侍女沉默片刻，随后开口。\n“塞尼德少爷认为......这和您的天气瓶是一对，不应该分开来。”\n佩佩叹口气，看向侍女。\n“那他带走什么了？”\n“几件衣服、几本书、几支笔，还有......\n“还有一幅您的肖像。”",
+      "typeIcon": "ham-x",
+      "uniEquipIcon": "uniequip_002_pepe",
+      "typeName1": "HAM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_pepe_1",
+        "uniequip_002_pepe_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 87,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "溅射范围内有大于或等于3个敌人时，使当次攻击力提升至<@ba.kw>{atk_scale_e:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@ability_range_radius",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_e",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 102,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "溅射范围内有大于或等于3个敌人时，使当次攻击力提升至<@ba.kw>{atk_scale_e:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@ability_range_radius",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_e",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能期间每击倒1名敌人，技能结束时获得2点技力，至多回复14点",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "往昔传承",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_sp",
+                      "value": 14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能期间每击倒1名敌人，技能结束时获得2点技力，至多回复17<@ba.talpu>（+3）</>点",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "往昔传承",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_sp",
+                      "value": 17,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 113,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "溅射范围内有大于或等于3个敌人时，使当次攻击力提升至<@ba.kw>{atk_scale_e:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@ability_range_radius",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_e",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能期间每击倒1名敌人，技能结束时获得2点技力，至多回复17点",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "往昔传承",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_sp",
+                      "value": 17,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能期间每击倒1名敌人，技能结束时获得2点技力，至多回复20<@ba.talpu>（+3）</>点",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "往昔传承",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_sp",
+                      "value": 20,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1210,5 +1916,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

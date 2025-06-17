@@ -152,6 +152,7 @@
       "cost": 10
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_250_phatom#1",
@@ -740,26 +741,1384 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+22",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 22,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-2秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -2,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "最大HP+130",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 130,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "鏡映虚影",
+          "description": "「鏡映虚影」を配置可能。虚影は本体と同じスキルを持ち、再配置時間は本体と別に計算する",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10007_phatom_twin",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "鏡映虚影",
+          "description": "より強力な「鏡映虚影」を配置可能。虚影は本体と同じスキルを持ち、再配置時間は本体と別に計算する",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10007_phatom_twin",
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "#",
+          "name": "虚影の操演者",
+          "description": "虚影の再配置時間-10秒",
+          "blackboard": [],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_phatom",
       "moduleName": "ファントムの記章",
-      "desc": "ファントムは繰り返し戦場に切り込む戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、執行者の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ファントムは繰り返し戦場に切り込む戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、執行者の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_phatom",
       "moduleName": "レディのフェルト細工",
-      "desc": "役者はいつも、黄昏時に街のとある通りへ訪れ、曲がり角へと向かう。\nそこは人通りも少なく静かで、角の売店が店頭に立てたパラソルが目を引く。夕陽の残照はパラソルに遮られながらも、デコボコしたタイルに暖色の濃淡を作っていた。\nこのところ彼は、仕事を終え稽古の予定もないときに、他人の視線をかいくぐり、頻繁にここに訪れていた。\n舞台を降りた彼は静かな人で、フルーティなお茶を好む。ティーカップを手に、誰もいない黄金色の通りを眺めながら、彼はわずかに目を細めた。シャツの襟とネクタイで隠れてはいるが、近頃はっきりと目視できるようになった喉元の源石結晶が、チクチクと痛む。\n彼はふと、指導の時以外はなかなか姿を見せない劇団長が、しばらく前に言ったことを思い出した。\n劇団長はどこか賞賛するように、君が正式に仲間に加わる日を心待ちにしていると語った。\nそして、何もかも解き放ち、思う存分舞台を演じてほしいと言っていた。\n――それは、君だけのステージになるだろう、と。\n時折、役者はどこから湧いて来るのかもわからない焦燥感にかられることがある。しかし、ヴィクトリアの薄霧のような憂鬱さに包まれながら、止めどなく溢れる喜びがあることも、はっきりと認識している。\nありきたりな舞台ではない。移動式劇団が演じてきた舞台とも、彼がこれまで接してきたどの舞台とも異なる。\nこれは彼の舞台であり、彼の人生であり、運命でもあるのだ……\n\n「にゃあ。」\n黒い猫が街角に姿を見せた。これほど美しい生き物は、そうそうお目にかかれるものではない。それらはまるで何かの伝説のように、気ままに姿を現すのだ。まさに今、この黒猫が街角に現れたように。\n役者の思考は黒猫に遮られた。猫を捉えた瞳の奥から不穏な火照りは霧散し、彼の表情が和らいだ。軽やかに歩み寄る黒猫を眺めていると、いつの間にかわずかに微笑んでいた。\nこのところ役者はいつも、街のこの通りへ訪れ、曲がり角へと向かう。そこは人通りも少なく静かで、ハーブティの味はいまいちだが、よく黒猫がやってくる。威風堂々と金色の夕暮れを踏みしめながら、悠々と姿を見せるのだ。\n「にゃーお。」\n黒猫は優雅に尻尾をくねらせながら、彼の近くに寄ってきた。\n役者は恐る恐る手を伸ばした。黒猫は彼を一睨みしたが、耳を震わせただけで、それを拒みはしなかった。彼はそのまま、毛の流れにそって黒猫の柔らかい毛並みを整えた。猫の身体に浮いた夕暮れが、彼の指先を染めた。\n瞳の奥から、微笑みが他の感情を呑み込んで広がっていくようだった。まだ口にしていないが、この特別な友人にはとうに名前を付けてある。\nこれからも黒猫が訪ねてきてくれるのならば、こう尋ねてみようと決めているのだ。「一緒に来るかい？」と。"
+      "desc": "役者はいつも、黄昏時に街のとある通りへ訪れ、曲がり角へと向かう。\nそこは人通りも少なく静かで、角の売店が店頭に立てたパラソルが目を引く。夕陽の残照はパラソルに遮られながらも、デコボコしたタイルに暖色の濃淡を作っていた。\nこのところ彼は、仕事を終え稽古の予定もないときに、他人の視線をかいくぐり、頻繁にここに訪れていた。\n舞台を降りた彼は静かな人で、フルーティなお茶を好む。ティーカップを手に、誰もいない黄金色の通りを眺めながら、彼はわずかに目を細めた。シャツの襟とネクタイで隠れてはいるが、近頃はっきりと目視できるようになった喉元の源石結晶が、チクチクと痛む。\n彼はふと、指導の時以外はなかなか姿を見せない劇団長が、しばらく前に言ったことを思い出した。\n劇団長はどこか賞賛するように、君が正式に仲間に加わる日を心待ちにしていると語った。\nそして、何もかも解き放ち、思う存分舞台を演じてほしいと言っていた。\n――それは、君だけのステージになるだろう、と。\n時折、役者はどこから湧いて来るのかもわからない焦燥感にかられることがある。しかし、ヴィクトリアの薄霧のような憂鬱さに包まれながら、止めどなく溢れる喜びがあることも、はっきりと認識している。\nありきたりな舞台ではない。移動式劇団が演じてきた舞台とも、彼がこれまで接してきたどの舞台とも異なる。\nこれは彼の舞台であり、彼の人生であり、運命でもあるのだ……\n\n「にゃあ。」\n黒い猫が街角に姿を見せた。これほど美しい生き物は、そうそうお目にかかれるものではない。それらはまるで何かの伝説のように、気ままに姿を現すのだ。まさに今、この黒猫が街角に現れたように。\n役者の思考は黒猫に遮られた。猫を捉えた瞳の奥から不穏な火照りは霧散し、彼の表情が和らいだ。軽やかに歩み寄る黒猫を眺めていると、いつの間にかわずかに微笑んでいた。\nこのところ役者はいつも、街のこの通りへ訪れ、曲がり角へと向かう。そこは人通りも少なく静かで、ハーブティの味はいまいちだが、よく黒猫がやってくる。威風堂々と金色の夕暮れを踏みしめながら、悠々と姿を見せるのだ。\n「にゃーお。」\n黒猫は優雅に尻尾をくねらせながら、彼の近くに寄ってきた。\n役者は恐る恐る手を伸ばした。黒猫は彼を一睨みしたが、耳を震わせただけで、それを拒みはしなかった。彼はそのまま、毛の流れにそって黒猫の柔らかい毛並みを整えた。猫の身体に浮いた夕暮れが、彼の指先を染めた。\n瞳の奥から、微笑みが他の感情を呑み込んで広がっていくようだった。まだ口にしていないが、この特別な友人にはとうに名前を付けてある。\nこれからも黒猫が訪ねてきてくれるのならば、こう尋ねてみようと決めているのだ。「一緒に来るかい？」と。",
+      "typeIcon": "exe-x",
+      "uniEquipIcon": "uniequip_002_phatom",
+      "typeName1": "EXE",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_phatom_1",
+        "uniequip_002_phatom_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "撤退時に今回の配置時のコストを<@ba.kw>大量に</>返却",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "withdraw_cost_recover_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 62,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "撤退時に今回の配置時のコストを<@ba.kw>大量に</>返却",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "withdraw_cost_recover_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "虚影の再配置時間-14秒",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "虚影の操演者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "再配置時間-14秒",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "虚影の操演者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 73,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "撤退時に今回の配置時のコストを<@ba.kw>大量に</>返却",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "withdraw_cost_recover_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "虚影の再配置時間-16秒",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "虚影の操演者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "再配置時間-16秒",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "虚影の操演者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_phatom",
       "moduleName": "「影のように」",
-      "desc": "死とは何か？\n師匠たちはこう論じる――それはドラマチックで、突発的で、秘め事めいたものである、と。\n登場人物の死は芸術的であり、大抵の場合演目のクライマックスに相当し、人の心をわしづかみにして、物語に引きずり込むものだ。\nそして、観客たちはこう期待する――扇情的で、狂気的で、刺激的で、愉快な死を、と。\n彼らは死の影に潜む物語に魅了されるのだ。\nすべては芸術のために……彼はそう教えられ、そう信じていた。\n師匠たちが幾度も見せてくれた芸術的な死を目の当たりにした時、彼は大いにその死の影に潜む感情を味わうことができた。\n彼は、自分が芸術の申し子であることを知っていた。そうであると信じていた。\n自分は、この舞台のために生まれ落ちたのだと思っていたのだ。\nしかし――\n実際に主役として舞台に立った時、初めて自分のための演目を迎えた時、骨の髄まで刻まれた技術をいかんなく発揮した時、刃の先端が軽やかに血管を切り裂いた時――彼ははっきりと己の考えを理解した。\n死は、それ以外の何物でもないのだ、と。\nそれは芸術的でもなければ、期待が寄せられるものでもなく、ただ、一つの命が消えたことを意味するだけのものだった。\nその瞬間から、すべてが変わってしまった。\nかつて辿り着けようもないほどの高みに見えていた芸術の崇高さは失われ、かつて背負うことを望んだ期待に背中から刺されるような思いをした。\n恩師はもはや恩師ではなく、殺人者としか見えない。\nそう、彼らはただの人殺しであり、彼もまた、それと同じ人殺しなのだ。\n壇上の役者も、客席の観客も、みな人を殺した罪人に過ぎない。\nそしてどのような物語であれ、罪人は罰を受けるべきなのだ。\nそんな彼の思考は、肩に乗る馴染み深い重さによって遮られた。\nそこにいるのは、あの黒猫だ。彼が顔を向ければ、向こうもじっと見返してくる。\n出会った時以来、彼女はこうしてよくそばに現れるようになった。\n時には、彼女がどうやって近づいてきたかすらわからないことすらある。\n今夜は彼にとって、とても重要な夜だった。それゆえ、彼は彼女に訊ねた。\n「私と来てくれるか？」\n黒猫は少し毛繕いをしてから、今のは下らない質問だと言わんばかりにあくびをした。\n「君に名前をつけるとしよう。クリスティーンというのはどうだ？」\n「にゃあ。」\n黒猫――いや、ミス・クリスティーンはどうやら満足したらしかった。\n彼女はひょいと窓枠に飛び乗ると、彼のほうを振り返ってくる。\n理由はわからないが、ミス・クリスティーンは自分を気に掛けてくれているようだと彼は感じた。\n「心配には及ばない。」\nそう、もはや心配は無用だった。\n彼は決心したのだ。\n幕がゆっくりと開かれる。シャンデリアは舞台中央の天井に高く吊るされ、見下ろす客席は満席で、誰もが演目を待ち望んでいた。\n彼は舞台の中央に向かって歩いていく。\n殺人者への裁きは、正義の怒りによってもたらされることもあれば、罪に対する自責の念によってもたらされることもある。\nしかしどうあれ、その結末は等しく同じだ。\n彼は咳払いをした。\n今宵、死は平等に訪れるだろう。"
+      "desc": "死とは何か？\n師匠たちはこう論じる――それはドラマチックで、突発的で、秘め事めいたものである、と。\n登場人物の死は芸術的であり、大抵の場合演目のクライマックスに相当し、人の心をわしづかみにして、物語に引きずり込むものだ。\nそして、観客たちはこう期待する――扇情的で、狂気的で、刺激的で、愉快な死を、と。\n彼らは死の影に潜む物語に魅了されるのだ。\nすべては芸術のために……彼はそう教えられ、そう信じていた。\n師匠たちが幾度も見せてくれた芸術的な死を目の当たりにした時、彼は大いにその死の影に潜む感情を味わうことができた。\n彼は、自分が芸術の申し子であることを知っていた。そうであると信じていた。\n自分は、この舞台のために生まれ落ちたのだと思っていたのだ。\nしかし――\n実際に主役として舞台に立った時、初めて自分のための演目を迎えた時、骨の髄まで刻まれた技術をいかんなく発揮した時、刃の先端が軽やかに血管を切り裂いた時――彼ははっきりと己の考えを理解した。\n死は、それ以外の何物でもないのだ、と。\nそれは芸術的でもなければ、期待が寄せられるものでもなく、ただ、一つの命が消えたことを意味するだけのものだった。\nその瞬間から、すべてが変わってしまった。\nかつて辿り着けようもないほどの高みに見えていた芸術の崇高さは失われ、かつて背負うことを望んだ期待に背中から刺されるような思いをした。\n恩師はもはや恩師ではなく、殺人者としか見えない。\nそう、彼らはただの人殺しであり、彼もまた、それと同じ人殺しなのだ。\n壇上の役者も、客席の観客も、みな人を殺した罪人に過ぎない。\nそしてどのような物語であれ、罪人は罰を受けるべきなのだ。\nそんな彼の思考は、肩に乗る馴染み深い重さによって遮られた。\nそこにいるのは、あの黒猫だ。彼が顔を向ければ、向こうもじっと見返してくる。\n出会った時以来、彼女はこうしてよくそばに現れるようになった。\n時には、彼女がどうやって近づいてきたかすらわからないことすらある。\n今夜は彼にとって、とても重要な夜だった。それゆえ、彼は彼女に訊ねた。\n「私と来てくれるか？」\n黒猫は少し毛繕いをしてから、今のは下らない質問だと言わんばかりにあくびをした。\n「君に名前をつけるとしよう。クリスティーンというのはどうだ？」\n「にゃあ。」\n黒猫――いや、ミス・クリスティーンはどうやら満足したらしかった。\n彼女はひょいと窓枠に飛び乗ると、彼のほうを振り返ってくる。\n理由はわからないが、ミス・クリスティーンは自分を気に掛けてくれているようだと彼は感じた。\n「心配には及ばない。」\nそう、もはや心配は無用だった。\n彼は決心したのだ。\n幕がゆっくりと開かれる。シャンデリアは舞台中央の天井に高く吊るされ、見下ろす客席は満席で、誰もが演目を待ち望んでいた。\n彼は舞台の中央に向かって歩いていく。\n殺人者への裁きは、正義の怒りによってもたらされることもあれば、罪に対する自責の念によってもたらされることもある。\nしかしどうあれ、その結末は等しく同じだ。\n彼は咳払いをした。\n今宵、死は平等に訪れるだろう。",
+      "typeIcon": "exe-y",
+      "uniEquipIcon": "uniequip_003_phatom",
+      "typeName1": "EXE",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_phatom_1",
+        "uniequip_003_phatom_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "隣接4マス内に味方がいない場合、攻撃力<@ba.kw>+{atk:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "隣接4マス内に味方がいない場合、攻撃力<@ba.kw>+{atk:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "より強力な「鏡映虚影」を配置可能。虚影は本体と同じスキルを持ち、再配置時間は本体と別に計算する。本体と虚影が同時に配置されている場合、それぞれの攻撃力+10%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "鏡映虚影",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10007_phatom_twin",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10007_phatom_twin": [
+              {
+                "key": "max_hp",
+                "value": 100,
+                "valueStr": null
+              },
+              {
+                "key": "atk",
+                "value": 60,
+                "valueStr": null
+              },
+              {
+                "key": "def",
+                "value": 40,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "隣接4マス内に味方がいない場合、攻撃力<@ba.kw>+{atk:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "さらに強力な「鏡映虚影」を配置可能。虚影は本体と同じスキルを持ち、再配置時間は本体と別に計算する。本体と虚影が同時に配置されている場合、それぞれの攻撃力+10%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "鏡映虚影",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10007_phatom_twin",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_004_phatom",
       "moduleName": "ファントムの特別限定記章",
-      "desc": "ファントムは特別の認証許可を得ている。\n外勤部門の決定に基づき\n統合戦略行動において改良戦略で敵に対応することとなる。\n特別に本記章を授与し、\nその証明とする。\n「夜は静かであるべきだ。もしも誰かが手を伸ばしあの赤い緞帳をめくろうとしたら、その手を叩き切ってしまえ。」"
+      "desc": "ファントムは特別の認証許可を得ている。\n外勤部門の決定に基づき\n統合戦略行動において改良戦略で敵に対応することとなる。\n特別に本記章を授与し、\nその証明とする。\n「夜は静かであるべきだ。もしも誰かが手を伸ばしあの赤い緞帳をめくろうとしたら、その手を叩き切ってしまえ。」",
+      "typeIcon": "isw-a",
+      "uniEquipIcon": "uniequip_004_phatom",
+      "typeName1": "ISW",
+      "typeName2": "A",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 37,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<@ba.kw>統合戦略</>において、攻撃時に自身と召喚物の次の再配置時間<@ba.kw>-1</>秒、この効果は召喚物にも適用される",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<@ba.kw>統合戦略</>において、攻撃時に自身と所属するオペレーターの次の再配置時間<@ba.kw>-1</>秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<@ba.kw>統合戦略</>において、攻撃時に自身と召喚物の次の再配置時間<@ba.kw>-1</>秒、この効果は召喚物にも適用される",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<@ba.kw>統合戦略</>において、攻撃時に自身と所属するオペレーターの次の再配置時間<@ba.kw>-1</>秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "より強力な「鏡映虚影」を配置可能。虚影は本体と同じスキルを持ち、再配置時間は本体と別に計算する。<@ba.kw>統合戦略</>において、虚影を配置時、ファントムはもう一度スキルを発動する（スキル2の効果は最大8回まで獲得可能）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "鏡映虚影",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10007_phatom_twin",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<@ba.kw>統合戦略</>において、配置時にファントムにもう一度スキルを発動させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "#",
+                  "name": "鏡映虚影",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 71,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<@ba.kw>統合戦略</>において、攻撃時に自身と召喚物の次の再配置時間<@ba.kw>-1</>秒、この効果は召喚物にも適用される",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<@ba.kw>統合戦略</>において、攻撃時に自身と所属するオペレーターの次の再配置時間<@ba.kw>-1</>秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "respawn_time",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "より強力な「鏡映虚影」を配置可能。虚影は本体と同じスキルを持ち、再配置時間は本体と別に計算する。<@ba.kw>統合戦略</>において、虚影を配置時、残り配置可能数を消費せず、ファントムはもう一度スキルを発動する（スキル2の効果は最大8回まで獲得可能）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "鏡映虚影",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10007_phatom_twin",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<@ba.kw>統合戦略</>において、配置時に配置可能数を消費せず、ファントムにもう一度スキルを発動させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "#",
+                  "name": "鏡映虚影",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1212,6 +2571,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10007_phatom_twin"
   ],
   "patch_info": {}
 }

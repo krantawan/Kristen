@@ -150,6 +150,24 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "ep_heal_ratio",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_473_mberry#1",
@@ -639,16 +657,632 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +19",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 19,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 35,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Helper",
+          "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +6% ATK",
+          "blackboard": {
+            "atk": 0.06
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Helper",
+          "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +7% <@ba.talpu>(+1%)</> ATK",
+          "blackboard": {
+            "atk": 0.07
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Helper",
+          "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +10% ATK",
+          "blackboard": {
+            "atk": 0.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Helper",
+          "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +11% <@ba.talpu>(+1%)</> ATK",
+          "blackboard": {
+            "atk": 0.11
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mberry",
       "moduleName": "Mulberry's Badge",
-      "desc": "Operator Mulberry has demonstrated a remarkable aptitude for wide-range healing in tandem with remedying Operators of their accrued Elemental Injurys.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Wandering Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Mulberry has demonstrated a remarkable aptitude for wide-range healing in tandem with remedying Operators of their accrued Elemental Injurys.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Wandering Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_mberry",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mberry",
       "moduleName": "Serenity Inside",
-      "desc": "Ning-Ning,\nHave you been eating and sleeping well lately? In your last letter, you mentioned often waking up startled at night, which has made us very worried. Your second sister has been transferred to work in Danyan, and she went up the mountain there and picked some nerve-soothing herbs for you. She plans to send them to you via a Messenger—has your address changed recently? If it has, please write back soon to let us know your new address. Or maybe she can ask the Chun-qian team to contact Rhodes Island's office and give the herbs to them. Which way works better for you?\nAs for what you asked about in your last letter, your dad has already looked into it for you. Thankfully no one was hurt in the snowstorm last month. Your dad carried the disaster-prevention pamphlets you sent back and handed them out door-to-door. The teachers at the local school read those pamphlets and even praised your writing, saying your wrist strength has greatly improved. When he told me this, I felt really happy for you, but when the night falls, I still can't help but feel a bit sad. Ning-Ning, my girl, you're far from home now. When you sit at the desk writing and studying until your fingers are all sore, you wouldn't be able to run over to me for a good massage... All I can do is remind you to rest well in my letters. You've always been a smart child, and now you've even learned much about saving lives. I'm sure you know better how to take good care of yourself, right?\nOh, I have a funny story to share with you. The festival is coming up next week, and not only are the kids excited about the rice dumplings and snacks, even Grandma is thrilled. When the weather is nice, she likes to do some needlework on her lounge chair, but her eyesight isn't great, so she always needs help threading the needle. One afternoon, when I got back home from work, she complained to me that she had called for you many times in the morning, but you never came. I didn't know how to explain it to her; it was both funny and a bit sad. I took the afternoon off that day and made two sachets with Grandma. Actually, I've never really sewed anything before, so my stitching came out all crooked—you'll probably recognize which one I made at first glance. Or you can tell it by its smell. I filled it with some dried acanthopanax root, the same herb we used to put under your pillow to help calm your mind. Hang the sachet by your bed and it should give off a gentle scent that might help you sleep better.\nYour dad and I agreed to cooperate on this letter and it was supposed to start with me writing and then your dad finishing it. But he sat there chewing on the end of his pen half the night without writing a single word. With the Messenger arriving at dawn, I decided to just finish it myself. Everything at home is going well, and both your dad and I are doing fine at work. Whenever people talk about you, they always praise how strong and brave you are. Your father and I have read your last letter over and over again.\nIf you have the time, maybe send another letter home?"
+      "desc": "Ning-Ning,\nHave you been eating and sleeping well lately? In your last letter, you mentioned often waking up startled at night, which has made us very worried. Your second sister has been transferred to work in Danyan, and she went up the mountain there and picked some nerve-soothing herbs for you. She plans to send them to you via a Messenger—has your address changed recently? If it has, please write back soon to let us know your new address. Or maybe she can ask the Chun-qian team to contact Rhodes Island's office and give the herbs to them. Which way works better for you?\nAs for what you asked about in your last letter, your dad has already looked into it for you. Thankfully no one was hurt in the snowstorm last month. Your dad carried the disaster-prevention pamphlets you sent back and handed them out door-to-door. The teachers at the local school read those pamphlets and even praised your writing, saying your wrist strength has greatly improved. When he told me this, I felt really happy for you, but when the night falls, I still can't help but feel a bit sad. Ning-Ning, my girl, you're far from home now. When you sit at the desk writing and studying until your fingers are all sore, you wouldn't be able to run over to me for a good massage... All I can do is remind you to rest well in my letters. You've always been a smart child, and now you've even learned much about saving lives. I'm sure you know better how to take good care of yourself, right?\nOh, I have a funny story to share with you. The festival is coming up next week, and not only are the kids excited about the rice dumplings and snacks, even Grandma is thrilled. When the weather is nice, she likes to do some needlework on her lounge chair, but her eyesight isn't great, so she always needs help threading the needle. One afternoon, when I got back home from work, she complained to me that she had called for you many times in the morning, but you never came. I didn't know how to explain it to her; it was both funny and a bit sad. I took the afternoon off that day and made two sachets with Grandma. Actually, I've never really sewed anything before, so my stitching came out all crooked—you'll probably recognize which one I made at first glance. Or you can tell it by its smell. I filled it with some dried acanthopanax root, the same herb we used to put under your pillow to help calm your mind. Hang the sachet by your bed and it should give off a gentle scent that might help you sleep better.\nYour dad and I agreed to cooperate on this letter and it was supposed to start with me writing and then your dad finishing it. But he sat there chewing on the end of his pen half the night without writing a single word. With the Messenger arriving at dawn, I decided to just finish it myself. Everything at home is going well, and both your dad and I are doing fine at work. Whenever people talk about you, they always praise how strong and brave you are. Your father and I have read your last letter over and over again.\nIf you have the time, maybe send another letter home?",
+      "typeIcon": "wdm-x",
+      "uniEquipIcon": "uniequip_002_mberry",
+      "typeName1": "WDM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_mberry_1",
+        "uniequip_002_mberry_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31064",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31084",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +13% ATK",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Helper",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.13,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +14% <@ba.talpu>(+1%)</> ATK",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Helper",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.14,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +15% ATK",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Helper",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +16% <@ba.talpu>(+1%)</> ATK",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Helper",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1110,5 +1744,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

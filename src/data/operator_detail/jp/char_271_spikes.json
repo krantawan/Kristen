@@ -150,6 +150,28 @@
       "cost": 18
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_271_spikes#1",
@@ -631,16 +653,684 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+18",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 18,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 55,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "構造分解",
+          "description": "【ドローン】を優先して攻撃",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "構造分解",
+          "description": "【ドローン】を優先して攻撃。【ドローン】を攻撃時攻撃力+20%",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "構造分解",
+          "description": "【ドローン】を優先して攻撃。【ドローン】を攻撃時攻撃力+23%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.23,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "構造分解",
+          "description": "【ドローン】を優先して攻撃。【ドローン】を攻撃時攻撃力+40%",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "構造分解",
+          "description": "【ドローン】を優先して攻撃。【ドローン】を攻撃時攻撃力+43%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.43,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_spikes",
       "moduleName": "アレーンの記章",
-      "desc": "アレーンは比較的広い範囲で敵を迎え撃つ戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、領主の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "アレーンは比較的広い範囲で敵を迎え撃つ戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、領主の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_spikes",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_spikes",
       "moduleName": "アレーンのノート",
-      "desc": "少年は他人が向けてくる好奇の目を――特に、彼が携帯するノートに向けてくるその視線を、まるで意に介さなかった。\n「センセーが書けって言うからさ。」\nしかしこうした会話の中では、彼は距離を感じさせるようないつもの笑みを浮かべ、心の奥底にある無関心を隠そうともしない。\n「センセーは、もっと記録を取ってほしいみたいなんだよね。」\n彼はまた、知っていた。自分がノートに書いた内容について、他人が陰でどんな噂をしているかを――\n「アレーンのノートって、あいつが殺した敵の名前が書かれてるらしいぞ。ドクターから、死んでいった一人ひとりのことを覚えて、その人たちの価値を理解するように言われてるんだと。」\n「あいつが使ってるインク、自分で調合したすごく強力な毒が含まれてるんだってな。ノートを盗み見した奴らは、全員その毒で……」\n「俺としては、あのノートには絶対人に見せられないようなことが書いてあると思うね。たとえば、人体実験のデータとかさ。この前だって、あいつ捕虜に対して――」\n「あの子はただ人生に悩んでるだけの普通の若者だと思うけどな。きっと、そういう悩める気持ちを日記に綴ってるだけでしょ。」\n周りはそうして好き勝手推測していたが、少年は彼らの言葉を一笑に付した。\n彼は机の前に腰かけると、ノートを開く。\n鋭すぎるナイフでも抜き取るかのように透明な万年筆を手にすると、猛毒を含んでいるかのように色鮮やかな手製のインクにペン先をつける。\n「君には、他人からの指導だけでなく、自分自身の出す答えも必要だ。」\n「君が伝えたいことを、そして自分に伝えてやりたいことを書き残すといい。」\n命を奪う銃。芳香を帯びる毒。おぼろげな声。いつまでも心の奥底に潜む、残酷さと悪意……\n彼がふと我に返ると、ペン先はまたノートを突き破っていた。鮮やかな色彩と、雪のように白い紙は、まるで敵の手足が血にまみれているその時のように混ざり合い、底なしの渦を作り上げていた。\nアレーンはふっと軽く笑うと、なんの躊躇いもなくそのページを破り捨てる。\nそうしてノートを閉じると、懐にしまった。"
+      "desc": "少年は他人が向けてくる好奇の目を――特に、彼が携帯するノートに向けてくるその視線を、まるで意に介さなかった。\n「センセーが書けって言うからさ。」\nしかしこうした会話の中では、彼は距離を感じさせるようないつもの笑みを浮かべ、心の奥底にある無関心を隠そうともしない。\n「センセーは、もっと記録を取ってほしいみたいなんだよね。」\n彼はまた、知っていた。自分がノートに書いた内容について、他人が陰でどんな噂をしているかを――\n「アレーンのノートって、あいつが殺した敵の名前が書かれてるらしいぞ。ドクターから、死んでいった一人ひとりのことを覚えて、その人たちの価値を理解するように言われてるんだと。」\n「あいつが使ってるインク、自分で調合したすごく強力な毒が含まれてるんだってな。ノートを盗み見した奴らは、全員その毒で……」\n「俺としては、あのノートには絶対人に見せられないようなことが書いてあると思うね。たとえば、人体実験のデータとかさ。この前だって、あいつ捕虜に対して――」\n「あの子はただ人生に悩んでるだけの普通の若者だと思うけどな。きっと、そういう悩める気持ちを日記に綴ってるだけでしょ。」\n周りはそうして好き勝手推測していたが、少年は彼らの言葉を一笑に付した。\n彼は机の前に腰かけると、ノートを開く。\n鋭すぎるナイフでも抜き取るかのように透明な万年筆を手にすると、猛毒を含んでいるかのように色鮮やかな手製のインクにペン先をつける。\n「君には、他人からの指導だけでなく、自分自身の出す答えも必要だ。」\n「君が伝えたいことを、そして自分に伝えてやりたいことを書き残すといい。」\n命を奪う銃。芳香を帯びる毒。おぼろげな声。いつまでも心の奥底に潜む、残酷さと悪意……\n彼がふと我に返ると、ペン先はまたノートを突き破っていた。鮮やかな色彩と、雪のように白い紙は、まるで敵の手足が血にまみれているその時のように混ざり合い、底なしの渦を作り上げていた。\nアレーンはふっと軽く笑うと、なんの躊躇いもなくそのページを破り捨てる。\nそうしてノートを閉じると、懐にしまった。",
+      "typeIcon": "lor-y",
+      "uniEquipIcon": "uniequip_002_spikes",
+      "typeName1": "LOR",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_spikes_1",
+        "uniequip_002_spikes_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30043",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31063",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30103",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵が2体以上いる時、攻撃速度<@ba.vup>+12</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 39,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵が2体以上いる時、攻撃速度<@ba.vup>+12</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "【ドローン】を優先して攻撃。【ドローン】を攻撃時攻撃力+50%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "構造分解",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "【ドローン】を優先して攻撃。【ドローン】を攻撃時、攻撃力+53%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "構造分解",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.53,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 185,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵が2体以上いる時、攻撃速度<@ba.vup>+12</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "【ドローン】を優先して攻撃。【ドローン】を攻撃時、攻撃力+55%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "構造分解",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.55,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "【ドローン】を優先して攻撃。【ドローン】を攻撃時、攻撃力+58%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "構造分解",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.58,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1102,5 +1792,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

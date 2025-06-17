@@ -151,6 +151,7 @@
       "cost": 17
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_484_robrta#1",
@@ -640,16 +641,781 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+35",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 35,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 35,
+        "def": 35,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "メイクツール調達",
+          "description": "支援装置「メイクアップマシン」を使用可能（配置時に2個獲得、最大3個まで同時配置可能）、「メイクアップマシン」前方の近距離マスにいる味方1体に防御力+10％の効果と<$ba.shield>シールド</>1枚を付与（15秒継続、防御上昇効果重複不可）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10018_robrta_mach",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "メイクツール調達",
+          "description": "支援装置「メイクアップマシン」を使用可能（配置時に2個獲得、最大3個まで同時配置可能）、「メイクアップマシン」前方の近距離マスにいる味方1体に防御力+13%<@ba.talpu>（+3%）</>の効果と<$ba.shield>シールド</>1枚を付与（15秒継続、防御上昇効果重複不可）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10018_robrta_mach",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "メイクツール調達",
+          "description": "支援装置「メイクアップマシン」を使用可能（配置時に3個獲得、最大3個まで同時配置可能）、「メイクアップマシン」前方の近距離マスにいる味方1体に防御力+20％の効果と<$ba.shield>シールド</>1枚を付与（25秒継続、防御上昇効果重複不可）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10018_robrta_mach",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "メイクツール調達",
+          "description": "支援装置「メイクアップマシン」を使用可能（配置時に3個獲得、最大3個まで同時配置可能）、「メイクアップマシン」前方の近距離マスにいる味方1体に防御力+23%<@ba.talpu>（+3%）</>の効果と<$ba.shield>シールド</>1枚を付与（25秒継続、防御上昇効果重複不可）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10018_robrta_mach",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "メイクツール調達",
+          "description": "支援装置「メイクアップマシン」を使用可能（配置時に3個獲得、最大3個まで同時配置可能）、「メイクアップマシン」前方の近距離マスにいる味方1体に防御力+30％の効果と<$ba.shield>シールド</>2枚を付与（25秒継続、防御上昇効果重複不可）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10018_robrta_mach",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "メイクツール調達",
+          "description": "支援装置「メイクアップマシン」を使用可能（配置時に3個獲得、最大3個まで同時配置可能）、「メイクアップマシン」前方の近距離マスにいる味方1体に防御力+33%<@ba.talpu>（+3%）</>の効果と<$ba.shield>シールド</>2枚を付与（25秒継続、防御上昇効果重複不可）",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10018_robrta_mach",
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_robrta",
       "moduleName": "ロベルタの記章",
-      "desc": "ロベルタは装置を用いたチームメイトの作戦サポートに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、工匠の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ロベルタは装置を用いたチームメイトの作戦サポートに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、工匠の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_robrta",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_robrta",
       "moduleName": "半自動メイクアップセット",
-      "desc": "君のメイクの腕前はまったく最低最悪だ！\nこれまで三回も君を信じて、このハンサム顔を滅茶苦茶にさせた私がバカだったよ！\nああ、クソッ！あの時ポスターの番号に電話して、君のデタラメを信じたりしなければ、こんなことにはならなかった！\n君のどこが「ランクウッドの未来のトップメイクアップアーティスト」だ！\nスタジオはレンタルの地下室だし、君はランクウッドの何たるかをわかってるのか？\nああそうさ、私はとっくに旬の過ぎた役者だってことくらい自覚してるよ。\nだが、頭を撃ち抜かれるボディーガードだの、強盗事件で殉職する警察の役だのを演るのはもう御免だ！\n私は返り咲きたいんだよ。そうじゃなきゃ、君にメイクなんか頼まないだろう！\n私にはまだ役者としての素養が残っているんだ！\nどんな素養かって？この完璧な顔だよ！誰だって完璧な顔を拝みたいものだろう！？\nこのランクウッドでは、君が私の美貌をうまく引き立ててくれさえすれば、私も君もたっぷり儲かるんだ。簡単な話じゃないか！\nそれなのに、君はなんてことをしてくれたんだ！\n一度目は、勇敢で誠実な若い労働者をイメージしてくれと頼んだのに、採掘場から出てきたばかりの鉱夫みたいにしただろう！\nそれで二度目は、開拓者のリーダー風でと頼んだのに、私の頭に砂袋を半分もぶちまけて、ベタベタした顔料を塗りたくってくれたな！\nおかげで現場の警備員に浮浪者と間違われて、追い出されるところだったんだぞ！\nそれなのに君ときたら、芸術家にはそれぞれ追い求める芸術があるからリアルを追求しないと、とか、優れた創作は人の目には輝いて映るんだ、とかわけのわからないことばかり言って……！\nわかったよ、認めるさ！愚か者は私のほうだ！\nそんな君のデタラメを信じて、今回もその変なマシンを顔に押しつけることを許したんだからな！\n今度のはホラー映画だと口を酸っぱくして言ったし、君も史上最高に怖いメイクをすると約束してくれた。\nだが、結果はどうだ？血のりは？膿瘡は？鋭い牙は？\n人目を引くような要素なんて一つもないのに、メイクの注意事項だけはご立派に並べ立てやがって！\n本当に最悪だったのは、カメラが回り始めてすぐ、「顔が溶けてるぞ！」ってカメラマンが叫びだしたことだ。\nほんの少し暖房の近くにいただけなのに、手で撫でてみたら作り物の歯や眼球が全部顔からドロッと落ちちまった！\n私のギャラが安くなければ、その場でプロデューサーに追い出されていただろうな！\nつまりだ……もうわかっただろう！\n私はもう二度と君には頼まない！このまま一生地下室に埋もれていればいいんだ！\n――もしもし？はい、私ですが。えっ、社長！？\n『恐怖の顔なし男』……？ああ、きっと監督がタイトルを変えたんですね。はい、主演は私です。\nえっ？公開初日から大ヒット？どこもかしこも満員？\nで、では私も……売れっ子の仲間入り、ですか？その話はあとで？\nいえ、あの、できれば今すぐ知りたいんですが――メイク担当？隣にいますが……えっ？\n……なあ君、映画会社の社長が君と話したいそうだ。\nいや待て、ロベルタ。君はどうやってそんな早さでランクウッドのレベルにまで成長したんだ？何かコツがあるなら、私にも……\n――あたしは昔からずっと変わってないけど？\n……\nなるほど。これがランクウッドってわけね、役者さん。"
+      "desc": "君のメイクの腕前はまったく最低最悪だ！\nこれまで三回も君を信じて、このハンサム顔を滅茶苦茶にさせた私がバカだったよ！\nああ、クソッ！あの時ポスターの番号に電話して、君のデタラメを信じたりしなければ、こんなことにはならなかった！\n君のどこが「ランクウッドの未来のトップメイクアップアーティスト」だ！\nスタジオはレンタルの地下室だし、君はランクウッドの何たるかをわかってるのか？\nああそうさ、私はとっくに旬の過ぎた役者だってことくらい自覚してるよ。\nだが、頭を撃ち抜かれるボディーガードだの、強盗事件で殉職する警察の役だのを演るのはもう御免だ！\n私は返り咲きたいんだよ。そうじゃなきゃ、君にメイクなんか頼まないだろう！\n私にはまだ役者としての素養が残っているんだ！\nどんな素養かって？この完璧な顔だよ！誰だって完璧な顔を拝みたいものだろう！？\nこのランクウッドでは、君が私の美貌をうまく引き立ててくれさえすれば、私も君もたっぷり儲かるんだ。簡単な話じゃないか！\nそれなのに、君はなんてことをしてくれたんだ！\n一度目は、勇敢で誠実な若い労働者をイメージしてくれと頼んだのに、採掘場から出てきたばかりの鉱夫みたいにしただろう！\nそれで二度目は、開拓者のリーダー風でと頼んだのに、私の頭に砂袋を半分もぶちまけて、ベタベタした顔料を塗りたくってくれたな！\nおかげで現場の警備員に浮浪者と間違われて、追い出されるところだったんだぞ！\nそれなのに君ときたら、芸術家にはそれぞれ追い求める芸術があるからリアルを追求しないと、とか、優れた創作は人の目には輝いて映るんだ、とかわけのわからないことばかり言って……！\nわかったよ、認めるさ！愚か者は私のほうだ！\nそんな君のデタラメを信じて、今回もその変なマシンを顔に押しつけることを許したんだからな！\n今度のはホラー映画だと口を酸っぱくして言ったし、君も史上最高に怖いメイクをすると約束してくれた。\nだが、結果はどうだ？血のりは？膿瘡は？鋭い牙は？\n人目を引くような要素なんて一つもないのに、メイクの注意事項だけはご立派に並べ立てやがって！\n本当に最悪だったのは、カメラが回り始めてすぐ、「顔が溶けてるぞ！」ってカメラマンが叫びだしたことだ。\nほんの少し暖房の近くにいただけなのに、手で撫でてみたら作り物の歯や眼球が全部顔からドロッと落ちちまった！\n私のギャラが安くなければ、その場でプロデューサーに追い出されていただろうな！\nつまりだ……もうわかっただろう！\n私はもう二度と君には頼まない！このまま一生地下室に埋もれていればいいんだ！\n――もしもし？はい、私ですが。えっ、社長！？\n『恐怖の顔なし男』……？ああ、きっと監督がタイトルを変えたんですね。はい、主演は私です。\nえっ？公開初日から大ヒット？どこもかしこも満員？\nで、では私も……売れっ子の仲間入り、ですか？その話はあとで？\nいえ、あの、できれば今すぐ知りたいんですが――メイク担当？隣にいますが……えっ？\n……なあ君、映画会社の社長が君と話したいそうだ。\nいや待て、ロベルタ。君はどうやってそんな早さでランクウッドのレベルにまで成長したんだ？何かコツがあるなら、私にも……\n――あたしは昔からずっと変わってないけど？\n……\nなるほど。これがランクウッドってわけね、役者さん。",
+      "typeIcon": "cra-x",
+      "uniEquipIcon": "uniequip_002_robrta",
+      "typeName1": "CRA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_robrta_1",
+        "uniequip_002_robrta_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30093",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30053",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30073",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10018_robrta_mach": [
+              {
+                "key": "cost",
+                "value": -2,
+                "valueStr": null
+              },
+              {
+                "key": "max_deck_stack_cnt",
+                "value": 1,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "「支援装置」の最大所持数<@ba.kw>+{cnt}</>、配置コスト<@ba.kw>減少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10018_robrta_mach": [
+              {
+                "key": "cost",
+                "value": -2,
+                "valueStr": null
+              },
+              {
+                "key": "max_deck_stack_cnt",
+                "value": 1,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "「支援装置」の最大所持数<@ba.kw>+{cnt}</>、配置コスト<@ba.kw>減少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "支援装置「メイクアップマシン」を使用可能（配置時に3個獲得、最大3個まで同時配置可能）、「メイクアップマシン」前方の近距離マスにいる味方1体に防御力+36%の効果と<$ba.shield>シールド</>2枚を付与（25秒継続、防御上昇効果重複不可）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "メイクツール調達",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10018_robrta_mach",
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "支援装置「メイクアップマシン」を使用可能（配置時に3個獲得、最大3個まで同時配置可能）、「メイクアップマシン」前方の近距離マスにいる味方1体に防御力+39%<@ba.talpu>（+3%）</>の効果と<$ba.shield>シールド</>2枚を付与（25秒継続、防御上昇効果重複不可）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "メイクツール調達",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10018_robrta_mach",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "前方の近距離マスにいる味方1体に防御力+36%の効果と<$ba.shield>シールド</>2枚を付与（25秒継続、防御上昇効果重複不可）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1+",
+                  "name": "メイクツール調達",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.36,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "前方の近距離マスにいる味方1体に防御力+39%<@ba.talpu>（+3%）</>の効果と<$ba.shield>シールド</>2枚を付与（25秒継続、防御上昇効果重複不可）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1+",
+                  "name": "メイクツール調達",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.39,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 46,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10018_robrta_mach": [
+              {
+                "key": "cost",
+                "value": -2,
+                "valueStr": null
+              },
+              {
+                "key": "max_deck_stack_cnt",
+                "value": 1,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "「支援装置」の最大所持数<@ba.kw>+{cnt}</>、配置コスト<@ba.kw>減少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "支援装置「メイクアップマシン」を使用可能（配置時に3個獲得、最大3個まで同時配置可能）、「メイクアップマシン」前方の近距離マスにいる味方1体に防御力+40%の効果と<$ba.shield>シールド</>2枚を付与（25秒継続、防御上昇効果重複不可）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "メイクツール調達",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10018_robrta_mach",
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "支援装置「メイクアップマシン」を使用可能（配置時に3個獲得、最大3個まで同時配置可能）、「メイクアップマシン」前方の近距離マスにいる味方1体に防御力+43%<@ba.talpu>（+3%）</>の効果と<$ba.shield>シールド</>2枚を付与する（25秒継続、防御上昇効果重複不可）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "メイクツール調達",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10018_robrta_mach",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "前方の近距離マスにいる味方1体に防御力+40%の効果と<$ba.shield>シールド</>2枚を付与する（25秒継続、防御上昇効果重複不可）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1+",
+                  "name": "メイクツール調達",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "前方の近距離マスにいる味方1体に防御力+43%<@ba.talpu>（+3%）</>の効果と<$ba.shield>シールド</>2枚を付与する（25秒継続、防御上昇効果重複不可）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1+",
+                  "name": "メイクツール調達",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.43,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1102,6 +1868,9 @@
       "phase": "PHASE_1",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10018_robrta_mach"
   ],
   "patch_info": {}
 }

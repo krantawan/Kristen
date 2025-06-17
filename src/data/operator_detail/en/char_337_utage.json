@@ -151,6 +151,56 @@
       "cost": 24
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 30
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 1)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 2)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 70
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_337_utage#1",
@@ -644,16 +694,621 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +23",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -6 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 30,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Serious Mode",
+          "description": "Gains up to +50 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 50% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 50,
+            "min_hp_ratio": 0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Serious Mode",
+          "description": "Gains up to +75 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 60% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 75,
+            "min_hp_ratio": 0.4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Serious Mode",
+          "description": "Gains up to +100 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 70% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 100,
+            "min_hp_ratio": 0.3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_utage",
       "moduleName": "Utage's Badge",
-      "desc": "Operator Utage has demonstrated a remarkable aptitude for solo confrontation with the enemy while far removed from support lines.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Musha responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Utage has demonstrated a remarkable aptitude for solo confrontation with the enemy while far removed from support lines.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Musha responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_utage",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_utage",
       "moduleName": "Flip Phone",
-      "desc": "[♥ Case Lily Nail Salon] Dear customers, our new location is now open! We've imported a state-of-the-art Colombian nail printer. Come give it a try! Make an appointment so you won't have to wait. Mwah~!\n[Bank Alert] Your bank card payment failed due to insufficient funds.\n[♥ Case Lily Nail Salon] Dear customer, your appointment on March 22nd was cancelled because we didn't receive your deposit. Please book with us again. Mwah~!\n[Lungmen Report] This week's Munchventure takes us to a donburi restaurant located in the shopping district. The taste-to-price ratio is through the roof, so the place is always packed. Whew, look at that tender, juicy meat. Gulp it up and feel your troubles wash away.\nOur adventurers paint a picture of the restaurant's owner, one Mr. Matsumoto, as a young, successful, and overall admirable entrepreneur. When we asked about his plans for the future, the shy young man blushed and told us he was ready to give up being single and hoped to enjoy a café date with his special someone. We wish him well.\n[Large Hot Coffee] Autumn is coming, enjoy a cup of coffee with it. Your 'drink voucher' is about to expire. You'll want to come get your voucher set ASAP!\n[Large Hot Coffee] Your autumn latte is done and your delivery is on the way to Case Lily Nail Salon.\n[Eat Your Heart Out] Wow, you'll never guess who I saw today at the donburi restaurant. The woman who owns the nail salon! It turns out she's been in every day lately! Wasn't she trying to lose weight?!\n[Flowers For Love] The bouquet you ordered has been delivered to the donburi restaurant at 1455 Busy Street, and received by the owner. At your service, delivering Flowers For Love♬.\n[Beauty Makeover] Guess who I saw today while getting my nails done. Matsumoto from the donburi restaurant! He even brought coffee for the boss! They must be an item!\n[Lungmen Report] This week, we visit the donburi restaurant in the shopping district again. Their new menu incorporates all kinds of cuteness for the ladies. Check out that pink heart on top, it's too adorable to eat!\n[♥ Case Lily Nail Salon] Dear customers, the owner of our salon recently got engaged. In celebration, we have discounts on various styles, and you can enjoy even deeper discounts by booking in advance. Come give us a try, new friends and old. Mwah~!"
+      "desc": "[♥ Case Lily Nail Salon] Dear customers, our new location is now open! We've imported a state-of-the-art Colombian nail printer. Come give it a try! Make an appointment so you won't have to wait. Mwah~!\n[Bank Alert] Your bank card payment failed due to insufficient funds.\n[♥ Case Lily Nail Salon] Dear customer, your appointment on March 22nd was cancelled because we didn't receive your deposit. Please book with us again. Mwah~!\n[Lungmen Report] This week's Munchventure takes us to a donburi restaurant located in the shopping district. The taste-to-price ratio is through the roof, so the place is always packed. Whew, look at that tender, juicy meat. Gulp it up and feel your troubles wash away.\nOur adventurers paint a picture of the restaurant's owner, one Mr. Matsumoto, as a young, successful, and overall admirable entrepreneur. When we asked about his plans for the future, the shy young man blushed and told us he was ready to give up being single and hoped to enjoy a café date with his special someone. We wish him well.\n[Large Hot Coffee] Autumn is coming, enjoy a cup of coffee with it. Your 'drink voucher' is about to expire. You'll want to come get your voucher set ASAP!\n[Large Hot Coffee] Your autumn latte is done and your delivery is on the way to Case Lily Nail Salon.\n[Eat Your Heart Out] Wow, you'll never guess who I saw today at the donburi restaurant. The woman who owns the nail salon! It turns out she's been in every day lately! Wasn't she trying to lose weight?!\n[Flowers For Love] The bouquet you ordered has been delivered to the donburi restaurant at 1455 Busy Street, and received by the owner. At your service, delivering Flowers For Love♬.\n[Beauty Makeover] Guess who I saw today while getting my nails done. Matsumoto from the donburi restaurant! He even brought coffee for the boss! They must be an item!\n[Lungmen Report] This week, we visit the donburi restaurant in the shopping district again. Their new menu incorporates all kinds of cuteness for the ladies. Check out that pink heart on top, it's too adorable to eat!\n[♥ Case Lily Nail Salon] Dear customers, the owner of our salon recently got engaged. In celebration, we have discounts on various styles, and you can enjoy even deeper discounts by booking in advance. Come give us a try, new friends and old. Mwah~!",
+      "typeIcon": "sbl-x",
+      "uniEquipIcon": "uniequip_002_utage",
+      "typeName1": "SBL",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_utage_1",
+        "uniequip_002_utage_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30063",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30093",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "+3% ATK and +3% DEF when HP below 50%",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "Cold-Blooded",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.03,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "+4% ATK and +4% DEF when HP below 50%",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "Cold-Blooded",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.04,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1107,5 +1762,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

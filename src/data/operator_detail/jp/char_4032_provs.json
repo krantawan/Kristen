@@ -151,6 +151,28 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "sluggish",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4032_provs#1",
@@ -648,16 +670,670 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 65,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "カジミエーシュの法律家",
+          "description": "攻撃速度+6。配置中、ランダムな味方【カジミエーシュ】に同じ効果を付与",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "カジミエーシュの法律家",
+          "description": "攻撃速度+8<@ba.talpu>（+2）</>。配置中、ランダムな味方【カジミエーシュ】に同じ効果を付与",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "カジミエーシュの法律家",
+          "description": "攻撃速度+10。配置中、ランダムな味方【カジミエーシュ】に同じ効果を付与",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "カジミエーシュの法律家",
+          "description": "攻撃速度+12<@ba.talpu>（+2）</>。配置中、ランダムな味方【カジミエーシュ】に同じ効果を付与",
+          "blackboard": [
+            {
+              "key": "attack_speed",
+              "value": 12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_provs",
       "moduleName": "プロヴァイゾの記章",
-      "desc": "プロヴァイゾは敵の牽制に秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、緩速師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "プロヴァイゾは敵の牽制に秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、緩速師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_provs",
       "moduleName": "デーシュットの卒業祝い",
-      "desc": "デーシュットの『カジミエーシュの現行法律と商業資本の対立、講和及び想定され得る未来』は鋭い観点を持ち、論証も正確で、理論の深さと実践の価値を両立した紛れもなく極めて優秀な論文だと言えよう。しかし彼女に法学部の優秀卒業生という栄誉を授与すべきかについては、私と他の教授たちとでひと悶着あった。\n教鞭を執り始めて数十年、その胸に大志を抱く学生は幾度となく見てきた。彼らが誓いを立てるために法典の表紙を押さえる指は少し震えていても、決意を秘めた真摯な目は燃えるように輝いているものだ。\n進路を変えたり、道を見失う学生もまたよく見てきた。彼らは資格認定試験に現れる「強盗が威嚇目的により被害者の腕部に擦過傷を負わせ、その結果被害者が持病の造血機能障害により血が止まらず死亡した場合、いかなる量刑に処すべきか」のような馬鹿げた設問に戸惑いを覚え、それからさらに、覚えなければならない知識と実際に使う知識が今のカジミエーシュではあまりにも乖離しているという事実に驚愕するのだ。\n法典の条文は明確であっても適用範囲が狭く、競技場や商店街の成長スピードに追い付けていない。「道具論」と「目的論」の論争が行われるのは教室の中でのみであり、法律を現実に適用する際には個々の解釈や補足、模範的な判例に頼っているのが現状……空白とも呼べる法の形態こそが、カジミエーシュの法制度の真実なのだ。この事実は我々老人にすら容易く呑み込めるものではなく、若者たちにとってはなおさらであろう。\nデーシュットは非常に優秀な学生だ。かつて彼女に、学校に残ってさらに高度な学問を修めるよう勧めたことがある。より多くの知識の積み重ねと、弁証法的思考により、彼女の聡明な頭脳はさらに磨きがかかるはずだと。しかし彼女は、一刻も早く実践の中で力を発揮することを望んでいた。件の論文を執筆するよりも前に、彼女は既にロングレインズ法律事務所の正式な採用通知書を受け取っていた。彼女の実習に先んじて私は彼女の指導を担当するシニア弁護士に、世間知らずな学生をどうかよろしくお願いますと声をかけた。しかし先方が言うには、デーシュットは法律事務所によく「適応」しているそうだ。端的で的確なアドバイスを行い、訴訟を優位に推し進めてくれている。だからそう心配することはありません、と。\nデーシュットは素晴らしく聡明であると同時に、少し融通が利かなすぎるきらいがある。彼女と他の多くの学生の最大の違いが、それだ。法律を用いて心理を追求せんとする執着が、彼女の優秀な成績を支えている。しかしまだ彼女には「答えが見つからない」ことへの心構えと準備がない。教師には学生の未来を決める権利はない。できるのはその背中を見送り、前途を祝福するのみだ。\n大騎士領のきらめくネオンの中で、道を見失う若者は多い。どうか彼女がその一人とならないことを、祈るしかない。\n……\n\n――デーシュットの指導教員、ワールブルツ教授の法学部優秀卒業生内部評議会における発言より抜粋"
+      "desc": "デーシュットの『カジミエーシュの現行法律と商業資本の対立、講和及び想定され得る未来』は鋭い観点を持ち、論証も正確で、理論の深さと実践の価値を両立した紛れもなく極めて優秀な論文だと言えよう。しかし彼女に法学部の優秀卒業生という栄誉を授与すべきかについては、私と他の教授たちとでひと悶着あった。\n教鞭を執り始めて数十年、その胸に大志を抱く学生は幾度となく見てきた。彼らが誓いを立てるために法典の表紙を押さえる指は少し震えていても、決意を秘めた真摯な目は燃えるように輝いているものだ。\n進路を変えたり、道を見失う学生もまたよく見てきた。彼らは資格認定試験に現れる「強盗が威嚇目的により被害者の腕部に擦過傷を負わせ、その結果被害者が持病の造血機能障害により血が止まらず死亡した場合、いかなる量刑に処すべきか」のような馬鹿げた設問に戸惑いを覚え、それからさらに、覚えなければならない知識と実際に使う知識が今のカジミエーシュではあまりにも乖離しているという事実に驚愕するのだ。\n法典の条文は明確であっても適用範囲が狭く、競技場や商店街の成長スピードに追い付けていない。「道具論」と「目的論」の論争が行われるのは教室の中でのみであり、法律を現実に適用する際には個々の解釈や補足、模範的な判例に頼っているのが現状……空白とも呼べる法の形態こそが、カジミエーシュの法制度の真実なのだ。この事実は我々老人にすら容易く呑み込めるものではなく、若者たちにとってはなおさらであろう。\nデーシュットは非常に優秀な学生だ。かつて彼女に、学校に残ってさらに高度な学問を修めるよう勧めたことがある。より多くの知識の積み重ねと、弁証法的思考により、彼女の聡明な頭脳はさらに磨きがかかるはずだと。しかし彼女は、一刻も早く実践の中で力を発揮することを望んでいた。件の論文を執筆するよりも前に、彼女は既にロングレインズ法律事務所の正式な採用通知書を受け取っていた。彼女の実習に先んじて私は彼女の指導を担当するシニア弁護士に、世間知らずな学生をどうかよろしくお願いますと声をかけた。しかし先方が言うには、デーシュットは法律事務所によく「適応」しているそうだ。端的で的確なアドバイスを行い、訴訟を優位に推し進めてくれている。だからそう心配することはありません、と。\nデーシュットは素晴らしく聡明であると同時に、少し融通が利かなすぎるきらいがある。彼女と他の多くの学生の最大の違いが、それだ。法律を用いて心理を追求せんとする執着が、彼女の優秀な成績を支えている。しかしまだ彼女には「答えが見つからない」ことへの心構えと準備がない。教師には学生の未来を決める権利はない。できるのはその背中を見送り、前途を祝福するのみだ。\n大騎士領のきらめくネオンの中で、道を見失う若者は多い。どうか彼女がその一人とならないことを、祈るしかない。\n……\n\n――デーシュットの指導教員、ワールブルツ教授の法学部優秀卒業生内部評議会における発言より抜粋",
+      "typeIcon": "dec-x",
+      "uniEquipIcon": "uniequip_002_provs",
+      "typeName1": "DEC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_provs_1",
+        "uniequip_002_provs_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵がいるとき、SPの自然回復速度+0.2sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵がいるとき、SPの自然回復速度+0.2sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃速度+10、攻撃力+5%。配置中、ランダムな味方【カジミエーシュ】に同じ効果を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "カジミエーシュの法律家",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃速度+12<@ba.talpu>（+2）</>、攻撃力+5%。配置中、ランダムな味方【カジミエーシュ】に同じ効果を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "カジミエーシュの法律家",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内に敵がいるとき、SPの自然回復速度+0.2sp/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃速度+10、攻撃力+8%。配置中、ランダムな味方【カジミエーシュ】に同じ効果を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "カジミエーシュの法律家",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃速度+12<@ba.talpu>（+2）</>、攻撃力+8%。配置中、ランダムな味方【カジミエーシュ】に同じ効果を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "カジミエーシュの法律家",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1119,5 +1795,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

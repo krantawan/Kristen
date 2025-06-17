@@ -151,6 +151,24 @@
       "cost": 7
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "attack@atk_to_hp_recovery_ratio",
+          "value": 0.1
+        }
+      ],
+      "overrideDescription": "Does not attack but continuously restores the <@ba.kw>HP</> of all allies within range (the HP restored per second is equal to <@ba.kw>{attack@atk_to_hp_recovery_ratio:0%}</> of self ATK). Self is unaffected by <$ba.inspire>Inspiration</>",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_101_sora#1",
@@ -628,16 +646,577 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +140",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 140,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -6 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 20,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Encore",
+          "description": "Has a 50% chance to immediately restore Skill Point by 25% of Max Skill Points when the skill ends",
+          "blackboard": {
+            "prob": 0.5,
+            "sp": 0.25
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Encore",
+          "description": "Has a 50% chance to immediately restore Skill Point by 50% of Max Skill Points when the skill ends",
+          "blackboard": {
+            "prob": 0.5,
+            "sp": 0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_sora",
       "moduleName": "Sora's Badge",
-      "desc": "Operator Sora has demonstrated a remarkable aptitude for tactical support and low-level therapy of operators within proximity.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Bard responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Sora has demonstrated a remarkable aptitude for tactical support and low-level therapy of operators within proximity.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Bard responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_sora",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_sora",
       "moduleName": "'Unison'",
-      "desc": "A silver nanny van enters a Penguin Logistics safehouse's closest dropoff point. Cases big and small are hauled out from it.\nClearly, their owner plans to stick around for the long haul. Once every case is finally inside, a Lupo who's been waiting around saunters by the pop idol, stoops down, and nabs a pair of plastic sticks out of an open cardboard box.\n'If I'm remembering right... these are glowsticks for the fans?'\n'—Huh? Uh, yeah, a fan sent me these. Texas, how come you know what they're for?'\n'...I've been to your concerts, and seen your tapes. Hard not to notice all these glowing in a sea of dark.'\n'Ohh, I see,' Sora mumbles, casting a brief look around her before returning her gaze.\n'So, um, you wanna go to another one? A concert, I mean?'\n'When?'\n'It could be right here, right now, or maybe tomorrow? I mean, look—' Sora pulls away from the glowsticks, and points around at the boxes. 'This is everything you need to hold a concert, everything you need to live as an idol.'\n'I was bringing all of this here... so I could invite you, all of you, to an exclusive show for Penguin Logistics!'\nThe stage is erected from cardboard boxes, the loudspeakers and panel lighting propped high on the package shelves. Sora includes every hit single from each of her albums in the setlist, pouring her heart and soul, all her thanks, all her passion, and all her most beautiful wishes into her singing and dancing. Aside from the stage size and audience numbers, this concert's no different from the rest, nor is the support from her fans...\n...Wait wait wait, what's going on?\nSora's eyes grow wide—Exusiai's using her rifle to shoot at the metal plates hung on either side, the sound bright and clear and somehow keeping perfectly in time with the music; Croissant's next to her banging her maracas on her shield; even Texas is using her sword stance to brandish her glowsticks, her expression stern and serious as ever, making the gap all the more hilarious.\nOnly Emperor sits aloof in this absurd scene, listening silently and intently, like he's the only one actually concentrating on being a spectator.\nSora almost hears the canned audience laughter play in her head, and she cracks up too. This concert is everyone's concert, the chorus of Penguin Logistics.\n\n'I think that was the most unforgettable concert I've ever had.'\n'Shucks, Sora, ya go and hold such a special performance just fer us, s'obvious we gotta give somethin' back somehow. Ain't that so, Baws?'\n'All I can say is, not bad for bubblegum pop.'\n'I think I'mma translate for him: Sora, you sing MIGHTY fine!'\n'Yeah. It was amazing.'\n'And don't forget, our accompaniment was spot on too!'\nAt first, Sora shakes her head, then nods, and keeps nodding. She grins, and with all the gratitude she has, runs straight into her circle of friends' giant group hug."
+      "desc": "A silver nanny van enters a Penguin Logistics safehouse's closest dropoff point. Cases big and small are hauled out from it.\nClearly, their owner plans to stick around for the long haul. Once every case is finally inside, a Lupo who's been waiting around saunters by the pop idol, stoops down, and nabs a pair of plastic sticks out of an open cardboard box.\n'If I'm remembering right... these are glowsticks for the fans?'\n'—Huh? Uh, yeah, a fan sent me these. Texas, how come you know what they're for?'\n'...I've been to your concerts, and seen your tapes. Hard not to notice all these glowing in a sea of dark.'\n'Ohh, I see,' Sora mumbles, casting a brief look around her before returning her gaze.\n'So, um, you wanna go to another one? A concert, I mean?'\n'When?'\n'It could be right here, right now, or maybe tomorrow? I mean, look—' Sora pulls away from the glowsticks, and points around at the boxes. 'This is everything you need to hold a concert, everything you need to live as an idol.'\n'I was bringing all of this here... so I could invite you, all of you, to an exclusive show for Penguin Logistics!'\nThe stage is erected from cardboard boxes, the loudspeakers and panel lighting propped high on the package shelves. Sora includes every hit single from each of her albums in the setlist, pouring her heart and soul, all her thanks, all her passion, and all her most beautiful wishes into her singing and dancing. Aside from the stage size and audience numbers, this concert's no different from the rest, nor is the support from her fans...\n...Wait wait wait, what's going on?\nSora's eyes grow wide—Exusiai's using her rifle to shoot at the metal plates hung on either side, the sound bright and clear and somehow keeping perfectly in time with the music; Croissant's next to her banging her maracas on her shield; even Texas is using her sword stance to brandish her glowsticks, her expression stern and serious as ever, making the gap all the more hilarious.\nOnly Emperor sits aloof in this absurd scene, listening silently and intently, like he's the only one actually concentrating on being a spectator.\nSora almost hears the canned audience laughter play in her head, and she cracks up too. This concert is everyone's concert, the chorus of Penguin Logistics.\n\n'I think that was the most unforgettable concert I've ever had.'\n'Shucks, Sora, ya go and hold such a special performance just fer us, s'obvious we gotta give somethin' back somehow. Ain't that so, Baws?'\n'All I can say is, not bad for bubblegum pop.'\n'I think I'mma translate for him: Sora, you sing MIGHTY fine!'\n'Yeah. It was amazing.'\n'And don't forget, our accompaniment was spot on too!'\nAt first, Sora shakes her head, then nods, and keeps nodding. She grins, and with all the gratitude she has, runs straight into her circle of friends' giant group hug.",
+      "typeIcon": "bar-x",
+      "uniEquipIcon": "uniequip_002_sora",
+      "typeName1": "BAR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_sora_1",
+        "uniequip_002_sora_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31074",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 142,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 13,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 172,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 18,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Has a 60% chance to immediately restore Skill Point by 50% of Max Skill Points when the skill ends",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Encore",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Has a 60% chance to immediately restore Skill Point by 60% of Max Skill Points when the skill ends",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Encore",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1091,5 +1670,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

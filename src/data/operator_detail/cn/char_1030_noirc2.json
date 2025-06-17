@@ -169,6 +169,68 @@
       "cost": 25
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 30,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "不成为其他角色的治疗目标，每次攻击到敌人后回复自身<@ba.kw>{value}</>生命（精英1后更新）",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 50,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "不成为其他角色的治疗目标，每次攻击到敌人后回复自身<@ba.kw>{value}</>生命（精英2后更新）",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 70,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "不成为其他角色的治疗目标，每次攻击到敌人后回复自身<@ba.kw>{value}</>生命",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1030_noirc2#1",
@@ -652,16 +714,780 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击速度+5",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 5,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 40,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "坚韧",
+          "description": "在场时，自身获得最高+30攻击速度和最高+30%防御力的<$ba.berserk>坚忍</>（损失50%生命值时达到最大加成）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "min_def",
+              "value": 0.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "坚韧",
+          "description": "在场时，自身获得最高+40攻击速度和最高+40%防御力的<$ba.berserk>坚忍</>（损失60%生命值时达到最大加成）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "min_def",
+              "value": 0.4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "坚韧",
+          "description": "在场时，自身获得最高+50攻击速度和最高+50%防御力的<$ba.berserk>坚忍</>（损失70%生命值时达到最大加成）",
+          "blackboard": [
+            {
+              "key": "min_attack_speed",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "min_hp_ratio",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "min_def",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "练气",
+          "description": "非技能期间，连续攻击5次后自身获得攻击力+3%（最多3层）",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.03,
+              "valueStr": null
+            },
+            {
+              "key": "hit_num",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@clear_attackcount_time",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "练气",
+          "description": "非技能期间，连续攻击5次后自身获得攻击力+5%（最多3层）",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "hit_num",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@clear_attackcount_time",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "练气",
+          "description": "非技能期间，连续攻击5次后自身获得攻击力+7%（最多3层）",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.07,
+              "valueStr": null
+            },
+            {
+              "key": "hit_num",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@clear_attackcount_time",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_noirc2",
       "moduleName": "火龙S黑角证章",
-      "desc": "穿戴特制套装的干员黑角擅长远离支援独自面对敌人\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使武者职责\n特别颁发此证章\n以兹证明"
+      "desc": "穿戴特制套装的干员黑角擅长远离支援独自面对敌人\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使武者职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_noirc2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_noirc2",
       "moduleName": "黑角的随身笔记",
-      "desc": "章节一  地图一定要认真看！\n......\n条目二  罗德岛设施分布图\n（手绘的配图，根据扭曲的线条可以依稀辨认出岛上的设施分布，训练室的位置上打了大大的红圈）\n夜刀训练完以后，请一定要记得去看看设备有无损坏，及时报修！\n......\n条目五  龙门地图\n（一张从报纸上剪下来的地图，标出了罗德岛办事处与安全屋的位置）\n提醒夜刀有问题先找办事处！\n另：敲门的时候如果没人回应，阻止夜刀踹门！\n......\n章节二  很难对付的敌人图鉴\n......\n条目三  高能源石虫\n（一张非常模糊的照片）\n肚子冒黄光的源石虫，一看就不是好家伙。被打倒之后会炸得到处都是，很痛的，千万要小心，提醒夜刀不要直接冲上去砍了！\n注意：如果她已经冲上去了，就赶紧把盾举起来吧！\n......\n条目二十七  磐蟹\n（手绘的图，非常抽象）\n浑身亮晶晶的感染生物，不知道哪里是弱点，总之使劲打就完事了。\n特别提示：这个就让夜刀打去好了！\n......\n章节三  武器该怎么用\n......\n条目二  盾\n（附了一长段从某百科书上剪下来的介绍文字）\n这俺熟，哪边有响声直冒光，就往哪边举起来，把同伴都护在身后，然后就一步都不能后退。\n......\n章节四  日常知识随手记\n......\n条目五十三  如何提醒他人\n其他人就直说要干什么就好了。\n夜刀脾气比较急，直接说她一般是听不进去的。得先让她坐下来，然后好好告诉她理由，她理解了就好办多了。\n......\n条目二百三十七  注意阳光！\n夜刀的皮肤很容易被阳光伤害，环境变化的时候注意阳光的位置，帮她挡一下。\n换了新装备以后，好像不用了，真好啊。\n......\n条目五百六十一  夜刀的生日\n五月十四日。\n这条完全是充数的啊！但是万一下次任务中遭遇意外，突然忘了很多事......算了，还是记着吧。\n......\n扉页  给捡到这本笔记的人\n俺叫黑角，是这本笔记的主人。如果您捡到了这本笔记，又找不到俺了，可以把这本笔记转交给罗德岛的夜刀。\n另外，麻烦您转告她，遇到麻烦了可以多翻翻这本笔记。这样就算俺不在她身边了，还能帮上她忙。\n多谢。\n——《黑角的随身笔记》节选"
+      "desc": "章节一  地图一定要认真看！\n......\n条目二  罗德岛设施分布图\n（手绘的配图，根据扭曲的线条可以依稀辨认出岛上的设施分布，训练室的位置上打了大大的红圈）\n夜刀训练完以后，请一定要记得去看看设备有无损坏，及时报修！\n......\n条目五  龙门地图\n（一张从报纸上剪下来的地图，标出了罗德岛办事处与安全屋的位置）\n提醒夜刀有问题先找办事处！\n另：敲门的时候如果没人回应，阻止夜刀踹门！\n......\n章节二  很难对付的敌人图鉴\n......\n条目三  高能源石虫\n（一张非常模糊的照片）\n肚子冒黄光的源石虫，一看就不是好家伙。被打倒之后会炸得到处都是，很痛的，千万要小心，提醒夜刀不要直接冲上去砍了！\n注意：如果她已经冲上去了，就赶紧把盾举起来吧！\n......\n条目二十七  磐蟹\n（手绘的图，非常抽象）\n浑身亮晶晶的感染生物，不知道哪里是弱点，总之使劲打就完事了。\n特别提示：这个就让夜刀打去好了！\n......\n章节三  武器该怎么用\n......\n条目二  盾\n（附了一长段从某百科书上剪下来的介绍文字）\n这俺熟，哪边有响声直冒光，就往哪边举起来，把同伴都护在身后，然后就一步都不能后退。\n......\n章节四  日常知识随手记\n......\n条目五十三  如何提醒他人\n其他人就直说要干什么就好了。\n夜刀脾气比较急，直接说她一般是听不进去的。得先让她坐下来，然后好好告诉她理由，她理解了就好办多了。\n......\n条目二百三十七  注意阳光！\n夜刀的皮肤很容易被阳光伤害，环境变化的时候注意阳光的位置，帮她挡一下。\n换了新装备以后，好像不用了，真好啊。\n......\n条目五百六十一  夜刀的生日\n五月十四日。\n这条完全是充数的啊！但是万一下次任务中遭遇意外，突然忘了很多事......算了，还是记着吧。\n......\n扉页  给捡到这本笔记的人\n俺叫黑角，是这本笔记的主人。如果您捡到了这本笔记，又找不到俺了，可以把这本笔记转交给罗德岛的夜刀。\n另外，麻烦您转告她，遇到麻烦了可以多翻翻这本笔记。这样就算俺不在她身边了，还能帮上她忙。\n多谢。\n——《黑角的随身笔记》节选",
+      "typeIcon": "sbl-x",
+      "uniEquipIcon": "uniequip_002_noirc2",
+      "typeName1": "SBL",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_noirc2_1",
+        "uniequip_002_noirc2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "生命值低于50%时，获得25%的<$ba.protect>庇护</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "生命值低于50%时，获得25%的<$ba.protect>庇护</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "非技能期间，连续攻击5次后自身获得攻击力+8%（最多3层）",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "练气",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hit_num",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@clear_attackcount_time",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 500,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 36,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "生命值低于50%时，获得25%的<$ba.protect>庇护</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "非技能期间，连续攻击5次后自身获得攻击力+9%（最多3层）",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "练气",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.09,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hit_num",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@clear_attackcount_time",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1115,5 +1941,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

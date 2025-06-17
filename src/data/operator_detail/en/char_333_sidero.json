@@ -151,6 +151,7 @@
       "cost": 23
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_333_sidero#1",
@@ -617,16 +618,556 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 500,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Mercenary's Tenacity",
+          "description": "After defeating 7 enemies, Sideroca gains +15 ASPD and <$ba.buffres>status resistance</>",
+          "blackboard": {
+            "times": 7,
+            "attack_speed": 15,
+            "one_minus_status_resistance": -0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Mercenary's Tenacity",
+          "description": "After defeating 5 <@ba.talpu>(-2)</> enemies, Sideroca gains +15 ASPD and <$ba.buffres>status resistance</>",
+          "blackboard": {
+            "times": 5,
+            "attack_speed": 15,
+            "one_minus_status_resistance": -0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_sidero",
       "moduleName": "Sideroca's Badge",
-      "desc": "Operator Sideroca has demonstrated a remarkable aptitude for inflicting Arts damage on the enemy in close-quarters combat.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Arts Fighter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Sideroca has demonstrated a remarkable aptitude for inflicting Arts damage on the enemy in close-quarters combat.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Arts Fighter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_sidero",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_sidero",
       "moduleName": "Ballast For Wanderlust",
-      "desc": "'Thou shalt love Corinia.' Thus reads the inscription that crowns the stone pillar marking the city's gate. Its carver must have pictured that all those departing the city would read it the moment they lifted their heads. Now, though, stallkeeps and mercenaries throng the gate as tightly as packed fins, and those who look up will see nothing but smoke-stained graffiti and billboards. These used to be Sideroca's stomping grounds as a child—she'd watch aging mercs grumble as they waited to find employers, snippets of their words helping her piece together a map in her head—the map she'd use for her escape plan one day.\nIt's been years since then. She's returned, here beneath this gate once more. The branch director who'd referred Sideroca to Rhodes Island is here with her now, touring the old haunt together and talking about old times. The director confesses that back then, more than anything, she'd rushed to sign up Sideroca because she didn't want to let a talent like her go anywhere else. Sideroca had that little something extra compared to your average drifter. Real recognizes real, so to speak.\nA freight boat needs a ballast to sail, and the wandering mercs and merchants of this citadel need something spiritual to weigh down their legs, lest they be trapped behind the mountains. Sideroca was barely an adult when she found her legs, firmer ones than any merc drowning their life away in booze. So what did keep her so rock-steady?\nShe doesn't have an answer right away. She scrutinizes Corinia once more, this city built on the idea of an eye for an eye. She can't stand the place in all its dark, bloodied glory. It sickens her how the books you learn to read from here teach you all the different names of money. She despises how children play pretend by copying the way grown-ups haggle and bargain and use each other for their own gain. To her, Corinia is one giant example of what things shouldn't be. With every step, she's reminding herself: don't end up like this. Don't end up like the merchants who peddle fakes beneath the gate, or the mercs who cry ripoff and smash their stalls up.\nA crude rock can be carved into pillar decorations or boat ballasts. Yet, if you price it as a jewel and cling to it, you'll waste all your energy and sink to the river's bottom with it. The further Sideroca travels from her homeland, the more clearly she understands this and many other things.\nShe has no interest in entering the city itself. Just as she's about to go, the branch director asks if she's ever seen how that inscription has a second half:\n'For thy countless paths begin from here.'"
+      "desc": "'Thou shalt love Corinia.' Thus reads the inscription that crowns the stone pillar marking the city's gate. Its carver must have pictured that all those departing the city would read it the moment they lifted their heads. Now, though, stallkeeps and mercenaries throng the gate as tightly as packed fins, and those who look up will see nothing but smoke-stained graffiti and billboards. These used to be Sideroca's stomping grounds as a child—she'd watch aging mercs grumble as they waited to find employers, snippets of their words helping her piece together a map in her head—the map she'd use for her escape plan one day.\nIt's been years since then. She's returned, here beneath this gate once more. The branch director who'd referred Sideroca to Rhodes Island is here with her now, touring the old haunt together and talking about old times. The director confesses that back then, more than anything, she'd rushed to sign up Sideroca because she didn't want to let a talent like her go anywhere else. Sideroca had that little something extra compared to your average drifter. Real recognizes real, so to speak.\nA freight boat needs a ballast to sail, and the wandering mercs and merchants of this citadel need something spiritual to weigh down their legs, lest they be trapped behind the mountains. Sideroca was barely an adult when she found her legs, firmer ones than any merc drowning their life away in booze. So what did keep her so rock-steady?\nShe doesn't have an answer right away. She scrutinizes Corinia once more, this city built on the idea of an eye for an eye. She can't stand the place in all its dark, bloodied glory. It sickens her how the books you learn to read from here teach you all the different names of money. She despises how children play pretend by copying the way grown-ups haggle and bargain and use each other for their own gain. To her, Corinia is one giant example of what things shouldn't be. With every step, she's reminding herself: don't end up like this. Don't end up like the merchants who peddle fakes beneath the gate, or the mercs who cry ripoff and smash their stalls up.\nA crude rock can be carved into pillar decorations or boat ballasts. Yet, if you price it as a jewel and cling to it, you'll waste all your energy and sink to the river's bottom with it. The further Sideroca travels from her homeland, the more clearly she understands this and many other things.\nShe has no interest in entering the city itself. Just as she's about to go, the branch director asks if she's ever seen how that inscription has a second half:\n'For thy countless paths begin from here.'",
+      "typeIcon": "aft-y",
+      "uniEquipIcon": "uniequip_002_sidero",
+      "typeName1": "AFT",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_sidero_1",
+        "uniequip_002_sidero_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31064",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 270,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After defeating 6 enemies, gains +20 ASPD and <$ba.buffres>status resistance</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Mercenary's Tenacity",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After defeating 4 <@ba.talpu>(-2)</> enemies, gains +20 ASPD and <$ba.buffres>status resistance</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Mercenary's Tenacity",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 320,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After defeating 5 enemies, gains +23 ASPD and <$ba.buffres>status resistance</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Mercenary's Tenacity",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After defeating 3 <@ba.talpu>(-2)</> enemies, gains +23 ASPD and <$ba.buffres>status resistance</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Mercenary's Tenacity",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1080,5 +1621,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

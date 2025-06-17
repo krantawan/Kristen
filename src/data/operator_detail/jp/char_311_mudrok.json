@@ -152,6 +152,7 @@
       "cost": 36
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_311_mudrok#1",
@@ -763,16 +764,809 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+29",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 29,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 500,
+        "atk": 0,
+        "def": 60,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "沃土を我が身に",
+          "description": "9秒ごとに<$ba.shield>シールド</>を1枚形成する（最大2枚まで重複でき、配置後<$ba.shield>シールド</>を1枚形成する）。<$ba.shield>シールド</>が1枚消耗される時、自身のHPが最大値の15%回復",
+          "blackboard": [
+            {
+              "key": "interval",
+              "value": 9,
+              "valueStr": null
+            },
+            {
+              "key": "times",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "max_times",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "hp_ratio",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "沃土を我が身に",
+          "description": "9秒ごとに<$ba.shield>シールド</>を1枚形成する（最大2枚まで重複でき、配置後<$ba.shield>シールド</>を1枚形成する）。<$ba.shield>シールド</>が1枚消耗される時、自身のHPが最大値の17%<@ba.talpu>（+2%）</>回復",
+          "blackboard": [
+            {
+              "key": "interval",
+              "value": 9,
+              "valueStr": null
+            },
+            {
+              "key": "times",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "max_times",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "hp_ratio",
+              "value": 0.17,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "沃土を我が身に",
+          "description": "9秒ごとに<$ba.shield>シールド</>を1枚形成する（最大2枚まで重複でき、配置後<$ba.shield>シールド</>を1枚形成する）。<$ba.shield>シールド</>が1枚消耗される時、自身のHPが最大値の20%回復",
+          "blackboard": [
+            {
+              "key": "interval",
+              "value": 9,
+              "valueStr": null
+            },
+            {
+              "key": "times",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "max_times",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "hp_ratio",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "沃土を我が身に",
+          "description": "9秒ごとに<$ba.shield>シールド</>を1枚形成する（最大2枚まで重複でき、配置後<$ba.shield>シールド</>を1枚形成する）。<$ba.shield>シールド</>が1枚消耗される時、自身のHPが最大値の22%<@ba.talpu>（+2%）</>回復",
+          "blackboard": [
+            {
+              "key": "interval",
+              "value": 9,
+              "valueStr": null
+            },
+            {
+              "key": "times",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "max_times",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "hp_ratio",
+              "value": 0.22,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "沃土を我が身に",
+          "description": "9秒ごとに<$ba.shield>シールド</>を1枚形成する（最大3枚まで重複でき、配置後<$ba.shield>シールド</>を1枚形成する）。<$ba.shield>シールド</>が1枚消耗される時、自身のHPが最大値の20%回復",
+          "blackboard": [
+            {
+              "key": "interval",
+              "value": 9,
+              "valueStr": null
+            },
+            {
+              "key": "times",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "max_times",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "hp_ratio",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "沃土を我が身に",
+          "description": "9秒ごとに<$ba.shield>シールド</>を1枚形成する（最大3枚まで重複でき、配置後<$ba.shield>シールド</>を1枚形成する）。<$ba.shield>シールド</>が1枚消耗される時、自身のHPが最大値の22%<@ba.talpu>（+2%）</>回復",
+          "blackboard": [
+            {
+              "key": "interval",
+              "value": 9,
+              "valueStr": null
+            },
+            {
+              "key": "times",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "max_times",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "hp_ratio",
+              "value": 0.22,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "同胞の情け",
+          "description": "敵【サルカズ】からの被ダメージ-30％",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mudrok",
       "moduleName": "マドロックの記章",
-      "desc": "マドロックは一人で防衛線を守ることができる。 \n外勤部門の決定に基づき \n外勤任務においては重装オペレーターとして区分し、破壊者の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "マドロックは一人で防衛線を守ることができる。 \n外勤部門の決定に基づき \n外勤任務においては重装オペレーターとして区分し、破壊者の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_mudrok",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mudrok",
       "moduleName": "土石の根",
-      "desc": "「カズデル」。\nリターニアから逃げ去る道中、マドロックを取り囲む小隊員たちはカズデルのことばかり話していた。\nもしもカズデルにいられたなら、どんなによかっただろう。同胞がいて、食料があって、何より腰を据えられる場所があるというのはどれだけ素晴らしいことか、と。\nその時、マドロック小隊のほとんどはリターニアで新たに加わった人員となっており、ウルサスからここまでついてきた古参の人々はすでにごくわずかだった。\nそうしたリターニアで仲間になった人々は、その大多数が、かつては故郷近くの定住地を転々としながら、日雇いの仕事や、傭兵部隊の間を奔走して商いをするなどして暮らしていたらしい。ゆえに、実際にカズデルへ行ったことのある人間は誰もいなかったが、かの地への郷愁は切実なものだった。\n「暗くなる前に山脈を越えなければ。」マドロックは、朝出発する前に皆に向けてそう告げた。\nひどく湿り気を帯びた空気の中、平原を歩く小隊員たちの目には、連綿と続く尾根の姿が靄でぼやけてやけに大きく重たく見えた。斜面に生えた野草にはどれも重く水滴がついており、青々としているはずのそれを苔のような色に、そして疲れてうつむいているかのように見せていた。\n疲れ切った一行は、同じく疲れ切ったような草を踏み進んでいく。しかし、彼らを待っていたのはさらに疲弊させられる未来だった。眼前の丘の向こうから大きな黒雲が流れてきている。じきに嵐がやってくるのだ。濃い霧がたちまち山間に降りかかり、わずかに見え隠れする白い雪だけを残して、山頂を覆い隠していく。やがて、どうすべきかを尋ねるように、皆の視線がマドロックに集まった。\nマドロックは高くそびえる岩壁の縁へと登ると、この地の声なき友人たちにそっと呼びかけた。\nすると、硬い岩は土石の子の求めに対し、打てば響くように応え、その場で軽やかに崩れ、再び形を成して、簡素ながらも暖かな岩窟となってくれた。\nかくして有難くその岩窟に身を寄せた人々は、暗くなってきてからも雨が降りやまずにいることに気付いた。\n「追っ手もこの雨で足止めされてたらいいな。」と、隊員の一人が冗談半分にそう言った。\n「まあ、俺らがカズデルにいられたらそれが一番だけどさ。あそこなら、隊長が作ってくれたこの岩窟みたいに丈夫でしっかりした家があると思うんだ。っていうか、そうであってほしいな……」\nそれを皮切りに、ほかの人々も憂鬱な天気の下、夜遅くまでカズデルに思いを馳せて言葉を交わし合った。\nマドロックは黙したまま地面に軽く手を当てて、雨粒が土石を叩くかすかな振動を感じていた。\n確かに、こんな場所だったらいいな、と思いながら。"
+      "desc": "「カズデル」。\nリターニアから逃げ去る道中、マドロックを取り囲む小隊員たちはカズデルのことばかり話していた。\nもしもカズデルにいられたなら、どんなによかっただろう。同胞がいて、食料があって、何より腰を据えられる場所があるというのはどれだけ素晴らしいことか、と。\nその時、マドロック小隊のほとんどはリターニアで新たに加わった人員となっており、ウルサスからここまでついてきた古参の人々はすでにごくわずかだった。\nそうしたリターニアで仲間になった人々は、その大多数が、かつては故郷近くの定住地を転々としながら、日雇いの仕事や、傭兵部隊の間を奔走して商いをするなどして暮らしていたらしい。ゆえに、実際にカズデルへ行ったことのある人間は誰もいなかったが、かの地への郷愁は切実なものだった。\n「暗くなる前に山脈を越えなければ。」マドロックは、朝出発する前に皆に向けてそう告げた。\nひどく湿り気を帯びた空気の中、平原を歩く小隊員たちの目には、連綿と続く尾根の姿が靄でぼやけてやけに大きく重たく見えた。斜面に生えた野草にはどれも重く水滴がついており、青々としているはずのそれを苔のような色に、そして疲れてうつむいているかのように見せていた。\n疲れ切った一行は、同じく疲れ切ったような草を踏み進んでいく。しかし、彼らを待っていたのはさらに疲弊させられる未来だった。眼前の丘の向こうから大きな黒雲が流れてきている。じきに嵐がやってくるのだ。濃い霧がたちまち山間に降りかかり、わずかに見え隠れする白い雪だけを残して、山頂を覆い隠していく。やがて、どうすべきかを尋ねるように、皆の視線がマドロックに集まった。\nマドロックは高くそびえる岩壁の縁へと登ると、この地の声なき友人たちにそっと呼びかけた。\nすると、硬い岩は土石の子の求めに対し、打てば響くように応え、その場で軽やかに崩れ、再び形を成して、簡素ながらも暖かな岩窟となってくれた。\nかくして有難くその岩窟に身を寄せた人々は、暗くなってきてからも雨が降りやまずにいることに気付いた。\n「追っ手もこの雨で足止めされてたらいいな。」と、隊員の一人が冗談半分にそう言った。\n「まあ、俺らがカズデルにいられたらそれが一番だけどさ。あそこなら、隊長が作ってくれたこの岩窟みたいに丈夫でしっかりした家があると思うんだ。っていうか、そうであってほしいな……」\nそれを皮切りに、ほかの人々も憂鬱な天気の下、夜遅くまでカズデルに思いを馳せて言葉を交わし合った。\nマドロックは黙したまま地面に軽く手を当てて、雨粒が土石を叩くかすかな振動を感じていた。\n確かに、こんな場所だったらいいな、と思いながら。",
+      "typeIcon": "uny-x",
+      "uniEquipIcon": "uniequip_002_mudrok",
+      "typeName1": "UNY",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_mudrok_1",
+        "uniequip_002_mudrok_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 245,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身がブロックしている敵からの被ダメージ-<@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 325,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身がブロックしている敵からの被ダメージ-<@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "9秒ごとに<$ba.shield>シールド</>を1枚形成する（最大3枚まで重複でき、配置後シールドを1枚形成する）。シールドが1枚消耗されるたびに、自身のHPが最大値の22%、SPが1回復する",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "沃土を我が身に",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 9,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "times",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_times",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.22,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "9秒ごとに<$ba.shield>シールド</>を1枚形成する（最大3枚まで重複でき、配置後シールドを1枚形成する）。シールドが1枚消耗されるたびに、自身のHPが最大値の24%<@ba.talpu>（+2%）</>、SPが1回復する",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "沃土を我が身に",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 9,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "times",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_times",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.24,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 400,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 80,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身がブロックしている敵からの被ダメージ-<@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "9秒ごとに<$ba.shield>シールド</>を1枚形成する（最大3枚まで重複でき、配置後シールドを1枚形成する）。シールドが1枚消耗されるたびに、自身のHPが最大値の23%、SPが2回復する",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "沃土を我が身に",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 9,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "times",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_times",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "9秒ごとに<$ba.shield>シールド</>を1枚形成する（最大3枚まで重複でき、配置後シールドを1枚形成する）。シールドが1枚消耗されるたびに、自身のHPが最大値の25%<@ba.talpu>（+2%）</>、SPが2回復する",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "沃土を我が身に",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 9,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "times",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_times",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1226,5 +2020,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

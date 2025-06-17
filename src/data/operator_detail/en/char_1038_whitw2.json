@@ -151,6 +151,36 @@
       "cost": 22
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "init_atk_scale",
+          "value": 0.2
+        },
+        {
+          "key": "delta_atk_scale",
+          "value": 0.15
+        },
+        {
+          "key": "max_atk_scale",
+          "value": 1.1
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 6
+        }
+      ],
+      "overrideDescription": "Controls a <@ba.kw>Drone</> that deals <@ba.kw>Arts damage</>; When the Drone attacks the same enemy, its damage will increase (up to 110% of the operator's ATK)",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1038_whitw2#1",
@@ -729,16 +759,675 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +25",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Alpha Wolf",
+          "description": "Every 30s on the field, Drones gain one of the following effects in order: max Drone damage +6%; disables enemies' special abilities for 1s when dealing damage to them; +1 Drone",
+          "blackboard": {
+            "interval": 30,
+            "scale": 1.06,
+            "attack@silence_duration": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "1",
+          "name": "Alpha Wolf",
+          "description": "Every 26s <@ba.talpu>(-4)</> on the field, Drones gain one of the following effects in order: max Drone damage +6%; disables enemies' special abilities for 1s when dealing damage to them; +1 Drone",
+          "blackboard": {
+            "interval": 26,
+            "scale": 1.06,
+            "attack@silence_duration": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Alpha Wolf",
+          "description": "Every 20s on the field, Drones gain one of the following effects in order: max Drone damage +10%; disables enemies' special abilities for 2s when dealing damage to them; +1 Drone",
+          "blackboard": {
+            "interval": 20,
+            "scale": 1.1,
+            "attack@silence_duration": 2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "1",
+          "name": "Alpha Wolf",
+          "description": "Every 16s <@ba.talpu>(-4)</> on the field, Drones gain one of the following effects in order: max Drone damage +10%; disables enemies' special abilities for 2s when dealing damage to them; +1 Drone",
+          "blackboard": {
+            "interval": 16,
+            "scale": 1.1,
+            "attack@silence_duration": 2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Honor of Siracusa",
+          "description": "When this unit is in the squad, all [Siracusa] Operators gain +5 Initial SP",
+          "blackboard": {
+            "sp": 5,
+            "attack_speed": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "2",
+          "name": "Honor of Siracusa",
+          "description": "When this unit is in the squad, all [Siracusa] Operators gain +6 <@ba.talpu>(+1)</> Initial SP",
+          "blackboard": {
+            "sp": 6,
+            "attack_speed": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "3",
+          "name": "",
+          "description": "",
+          "blackboard": {},
+          "tokenKey": null,
+          "isHideTalent": true
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "M0_1",
+          "name": "",
+          "description": "",
+          "blackboard": {
+            "attack@cnt": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": true
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_whitw2",
       "moduleName": "Lappland the Decadenza's Badge",
-      "desc": "Operator Lappland the Decadenza has demonstrated a remarkable aptitude for manipulating hovering units to combat and pursue the enemy in concert.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Mech-accord Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Lappland the Decadenza has demonstrated a remarkable aptitude for manipulating hovering units to combat and pursue the enemy in concert.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Mech-accord Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_whitw2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_whitw2",
       "moduleName": "Hour of the Wolf",
-      "desc": "It's almost eight. She's out by the forest, and now she's getting impatient.\nWhatever happens, she needs to be home before nine. A rule her father made. She's allowed to die, but not to break this rule. So, she has made herself a rule too: before eight, finish everything she has to finish, and kill everyone she has to kill.\nBut she hasn't finish her job today. The enemy's had more forces hidden than the Saluzzos expected, and things are getting bogged down.\nHer guys have the ride home ready. She knows her father doesn't give a shit about her results, just that she's punctual.\nSo she chooses to get on. But the enemy choose this moment to loose a pack of trained tuskbeasts, a handful of which breach the vicinity, and charge straight aboard the wheels, aimed straight for her throat.\nThey can't get near her, of course; she dodges easily, and decapitates them in the same motion. Still, something tells her they slashed <i>something</i> on her.\nShe looks down. It was the pocket watch. They scratched the glass face and left a real deep claw mark.\nShe can't tell the time through it.\nA hint of nerves immediately bolts through her. But right after that, a surprising sense of relief. The tension she felt a moment ago vanishes into thin air.\n'Lemme out,' she suddenly says.\nHer goons push back as hard as they can, but she gets out anyway, and paces one step at a time towards the forest.\nTick tock, tick tock, it's eight o'clock.\nShe paces into its depths, vanishing without a trace.\nToday, it'll take her until the dead of night before she's killed them all, and only at the crack of dawn will she finally traipse back through the Saluzzos' door.\nToday, Alberto will fly off his goddamn handle.\nToday, Lappland will smile a big happy smile.\n......\n'There's a story that goes like... A girl gets a spell cast on her that turns her beautiful, but then she'll turn back right at the stroke of midnight.' Idly fiddling with her watch, she throws out a sudden remark. 'Zaaro, you scared the magic'll run out? Scared you'll just die like a nameless tuskbeast out in the barrens where nobody'll ever know?'\n'What a fool's question. You disrespect the Signore dei Lupi's very nature.'\n'You know, most humans—the ones you see as toys—they think the same way. And in my eyes, you're all the same.\n'You think the spell cast on you will last forever and forever, and then there comes a day, a moment the magic wears off, and you howl like a mutt how it wasn't meant to be this way.'\n'What? And you think you're an exception?'\n'No, Zaaro. I think that's when you get to see the real me.'\nShe places the watch to her ear, shuts her eyes, and oh-so-softly taps at its shell in time with the faint second hand.\n'Tick-tock, tick-tock, it's eight o'clock.'"
+      "desc": "It's almost eight. She's out by the forest, and now she's getting impatient.\nWhatever happens, she needs to be home before nine. A rule her father made. She's allowed to die, but not to break this rule. So, she has made herself a rule too: before eight, finish everything she has to finish, and kill everyone she has to kill.\nBut she hasn't finish her job today. The enemy's had more forces hidden than the Saluzzos expected, and things are getting bogged down.\nHer guys have the ride home ready. She knows her father doesn't give a shit about her results, just that she's punctual.\nSo she chooses to get on. But the enemy choose this moment to loose a pack of trained tuskbeasts, a handful of which breach the vicinity, and charge straight aboard the wheels, aimed straight for her throat.\nThey can't get near her, of course; she dodges easily, and decapitates them in the same motion. Still, something tells her they slashed <i>something</i> on her.\nShe looks down. It was the pocket watch. They scratched the glass face and left a real deep claw mark.\nShe can't tell the time through it.\nA hint of nerves immediately bolts through her. But right after that, a surprising sense of relief. The tension she felt a moment ago vanishes into thin air.\n'Lemme out,' she suddenly says.\nHer goons push back as hard as they can, but she gets out anyway, and paces one step at a time towards the forest.\nTick tock, tick tock, it's eight o'clock.\nShe paces into its depths, vanishing without a trace.\nToday, it'll take her until the dead of night before she's killed them all, and only at the crack of dawn will she finally traipse back through the Saluzzos' door.\nToday, Alberto will fly off his goddamn handle.\nToday, Lappland will smile a big happy smile.\n......\n'There's a story that goes like... A girl gets a spell cast on her that turns her beautiful, but then she'll turn back right at the stroke of midnight.' Idly fiddling with her watch, she throws out a sudden remark. 'Zaaro, you scared the magic'll run out? Scared you'll just die like a nameless tuskbeast out in the barrens where nobody'll ever know?'\n'What a fool's question. You disrespect the Signore dei Lupi's very nature.'\n'You know, most humans—the ones you see as toys—they think the same way. And in my eyes, you're all the same.\n'You think the spell cast on you will last forever and forever, and then there comes a day, a moment the magic wears off, and you howl like a mutt how it wasn't meant to be this way.'\n'What? And you think you're an exception?'\n'No, Zaaro. I think that's when you get to see the real me.'\nShe places the watch to her ear, shuts her eyes, and oh-so-softly taps at its shell in time with the faint second hand.\n'Tick-tock, tick-tock, it's eight o'clock.'",
+      "typeIcon": "fun-x",
+      "uniEquipIcon": "uniequip_002_whitw2",
+      "typeName1": "FUN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_whitw2_1",
+        "uniequip_002_whitw2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 95,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (base damage increased, deals up to 110% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 29,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (base damage increased, deals up to 110% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit is in the squad, all [Siracusa] Operators gain +5 Initial SP, and +6 ASPD after first skill activation",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Honor of Siracusa",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit is in the squad, all [Siracusa] Operators gain +6 <@ba.talpu>(+1)</> Initial SP, and +6 ASPD after first skill activation",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "2",
+                  "name": "Honor of Siracusa",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attack with <@ba.kw>Drones</> to deal <@ba.kw>Arts damage</>\nDrone deals more damage when it attacks the same enemy again (base damage increased, deals up to 110% of Operator's ATK as damage)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit is in the squad, all [Siracusa] Operators gain +5 Initial SP, and +10 ASPD after first skill activation",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Honor of Siracusa",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit is in the squad, all [Siracusa] Operators gain +6 <@ba.talpu>(+1)</> Initial SP, and +10 ASPD after first skill activation",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "2",
+                  "name": "Honor of Siracusa",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1192,5 +1881,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

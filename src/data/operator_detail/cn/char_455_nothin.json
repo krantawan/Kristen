@@ -169,6 +169,36 @@
       "cost": 8
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "interval",
+            "value": 3,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "cost",
+            "value": -3,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_455_nothin#1",
@@ -675,16 +705,677 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-3秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -3,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "出其不意",
+          "description": "如果4秒内没有主动攻击过，下一次攻击的攻击力提升至125%并<$ba.stun>晕眩</>目标3秒",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.25,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "出其不意",
+          "description": "如果4秒内没有主动攻击过，下一次攻击的攻击力提升至130%<@ba.talpu>（+5%）</>并<$ba.stun>晕眩</>目标3秒",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.3,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "出其不意",
+          "description": "如果4秒内没有主动攻击过，下一次攻击的攻击力提升至150%并<$ba.stun>晕眩</>目标4秒",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "出其不意",
+          "description": "如果4秒内没有主动攻击过，下一次攻击的攻击力提升至155%<@ba.talpu>（+5%）</>并<$ba.stun>晕眩</>目标4秒",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.55,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_nothin",
       "moduleName": "乌有证章",
-      "desc": "干员乌有擅长反复切入战场\n根据外勤部门决议\n在外勤任务中划分为特种干员，行使行商职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员乌有擅长反复切入战场\n根据外勤部门决议\n在外勤任务中划分为特种干员，行使行商职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_nothin",
       "moduleName": "“檐下听雨”",
-      "desc": "他离开廉家武馆时，勾吴城已经下了几天几夜的雨，梧桐叶子落了一地，密密地埋住土底下的腥气。他从里面闩上武馆大门，趁夜深人静，从修习对策用的武器架上抽了根铜棍，翻墙出了院子。\n没过多久，勾吴城邻近的镇子里，多了一位戴墨镜的算命先生。晴天里他把摊子支在十字路口，雨天行人少，他就自己打着伞去镇外河边垂钓，一柄伞恰好遮身，伞骨又沉，不容易被吹跑。有人羡慕他活得潇洒，难道是知道了天命，才得以不在俗务烟海中昏头转向；也有人指责他招摇撞骗，问他如果真的是神机妙算，是不是也知道自己的命数。\n“是啊，哪能不知道。”他一概笑嘻嘻地这么回答。\n伞只能防雨，防不了吹箭飞镖一类暗器，伞面被划破了，他就得收拾行囊，另寻一处城镇，把伞修补起来。风潇雨晦的日子多了，他渐觉无处可去，只知道他命途的终点还在那间武馆，那之后的路他不必再走下去，可那之前的路他不知道该怎么走。伞下方寸之地，只能勉强让他一个人落脚，终究不是一处牢固的屋檐。\n也正在那时，他撞见一群怪人。后来他又从这些人口中学来一句话，如果换成大炎的官话来说，叫作“天命在人”。\n——以上这些，是干员乌有亲口告诉你的。罗德岛正在全速远离一场酝酿中的小型天灾，而乌有安逸地半躺在椅子上，那柄伞绑好收在身边。透过舷窗，你们能看见源石雨背后的太阳。\n“雨过天晴，是老天有眼，向下看着呢。欸，博士，太阳镜要不要来一副？”"
+      "desc": "他离开廉家武馆时，勾吴城已经下了几天几夜的雨，梧桐叶子落了一地，密密地埋住土底下的腥气。他从里面闩上武馆大门，趁夜深人静，从修习对策用的武器架上抽了根铜棍，翻墙出了院子。\n没过多久，勾吴城邻近的镇子里，多了一位戴墨镜的算命先生。晴天里他把摊子支在十字路口，雨天行人少，他就自己打着伞去镇外河边垂钓，一柄伞恰好遮身，伞骨又沉，不容易被吹跑。有人羡慕他活得潇洒，难道是知道了天命，才得以不在俗务烟海中昏头转向；也有人指责他招摇撞骗，问他如果真的是神机妙算，是不是也知道自己的命数。\n“是啊，哪能不知道。”他一概笑嘻嘻地这么回答。\n伞只能防雨，防不了吹箭飞镖一类暗器，伞面被划破了，他就得收拾行囊，另寻一处城镇，把伞修补起来。风潇雨晦的日子多了，他渐觉无处可去，只知道他命途的终点还在那间武馆，那之后的路他不必再走下去，可那之前的路他不知道该怎么走。伞下方寸之地，只能勉强让他一个人落脚，终究不是一处牢固的屋檐。\n也正在那时，他撞见一群怪人。后来他又从这些人口中学来一句话，如果换成大炎的官话来说，叫作“天命在人”。\n——以上这些，是干员乌有亲口告诉你的。罗德岛正在全速远离一场酝酿中的小型天灾，而乌有安逸地半躺在椅子上，那柄伞绑好收在身边。透过舷窗，你们能看见源石雨背后的太阳。\n“雨过天晴，是老天有眼，向下看着呢。欸，博士，太阳镜要不要来一副？”",
+      "typeIcon": "mer-x",
+      "uniEquipIcon": "uniequip_002_nothin",
+      "typeName1": "MER",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_nothin_1",
+        "uniequip_002_nothin_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再部署时间<@ba.kw>减少</>，撤退时不返还<@ba.kw>部署费用</>，在场时每3秒消耗<@ba.kw>2</>点部署费用（不足时自动撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再部署时间<@ba.kw>减少</>，撤退时不返还<@ba.kw>部署费用</>，在场时每3秒消耗<@ba.kw>2</>点部署费用（不足时自动撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "如果4秒内没有主动攻击过，下一次攻击的攻击力提升至165%并<$ba.stun>晕眩</>目标5秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "出其不意",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "如果4秒内没有主动攻击过，下一次攻击的攻击力提升至170%<@ba.talpu>（+5%）</>并<$ba.stun>晕眩</>目标5秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "出其不意",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再部署时间<@ba.kw>减少</>，撤退时不返还<@ba.kw>部署费用</>，在场时每3秒消耗<@ba.kw>2</>点部署费用（不足时自动撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "如果3秒内没有主动攻击过，下一次攻击的攻击力提升至175%并<$ba.stun>晕眩</>目标5秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "出其不意",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "如果3秒内没有主动攻击过，下一次攻击的攻击力提升至180%<@ba.talpu>（+5%）</>并<$ba.stun>晕眩</>目标5秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "出其不意",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1138,5 +1829,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

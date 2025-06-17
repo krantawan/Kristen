@@ -151,6 +151,28 @@
       "cost": 12
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "heal_scale",
+            "value": 0.75,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_343_tknogi#1",
@@ -636,16 +658,688 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "最大HP+160",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 160,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 300,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "祝",
+          "description": "攻撃範囲内のHPが40％未満の味方に12％の<$ba.protect>加護</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "祝",
+          "description": "攻撃範囲内のHPが40％未満の味方に14%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.14,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "祝",
+          "description": "攻撃範囲内のHPが40％未満の味方に18％の<$ba.protect>加護</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "祝",
+          "description": "攻撃範囲内のHPが40％未満の味方に20%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_tknogi",
       "moduleName": "ツキノギの記章",
-      "desc": "ツキノギは味方に継続的に加護を付与することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、祈祷師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ツキノギは味方に継続的に加護を付与することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、祈祷師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_tknogi",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_tknogi",
       "moduleName": "朧夜の灯り",
-      "desc": "山に漂う霧の晴れぬうちに、おぼろげな月輪が空へ昇ってきてしまった。\n霧を纏った月明かりは青みがかった灰色に滲み、軽やかな絹の如く、まばらな枝葉に絡みついている。\nその様子は、この静けさを失くした夜を帳の中へと引き込もうとしているかのようだ。\n石灯籠の明かりのまわりを、小虫が鳴き声をあげながらぐるぐるとさまよっていた。\nほどなくして、虫は飛ぶのに疲れたようで、つるりとした石の上へと止まる。\nすると、その「石」に皺が寄り、何者かの手が扇ぐようにして、迷子の虫は払いのけられた。\n「まったく、いつになったら霧が晴れるのやら……」\n僧侶は石灯籠にもたれたまま座り、疲労を隠しきれない顔に苦笑いを浮かべていた。\n彼は早朝、夜が明けきる前に果物やタケノコを採ろうと山に登ってきたのだが、突然霧に見舞われて道に迷ってしまったのだ。\nもうもうと立ちこめる霧の奥にぼんやりとした光を見つけ、麓にある人里の光かと近付いてきてみたものの、それは苔に覆われた粗末な石灯籠でしかなかった。\nそうして知らぬ間に霧はさらに濃くなっており、山を下りる道を探すどころか、一寸先もはっきりとは見えないほどになってしまった。\nゆえに僧侶はこの場で足を止めざるを得ず、こうしてまた夜が訪れるまで石灯籠と共に待ち続けていたのだ。\nそこへふと、澄んだ鈴の音が鳴り響いた。\n寝ぼけ眼を擦りながら、僧侶は、霧の奥にまた微かな灯りが現れるのを目にした。\nここへ来た時と異なるのは、その灯りが向こうからゆらゆらとやってくるところだ。\nやがてゆっくりと、しかし確かな足音が近づいてきたかと思えば、淡く青白い帯が石灯籠の笠を撫でていく。\n薄い月明かりと灯籠のほのかな明かりを借り、僧侶はそこでようやく相手の顔を見た。\n「あなたは……山頂の神社の……」\n「こんばんは。どうやら、この山をあまりご存知ない方とお見受けします。山中はすでに早春を過ぎておりまして、今は雲や霧が最も生じやすい時期ですので。」\n「あなたは、麓のお寺に新しく入られた方ですか？」\nそう尋ねられた僧侶は、答えに窮した。\n「そう案ずることはありません。」\n「私は神職を務める身ですが、平時はあまり社の中に留まっていたくはないのです。」\n「山の中で足を踏み外した方に手を差し伸べ、霧の中で道に迷われた方を案内するほうが私にとっての『神職』の解釈に近しい振る舞いですから……」\n「あなたがここにいる理由も、ここで立ち往生している理由もうかがいませんよ。」\n半信半疑の僧侶をよそに、彼女がアーツユニットを振れば、光の粒と水気を纏った帯がたなびき、鈴の音が鳴り響いて、わずかに霧が晴れた。\n深い森の狭き道も徐々に姿を現して、見上げてみれば、山頂へと通じる道には笠木を渡した二つの柱――いわゆる「羽栖」、神社という神域への門が立っている。\n「さあ、参りましょう。」\n「ここから麓の寺までは距離がありますので、ひとまず山頂で一夜を過ごし、明朝霧が晴れたあとにでも、麓まで送って差し上げます。」"
+      "desc": "山に漂う霧の晴れぬうちに、おぼろげな月輪が空へ昇ってきてしまった。\n霧を纏った月明かりは青みがかった灰色に滲み、軽やかな絹の如く、まばらな枝葉に絡みついている。\nその様子は、この静けさを失くした夜を帳の中へと引き込もうとしているかのようだ。\n石灯籠の明かりのまわりを、小虫が鳴き声をあげながらぐるぐるとさまよっていた。\nほどなくして、虫は飛ぶのに疲れたようで、つるりとした石の上へと止まる。\nすると、その「石」に皺が寄り、何者かの手が扇ぐようにして、迷子の虫は払いのけられた。\n「まったく、いつになったら霧が晴れるのやら……」\n僧侶は石灯籠にもたれたまま座り、疲労を隠しきれない顔に苦笑いを浮かべていた。\n彼は早朝、夜が明けきる前に果物やタケノコを採ろうと山に登ってきたのだが、突然霧に見舞われて道に迷ってしまったのだ。\nもうもうと立ちこめる霧の奥にぼんやりとした光を見つけ、麓にある人里の光かと近付いてきてみたものの、それは苔に覆われた粗末な石灯籠でしかなかった。\nそうして知らぬ間に霧はさらに濃くなっており、山を下りる道を探すどころか、一寸先もはっきりとは見えないほどになってしまった。\nゆえに僧侶はこの場で足を止めざるを得ず、こうしてまた夜が訪れるまで石灯籠と共に待ち続けていたのだ。\nそこへふと、澄んだ鈴の音が鳴り響いた。\n寝ぼけ眼を擦りながら、僧侶は、霧の奥にまた微かな灯りが現れるのを目にした。\nここへ来た時と異なるのは、その灯りが向こうからゆらゆらとやってくるところだ。\nやがてゆっくりと、しかし確かな足音が近づいてきたかと思えば、淡く青白い帯が石灯籠の笠を撫でていく。\n薄い月明かりと灯籠のほのかな明かりを借り、僧侶はそこでようやく相手の顔を見た。\n「あなたは……山頂の神社の……」\n「こんばんは。どうやら、この山をあまりご存知ない方とお見受けします。山中はすでに早春を過ぎておりまして、今は雲や霧が最も生じやすい時期ですので。」\n「あなたは、麓のお寺に新しく入られた方ですか？」\nそう尋ねられた僧侶は、答えに窮した。\n「そう案ずることはありません。」\n「私は神職を務める身ですが、平時はあまり社の中に留まっていたくはないのです。」\n「山の中で足を踏み外した方に手を差し伸べ、霧の中で道に迷われた方を案内するほうが私にとっての『神職』の解釈に近しい振る舞いですから……」\n「あなたがここにいる理由も、ここで立ち往生している理由もうかがいませんよ。」\n半信半疑の僧侶をよそに、彼女がアーツユニットを振れば、光の粒と水気を纏った帯がたなびき、鈴の音が鳴り響いて、わずかに霧が晴れた。\n深い森の狭き道も徐々に姿を現して、見上げてみれば、山頂へと通じる道には笠木を渡した二つの柱――いわゆる「羽栖」、神社という神域への門が立っている。\n「さあ、参りましょう。」\n「ここから麓の寺までは距離がありますので、ひとまず山頂で一夜を過ごし、明朝霧が晴れたあとにでも、麓まで送って差し上げます。」",
+      "typeIcon": "bls-x",
+      "uniEquipIcon": "uniequip_002_tknogi",
+      "typeName1": "BLS",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_tknogi_1",
+        "uniequip_002_tknogi_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内のHPが40%未満の味方の防御力+5%、そして対象に20%の<$ba.protect>加護</>状態を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "祝",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内のHPが40%未満の味方の防御力+5%、そして対象に22%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "祝",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.22,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内のHPが40%未満の味方の防御力+8%、そして対象に22%の<$ba.protect>加護</>状態を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "祝",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.22,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内のHPが40%未満の味方の防御力+8%、そして対象に24%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "祝",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.24,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1099,5 +1793,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

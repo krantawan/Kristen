@@ -150,6 +150,28 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "scale",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_494_vendla#1",
@@ -605,16 +627,578 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+22",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 22,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 180,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "土壌改良",
+          "description": "攻撃範囲内で最大HPが最も高い味方が受ける治療効果+8%",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 1.08,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "土壌改良",
+          "description": "攻撃範囲内で最大HPが最も高い味方が受ける治療効果+11%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 1.11,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "土壌改良",
+          "description": "攻撃範囲内で最大HPが最も高い味方が受ける治療効果+15%",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 1.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "土壌改良",
+          "description": "攻撃範囲内で最大HPが最も高い味方が受ける治療効果+18%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 1.18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_vendla",
       "moduleName": "ヴァンデラの記章",
-      "desc": "ヴァンデラはアーツで敵を攻撃すると共に味方を治療することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては医療オペレーターとして区分し、呪癒師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ヴァンデラはアーツで敵を攻撃すると共に味方を治療することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては医療オペレーターとして区分し、呪癒師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_vendla",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_vendla",
       "moduleName": "砕かれた薔薇",
-      "desc": "ヴァンデラからの依頼：\nディピカさん、こんにちは。依頼がありご連絡します。これは、私の生家のドアにはめ込まれていたステンドグラスの破片です。もとは十二歳の誕生日に祖父が作ってくれて、温室に備え付けていたものでした。ですが、後の戦争で割れてしまったので、その破片をすべて集めてロドスに持ってきていたんです。初めは思い出として残しておくつもりだったのですが、ディピカさんならステンドグラスを修復できると伺って、この依頼をさせていただきます。料金はいくらかかっても構いませんので、どうか復元をお願いします。\n割れて鋭利な破片なので、一枚ずつ緩衝材で包んでいます。取り出す時は、手を切らないようお気を付けください。\nディピカの返信：\n戦争で割れちゃったから、こんなに土まみれなんだね。土を落とすのに少し時間がかかるから、しばらく待ってて。\nヴァンデラの返信：\nありがとうございます。もしよろしければ、落とした土は取っておいていただけませんか？\nそれは、故郷の土なんです。私はロドスでも故郷の花を育てているのですが、育ちが悪く悩んでいたところで。その土を鉢に加えれば、もっと良く育つかもしれないと思って。\nディピカの返信：\nうん、いいよ。明日の十二時までに受け取ってね。\nヴァンデラの返信：\nよろしくお願いします。\n（ヒナギクを一輪贈ります。お気に召しますように。）\nディピカの返信：\n修復は順調だよ。破片がきちんと保存されてたから、つなぎ合わせるのもそんなに難しくなかった。だけど、赤い色がひび割れに染み込んで、元の模様が台無しになっちゃってる破片も多いし、そうなってるところは新しいガラスに交換したほうがいいと思うよ。模様は私がそっくりそのまま描き直してあげるから。\nヴァンデラの返信：\nごめんなさい。ひび割れに染みてしまっているのは、知らないうちに飛び散っていた血だと思います。きれいにしたと思っていたのですが。\n一度よく考えてみたいので、修復作業も一旦止めていただいて大丈夫です。\nよろしくお願いします。\nディピカの返信：\nヴァンデラさん、大丈夫？あれからもう一ヶ月経つけど音沙汰ないから心配だよ。\nヴァンデラの返信：\nご心配をおかけしてすみません。しばらく故郷に帰っていました。\nステンドグラスに染みた血を見て、思い出したくないことを思い出してしまったんです。血に濡れたまま、細い小道を必死で走ったあの時のことを。地面に血が垂れて黒い跡が残っているのを見て、私は思わず目を背けてしまっていました。\nですが、今回故郷へ帰ってみたら、あの時通った道には真っ赤なバラが咲き誇っていました。もしかするとあの日、私のポケットから種が落ちて、それが血を養分に、太陽と雨に向かって花を咲かせたのかもしれません。\nそれを思うと、血が染み込んでしまったそのガラスも残しておきたいと考えるようになりました。ですから、そこに今回お送りするものと同じような、美しい花を描いていただけますか。血のような色と、温かみを持った花を。\n（故郷のバラを贈ります。アーツで元気な状態を保たせていますので、ぜひこの美しさをお楽しみください。）"
+      "desc": "ヴァンデラからの依頼：\nディピカさん、こんにちは。依頼がありご連絡します。これは、私の生家のドアにはめ込まれていたステンドグラスの破片です。もとは十二歳の誕生日に祖父が作ってくれて、温室に備え付けていたものでした。ですが、後の戦争で割れてしまったので、その破片をすべて集めてロドスに持ってきていたんです。初めは思い出として残しておくつもりだったのですが、ディピカさんならステンドグラスを修復できると伺って、この依頼をさせていただきます。料金はいくらかかっても構いませんので、どうか復元をお願いします。\n割れて鋭利な破片なので、一枚ずつ緩衝材で包んでいます。取り出す時は、手を切らないようお気を付けください。\nディピカの返信：\n戦争で割れちゃったから、こんなに土まみれなんだね。土を落とすのに少し時間がかかるから、しばらく待ってて。\nヴァンデラの返信：\nありがとうございます。もしよろしければ、落とした土は取っておいていただけませんか？\nそれは、故郷の土なんです。私はロドスでも故郷の花を育てているのですが、育ちが悪く悩んでいたところで。その土を鉢に加えれば、もっと良く育つかもしれないと思って。\nディピカの返信：\nうん、いいよ。明日の十二時までに受け取ってね。\nヴァンデラの返信：\nよろしくお願いします。\n（ヒナギクを一輪贈ります。お気に召しますように。）\nディピカの返信：\n修復は順調だよ。破片がきちんと保存されてたから、つなぎ合わせるのもそんなに難しくなかった。だけど、赤い色がひび割れに染み込んで、元の模様が台無しになっちゃってる破片も多いし、そうなってるところは新しいガラスに交換したほうがいいと思うよ。模様は私がそっくりそのまま描き直してあげるから。\nヴァンデラの返信：\nごめんなさい。ひび割れに染みてしまっているのは、知らないうちに飛び散っていた血だと思います。きれいにしたと思っていたのですが。\n一度よく考えてみたいので、修復作業も一旦止めていただいて大丈夫です。\nよろしくお願いします。\nディピカの返信：\nヴァンデラさん、大丈夫？あれからもう一ヶ月経つけど音沙汰ないから心配だよ。\nヴァンデラの返信：\nご心配をおかけしてすみません。しばらく故郷に帰っていました。\nステンドグラスに染みた血を見て、思い出したくないことを思い出してしまったんです。血に濡れたまま、細い小道を必死で走ったあの時のことを。地面に血が垂れて黒い跡が残っているのを見て、私は思わず目を背けてしまっていました。\nですが、今回故郷へ帰ってみたら、あの時通った道には真っ赤なバラが咲き誇っていました。もしかするとあの日、私のポケットから種が落ちて、それが血を養分に、太陽と雨に向かって花を咲かせたのかもしれません。\nそれを思うと、血が染み込んでしまったそのガラスも残しておきたいと考えるようになりました。ですから、そこに今回お送りするものと同じような、美しい花を描いていただけますか。血のような色と、温かみを持った花を。\n（故郷のバラを贈ります。アーツで元気な状態を保たせていますので、ぜひこの美しさをお楽しみください。）",
+      "typeIcon": "inc-x",
+      "uniEquipIcon": "uniequip_002_vendla",
+      "typeName1": "INC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_vendla_1",
+        "uniequip_002_vendla_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 105,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 122,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内で最大HPが最も高い味方が受ける治療効果+20%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "土壌改良",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内で最大HPが最も高い味方が受ける治療効果+23%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "土壌改良",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 143,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内で最大HPが最も高い味方が受ける治療効果+23%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "土壌改良",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内で最大HPが最も高い味方が受ける治療効果+26%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "土壌改良",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.26,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1068,5 +1652,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -168,6 +168,28 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "ep_heal_ratio",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4041_chnut#1",
@@ -650,16 +672,582 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+15",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 15,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 100,
+        "atk": 35,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "脚踏实地",
+          "description": "治疗地面单位，<$ba.dt.element>元素损伤</>回复量提高10%",
+          "blackboard": [
+            {
+              "key": "ep_heal_scale",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "脚踏实地",
+          "description": "治疗地面单位，<$ba.dt.element>元素损伤</>回复量提高13%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "ep_heal_scale",
+              "value": 1.13,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "脚踏实地",
+          "description": "治疗地面单位，<$ba.dt.element>元素损伤</>回复量提高20%",
+          "blackboard": [
+            {
+              "key": "ep_heal_scale",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "脚踏实地",
+          "description": "治疗地面单位，<$ba.dt.element>元素损伤</>回复量提高23%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "ep_heal_scale",
+              "value": 1.23,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_chnut",
       "moduleName": "褐果证章",
-      "desc": "干员褐果擅长大范围治疗并为干员恢复元素损伤\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使行医职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员褐果擅长大范围治疗并为干员恢复元素损伤\n根据外勤部门决议\n在外勤任务中划分为医疗干员，行使行医职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_chnut",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_chnut",
       "moduleName": "地上巡旅纪念灯",
-      "desc": "一块谢拉格冰晶石。褐果被专门安排坐在了驮兽宝宝椅上，他裹紧了租来的大衣——说是租，但实际上老板发现最小号都能被他穿成拖地长袍，大手一挥就让他免费套在身上了。在终于登上山顶看到日出时，淡金色的阳光透过冰晶石照在褐果的脸上，他被人们高高举起来，淹没在欢呼声中。\n一块雷姆必拓黄铁矿。原本只是来见识间歇泉的喷发，但一次前所未有的地下喷发导致了矿洞塌陷，褐果从惊慌逃生的人群中挤出，一路高举着自己的从医资格证逆着人流上前。在忙了一整晚之后，他没有要矿工们递来的脏脏的钱币，只收下了一块美丽规整的黄铁矿。\n一块萨米的树根化石。一路走到极北，不知道自己下一站去哪里的褐果拿着这块化石，拜托当地人进行一次占卜。当地人告诉他，这块在地下埋藏了千万年的老树根说：“大地的广阔超出你的想象，不要停下。”\n一块炎国璞玉。在冒着热气的小吃摊上，褐果拿着用一块璞玉典当换来的钱请两拨为了一时意气快要打起来的年轻人坐下来，先尝尝当地的小吃。一顿美食下肚，年轻人们互相拍了拍肩膀表示和解，又一起凑钱赎回了璞玉。褐果想，要是人与人之间的争端都像今天的这样容易解决就好了，他愿意治病救人，但并不想看到无谓的流血争执。\n一块琥珀。褐果在哥伦比亚发现了这块封存着昆虫的琥珀，地灵和艾雅法拉仔细查看，告诉他里面的昆虫只在萨尔贡一带有分布，她们也不知道它是怎么出现在哥伦比亚的。而此时他们正站在罗德岛的舰船上，轧过荒漠，前方正是萨尔贡的无垠沙漠。\n褐果收回这块琥珀，他想，自己也该回家看看了。\n回到地底，他又来到了熟悉的石瀑前。几丛荧光蘑菇生长在潮湿的石壁上，褐果踮了踮脚，和蘑菇比了比身高。几个小脑袋围在他的身边，等他讲地面上的经历。\n一排矿石灯发出各色柔和的光芒，照亮了一双双好奇的眼睛，就和小时候一样，只是讲故事的人变成了自己。褐果笑了起来。\n“这里每一块矿石都来自一片完全不同的江河湖泊，山野峡谷，你们想听哪个呢？”"
+      "desc": "一块谢拉格冰晶石。褐果被专门安排坐在了驮兽宝宝椅上，他裹紧了租来的大衣——说是租，但实际上老板发现最小号都能被他穿成拖地长袍，大手一挥就让他免费套在身上了。在终于登上山顶看到日出时，淡金色的阳光透过冰晶石照在褐果的脸上，他被人们高高举起来，淹没在欢呼声中。\n一块雷姆必拓黄铁矿。原本只是来见识间歇泉的喷发，但一次前所未有的地下喷发导致了矿洞塌陷，褐果从惊慌逃生的人群中挤出，一路高举着自己的从医资格证逆着人流上前。在忙了一整晚之后，他没有要矿工们递来的脏脏的钱币，只收下了一块美丽规整的黄铁矿。\n一块萨米的树根化石。一路走到极北，不知道自己下一站去哪里的褐果拿着这块化石，拜托当地人进行一次占卜。当地人告诉他，这块在地下埋藏了千万年的老树根说：“大地的广阔超出你的想象，不要停下。”\n一块炎国璞玉。在冒着热气的小吃摊上，褐果拿着用一块璞玉典当换来的钱请两拨为了一时意气快要打起来的年轻人坐下来，先尝尝当地的小吃。一顿美食下肚，年轻人们互相拍了拍肩膀表示和解，又一起凑钱赎回了璞玉。褐果想，要是人与人之间的争端都像今天的这样容易解决就好了，他愿意治病救人，但并不想看到无谓的流血争执。\n一块琥珀。褐果在哥伦比亚发现了这块封存着昆虫的琥珀，地灵和艾雅法拉仔细查看，告诉他里面的昆虫只在萨尔贡一带有分布，她们也不知道它是怎么出现在哥伦比亚的。而此时他们正站在罗德岛的舰船上，轧过荒漠，前方正是萨尔贡的无垠沙漠。\n褐果收回这块琥珀，他想，自己也该回家看看了。\n回到地底，他又来到了熟悉的石瀑前。几丛荧光蘑菇生长在潮湿的石壁上，褐果踮了踮脚，和蘑菇比了比身高。几个小脑袋围在他的身边，等他讲地面上的经历。\n一排矿石灯发出各色柔和的光芒，照亮了一双双好奇的眼睛，就和小时候一样，只是讲故事的人变成了自己。褐果笑了起来。\n“这里每一块矿石都来自一片完全不同的江河湖泊，山野峡谷，你们想听哪个呢？”",
+      "typeIcon": "wdm-x",
+      "uniEquipIcon": "uniequip_002_chnut",
+      "typeName1": "WDM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_chnut_1",
+        "uniequip_002_chnut_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30103",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30023",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "治疗地面单位，<$ba.dt.element>元素损伤</>回复量提高25%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "脚踏实地",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "治疗地面单位，<$ba.dt.element>元素损伤</>回复量提高28%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "脚踏实地",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "恢复友方单位生命，并回复相当于攻击力<@ba.kw>{ep_heal_ratio:0%}</>的<$ba.dt.element>元素损伤</>（可以回复未受伤友方单位的<$ba.dt.element>元素损伤</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "治疗地面单位，<$ba.dt.element>元素损伤</>回复量提高27%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "脚踏实地",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.27,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "治疗地面单位，<$ba.dt.element>元素损伤</>回复量提高30%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "脚踏实地",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1113,5 +1701,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

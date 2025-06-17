@@ -168,6 +168,36 @@
       "cost": 25
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@append_atk_scale",
+            "value": 0.5,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "attack@enable_third_attack",
+            "value": 0,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1035_wisdel#1",
@@ -761,16 +791,774 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+32",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 32,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "好礼",
+          "description": "攻击时为主目标附着残影，残影受到维什戴尔的余震影响时有15%概率爆炸，对周围所有敌人造成120%攻击力的物理伤害并使其<$ba.stun>晕眩</>0.5秒",
+          "blackboard": [
+            {
+              "key": "attack@main_atk_scale",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@bomb_atk_scale",
+              "value": 1.2,
+              "valueStr": null
+            },
+            {
+              "key": "attack@stun",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@range_radius",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "好礼",
+          "description": "攻击时为主目标附着残影，残影受到维什戴尔的余震影响时有15%概率爆炸，对周围所有敌人造成130%<@ba.talpu>（+10%）</>攻击力的物理伤害并使其<$ba.stun>晕眩</>0.5秒",
+          "blackboard": [
+            {
+              "key": "attack@main_atk_scale",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@bomb_atk_scale",
+              "value": 1.3,
+              "valueStr": null
+            },
+            {
+              "key": "attack@stun",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@range_radius",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "好礼",
+          "description": "攻击时对主目标的攻击力提升至115%并为其附着残影，残影受到维什戴尔的余震影响时有15%概率爆炸，对周围所有敌人造成150%攻击力的物理伤害并使其<$ba.stun>晕眩</>1秒",
+          "blackboard": [
+            {
+              "key": "attack@main_atk_scale",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@bomb_atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@range_radius",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "好礼",
+          "description": "攻击时对主目标的攻击力提升至115%并为其附着残影，残影受到维什戴尔的余震影响时有15%概率爆炸，对周围所有敌人造成160%<@ba.talpu>（+10%）</>攻击力的物理伤害并使其<$ba.stun>晕眩</>1秒",
+          "blackboard": [
+            {
+              "key": "attack@main_atk_scale",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@bomb_atk_scale",
+              "value": 1.6,
+              "valueStr": null
+            },
+            {
+              "key": "attack@stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@range_radius",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "死魂灵的余息",
+          "description": "部署后立刻在攻击范围内召唤一个魂灵之影，在魂灵之影周围时获得<$ba.camou>迷彩</>",
+          "blackboard": [],
+          "tokenKey": "token_10035_wisdel_wward",
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_wisdel",
       "moduleName": "维什戴尔证章",
-      "desc": "干员维什戴尔擅长远距离打击复数地面敌人\n根据外勤部门决议\n在外勤任务中划分为狙击干员，行使投掷手职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员维什戴尔擅长远距离打击复数地面敌人\n根据外勤部门决议\n在外勤任务中划分为狙击干员，行使投掷手职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_wisdel",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_wisdel",
       "moduleName": "“祖宗发射器”",
-      "desc": "一副盔甲站在沙丘上。\n他差不多忘了自己是从哪里来的。他的身体磨损得厉害，两条腿一长一短，肩甲还缺了一块，能看到黑黢黢空荡荡的内里。\n剑也断了，似乎是在砍向一个同族时折断的。那家伙躲在一座风车里，央求他等日落了再动手，那时候在自己身体里玩耍的孩子们就都回家去了。他答应了。两三个小时对他们这样的生命而言过于微不足道。他在山坡上坐到太阳沉下去，然后折返，杀死了那架呜呜作响的风车。\n寄居在古老高塔深处的幽灵，被掩埋于大图书馆废墟下的书册，无人驾驶的沙盗船，以性命为砝码的天平......他记得对魔王的承诺，一路跋涉，就是为了把这些散落各地的同族带回卡兹戴尔。而他自己会是最后一个。\n眼前这片无垠的金色是什么？是沙漠，是大海，还是无数卡兹戴尔中的一座？\n盔甲在下沉。他快要无法区分身体和沙粒，就像分不清记忆与历史。当沙子掩埋到头顶的时候，他就会彻底消失。\n“笃，笃笃”。\n头顶传来敲击声。\n可能是羽兽把他头上的草当成了食物。\n“咣——咣——”\n埋着他的沙丘开始摇晃。\n不，不是沙丘在摇晃，是他的身体。有人在踢他。看架势，是准备把他——最为年长的死魂灵，卡兹戴尔最初的守护者，所有魔王的座前参谋——当球踢。\n“你——”\n“能听见啊？能听见就别给我装死。我把你背来背去这么久，你也该派上点用场了。不然我回去就把你当废品卖了！”\n“......你要我做什么？”\n“哇哦，这么冷静？你以前身体那么大的时候，不是翻来覆去只会嚷嚷‘滚出去’‘我好恨’‘异族人’吗？我还当你识字比我还少，只会讲这些呢。”\n“殿下选择的人，竟这样粗......”\n“这语气倒是耳熟了些。得了，别急着找回你的唠叨劲了，给我干活。”\n“干什——”\n他的身体腾空了。\n“力道够不够？需不需要我再加点炸药？”\n他在飞。\n飞得很高，足以掠过沙丘，越过废墟，直至——\n卡兹戴尔。\n他以为自己不会再见的地方。\n照这个飞行路径，他很快就会撞到曾经的王庭议事厅，他以全族残存的灵魂之火，对魔王以勒什许下承诺之地——\n“维什戴尔，*萨卡兹语*——！”\n“哎呀，你这么乐意诅咒自己吗，我亲爱的老祖宗？”年轻的萨卡兹大笑着，“去吧，炸得更猛烈些，把那些破烂炸干净之后，我们一起——回家！”"
+      "desc": "一副盔甲站在沙丘上。\n他差不多忘了自己是从哪里来的。他的身体磨损得厉害，两条腿一长一短，肩甲还缺了一块，能看到黑黢黢空荡荡的内里。\n剑也断了，似乎是在砍向一个同族时折断的。那家伙躲在一座风车里，央求他等日落了再动手，那时候在自己身体里玩耍的孩子们就都回家去了。他答应了。两三个小时对他们这样的生命而言过于微不足道。他在山坡上坐到太阳沉下去，然后折返，杀死了那架呜呜作响的风车。\n寄居在古老高塔深处的幽灵，被掩埋于大图书馆废墟下的书册，无人驾驶的沙盗船，以性命为砝码的天平......他记得对魔王的承诺，一路跋涉，就是为了把这些散落各地的同族带回卡兹戴尔。而他自己会是最后一个。\n眼前这片无垠的金色是什么？是沙漠，是大海，还是无数卡兹戴尔中的一座？\n盔甲在下沉。他快要无法区分身体和沙粒，就像分不清记忆与历史。当沙子掩埋到头顶的时候，他就会彻底消失。\n“笃，笃笃”。\n头顶传来敲击声。\n可能是羽兽把他头上的草当成了食物。\n“咣——咣——”\n埋着他的沙丘开始摇晃。\n不，不是沙丘在摇晃，是他的身体。有人在踢他。看架势，是准备把他——最为年长的死魂灵，卡兹戴尔最初的守护者，所有魔王的座前参谋——当球踢。\n“你——”\n“能听见啊？能听见就别给我装死。我把你背来背去这么久，你也该派上点用场了。不然我回去就把你当废品卖了！”\n“......你要我做什么？”\n“哇哦，这么冷静？你以前身体那么大的时候，不是翻来覆去只会嚷嚷‘滚出去’‘我好恨’‘异族人’吗？我还当你识字比我还少，只会讲这些呢。”\n“殿下选择的人，竟这样粗......”\n“这语气倒是耳熟了些。得了，别急着找回你的唠叨劲了，给我干活。”\n“干什——”\n他的身体腾空了。\n“力道够不够？需不需要我再加点炸药？”\n他在飞。\n飞得很高，足以掠过沙丘，越过废墟，直至——\n卡兹戴尔。\n他以为自己不会再见的地方。\n照这个飞行路径，他很快就会撞到曾经的王庭议事厅，他以全族残存的灵魂之火，对魔王以勒什许下承诺之地——\n“维什戴尔，*萨卡兹语*——！”\n“哎呀，你这么乐意诅咒自己吗，我亲爱的老祖宗？”年轻的萨卡兹大笑着，“去吧，炸得更猛烈些，把那些破烂炸干净之后，我们一起——回家！”",
+      "typeIcon": "bom-x",
+      "uniEquipIcon": "uniequip_002_wisdel",
+      "typeName1": "BOM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_wisdel_1",
+        "uniequip_002_wisdel_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击对小范围的<@ba.kw>地面</>敌人造成<@ba.kw>三次</>物理伤害（后两次为余震，伤害降低至攻击力的50％）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击对小范围的<@ba.kw>地面</>敌人造成<@ba.kw>三次</>物理伤害（后两次为余震，伤害降低至攻击力的50％）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击时对主目标的攻击力提升至120%并为其附着残影，残影受到维什戴尔的余震影响时有15%概率爆炸，对周围所有敌人造成170%攻击力的物理伤害并使其<$ba.stun>晕眩</>1秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "好礼",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击时对主目标的攻击力提升至120%并为其附着残影，残影受到维什戴尔的余震影响时有15%概率爆炸，对周围所有敌人造成180%<@ba.talpu>（+10%）</>攻击力的物理伤害并使其<$ba.stun>晕眩</>1秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "好礼",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击对小范围的<@ba.kw>地面</>敌人造成<@ba.kw>三次</>物理伤害（后两次为余震，伤害降低至攻击力的50％）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击时对主目标的攻击力提升至125%并为其附着残影，残影受到维什戴尔的余震影响时有15%概率爆炸，对周围所有敌人造成175%攻击力的物理伤害并使其<$ba.stun>晕眩</>1秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "好礼",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击时对主目标的攻击力提升至125%并为其附着残影，残影受到维什戴尔的余震影响时有15%概率爆炸，对周围所有敌人造成185%<@ba.talpu>（+10%）</>攻击力的物理伤害并使其<$ba.stun>晕眩</>1秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "好礼",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.85,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1231,6 +2019,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10035_wisdel_wward"
   ],
   "patch_info": {}
 }

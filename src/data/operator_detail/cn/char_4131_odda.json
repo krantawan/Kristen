@@ -169,6 +169,36 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@ability_range_radius",
+            "value": 1,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "attack@atk_scale_2",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "攻击使目标周围的其他敌人受到相当于攻击力<@ba.kw>{attack@atk_scale_2:0%}</>的<@ba.kw>群体</>物理伤害",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4131_odda#1",
@@ -659,16 +689,667 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "落锤",
+          "description": "累计造成45次物理伤害后，攻击力+9%",
+          "blackboard": [
+            {
+              "key": "count",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.09,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "落锤",
+          "description": "累计造成45次物理伤害后，攻击力+12%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "count",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "落锤",
+          "description": "累计造成30次物理伤害后，攻击力+15%",
+          "blackboard": [
+            {
+              "key": "count",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "落锤",
+          "description": "累计造成30次物理伤害后，攻击力+18%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "count",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_odda",
       "moduleName": "奥达证章",
-      "desc": "干员奥达擅长近距离作战并造成大范围物理伤害\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使撼地者职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员奥达擅长近距离作战并造成大范围物理伤害\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使撼地者职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_odda",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_odda",
       "moduleName": "旧背包",
-      "desc": "《工程部定制申请单》\n申请事由：定制一个新的背包\n姓名：奥达\n部门：罗德岛驻卡兹戴尔办事处\n职务：信使\n具体理由：\n以前，我基本只需要送一些零散的信件，有时候还会送一些小型货物。那时，这个背包的大小正好，但现在，情况发生了一些变化。\n第一是信件本身。战争结束后，回到卡兹戴尔的同胞很多，写信来寻亲的同胞更多，光是要送的信件数量就是过去的好几倍。\n第二是信件之外的货物。卡兹戴尔遍地都是需要修缮的地方，大家又很热情，于是，许多工人干脆选择住在工地。他们的家人关心他们的伙食，所以总拜托我送些食物给他们。\n这样的送货委托路程上虽然不远，但是货物会占据不小的空间，比如干货、特制的榨菜、面包等等，甚至有时候还有酒。我很高兴能帮大家送这些货物，可是，数量太多了，我每天都要分批送好几次，非常耽误时间。\n所以，我想请工程部帮我做一个新的背包，让我能够更好地帮卡兹戴尔的人们送信和送货。\n备注：\n可能的话，希望能够以这个背包为基础进行改装。我和它感情很深。\n对了，可露希尔小姐应该还留有我那把巨剑的数据，以它的两倍重量来设计背包的承重量吧。\n工程部意见：\n同意申请。\n可露希尔意见：\n口气不小嘛，奥达，那我可就不客气了！\n【权限档案】\n【绝密】\n定制背包是线人奥达与我们约好的信号。\n即日起，奥达的线人身份永久进入休眠状态，以单纯的信使身份与罗德岛合作。\n愿他顺遂。\n——阿斯卡纶"
+      "desc": "《工程部定制申请单》\n申请事由：定制一个新的背包\n姓名：奥达\n部门：罗德岛驻卡兹戴尔办事处\n职务：信使\n具体理由：\n以前，我基本只需要送一些零散的信件，有时候还会送一些小型货物。那时，这个背包的大小正好，但现在，情况发生了一些变化。\n第一是信件本身。战争结束后，回到卡兹戴尔的同胞很多，写信来寻亲的同胞更多，光是要送的信件数量就是过去的好几倍。\n第二是信件之外的货物。卡兹戴尔遍地都是需要修缮的地方，大家又很热情，于是，许多工人干脆选择住在工地。他们的家人关心他们的伙食，所以总拜托我送些食物给他们。\n这样的送货委托路程上虽然不远，但是货物会占据不小的空间，比如干货、特制的榨菜、面包等等，甚至有时候还有酒。我很高兴能帮大家送这些货物，可是，数量太多了，我每天都要分批送好几次，非常耽误时间。\n所以，我想请工程部帮我做一个新的背包，让我能够更好地帮卡兹戴尔的人们送信和送货。\n备注：\n可能的话，希望能够以这个背包为基础进行改装。我和它感情很深。\n对了，可露希尔小姐应该还留有我那把巨剑的数据，以它的两倍重量来设计背包的承重量吧。\n工程部意见：\n同意申请。\n可露希尔意见：\n口气不小嘛，奥达，那我可就不客气了！\n【权限档案】\n【绝密】\n定制背包是线人奥达与我们约好的信号。\n即日起，奥达的线人身份永久进入休眠状态，以单纯的信使身份与罗德岛合作。\n愿他顺遂。\n——阿斯卡纶",
+      "typeIcon": "ham-x",
+      "uniEquipIcon": "uniequip_002_odda",
+      "typeName1": "HAM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_odda_1",
+        "uniequip_002_odda_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "溅射范围内有大于或等于3个敌人时，使当次攻击力提升至<@ba.kw>{atk_scale_e:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@ability_range_radius",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_e",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 230,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "溅射范围内有大于或等于3个敌人时，使当次攻击力提升至<@ba.kw>{atk_scale_e:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@ability_range_radius",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_e",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "累计造成30次物理伤害后，攻击力+20%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "落锤",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "count",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "累计造成30次物理伤害后，攻击力+23%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "落锤",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "count",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "溅射范围内有大于或等于3个敌人时，使当次攻击力提升至<@ba.kw>{atk_scale_e:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@ability_range_radius",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_e",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "累计造成20次物理伤害后，攻击力+20%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "落锤",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "count",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "累计造成20次物理伤害后，攻击力+23%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "落锤",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "count",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1130,5 +1811,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

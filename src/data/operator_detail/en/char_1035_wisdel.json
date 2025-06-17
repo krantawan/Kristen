@@ -150,6 +150,28 @@
       "cost": 25
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "attack@append_atk_scale",
+          "value": 0.5
+        },
+        {
+          "key": "attack@enable_third_attack",
+          "value": 0
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1035_wisdel#1",
@@ -716,16 +738,670 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +32",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 32,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Souvenir",
+          "description": "Attacks attach an afterimage to the main target. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 120% ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 0.5s.",
+          "blackboard": {
+            "attack@main_atk_scale": 1,
+            "attack@prob": 0.15,
+            "attack@bomb_atk_scale": 1.2,
+            "attack@stun": 0.5,
+            "attack@range_radius": 1.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Souvenir",
+          "description": "Attacks attach an afterimage to the main target. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 130% <@ba.talpu>(+10%)</> ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 0.5s.",
+          "blackboard": {
+            "attack@main_atk_scale": 1,
+            "attack@prob": 0.15,
+            "attack@bomb_atk_scale": 1.3,
+            "attack@stun": 0.5,
+            "attack@range_radius": 1.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Souvenir",
+          "description": "Attacks have 115% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 150% ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s.",
+          "blackboard": {
+            "attack@main_atk_scale": 1.15,
+            "attack@prob": 0.15,
+            "attack@bomb_atk_scale": 1.5,
+            "attack@stun": 1,
+            "attack@range_radius": 1.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Souvenir",
+          "description": "Attacks have 115% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 160% <@ba.talpu>(+10%)</> ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s.",
+          "blackboard": {
+            "attack@main_atk_scale": 1.15,
+            "attack@prob": 0.15,
+            "attack@bomb_atk_scale": 1.6,
+            "attack@stun": 1,
+            "attack@range_radius": 1.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Revenant's Echo",
+          "description": "After deployment, immediately summons a Revenant's Shadow in attack range, and gains <$ba.camou>Camouflage</> when near a Revenant's Shadow.",
+          "blackboard": {},
+          "tokenKey": "token_10035_wisdel_wward",
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_wisdel",
       "moduleName": "Wiš'adel's Badge",
-      "desc": "Operator Wiš'adel has demonstrated a remarkable aptitude for attacking multiple ground enemies from a long range.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Flinger responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Wiš'adel has demonstrated a remarkable aptitude for attacking multiple ground enemies from a long range.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Flinger responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_wisdel",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_wisdel",
       "moduleName": "'Ancestor Launcher'",
-      "desc": "A suit of armor stands atop a sand dune.\nHe has almost forgotten where he came from. His body is badly worn down, one leg longer than the other, and a piece of his pauldrons missing to reveal a dark, empty interior.\nHis sword has also shattered, seemingly broken when wielded towards one of his own kind. He had been hiding in a windmill, begging for him to wait for sundown before striking. That way, all the children playing inside his body would have already gone home. He agreed. Two or three hours meant nothing to beings such as them. He sat on a hillside until the sun went down, then returned and slew the whooshing windmill.\nGhosts dwelling in the depths of an ancient tower, books buried beneath the ruins of the Great Library, an unmanned pirate ship, a scale that measures the weight of lives... He remembers his promise to the King of Sarkaz, the reason for his travels: to bring his scattered kind back to Kazdel, and he would be the very last.\nBut what is this endless golden expanse before his eyes? A desert, an ocean, or one of infinite Kazdels?\nThe suit of armor is sinking. The delineation between body and sand blurs, just as he can no longer distinguish between what he thinks and what is true. When the sand completely covers his head, he will disappear for good.\n'Tap, tap tap.' \nA tapping sound comes from the top of his head.\nPerhaps it is just a fowlbeast hoping to find food in the bits of grass growing there.\n'Clang—clang—'\nThe sand entombing him begins to shift.\nNo, it is not the sand that is moving. Someone is kicking him. From the sound of things, someone is treating him—the eldest revenant, the first guardian of Kazdel, chief advisor to all Kings of Sarkaz—as a ball to be punted around.\n'You—'\n'Can you hear me? If you can, then stop playing dead. I've been lugging you around for so long, you'd better start pulling your weight. Otherwise, I'll pawn you off as scrap metal when I get back!' \n'...What do you want?'\n'Whoa, you've sure mellowed out. Back when you had that big ol' body, didn't your vocabulary consisted mostly of words like 'hatred', 'flee', and 'wretched outbloods'? I was worried for a sec that you were even more illiterate than me and those were the only words you knew.\n'To think Her Highness chose someone so crass...'\n'Now that's what I'm talking about. But no rush to get back to your old self. Time to get to work.'\n'Doing what exac—?'\nBefore he could finish, he was already up in the air.\n'Is that enough? Or do I need to throw in more explosives?'\nHe is flying.\nFlying high, high above the dunes, over the ruins, until—\nKazdel.\nA place he thought he would never see again.\nWith the way he's going, he'll soon crash into the meeting hall of the former Royal Court, the place where he once made a promise to King Yliš using all the remaining soulflame of his people—\n'Wiš'adel, *Sarkaz cursing*—!\n'Haha, that eager to curse yourself, o venerated ancestor?' The young Sarkaz laughs mirthfully. 'Go on then. Use that rage, blow everything up, and once you've gotten rid of all that junk, I'll take you home.'"
+      "desc": "A suit of armor stands atop a sand dune.\nHe has almost forgotten where he came from. His body is badly worn down, one leg longer than the other, and a piece of his pauldrons missing to reveal a dark, empty interior.\nHis sword has also shattered, seemingly broken when wielded towards one of his own kind. He had been hiding in a windmill, begging for him to wait for sundown before striking. That way, all the children playing inside his body would have already gone home. He agreed. Two or three hours meant nothing to beings such as them. He sat on a hillside until the sun went down, then returned and slew the whooshing windmill.\nGhosts dwelling in the depths of an ancient tower, books buried beneath the ruins of the Great Library, an unmanned pirate ship, a scale that measures the weight of lives... He remembers his promise to the King of Sarkaz, the reason for his travels: to bring his scattered kind back to Kazdel, and he would be the very last.\nBut what is this endless golden expanse before his eyes? A desert, an ocean, or one of infinite Kazdels?\nThe suit of armor is sinking. The delineation between body and sand blurs, just as he can no longer distinguish between what he thinks and what is true. When the sand completely covers his head, he will disappear for good.\n'Tap, tap tap.' \nA tapping sound comes from the top of his head.\nPerhaps it is just a fowlbeast hoping to find food in the bits of grass growing there.\n'Clang—clang—'\nThe sand entombing him begins to shift.\nNo, it is not the sand that is moving. Someone is kicking him. From the sound of things, someone is treating him—the eldest revenant, the first guardian of Kazdel, chief advisor to all Kings of Sarkaz—as a ball to be punted around.\n'You—'\n'Can you hear me? If you can, then stop playing dead. I've been lugging you around for so long, you'd better start pulling your weight. Otherwise, I'll pawn you off as scrap metal when I get back!' \n'...What do you want?'\n'Whoa, you've sure mellowed out. Back when you had that big ol' body, didn't your vocabulary consisted mostly of words like 'hatred', 'flee', and 'wretched outbloods'? I was worried for a sec that you were even more illiterate than me and those were the only words you knew.\n'To think Her Highness chose someone so crass...'\n'Now that's what I'm talking about. But no rush to get back to your old self. Time to get to work.'\n'Doing what exac—?'\nBefore he could finish, he was already up in the air.\n'Is that enough? Or do I need to throw in more explosives?'\nHe is flying.\nFlying high, high above the dunes, over the ruins, until—\nKazdel.\nA place he thought he would never see again.\nWith the way he's going, he'll soon crash into the meeting hall of the former Royal Court, the place where he once made a promise to King Yliš using all the remaining soulflame of his people—\n'Wiš'adel, *Sarkaz cursing*—!\n'Haha, that eager to curse yourself, o venerated ancestor?' The young Sarkaz laughs mirthfully. 'Go on then. Use that rage, blow everything up, and once you've gotten rid of all that junk, I'll take you home.'",
+      "typeIcon": "bom-x",
+      "uniEquipIcon": "uniequip_002_wisdel",
+      "typeName1": "BOM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_wisdel_1",
+        "uniequip_002_wisdel_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>three instances</> of Physical damage to <@ba.kw>ground</> enemies in a small area (The second and third instances are shockwaves that have half the normal ATK)",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>three instances</> of Physical damage to <@ba.kw>ground</> enemies in a small area (The second and third instances are shockwaves that have half the normal ATK)",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks have 120% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 170% ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s.",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Souvenir",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks have 120% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 180% <@ba.talpu>(+10%)</> ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s.",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Souvenir",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>three instances</> of Physical damage to <@ba.kw>ground</> enemies in a small area (The second and third instances are shockwaves that have half the normal ATK)",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks have 125% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 175% ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s.",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Souvenir",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks have 125% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 185% <@ba.talpu>(+10%)</> ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s.",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Souvenir",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.85,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1186,6 +1862,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10035_wisdel_wward"
   ],
   "patch_info": {}
 }

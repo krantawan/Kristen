@@ -169,6 +169,7 @@
       "cost": 18
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_4178_alanna#1",
@@ -644,16 +645,878 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "临时改装",
+          "description": "携带2个支援装置（最多部署2个），使一名干员攻击敌人时无视其40点防御力（持续30秒），装置效果不叠加",
+          "blackboard": [
+            {
+              "key": "def_penetrate_fixed_bb",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10045_alanna_crane",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "临时改装",
+          "description": "携带2个支援装置（最多部署2个），使一名干员攻击敌人时无视其50<@ba.talpu>（+10）</>点防御力（持续30秒），装置效果不叠加",
+          "blackboard": [
+            {
+              "key": "def_penetrate_fixed_bb",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10045_alanna_crane",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "临时改装",
+          "description": "携带3个支援装置（最多部署2个），使一名干员攻击敌人时无视其60点防御力（持续30秒），装置效果不叠加",
+          "blackboard": [
+            {
+              "key": "def_penetrate_fixed_bb",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10045_alanna_crane",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "临时改装",
+          "description": "携带3个支援装置（最多部署2个），使一名干员攻击敌人时无视其70<@ba.talpu>（+10）</>点防御力（持续30秒），装置效果不叠加",
+          "blackboard": [
+            {
+              "key": "def_penetrate_fixed_bb",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10045_alanna_crane",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "临时改装",
+          "description": "携带3个支援装置（最多部署2个），使一名干员攻击敌人时无视其80点防御力（持续30秒），装置效果不叠加",
+          "blackboard": [
+            {
+              "key": "def_penetrate_fixed_bb",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10045_alanna_crane",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "临时改装",
+          "description": "携带3个支援装置（最多部署2个），使一名干员攻击敌人时无视其90<@ba.talpu>（+10）</>点防御力（持续30秒），装置效果不叠加",
+          "blackboard": [
+            {
+              "key": "def_penetrate_fixed_bb",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10045_alanna_crane",
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_alanna",
       "moduleName": "阿兰娜证章",
-      "desc": "干员阿兰娜擅长使用装置协助队友作战\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使工匠职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员阿兰娜擅长使用装置协助队友作战\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使工匠职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_alanna",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_alanna",
       "moduleName": "“随身保险杠”",
-      "desc": "《车轮滚滚》第752期\n两名运载车驾驶员走进一家酒吧。\n其中一个人说：“我今天运气真差，又遇上了劫路匪帮，还好我一把方向盘躲了过去，但我的车身还是被他们刮花了。”\n另一个人说：“刮掉一点车漆而已，你就别倒苦水啦。我可是被他们弄坏了两根保险杠呢！”\n“两根？”第一个驾驶员问，“他们同时从前后两面夹击你的车子？”\n“怎么可能？那样他们也会没命的。”另一个驾驶员重新绑起她的头发，“他们从前面截停了我的车。”\n“那怎么会同时弄坏两根保险杠呢？”\n“我的防身武器送去修了，只好将后保险杠拆下来，把他们揍了一顿。还好扭送他们到治安官手上让我拿了些奖金，不然那才叫亏大了呢！”\n\n“这么烂的笑话，谁批准刊载的？”顶着黑眼圈的男人往地上啐了一口，顺手把杂志翻过一页。\n“别看你那破书了，来活了。”同伙一钢管将杂志打落在地，往男人怀里塞了一捆带刺的铁丝，“老规矩，往前五百米，铺上。”\n男人蒙上脏兮兮的面巾，拎起那捆铁丝沿着道路往前走去。\n“去他的，我只配来铺第一道关吗？就算扎破轮胎，车子停了，我分到的也是最少的那一份。可要是扎不破轮胎让车子跑了，挨打的总是我！”\n男人说着话，手上动作不停，简陋却有效的减速带很快铺满了这段路面。远处尘烟升起，车子来了。\n眼眶乌黑的男人看着来车，愣了一下。\n那辆运载车看起来破破烂烂的，就连前保险杠都已经摇摇欲坠——将它固定在车头的，是一把巨大无比的管钳。\n男人拔腿向着后方的同伙跑去，一边跑一边喊：\n“又是她！又是她！\n“那个女人又来赚外快了！”"
+      "desc": "《车轮滚滚》第752期\n两名运载车驾驶员走进一家酒吧。\n其中一个人说：“我今天运气真差，又遇上了劫路匪帮，还好我一把方向盘躲了过去，但我的车身还是被他们刮花了。”\n另一个人说：“刮掉一点车漆而已，你就别倒苦水啦。我可是被他们弄坏了两根保险杠呢！”\n“两根？”第一个驾驶员问，“他们同时从前后两面夹击你的车子？”\n“怎么可能？那样他们也会没命的。”另一个驾驶员重新绑起她的头发，“他们从前面截停了我的车。”\n“那怎么会同时弄坏两根保险杠呢？”\n“我的防身武器送去修了，只好将后保险杠拆下来，把他们揍了一顿。还好扭送他们到治安官手上让我拿了些奖金，不然那才叫亏大了呢！”\n\n“这么烂的笑话，谁批准刊载的？”顶着黑眼圈的男人往地上啐了一口，顺手把杂志翻过一页。\n“别看你那破书了，来活了。”同伙一钢管将杂志打落在地，往男人怀里塞了一捆带刺的铁丝，“老规矩，往前五百米，铺上。”\n男人蒙上脏兮兮的面巾，拎起那捆铁丝沿着道路往前走去。\n“去他的，我只配来铺第一道关吗？就算扎破轮胎，车子停了，我分到的也是最少的那一份。可要是扎不破轮胎让车子跑了，挨打的总是我！”\n男人说着话，手上动作不停，简陋却有效的减速带很快铺满了这段路面。远处尘烟升起，车子来了。\n眼眶乌黑的男人看着来车，愣了一下。\n那辆运载车看起来破破烂烂的，就连前保险杠都已经摇摇欲坠——将它固定在车头的，是一把巨大无比的管钳。\n男人拔腿向着后方的同伙跑去，一边跑一边喊：\n“又是她！又是她！\n“那个女人又来赚外快了！”",
+      "typeIcon": "cra-x",
+      "uniEquipIcon": "uniequip_002_alanna",
+      "typeName1": "CRA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_alanna_1",
+        "uniequip_002_alanna_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31094",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10045_alanna_crane": [
+              {
+                "key": "cost",
+                "value": -2,
+                "valueStr": null
+              },
+              {
+                "key": "max_deck_stack_cnt",
+                "value": 1,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<支援装置>的持有上限<@ba.kw>+{cnt}</>且部署费用<@ba.kw>减少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed_bb",
+                      "value": 80,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10045_alanna_crane",
+                  "isHideTalent": true
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed_bb",
+                      "value": 90,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10045_alanna_crane",
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10045_alanna_crane": [
+              {
+                "key": "cost",
+                "value": -2,
+                "valueStr": null
+              },
+              {
+                "key": "max_deck_stack_cnt",
+                "value": 1,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<支援装置>的持有上限<@ba.kw>+{cnt}</>且部署费用<@ba.kw>减少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带3个支援装置（最多部署2个），使一名干员攻击敌人时无视其90点防御力（持续30秒），装置效果不叠加",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "临时改装",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed_bb",
+                      "value": 90,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10045_alanna_crane",
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带3个支援装置（最多部署2个），使一名干员攻击敌人时无视其100<@ba.talpu>（+10）</>点防御力（持续30秒），装置效果不叠加",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "临时改装",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed_bb",
+                      "value": 100,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10045_alanna_crane",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "使攻击范围内一名干员攻击敌人时无视其90点防御力（持续30秒），装置效果不叠加",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "临时改装",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "使攻击范围内一名干员攻击敌人时无视其100<@ba.talpu>（+10）</>点防御力（持续30秒），装置效果不叠加",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "临时改装",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10045_alanna_crane": [
+              {
+                "key": "cost",
+                "value": -2,
+                "valueStr": null
+              },
+              {
+                "key": "max_deck_stack_cnt",
+                "value": 1,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "<支援装置>的持有上限<@ba.kw>+{cnt}</>且部署费用<@ba.kw>减少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带3个支援装置（最多部署2个），使一名干员攻击敌人时无视其100点防御力（持续30秒），装置效果不叠加",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "临时改装",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed_bb",
+                      "value": 100,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10045_alanna_crane",
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "携带3个支援装置（最多部署2个），使一名干员攻击敌人时无视其110<@ba.talpu>（+10）</>点防御力（持续30秒），装置效果不叠加",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "临时改装",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed_bb",
+                      "value": 110,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10045_alanna_crane",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "使攻击范围内一名干员攻击敌人时无视其100点防御力（持续30秒），装置效果不叠加",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "临时改装",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "使攻击范围内一名干员攻击敌人时无视其110<@ba.talpu>（+10）</>点防御力（持续30秒），装置效果不叠加",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "临时改装",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1114,6 +1977,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10045_alanna_crane"
   ],
   "patch_info": {}
 }

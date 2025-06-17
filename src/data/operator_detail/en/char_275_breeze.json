@@ -151,6 +151,7 @@
       "cost": 17
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_275_breeze#1",
@@ -602,16 +603,544 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +20",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 20,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -6 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Medic Squad Protection",
+          "description": "When this unit's skill is active, all Medic Operators gain <$ba.buffres>status resistance</>",
+          "blackboard": {
+            "one_minus_status_resistance": -0.5,
+            "max_hp": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1+",
+          "name": "Medic Squad Protection",
+          "description": "When this unit's skill is active, all Medic and Supporter Operators gain <$ba.buffres>status resistance</>",
+          "blackboard": {
+            "one_minus_status_resistance": -0.5,
+            "max_hp": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_breeze",
       "moduleName": "Breeze's Badge",
-      "desc": "Operator Breeze has demonstrated a remarkable aptitude for healing several teammates in a short period of time. \nThe Field Operations Department has thus passed the following resolution: \nThis operator shall be appointed a Medic Operator during field operations to exercise Multi-target Medic responsibilities. \nIn witness whereof, \nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Breeze has demonstrated a remarkable aptitude for healing several teammates in a short period of time. \nThe Field Operations Department has thus passed the following resolution: \nThis operator shall be appointed a Medic Operator during field operations to exercise Multi-target Medic responsibilities. \nIn witness whereof, \nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_breeze",
       "moduleName": "Surgical Instrument Kit",
-      "desc": "Grace, my dear. \nYou haven't contacted us since you left home. \nAt first we thought you were still angry because of the argument, but later, we learned what happened to you. \nBefore, we didn't even have a way to celebrate your birthday. But now, we know the address of your workplace. \nHappy birthday, my dear Grace. \nInside this package is my present to you, a toolbag. \nWhen I was young, I always wanted to venture far away, so I asked a famous craftsman in Londinium to make this toolbag. It's very durable, and can hold a lot of things. \nBut after that, I returned to the life that my parents planned out for me, so I never had a chance to use it. \nEven though this world has many ways of stopping a person in her tracks, I believe that you can go further than me. \nYour father is very disappointed in himself. He wants to go to Rhodes Island to look for you, but doesn't know how to face you, nor does he know how to deal with what would come next. If you ever see him, I hope you two can sit down and talk things through. \nMy daughter, no matter what happens, I will always support your decisions and your dreams. \nIf Henry disagrees with you, then I'll talk him into it. \nOne last thing: Your father found someone to make a whole bunch of those sweets you used to love as a kid, even though he was also the one who forbade you from having them... If they show up in the mail, don't eat them all at once! \n \n––Beatrix Arizona \n \n \nGrace, I made a trip to Rhodes Island. Your coworker said you were out in the field, in some dangerous place no less. Something about being a battlefield medic for Rhodes Island. \nThe way I understand things is, Rhodes Island might be one of the best places in this world, but if you stay here, you should behave like a patient rather than running amok like you are now. \nWe can afford the cost of your treatment, but we can't afford to lose you a second time. \nI've brought you some food and supplies. Some of it's perishable, so don't forget to eat it. \nIf you ever need anything, just let me know. \nBeatrix wants me to sit down and have a good talk with you, so I'll come back next month. \nAlso, your mother wants to hear back from you more often. \nThe desk drawer in your dorm was broken, so I repaired it. Try not to stuff too many things in there. \n\n––Henry Arizona"
+      "desc": "Grace, my dear. \nYou haven't contacted us since you left home. \nAt first we thought you were still angry because of the argument, but later, we learned what happened to you. \nBefore, we didn't even have a way to celebrate your birthday. But now, we know the address of your workplace. \nHappy birthday, my dear Grace. \nInside this package is my present to you, a toolbag. \nWhen I was young, I always wanted to venture far away, so I asked a famous craftsman in Londinium to make this toolbag. It's very durable, and can hold a lot of things. \nBut after that, I returned to the life that my parents planned out for me, so I never had a chance to use it. \nEven though this world has many ways of stopping a person in her tracks, I believe that you can go further than me. \nYour father is very disappointed in himself. He wants to go to Rhodes Island to look for you, but doesn't know how to face you, nor does he know how to deal with what would come next. If you ever see him, I hope you two can sit down and talk things through. \nMy daughter, no matter what happens, I will always support your decisions and your dreams. \nIf Henry disagrees with you, then I'll talk him into it. \nOne last thing: Your father found someone to make a whole bunch of those sweets you used to love as a kid, even though he was also the one who forbade you from having them... If they show up in the mail, don't eat them all at once! \n \n––Beatrix Arizona \n \n \nGrace, I made a trip to Rhodes Island. Your coworker said you were out in the field, in some dangerous place no less. Something about being a battlefield medic for Rhodes Island. \nThe way I understand things is, Rhodes Island might be one of the best places in this world, but if you stay here, you should behave like a patient rather than running amok like you are now. \nWe can afford the cost of your treatment, but we can't afford to lose you a second time. \nI've brought you some food and supplies. Some of it's perishable, so don't forget to eat it. \nIf you ever need anything, just let me know. \nBeatrix wants me to sit down and have a good talk with you, so I'll come back next month. \nAlso, your mother wants to hear back from you more often. \nThe desk drawer in your dorm was broken, so I repaired it. Try not to stuff too many things in there. \n\n––Henry Arizona",
+      "typeIcon": "rin-x",
+      "uniEquipIcon": "uniequip_002_breeze",
+      "typeName1": "RIN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_001_breeze_13",
+        "uniequip_002_breeze_14"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attack Range <@ba.kw>expands</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attack Range <@ba.kw>expands</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit's skill is active, all Medic and Supporter Operators gain +10% Max HP and <$ba.buffres>status resistance</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1+",
+                  "name": "Medic Squad Protection",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Attack Range <@ba.kw>expands</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit's skill is active, all Medic and Supporter Operators gain +15% Max HP and <$ba.buffres>status resistance</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1+",
+                  "name": "Medic Squad Protection",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1055,5 +1584,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -151,6 +151,7 @@
       "cost": 33
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_446_aroma#1",
@@ -610,16 +611,648 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+33",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 33,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 60,
+        "atk": 80,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "起泡性テスト",
+          "description": "敵にダメージを与えた際、対象ごとに一回限り攻撃力が105%まで上昇し、対象を2.5秒間浮遊させる",
+          "blackboard": [
+            {
+              "key": "levitate_duration",
+              "value": 2.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.05,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "起泡性テスト",
+          "description": "敵にダメージを与えた際、対象ごとに一回限り攻撃力が110%<@ba.talpu>（+5%）</>まで上昇し、対象を2.5秒間浮遊させる",
+          "blackboard": [
+            {
+              "key": "levitate_duration",
+              "value": 2.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "起泡性テスト",
+          "description": "敵にダメージを与えた際、対象ごとに一回限り攻撃力が110%まで上昇し、対象を2.5秒間浮遊させる",
+          "blackboard": [
+            {
+              "key": "levitate_duration",
+              "value": 2.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "起泡性テスト",
+          "description": "敵にダメージを与えた際、対象ごとに一回限り攻撃力が115%<@ba.talpu>（+5%）</>まで上昇し、対象を2.5秒間浮遊させる",
+          "blackboard": [
+            {
+              "key": "levitate_duration",
+              "value": 2.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_aroma",
       "moduleName": "アロマの記章",
-      "desc": "アロマは一方向に向けた超遠距離の術攻撃に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては術師オペレーターとして区分し、爆撃術師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。\n"
+      "desc": "アロマは一方向に向けた超遠距離の術攻撃に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては術師オペレーターとして区分し、爆撃術師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。\n",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_aroma",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_aroma",
       "moduleName": "レモンの薫る子供時代",
-      "desc": "目を覚ました少女には、自分がどれだけ眠っていたのかわからなかった。今はただ強い日差しが眩しく感じて、それを拒むように布団に潜り込む。ふと窓の外から吹き込んできた風は、安心感を覚えるレモンの薫りだった。そこで彼女は顔を布団から覗かせて、目を見開く。\nそばのナイトテーブルには解熱剤とコップ半分ほどの白湯が置かれていて、ベッドの脇に腰掛けた祖母が、他の人たちと同じ焦りに満ちた目を向けてきていた。少女が熱でぼーっとしたまま、祖母に上体を起こされると、他の人たちは体温計に示された数字を順番に確認していた。そして間もなく、空気の淀みは晴れ、周囲はいつも通りの楽しさと賑やかさを取り戻した。\n祖母が言うには、少女はひどい熱を出していたらしく、数日間も寝込んでいたという。オーツ麦のお粥の匂いが空腹感を呼び覚まし、お椀に添えられた数粒のミニトマトは目が離せないほど鮮やかな色をしていたが、それでも少女は耐えきれずに、ほんのわずかなレモンの薫りを辿って窓の外に目を向けた。視線の先には、いつもの風吹く朝の光景、洗濯ロープに干された服が躍っており、庭に植えられたあのレモンの木が少女に手を振っていた。\n少女は少し頭がすっきりしたような気がしたが、どこかの記憶がかえって朧気になったようにも思った。\n数日後、少女が不安を抱えたまま祖母にそのことを訊ねてみると、祖母は高熱のせいで見た悪夢だろうと言ってなだめてくれた。\n祖母は彼女のバブルスティックを没収することもなければ、瓶に入った石鹸水を捨ててもいなかった。ただ大人たちを呼び集めて、シラクーザを離れ、一家共々クルビアに移住しようという相談をしていただけだった。\nだが、あれは悪夢ではなく、実際にあったことであり、少女がその目で見たことだ。\n少女の脳裏に、いくつかの記憶がよみがえる。あの日彼女が追いかけた泡のこと。路地裏で「仕事」をしていた祖母の姿。その日は雨が降っていなかったにも関わらず、路上にはたくさんの水溜まりができていて、それがゆっくりと排水溝へ流れていた。血生臭さと煙の臭い、そして汗臭さが混ざり合い、誘き寄せられた羽虫たちが水溜まりの上を飛び回る。\n……何年経っても、あの日の光景は今もありありと目に浮かぶ。しかし幸い、祖母が口癖のように言っていた言葉をアロマは覚えていた――\n「嫌なにおいが消えない時は、窓を開けて換気しておけばいいのよ！」\n「そうすれば、最後にはきっと、私たちをずっと包み込んでいた香りが残ってくれるはずだから。」\n祖母から届いた包みの中に、アロマは子供時代に持っていた例のガラス瓶を見つけた。彼女はコルクを抜き、スティックに石鹸水を付けて、ゆっくりとそして優しく泡を吹き出した。\nその時、彼女はあの薫りを嗅ぎ取った。それは今も、そしてこれからも変わることない、レモンの薫りだった。"
+      "desc": "目を覚ました少女には、自分がどれだけ眠っていたのかわからなかった。今はただ強い日差しが眩しく感じて、それを拒むように布団に潜り込む。ふと窓の外から吹き込んできた風は、安心感を覚えるレモンの薫りだった。そこで彼女は顔を布団から覗かせて、目を見開く。\nそばのナイトテーブルには解熱剤とコップ半分ほどの白湯が置かれていて、ベッドの脇に腰掛けた祖母が、他の人たちと同じ焦りに満ちた目を向けてきていた。少女が熱でぼーっとしたまま、祖母に上体を起こされると、他の人たちは体温計に示された数字を順番に確認していた。そして間もなく、空気の淀みは晴れ、周囲はいつも通りの楽しさと賑やかさを取り戻した。\n祖母が言うには、少女はひどい熱を出していたらしく、数日間も寝込んでいたという。オーツ麦のお粥の匂いが空腹感を呼び覚まし、お椀に添えられた数粒のミニトマトは目が離せないほど鮮やかな色をしていたが、それでも少女は耐えきれずに、ほんのわずかなレモンの薫りを辿って窓の外に目を向けた。視線の先には、いつもの風吹く朝の光景、洗濯ロープに干された服が躍っており、庭に植えられたあのレモンの木が少女に手を振っていた。\n少女は少し頭がすっきりしたような気がしたが、どこかの記憶がかえって朧気になったようにも思った。\n数日後、少女が不安を抱えたまま祖母にそのことを訊ねてみると、祖母は高熱のせいで見た悪夢だろうと言ってなだめてくれた。\n祖母は彼女のバブルスティックを没収することもなければ、瓶に入った石鹸水を捨ててもいなかった。ただ大人たちを呼び集めて、シラクーザを離れ、一家共々クルビアに移住しようという相談をしていただけだった。\nだが、あれは悪夢ではなく、実際にあったことであり、少女がその目で見たことだ。\n少女の脳裏に、いくつかの記憶がよみがえる。あの日彼女が追いかけた泡のこと。路地裏で「仕事」をしていた祖母の姿。その日は雨が降っていなかったにも関わらず、路上にはたくさんの水溜まりができていて、それがゆっくりと排水溝へ流れていた。血生臭さと煙の臭い、そして汗臭さが混ざり合い、誘き寄せられた羽虫たちが水溜まりの上を飛び回る。\n……何年経っても、あの日の光景は今もありありと目に浮かぶ。しかし幸い、祖母が口癖のように言っていた言葉をアロマは覚えていた――\n「嫌なにおいが消えない時は、窓を開けて換気しておけばいいのよ！」\n「そうすれば、最後にはきっと、私たちをずっと包み込んでいた香りが残ってくれるはずだから。」\n祖母から届いた包みの中に、アロマは子供時代に持っていた例のガラス瓶を見つけた。彼女はコルクを抜き、スティックに石鹸水を付けて、ゆっくりとそして優しく泡を吹き出した。\nその時、彼女はあの薫りを嗅ぎ取った。それは今も、そしてこれからも変わることない、レモンの薫りだった。",
+      "typeIcon": "bla-x",
+      "uniEquipIcon": "uniequip_002_aroma",
+      "typeName1": "BLA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_aroma_1",
+        "uniequip_002_aroma_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 49,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "min_dist",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_dist",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>直線上</>の敵に<@ba.kw>範囲術ダメージ</>を与える\n攻撃時、攻撃対象との距離が離れるほど与ダメージが上昇する（最大110%まで上昇）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 175,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "min_dist",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_dist",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>直線上</>の敵に<@ba.kw>範囲術ダメージ</>を与える\n攻撃時、攻撃対象との距離が離れるほど与ダメージが上昇する（最大110%まで上昇）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵にダメージを与えた際、対象ごとに一回限り攻撃力が115%まで上昇し、対象を2.5秒間浮遊させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "起泡性テスト",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "levitate_duration",
+                      "value": 2.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵にダメージを与えた際、対象ごとに一回限り攻撃力が120%<@ba.talpu>（+5%）</>まで上昇し、対象を2.5秒間浮遊させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "起泡性テスト",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "levitate_duration",
+                      "value": 2.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 190,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "min_dist",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_dist",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>直線上</>の敵に<@ba.kw>範囲術ダメージ</>を与える\n攻撃時、攻撃対象との距離が離れるほど与ダメージが上昇する（最大110%まで上昇）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵にダメージを与えた際、対象ごとに一回限り攻撃力が120%まで上昇し、対象を2.5秒間浮遊させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "起泡性テスト",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "levitate_duration",
+                      "value": 2.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵にダメージを与えた際、対象ごとに一回限り攻撃力が125%<@ba.talpu>（+5%）</>まで上昇し、対象を2.5秒間浮遊させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "起泡性テスト",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "levitate_duration",
+                      "value": 2.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1073,5 +1706,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

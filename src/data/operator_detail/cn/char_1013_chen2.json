@@ -169,6 +169,28 @@
       "cost": 32
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": "1-3"
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1013_chen2#1",
@@ -766,16 +788,670 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+33",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 33,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 80,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "节约风气",
+          "description": "在场时自身弹药类技能攻击时15%概率不消耗对应弹药（同类效果取最高）",
+          "blackboard": [
+            {
+              "key": "spareshot_chen.prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "prob",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "节约风气",
+          "description": "在场时自身弹药类技能攻击时17%<@ba.talpu>（+2%）</>概率不消耗对应弹药（同类效果取最高）",
+          "blackboard": [
+            {
+              "key": "spareshot_chen.prob",
+              "value": 0.17,
+              "valueStr": null
+            },
+            {
+              "key": "prob",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "节约风气",
+          "description": "在场时自身弹药类技能攻击时20%概率不消耗对应弹药，其他【狙击】干员的弹药类技能改为10%概率不消耗（同类效果取最高）",
+          "blackboard": [
+            {
+              "key": "spareshot_chen.prob",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "prob",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "节约风气",
+          "description": "在场时自身弹药类技能攻击时22%<@ba.talpu>（+2%）</>概率不消耗对应弹药，其他【狙击】干员的弹药类技能改为10%概率不消耗（同类效果取最高）",
+          "blackboard": [
+            {
+              "key": "spareshot_chen.prob",
+              "value": 0.22,
+              "valueStr": null
+            },
+            {
+              "key": "prob",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "假日余韵",
+          "description": "攻击速度+8，当场地中存在水地形时改为攻击速度+12",
+          "blackboard": [
+            {
+              "key": "chen2_t_2[common].attack_speed",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "chen2_t_2[map].attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_chen2",
       "moduleName": "假日威龙陈证章",
-      "desc": "干员假日威龙陈擅长近距离射击并对复数敌人进行火力压制\n根据外勤部门决议\n在外勤任务中划分为狙击干员，行使散射手职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员假日威龙陈擅长近距离射击并对复数敌人进行火力压制\n根据外勤部门决议\n在外勤任务中划分为狙击干员，行使散射手职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_chen2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_chen2",
       "moduleName": "沙滩战斗套装",
-      "desc": "看着眼前的男孩，陈有些错愕。\n“你的母亲？走私？”\n“嗯。但她是被我爸逼的。”\n“你想让我救她？”\n“我爸和他的同伙会在广场接应她。”\n“你怎么知道？”\n“......因为以前这件事是我在做。”男孩有些咬牙切齿，“我爸曾经承诺过，赚钱之后会带我和我妈去游轮上看彩虹。但他一次都没有实现过这个诺言，只顾着赚他的脏钱，还逼我和他一起干。现在，又要把我妈拖下水，我受不了了。”\n陈注意到男孩的脖子有些淤青，多年的经验让她立刻作出判断，男孩说的不假。\n“......放心，如果情况属实，我会让你父亲和他的团伙受到应有的惩罚。”\n听到“惩罚”两个字，之前一直低着头的男孩忽然抬起头，“进监狱会把一个人变好吗？”\n“......为什么这么问？”\n“他以前不这样，到多索雷斯后，他总是说着要赚大钱，不知道什么时候就变成这样了......说不定他本来就是这样。但是，我忘不了他第一次跟我说要带我去游轮上看彩虹时的样子。”\n看着男孩，陈想起了曾经的自己，那个时候，她总想让那人看一看她的剑。但不知从什么时候开始，她不再期待这件事。\n“这座城市里到处都是水，彩虹应该随处可见，没看够吗？”\n“......得是他带我去游轮上看的才行，其他的不算。”\n是啊，得有他在才算。\n“哈。那你现在还这么想吗？”\n“是。”男孩的眼中带着淡淡的期许，但旋即又黯淡了下去。“可我一个人做不到。”\n陈沉默了一会儿，比划了一下自己的水铳，然后向男孩指明的方向走去。\n走之前，她给男孩留下一句话。\n“那你就得想办法，让你父亲听你的，让他知道，你想让他变好，至少，你得让他理解你的想法。”\n那天，多索雷斯出现了局部降雨。在雨中，陈女侠从一群犯罪分子中救下了一名女性，并制服了这些犯罪分子。\n令人啧啧称奇的是，就在对方的头目想要负隅顽抗时，一个孩子突然拦在头目的面前。雨不知何时停了，天边挂起了彩虹，彩虹之下，头目明显有些迟疑，而孩子对头目说了些什么。最终，头目放下了武器。\n附近的目击者称，虽然又解决了一起走私案，但陈女侠似乎并不高兴，她只是看向东边，若有所思。"
+      "desc": "看着眼前的男孩，陈有些错愕。\n“你的母亲？走私？”\n“嗯。但她是被我爸逼的。”\n“你想让我救她？”\n“我爸和他的同伙会在广场接应她。”\n“你怎么知道？”\n“......因为以前这件事是我在做。”男孩有些咬牙切齿，“我爸曾经承诺过，赚钱之后会带我和我妈去游轮上看彩虹。但他一次都没有实现过这个诺言，只顾着赚他的脏钱，还逼我和他一起干。现在，又要把我妈拖下水，我受不了了。”\n陈注意到男孩的脖子有些淤青，多年的经验让她立刻作出判断，男孩说的不假。\n“......放心，如果情况属实，我会让你父亲和他的团伙受到应有的惩罚。”\n听到“惩罚”两个字，之前一直低着头的男孩忽然抬起头，“进监狱会把一个人变好吗？”\n“......为什么这么问？”\n“他以前不这样，到多索雷斯后，他总是说着要赚大钱，不知道什么时候就变成这样了......说不定他本来就是这样。但是，我忘不了他第一次跟我说要带我去游轮上看彩虹时的样子。”\n看着男孩，陈想起了曾经的自己，那个时候，她总想让那人看一看她的剑。但不知从什么时候开始，她不再期待这件事。\n“这座城市里到处都是水，彩虹应该随处可见，没看够吗？”\n“......得是他带我去游轮上看的才行，其他的不算。”\n是啊，得有他在才算。\n“哈。那你现在还这么想吗？”\n“是。”男孩的眼中带着淡淡的期许，但旋即又黯淡了下去。“可我一个人做不到。”\n陈沉默了一会儿，比划了一下自己的水铳，然后向男孩指明的方向走去。\n走之前，她给男孩留下一句话。\n“那你就得想办法，让你父亲听你的，让他知道，你想让他变好，至少，你得让他理解你的想法。”\n那天，多索雷斯出现了局部降雨。在雨中，陈女侠从一群犯罪分子中救下了一名女性，并制服了这些犯罪分子。\n令人啧啧称奇的是，就在对方的头目想要负隅顽抗时，一个孩子突然拦在头目的面前。雨不知何时停了，天边挂起了彩虹，彩虹之下，头目明显有些迟疑，而孩子对头目说了些什么。最终，头目放下了武器。\n附近的目击者称，虽然又解决了一起走私案，但陈女侠似乎并不高兴，她只是看向东边，若有所思。",
+      "typeIcon": "rpr-x",
+      "uniEquipIcon": "uniequip_002_chen2",
+      "typeName1": "RPR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_chen2_1",
+        "uniequip_002_chen2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 37,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击范围内的<@ba.kw>所有敌人</>，对自己前方一横排的敌人攻击力提升至<@ba.kw>160%</>",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 42,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击范围内的<@ba.kw>所有敌人</>，对自己前方一横排的敌人攻击力提升至<@ba.kw>160%</>",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "在场时自身弹药类技能攻击时23%概率不消耗对应弹药，其他【狙击】干员的弹药类技能改为20%概率不消耗，其他远程干员的弹药类技能改为8%概率不消耗（同类效果取最高）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "节约风气",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "在场时自身弹药类技能攻击时25%<@ba.talpu>（+2%）</>概率不消耗对应弹药，其他【狙击】干员的弹药类技能改为20%概率不消耗，其他远程干员的弹药类技能改为8%概率不消耗（同类效果取最高）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "节约风气",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击范围内的<@ba.kw>所有敌人</>，对自己前方一横排的敌人攻击力提升至<@ba.kw>160%</>",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "在场时自身弹药类技能攻击时25%概率不消耗对应弹药，其他【狙击】干员的弹药类技能改为20%概率不消耗，其他远程干员的弹药类技能改为12%概率不消耗（同类效果取最高）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "节约风气",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "在场时自身弹药类技能攻击时27%<@ba.talpu>（+2%）</>概率不消耗对应弹药，其他【狙击】干员的弹药类技能改为20%概率不消耗，其他远程干员的弹药类技能改为12%概率不消耗（同类效果取最高）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "节约风气",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "e_spareshot_chen.prob",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][other].prob",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "chen2_t_002[spareshot][sniper].prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1237,5 +1913,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

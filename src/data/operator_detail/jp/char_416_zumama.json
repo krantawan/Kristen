@@ -152,6 +152,7 @@
       "cost": 33
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_416_zumama#1",
@@ -721,21 +722,985 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+27",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 27,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 70,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "勇武無双",
+          "description": "HPが最大値の50％を超える時、攻撃の与ダメージが108％まで上昇\nHPが最大値の50％以下時、自身が10％の<$ba.protect>加護</>状態になる",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.08,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "勇武無双",
+          "description": "HPが最大値の50％を超える時、攻撃の与ダメージが110％<@ba.talpu>（+2%）</>まで上昇\nHPが最大値の50％以下時、自身が12%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態になる",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "勇武無双",
+          "description": "HPが最大値の50％を超える時、攻撃の与ダメージが115％まで上昇\nHPが最大値の50％以下時、自身が20%の<$ba.protect>加護</>状態になる",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "勇武無双",
+          "description": "HPが最大値の50％を超える時、攻撃の与ダメージが117％<@ba.talpu>（+2%）</>まで上昇\nHPが最大値の50％以下時、自身が22%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態になる",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.22,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.17,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "闘争本能",
+          "description": "敵をブロック中、自身のSP自然回復速度+0.2sp/秒",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_zumama",
       "moduleName": "ユーネクテスの記章",
-      "desc": "ユーネクテスは攻撃を防ぐと同時に敵へ攻撃を行うことに秀でている。\n外勤部門の決定に基づき\n外勤任務においては重装オペレーターとして区分し、決闘者の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ユーネクテスは攻撃を防ぐと同時に敵へ攻撃を行うことに秀でている。\n外勤部門の決定に基づき\n外勤任務においては重装オペレーターとして区分し、決闘者の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_zumama",
       "moduleName": "ズゥママの工具箱",
-      "desc": "評定表コード：RDLEDSG03\nコードネーム：ユーネクテス\n本名：ズゥママ\n配属年数：半年\n……\n参加プロジェクト：\n1.大型ロボット「アイアンハイド」の設計、開発、パーツ生産および組み立て。\n2.訓練場の最新エネルギー発生装置のメンテナンス、修理、アップデート。\n3.ドローン隊の武器積載改良案の考案。\n4.ロドス本艦自動航行システムのメンテナンス。\n5.一部のスーパーマシン改造に関する開発計画が承認され、エンジニア部にてプロジェクトの立ち上げが決定済み。\n……\n12.作業プラットフォーム「Lancet-2」の定期メンテナンス、塗装、及びメンタル面でのコミュニケーション、カウンセリング（注：これらに関してはオペレーターがエンジニア部に申請後、正式に認可される前に実施したものである。「Lancet-2」がこちらの行為を拒絶していないことを考慮し、エンジニア部としては過剰な介入を避ける方針とした）。\n……\n総合評定：\nユーネクテスはエンジニア部に配属されて以来、多くのプロジェクトに参加し、各方面で優れた成果を残した。よって、すでに初歩的な独立研究開発を行う能力が備わっていると判断しても問題ないだろう。\n……\n責任者補足（口述の内容をそのまま記載）：\nえぇ～、毎回こんな改まって査定させるなんて、仕事の邪魔なんだけど……\nえーっとね、あの子なら育てる価値は十分にあると思うよ。マイクロコンデンサの性能テストのやり方を覚えたかと思ったら、そのまま手探りで精密な基板を組み立てちゃった時は驚いたなぁ。あの天才っぷりはあたしそっくり！\nそれにすっごい勉強熱心でさ、たった半年でロドスにある工学関連の本を全部読破して、それについて技術者たちと討論したりなんかしちゃってさ。本当にすごい技術ってのは本には載ってないものだし、まだまだ学んでもらいたいことはたーくさんあるけどね。\nあの子がどうしてそんな急いでるのかなんてわからないけど、もしかしたらロドスに来てからまだ心底驚かされる出来事に遭遇してないせいかもね……\nあの子はこれまでに二回、人生観を変えてしまうほどの衝撃的な経験をしてるって話は聞いてるでしょ？小さい頃に航行する移動都市を初めて見たときが一回目、アカフラでLancet-2が言葉を話すのを見た時が二回目ってことだけど、機械や自分自身が三回目を起こすのに期待してるんじゃないかな。\nその期待はつまり、ある種の可能性でもあって……遠くない未来に自分を驚かせるような機械を――もしかしたら、テラに技術革命を起こす程の創造物を生み出しちゃうのかもね！\n本当にそんなことになったら、エンジニア部部長の座を譲ることだって……ちょっと、今のは冗談だから記録しなくていいからね。\n\n日付：12月13日\n責任者：クロージャ"
+      "desc": "評定表コード：RDLEDSG03\nコードネーム：ユーネクテス\n本名：ズゥママ\n配属年数：半年\n……\n参加プロジェクト：\n1.大型ロボット「アイアンハイド」の設計、開発、パーツ生産および組み立て。\n2.訓練場の最新エネルギー発生装置のメンテナンス、修理、アップデート。\n3.ドローン隊の武器積載改良案の考案。\n4.ロドス本艦自動航行システムのメンテナンス。\n5.一部のスーパーマシン改造に関する開発計画が承認され、エンジニア部にてプロジェクトの立ち上げが決定済み。\n……\n12.作業プラットフォーム「Lancet-2」の定期メンテナンス、塗装、及びメンタル面でのコミュニケーション、カウンセリング（注：これらに関してはオペレーターがエンジニア部に申請後、正式に認可される前に実施したものである。「Lancet-2」がこちらの行為を拒絶していないことを考慮し、エンジニア部としては過剰な介入を避ける方針とした）。\n……\n総合評定：\nユーネクテスはエンジニア部に配属されて以来、多くのプロジェクトに参加し、各方面で優れた成果を残した。よって、すでに初歩的な独立研究開発を行う能力が備わっていると判断しても問題ないだろう。\n……\n責任者補足（口述の内容をそのまま記載）：\nえぇ～、毎回こんな改まって査定させるなんて、仕事の邪魔なんだけど……\nえーっとね、あの子なら育てる価値は十分にあると思うよ。マイクロコンデンサの性能テストのやり方を覚えたかと思ったら、そのまま手探りで精密な基板を組み立てちゃった時は驚いたなぁ。あの天才っぷりはあたしそっくり！\nそれにすっごい勉強熱心でさ、たった半年でロドスにある工学関連の本を全部読破して、それについて技術者たちと討論したりなんかしちゃってさ。本当にすごい技術ってのは本には載ってないものだし、まだまだ学んでもらいたいことはたーくさんあるけどね。\nあの子がどうしてそんな急いでるのかなんてわからないけど、もしかしたらロドスに来てからまだ心底驚かされる出来事に遭遇してないせいかもね……\nあの子はこれまでに二回、人生観を変えてしまうほどの衝撃的な経験をしてるって話は聞いてるでしょ？小さい頃に航行する移動都市を初めて見たときが一回目、アカフラでLancet-2が言葉を話すのを見た時が二回目ってことだけど、機械や自分自身が三回目を起こすのに期待してるんじゃないかな。\nその期待はつまり、ある種の可能性でもあって……遠くない未来に自分を驚かせるような機械を――もしかしたら、テラに技術革命を起こす程の創造物を生み出しちゃうのかもね！\n本当にそんなことになったら、エンジニア部部長の座を譲ることだって……ちょっと、今のは冗談だから記録しなくていいからね。\n\n日付：12月13日\n責任者：クロージャ",
+      "typeIcon": "hes-x",
+      "uniEquipIcon": "uniequip_002_zumama",
+      "typeName1": "HES",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_zumama_1",
+        "uniequip_002_zumama_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "SPの自然回復速度が遅い\n敵をブロック中のみSPの自然回復速度が通常の速度に戻る",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 95,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 80,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "SPの自然回復速度が遅い\n敵をブロック中のみSPの自然回復速度が通常の速度に戻る",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵をブロック中、自身のSP自然回復速度+0.4sp/秒",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "闘争本能",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 105,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 85,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "SPの自然回復速度が遅い\n敵をブロック中のみSPの自然回復速度が通常の速度に戻る",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵をブロック中、自身のSP自然回復速度+0.55sp/秒",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "闘争本能",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.55,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_zumama",
       "moduleName": "「リトルアグリー」",
-      "desc": "あの荒野を往く巨大な物体は一体何なんだ？いくら考えても答えが得られることはなく、ズゥママは三日三晩うまく寝付けなかった。\nガヴィルはズゥママの目を囲う厚いクマを見て気遣う言葉をかけながら、同時にいつも通りに容赦のない一撃も見舞った。ズゥママは地面に倒れこんだが、今日は急いで立ち上がることはしなかった。\n「ズールザックじいやが、あれは移動都市だと言っていた。では移動都市とはなんだ？」ズゥママは青空を仰ぎながら、三日間悩み続けていた疑問を友人に投げかけた。これほど思い悩むのはズゥママにとって初めてのことだった。樹の上に見たこともないキノコが生えていた時でさえ、一日半の間考え込んだだけだった。\n「理由も所以も、自ずから道理があるもんだ。」――ガヴィルは自分ではウィットに富んでいると思っている返しをした。ズールザックから聞いたことわざである。ガヴィルが腕を振り回す。「ズゥママ、休憩はもう十分だろ？続きをやろうぜ！」\nズゥママはふいに退屈を覚えた。起き上がった彼女は、移動都市が通り過ぎていった場所へと向かった。移動都市の輪郭はまだおぼろげながら見えたが、目の届く距離というのは脚の届く距離よりも遥かに長いものだ。子供の足で前進する機械に追い付けるはずもない。夕日が沈むまで、ズゥママは自分と移動都市との間の距離が僅かたりとも縮まらないことを確かめ続けた。\n少し気落ちした彼女が地面にへたり込むと、何か違和感を覚えた。お尻の下を探ってみれば、そこにあったのは怪しげな金属の輪だった。部族で最も知識の豊富な男がこれと同じような物を持っているのを、ズゥママは見たことがあった。名前は確か「ナット」だったか？それとも「キャット」だったか？\nズゥママはそれをポケットにしまった。もしかしたらそれは移動都市から落下したのではなく、そそっかしい旅人の落とし物だったのかもしれない。しかしズゥママははこの時、それをとても気に入っていた。\n彼女はこうした鉄屑や怪しげなパーツを集め始め、手当たり次第に組み合わせていった。初めは紐でくくりつけ、次に接着剤でくっつけていたが、ある日、通りがかったキャラバンから溶接というもののやり方を聞いた。\nそしてある日、ついに奇妙なおもちゃがズゥママの手で誕生した。ガヴィルとトミミはそれを「醜い」と評したが、ズゥママはとても気に入った。\nズゥママはそれを手に、以前移動都市が通る様子を眺めた場所を再び訪れた。あの移動都市はとうに見えなくなっていたが、あれが移動する時に伴う振動はまだ感じられるような気がした。\n一人の奇妙なリーベリが突然ズゥママの前に現れて言った。「お前さん、何を考えておるのじゃ？」\nズゥママは小さな醜い骨組みを、痛いほど強く握りしめて答えた。\n「私は、これを動かしてみたい。」"
+      "desc": "あの荒野を往く巨大な物体は一体何なんだ？いくら考えても答えが得られることはなく、ズゥママは三日三晩うまく寝付けなかった。\nガヴィルはズゥママの目を囲う厚いクマを見て気遣う言葉をかけながら、同時にいつも通りに容赦のない一撃も見舞った。ズゥママは地面に倒れこんだが、今日は急いで立ち上がることはしなかった。\n「ズールザックじいやが、あれは移動都市だと言っていた。では移動都市とはなんだ？」ズゥママは青空を仰ぎながら、三日間悩み続けていた疑問を友人に投げかけた。これほど思い悩むのはズゥママにとって初めてのことだった。樹の上に見たこともないキノコが生えていた時でさえ、一日半の間考え込んだだけだった。\n「理由も所以も、自ずから道理があるもんだ。」――ガヴィルは自分ではウィットに富んでいると思っている返しをした。ズールザックから聞いたことわざである。ガヴィルが腕を振り回す。「ズゥママ、休憩はもう十分だろ？続きをやろうぜ！」\nズゥママはふいに退屈を覚えた。起き上がった彼女は、移動都市が通り過ぎていった場所へと向かった。移動都市の輪郭はまだおぼろげながら見えたが、目の届く距離というのは脚の届く距離よりも遥かに長いものだ。子供の足で前進する機械に追い付けるはずもない。夕日が沈むまで、ズゥママは自分と移動都市との間の距離が僅かたりとも縮まらないことを確かめ続けた。\n少し気落ちした彼女が地面にへたり込むと、何か違和感を覚えた。お尻の下を探ってみれば、そこにあったのは怪しげな金属の輪だった。部族で最も知識の豊富な男がこれと同じような物を持っているのを、ズゥママは見たことがあった。名前は確か「ナット」だったか？それとも「キャット」だったか？\nズゥママはそれをポケットにしまった。もしかしたらそれは移動都市から落下したのではなく、そそっかしい旅人の落とし物だったのかもしれない。しかしズゥママははこの時、それをとても気に入っていた。\n彼女はこうした鉄屑や怪しげなパーツを集め始め、手当たり次第に組み合わせていった。初めは紐でくくりつけ、次に接着剤でくっつけていたが、ある日、通りがかったキャラバンから溶接というもののやり方を聞いた。\nそしてある日、ついに奇妙なおもちゃがズゥママの手で誕生した。ガヴィルとトミミはそれを「醜い」と評したが、ズゥママはとても気に入った。\nズゥママはそれを手に、以前移動都市が通る様子を眺めた場所を再び訪れた。あの移動都市はとうに見えなくなっていたが、あれが移動する時に伴う振動はまだ感じられるような気がした。\n一人の奇妙なリーベリが突然ズゥママの前に現れて言った。「お前さん、何を考えておるのじゃ？」\nズゥママは小さな醜い骨組みを、痛いほど強く握りしめて答えた。\n「私は、これを動かしてみたい。」",
+      "typeIcon": "hes-y",
+      "uniEquipIcon": "uniequip_003_zumama",
+      "typeName1": "HES",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_zumama_1",
+        "uniequip_003_zumama_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 80,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.999,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵をブロックしていない時、SPが自然回復しない\n敵をブロック中のみSPの自然回復速度が通常の速度に戻り、攻撃力+15%、防御力+15%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 95,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.999,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵をブロックしていない時、SPが自然回復しない\n敵をブロック中のみSPの自然回復速度が通常の速度に戻り、攻撃力+15%、防御力+15%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが最大値の50%を超える時、攻撃の与ダメージが120%まで上昇\nHPが最大値の50%以下時、自身が25%の<$ba.protect>加護</>状態を獲得",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "勇武無双",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが最大値の50%を超える時、攻撃の与ダメージが122%<@ba.talpu>（+2%）</>まで上昇\nHPが最大値の50%以下時、自身が27%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態を獲得",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "勇武無双",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.22,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 110,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.999,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵をブロックしていない時、SPが自然回復しない\n敵をブロック中のみSPの自然回復速度が通常の速度に戻り、攻撃力+15%、防御力+15%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが最大値の50%を超える時、攻撃の与ダメージが123%まで上昇\nHPが最大値の50%以下時、自身が28%の<$ba.protect>加護</>状態を獲得",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "勇武無双",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.28,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "HPが最大値の50%を超える時、攻撃の与ダメージが125%<@ba.talpu>（+2%）</>まで上昇\nHPが最大値の50%以下時、自身が30%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態を獲得",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "勇武無双",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1197,5 +2162,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

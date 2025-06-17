@@ -151,6 +151,52 @@
       "cost": 22
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "init_atk_scale",
+            "value": 0.2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "delta_atk_scale",
+            "value": 0.15,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_atk_scale",
+            "value": 1.1,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "3",
+          "value": {
+            "key": "max_stack_cnt",
+            "value": 6,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（最大は攻撃力の110%まで）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1038_whitw2#1",
@@ -729,16 +775,758 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "群狼の統率者",
+          "description": "配置中、30秒ごとに浮遊ユニットが以下の効果を順番に獲得：与ダメージ上限+6%/ダメージを与えた対象の特殊能力を1秒間無効化/浮遊ユニットの数+1",
+          "blackboard": [
+            {
+              "key": "interval",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "scale",
+              "value": 1.06,
+              "valueStr": null
+            },
+            {
+              "key": "attack@silence_duration",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "1",
+          "name": "群狼の統率者",
+          "description": "配置中、26<@ba.talpu>（-4）</>秒ごとに浮遊ユニットが以下の効果を順番に獲得：与ダメージ上限+6%/ダメージを与えた対象の特殊能力を1秒間無効化/浮遊ユニットの数+1",
+          "blackboard": [
+            {
+              "key": "interval",
+              "value": 26,
+              "valueStr": null
+            },
+            {
+              "key": "scale",
+              "value": 1.06,
+              "valueStr": null
+            },
+            {
+              "key": "attack@silence_duration",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "群狼の統率者",
+          "description": "配置中、20秒ごとに浮遊ユニットが以下の効果を順番に獲得：与ダメージ上限+10%/ダメージを与えた対象の特殊能力を2秒間無効化/浮遊ユニットの数+1",
+          "blackboard": [
+            {
+              "key": "interval",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "scale",
+              "value": 1.1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@silence_duration",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "1",
+          "name": "群狼の統率者",
+          "description": "配置中、16<@ba.talpu>（-4）</>秒ごとに浮遊ユニットが以下の効果を順番に獲得：与ダメージ上限+10%/ダメージを与えた対象の特殊能力を2秒間無効化/浮遊ユニットの数+1",
+          "blackboard": [
+            {
+              "key": "interval",
+              "value": 16,
+              "valueStr": null
+            },
+            {
+              "key": "scale",
+              "value": 1.1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@silence_duration",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "シラクーザの幸運",
+          "description": "編成中、味方【シラクーザ】のストックSP+5",
+          "blackboard": [
+            {
+              "key": "sp",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "2",
+          "name": "シラクーザの幸運",
+          "description": "編成中、味方【シラクーザ】のストックSP+6<@ba.talpu>（+1）</>",
+          "blackboard": [
+            {
+              "key": "sp",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "3",
+          "name": "",
+          "description": "",
+          "blackboard": [],
+          "tokenKey": null,
+          "isHideTalent": true
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "M0_1",
+          "name": "",
+          "description": "",
+          "blackboard": [
+            {
+              "key": "attack@cnt",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": true
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_whitw2",
       "moduleName": "荒蕪ラップランドの記章",
-      "desc": "荒蕪ラップランドは浮遊ユニットを操り、敵を追撃することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、操機術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "荒蕪ラップランドは浮遊ユニットを操り、敵を追撃することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、操機術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_whitw2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_whitw2",
       "moduleName": "狼の時間",
-      "desc": "もうすぐ八時になってしまう。森の外れに立つ彼女は、ひどく焦っていた。\n何があろうと、必ず九時前には家に帰らねばならない。これは父が定めたルールだった。たとえ死んでも、このルールに背くことだけは許されない。ゆえに、彼女も自分の中でルールを定めた――八時までには成すべきことを終え、始末すべき者を全員始末すると。\nしかし今日は、まだ成すべきことを終えられていなかった。敵はサルッツォファミリーの予想を超える数の勢力を隠しており、事態は泥沼化していたのだ。\n部下たちは彼女のために、帰りの車を手配していた。そして彼女もまた、父は成果などには興味はなく、ただ自分が時間通りに戻ることだけを望んでいるのだと知っていた。\nそこで彼女は、車に乗ることを選んだ。だが、それと同時に、敵が飼いならした牙獣を解き放ってきた。数匹が包囲を突破して、車内に入り込むと彼女の喉に狙いを定める。\n無論、それで彼女が傷付くことはない。ひらりと身を躱すと、返す刀で牙獣を切り伏せて――けれどもその時、彼女は牙獣の爪が身に着けている何かに触れたのを感じた。\nうつむいて見てみれば、それは懐中時計だった。牙獣の爪は文字盤のガラスを引っ掻いて、深々と爪痕を残していた。\nこれでは時間がよく見えない。\n彼女は一瞬焦りを感じたが、その後続けて訪れたのは安堵だった。先ほどまでの焦燥感が、瞬く間に消え失せたのだ。\n「ボクが片付けてくるよ。」突然彼女はそう言った。\nそして、強く反対する部下たちを尻目に車を降りると、森に向かって一歩一歩進んでいく。\nカチ、カチ。八時が来た。\nけれども彼女は、森の奥へと姿を消した。\nその日、彼女は夜中までかけて敵を皆殺しにすると、明け方に悠々とサルッツォ邸の門をくぐり戻ってきた。\nアルベルトは怒りを爆発させ――\nラップランドは満面の笑みを見せたのだった。\n……\n「こんな物語があるんだ。とある女の子が、美しくなれる魔法をかけてもらった。だけど、十二時を過ぎたら元の姿に戻っちゃうってお話でね。」手元の懐中時計を弄びながら、彼女はぽつりと言った。「ザーロ、キミは魔法が解けちゃうのが怖いかい？名もなき牙獣のように、誰にも知られず荒野の上で死に絶えることを、怖いと思う？」\n「くだらん問いだ。狼主という存在を侮辱しているのだろう。」\n「じゃあ、キミからすれば単なるおもちゃでしかない大多数の人間も、同じようなことを考えてるっていうのは知ってる？まあ、ボクからすれば、キミらはみんな一緒だけどね。」\n「誰もかれも、自分にかけられた魔法は永遠に解けないものだと思い込んでるんだ。それでいて、いざ魔法が解けた瞬間、こんなはずじゃなかったって嘆くのさ。」\n「お前はどうなんだ？自分だけは例外だとでも？」\n「違うよ、ザーロ。その時が来たら、キミは初めて本当のボクを見ることになるんだ。」\n彼女は懐中時計を耳に当てると目を閉じて、秒針の動きに合わせ指先で文字盤をコツコツと叩いて言った。\n「カチ、カチ。八時が来たよ。」"
+      "desc": "もうすぐ八時になってしまう。森の外れに立つ彼女は、ひどく焦っていた。\n何があろうと、必ず九時前には家に帰らねばならない。これは父が定めたルールだった。たとえ死んでも、このルールに背くことだけは許されない。ゆえに、彼女も自分の中でルールを定めた――八時までには成すべきことを終え、始末すべき者を全員始末すると。\nしかし今日は、まだ成すべきことを終えられていなかった。敵はサルッツォファミリーの予想を超える数の勢力を隠しており、事態は泥沼化していたのだ。\n部下たちは彼女のために、帰りの車を手配していた。そして彼女もまた、父は成果などには興味はなく、ただ自分が時間通りに戻ることだけを望んでいるのだと知っていた。\nそこで彼女は、車に乗ることを選んだ。だが、それと同時に、敵が飼いならした牙獣を解き放ってきた。数匹が包囲を突破して、車内に入り込むと彼女の喉に狙いを定める。\n無論、それで彼女が傷付くことはない。ひらりと身を躱すと、返す刀で牙獣を切り伏せて――けれどもその時、彼女は牙獣の爪が身に着けている何かに触れたのを感じた。\nうつむいて見てみれば、それは懐中時計だった。牙獣の爪は文字盤のガラスを引っ掻いて、深々と爪痕を残していた。\nこれでは時間がよく見えない。\n彼女は一瞬焦りを感じたが、その後続けて訪れたのは安堵だった。先ほどまでの焦燥感が、瞬く間に消え失せたのだ。\n「ボクが片付けてくるよ。」突然彼女はそう言った。\nそして、強く反対する部下たちを尻目に車を降りると、森に向かって一歩一歩進んでいく。\nカチ、カチ。八時が来た。\nけれども彼女は、森の奥へと姿を消した。\nその日、彼女は夜中までかけて敵を皆殺しにすると、明け方に悠々とサルッツォ邸の門をくぐり戻ってきた。\nアルベルトは怒りを爆発させ――\nラップランドは満面の笑みを見せたのだった。\n……\n「こんな物語があるんだ。とある女の子が、美しくなれる魔法をかけてもらった。だけど、十二時を過ぎたら元の姿に戻っちゃうってお話でね。」手元の懐中時計を弄びながら、彼女はぽつりと言った。「ザーロ、キミは魔法が解けちゃうのが怖いかい？名もなき牙獣のように、誰にも知られず荒野の上で死に絶えることを、怖いと思う？」\n「くだらん問いだ。狼主という存在を侮辱しているのだろう。」\n「じゃあ、キミからすれば単なるおもちゃでしかない大多数の人間も、同じようなことを考えてるっていうのは知ってる？まあ、ボクからすれば、キミらはみんな一緒だけどね。」\n「誰もかれも、自分にかけられた魔法は永遠に解けないものだと思い込んでるんだ。それでいて、いざ魔法が解けた瞬間、こんなはずじゃなかったって嘆くのさ。」\n「お前はどうなんだ？自分だけは例外だとでも？」\n「違うよ、ザーロ。その時が来たら、キミは初めて本当のボクを見ることになるんだ。」\n彼女は懐中時計を耳に当てると目を閉じて、秒針の動きに合わせ指先で文字盤をコツコツと叩いて言った。\n「カチ、カチ。八時が来たよ。」",
+      "typeIcon": "fun-x",
+      "uniEquipIcon": "uniequip_002_whitw2",
+      "typeName1": "FUN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_whitw2_1",
+        "uniequip_002_whitw2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 95,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（浮遊ユニットの初期与ダメージ上昇。最大は攻撃力の110%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 29,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（浮遊ユニットの初期与ダメージ上昇。最大は攻撃力の110%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "編成中、味方【シラクーザ】のストックSP+5、初めてスキルを発動後、攻撃速度+6",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "シラクーザの幸運",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "編成中、味方【シラクーザ】のストックSP+6<@ba.talpu>（+1）</>、初めてスキルを発動後、攻撃速度+6",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "2",
+                  "name": "シラクーザの幸運",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（浮遊ユニットの初期与ダメージ上昇。最大は攻撃力の110%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "編成中、味方【シラクーザ】のストックSP+5、初めてスキルを発動後、攻撃速度+10",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "シラクーザの幸運",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "編成中、味方【シラクーザ】のストックSP+6<@ba.talpu>（+1）</>、初めてスキルを発動後、攻撃速度+10",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "2",
+                  "name": "シラクーザの幸運",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1192,5 +1980,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

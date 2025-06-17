@@ -151,6 +151,28 @@
       "cost": 12
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "cost",
+            "value": 1,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_261_sddrag#1",
@@ -625,16 +647,651 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "退魔の血",
+          "description": "術耐性+10",
+          "blackboard": [
+            {
+              "key": "magic_resistance",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "退魔の血",
+          "description": "術耐性+20",
+          "blackboard": [
+            {
+              "key": "magic_resistance",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_sddrag",
       "moduleName": "リードの記章",
-      "desc": "リードは率先して戦場に切り込み、後続の展開に余裕を持たせる戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては先鋒オペレーターとして区分し、突撃兵の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "リードは率先して戦場に切り込み、後続の展開に余裕を持たせる戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては先鋒オペレーターとして区分し、突撃兵の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_sddrag",
       "moduleName": "槍用クリーニングセット",
-      "desc": "「プレゼント……？」\n突然目の前に綺麗な包みが差し出されたが、どうすれば良いか分からず、固まってしまった。\n「それは普通の装備用クリーニングセットだけど、ちょっと色々足して、装備を急速に冷却できるようにしてあるんだ……あ、あとその戦闘用手袋も耐熱のやつだよ。早く開けてみ……ってあちゃー、ネタバレになっちゃった？　ドクターに怒られちゃうかな？」\nブラッドブルードのエンジニアははっとした様子で口を押さえると、そのまま特殊人員宿舎の開け放したままのドアをくぐり、扉を閉めながら、満面の笑みでウインクを投げかけた。\n「じゃあまたね。ハッピーホリデー！」\n「ハッピー……ホリデー。」\n私は小包を抱えて立ち尽くした。返事をしたつもりだったが、扉の外までしっかりと届いただろうか。\nリードにとって、祝日は楽しいものではなかった。\n両親は祝日の鐘の中で命を落とした。ロンディニウムから持ち帰ってくれたプレゼントは両親の足下に散らばり、包み紙には血が染みていた。\nそれから姉が雪に沈む私を引き起こし、そのまま手を引いて、一つ、また一つと小道を抜けた。周囲の建物の窓からは蝋燭の暖かな光が漏れているというのに、私たちの進む先には何もなかった。\n後方から足音が徐々に近づいてきた。しっかり隠れるようにと姉に言いつけられ、私は一番目立たなそうな暗がりを見繕い、そこに身を隠した。呼吸音を立てることすらためらわれ、肺がギシギシ痛んだ。\n「もう大丈夫。ラフシニー、立ちなさい。」\n姉の声がそばで響いた。目を開くと、窓の中から炎が漏れ出し、なんとも奇怪でおぞましい紫色に変化するのが見えた。まるで夜の漆黒さえも、それに恐れをなして退いているかのようだった。\n先の恐怖で腰が抜けてなかなか立てなかったが、姉は再び手を伸ばすこともなく、さっさと炎の中に戻っていった。追いかけなければ、一生ここに取り残されるであろうことを悟った。\n奥歯を噛みしめて立ち上がる。恐怖と痛みに耐えながら、炎が照らす後ろ姿の影を追いかけた。いつのまにかかなりの距離を歩いた。私自身も、端から見れば炎の中の小さな影の一つになっていただろう。\nそれから、炎が鎮まることはなかった。それは私の目の中、心の中、そして祝日の闇夜の中で燃え続けた。\n5年後、姉から一本の槍を授けられた。\n覚えている限り、それが最後にもらった祝日のプレゼントだ。槍を手にすると、炎は槍の切っ先にも燃え移った。\nいつの間にか、そんな温度にも慣れ、呼吸の度に全身を駆け巡る痛みにも慣れていた。この不滅の炎は生涯を通して、いや、死後も追いかけてくるのだろう。\n――このプレゼントを受け取るまでは、そう考えていた。\n不滅の炎を鎮めようとする者がまだいるのだと、私は驚いた。\nそれからというもの、テストや訓練の際には、毎回その手袋を付けるようになった。さらに戦闘後、クリーニングセットの説明書通りに、槍の切っ先を清めるようになった。\nどんな薬剤や素材を用いてもドラコの炎は鎮められないことを、クロージャには伝えていない。\nなぜなら、このプレゼントを受け取った瞬間、久しく感じていない涼しさを確かに感じたからだ。"
+      "desc": "「プレゼント……？」\n突然目の前に綺麗な包みが差し出されたが、どうすれば良いか分からず、固まってしまった。\n「それは普通の装備用クリーニングセットだけど、ちょっと色々足して、装備を急速に冷却できるようにしてあるんだ……あ、あとその戦闘用手袋も耐熱のやつだよ。早く開けてみ……ってあちゃー、ネタバレになっちゃった？　ドクターに怒られちゃうかな？」\nブラッドブルードのエンジニアははっとした様子で口を押さえると、そのまま特殊人員宿舎の開け放したままのドアをくぐり、扉を閉めながら、満面の笑みでウインクを投げかけた。\n「じゃあまたね。ハッピーホリデー！」\n「ハッピー……ホリデー。」\n私は小包を抱えて立ち尽くした。返事をしたつもりだったが、扉の外までしっかりと届いただろうか。\nリードにとって、祝日は楽しいものではなかった。\n両親は祝日の鐘の中で命を落とした。ロンディニウムから持ち帰ってくれたプレゼントは両親の足下に散らばり、包み紙には血が染みていた。\nそれから姉が雪に沈む私を引き起こし、そのまま手を引いて、一つ、また一つと小道を抜けた。周囲の建物の窓からは蝋燭の暖かな光が漏れているというのに、私たちの進む先には何もなかった。\n後方から足音が徐々に近づいてきた。しっかり隠れるようにと姉に言いつけられ、私は一番目立たなそうな暗がりを見繕い、そこに身を隠した。呼吸音を立てることすらためらわれ、肺がギシギシ痛んだ。\n「もう大丈夫。ラフシニー、立ちなさい。」\n姉の声がそばで響いた。目を開くと、窓の中から炎が漏れ出し、なんとも奇怪でおぞましい紫色に変化するのが見えた。まるで夜の漆黒さえも、それに恐れをなして退いているかのようだった。\n先の恐怖で腰が抜けてなかなか立てなかったが、姉は再び手を伸ばすこともなく、さっさと炎の中に戻っていった。追いかけなければ、一生ここに取り残されるであろうことを悟った。\n奥歯を噛みしめて立ち上がる。恐怖と痛みに耐えながら、炎が照らす後ろ姿の影を追いかけた。いつのまにかかなりの距離を歩いた。私自身も、端から見れば炎の中の小さな影の一つになっていただろう。\nそれから、炎が鎮まることはなかった。それは私の目の中、心の中、そして祝日の闇夜の中で燃え続けた。\n5年後、姉から一本の槍を授けられた。\n覚えている限り、それが最後にもらった祝日のプレゼントだ。槍を手にすると、炎は槍の切っ先にも燃え移った。\nいつの間にか、そんな温度にも慣れ、呼吸の度に全身を駆け巡る痛みにも慣れていた。この不滅の炎は生涯を通して、いや、死後も追いかけてくるのだろう。\n――このプレゼントを受け取るまでは、そう考えていた。\n不滅の炎を鎮めようとする者がまだいるのだと、私は驚いた。\nそれからというもの、テストや訓練の際には、毎回その手袋を付けるようになった。さらに戦闘後、クリーニングセットの説明書通りに、槍の切っ先を清めるようになった。\nどんな薬剤や素材を用いてもドラコの炎は鎮められないことを、クロージャには伝えていない。\nなぜなら、このプレゼントを受け取った瞬間、久しく感じていない涼しさを確かに感じたからだ。",
+      "typeIcon": "chg-y",
+      "uniEquipIcon": "uniequip_002_sddrag",
+      "typeName1": "CHG",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_sddrag_1",
+        "uniequip_002_sddrag_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが最大値の<@ba.vup>{hp_ratio:0%}</>未満の敵を攻撃時、攻撃力が<@ba.vup>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 155,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが最大値の<@ba.vup>{hp_ratio:0%}</>未満の敵を攻撃時、攻撃力が<@ba.vup>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "術耐性+20、術ダメージを受けると3秒間攻撃速度+15（重複不可）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "退魔の血",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resistance",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが最大値の<@ba.vup>{hp_ratio:0%}</>未満の敵を攻撃時、攻撃力が<@ba.vup>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "術耐性+20、術ダメージを受けると3秒間攻撃速度+25（重複不可）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "退魔の血",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resistance",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1088,5 +1745,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

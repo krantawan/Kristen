@@ -150,6 +150,7 @@
       "cost": 21
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_350_surtr#1",
@@ -746,16 +747,594 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +28",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 28,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 100,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Molten Flame",
+          "description": "Attacks ignore 12 RES",
+          "blackboard": {
+            "magic_resist_penetrate_fixed": 12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Molten Flame",
+          "description": "Attacks ignore 14 <@ba.talpu>(+2)</> RES",
+          "blackboard": {
+            "magic_resist_penetrate_fixed": 14
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Molten Flame",
+          "description": "Attacks ignore 20 RES",
+          "blackboard": {
+            "magic_resist_penetrate_fixed": 20
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Molten Flame",
+          "description": "Attacks ignore 22 <@ba.talpu>(+2)</> RES",
+          "blackboard": {
+            "magic_resist_penetrate_fixed": 22
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Remnant Ash",
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 4 seconds later",
+          "blackboard": {
+            "surtr_t_2[withdraw].interval": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "2",
+          "name": "Remnant Ash",
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 5 <@ba.talpu>(+1)</> seconds later",
+          "blackboard": {
+            "surtr_t_2[withdraw].interval": 5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Remnant Ash",
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 8 seconds later",
+          "blackboard": {
+            "surtr_t_2[withdraw].interval": 8
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "2",
+          "name": "Remnant Ash",
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 9 <@ba.talpu>(+1)</> seconds later",
+          "blackboard": {
+            "surtr_t_2[withdraw].interval": 9
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_surtr",
       "moduleName": "Surtr's Badge",
-      "desc": "Operator Surtr has demonstrated a remarkable aptitude for inflicting Arts damage on the enemy in close-quarters combat.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Arts Fighter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Surtr has demonstrated a remarkable aptitude for inflicting Arts damage on the enemy in close-quarters combat.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Arts Fighter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_surtr",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_surtr",
       "moduleName": "Heart of Sami",
-      "desc": "'Sami blesses and protects us all. It is everywhere, and ever watchful over Its children.\n'Every tree, every blade of grass in this tundra is part of It, and through them It guides us. Even in distant lands, It reaches through these mediums to aid us in troubled times.\n'So what do you say? A handcrafted Sami spirit stone? Even the great Arges bought one, you know.' —A certain incorrigible Sami peddler\nAs Surtr, amidst the heart of the blizzard, prepared to leave the icefields' depths, Sami gave her a gift.\nSlowly, the sheaves of frozen runes revealed to her melted, crumbled, and a stone of crystal ice fell at her feet.\nAs if compelled, Surtr picked it up, and found it not nearly as bone-chilling as its looks suggested. Even as the blizzard bathed it, it pulsed with a warmer rhythm. Almost a familiar one. The rhythm of life.\nSuch a familiar feeling. She looked at the sword in her hand, staring at the molten core within it.\nBringing the crystal to her sword, Surtr could feel... another self stirring, a voice crying out, 'Damn you, take that thing away! Get it out of my sight!'\nSo, Surtr bought one of those locally handcrafted Sami pendants, discarded its useless rock, and replaced it with the crystal. She wound the rope around the sword's hilt.\nWith every step forward, the pendant and hilt would knock together in rhythm—clank, clank. This annoyed her other self greatly, haughty yet powerless to resist.\nIn the back of her mind, Surtr couldn't help but laugh at it.\nShe knew it was a seething, scorching sort, easy to irritate, hated cold things the way one might hate the sound of nails on a chalkboard.\nIt was why she'd always loved ice cream, and all cold refreshments alike.\nClank, clank—Surtr knocked the pendant on the blade a few times, and it gave a few violent shakes in response, before settling down once more. The crystal's blue light bathed the blade's flame red, smothering it somewhat.\nThank you, Sami.\nShe could feel its blaze becoming wrath, increasingly unable to bear being slighted so, as if saying, 'You fool! You would choose this most pathetic, most damnable of means to get back at me!'\nNonsense.\nShe'd never considered its minor griping a threat, with or without Sami's help.\nShe's never seen her fiery powers as a blessing, nor has she ever felt restricted by the chaos that is her memory. Headstrong and self-centered, she disregards and cherishes as she sees fit.\nFeranmut fragment? Big deal. Just shut it in front of me."
+      "desc": "'Sami blesses and protects us all. It is everywhere, and ever watchful over Its children.\n'Every tree, every blade of grass in this tundra is part of It, and through them It guides us. Even in distant lands, It reaches through these mediums to aid us in troubled times.\n'So what do you say? A handcrafted Sami spirit stone? Even the great Arges bought one, you know.' —A certain incorrigible Sami peddler\nAs Surtr, amidst the heart of the blizzard, prepared to leave the icefields' depths, Sami gave her a gift.\nSlowly, the sheaves of frozen runes revealed to her melted, crumbled, and a stone of crystal ice fell at her feet.\nAs if compelled, Surtr picked it up, and found it not nearly as bone-chilling as its looks suggested. Even as the blizzard bathed it, it pulsed with a warmer rhythm. Almost a familiar one. The rhythm of life.\nSuch a familiar feeling. She looked at the sword in her hand, staring at the molten core within it.\nBringing the crystal to her sword, Surtr could feel... another self stirring, a voice crying out, 'Damn you, take that thing away! Get it out of my sight!'\nSo, Surtr bought one of those locally handcrafted Sami pendants, discarded its useless rock, and replaced it with the crystal. She wound the rope around the sword's hilt.\nWith every step forward, the pendant and hilt would knock together in rhythm—clank, clank. This annoyed her other self greatly, haughty yet powerless to resist.\nIn the back of her mind, Surtr couldn't help but laugh at it.\nShe knew it was a seething, scorching sort, easy to irritate, hated cold things the way one might hate the sound of nails on a chalkboard.\nIt was why she'd always loved ice cream, and all cold refreshments alike.\nClank, clank—Surtr knocked the pendant on the blade a few times, and it gave a few violent shakes in response, before settling down once more. The crystal's blue light bathed the blade's flame red, smothering it somewhat.\nThank you, Sami.\nShe could feel its blaze becoming wrath, increasingly unable to bear being slighted so, as if saying, 'You fool! You would choose this most pathetic, most damnable of means to get back at me!'\nNonsense.\nShe'd never considered its minor griping a threat, with or without Sami's help.\nShe's never seen her fiery powers as a blessing, nor has she ever felt restricted by the chaos that is her memory. Headstrong and self-centered, she disregards and cherishes as she sees fit.\nFeranmut fragment? Big deal. Just shut it in front of me.",
+      "typeIcon": "aft-x",
+      "uniEquipIcon": "uniequip_002_surtr",
+      "typeName1": "AFT",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_surtr_1",
+        "uniequip_002_surtr_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 48,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 24 RES",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Molten Flame",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resist_penetrate_fixed",
+                      "value": 24,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 26 <@ba.talpu>(+2)</> RES",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Molten Flame",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resist_penetrate_fixed",
+                      "value": 26,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 26 RES",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Molten Flame",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resist_penetrate_fixed",
+                      "value": 26,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 28 <@ba.talpu>(+2)</> RES",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Molten Flame",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resist_penetrate_fixed",
+                      "value": 28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1209,5 +1788,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -151,6 +151,28 @@
       "cost": 25
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "def",
+          "value": 2
+        },
+        {
+          "key": "magic_resistance",
+          "value": 20
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_388_mint#1",
@@ -636,16 +658,650 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 15,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Geologist",
+          "description": "When this unit's skill is not active, adjacent allies gain +5% DEF",
+          "blackboard": {
+            "def": 0.05,
+            "atk": 0,
+            "taunt_level": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Geologist",
+          "description": "When this unit's skill is not active, adjacent allies gain +7% <@ba.talpu>(+2%)</> DEF",
+          "blackboard": {
+            "def": 0.07,
+            "atk": 0,
+            "taunt_level": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Geologist",
+          "description": "When this unit's skill is not active, adjacent allies gain +10% DEF; When this unit's skill is active, become less likely to be targeted by enemies",
+          "blackboard": {
+            "def": 0.1,
+            "atk": 0,
+            "taunt_level": -1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Geologist",
+          "description": "When this unit's skill is not active, adjacent allies gain +12% <@ba.talpu>(+2%)</> DEF; When this unit's skill is active, become less likely to be targeted by enemies",
+          "blackboard": {
+            "def": 0.12,
+            "atk": 0,
+            "taunt_level": -1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mint",
       "moduleName": "Mint's Badge",
-      "desc": "Operator Mint has demonstrated a remarkable aptitude for inflicting well-timed Arts casualties on a large scale.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Phalanx Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Mint has demonstrated a remarkable aptitude for inflicting well-timed Arts casualties on a large scale.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Phalanx Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_mint",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mint",
       "moduleName": "Attention-holding Device",
-      "desc": "The forty-second time Mint wanders off is the time she resolves, as other operators keep telling her, to train herself to stay focused.\nAfter picking up more than a few items from the flea market, her training commences.\n-METRONOME. The shop says Leithanians use this little tool when beginning to learn music, in order to help them grasp tempo. But conversely, '100 Ways to Up Your Concentration' says having a regular sound playing helps focus your attention, as people will map out the thoughts in their head to the rhythm, thus untangling their logic. 'Tick, tock, tick, tock, tick, tock, pebbles, twigs, outside, everywhere, pretty, favorite, I want to look, I'll look right now...'\n-SOUND BATH. 'Bathed in pure, long, and gentle tones, you will come to find serenity, and concentrate upon the self.' '*ding*—' It... sounds like Pramanix's bell, it's so reassuring... I wonder if this was from Kjerag too? I remember there was a holy mountain there, since Cliffheart's told me heaps about the place. I'd like to visit too one day, sooner or later—I'm sure there'd be so much geological knowledge to pick up on! The Black Flow's on the bucket list too. Maybe I should consult Asbestos about it beforehand? That door she has looks so hefty...\n-ATTENTION SPAN TRAINING CARDS. This one's a present from Skyfire after she heard I was starting attention training. 'Suitable for children ages 3-5. WARNING: CHOKING HAZARD.' Why did she buy me this?\n-BANDAGES FOR WHEN A BOOK BITES. These aren't to do with attention training, I simply saw them on the table just now and put them in here with everything else, hehe.\n-PEBBLE. Saga told me that to concentrate on but one thing before thee, one item, be it even the most mundane and unremarkable stone, would settle thee down, and see that thou wouldst ponder the primitive and true. She led me through some meditation, to focus my attention, but eventually... the natto gohan was just too tasty to resist.\nThen comes the forty-third time she's wandered off. Her attention training is declared a failure, and consequently her journaling ends there. The final item noted is a fire extinguisher.\n-FIRE EXTINGUISHER. I put out the flames that started from Skyfire flaring up. I think... I think it's better than any other tool at addressing the most frightening consequences of being unfocused...\nOhh... but still, I have to make a proper apology..."
+      "desc": "The forty-second time Mint wanders off is the time she resolves, as other operators keep telling her, to train herself to stay focused.\nAfter picking up more than a few items from the flea market, her training commences.\n-METRONOME. The shop says Leithanians use this little tool when beginning to learn music, in order to help them grasp tempo. But conversely, '100 Ways to Up Your Concentration' says having a regular sound playing helps focus your attention, as people will map out the thoughts in their head to the rhythm, thus untangling their logic. 'Tick, tock, tick, tock, tick, tock, pebbles, twigs, outside, everywhere, pretty, favorite, I want to look, I'll look right now...'\n-SOUND BATH. 'Bathed in pure, long, and gentle tones, you will come to find serenity, and concentrate upon the self.' '*ding*—' It... sounds like Pramanix's bell, it's so reassuring... I wonder if this was from Kjerag too? I remember there was a holy mountain there, since Cliffheart's told me heaps about the place. I'd like to visit too one day, sooner or later—I'm sure there'd be so much geological knowledge to pick up on! The Black Flow's on the bucket list too. Maybe I should consult Asbestos about it beforehand? That door she has looks so hefty...\n-ATTENTION SPAN TRAINING CARDS. This one's a present from Skyfire after she heard I was starting attention training. 'Suitable for children ages 3-5. WARNING: CHOKING HAZARD.' Why did she buy me this?\n-BANDAGES FOR WHEN A BOOK BITES. These aren't to do with attention training, I simply saw them on the table just now and put them in here with everything else, hehe.\n-PEBBLE. Saga told me that to concentrate on but one thing before thee, one item, be it even the most mundane and unremarkable stone, would settle thee down, and see that thou wouldst ponder the primitive and true. She led me through some meditation, to focus my attention, but eventually... the natto gohan was just too tasty to resist.\nThen comes the forty-third time she's wandered off. Her attention training is declared a failure, and consequently her journaling ends there. The final item noted is a fire extinguisher.\n-FIRE EXTINGUISHER. I put out the flames that started from Skyfire flaring up. I think... I think it's better than any other tool at addressing the most frightening consequences of being unfocused...\nOhh... but still, I have to make a proper apology...",
+      "typeIcon": "plx-x",
+      "uniEquipIcon": "uniequip_002_mint",
+      "typeName1": "PLX",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_mint_1",
+        "uniequip_002_mint_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Normally <@ba.kw>does not attack</>, but has <@ba.kw>greatly increased</> DEF and RES; when skill is active, retains some of the bonus and attacks deal <@ba.kw>AoE Arts Damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Normally <@ba.kw>does not attack</>, but has <@ba.kw>greatly increased</> DEF and RES; when skill is active, retains some of the bonus and attacks deal <@ba.kw>AoE Arts Damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit's skill is not active, adjacent allies gain +18% DEF; when skill is active, less likely to be targeted by enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Geologist",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit's skill is not active, adjacent allies gain +20% <@ba.talpu>(+2%)</> DEF; when skill is active, less likely to be targeted by enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Geologist",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 52,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Normally <@ba.kw>does not attack</>, but has <@ba.kw>greatly increased</> DEF and RES; when skill is active, retains some of the bonus and attacks deal <@ba.kw>AoE Arts Damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit's skill is not active, adjacent allies gain +21% DEF; when skill is active, less likely to be targeted by enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Geologist",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit's skill is not active, adjacent allies gain +23% <@ba.talpu>(+2%)</> DEF; when skill is active, less likely to be targeted by enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Geologist",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1107,5 +1763,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

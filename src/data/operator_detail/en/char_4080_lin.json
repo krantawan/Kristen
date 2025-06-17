@@ -151,6 +151,28 @@
       "cost": 24
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "def",
+          "value": 2
+        },
+        {
+          "key": "magic_resistance",
+          "value": 20
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4080_lin#1",
@@ -712,16 +734,643 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +34",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 34,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Foolproof Plan",
+          "description": "A Crystal Barrier blocks all damage, shattering when 150 or more damage is taken from a single source, dealing 60% of Lin's ATK as Arts damage to all nearby enemies and <$ba.stun>stunning</> them for 1s; reforms after 12s",
+          "blackboard": {
+            "value": 150,
+            "atk_scale": 0.6,
+            "stun": 1,
+            "interval": 12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Foolproof Plan",
+          "description": "A Crystal Barrier blocks all damage, shattering when 150 or more damage is taken from a single source, dealing 70%<@ba.talpu> (+10%)</> of Lin's ATK as Arts damage to all nearby enemies and <$ba.stun>stunning</> them for 1s; reforms after 12s",
+          "blackboard": {
+            "value": 150,
+            "atk_scale": 0.7,
+            "stun": 1,
+            "interval": 12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Foolproof Plan",
+          "description": "A Crystal Barrier blocks all damage, shattering when 200 or more damage is taken from a single source, dealing 100% of Lin's ATK as Arts damage to all nearby enemies and <$ba.stun>stunning</> them for 1s; reforms after 8s",
+          "blackboard": {
+            "value": 200,
+            "atk_scale": 1,
+            "stun": 1,
+            "interval": 8
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Foolproof Plan",
+          "description": "A Crystal Barrier blocks all damage, shattering when 200 or more damage is taken from a single source, dealing 110%<@ba.talpu> (+10%)</> of Lin's ATK as Arts damage to all nearby enemies and <$ba.stun>stunning</> them for 1s; reforms after 8s",
+          "blackboard": {
+            "value": 200,
+            "atk_scale": 1.1,
+            "stun": 1,
+            "interval": 8
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Shrouded Strength",
+          "description": "50% chance to recover 1 SP when attacked",
+          "blackboard": {
+            "prob": 0.5,
+            "sp": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "2",
+          "name": "Shrouded Strength",
+          "description": "55%<@ba.talpu> (+5%)</> chance to recover 1 SP when attacked",
+          "blackboard": {
+            "prob": 0.55,
+            "sp": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_lin",
       "moduleName": "Lin's Badge",
-      "desc": "Operator Lin has demonstrated a remarkable aptitude for inflicting well-timed Arts casualties on a large scale.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Phalanx Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Lin has demonstrated a remarkable aptitude for inflicting well-timed Arts casualties on a large scale.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Phalanx Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_lin",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_lin",
       "moduleName": "'Exquisite Heart'",
-      "desc": "The night is giving way, and the streetlamps are going out one by one. The only light left hangs in front of a food cart on the side of the street, swaying and flickering, steam drifting up beneath it. The vendor sits by his wok, face hidden behind the steam. He sees a customer in the distance, and stands to raise himself up a little.\n'You haven't been by in forever, Miss.'\n'I'm finally freed up.'\n'You're a busy person. I see you passing through this street every day, but you never sit yourself down here.'\n'One bowl of cart noodles. Oil noodles, curry base, two finballs to top.\n'Got it.'\nThe customer picks herself a spot close to the stovetop, and leisurely seats herself. The cart vendor turns around, stooped over like a fin stranded on land. He ladles out soup to boil the noodles, and chops up the meat, movements fluid and natural.\n'You're still open so late. Looks like business is good.'\n'All by grace of the Rat King... well, used to be. Now it's by yours, Miss. Back when I was apprenticing, no one would dare open at this hour.'\n'Is your medicine still enough?'\n'I've got ways to buy it, and I've never dared stop. I'll get sick if I'm not careful, and that'll be a hassle for you.'\n'No, look after yourself. If you <i>do</i> fall sick, that's far more hassle for you than me.'\n'It's out of you and your father's hands I picked my life back up... The fact you'd sit here to eat noodles means you think enough of me.'\n'My dad's goal has always been for everyone to live good lives—'\n*thunk*—\nWithin the rhythm of the kitchen knife and chopping board lands a heavy, muffled noise, promptly breaking off the subject.\n'Sorry to scare you, Miss... The new smith here does shoddy work. There used to be a smith next door, went by 'Cleavers Leong.' The knives he sharpened cut fast and shone light. Lovely to use.'\n'What happened to him?'\n'Died. Five years ago, he did.'\n'Five years. And people still think about him. He must've been a good man.'\n'Not all that good... You could count on him, but he never held back. Never changed his mind. He made one mistake, that's all it took.'\n'A very serious mistake to make.'\n'You and the Rat King both see right through us. You're smart. Us people below, we're dumb. Sometimes, unwise. You'll be needing to teach us a long time more, Miss.'\n'You'd listen to me, still?'\n'I thank you that you didn't ask how he died, Miss.'\n'You still blame me.'\n'I've said it already. My life comes from out of your hands. No sense in the blame game.'\n'......'\n'Your noodles are done, Miss.'\nThe vendor carefully carries the bowl over to the customer, and doesn't move away after setting it down—he stands and watches her devour the noodles clean, mouthful by mouthful. After she's done, she pulls the cash out from her bag and places it on the counter.\n'No need for change.'\n'The streets are tricky at night. Take your time, Miss.'\n'No need to worry, I can see clearly.'\n'No, you'd better be careful. Us little folk, we need you. We need someone to follow.'\n'It's late. Go on home.'\n'Miss...\n'I don't have the guts to blame you, but I just want to ask one thing...\n'If, right now, you were back then, would you still do the same thing?'\n'I would.\n'I'm here now so that Lungmen never goes through anything like that again.'"
+      "desc": "The night is giving way, and the streetlamps are going out one by one. The only light left hangs in front of a food cart on the side of the street, swaying and flickering, steam drifting up beneath it. The vendor sits by his wok, face hidden behind the steam. He sees a customer in the distance, and stands to raise himself up a little.\n'You haven't been by in forever, Miss.'\n'I'm finally freed up.'\n'You're a busy person. I see you passing through this street every day, but you never sit yourself down here.'\n'One bowl of cart noodles. Oil noodles, curry base, two finballs to top.\n'Got it.'\nThe customer picks herself a spot close to the stovetop, and leisurely seats herself. The cart vendor turns around, stooped over like a fin stranded on land. He ladles out soup to boil the noodles, and chops up the meat, movements fluid and natural.\n'You're still open so late. Looks like business is good.'\n'All by grace of the Rat King... well, used to be. Now it's by yours, Miss. Back when I was apprenticing, no one would dare open at this hour.'\n'Is your medicine still enough?'\n'I've got ways to buy it, and I've never dared stop. I'll get sick if I'm not careful, and that'll be a hassle for you.'\n'No, look after yourself. If you <i>do</i> fall sick, that's far more hassle for you than me.'\n'It's out of you and your father's hands I picked my life back up... The fact you'd sit here to eat noodles means you think enough of me.'\n'My dad's goal has always been for everyone to live good lives—'\n*thunk*—\nWithin the rhythm of the kitchen knife and chopping board lands a heavy, muffled noise, promptly breaking off the subject.\n'Sorry to scare you, Miss... The new smith here does shoddy work. There used to be a smith next door, went by 'Cleavers Leong.' The knives he sharpened cut fast and shone light. Lovely to use.'\n'What happened to him?'\n'Died. Five years ago, he did.'\n'Five years. And people still think about him. He must've been a good man.'\n'Not all that good... You could count on him, but he never held back. Never changed his mind. He made one mistake, that's all it took.'\n'A very serious mistake to make.'\n'You and the Rat King both see right through us. You're smart. Us people below, we're dumb. Sometimes, unwise. You'll be needing to teach us a long time more, Miss.'\n'You'd listen to me, still?'\n'I thank you that you didn't ask how he died, Miss.'\n'You still blame me.'\n'I've said it already. My life comes from out of your hands. No sense in the blame game.'\n'......'\n'Your noodles are done, Miss.'\nThe vendor carefully carries the bowl over to the customer, and doesn't move away after setting it down—he stands and watches her devour the noodles clean, mouthful by mouthful. After she's done, she pulls the cash out from her bag and places it on the counter.\n'No need for change.'\n'The streets are tricky at night. Take your time, Miss.'\n'No need to worry, I can see clearly.'\n'No, you'd better be careful. Us little folk, we need you. We need someone to follow.'\n'It's late. Go on home.'\n'Miss...\n'I don't have the guts to blame you, but I just want to ask one thing...\n'If, right now, you were back then, would you still do the same thing?'\n'I would.\n'I'm here now so that Lungmen never goes through anything like that again.'",
+      "typeIcon": "plx-x",
+      "uniEquipIcon": "uniequip_002_lin",
+      "typeName1": "PLX",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_lin_1",
+        "uniequip_002_lin_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 62,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Normally <@ba.kw>does not attack</>, but has <@ba.kw>greatly increased</> DEF and RES; when skill is active, retains some of the bonus and attacks deal <@ba.kw>AoE Arts Damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Normally <@ba.kw>does not attack</>, but has <@ba.kw>greatly increased</> DEF and RES; when skill is active, retains some of the bonus and attacks deal <@ba.kw>AoE Arts Damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "50% chance to recover 2 SP when attacked",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Shrouded Strength",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "55% <@ba.talpu>(+5%)</> chance to recover 2 SP when attacked",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "2",
+                  "name": "Shrouded Strength",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 77,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 53,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Normally <@ba.kw>does not attack</>, but has <@ba.kw>greatly increased</> DEF and RES; when skill is active, retains some of the bonus and attacks deal <@ba.kw>AoE Arts Damage</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "75% chance to recover 2 SP when attacked",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Shrouded Strength",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "80% <@ba.talpu>(+5%)</> chance to recover 2 SP when attacked",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "2",
+                  "name": "Shrouded Strength",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1175,5 +1824,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -150,6 +150,28 @@
       "cost": 25
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "attack@append_atk_scale",
+          "value": 0.5
+        },
+        {
+          "key": "attack@times",
+          "value": 2
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_391_rosmon#1",
@@ -735,21 +757,993 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +32",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 32,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Armaments of Annihilation",
+          "description": "Attacks ignore 90 DEF",
+          "blackboard": {
+            "def_penetrate_fixed": 90
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Armaments of Annihilation",
+          "description": "Attacks ignore 105 <@ba.talpu>(+15)</> DEF",
+          "blackboard": {
+            "def_penetrate_fixed": 105
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Armaments of Annihilation",
+          "description": "Attacks ignore 160 DEF",
+          "blackboard": {
+            "def_penetrate_fixed": 160
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Armaments of Annihilation",
+          "description": "Attacks ignore 175 <@ba.talpu>(+15)</> DEF",
+          "blackboard": {
+            "def_penetrate_fixed": 175
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Stable Esthesia",
+          "description": "When deployed, grants +8% ATK to this unit and a random deployed Caster Operator",
+          "blackboard": {
+            "atk": 0.08
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_rosmon",
       "moduleName": "Rosmontis's Badge",
-      "desc": "Operator Rosmontis has demonstrated a remarkable aptitude for attacking enemies from long range across a simultaneous multiplicity of terrains.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Flinger responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Rosmontis has demonstrated a remarkable aptitude for attacking enemies from long range across a simultaneous multiplicity of terrains.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Flinger responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_rosmon",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_rosmon",
       "moduleName": "'Notes'",
-      "desc": "'Outcast, I'm a little concerned. After returning from the Chernobog core city, Rosmontis has been carrying out her missions with extreme aggression. The human traffickers in Minos are indeed despicable, but they fall under Minoan jurisdiction. The original plan only called for us to rescue the Infected children, not eliminate the suspects.'\n'Isn't it normal to adjust mission objectives in our line of work? Pith, you oughta trust Rosmontis's judgment.'\n'Have you heard? Surviving witnesses refer to her as the 'Scourge of Minos.' Fortunately, the girl herself doesn't remember any of it. Touch says she had forgotten all details of the mission by the time she returned to the ship. I'm not sure her brain will manage to derive any worthwhile experience from the whole thing.'\n'Memories aren't always useful experiences, sometimes they can be heavy burdens. Since her opinions aren't colored by her own prejudices, and she isn't hemmed in by community consensus, Rosmontis might be even more impartial than we are. She's like a mirror that can't be stained, reflecting the morality of the situations around her.'\n'That's why Kal'tsit wants us to guide her together. Even if her actions reflect our values, Rhodes Island won't be with her her whole life. Once we're gone, who can judge the mirror itself, whether she's good or evil?'\n'She's awake now, Pith. We can ask her ourselves.'\nHello, Outcast.\n'Hello, Rosmontis.'\nAre you leaving, Outcast?\n'Yes, I'm off to Victoria for a little something. But Pith is right, I'll be gone, Kal'tsit will be gone, and someday, we'll all be gone.'\n'Will Amiya be gone too?'\n'Could be. Nobody knows the future. Judge Rosmontis, Your Little Honor, can you look after yourself for us?'\nYes, I promise. I promise everyone that I'll write everything down. I remember the stories you and Pith told me. I won't forget.\nI can do it, you and Pith don't need to worry.\nIf I ever turn bad... no, no matter what I become in the future.\nI'll document it all, I'll look over it carefully.\nThe last one I will judge will be me, myself."
+      "desc": "'Outcast, I'm a little concerned. After returning from the Chernobog core city, Rosmontis has been carrying out her missions with extreme aggression. The human traffickers in Minos are indeed despicable, but they fall under Minoan jurisdiction. The original plan only called for us to rescue the Infected children, not eliminate the suspects.'\n'Isn't it normal to adjust mission objectives in our line of work? Pith, you oughta trust Rosmontis's judgment.'\n'Have you heard? Surviving witnesses refer to her as the 'Scourge of Minos.' Fortunately, the girl herself doesn't remember any of it. Touch says she had forgotten all details of the mission by the time she returned to the ship. I'm not sure her brain will manage to derive any worthwhile experience from the whole thing.'\n'Memories aren't always useful experiences, sometimes they can be heavy burdens. Since her opinions aren't colored by her own prejudices, and she isn't hemmed in by community consensus, Rosmontis might be even more impartial than we are. She's like a mirror that can't be stained, reflecting the morality of the situations around her.'\n'That's why Kal'tsit wants us to guide her together. Even if her actions reflect our values, Rhodes Island won't be with her her whole life. Once we're gone, who can judge the mirror itself, whether she's good or evil?'\n'She's awake now, Pith. We can ask her ourselves.'\nHello, Outcast.\n'Hello, Rosmontis.'\nAre you leaving, Outcast?\n'Yes, I'm off to Victoria for a little something. But Pith is right, I'll be gone, Kal'tsit will be gone, and someday, we'll all be gone.'\n'Will Amiya be gone too?'\n'Could be. Nobody knows the future. Judge Rosmontis, Your Little Honor, can you look after yourself for us?'\nYes, I promise. I promise everyone that I'll write everything down. I remember the stories you and Pith told me. I won't forget.\nI can do it, you and Pith don't need to worry.\nIf I ever turn bad... no, no matter what I become in the future.\nI'll document it all, I'll look over it carefully.\nThe last one I will judge will be me, myself.",
+      "typeIcon": "bom-x",
+      "uniEquipIcon": "uniequip_002_rosmon",
+      "typeName1": "BOM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_rosmon_1",
+        "uniequip_002_rosmon_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 175,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@times",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>three instances</> of Physical damage to <@ba.kw>ground</> enemies in a small area (The second and third instances are shockwaves that have half the normal ATK)",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@times",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>three instances</> of Physical damage to <@ba.kw>ground</> enemies in a small area (The second and third instances are shockwaves that have half the normal ATK)",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 190 DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Armaments of Annihilation",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 190,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 205 <@ba.talpu>(+15)</> DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Armaments of Annihilation",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 205,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 275,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@times",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>three instances</> of Physical damage to <@ba.kw>ground</> enemies in a small area (The second and third instances are shockwaves that have half the normal ATK)",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 220 DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Armaments of Annihilation",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 220,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks ignore 235 <@ba.talpu>(+15)</> DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Armaments of Annihilation",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 235,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_rosmon",
       "moduleName": "Rosmontis's Specialized Badge",
-      "desc": "In light of permissions granted, the Field Operations Department has hence passed the following resolution with respect to Rosmontis:\nWhere the entailing mission would fall under Integrated Strategies scope, this operator shall be pursuant to tactics of a reinforced nature in meeting the enemy.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.\n'I will be the judge.'"
+      "desc": "In light of permissions granted, the Field Operations Department has hence passed the following resolution with respect to Rosmontis:\nWhere the entailing mission would fall under Integrated Strategies scope, this operator shall be pursuant to tactics of a reinforced nature in meeting the enemy.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.\n'I will be the judge.'",
+      "typeIcon": "isw-a",
+      "uniEquipIcon": "uniequip_003_rosmon",
+      "typeName1": "ISW",
+      "typeName2": "A",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "In <@ba.kw>Integrated Strategies</>, attacks deal <@ba.kw>1</> additional instance of <@ba.kw>100%</> ATK as Arts damage",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "equip_atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10012_rosmon_shield": [
+              {
+                "key": "max_deploy_count",
+                "value": 18,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "In <@ba.kw>Integrated Strategies</>, attacks deal <@ba.kw>1</> additional instance of <@ba.kw>100%</> ATK as Arts damage",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "OVERWRITE_BATTLE_DATA",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "game_tag_meta",
+                      "value": 0,
+                      "valueStr": "roguelike"
+                    },
+                    {
+                      "key": "extra_profession",
+                      "value": 0,
+                      "valueStr": "caster"
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "equip_atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deployed, grants +8% ATK to this unit and a random deployed [Caster] Operator; in <@ba.kw>Integrated Strategies</>, Rosmontis also benefits from [Caster] Collectibles, and when any [Sniper] or [Caster] Operator is deployed, 1 piece of Tactical Equipment will be summoned within their Attack Range",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11_root",
+                  "name": "Stable Esthesia",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": "token_10012_rosmon_shield",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10012_rosmon_shield": [
+              {
+                "key": "max_deploy_count",
+                "value": 18,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "In <@ba.kw>Integrated Strategies</>, attacks deal <@ba.kw>1</> additional instance of <@ba.kw>100%</> ATK as Arts damage",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TRAIT",
+              "isToken": true,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": -400,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": -20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "rosmon_e_003_token[passive].max_hp",
+                      "value": 1750,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "rosmon_e_003_token[passive].def",
+                      "value": 330,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "rosmon_e_003_token[passive].magic_resistance",
+                      "value": 35,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Blocks 2 enemies. In <@ba.kw>Integrated Strategies</>, its Stun effect extends to 5s, and its ability of reducing the DEF of blocked enemies changes to reducing the DEF of ground enemies on the surrounding 8 tiles by <@ba.kw>400</>, and their RES by <@ba.kw>20</> (does not stack)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "OVERWRITE_BATTLE_DATA",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "game_tag_meta",
+                      "value": 0,
+                      "valueStr": "roguelike"
+                    },
+                    {
+                      "key": "extra_profession",
+                      "value": 0,
+                      "valueStr": "caster"
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "equip_atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When deployed, grants +8% ATK to this unit and a random deployed [Caster] Operator; in <@ba.kw>Integrated Strategies</>, Rosmontis also benefits from [Caster] Collectibles, and when any [Sniper] or [Caster] Operator is deployed, 1 stronger piece of Tactical Equipment with special effects will be summoned within their Attack Range",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11_root",
+                  "name": "Stable Esthesia",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": "token_10012_rosmon_shield",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1210,6 +2204,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10012_rosmon_shield"
   ],
   "patch_info": {}
 }

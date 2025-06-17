@@ -151,6 +151,28 @@
       "cost": 12
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "heal_scale",
+            "value": 0.75,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_492_quercu#1",
@@ -632,16 +654,633 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "最大HP+160",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 160,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 400,
+        "atk": 0,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "森林の庇護",
+          "description": "攻撃範囲内のHPが70％超えの味方に8％の<$ba.protect>加護</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.7,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.08,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "森林の庇護",
+          "description": "攻撃範囲内のHPが70％超えの味方に10%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.7,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "森林の庇護",
+          "description": "攻撃範囲内のHPが70％超えの味方に14%の<$ba.protect>加護</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.7,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.14,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "森林の庇護",
+          "description": "攻撃範囲内のHPが70％超えの味方に16%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.7,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.16,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_quercu",
       "moduleName": "クエルクスの記章",
-      "desc": "クエルクスは味方に継続的に加護を付与することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、祈祷師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "クエルクスは味方に継続的に加護を付与することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、祈祷師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_quercu",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_quercu",
       "moduleName": "錆びついた枝",
-      "desc": "03月20日 \n今回の作戦の結果、当小隊は無事、都市外部との連絡網確立に成功した。 \n我々は引き続き紛争地帯に留まり、情報偵察を行いつつ支援部隊及び交渉結果を待つ。 \n本作戦において、優秀な兵士二名が犠牲となった。 \n遺族への弔慰金を申請したく、関係書類を報告書に添付する。 \n（二人は隊で一番若く、彼らが異郷の地で安らかに眠れるよう、我々は別れの詩を歌い弔った。当小隊においては必要な儀式と認識している。） \n\n04月04日 \n未だ次の指令が届かない状況だが、当小隊は計画通り囮作戦を決行、敵側の中心人物数名を特定した。 \n資料は添付の通り。斬首作戦の準備も完了している。 \n作戦期間が予定より大幅に長引いているため、現状は医療物資の消耗が激しい。 \nまた、連絡網に問題がないかを確認すべく、専門人員を派遣した。 \n仮に都市外周部が危機的状況に見舞われていた場合や、通信回線に故障が生じていた場合には、彼女が助力となる見込み。 \n\n04月10日 \n自らの軽率さを謝罪したい。 \n事件終結後は作戦失敗の責任を取り、いかなる処罰も受ける所存。 \n私の指揮下で、小隊は強攻突破を敢行した。 \n既知の情報に基づき、すでに他のヴィクトリア軍が飛び地に到達していると私が判断した結果だった。 \nこの判断は、当初の作戦通り後続部隊のために突破口を開き、先遣部隊としての責務を果たすべきだという考えによるものであり、物資不足にも見舞われていた我々には、これ以上の待機は不可能という状況を鑑みたものでもある。 \nしかし結果を見るに、私の判断は大いに間違っていた。 \nここに死傷者一人ひとりのコードネーム及びファミリーネームを書き記しておく。 \nこの報告が何事もなく届き次の指令が届くことを願う。 \n\n04月15日 \n赤鉄親衛隊に所属するチームとかろうじてコンタクトが取れた。 \nおかげで、都市内に他の友軍が確かに存在することを知り、勇気づけられた次第だ。 \nしかし、彼らもまた、上からの有効な指令を伝えてはくれなかった。 \nページを血で汚してしまって申し訳ないが、負傷兵士の治療が急務となっており、こちらにはすでに報告すべき作戦状況も存在しない。 \nこれは単なる、救援を求める手紙だ。 \n一体、外では何が起きているのか、情報開示を求む。 \n\n（日付なし） \n以降、状況報告はしない。私の小隊はなくなった。 \n今日に至るまで返答がない理由を問いたい。 \n作戦目標もあの情報もすべて偽物だったのかを、なぜ皆無意味に命を落としていったのかを問いたい。 \nこの報告書を受け取ったあなたへ。 \nあなたが誰であっても構わない。私はもう司令部に戻るつもりはない。 \n小隊員の命を背負っているのだから、私は罪を償わなければならないし、それはあなたも同じことだ。"
+      "desc": "03月20日 \n今回の作戦の結果、当小隊は無事、都市外部との連絡網確立に成功した。 \n我々は引き続き紛争地帯に留まり、情報偵察を行いつつ支援部隊及び交渉結果を待つ。 \n本作戦において、優秀な兵士二名が犠牲となった。 \n遺族への弔慰金を申請したく、関係書類を報告書に添付する。 \n（二人は隊で一番若く、彼らが異郷の地で安らかに眠れるよう、我々は別れの詩を歌い弔った。当小隊においては必要な儀式と認識している。） \n\n04月04日 \n未だ次の指令が届かない状況だが、当小隊は計画通り囮作戦を決行、敵側の中心人物数名を特定した。 \n資料は添付の通り。斬首作戦の準備も完了している。 \n作戦期間が予定より大幅に長引いているため、現状は医療物資の消耗が激しい。 \nまた、連絡網に問題がないかを確認すべく、専門人員を派遣した。 \n仮に都市外周部が危機的状況に見舞われていた場合や、通信回線に故障が生じていた場合には、彼女が助力となる見込み。 \n\n04月10日 \n自らの軽率さを謝罪したい。 \n事件終結後は作戦失敗の責任を取り、いかなる処罰も受ける所存。 \n私の指揮下で、小隊は強攻突破を敢行した。 \n既知の情報に基づき、すでに他のヴィクトリア軍が飛び地に到達していると私が判断した結果だった。 \nこの判断は、当初の作戦通り後続部隊のために突破口を開き、先遣部隊としての責務を果たすべきだという考えによるものであり、物資不足にも見舞われていた我々には、これ以上の待機は不可能という状況を鑑みたものでもある。 \nしかし結果を見るに、私の判断は大いに間違っていた。 \nここに死傷者一人ひとりのコードネーム及びファミリーネームを書き記しておく。 \nこの報告が何事もなく届き次の指令が届くことを願う。 \n\n04月15日 \n赤鉄親衛隊に所属するチームとかろうじてコンタクトが取れた。 \nおかげで、都市内に他の友軍が確かに存在することを知り、勇気づけられた次第だ。 \nしかし、彼らもまた、上からの有効な指令を伝えてはくれなかった。 \nページを血で汚してしまって申し訳ないが、負傷兵士の治療が急務となっており、こちらにはすでに報告すべき作戦状況も存在しない。 \nこれは単なる、救援を求める手紙だ。 \n一体、外では何が起きているのか、情報開示を求む。 \n\n（日付なし） \n以降、状況報告はしない。私の小隊はなくなった。 \n今日に至るまで返答がない理由を問いたい。 \n作戦目標もあの情報もすべて偽物だったのかを、なぜ皆無意味に命を落としていったのかを問いたい。 \nこの報告書を受け取ったあなたへ。 \nあなたが誰であっても構わない。私はもう司令部に戻るつもりはない。 \n小隊員の命を背負っているのだから、私は罪を償わなければならないし、それはあなたも同じことだ。",
+      "typeIcon": "bls-x",
+      "uniEquipIcon": "uniequip_002_quercu",
+      "typeName1": "BLS",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_quercu_1",
+        "uniequip_002_quercu_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内のHPが70%超えの味方に16%の<$ba.protect>加護</>状態を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "森林の庇護",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内のHPが70%超えの味方に18%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "森林の庇護",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\nスキル発動中、通常攻撃が味方に対する治療行動になる（HP回復量は攻撃力の<@ba.kw>{heal_scale:0%}</>）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内のHPが60%超えの味方に16%の<$ba.protect>加護</>状態を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "森林の庇護",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.16,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内のHPが60%超えの味方に18%<@ba.talpu>（+2%）</>の<$ba.protect>加護</>状態を付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "森林の庇護",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1095,5 +1734,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

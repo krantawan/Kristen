@@ -138,6 +138,36 @@
       "cost": 7
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "interval",
+            "value": 3,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "cost",
+            "value": -3,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_272_strong#1",
@@ -608,16 +638,593 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-3秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -3,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "解体の達人",
+          "description": "【感染生物】を攻撃時、攻撃力が125％まで上昇",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.25,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "解体の達人",
+          "description": "【感染生物】を攻撃時、攻撃力が130％<@ba.talpu>（+5%）</>まで上昇",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "解体の達人",
+          "description": "【感染生物】を攻撃時、攻撃力が145％まで上昇",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.45,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "解体の達人",
+          "description": "【感染生物】を攻撃時、攻撃力が150％<@ba.talpu>（+5%）</>まで上昇",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_strong",
       "moduleName": "ジェイの記章",
-      "desc": "ジェイは繰り返し戦場に切り込む戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、行商人の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ジェイは繰り返し戦場に切り込む戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、行商人の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_strong",
       "moduleName": "無骨な包丁セット",
-      "desc": "「いいか坊主、道ってのはな、自分で選ぶもんだ。自由気ままにぶらついてても、龍門で食い扶持に困るこたぁねぇだろう。だがここに骨を埋める覚悟なら、一つくらい芸を身につけねぇとな。今日から俺が魚団子のなんたるかを叩っこんでやろう。」\n「魚団子作りも人生も同じだ。何が一番大事かわかってるか？」\n「それはな――」\n「一歩一歩、堅実に歩むべし、だ！　いいか？」\n「こないだは『人を騙すべからず』だったじゃねえっすか……」\n「人生の教訓は山ほどあんのさ、全部覚えとけ！」\n「魚団子はな、鱗獣をさばくところから全部手作りと相場が決まってんだ。つまり、魚団子作りを学ぶならまずは包丁の使い方からから勉強しなきゃいかんわけだ。それで……ええと……」董の親父は少しだけ言葉に詰まった。教えるべきことが多すぎてなかなか言葉で説明しづらいようで、「手本を見せてやるから、しっかり見とけよ。」とだけ言った。\n董の親父が革制のかばんを机に広げると、中には鋭く光を反射する刃物がずらりと並んでいた。親父は水槽から活きのいい鱗獣を網ですくうと、それをまな板に何度か叩きつけてシメた。そして異なる形状の刃物を次々に取り出すと、小さいもので鱗を処理し、大きいもので腹を割き、順序よく魚をさばいていく。先ほどまで動いていた鱗獣が、親父が手をささっと動かしただけでパーツごとにバラけていき、まな板に整然と並んでいった。\n「パッと見難しそうだろうが、こんなもんさ。包丁さばきのコツは、習うより慣れよ、だ。」\n俺は見よう見まねで鱗獣のさばき方、すり身の練り方、スープの味付けを学んでいった。董の親父からは覚えがいいと褒められて、俺が代わりに店を出すようになるまでにはそう長くかからなかった。\nある日、数人で来てかなりの量を注文した客がいた。食べ終わっても支払う素振りすら見せず、そのまま出て行こうとしやがった。\n親父の店はずっとツケ払いありでやってるが、あいつらときたら、しょっちゅう食べに来てるくせに、一度も金を払ってるのを見たことがねぇ。腹が立ってお灸を据えてやろうかと思ったが、親父が慌てて飛び出してきて、俺とあいつらの間に立ちふさがった。\n「魚団子の一杯や二杯、大した金じゃねぇ。次に払ってくれりゃいいさ。」\n親父が出てきたとなっちゃ、俺も手を引っ込めざるを得なかった。だけどあいつらはそれで調子に乗って、こんなことを言いやがった。\n「露店の魚団子売り風情が黙ってろ！　いつも本なんか読んで気取り散らしやがってよ！」\n親父がゆっくりと向こうに振り返った。俺からは親父の顔は見えねぇけど、あのチンピラどもは鬼でも見たかって勢いで転がるように逃げてった。\nその夜、董の親父は俺に包丁セットをくれた。\n「大事にしろよ、古ぼけて見えるかもしれねぇが、安モンじゃねぇぞ。」\n「ついでにもう一つ、包丁さばきの教訓を教えてやろう。刃物を扱うならば、普段はその鋭さを隠すことを覚えるべし、だ。」"
+      "desc": "「いいか坊主、道ってのはな、自分で選ぶもんだ。自由気ままにぶらついてても、龍門で食い扶持に困るこたぁねぇだろう。だがここに骨を埋める覚悟なら、一つくらい芸を身につけねぇとな。今日から俺が魚団子のなんたるかを叩っこんでやろう。」\n「魚団子作りも人生も同じだ。何が一番大事かわかってるか？」\n「それはな――」\n「一歩一歩、堅実に歩むべし、だ！　いいか？」\n「こないだは『人を騙すべからず』だったじゃねえっすか……」\n「人生の教訓は山ほどあんのさ、全部覚えとけ！」\n「魚団子はな、鱗獣をさばくところから全部手作りと相場が決まってんだ。つまり、魚団子作りを学ぶならまずは包丁の使い方からから勉強しなきゃいかんわけだ。それで……ええと……」董の親父は少しだけ言葉に詰まった。教えるべきことが多すぎてなかなか言葉で説明しづらいようで、「手本を見せてやるから、しっかり見とけよ。」とだけ言った。\n董の親父が革制のかばんを机に広げると、中には鋭く光を反射する刃物がずらりと並んでいた。親父は水槽から活きのいい鱗獣を網ですくうと、それをまな板に何度か叩きつけてシメた。そして異なる形状の刃物を次々に取り出すと、小さいもので鱗を処理し、大きいもので腹を割き、順序よく魚をさばいていく。先ほどまで動いていた鱗獣が、親父が手をささっと動かしただけでパーツごとにバラけていき、まな板に整然と並んでいった。\n「パッと見難しそうだろうが、こんなもんさ。包丁さばきのコツは、習うより慣れよ、だ。」\n俺は見よう見まねで鱗獣のさばき方、すり身の練り方、スープの味付けを学んでいった。董の親父からは覚えがいいと褒められて、俺が代わりに店を出すようになるまでにはそう長くかからなかった。\nある日、数人で来てかなりの量を注文した客がいた。食べ終わっても支払う素振りすら見せず、そのまま出て行こうとしやがった。\n親父の店はずっとツケ払いありでやってるが、あいつらときたら、しょっちゅう食べに来てるくせに、一度も金を払ってるのを見たことがねぇ。腹が立ってお灸を据えてやろうかと思ったが、親父が慌てて飛び出してきて、俺とあいつらの間に立ちふさがった。\n「魚団子の一杯や二杯、大した金じゃねぇ。次に払ってくれりゃいいさ。」\n親父が出てきたとなっちゃ、俺も手を引っ込めざるを得なかった。だけどあいつらはそれで調子に乗って、こんなことを言いやがった。\n「露店の魚団子売り風情が黙ってろ！　いつも本なんか読んで気取り散らしやがってよ！」\n親父がゆっくりと向こうに振り返った。俺からは親父の顔は見えねぇけど、あのチンピラどもは鬼でも見たかって勢いで転がるように逃げてった。\nその夜、董の親父は俺に包丁セットをくれた。\n「大事にしろよ、古ぼけて見えるかもしれねぇが、安モンじゃねぇぞ。」\n「ついでにもう一つ、包丁さばきの教訓を教えてやろう。刃物を扱うならば、普段はその鋭さを隠すことを覚えるべし、だ。」",
+      "typeIcon": "mer-x",
+      "uniEquipIcon": "uniequip_002_strong",
+      "typeName1": "MER",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_strong_1",
+        "uniequip_002_strong_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31013",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30083",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30053",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 43,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 43,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "【感染生物】を攻撃時、攻撃力が150%まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "解体の達人",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "【感染生物】を攻撃時、攻撃力が155%<@ba.talpu>（+5%）</>まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "解体の達人",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.55,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "【感染生物】を攻撃時、攻撃力が155%まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "解体の達人",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.55,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "【感染生物】を攻撃時、攻撃力が160%<@ba.talpu>（+5%）</>まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "解体の達人",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1071,5 +1678,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

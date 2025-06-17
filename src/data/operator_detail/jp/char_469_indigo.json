@@ -151,6 +151,28 @@
       "cost": 23
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "times",
+            "value": 3,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_469_indigo#1",
@@ -629,16 +651,618 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+36",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 36,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 100,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "柔光のとばり",
+          "description": "攻撃時、12％の確率で攻撃対象を4秒間<$ba.root>バインド</>する（バインド状態の敵を攻撃しない）",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "柔光のとばり",
+          "description": "攻撃時、14%<@ba.talpu>（+2%）</>の確率で攻撃対象を4秒間<$ba.root>バインド</>させる（バインド状態の敵を攻撃しない）",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.14,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "柔光のとばり",
+          "description": "攻撃時、18％の確率で攻撃対象を4秒間<$ba.root>バインド</>する（バインド状態の敵を攻撃しない）",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.18,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "柔光のとばり",
+          "description": "攻撃時、20%<@ba.talpu>（+2%）</>の確率で攻撃対象を4秒間<$ba.root>バインド</>する（バインド状態の敵を攻撃しない）",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_indigo",
       "moduleName": "インディゴの記章",
-      "desc": "インディゴはアーツエネルギーの制御に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、秘術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "インディゴはアーツエネルギーの制御に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、秘術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_indigo",
       "moduleName": "杖のお手入れセット",
-      "desc": "インディゴがロドスに来たばかりの頃、彼女のアーツユニットである杖を調査させてもらったことがある。\nしかし、先端の構造部が要であるということまでは明らかになったものの、それ以上の成果は得られなかった。\nその後の追加調査でも大きな成果は上がらなかったが、偶然通りがかった新入りのアイリーニとルーメンから貴重な意見を得ることができた。\n設備使用許可証の申請をするためにエンジニア部を訪れたという二人は、インディゴの杖を見るや、「イベリアの眼」で同じような物を見たと言ったのだ。\n「イベリアの眼」……それはイベリアの海沿いに点在する灯台である。\nかつて国家全体を照らす大規模な計画の一環として建てられたのだが、数十年前の大災害により放棄され、今や時代の遺物と成り果てている。\nインディゴの師はまさにそうした灯台の守り人であり、彼女が故郷を去る折りにこの杖を託してくれたらしい。\n\n「先端の構造部は、イベリアの灯台システムにおける制御装置の一種である」という結論に、恐らく間違いはないだろう。\nしかしインディゴ曰く、師は生涯ロックベイの灯台を守り続けており、いつか再び灯台に光が灯ることを望んでいたという。\nならばなぜ、その鍵ともなり得る杖を彼女に託し、故郷を離れるよう命じることまでしたのだろうか。\n「先生はきっと、私が外で見識を深めて杖の秘密を解き明かし、その力を取り戻せるようにとお考えになったのだと思います。……先生らしいお心遣いです。」とインディゴは語った。\nそれに対してアイリーニは、「そうしたエーギルの遺物がなければ、灯台に光を灯すことはできないのかしら？イベリアの存続は、今度こそイベリア人自身の力で成されるべきだと思うけど。」と言葉を返した。\nインディゴとアイリーニ、二人の相反する考え方には、イベリア人が持つ二通りの未来への展望が見受けられ、参考に値するものだった。\n\nしかし二人がその場を離れると、一人残ったルーメンは彼女らとまったく別の――より「世俗的な」推測を述べた。\nそれは要約すると、年寄りが孫娘を大都市へと送り出すにあたって、家で唯一価値のある家宝を荷物に詰め込んでやり、彼女がこんな寂れたところへ二度と戻らずに済むように、と願うようなものではないか……という考えだった。\n何しろ、たとえ将来孫娘が戻ってきたとしても、自分はもうそこにはいないのだから、と。\nそして、ルーメンはこう付け加えた。\n「ご年配の方というのは、常々そういうものなんです。本人には知らせないまま、子供のために何もかも用意してあげたがるんですよ。」\nともあれ、ひとりの老人がどのような意図でインディゴに杖を託したのかを、これ以上追及する必要はないだろう。\nアーツユニットの出処さえ明らかになれば、彼女に関する調査は完了となる。\nその上、彼女がすでにこれほどロドスから歓迎されている以上、調査結果がどうあれ、今後のことに影響を及ぼす可能性は極めて低いのだ。\nしかし、アーツユニットの出処を知った彼女は、一瞬だけ呆けたような表情を見せていた。\nあの刹那、彼女が一体何を考え、何を決意したのか――我々には知る由もない。"
+      "desc": "インディゴがロドスに来たばかりの頃、彼女のアーツユニットである杖を調査させてもらったことがある。\nしかし、先端の構造部が要であるということまでは明らかになったものの、それ以上の成果は得られなかった。\nその後の追加調査でも大きな成果は上がらなかったが、偶然通りがかった新入りのアイリーニとルーメンから貴重な意見を得ることができた。\n設備使用許可証の申請をするためにエンジニア部を訪れたという二人は、インディゴの杖を見るや、「イベリアの眼」で同じような物を見たと言ったのだ。\n「イベリアの眼」……それはイベリアの海沿いに点在する灯台である。\nかつて国家全体を照らす大規模な計画の一環として建てられたのだが、数十年前の大災害により放棄され、今や時代の遺物と成り果てている。\nインディゴの師はまさにそうした灯台の守り人であり、彼女が故郷を去る折りにこの杖を託してくれたらしい。\n\n「先端の構造部は、イベリアの灯台システムにおける制御装置の一種である」という結論に、恐らく間違いはないだろう。\nしかしインディゴ曰く、師は生涯ロックベイの灯台を守り続けており、いつか再び灯台に光が灯ることを望んでいたという。\nならばなぜ、その鍵ともなり得る杖を彼女に託し、故郷を離れるよう命じることまでしたのだろうか。\n「先生はきっと、私が外で見識を深めて杖の秘密を解き明かし、その力を取り戻せるようにとお考えになったのだと思います。……先生らしいお心遣いです。」とインディゴは語った。\nそれに対してアイリーニは、「そうしたエーギルの遺物がなければ、灯台に光を灯すことはできないのかしら？イベリアの存続は、今度こそイベリア人自身の力で成されるべきだと思うけど。」と言葉を返した。\nインディゴとアイリーニ、二人の相反する考え方には、イベリア人が持つ二通りの未来への展望が見受けられ、参考に値するものだった。\n\nしかし二人がその場を離れると、一人残ったルーメンは彼女らとまったく別の――より「世俗的な」推測を述べた。\nそれは要約すると、年寄りが孫娘を大都市へと送り出すにあたって、家で唯一価値のある家宝を荷物に詰め込んでやり、彼女がこんな寂れたところへ二度と戻らずに済むように、と願うようなものではないか……という考えだった。\n何しろ、たとえ将来孫娘が戻ってきたとしても、自分はもうそこにはいないのだから、と。\nそして、ルーメンはこう付け加えた。\n「ご年配の方というのは、常々そういうものなんです。本人には知らせないまま、子供のために何もかも用意してあげたがるんですよ。」\nともあれ、ひとりの老人がどのような意図でインディゴに杖を託したのかを、これ以上追及する必要はないだろう。\nアーツユニットの出処さえ明らかになれば、彼女に関する調査は完了となる。\nその上、彼女がすでにこれほどロドスから歓迎されている以上、調査結果がどうあれ、今後のことに影響を及ぼす可能性は極めて低いのだ。\nしかし、アーツユニットの出処を知った彼女は、一瞬だけ呆けたような表情を見せていた。\nあの刹那、彼女が一体何を考え、何を決意したのか――我々には知る由もない。",
+      "typeIcon": "msc-x",
+      "uniEquipIcon": "uniequip_002_indigo",
+      "typeName1": "MSC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_indigo_1",
+        "uniequip_002_indigo_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30043",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30023",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\n攻撃の対象がいない場合はエネルギーを<@ba.kw>チャージ</>して（最大4回）次の攻撃時に一斉発射する",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 59,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\n攻撃の対象がいない場合はエネルギーを<@ba.kw>チャージ</>して（最大4回）次の攻撃時に一斉発射する",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、23%の確率で攻撃対象を4秒間<$ba.root>バインド</>する（バインド状態の敵を攻撃しない）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "柔光のとばり",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、25%<@ba.talpu>（+2%）</>の確率で攻撃対象を4秒間<$ba.root>バインド</>する（バインド状態の敵を攻撃しない）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "柔光のとばり",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵に<@ba.kw>術ダメージ</>を与える\n攻撃の対象がいない場合はエネルギーを<@ba.kw>チャージ</>して（最大4回）次の攻撃時に一斉発射する",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、25%の確率で攻撃対象を4秒間<$ba.root>バインド</>する（バインド状態の敵を攻撃しない）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "柔光のとばり",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、27%<@ba.talpu>（+2%）</>の確率で攻撃対象を4秒間<$ba.root>バインド</>する（バインド状態の敵を攻撃しない）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "柔光のとばり",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1100,5 +1724,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

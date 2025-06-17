@@ -150,6 +150,52 @@
       "cost": 22
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "init_atk_scale",
+            "value": 0.2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "delta_atk_scale",
+            "value": 0.15,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_atk_scale",
+            "value": 1.1,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "3",
+          "value": {
+            "key": "max_stack_cnt",
+            "value": 6,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（最大は攻撃力の110%まで）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_377_gdglow#1",
@@ -745,16 +791,728 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "電流暴走",
+          "description": "スキル発動中、浮遊ユニットが攻撃時10％の確率で自爆（ゴールデングローの元に戻る）し、一定範囲内の敵全員にゴールデングローの攻撃力の200％の術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.015,
+              "valueStr": null
+            },
+            {
+              "key": "attack@atk_scale_2",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_stack_cnt",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "電流暴走",
+          "description": "スキル発動中、浮遊ユニットが攻撃時10％の確率で自爆（ゴールデングローの元に戻る）し、一定範囲内の敵全員にゴールデングローの攻撃力の215%<@ba.talpu>（+15%）</>の術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.015,
+              "valueStr": null
+            },
+            {
+              "key": "attack@atk_scale_2",
+              "value": 2.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_stack_cnt",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "電流暴走",
+          "description": "スキル発動中、浮遊ユニットが攻撃時10％の確率で自爆（ゴールデングローの元に戻る）し、一定範囲内の敵全員にゴールデングローの攻撃力の300%の術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.015,
+              "valueStr": null
+            },
+            {
+              "key": "attack@atk_scale_2",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_stack_cnt",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "電流暴走",
+          "description": "スキル発動中、浮遊ユニットが攻撃時10％の確率で自爆（ゴールデングローの元に戻る）し、一定範囲内の敵全員にゴールデングローの攻撃力の315%<@ba.talpu>（+15%）</>の術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.015,
+              "valueStr": null
+            },
+            {
+              "key": "attack@atk_scale_2",
+              "value": 3.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_stack_cnt",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "精密誘電",
+          "description": "自身と浮遊ユニットの攻撃時、敵の術耐性を15無視",
+          "blackboard": [
+            {
+              "key": "magic_resist_penetrate_fixed",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "2",
+          "name": "精密誘電",
+          "description": "自身と浮遊ユニットの攻撃時、敵の術耐性を18<@ba.talpu>（+3）</>無視",
+          "blackboard": [
+            {
+              "key": "magic_resist_penetrate_fixed",
+              "value": 18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_gdglow",
       "moduleName": "ゴールデングローの記章",
-      "desc": "ゴールデングローは浮遊ユニットを操り、敵を追撃することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、操機術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ゴールデングローは浮遊ユニットを操り、敵を追撃することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、操機術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_gdglow",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_gdglow",
       "moduleName": "「努力の翼」",
-      "desc": "ある深夜、スージーはまだ教科書をめくっていた。明日はアーツ理論の試験がある。最後の夜を無駄にしないよう、一通り復習をしなければ。教科書の隣にはノートが広げられ、以前は理解できなかった部分や、間違って覚えていた部分も、今は正しい解説が書き記されている。\nそのうちに、そろそろ眠らないと……と、落ちるまぶたがそう告げてきた。\nそこで彼女は寝る前に、明日の試験に必要なものをバッグに詰め込むと、スケジュール帳を開く。その中には、彼女の日々のタスクがわかりやすく整理されて書かれていた。これは、彼女がクエルクスの下で働いていた頃に身に着けた習慣だ。時間通り営業した上で、仕入れに在庫の確認、店舗の清掃と毎日のタスクはたくさんある。それに加えて、しばしば突発的なトラブルにも見舞われてしまうのだが、やるべきことを予めスケジュール帳に書き込んでおけば、少なからず安心できるのだ。\n明日のタスクは以下のようなものだ。\n【午前】\n・（7:30～9:30）試験！\n・（9:30～10:30）アーツ理論入門の授業でアシスタントをする\n【お昼】\n・（12:00～13:00）美容室のお手伝い\n【午後】\n・（14:00～16:00）訓練場で練習/ラナさんの花壇のお手入れ（行く前に必要かどうか確認すること）\n・（17:00～18:00）美容室のお手伝い\n・（18:00～21:00）バーのお手伝い\n・（21:00～22:00）お勉強\nスージーはスケジュール帳を眺めて暫し考えてから、バーを手伝う時間を縮めて、その下に新しい予定を追加した。\n・（20:00～？）理論の先生に将来のことを相談する\nロドスの講師もオペレーターも責任感が強いため、スージーは試験に落ちる心配はまったくしていなかった。だが、将来のことを相談するなら先生は頼れる人だと思ったのだ。\n彼女は近頃、常に自分が発している静電気をある程度制御できるようになってきた。彼女が髪を切りながら、術師としての授業で学んだちょっとしたテクニックを用いて、微弱な電気で作業を短縮していることはまだほとんど知られていない。\nこうした努力のすべてには、理由があった。\nスージーはスケジュール帳を数ページめくると、手を止めた。その先のページはほとんど真っ白だが、一か所だけ書き込まれている重要な予定がある。\n「ママへの送金」\n母からはいつも、そんなことをしなくていいと言われているのだが、それでもスージーは家族のために何かをしたいと思っていた。一方で母もまた、同じタイミングで彼女に送金をしてくれるのだ。そうしていつしか、それは二人が安否を確かめ合う方法になっていた。\nスージーはスケジュール帳を翌日のページへと戻すと、先ほど書き加えたばかりの予定を、さらに書き換えることにした。\n彼女は着実に歩みを進めるタイプの人間だ。はるか遠くの壮大な未来に思いを馳せたところで、それは今の人生に何かをもたらしてくれるわけではない。ゆえに、彼女はそれよりも一冊一冊の本を大切に読み、目の前の仕事を堅実にこなして、一つ一つの機会を確実に掴んでいきたいと考えている。結局、想像というのは現実になるとは限らないが、今ロドスで過ごしているこの毎日は、努力をすれば報われるようなものであり、彼女が求めているのはまさしくそういう生活だった。\nそこで、彼女は予定をこう改めた。\n・（20:00～？）理論の先生に今後の授業のことを相談する\n彼女にとって、今相談すべき内容はこれだった。\nそろそろ眠らないと……と、乾燥した目がまぶたを落として、今にも閉じてしまいそうになる。\n彼女はおとなしくスケジュール帳を閉じ、明かりを消して布団に入り、緊張で高鳴る心臓を鎮めようと試みた。明日の試験で良い点を得られるように願いながら。\n明日も大変な一日だろうが、いつもの如く収穫の多い日になることだろう。\n……\nスージーは満ち足りた気持ちで、暖かな夢の中へと沈んでいった。"
+      "desc": "ある深夜、スージーはまだ教科書をめくっていた。明日はアーツ理論の試験がある。最後の夜を無駄にしないよう、一通り復習をしなければ。教科書の隣にはノートが広げられ、以前は理解できなかった部分や、間違って覚えていた部分も、今は正しい解説が書き記されている。\nそのうちに、そろそろ眠らないと……と、落ちるまぶたがそう告げてきた。\nそこで彼女は寝る前に、明日の試験に必要なものをバッグに詰め込むと、スケジュール帳を開く。その中には、彼女の日々のタスクがわかりやすく整理されて書かれていた。これは、彼女がクエルクスの下で働いていた頃に身に着けた習慣だ。時間通り営業した上で、仕入れに在庫の確認、店舗の清掃と毎日のタスクはたくさんある。それに加えて、しばしば突発的なトラブルにも見舞われてしまうのだが、やるべきことを予めスケジュール帳に書き込んでおけば、少なからず安心できるのだ。\n明日のタスクは以下のようなものだ。\n【午前】\n・（7:30～9:30）試験！\n・（9:30～10:30）アーツ理論入門の授業でアシスタントをする\n【お昼】\n・（12:00～13:00）美容室のお手伝い\n【午後】\n・（14:00～16:00）訓練場で練習/ラナさんの花壇のお手入れ（行く前に必要かどうか確認すること）\n・（17:00～18:00）美容室のお手伝い\n・（18:00～21:00）バーのお手伝い\n・（21:00～22:00）お勉強\nスージーはスケジュール帳を眺めて暫し考えてから、バーを手伝う時間を縮めて、その下に新しい予定を追加した。\n・（20:00～？）理論の先生に将来のことを相談する\nロドスの講師もオペレーターも責任感が強いため、スージーは試験に落ちる心配はまったくしていなかった。だが、将来のことを相談するなら先生は頼れる人だと思ったのだ。\n彼女は近頃、常に自分が発している静電気をある程度制御できるようになってきた。彼女が髪を切りながら、術師としての授業で学んだちょっとしたテクニックを用いて、微弱な電気で作業を短縮していることはまだほとんど知られていない。\nこうした努力のすべてには、理由があった。\nスージーはスケジュール帳を数ページめくると、手を止めた。その先のページはほとんど真っ白だが、一か所だけ書き込まれている重要な予定がある。\n「ママへの送金」\n母からはいつも、そんなことをしなくていいと言われているのだが、それでもスージーは家族のために何かをしたいと思っていた。一方で母もまた、同じタイミングで彼女に送金をしてくれるのだ。そうしていつしか、それは二人が安否を確かめ合う方法になっていた。\nスージーはスケジュール帳を翌日のページへと戻すと、先ほど書き加えたばかりの予定を、さらに書き換えることにした。\n彼女は着実に歩みを進めるタイプの人間だ。はるか遠くの壮大な未来に思いを馳せたところで、それは今の人生に何かをもたらしてくれるわけではない。ゆえに、彼女はそれよりも一冊一冊の本を大切に読み、目の前の仕事を堅実にこなして、一つ一つの機会を確実に掴んでいきたいと考えている。結局、想像というのは現実になるとは限らないが、今ロドスで過ごしているこの毎日は、努力をすれば報われるようなものであり、彼女が求めているのはまさしくそういう生活だった。\nそこで、彼女は予定をこう改めた。\n・（20:00～？）理論の先生に今後の授業のことを相談する\n彼女にとって、今相談すべき内容はこれだった。\nそろそろ眠らないと……と、乾燥した目がまぶたを落として、今にも閉じてしまいそうになる。\n彼女はおとなしくスケジュール帳を閉じ、明かりを消して布団に入り、緊張で高鳴る心臓を鎮めようと試みた。明日の試験で良い点を得られるように願いながら。\n明日も大変な一日だろうが、いつもの如く収穫の多い日になることだろう。\n……\nスージーは満ち足りた気持ちで、暖かな夢の中へと沈んでいった。",
+      "typeIcon": "fun-x",
+      "uniEquipIcon": "uniequip_002_gdglow",
+      "typeName1": "FUN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_gdglow_1",
+        "uniequip_002_gdglow_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（浮遊ユニットの初期与ダメージ上昇。最大は攻撃力の110%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（浮遊ユニットの初期与ダメージ上昇。最大は攻撃力の110%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、浮遊ユニットが攻撃時10%の確率で自爆（ゴールデングローの元に戻る）し、一定範囲内の敵全員にゴールデングローの攻撃力の340%の術ダメージを与える",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "電流暴走",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、浮遊ユニットが攻撃時10%の確率で自爆（ゴールデングローの元に戻る）し、一定範囲内の敵全員にゴールデングローの攻撃力の355%<@ba.talpu>（+15%）</>の術ダメージを与える",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "1",
+                  "name": "電流暴走",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（浮遊ユニットの初期与ダメージ上昇。最大は攻撃力の110%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、浮遊ユニットが攻撃時10%の確率で自爆（ゴールデングローの元に戻る）し、一定範囲内の敵全員にゴールデングローの攻撃力の360%の術ダメージを与える",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "電流暴走",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、浮遊ユニットが攻撃時10%の確率で自爆（ゴールデングローの元に戻る）し、一定範囲内の敵全員にゴールデングローの攻撃力の375%<@ba.talpu>（+15%）</>の術ダメージを与える",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "1",
+                  "name": "電流暴走",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1208,5 +1966,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

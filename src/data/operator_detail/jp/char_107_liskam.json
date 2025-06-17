@@ -138,6 +138,7 @@
       "cost": 22
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_107_liskam#1",
@@ -639,16 +640,641 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+27",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 27,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 45,
+        "def": 45,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "戦術防御",
+          "description": "攻撃された時、自身と隣接4マス内にいるランダムな味方1人のSPが1回復",
+          "blackboard": [
+            {
+              "key": "sp",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "耐雷",
+          "description": "術耐性+10",
+          "blackboard": [
+            {
+              "key": "magic_resistance",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "耐雷",
+          "description": "術耐性+13<@ba.talpu>(+3)</>",
+          "blackboard": [
+            {
+              "key": "magic_resistance",
+              "value": 13,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_liskam",
       "moduleName": "リスカムの記章",
-      "desc": "リスカムは陣地を堅守し、敵の攻撃を阻むことに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては重装オペレーターとして区分し、哨戒衛士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "リスカムは陣地を堅守し、敵の攻撃を阻むことに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては重装オペレーターとして区分し、哨戒衛士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_liskam",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_liskam",
       "moduleName": "スタニングストレージ",
-      "desc": "「……ジジ……ジジジ……」\n襲撃が始まると、すぐに通信が遮断された。彼らはどうやって、わたしたちの通信の周波数を知ったのだろう？\n「フランカ、フランカ？こちらリスカム、聞こえますか……」\n「……ジジ……ジジジ……」\nわたしたちを引き離すために、わざとアーツで罠を仕掛けてくるなんて……どうやら、こちらの連携戦術を熟知しているみたいだ。\n付近の敵は、左に五人、右に三人、前方に七人の合計十五人。全員ヴイーヴルで、厚いサングラスをかけ、絶縁シールドを装備している。\nなるほど、こちらについての情報をよく把握しているらしい。ここへ来ることも事前に知っていたのだろう。\nこれまでに遭遇した盗賊や強盗とはまるで違う。彼らは組織化されており、充実した装備を持ち、戦術的な動きをしている。プロが訓練を施しているに違いない。\nでも、一体誰が？\n「BSWの傭兵が、どうして大きな顔をしてヴイーヴルに戻ってきた？」\n廃墟となったビルの奥から届くその声は、アーツによって加工されている。声の主は自分の正体を明かすつもりはないらしい……今のところは。\n敵は組織的に周囲を固め、サングラスと盾を装備して強気になっているのか、こちらに近づいてくる。\nそれなら、もっと近くまで引き付けよう。\nわたしが盾を掲げると、角の先端に熱が集まる。深く息を吸い込んで――呼吸と鼓動が一拍止まった。目を閉じれば、耳の中で雷鳴が鳴り響く。再び目を開け、ひと時意識がぼんやりとするのを感じた。\n「ヴイーヴルはお前が去った頃とは違う。それを思い知らせてやる。」\n「アーツが無効化されたぞ、今だ！」\n眼前の敵の絶縁シールドが焼け焦げて膨らんでいる。\n彼らは警戒を怠った。よし。\nわたしはベストの外側に留めておいた小型装置を手に取った。エンジニア部のオペレーターが言うところの「試験型蓄光弾」、わたしの「スタニングストレージ」だ。\n指先を媒介としてアーツを使えば、蓄光弾に仕込まれた源石回路がパチパチと音を立てる。それを空中に放つとまた耳鳴りがした。\n狭い廃墟の空間に再び閃光が走る。蓄光弾に蓄えられていた電流が、空気とシールドを貫いた。そして、それに呼応するように十五人の敵が倒れていく。\n「驚いたな。お前がヴイーヴルに持ち帰りたいと言っていたのは、そんなものなのか？」\n「何を持ち帰りたいかくらい、自分でよくわかってる。」\n「だけどその前に、まずはヴイーヴルから出て行ってもらうよ！」"
+      "desc": "「……ジジ……ジジジ……」\n襲撃が始まると、すぐに通信が遮断された。彼らはどうやって、わたしたちの通信の周波数を知ったのだろう？\n「フランカ、フランカ？こちらリスカム、聞こえますか……」\n「……ジジ……ジジジ……」\nわたしたちを引き離すために、わざとアーツで罠を仕掛けてくるなんて……どうやら、こちらの連携戦術を熟知しているみたいだ。\n付近の敵は、左に五人、右に三人、前方に七人の合計十五人。全員ヴイーヴルで、厚いサングラスをかけ、絶縁シールドを装備している。\nなるほど、こちらについての情報をよく把握しているらしい。ここへ来ることも事前に知っていたのだろう。\nこれまでに遭遇した盗賊や強盗とはまるで違う。彼らは組織化されており、充実した装備を持ち、戦術的な動きをしている。プロが訓練を施しているに違いない。\nでも、一体誰が？\n「BSWの傭兵が、どうして大きな顔をしてヴイーヴルに戻ってきた？」\n廃墟となったビルの奥から届くその声は、アーツによって加工されている。声の主は自分の正体を明かすつもりはないらしい……今のところは。\n敵は組織的に周囲を固め、サングラスと盾を装備して強気になっているのか、こちらに近づいてくる。\nそれなら、もっと近くまで引き付けよう。\nわたしが盾を掲げると、角の先端に熱が集まる。深く息を吸い込んで――呼吸と鼓動が一拍止まった。目を閉じれば、耳の中で雷鳴が鳴り響く。再び目を開け、ひと時意識がぼんやりとするのを感じた。\n「ヴイーヴルはお前が去った頃とは違う。それを思い知らせてやる。」\n「アーツが無効化されたぞ、今だ！」\n眼前の敵の絶縁シールドが焼け焦げて膨らんでいる。\n彼らは警戒を怠った。よし。\nわたしはベストの外側に留めておいた小型装置を手に取った。エンジニア部のオペレーターが言うところの「試験型蓄光弾」、わたしの「スタニングストレージ」だ。\n指先を媒介としてアーツを使えば、蓄光弾に仕込まれた源石回路がパチパチと音を立てる。それを空中に放つとまた耳鳴りがした。\n狭い廃墟の空間に再び閃光が走る。蓄光弾に蓄えられていた電流が、空気とシールドを貫いた。そして、それに呼応するように十五人の敵が倒れていく。\n「驚いたな。お前がヴイーヴルに持ち帰りたいと言っていたのは、そんなものなのか？」\n「何を持ち帰りたいかくらい、自分でよくわかってる。」\n「だけどその前に、まずはヴイーヴルから出て行ってもらうよ！」",
+      "typeIcon": "spt-x",
+      "uniEquipIcon": "uniequip_002_liskam",
+      "typeName1": "SPT",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_liskam_1",
+        "uniequip_002_liskam_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵の<$ba.invisible>ステルス</>状態を無効にする",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵の<$ba.invisible>ステルス</>状態を無効にする",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "extra_sp",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃された時、自身と隣接4マス内にいるランダムな味方1人のSPが1回復し、かつ自身のSPは30%の確率でさらに1回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "戦術防御",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 52,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 43,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵の<$ba.invisible>ステルス</>状態を無効にする",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "extra_sp",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃された時、自身と隣接4マス内にいるランダムな味方1人のSPが1回復し、かつ自身のSPは60%の確率でさらに1回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "戦術防御",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1102,5 +1728,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

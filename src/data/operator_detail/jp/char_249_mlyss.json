@@ -151,6 +151,28 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_249_mlyss#1",
@@ -736,16 +758,792 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 40,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "清き水、即ち命なり",
+          "description": "配置待機オペレーターのステータス（最大HP、攻撃力、防御力、術耐性、ブロック数、攻撃間隔、攻撃範囲、攻撃タイプ、そして近/遠距離に基づいて異なる特性を獲得できる）をわずかにコピーできる「うつろう水影」を援軍として召喚可能\n援軍が倒された時、30秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10030_mlyss_wtrman",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "清き水、即ち命なり",
+          "description": "配置待機オペレーターのステータス（最大HP、攻撃力、防御力、術耐性、ブロック数、攻撃間隔、攻撃範囲、攻撃タイプ、そして近/遠距離に基づいて異なる特性を獲得できる）をある程度コピーできる「うつろう水影」を援軍として召喚可能\n援軍が倒された時、28秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10030_mlyss_wtrman",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "清き水、即ち命なり",
+          "description": "配置待機オペレーターのステータス（最大HP、攻撃力、防御力、術耐性、ブロック数、攻撃間隔、攻撃範囲、攻撃タイプ、そして近/遠距離に基づいて異なる特性を獲得できる）をほとんどコピーできる「うつろう水影」を援軍として召喚可能\n援軍が倒された時、25秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10030_mlyss_wtrman",
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "開源節流",
+          "description": "編成中、味方【ライン生命】全員の配置コスト-2、最初に配置する味方【ライン生命】の配置コストがさらに-1",
+          "blackboard": [
+            {
+              "key": "cost",
+              "value": -2,
+              "valueStr": null
+            },
+            {
+              "key": "runtime_cost",
+              "value": -1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "開源節流",
+          "description": "編成中、味方【ライン生命】全員の配置コスト-2、最初に配置する味方【ライン生命】の配置コストがさらに-2<@ba.talpu>（+1）</>",
+          "blackboard": [
+            {
+              "key": "cost",
+              "value": -2,
+              "valueStr": null
+            },
+            {
+              "key": "runtime_cost",
+              "value": -2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mlyss",
       "moduleName": "ミュルジスの記章",
-      "desc": "ミュルジスは戦術召集点を設置して援軍を呼び、後続の展開に余裕を持たせる戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては先鋒オペレーターとして区分し、戦術家の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ミュルジスは戦術召集点を設置して援軍を呼び、後続の展開に余裕を持たせる戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては先鋒オペレーターとして区分し、戦術家の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_mlyss",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mlyss",
       "moduleName": "身繕い用水影",
-      "desc": "生態課の職員たちは出勤していないような早い時間にもかかわらず、とある人影が生態研究園を散策していた。つい先ほど起動したスプリンクラーによって、生態研究園全体にたちまち霧が立ち込める。その人影は自由気ままに軽やかなステップを踏み、次々に植物たちを横切ると、時折懐の端末をタップしながら、また次のエリアへと漂っていく。そうして生態研究園を一通りぐるっと巡った後、彼女は端末を会議室に置き、「ぽちゃん」という音とともに跡形もなく姿を消した。\n\n空がほんのり明るくなった頃、トリマウンツにあるパン屋の前にはすでに長蛇の列ができていた。大半の研究員たちにとって、食事というのは腹を満たせればそれでいいというものだが、中には多少の時間を使ってでも飲食にこだわりたがる者はいる。彼女の姿もその列の中にあった。焼きたてのパン、特にこの店の皮目にパリッと張りがある塩パンがお目当てなのだ。目の前に伸びる列を眺め、そして通りの向かい側にある大時計を一瞥した彼女は、あとどのくらい並べばあの味にありつけるのかに思いを巡らせた……\n\nミュルジスは鏡台の前に座って、うつろう水影に目を向けて髪を梳いていた。\n三十分後には生態課の会議に出席しなければならないというのに、どうやらあまり急いではいないようだ。\n小さな水影は鏡代わりになり、本体の動きに合わせてゆらゆらと身体を動かしている。時にはいたずら心が湧いたかのように、水影もポーズを決め、化粧をしている本体をからかってくる。\n今日はどんな髪型にしようか、どのアクセサリーを付けて出かけようかと一通り悩んだ後、ミュルジスはリップクリームをポケットに滑り込ませ、手を振って水影を元の噴水へと戻した。\nドアを開ければ、机の上に置かれたパンが目に入る。そのほかに、サラダと飲料水も置かれていた。\n\n生態課のオフィスに入ると、職員たちが彼女をわっと取り囲み、そのまま共に会議室へと向かっていく。新人職員は、主任が何も持ち込まずにそのまま会議を始めたことに驚いていたが、古参の職員たちはとっくに慣れたという顔をしている。\n何しろ、彼ら生態課の主任はあのミュルジスなのだ。彼女が何を行い、これから何をしようとしているかを予測するのは、おそらく天に昇ること以上に困難を極めることだろう。\nそれゆえ、彼らには想像もできないはずだ。この時間になっても、彼女が――\n生態研究園に植えられた植物の葉の下で、葉先にたまった露を眺めていることも。\n街に佇む公園の噴水脇で、集まった羽獣に餌やりをしていることも。\n鏡台の噴水の中で、引き続き悠々と居眠りしていることも。\nそして――\n\n「あたしが今このロドスで、あなたと一緒にコーヒーを嗜んでいることもね。」\n「どう？すごいでしょ？」\n腰に手を当て、鼻を高くするミュルジスを見て、あなたは慌てて誉め言葉を贈った。彼女の摩訶不思議な力を、実際に見せつけられたからだ。しかし、一部の「些細な点」において、彼女の語った内容はあなたが目撃したことと若干乖離していた。あなたの見た事実はこうだ――\n彼女が端末を操作する時に、ボタンを押し間違えたせいで、生態課の職員たちは生態研究園のあちこちで雨宿りを強いられていた。\n彼女が公園で羽獣に餌やりをしていた際には、突然その餌を自分の口に放り込んでいたこともあった。\nそして、彼女が手にしたリップクリームで下顎にきれいな曲線を描く様子も見たことがある。\n熟練の腕を以てしても、多くの端末を同時に操作すればミスは起こり得るものだ。となれば、多くの水影を操るミュルジスに関しては、言うまでもないだろう。\nだが、以前に見た光景を――彼女がスプーンを持ったまま、コーヒーカップの真上の何もない空間を撹拌している場面を思い出したせいで、あなたはついつい噴き出してしまった。\nそのため当然のことながら、あなたはミュルジスが作り出した水影による連続攻撃を受けたのだった。"
+      "desc": "生態課の職員たちは出勤していないような早い時間にもかかわらず、とある人影が生態研究園を散策していた。つい先ほど起動したスプリンクラーによって、生態研究園全体にたちまち霧が立ち込める。その人影は自由気ままに軽やかなステップを踏み、次々に植物たちを横切ると、時折懐の端末をタップしながら、また次のエリアへと漂っていく。そうして生態研究園を一通りぐるっと巡った後、彼女は端末を会議室に置き、「ぽちゃん」という音とともに跡形もなく姿を消した。\n\n空がほんのり明るくなった頃、トリマウンツにあるパン屋の前にはすでに長蛇の列ができていた。大半の研究員たちにとって、食事というのは腹を満たせればそれでいいというものだが、中には多少の時間を使ってでも飲食にこだわりたがる者はいる。彼女の姿もその列の中にあった。焼きたてのパン、特にこの店の皮目にパリッと張りがある塩パンがお目当てなのだ。目の前に伸びる列を眺め、そして通りの向かい側にある大時計を一瞥した彼女は、あとどのくらい並べばあの味にありつけるのかに思いを巡らせた……\n\nミュルジスは鏡台の前に座って、うつろう水影に目を向けて髪を梳いていた。\n三十分後には生態課の会議に出席しなければならないというのに、どうやらあまり急いではいないようだ。\n小さな水影は鏡代わりになり、本体の動きに合わせてゆらゆらと身体を動かしている。時にはいたずら心が湧いたかのように、水影もポーズを決め、化粧をしている本体をからかってくる。\n今日はどんな髪型にしようか、どのアクセサリーを付けて出かけようかと一通り悩んだ後、ミュルジスはリップクリームをポケットに滑り込ませ、手を振って水影を元の噴水へと戻した。\nドアを開ければ、机の上に置かれたパンが目に入る。そのほかに、サラダと飲料水も置かれていた。\n\n生態課のオフィスに入ると、職員たちが彼女をわっと取り囲み、そのまま共に会議室へと向かっていく。新人職員は、主任が何も持ち込まずにそのまま会議を始めたことに驚いていたが、古参の職員たちはとっくに慣れたという顔をしている。\n何しろ、彼ら生態課の主任はあのミュルジスなのだ。彼女が何を行い、これから何をしようとしているかを予測するのは、おそらく天に昇ること以上に困難を極めることだろう。\nそれゆえ、彼らには想像もできないはずだ。この時間になっても、彼女が――\n生態研究園に植えられた植物の葉の下で、葉先にたまった露を眺めていることも。\n街に佇む公園の噴水脇で、集まった羽獣に餌やりをしていることも。\n鏡台の噴水の中で、引き続き悠々と居眠りしていることも。\nそして――\n\n「あたしが今このロドスで、あなたと一緒にコーヒーを嗜んでいることもね。」\n「どう？すごいでしょ？」\n腰に手を当て、鼻を高くするミュルジスを見て、あなたは慌てて誉め言葉を贈った。彼女の摩訶不思議な力を、実際に見せつけられたからだ。しかし、一部の「些細な点」において、彼女の語った内容はあなたが目撃したことと若干乖離していた。あなたの見た事実はこうだ――\n彼女が端末を操作する時に、ボタンを押し間違えたせいで、生態課の職員たちは生態研究園のあちこちで雨宿りを強いられていた。\n彼女が公園で羽獣に餌やりをしていた際には、突然その餌を自分の口に放り込んでいたこともあった。\nそして、彼女が手にしたリップクリームで下顎にきれいな曲線を描く様子も見たことがある。\n熟練の腕を以てしても、多くの端末を同時に操作すればミスは起こり得るものだ。となれば、多くの水影を操るミュルジスに関しては、言うまでもないだろう。\nだが、以前に見た光景を――彼女がスプーンを持ったまま、コーヒーカップの真上の何もない空間を撹拌している場面を思い出したせいで、あなたはついつい噴き出してしまった。\nそのため当然のことながら、あなたはミュルジスが作り出した水影による連続攻撃を受けたのだった。",
+      "typeIcon": "tac-x",
+      "uniEquipIcon": "uniequip_002_mlyss",
+      "typeName1": "TAC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_mlyss_1",
+        "uniequip_002_mlyss_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が150%まで上昇\n援軍はブロックしている敵からの被ダメージ-<@ba.kw>15%</>。",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が150%まで上昇\n援軍はブロックしている敵からの被ダメージ-<@ba.kw>15%</>。",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置待機オペレーターのステータス（最大HP・攻撃力・防御力・術耐性・ブロック数・攻撃間隔・攻撃範囲・攻撃タイプ、そして近/遠距離に基づいて異なる特性を獲得できる）をほとんどコピーできる「うつろう水影」を援軍として召喚可能。初回配置後に援軍のSPを5回復し、援軍が倒された時、25秒後に再召喚される",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "清き水、即ち命なり",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10030_mlyss_wtrman",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、対象の最大HP・攻撃力・防御力・術耐性の90%、そしてブロック数・攻撃間隔・攻撃範囲・初期攻撃タイプ（攻撃しないまたは治療タイプはコピー対象外）をコピー",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "scale",
+                      "value": 0.9,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 190,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が150%まで上昇\n援軍はブロックしている敵からの被ダメージ-<@ba.kw>15%</>。",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置待機オペレーターのステータス（最大HP・攻撃力・防御力・術耐性・ブロック数・攻撃間隔・攻撃範囲・攻撃タイプ、そして近/遠距離に基づいて異なる特性を獲得できる）をすべてコピーできる「うつろう水影」を援軍として召喚可能。初回配置後に援軍のSPを5回復し、援軍が倒された時、25秒後に再召喚される",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "清き水、即ち命なり",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10030_mlyss_wtrman",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、対象の最大HP・攻撃力・防御力・術耐性の100%、そしてブロック数・攻撃間隔・攻撃範囲・初期攻撃タイプ（攻撃しないまたは治療タイプはコピー対象外）をコピー",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1198,6 +1996,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10030_mlyss_wtrman"
   ],
   "patch_info": {}
 }

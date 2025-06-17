@@ -151,6 +151,56 @@
       "cost": 26
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 30
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 1)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 2)",
+      "prefabKey": "",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 70
+        }
+      ],
+      "overrideDescription": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_188_helage#1",
@@ -708,21 +758,1094 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +26",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 400,
+        "atk": 70,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Waxing Moon",
+          "description": "Gains up to +50 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 50% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 50,
+            "min_hp_ratio": 0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Waxing Moon",
+          "description": "Gains up to +75 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 60% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 75,
+            "min_hp_ratio": 0.4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Waxing Moon",
+          "description": "Gains up to +100 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 70% Max HP)",
+          "blackboard": {
+            "min_attack_speed": 100,
+            "min_hp_ratio": 0.3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Ingenious Strategist",
+          "description": "Regenerate 60 HP per second when this unit is not blocking an enemy.",
+          "blackboard": {
+            "hp_recovery_per_sec": 60
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Ingenious Strategist",
+          "description": "Regenerate 70 <@ba.talpu>(+10)</> HP per second when this unit is not blocking an enemy.",
+          "blackboard": {
+            "hp_recovery_per_sec": 70
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_helage",
       "moduleName": "Hellagur's Badge",
-      "desc": "Operator Hellagur has demonstrated a remarkable aptitude for solo confrontation with the enemy while far removed from support lines.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Musha responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Hellagur has demonstrated a remarkable aptitude for solo confrontation with the enemy while far removed from support lines.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Musha responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_helage",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_helage",
       "moduleName": "Zouhou, a Sheath for Contempt",
-      "desc": "Hellagur took the pocket watch and blade from his friend without even a chance to ask a question. The life had already left his friend's body.\nAt the time, he didn't yet know that an unprecedented Great Rebellion was about to ignite war across Ursus, and this lost battle, coupled with the army's disobedience, was only the rebellion's mildest prelude.\nHe could only vaguely sense that, although the storm-in-a-teacup had already dissipated, an unusual calm still lingered.\nHellagur hung the scabbard on his waist and drew out the strange Higashinese sword. He examined it for a moment, but there were no familiar characters on the blade. He placed the sword on the table, presently covered with a battlefield map. The cold and slender blade lay vertically over the tangled front line, forming a large X on the map.\nHe opened the pocket watch to find a photo of a strange girl on the inside. She looked reticent, with only her eyes showing a liveliness and curiosity that matched her age.\nAt that moment, the girl walked out of the shadow in the corner of the command center.\nHer face, figure, clothing, and even the Originium crystal on her shoulder were identical to those in the photo.\nOnly her gaze was different from the one in the photo when she looked at Hellagur.\nThere was no curiosity, no panic, and even hostility seemed thin in her eyes. He could only detect calmness in them, as if her emotional quota had been exhausted by the war.\nHe tried to talk to her, showing her the photo in the watch, and even pointing to the sword on the table, but the girl just stared at him silently, in the same way he had stared at his friend's corpse in silence.\nHellagur realized that, like the sword, this was probably not the first time the girl had been entrusted to someone.\n\nShe suddenly snatched up the sword, which was even taller than her.\nShe held the blade and walked unsteadily towards him.\nThe tall Liberi didn't say anything. The way the girl held it didn't seem like she was preparing to strike.\nOf course, it was possible there were special Higashinese ways to wield the Higashinese sword, or maybe the girl was pretending to make an effort to hold the sword in a way that would keep the edge from being worn on the ground, and he was moments away from having the cold blade pressed against his throat.\nBut Hellagur didn't move.\n\nThe girl's wrist trembled, and she struggled to move to his side. She raised the sword up high, with the tip pointing at the ground.\nHe lowered his head and met the girl's gaze.\nShe seemed to be pleading for something.\nHe didn't know what she was asking for, but he nodded nonetheless.\nWhoosh.\nThe girl inserted the sword into the scabbard at Hellagur's waist.\nThen she spoke. Her command of the common tongue was tinged with a heavy Higashinese accent coupled with twisty Ursine intonation.\n'Don't drop Kudarikiri.'"
+      "desc": "Hellagur took the pocket watch and blade from his friend without even a chance to ask a question. The life had already left his friend's body.\nAt the time, he didn't yet know that an unprecedented Great Rebellion was about to ignite war across Ursus, and this lost battle, coupled with the army's disobedience, was only the rebellion's mildest prelude.\nHe could only vaguely sense that, although the storm-in-a-teacup had already dissipated, an unusual calm still lingered.\nHellagur hung the scabbard on his waist and drew out the strange Higashinese sword. He examined it for a moment, but there were no familiar characters on the blade. He placed the sword on the table, presently covered with a battlefield map. The cold and slender blade lay vertically over the tangled front line, forming a large X on the map.\nHe opened the pocket watch to find a photo of a strange girl on the inside. She looked reticent, with only her eyes showing a liveliness and curiosity that matched her age.\nAt that moment, the girl walked out of the shadow in the corner of the command center.\nHer face, figure, clothing, and even the Originium crystal on her shoulder were identical to those in the photo.\nOnly her gaze was different from the one in the photo when she looked at Hellagur.\nThere was no curiosity, no panic, and even hostility seemed thin in her eyes. He could only detect calmness in them, as if her emotional quota had been exhausted by the war.\nHe tried to talk to her, showing her the photo in the watch, and even pointing to the sword on the table, but the girl just stared at him silently, in the same way he had stared at his friend's corpse in silence.\nHellagur realized that, like the sword, this was probably not the first time the girl had been entrusted to someone.\n\nShe suddenly snatched up the sword, which was even taller than her.\nShe held the blade and walked unsteadily towards him.\nThe tall Liberi didn't say anything. The way the girl held it didn't seem like she was preparing to strike.\nOf course, it was possible there were special Higashinese ways to wield the Higashinese sword, or maybe the girl was pretending to make an effort to hold the sword in a way that would keep the edge from being worn on the ground, and he was moments away from having the cold blade pressed against his throat.\nBut Hellagur didn't move.\n\nThe girl's wrist trembled, and she struggled to move to his side. She raised the sword up high, with the tip pointing at the ground.\nHe lowered his head and met the girl's gaze.\nShe seemed to be pleading for something.\nHe didn't know what she was asking for, but he nodded nonetheless.\nWhoosh.\nThe girl inserted the sword into the scabbard at Hellagur's waist.\nThen she spoke. Her command of the common tongue was tinged with a heavy Higashinese accent coupled with twisty Ursine intonation.\n'Don't drop Kudarikiri.'",
+      "typeIcon": "sbl-x",
+      "uniEquipIcon": "uniequip_002_helage",
+      "typeName1": "SBL",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_helage_1",
+        "uniequip_002_helage_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 230,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains up to +120 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 60% Max HP)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Waxing Moon",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "min_hp_ratio",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_attack_speed",
+                      "value": 120,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 350,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 90,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains up to +130 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 50% Max HP)",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Waxing Moon",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "min_hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "min_attack_speed",
+                      "value": 130,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_helage",
       "moduleName": "'Горячий снег'",
-      "desc": "The samovar whistles lightly, like the snoring in the trenches at the crack of dawn.\nIt was very many years ago, fresh after the close of a violent battle. Their supplies were spent, and Hellagur was left wanting for even a drop of fresh water as his wounded men-in-arms laid by his side stifling deep groans. He pulled a scar-riddled samovar out from his marching pack, and wearily put a potful of snow to the boil. This one samovar would accompany him for a long, long time to come; each time Neon takes a tea break, she'll mumble about how she ought to throw it away, but of course, she's only saying it.\nNeon's letter lies on the table. Which hurts more to an old man: a young child leaving home because they can't be bothered to communicate with you, or a grown child leaving home out of consideration for how you'd disapprove?\nHellagur has been reflecting on whether his approach to parenting might be suspect. At first, he had no idea how to build a rapport with the taciturn child, sure in his mind that there was no way for him to meaningfully raise her. Bitter war, constant upheaval, blight and suffering... He'd seen that all of these had already made their place in her eyes. The best he could hope for was to teach Neon that life was more than these. He brought more into her life, taught her an appreciation for classical music, to play the cello, to read and write... When did Neon change? After she was found secretly taking part in the Clinic's transport of Oripathy medication? Since leaving Chernobog, she's become her own dignified spokeswoman. From settling patients to partnered pharmaceutical research between the Clinic and Rhodes Island, Neon handled many aspects of rebuilding Azazel. Medical and clinical administration were never Hellagur's strong points anyway... Neon often vanishes, only to show back up with a new headache or two for him... Perhaps this was how she always was, but suffice to say, it's how she likes it.\nHellagur is glad he can still protect such a lifestyle.\n...Hence, he regrets not properly hiding the letter.\nThat winter, they'd done everything they could, and had the Clinic's patients, doctors, and medical resources all evacuated from Chernobog... Yet the name 'Azazel' was forsaken there, left behind.\nThese days, new nomadic plates sit atop the ruins, an omnipresent smog of industry and checkpoints and the Ursus Guard, still going by the name of 'Chernobog.' And Azazel has been 'rebuilt' in a sense, the Emperor's overseers tacitly letting it exist. 'Azazel.' The name itself something to believe in. Once, it was a rare respite to those the Empire deemed scar tissue, a safe haven in the endless nights. With no hesitation, the Infected chose where it had once been to come together again, and even the Infected that wandered the wilds and tundras came too, of their own accord.\nTo Ursus, they always were hideous scars. Had the events of 1096 been sufficient to change the Empire's attitude towards them? The answer is laughable. In the so-called 'Federal Territory of Chernobog' is no Ursus Guard, who only care to stand watch outside of it, and to Hellagur, and of course to Neon, the role that the vaunted 'Azazel' plays atop those ruins is all too clear. In the new plate crammed full of Infected, death and disappearance may be diluted in the greater chaos, but they are still taking place, right this very moment.\nThe hot-blooded child cannot stand such a thing. She quietly comes back, brews a pot of tea for Hellagur, and then takes Decapitator and leaves without a goodbye...\nSteam lifts the lid as the water within boils louder and louder, slowly drowning out the sound of the samovar itself.\nQuiet, now. Quiet as the dead winter grass.\n'We can never hope to be an opponent to Ursus. To its traitors, the Empire bestows illusions and humiliation.\n'We can never hope to turn our backs on the past, for it will never be erased. We can never hope to turn our backs on the past, for it binds your future tight. Hellagur.'"
+      "desc": "The samovar whistles lightly, like the snoring in the trenches at the crack of dawn.\nIt was very many years ago, fresh after the close of a violent battle. Their supplies were spent, and Hellagur was left wanting for even a drop of fresh water as his wounded men-in-arms laid by his side stifling deep groans. He pulled a scar-riddled samovar out from his marching pack, and wearily put a potful of snow to the boil. This one samovar would accompany him for a long, long time to come; each time Neon takes a tea break, she'll mumble about how she ought to throw it away, but of course, she's only saying it.\nNeon's letter lies on the table. Which hurts more to an old man: a young child leaving home because they can't be bothered to communicate with you, or a grown child leaving home out of consideration for how you'd disapprove?\nHellagur has been reflecting on whether his approach to parenting might be suspect. At first, he had no idea how to build a rapport with the taciturn child, sure in his mind that there was no way for him to meaningfully raise her. Bitter war, constant upheaval, blight and suffering... He'd seen that all of these had already made their place in her eyes. The best he could hope for was to teach Neon that life was more than these. He brought more into her life, taught her an appreciation for classical music, to play the cello, to read and write... When did Neon change? After she was found secretly taking part in the Clinic's transport of Oripathy medication? Since leaving Chernobog, she's become her own dignified spokeswoman. From settling patients to partnered pharmaceutical research between the Clinic and Rhodes Island, Neon handled many aspects of rebuilding Azazel. Medical and clinical administration were never Hellagur's strong points anyway... Neon often vanishes, only to show back up with a new headache or two for him... Perhaps this was how she always was, but suffice to say, it's how she likes it.\nHellagur is glad he can still protect such a lifestyle.\n...Hence, he regrets not properly hiding the letter.\nThat winter, they'd done everything they could, and had the Clinic's patients, doctors, and medical resources all evacuated from Chernobog... Yet the name 'Azazel' was forsaken there, left behind.\nThese days, new nomadic plates sit atop the ruins, an omnipresent smog of industry and checkpoints and the Ursus Guard, still going by the name of 'Chernobog.' And Azazel has been 'rebuilt' in a sense, the Emperor's overseers tacitly letting it exist. 'Azazel.' The name itself something to believe in. Once, it was a rare respite to those the Empire deemed scar tissue, a safe haven in the endless nights. With no hesitation, the Infected chose where it had once been to come together again, and even the Infected that wandered the wilds and tundras came too, of their own accord.\nTo Ursus, they always were hideous scars. Had the events of 1096 been sufficient to change the Empire's attitude towards them? The answer is laughable. In the so-called 'Federal Territory of Chernobog' is no Ursus Guard, who only care to stand watch outside of it, and to Hellagur, and of course to Neon, the role that the vaunted 'Azazel' plays atop those ruins is all too clear. In the new plate crammed full of Infected, death and disappearance may be diluted in the greater chaos, but they are still taking place, right this very moment.\nThe hot-blooded child cannot stand such a thing. She quietly comes back, brews a pot of tea for Hellagur, and then takes Decapitator and leaves without a goodbye...\nSteam lifts the lid as the water within boils louder and louder, slowly drowning out the sound of the samovar itself.\nQuiet, now. Quiet as the dead winter grass.\n'We can never hope to be an opponent to Ursus. To its traitors, the Empire bestows illusions and humiliation.\n'We can never hope to turn our backs on the past, for it will never be erased. We can never hope to turn our backs on the past, for it binds your future tight. Hellagur.'",
+      "typeIcon": "sbl-y",
+      "uniEquipIcon": "uniequip_003_helage",
+      "typeName1": "SBL",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_helage_1",
+        "uniequip_003_helage_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When defeated, does not retreat and instead recovers <@ba.kw>{hp_ratio:0%}</> HP (can only activate once every deployment)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When defeated, does not retreat and instead recovers <@ba.kw>{hp_ratio:0%}</> HP (can only activate once every deployment)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 2,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 2,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 80,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Regenerates 70 HP per second when not blocking an enemy, or when HP is below 30%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Ingenious Strategist",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Regenerates 80 <@ba.talpu>(+10)</> HP per second when not blocking an enemy, or when HP is below 30%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Ingenious Strategist",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 80,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When defeated, does not retreat and instead recovers <@ba.kw>{hp_ratio:0%}</> HP (can only activate once every deployment)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 70,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 2,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 80,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 2,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 90,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Regenerates 80 HP per second when not blocking an enemy, or when HP is below 30%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Ingenious Strategist",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 80,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Regenerates 90 <@ba.talpu>(+10)</> HP per second when not blocking an enemy, or when HP is below 30%",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Ingenious Strategist",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 90,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1192,5 +2315,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

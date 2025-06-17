@@ -151,6 +151,36 @@
       "cost": 24
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "def",
+            "value": 2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "magic_resistance",
+            "value": 20,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_426_billro#1",
@@ -731,21 +761,1145 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+34",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 34,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 80,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "血肉饗宴",
+          "description": "スキル発動時、HPが最大値の30％回復\n<$ba.charged>オーバーチャージ</>効果発動時、HPの回復量が2倍になる",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "billro_t_1[enhance].heal_scale",
+              "value": 0.6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "血肉饗宴",
+          "description": "スキル発動時、HPが最大値の35%<@ba.talpu>（+5%）</>回復\n<$ba.charged>オーバーチャージ</>効果発動時、HPの回復量が2倍になる",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.35,
+              "valueStr": null
+            },
+            {
+              "key": "billro_t_1[enhance].heal_scale",
+              "value": 0.7,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "血肉饗宴",
+          "description": "スキル発動時、HPが最大値の40%回復\n<$ba.charged>オーバーチャージ</>効果発動時、HPの回復量が2倍になる",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "billro_t_1[enhance].heal_scale",
+              "value": 0.8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "血肉饗宴",
+          "description": "スキル発動時、HPが最大値の45%<@ba.talpu>（+5%）</>回復\n<$ba.charged>オーバーチャージ</>効果発動時、HPの回復量が2倍になる",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.45,
+              "valueStr": null
+            },
+            {
+              "key": "billro_t_1[enhance].heal_scale",
+              "value": 0.9,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "狂嵐の兆し",
+          "description": "SPが最大値以上の時、自身のSP自然回復速度＋0.6sp/秒",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_billro",
       "moduleName": "カーネリアンの記章",
-      "desc": "カーネリアンは機を見計らって広範囲アーツ攻撃を仕掛けることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、法陣術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "カーネリアンは機を見計らって広範囲アーツ攻撃を仕掛けることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、法陣術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_billro",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_billro",
       "moduleName": "ヒヤシンスと短剣",
-      "desc": "その夜ホーエンローエ伯爵は、晩餐と呼ぶにはいささか忙しない食事を終えて別荘の寝室へと戻った。彼が部屋に足を踏み入れた瞬間に、何の気配もなく現れたカーネリアンも、続いて入室した。\n「こんな時間に、何の用かな？」\n「ご報告に来たんだよ。君が心配していた件は片付けてきたから、安心するといいよ。」\n「そうか。」\n開いた窓から夜風が部屋に吹き込み、長いカーテンがひらひらと揺れる。明日行われるパレードのために、慣れ親しんだ高塔から離れている伯爵は、少し肌寒さを感じた。\n「いや待てよ、なぜそんなことをわざわざ――ではなく、つまりだな、こんなに早く片付いたのか？」\n「もちろん。」\n「本当か？　念のためにもう一度確認するぞ。明日のパレードで、お前は――」\n「念のため？　私のことを信用していないの？」\n\nいつも何かと茶々を入れてくる護衛に苛立ったのか、伯爵は勢いよく足を踏み鳴らした。\n「当たり前だろう！楽器の演奏が一朝一夕で身に付くものか！　まさかトライアングルの鳴らし方を覚えてきたとは言わないだろうな。」\n「さすがだね。ご明察だよ。」\n「ご明察だと？　本気で明日のパレードにトライアングルで参加するつもりか！」\n「それも当たり。ついでに進言すると、その言い草はトライアングル愛好者に対する尊重が足りていないよ。」\n「お前というやつは！　去年高塔に客人が来訪したときも、他の者が音楽を奏でる中でお前だけが呆けていたせいで、随分と笑い者にされたんだぞ！」\n「先月隣の都市から使者が来た時も、音楽隊の中に立ってフリだけでもしてろと譲らなかったよね。そのせいで使者がテーブルの下に盗聴器をつけようとした時に、いつものように首に武器を突き付けたつもりが、トランペットを押し当てていたよ。」\n「カーネリアン！！」\n「率直に言おうか。私は君の世話だけで十分大変なんだ。楽器なんて覚えてる暇はないね。」\n「そんなの知るか！　私が学べと言ったら学べよ！」\n歳相応の癇癪を起した伯爵は傲岸不遜な護衛を睨みつけると、怒りのあまり更に怒鳴りつけたくなるのを何とかこらえた様子で、ドアを思い切り閉めて出て行った。\n\n扉が閉まるや否や、カーネリアンは腰に帯びた剣に手をかける。\n「さあ、出ておいで、カーテンの後ろにいる君。」\n「議会が寄越した刺客だね？　そして黒幕は伯爵の従兄弟かな。自分が爵位を受け継いだあかつきには、統治を市議会に任せるとでも言われたんだろうけど、まさかあの野心家の言葉を信じてるの？」\n「まあいいよ、質問を変えようか。お淑やかな送り方と、もっと直接的なのと、どちらが好みかな？」\n「……希望がないなら、私が決めるよ。」\n刺客が動く間もなく、カーテンが開いた口のように大きく広がって襲い掛かる。飲み込まれた獲物を、本棚が両顎のように上下から押し潰し、鋭い牙と化した燭台が噛み砕く。最後には残骸が地面いっぱいに散らばった。\n\n「終わったよ。入ってこないの？」\n伯爵は扉から頭だけのぞかせて危険がないのを確認すると、勇気を奮い起こして自分の寝室へと踏み込んだ。\n「気付くのが早かったし、アドリブも悪くなかったよ。よくできました。」\n「お前に褒められてもな。」\n散乱した調度と飛び散った血で滅茶苦茶になってしまった部屋を眺めながら、二人は無言で見つめあった。\n伯爵を狙った暗殺は何もこれが初めてではない。だがこれまでは全て高塔の中で発生していた。そして、ホーエンローエ伯爵の高塔は、刺客に寝室まで侵入されるほど無防備な場所ではないのだ。\nしばらくして、伯爵がふいに口を開いた。\n「カーネリアン。」\n「どうしたの？　言っておくけど、私のアーツで掃除なんてしないよ。」\n「そんなことは期待していない。」\n「いい判断だね。」\n「先ほどの話だが、本当に何か楽器を習う気はないのか？」\n「え？　もしかして本気で面子が潰れるのを気にしていたの？」\n「そんなことない！　少し好奇心が沸いただけだ。お前がもし――」\n伯爵は顔を真っ赤にして、口をパクパクと開いたものの、結局何も言えずに寝室から飛び出していった。\nカーネリアンはかぶりを振ると、ベッドの横に置かれた満開のヒヤシンスの植木鉢に視線を向けた。それから、鉢植えの前に置いてある短剣を見つめる。護身用ということになっているが、実際に役に立つ場面などないだろう。ただ伯爵にわずかばかりの安心感を与えるだけの代物だ。\nまだ誰の体にも刺し込まれたことがないその刃は、しかしすでに血で赤く染まっていた。"
+      "desc": "その夜ホーエンローエ伯爵は、晩餐と呼ぶにはいささか忙しない食事を終えて別荘の寝室へと戻った。彼が部屋に足を踏み入れた瞬間に、何の気配もなく現れたカーネリアンも、続いて入室した。\n「こんな時間に、何の用かな？」\n「ご報告に来たんだよ。君が心配していた件は片付けてきたから、安心するといいよ。」\n「そうか。」\n開いた窓から夜風が部屋に吹き込み、長いカーテンがひらひらと揺れる。明日行われるパレードのために、慣れ親しんだ高塔から離れている伯爵は、少し肌寒さを感じた。\n「いや待てよ、なぜそんなことをわざわざ――ではなく、つまりだな、こんなに早く片付いたのか？」\n「もちろん。」\n「本当か？　念のためにもう一度確認するぞ。明日のパレードで、お前は――」\n「念のため？　私のことを信用していないの？」\n\nいつも何かと茶々を入れてくる護衛に苛立ったのか、伯爵は勢いよく足を踏み鳴らした。\n「当たり前だろう！楽器の演奏が一朝一夕で身に付くものか！　まさかトライアングルの鳴らし方を覚えてきたとは言わないだろうな。」\n「さすがだね。ご明察だよ。」\n「ご明察だと？　本気で明日のパレードにトライアングルで参加するつもりか！」\n「それも当たり。ついでに進言すると、その言い草はトライアングル愛好者に対する尊重が足りていないよ。」\n「お前というやつは！　去年高塔に客人が来訪したときも、他の者が音楽を奏でる中でお前だけが呆けていたせいで、随分と笑い者にされたんだぞ！」\n「先月隣の都市から使者が来た時も、音楽隊の中に立ってフリだけでもしてろと譲らなかったよね。そのせいで使者がテーブルの下に盗聴器をつけようとした時に、いつものように首に武器を突き付けたつもりが、トランペットを押し当てていたよ。」\n「カーネリアン！！」\n「率直に言おうか。私は君の世話だけで十分大変なんだ。楽器なんて覚えてる暇はないね。」\n「そんなの知るか！　私が学べと言ったら学べよ！」\n歳相応の癇癪を起した伯爵は傲岸不遜な護衛を睨みつけると、怒りのあまり更に怒鳴りつけたくなるのを何とかこらえた様子で、ドアを思い切り閉めて出て行った。\n\n扉が閉まるや否や、カーネリアンは腰に帯びた剣に手をかける。\n「さあ、出ておいで、カーテンの後ろにいる君。」\n「議会が寄越した刺客だね？　そして黒幕は伯爵の従兄弟かな。自分が爵位を受け継いだあかつきには、統治を市議会に任せるとでも言われたんだろうけど、まさかあの野心家の言葉を信じてるの？」\n「まあいいよ、質問を変えようか。お淑やかな送り方と、もっと直接的なのと、どちらが好みかな？」\n「……希望がないなら、私が決めるよ。」\n刺客が動く間もなく、カーテンが開いた口のように大きく広がって襲い掛かる。飲み込まれた獲物を、本棚が両顎のように上下から押し潰し、鋭い牙と化した燭台が噛み砕く。最後には残骸が地面いっぱいに散らばった。\n\n「終わったよ。入ってこないの？」\n伯爵は扉から頭だけのぞかせて危険がないのを確認すると、勇気を奮い起こして自分の寝室へと踏み込んだ。\n「気付くのが早かったし、アドリブも悪くなかったよ。よくできました。」\n「お前に褒められてもな。」\n散乱した調度と飛び散った血で滅茶苦茶になってしまった部屋を眺めながら、二人は無言で見つめあった。\n伯爵を狙った暗殺は何もこれが初めてではない。だがこれまでは全て高塔の中で発生していた。そして、ホーエンローエ伯爵の高塔は、刺客に寝室まで侵入されるほど無防備な場所ではないのだ。\nしばらくして、伯爵がふいに口を開いた。\n「カーネリアン。」\n「どうしたの？　言っておくけど、私のアーツで掃除なんてしないよ。」\n「そんなことは期待していない。」\n「いい判断だね。」\n「先ほどの話だが、本当に何か楽器を習う気はないのか？」\n「え？　もしかして本気で面子が潰れるのを気にしていたの？」\n「そんなことない！　少し好奇心が沸いただけだ。お前がもし――」\n伯爵は顔を真っ赤にして、口をパクパクと開いたものの、結局何も言えずに寝室から飛び出していった。\nカーネリアンはかぶりを振ると、ベッドの横に置かれた満開のヒヤシンスの植木鉢に視線を向けた。それから、鉢植えの前に置いてある短剣を見つめる。護身用ということになっているが、実際に役に立つ場面などないだろう。ただ伯爵にわずかばかりの安心感を与えるだけの代物だ。\nまだ誰の体にも刺し込まれたことがないその刃は、しかしすでに血で赤く染まっていた。",
+      "typeIcon": "plx-x",
+      "uniEquipIcon": "uniequip_002_billro",
+      "typeName1": "PLX",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_billro_1",
+        "uniequip_002_billro_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 66,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 230,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 76,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[max_hp_buff].max_hp",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[max_hp_enhance_buff].max_hp",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、最大HP+30%。スキル発動時にHPが最大値の40%回復\n<$ba.charged>オーバーチャージ</>効果発動時、HPの回復量が2倍になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "血肉饗宴",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_t_1[enhance].heal_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、最大HP+30%。スキル発動時にHPが最大値の45%<@ba.talpu>（+5%）</>回復\n<$ba.charged>オーバーチャージ</>効果発動時、HPの回復量が2倍になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "血肉饗宴",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.45,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_t_1[enhance].heal_scale",
+                      "value": 0.9,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 260,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[max_hp_buff].max_hp",
+                      "value": 0.45,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[max_hp_enhance_buff].max_hp",
+                      "value": 0.9,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、最大HP+45%。スキル発動時にHPが最大値の45%回復\n<$ba.charged>オーバーチャージ</>効果発動時、HPの回復量が2倍になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "血肉饗宴",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.45,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_t_1[enhance].heal_scale",
+                      "value": 0.9,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル発動中、最大HP+45%。スキル発動時にHPが最大値の50%<@ba.talpu>（+5%）</>回復\n<$ba.charged>オーバーチャージ</>効果発動時、HPの回復量が2倍になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "血肉饗宴",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_t_1[enhance].heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_billro",
       "moduleName": "故郷の音",
-      "desc": "サルゴンには、「異郷で旧友に会う驚きと喜び」という感情を表現するためだけに用いられる単語がある。そのことからも、サルゴン人にとっての故郷、ひいては「故郷の音」がいかなるものなのかを窺い知ることができるだろう。しかしながら、ビーズワクスが突然リターニアのレストランに現れ、姉の目の前に座った時、ゆっくりと耳元の通信端末から手を離すカーネリアンの顔に喜びはなく、彼女には珍しい驚愕の色だけが浮かんでいた。\n「お姉ちゃん、お……驚いた？えへへ……」\nカーネリアンは急いでマイクを切った。\nビーズワクスは、リターニアに来てはいけないと姉が言っていたのを忘れたわけではない。だから心許なげに、通りかかったついでに来たと言い訳をしたのだ。そんな見え透いた嘘を聞いて、カーネリアンはロドスの誰が余計な世話を焼いたのかまで見当を付けることができた。\nしかし、だからと言って彼女は無粋な真似はしない。カーネリアンは素知らぬふりでアンケセナーに近況を訊ね、旅の途中で何があったのかを聞いた。二人のいるテーブルは和やかな雰囲気だったが、耳元で聞こえる状況はまるで違っていた。\n「リーダー！応答してください！ターゲットが法陣の中央に到達しようとしています！」\n「どうかしましたか！？レストランで何かトラブルでも！？」\n「お姉ちゃん、何か聞いてるの？耳元で音がしてるみたいだけど。」\n「ああ、音楽を少しね。リターニア人の音楽はなかなか悪くない。アンケセナーも気に入ると思うよ。」\n「リーダー！ご無事ですか！？」\nカーネリアンは立ち上がった。「おっと、少しボリュームが大きすぎたかな。調整してくるよ。」\nカーネリアンが口にした「音楽」という言葉で、ビーズワクスは不安に駆られた。数年ぶりに再会できたと思えば、見知らぬ国が姉に変化をもたらしてしまっていたようだ。きらびやかな曲にすっかり慣れ親しんでいるのだとしたら、今もまだ「あれ」を気に入ってもらえるだろうか？ビーズワクスは包みを開けるのが恥ずかしくなり、それをぎゅっと強く握りしめた。\nカーネリアンは驚くほど早く戻ってきた。通信端末を外した彼女の顔には、ようやく一息つけたというような安堵の笑みが浮かんでいた。\n「お姉ちゃん、音楽はもういいの？」\n「ああ、聞き終わったから。それより、もっと大事なものが私を待っているわけだしね――」\n故郷で口にされるその単語は、ある種の感情を表すものだ。その言葉に、人を安心させてくれるようなカーネリアンの表情が加わって、それはアーツのようにビーズワクスの不安を消し去ってくれた。彼女は意を決して、包みから「あれ」を――リターニアの雰囲気には相容れない、素朴なサルゴンのシストラムを取り出した。\n「おお！私が唯一演奏できる楽器じゃないか！とっくに捨てられてしまったものと思っていたよ。」\nシャンシャン、シャンシャンと鳴り響くのは、故郷の温かで素朴な音だ。\n「懐かしいね。昔はこれでアンケセナーをあやしたものだ。覚えてるかな？」\n「お姉ちゃんはきっと、リターニアで大事なことをしてるんだよね。」\n「なんだって？いやいや、私はただ……」\n「たまには手を休めて、この音を聞いてみてね。たまにでいいから……忙しくて手紙の返事も書けない時とか、家に帰る時間もない時は、これを鳴らして……」\nカーネリアンは強がるのをやめて、表情を和らげた。\n「わかったよ。返事も書くようにするし、できるだけ早く家にも帰るから。」と、そう言ってやれたらと思ったが、いつになれば果たせるかもわからない約束を口にすることはできず、代わりにただシストラムを手に取って軽く振った。\nそれは不思議な感覚だった。リターニアのレストランにいながらにして、サルゴンの木の葉が擦れ合う音が聞こえたような気がしたのだ。カーネリアンとアンケセナーはその音を、森の音楽と呼んでいた。二人が愛した、その音だった。"
+      "desc": "サルゴンには、「異郷で旧友に会う驚きと喜び」という感情を表現するためだけに用いられる単語がある。そのことからも、サルゴン人にとっての故郷、ひいては「故郷の音」がいかなるものなのかを窺い知ることができるだろう。しかしながら、ビーズワクスが突然リターニアのレストランに現れ、姉の目の前に座った時、ゆっくりと耳元の通信端末から手を離すカーネリアンの顔に喜びはなく、彼女には珍しい驚愕の色だけが浮かんでいた。\n「お姉ちゃん、お……驚いた？えへへ……」\nカーネリアンは急いでマイクを切った。\nビーズワクスは、リターニアに来てはいけないと姉が言っていたのを忘れたわけではない。だから心許なげに、通りかかったついでに来たと言い訳をしたのだ。そんな見え透いた嘘を聞いて、カーネリアンはロドスの誰が余計な世話を焼いたのかまで見当を付けることができた。\nしかし、だからと言って彼女は無粋な真似はしない。カーネリアンは素知らぬふりでアンケセナーに近況を訊ね、旅の途中で何があったのかを聞いた。二人のいるテーブルは和やかな雰囲気だったが、耳元で聞こえる状況はまるで違っていた。\n「リーダー！応答してください！ターゲットが法陣の中央に到達しようとしています！」\n「どうかしましたか！？レストランで何かトラブルでも！？」\n「お姉ちゃん、何か聞いてるの？耳元で音がしてるみたいだけど。」\n「ああ、音楽を少しね。リターニア人の音楽はなかなか悪くない。アンケセナーも気に入ると思うよ。」\n「リーダー！ご無事ですか！？」\nカーネリアンは立ち上がった。「おっと、少しボリュームが大きすぎたかな。調整してくるよ。」\nカーネリアンが口にした「音楽」という言葉で、ビーズワクスは不安に駆られた。数年ぶりに再会できたと思えば、見知らぬ国が姉に変化をもたらしてしまっていたようだ。きらびやかな曲にすっかり慣れ親しんでいるのだとしたら、今もまだ「あれ」を気に入ってもらえるだろうか？ビーズワクスは包みを開けるのが恥ずかしくなり、それをぎゅっと強く握りしめた。\nカーネリアンは驚くほど早く戻ってきた。通信端末を外した彼女の顔には、ようやく一息つけたというような安堵の笑みが浮かんでいた。\n「お姉ちゃん、音楽はもういいの？」\n「ああ、聞き終わったから。それより、もっと大事なものが私を待っているわけだしね――」\n故郷で口にされるその単語は、ある種の感情を表すものだ。その言葉に、人を安心させてくれるようなカーネリアンの表情が加わって、それはアーツのようにビーズワクスの不安を消し去ってくれた。彼女は意を決して、包みから「あれ」を――リターニアの雰囲気には相容れない、素朴なサルゴンのシストラムを取り出した。\n「おお！私が唯一演奏できる楽器じゃないか！とっくに捨てられてしまったものと思っていたよ。」\nシャンシャン、シャンシャンと鳴り響くのは、故郷の温かで素朴な音だ。\n「懐かしいね。昔はこれでアンケセナーをあやしたものだ。覚えてるかな？」\n「お姉ちゃんはきっと、リターニアで大事なことをしてるんだよね。」\n「なんだって？いやいや、私はただ……」\n「たまには手を休めて、この音を聞いてみてね。たまにでいいから……忙しくて手紙の返事も書けない時とか、家に帰る時間もない時は、これを鳴らして……」\nカーネリアンは強がるのをやめて、表情を和らげた。\n「わかったよ。返事も書くようにするし、できるだけ早く家にも帰るから。」と、そう言ってやれたらと思ったが、いつになれば果たせるかもわからない約束を口にすることはできず、代わりにただシストラムを手に取って軽く振った。\nそれは不思議な感覚だった。リターニアのレストランにいながらにして、サルゴンの木の葉が擦れ合う音が聞こえたような気がしたのだ。カーネリアンとアンケセナーはその音を、森の音楽と呼んでいた。二人が愛した、その音だった。",
+      "typeIcon": "plx-y",
+      "uniEquipIcon": "uniequip_003_billro",
+      "typeName1": "PLX",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_billro_1",
+        "uniequip_003_billro_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵が多いほど与ダメージが上昇（最大<@ba.kw>{damage_scale:0%}</>まで）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_valid_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵が多いほど与ダメージが上昇（最大<@ba.kw>{damage_scale:0%}</>まで）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_valid_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "SPが最大値以上の時、自身のSP自然回復速度+0.8sp/秒。オーバーチャージ状態のスキル発動中、敵に狙われにくくなる",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "狂嵐の兆し",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 95,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵が多いほど与ダメージが上昇（最大<@ba.kw>{damage_scale:0%}</>まで）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_valid_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "SPが最大値以上の時、自身のSP自然回復速度+1.0sp/秒。オーバーチャージ状態のスキル発動中、敵に狙われにくくなる",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "狂嵐の兆し",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1199,5 +2353,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

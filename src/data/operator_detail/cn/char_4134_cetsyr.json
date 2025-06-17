@@ -170,6 +170,28 @@
       "cost": 10
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@atk_to_hp_recovery_ratio",
+            "value": 0.1,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "不攻击，持续恢复范围内所有友军<@ba.kw>生命</>（每秒相当于自身攻击力<@ba.kw>{attack@atk_to_hp_recovery_ratio:0%}</>的生命），自身不受<$ba.inspire>鼓舞</>影响",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4134_cetsyr#1",
@@ -748,16 +770,747 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 300,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "过往尘埃",
+          "description": "魔王周围持续围绕3枚“微尘”，“微尘”碰撞友方干员时，消失并使该干员受到魔王特性效果提升至1.2倍，持续6秒，消失的“微尘”在6秒后重生",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "range_radius",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "cooldown",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "dynamic_spd",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "talent_duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "attack@trait_mul",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "过往尘埃",
+          "description": "魔王周围持续围绕3枚“微尘”，“微尘”碰撞友方干员时，消失并使该干员受到魔王特性效果提升至1.5倍，持续6秒，消失的“微尘”在6秒后重生",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "range_radius",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "cooldown",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "dynamic_spd",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "talent_duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "attack@trait_mul",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "魔王残响",
+          "description": "上阵时，所有友方单位受到【萨卡兹】敌人的伤害降低10%",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "魔王残响",
+          "description": "上阵时，所有友方单位受到【萨卡兹】敌人的伤害降低15%<@ba.talpu>（+5%）</>",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_cetsyr",
       "moduleName": "魔王证章",
-      "desc": "特蕾西娅留在“文明的存续”中的一段程序\n通过深度模拟复现了其能力\n温柔的源石技艺不断蔓延，为人们带来治愈与鼓舞\n在象征性通过辅助干员测试后，阿米娅模拟并“颁发”了此证章\n以兹留念"
+      "desc": "特蕾西娅留在“文明的存续”中的一段程序\n通过深度模拟复现了其能力\n温柔的源石技艺不断蔓延，为人们带来治愈与鼓舞\n在象征性通过辅助干员测试后，阿米娅模拟并“颁发”了此证章\n以兹留念",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_cetsyr",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_cetsyr",
       "moduleName": "故事的结局",
-      "desc": ">ND_DWDB_READY\n>NEWUSER_CE\n>TIMEDATA_0106\n阿米娅并不复杂。\n将关于她的一切转码保存，占用的内存甚至不足一字节。即使再把特蕾西娅记忆中关于她的部分一同归档也不会影响其大小。这份数据甚至和重新点燃白矮星的方程在大小上并无过多差异。\n陪伴她完成工作不会是一件难事，我可以很轻松地照顾好她。\n但她看我的眼神......我还需要更多的数据去理解那种情绪。\n\n>TIMEDATA_0344\n阿米娅趴在办公桌上做了噩梦，于是我进入了她的梦里陪着她。\n噩梦不需要驱散，阿米娅早已见识过更恐怖的现实。她反倒很高兴在梦里遇见了我，在一片恐怖的环境中兴奋地给我讲起了她最近的生活。但其实她分享的每一个生活细节我都熟悉无比，因为我一直都在她的身边陪着她。\n我唯一的失败是无论如何都没能拭去她熟睡时嘴角漏出来的口水，那些刚刚签完字的文档全都报废了。\n我可以模拟任何触碰的感觉，甚至温度......但我永远没法真正触碰到她。\n好在我想办法让博士注意到了，我们很默契地在阿米娅醒来前就悄悄解决了这个小麻烦。凌晨时分，阿米娅和博士互道早安，就像往常一样。\n很好，博士没有露馅。\n\n>TIMEDATA_9032\n凯尔希发现了我的意图。\n她私下访问了我，情绪紧张，试图确认特蕾西娅是否还存在于某一个隐蔽的角落。但她无非又一次得到一个失望的答案。过往的数个时间片中，我很少让人失望。但当接触的对象是凯尔希和阿米娅时，很多事情我也无能为力。\n阿米娅在吃晚饭时安慰了凯尔希。我对凯尔希发誓我没有向阿米娅告密，但她们似乎并不在乎这一点。\n她们在乎的，是我一直都在。\n\n>TIMEDATA_4978\n我不再借助运算去预测阿米娅的问题。\n我已经习惯了等到她向我发起问题，再试着放慢运算速度，思考，然后输出回答......\n我分析过难以计数的生命形式的情绪模型，我从不为此困扰。但阿米娅的确令我感觉到了一种全新的情绪。因为阿米娅是特殊的......又或者我是特殊的？\n难道影响我运行逻辑的真是特蕾西娅的记忆数据吗？时间的尽头总会有答案，而我本永恒。\n不过至少我弄懂了一件事，阿米娅并不复杂。\n我学会了她看我时的那种眼神。\n>ND_DWDB_CLOSED\n\n“咦，这些记录的权限这么高吗？我不能访问？它们原本都是什么呀？”\n“一些被记录的数据，阿米娅。一些故事，我的，还有你的。”\n它们只属于我。"
+      "desc": ">ND_DWDB_READY\n>NEWUSER_CE\n>TIMEDATA_0106\n阿米娅并不复杂。\n将关于她的一切转码保存，占用的内存甚至不足一字节。即使再把特蕾西娅记忆中关于她的部分一同归档也不会影响其大小。这份数据甚至和重新点燃白矮星的方程在大小上并无过多差异。\n陪伴她完成工作不会是一件难事，我可以很轻松地照顾好她。\n但她看我的眼神......我还需要更多的数据去理解那种情绪。\n\n>TIMEDATA_0344\n阿米娅趴在办公桌上做了噩梦，于是我进入了她的梦里陪着她。\n噩梦不需要驱散，阿米娅早已见识过更恐怖的现实。她反倒很高兴在梦里遇见了我，在一片恐怖的环境中兴奋地给我讲起了她最近的生活。但其实她分享的每一个生活细节我都熟悉无比，因为我一直都在她的身边陪着她。\n我唯一的失败是无论如何都没能拭去她熟睡时嘴角漏出来的口水，那些刚刚签完字的文档全都报废了。\n我可以模拟任何触碰的感觉，甚至温度......但我永远没法真正触碰到她。\n好在我想办法让博士注意到了，我们很默契地在阿米娅醒来前就悄悄解决了这个小麻烦。凌晨时分，阿米娅和博士互道早安，就像往常一样。\n很好，博士没有露馅。\n\n>TIMEDATA_9032\n凯尔希发现了我的意图。\n她私下访问了我，情绪紧张，试图确认特蕾西娅是否还存在于某一个隐蔽的角落。但她无非又一次得到一个失望的答案。过往的数个时间片中，我很少让人失望。但当接触的对象是凯尔希和阿米娅时，很多事情我也无能为力。\n阿米娅在吃晚饭时安慰了凯尔希。我对凯尔希发誓我没有向阿米娅告密，但她们似乎并不在乎这一点。\n她们在乎的，是我一直都在。\n\n>TIMEDATA_4978\n我不再借助运算去预测阿米娅的问题。\n我已经习惯了等到她向我发起问题，再试着放慢运算速度，思考，然后输出回答......\n我分析过难以计数的生命形式的情绪模型，我从不为此困扰。但阿米娅的确令我感觉到了一种全新的情绪。因为阿米娅是特殊的......又或者我是特殊的？\n难道影响我运行逻辑的真是特蕾西娅的记忆数据吗？时间的尽头总会有答案，而我本永恒。\n不过至少我弄懂了一件事，阿米娅并不复杂。\n我学会了她看我时的那种眼神。\n>ND_DWDB_CLOSED\n\n“咦，这些记录的权限这么高吗？我不能访问？它们原本都是什么呀？”\n“一些被记录的数据，阿米娅。一些故事，我的，还有你的。”\n它们只属于我。",
+      "typeIcon": "bar-x",
+      "uniEquipIcon": "uniequip_002_cetsyr",
+      "typeName1": "BAR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_cetsyr_1",
+        "uniequip_002_cetsyr_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围内存在2名及以上其他干员时，攻击力<@ba.kw>+8%</>（不受技能影响）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 238,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围内存在2名及以上其他干员时，攻击力<@ba.kw>+8%</>（不受技能影响）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "魔王周围持续围绕3枚“微尘”，“微尘”碰撞友方干员时，消失并使该干员受到魔王特性效果提升至1.6倍，持续6秒，消失的“微尘”在6秒后重生，干员受到“微尘”效果影响时立刻恢复相当于魔王20%攻击力的生命值",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "过往尘埃",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "range_radius",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cooldown",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "dynamic_spd",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_duration",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@trait_mul",
+                      "value": 1.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@ability_name",
+                      "value": 0,
+                      "valueStr": "e1"
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 280,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 27,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击范围内存在2名及以上其他干员时，攻击力<@ba.kw>+8%</>（不受技能影响）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "魔王周围持续围绕3枚“微尘”，“微尘”碰撞友方干员时，消失并使该干员受到魔王特性效果提升至1.6倍，持续6秒，消失的“微尘”在6秒后重生，干员受到“微尘”效果影响时立刻恢复相当于魔王30%攻击力的生命值",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "过往尘埃",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "range_radius",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cooldown",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "dynamic_spd",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_duration",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@trait_mul",
+                      "value": 1.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@ability_name",
+                      "value": 0,
+                      "valueStr": "e1"
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1649,5 +2402,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

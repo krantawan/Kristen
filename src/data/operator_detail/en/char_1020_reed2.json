@@ -152,6 +152,24 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "scale",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1020_reed2#1",
@@ -756,16 +774,604 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +26",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Cinder",
+          "description": "When dealing damage, 30% chance to inflict Cinder: ATK -10%, 15% <$ba.magicfragile>[Arts Fragility]</>, does not stack, lasts 6s",
+          "blackboard": {
+            "prob": 0.3,
+            "atk": -0.1,
+            "damage_scale": 1.15,
+            "duration": 6,
+            "talent@atk": -0.1,
+            "talent@damage_scale": 1.15
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "Cinder",
+          "description": "When dealing damage, 30% chance to inflict Cinder: ATK -12%<@ba.talpu> (+2)</>, 17%<@ba.talpu> (+2)</> <$ba.magicfragile>[Arts Fragility]</>, does not stack, lasts 6s.",
+          "blackboard": {
+            "prob": 0.3,
+            "atk": -0.12,
+            "damage_scale": 1.17,
+            "duration": 6,
+            "talent@atk": -0.12,
+            "talent@damage_scale": 1.17
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Cinder",
+          "description": "When dealing damage, 30% chance to inflict Cinder: ATK -20%, 30% <$ba.magicfragile>[Arts Fragility]</>, does not stack, lasts 6s",
+          "blackboard": {
+            "prob": 0.3,
+            "atk": -0.2,
+            "damage_scale": 1.3,
+            "duration": 6,
+            "talent@atk": -0.2,
+            "talent@damage_scale": 1.3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "Cinder",
+          "description": "When dealing damage, 30% chance to inflict Cinder: ATK -22%<@ba.talpu> (+2)</>, 32%<@ba.talpu> (+2)</> <$ba.magicfragile>[Arts Fragility]</>, does not stack, lasts 6s",
+          "blackboard": {
+            "prob": 0.3,
+            "atk": -0.22,
+            "damage_scale": 1.32,
+            "duration": 6,
+            "talent@atk": -0.22,
+            "talent@damage_scale": 1.32
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Reflected Shine",
+          "description": "When healing an ally, Reed the Flame Shadow heals herself for 50% of the amount healed",
+          "blackboard": {
+            "scale": 0.5
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "2",
+          "name": "Reflected Shine",
+          "description": "When healing an ally, Reed the Flame Shadow heals herself for 55%<@ba.talpu> (+5)</> of the amount healed",
+          "blackboard": {
+            "scale": 0.55
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_reed2",
       "moduleName": "Reed the Flame Shadow's Badge",
-      "desc": "Operator Reed the Flame Shadow has demonstrated a remarkable aptitude for simultaneous aggression and medical treatment while casting.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Incantation Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Reed the Flame Shadow has demonstrated a remarkable aptitude for simultaneous aggression and medical treatment while casting.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Incantation Medic responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_reed2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_reed2",
       "moduleName": "'A Floral Garland to the Red Dragon'",
-      "desc": "Feeling in the dark, Reed untangles her hair with utmost care, then stands herself straight once more.\nA dream comes to mind, one she always used to have. Her sister stands behind her in her shadow, watching as she puts on a deathly heavy crown. She feels it's wrong for her to be wearing it, but she can't take it off no matter how she tries; all she can do is melt it by fire. Metal trickles down her face, scalding, searing, but the idea of the purple flame bringing her comfort, ice-cold, scares her more. So she makes not a sound.\nAnd she recalls two people she met while pursuing the high-speed battleships' tracks a few days ago, ordinary folk. They knew the name of Dublinn—their land showed scars from being razed by fire. They asked Reed point-blank, are you the one who ruined our lives? The Draco, manipulator of the flame of life, fell silent for a while. She was familiar with the fear her sister could leave in people. But in the end, she nodded, for she is the Leader of Dublinn, and the Tarans have no need for two Dublinns.\nSomeone is calling her name. She leaves, through the tight wooden door.\n—She crosses a threshing floor, filled with hay and cardboard stage props of every color.\nHer costume's a little cumbersome—everyone wanted to drape their own two sashes over her, in much the manner one nestles two flowers for their beloved in a buttonhole. Surely the Red Dragon didn't take to the battlefield like this a millennium ago.\nBut no matter. They don't have to trouble themselves with the looks of the crown-bearer. Let the wandering minstrels suppose, for the sake of a rhyme, that the Draco hero of legend had hair just as flowing and golden.\nReed clears her throat and swishes her tail, a little wary. The Tarans in front of her don't know how each brook of muddy waters tracing through the marsh is the track of a galloping warship. They don't know that the bleak clouds to the north that never blow this way are the fumes of war. They don't know that what Reed grasps is the very flame of the Red Dragon of Tara. They simply know it's important to still have food to eat after their taxes are levied, and it's as important to make sacrifice and perform theater so their farmwork is bountiful and blessed. Sat in the back are the soldiers who've fought all the way alongside her, and they look at her just as expectantly. They've taught Reed that a failure to learn the lines means no good harvest in the coming year.\n'I give you land, and I give you the weather to nurture it.'\nA fire ignites at her speartip in time with her words, and the audience abruptly settles down. At this moment, all could swear they have some vague premonition as to who it is that stands before them.\nReed lowers her head. A child places a floral garland on her head of every color under the sun, each flower a symbol of a growing, flourishing crop.\nIt is light, almost weightless. She bows down, and to the village's script, unchanged in all its years, she adds one line.\n'I give you peace.'"
+      "desc": "Feeling in the dark, Reed untangles her hair with utmost care, then stands herself straight once more.\nA dream comes to mind, one she always used to have. Her sister stands behind her in her shadow, watching as she puts on a deathly heavy crown. She feels it's wrong for her to be wearing it, but she can't take it off no matter how she tries; all she can do is melt it by fire. Metal trickles down her face, scalding, searing, but the idea of the purple flame bringing her comfort, ice-cold, scares her more. So she makes not a sound.\nAnd she recalls two people she met while pursuing the high-speed battleships' tracks a few days ago, ordinary folk. They knew the name of Dublinn—their land showed scars from being razed by fire. They asked Reed point-blank, are you the one who ruined our lives? The Draco, manipulator of the flame of life, fell silent for a while. She was familiar with the fear her sister could leave in people. But in the end, she nodded, for she is the Leader of Dublinn, and the Tarans have no need for two Dublinns.\nSomeone is calling her name. She leaves, through the tight wooden door.\n—She crosses a threshing floor, filled with hay and cardboard stage props of every color.\nHer costume's a little cumbersome—everyone wanted to drape their own two sashes over her, in much the manner one nestles two flowers for their beloved in a buttonhole. Surely the Red Dragon didn't take to the battlefield like this a millennium ago.\nBut no matter. They don't have to trouble themselves with the looks of the crown-bearer. Let the wandering minstrels suppose, for the sake of a rhyme, that the Draco hero of legend had hair just as flowing and golden.\nReed clears her throat and swishes her tail, a little wary. The Tarans in front of her don't know how each brook of muddy waters tracing through the marsh is the track of a galloping warship. They don't know that the bleak clouds to the north that never blow this way are the fumes of war. They don't know that what Reed grasps is the very flame of the Red Dragon of Tara. They simply know it's important to still have food to eat after their taxes are levied, and it's as important to make sacrifice and perform theater so their farmwork is bountiful and blessed. Sat in the back are the soldiers who've fought all the way alongside her, and they look at her just as expectantly. They've taught Reed that a failure to learn the lines means no good harvest in the coming year.\n'I give you land, and I give you the weather to nurture it.'\nA fire ignites at her speartip in time with her words, and the audience abruptly settles down. At this moment, all could swear they have some vague premonition as to who it is that stands before them.\nReed lowers her head. A child places a floral garland on her head of every color under the sun, each flower a symbol of a growing, flourishing crop.\nIt is light, almost weightless. She bows down, and to the village's script, unchanged in all its years, she adds one line.\n'I give you peace.'",
+      "typeIcon": "inc-x",
+      "uniEquipIcon": "uniequip_002_reed2",
+      "typeName1": "INC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_reed2_1",
+        "uniequip_002_reed2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 105,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 145,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 42,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When healing an ally, healing effect is increased by 3%, and Reed the Flame Shadow heals herself for 55% of the amount healed",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Reflected Shine",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 1.03,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When healing an ally, healing effect is increased by 3%, and Reed the Flame Shadow heals herself for 60% <@ba.talpu>(+5)</> of the amount healed",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 5,
+                  "prefabKey": "2",
+                  "name": "Reflected Shine",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 1.03,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When healing an ally, healing effect is increased by 5%, and Reed the Flame Shadow heals herself for 60% of the amount healed",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Reflected Shine",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When healing an ally, healing effect is increased by 5%, and Reed the Flame Shadow heals herself for 65% <@ba.talpu>(+5)</> of the amount healed",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 5,
+                  "prefabKey": "2",
+                  "name": "Reflected Shine",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.65,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "heal_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1227,5 +1833,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

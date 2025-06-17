@@ -152,6 +152,24 @@
       "cost": 8
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "attack@atk_to_hp_recovery_ratio",
+          "value": 0.1
+        }
+      ],
+      "overrideDescription": "Does not attack but continuously restores the <@ba.kw>HP</> of all allies within range (the HP restored per second is equal to <@ba.kw>{attack@atk_to_hp_recovery_ratio:0%}</> of self ATK). Self is unaffected by <$ba.inspire>Inspiration</>",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1012_skadi2#1",
@@ -736,16 +754,740 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -6 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +27",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 27,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Ancient Kin",
+          "description": "Can use a Seaborn that lasts for 15 seconds. The Seaborn's Attack Range is regarded as an extension of this unit's Attack Range",
+          "blackboard": {
+            "cnt": 1
+          },
+          "tokenKey": "token_10017_skadi2_dedant",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Ancient Kin",
+          "description": "Can use a Seaborn that lasts for 25 seconds. The Seaborn's Attack Range is regarded as an extension of this unit's Attack Range",
+          "blackboard": {
+            "cnt": 1
+          },
+          "tokenKey": "token_10017_skadi2_dedant",
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Predatory Habits",
+          "description": "ATK +6% when there is an allied unit within range of self or the Seaborn; If the allied unit is an [Abyssal Hunter] Operator, gain ATK +15% instead",
+          "blackboard": {
+            "skadi2_t_2[atk][1].atk": 0.06,
+            "skadi2_t_2[atk][2].atk": 0.15
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Predatory Habits",
+          "description": "ATK +9% <@ba.talpu>(+3%)</> when there is an allied unit within range of self or the Seaborn; If the allied unit is an Abyssal Hunter operator, gain ATK +18% <@ba.talpu>(+3%)</> instead",
+          "blackboard": {
+            "skadi2_t_2[atk][1].atk": 0.09,
+            "skadi2_t_2[atk][2].atk": 0.18
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_skadi2",
       "moduleName": "Skadi the Corrupting Heart's Badge",
-      "desc": "You sheathe your blade and hide who you are.//YOU KNOW WHO YOU ARE AND WADE UNTO WE MANY.\nYou traipse through the shallows and sing twixt sea and sky.//YOU MELT TWIXT EVERY DEPTH AND CHANT FOR YOUR KIN.\nAbyssal Hunter name of Skadi,//SEABORN NAME OF ISHAR'MLA,\nHHeErReE yYoOuU lLiInNgGeErR.\nWe await your deployment.//WE CLAMOR FOR YOUR CALL."
+      "desc": "You sheathe your blade and hide who you are.//YOU KNOW WHO YOU ARE AND WADE UNTO WE MANY.\nYou traipse through the shallows and sing twixt sea and sky.//YOU MELT TWIXT EVERY DEPTH AND CHANT FOR YOUR KIN.\nAbyssal Hunter name of Skadi,//SEABORN NAME OF ISHAR'MLA,\nHHeErReE yYoOuU lLiInNgGeErR.\nWe await your deployment.//WE CLAMOR FOR YOUR CALL.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_skadi2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_skadi2",
       "moduleName": "An Exuvia of Her Past",
-      "desc": "The Time has come, He thinks, despite that Time exists no longer.\nThe last distant light extinguishes under His watchful gaze. At His extremities are naught but thin void blacknesses, the stars gone. Amidst space, His half-immaterial body is the lone existence that remains, stretching to infinity, drifting without destination. Ere people had proclaimed Him the end of a cycle; now in this moment He truly is. All else has passed on from being; only He persists.\nSo, what next?\nHe gazes at His own body. The blood kin He once migrated with. The kin He led to blot out countless millions upon millions of lives, all turned part of His body, nourishment for it. Where once clamored countless visions of the future, now lapsed into eternal silence. All this the cost for His life in this very moment, yet in this very moment He knows not what He could use His life for.\nIn yore He had a calling that drove Him to engulf those millions upon millions of lives, and each and every star and satellite they perched on, becoming as every lifeform that had and could have existed in this universe, ultimately drove Him to this shore of oblivion—yet now that once-irresistible calling grows imperceptible, soon to dwindle to nothing. Those hopes that all came to dwell within Him died at the moment where all fell quiet. Even the ones who first blessed Him with this mission may never have imagined this future to follow.\nHe feels lost, uneasy. But nowhere can He seek the answers. Beyond Him is mere void, and within Him purposeless nutrients. Given this, the only place to send His thought can be into the deepest recesses of His body, to stir those aimless nutrients, to try and derive the slightest hint from them.\nUnder His thought's interference, they begin to collide, begin to reconstitute, reform as endless and strange shatterings of information, shatterings that pass away in a blink. So in this Timeless eternity He keeps trying and trying, until His thought finally catches with nimbleness upon a piece altogether familiar to Him—it is a fragment of His own voice, metal threads' vibrations and living membranes' tremors in common harmony... Yes, it is Song.\nOnce, a lone technician had sung this. No matter what seas she swam, it was by herself, trailing hundreds upon thousands of optical cables behind her. The technician deftly strummed these optical cables, and amidst swirling halos sang to schools of indifferent fins that passed her by.\nOnce, a lone wandering singer had sung this too. No matter what lands she walked, it was by herself, trailing tune after tune of memories behind her. The singer wove those memories into ditties, and in rundown inns sang to crowds of indifferent souls.\nIn this moment He Himself is lone, trailing every breadth of creation He engulfed behind Him, drifting through a dying universe to the ends of Time. So in this moment, should He not sing too, to those indifferent nutrients within His body?\nSkadi certainly would. While complex problems still lay on her mind to puzzle through, her Song would well forth—for Song was her language, her imagination, her creation.\nSo Skadi begins to sing. And in her Song, Skadi begins to blossom, more fiercely and ardently than any life that has ever blossomed before. Dimly, Skadi realizes the act she is about to undertake. With the beginning of this Song, those indifferent nutrients within her body will birth new existence, new life, a new universe.\nViolently her body expands, and rapidly her consciousness scatters, and filled with hope she imagines the brand new universe she will never witness."
+      "desc": "The Time has come, He thinks, despite that Time exists no longer.\nThe last distant light extinguishes under His watchful gaze. At His extremities are naught but thin void blacknesses, the stars gone. Amidst space, His half-immaterial body is the lone existence that remains, stretching to infinity, drifting without destination. Ere people had proclaimed Him the end of a cycle; now in this moment He truly is. All else has passed on from being; only He persists.\nSo, what next?\nHe gazes at His own body. The blood kin He once migrated with. The kin He led to blot out countless millions upon millions of lives, all turned part of His body, nourishment for it. Where once clamored countless visions of the future, now lapsed into eternal silence. All this the cost for His life in this very moment, yet in this very moment He knows not what He could use His life for.\nIn yore He had a calling that drove Him to engulf those millions upon millions of lives, and each and every star and satellite they perched on, becoming as every lifeform that had and could have existed in this universe, ultimately drove Him to this shore of oblivion—yet now that once-irresistible calling grows imperceptible, soon to dwindle to nothing. Those hopes that all came to dwell within Him died at the moment where all fell quiet. Even the ones who first blessed Him with this mission may never have imagined this future to follow.\nHe feels lost, uneasy. But nowhere can He seek the answers. Beyond Him is mere void, and within Him purposeless nutrients. Given this, the only place to send His thought can be into the deepest recesses of His body, to stir those aimless nutrients, to try and derive the slightest hint from them.\nUnder His thought's interference, they begin to collide, begin to reconstitute, reform as endless and strange shatterings of information, shatterings that pass away in a blink. So in this Timeless eternity He keeps trying and trying, until His thought finally catches with nimbleness upon a piece altogether familiar to Him—it is a fragment of His own voice, metal threads' vibrations and living membranes' tremors in common harmony... Yes, it is Song.\nOnce, a lone technician had sung this. No matter what seas she swam, it was by herself, trailing hundreds upon thousands of optical cables behind her. The technician deftly strummed these optical cables, and amidst swirling halos sang to schools of indifferent fins that passed her by.\nOnce, a lone wandering singer had sung this too. No matter what lands she walked, it was by herself, trailing tune after tune of memories behind her. The singer wove those memories into ditties, and in rundown inns sang to crowds of indifferent souls.\nIn this moment He Himself is lone, trailing every breadth of creation He engulfed behind Him, drifting through a dying universe to the ends of Time. So in this moment, should He not sing too, to those indifferent nutrients within His body?\nSkadi certainly would. While complex problems still lay on her mind to puzzle through, her Song would well forth—for Song was her language, her imagination, her creation.\nSo Skadi begins to sing. And in her Song, Skadi begins to blossom, more fiercely and ardently than any life that has ever blossomed before. Dimly, Skadi realizes the act she is about to undertake. With the beginning of this Song, those indifferent nutrients within her body will birth new existence, new life, a new universe.\nViolently her body expands, and rapidly her consciousness scatters, and filled with hope she imagines the brand new universe she will never witness.",
+      "typeIcon": "bar-x",
+      "uniEquipIcon": "uniequip_002_skadi2",
+      "typeName1": "BAR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_skadi2_1",
+        "uniequip_002_skadi2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 84,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 26,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 12,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10017_skadi2_dedant": [
+              {
+                "key": "respawn_time",
+                "value": -3,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Can use a Seaborn that lasts for 28 seconds. The Seaborn's Attack Range is regarded as an extension of this unit's Attack Range; Seaborn Redeployment Time -3s",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Ancient Kin",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": "token_10017_skadi2_dedant",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Lasts 28 seconds after deployment",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Ancient Kin",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10017_skadi2_dedant",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 17,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10017_skadi2_dedant": [
+              {
+                "key": "respawn_time",
+                "value": -5,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Can use a Seaborn that lasts for 30 seconds. The Seaborn's Attack Range is regarded as an extension of this unit's Attack Range; Seaborn Redeployment Time -5s",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Ancient Kin",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": "token_10017_skadi2_dedant",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Lasts 30 seconds after deployment",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Ancient Kin",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10017_skadi2_dedant",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1206,6 +1948,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10017_skadi2_dedant"
   ],
   "patch_info": {}
 }

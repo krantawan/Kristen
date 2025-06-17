@@ -151,6 +151,24 @@
       "cost": 23
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "times",
+          "value": 3
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_469_indigo#1",
@@ -629,16 +647,566 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +36",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 36,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 100,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Gentle Binding Gaze",
+          "description": "When attacking, has a 12% chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies",
+          "blackboard": {
+            "prob": 0.12,
+            "duration": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Gentle Binding Gaze",
+          "description": "When attacking, has a 14% <@ba.talpu>(+2%)</> chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies",
+          "blackboard": {
+            "prob": 0.14,
+            "duration": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Gentle Binding Gaze",
+          "description": "When attacking, has a 18% chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies",
+          "blackboard": {
+            "prob": 0.18,
+            "duration": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Gentle Binding Gaze",
+          "description": "When attacking, has a 20% <@ba.talpu>(+2%)</> chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies",
+          "blackboard": {
+            "prob": 0.2,
+            "duration": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_indigo",
       "moduleName": "Indigo's Badge",
-      "desc": "Operator Indigo has demonstrated a perennial commitment to Originium Arts.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Mystic Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Indigo has demonstrated a perennial commitment to Originium Arts.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Mystic Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_indigo",
       "moduleName": "Staff Maintenance Kit",
-      "desc": "When Indigo was still newly arrived on Rhodes Island, we conducted a study on her staff. The unit at its head seemed to be the key to its function, but we could find no clear theory underpinning it. During further studies, new Operators Irene and Lumen—who had visited Engineering to undergo equipment certification—coincidentally passed by, and the latter took one look at Indigo's staff and very confidently told us that he had seen something similar in the 'Eye of Iberia.' The 'Eye of Iberia' is a lighthouse... a series of lighthouses along Iberia's coastal towns, a grand project that once illuminated the whole nation, abandoned altogether after a disaster decades ago, and now a legacy of the age. Indigo's teacher was one of those very lighthouse keepers, and it was he who gave her the staff as she left home.\n'The unit at her staff's head is a standard installation in Iberia's lighthouse systems.' This much should be more or less accurate. The issue was that, based on her account, her teacher protected the Rocky Coast's lighthouse all his life, hoping it would one day shine anew. So why would he give her something so important and then allow her to leave?\nIndigo herself had this to say: 'I'm sure my teacher wanted me to gain some experience on the outside, unravel the secret of its technology, and let it come to life once again... He really was mindful!'\nMeanwhile, Irene stated: 'Will Iberia's lighthouses never shine again without those Ægir relics? Iberia's prosperity should be left up to the Iberians themselves this time.'\nIndigo and Irene's answers undoubtedly represent two different outlooks held by the modern Iberian on the nation's future, and deserve some consideration. However, once they had both left, Lumen raised an alternative, 'small-minded' conjecture, more or less that before an old man sends his granddaughter off to the city, he stuffs the only valuable they own into her suitcase and hopes she'll never come back, or that he'll have passed by the time she does... or thereabouts.\n'The elderly are like that. They like to decide everything for you while you're still clueless,' Lumen added.\nSpeculating on an old man's intentions seemed unnecessary. Besides, having ascertained the history of her Arts unit, our investigation into Indigo was complete. And, of course, it would never have affected how welcome she is at Rhodes Island. But we will note that upon learning the staff's origins, Indigo went blank for a moment. As for what thoughts she had in that instant, and what decisions she made, we have no way of knowing."
+      "desc": "When Indigo was still newly arrived on Rhodes Island, we conducted a study on her staff. The unit at its head seemed to be the key to its function, but we could find no clear theory underpinning it. During further studies, new Operators Irene and Lumen—who had visited Engineering to undergo equipment certification—coincidentally passed by, and the latter took one look at Indigo's staff and very confidently told us that he had seen something similar in the 'Eye of Iberia.' The 'Eye of Iberia' is a lighthouse... a series of lighthouses along Iberia's coastal towns, a grand project that once illuminated the whole nation, abandoned altogether after a disaster decades ago, and now a legacy of the age. Indigo's teacher was one of those very lighthouse keepers, and it was he who gave her the staff as she left home.\n'The unit at her staff's head is a standard installation in Iberia's lighthouse systems.' This much should be more or less accurate. The issue was that, based on her account, her teacher protected the Rocky Coast's lighthouse all his life, hoping it would one day shine anew. So why would he give her something so important and then allow her to leave?\nIndigo herself had this to say: 'I'm sure my teacher wanted me to gain some experience on the outside, unravel the secret of its technology, and let it come to life once again... He really was mindful!'\nMeanwhile, Irene stated: 'Will Iberia's lighthouses never shine again without those Ægir relics? Iberia's prosperity should be left up to the Iberians themselves this time.'\nIndigo and Irene's answers undoubtedly represent two different outlooks held by the modern Iberian on the nation's future, and deserve some consideration. However, once they had both left, Lumen raised an alternative, 'small-minded' conjecture, more or less that before an old man sends his granddaughter off to the city, he stuffs the only valuable they own into her suitcase and hopes she'll never come back, or that he'll have passed by the time she does... or thereabouts.\n'The elderly are like that. They like to decide everything for you while you're still clueless,' Lumen added.\nSpeculating on an old man's intentions seemed unnecessary. Besides, having ascertained the history of her Arts unit, our investigation into Indigo was complete. And, of course, it would never have affected how welcome she is at Rhodes Island. But we will note that upon learning the staff's origins, Indigo went blank for a moment. As for what thoughts she had in that instant, and what decisions she made, we have no way of knowing.",
+      "typeIcon": "msc-x",
+      "uniEquipIcon": "uniequip_002_indigo",
+      "typeName1": "MSC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_indigo_1",
+        "uniequip_002_indigo_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30043",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30023",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts damage</>; When unable to find a target, attacks can be <@ba.kw>stored up</> and fired all at once (Up to 4 charges)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 59,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts damage</>; When unable to find a target, attacks can be <@ba.kw>stored up</> and fired all at once (Up to 4 charges)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking, has a 23% chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Gentle Binding Gaze",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking, has a 25% <@ba.talpu>(+2%)</> chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Gentle Binding Gaze",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "times",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts damage</>; When unable to find a target, attacks can be <@ba.kw>stored up</> and fired all at once (Up to 4 charges)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking, has a 25% chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Gentle Binding Gaze",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking, has a 27% <@ba.talpu>(+2%)</> chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Gentle Binding Gaze",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1100,5 +1668,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

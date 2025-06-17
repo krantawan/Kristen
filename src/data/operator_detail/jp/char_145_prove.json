@@ -137,6 +137,7 @@
       "cost": 19
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_145_prove#1",
@@ -618,16 +619,655 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+30",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 30,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ハンターアロー",
+          "description": "攻撃時、20%の確率でその攻撃のみ攻撃力が140％に上昇。敵が正面1マスにいる時、その確率が50%に上昇",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "prob2",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "ハンターアロー",
+          "description": "攻撃時、20%の確率でその攻撃のみ攻撃力が150%<@ba.talpu>(+10%)</>に上昇。敵が正面1マスにいる時、その確率が50%に上昇",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "prob2",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ハンターアロー",
+          "description": "攻撃時、20%の確率でその攻撃のみ攻撃力が180%に上昇。敵が正面1マスにいる時、その確率が50%に上昇",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "prob2",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "ハンターアロー",
+          "description": "攻撃時、20%の確率でその攻撃のみ攻撃力が190%<@ba.talpu>(+10%)</>に上昇。敵が正面1マスにいる時、その確率が50%に上昇",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "prob2",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.9,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_prove",
       "moduleName": "プロヴァンスの記章",
-      "desc": "プロヴァンスは中距離の精密射撃により物理的損傷を与えることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、精密射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "プロヴァンスは中距離の精密射撃により物理的損傷を与えることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、精密射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_prove",
       "moduleName": "尻尾ケアセット",
-      "desc": "「毛並みの乱れは大地の乱れ！」\n「『Mr.ヴォイト』のヘアトリートメントで、魅力の階段を駆け上がれ！」\n「……」\nモデルが大きな尻尾を持ち上げて、誇らしげにそれをカメラに見せつけている。カメラワークもなにもあったものではないし、モデルのポージングも硬く不自然だった。こんな広告が流れたところで、そのヘアトリートメント剤の名が広まることなどあるのだろうか。しかしながら、その尻尾があまりにも立派なのは事実であった。ふさふさで艶があり、文句なしの角度で反っている。\n\n天災トランスポーターのプロヴァンスには、当然モデルの経験などなかった。彼女はこれまで幾度となくこんな言葉を耳にしてきた――「最高の結果を残すことなどできはしない。我々はただ、次はもっと上手くやるだけだ」。この「もっと上手く」が示すのは、今回の結果に心残りがあるということだ。荒野をいくら駆け回っても観測した情報がすべて正しいのか、想定被災地への情報伝達が間に合うのか、そしてその情報は現地の人々全員に伝わるのかを断定することなどできない。天災トランスポーターの仕事に心残りはつきものであり、誰もが「次はもっとうまくやろう」と傷をなめ合うことしかできないのだ。\n\n荒野から救い出した人々を安全地帯まで連れて行き、振り返った先で集落が暴風の餌食となりもう見えなくなっていたときも同じだった。まだそこには救い出せなかった人が残っていたかもしれないが、プロヴァンスは「自分を責めちゃダメだよ。荒野の集落は分散しすぎてるし、通信インフラも全然整ってないから、足だけを頼りに救助活動を行ってもこれが精一杯なんだよ……次はもっと上手くやろう」と自分を慰めるしかなかった。\n翌日、街で物資の補給をしていると、プロヴァンスは例の施工班と鉢合わせた。彼らはある企業に雇われ、現地政府の局地通信システム改造に協力し、さらにいくつかの交差点に電子スクリーンを設置する予定だという。その用途は……広告を流すためだった。ここでは生活水準向上を啓蒙する広告が嫌というほど流れるのに、荒野の人々には生死に関わる災害情報すら届かないのが現状だ。プロヴァンスは企業の責任者に面会を申し入れ、局地通信システムのカバー範囲を緊急通信チャンネルだけでも構わないので近郊の荒野まで広げることはできないかと懇願した。\n「メシさえろくに食えない荒野の連中に、ヘアトリートメントの広告を見せてどうするんだ？我々に何の利益がある？」\n「希望の伝達だとかご立派な理想論は結構だ。それは君たち天災トランスポーターの願いに過ぎない。」\n「どうしてもダメなの……？」\nプロヴァンス自身も、おそらく聞き入れてはもらえないだろうとわかっていた。もし緊急通信回線を敷いてもらえれば、将来もしもの事態が起きた際に、情報をいち早く伝えることができるというのに……\nしかしプロヴァンスは諦めなかった。最高の結果を残すことはできなくとも、もっと上手くやることはできるはずだ。ならば、手を尽くさない理由などない。\n「……さっき、ヘアトリートメントの広告って言ってなかった？」\n「それなら、こういう交換条件はどうかな。えっと、僕が――」"
+      "desc": "「毛並みの乱れは大地の乱れ！」\n「『Mr.ヴォイト』のヘアトリートメントで、魅力の階段を駆け上がれ！」\n「……」\nモデルが大きな尻尾を持ち上げて、誇らしげにそれをカメラに見せつけている。カメラワークもなにもあったものではないし、モデルのポージングも硬く不自然だった。こんな広告が流れたところで、そのヘアトリートメント剤の名が広まることなどあるのだろうか。しかしながら、その尻尾があまりにも立派なのは事実であった。ふさふさで艶があり、文句なしの角度で反っている。\n\n天災トランスポーターのプロヴァンスには、当然モデルの経験などなかった。彼女はこれまで幾度となくこんな言葉を耳にしてきた――「最高の結果を残すことなどできはしない。我々はただ、次はもっと上手くやるだけだ」。この「もっと上手く」が示すのは、今回の結果に心残りがあるということだ。荒野をいくら駆け回っても観測した情報がすべて正しいのか、想定被災地への情報伝達が間に合うのか、そしてその情報は現地の人々全員に伝わるのかを断定することなどできない。天災トランスポーターの仕事に心残りはつきものであり、誰もが「次はもっとうまくやろう」と傷をなめ合うことしかできないのだ。\n\n荒野から救い出した人々を安全地帯まで連れて行き、振り返った先で集落が暴風の餌食となりもう見えなくなっていたときも同じだった。まだそこには救い出せなかった人が残っていたかもしれないが、プロヴァンスは「自分を責めちゃダメだよ。荒野の集落は分散しすぎてるし、通信インフラも全然整ってないから、足だけを頼りに救助活動を行ってもこれが精一杯なんだよ……次はもっと上手くやろう」と自分を慰めるしかなかった。\n翌日、街で物資の補給をしていると、プロヴァンスは例の施工班と鉢合わせた。彼らはある企業に雇われ、現地政府の局地通信システム改造に協力し、さらにいくつかの交差点に電子スクリーンを設置する予定だという。その用途は……広告を流すためだった。ここでは生活水準向上を啓蒙する広告が嫌というほど流れるのに、荒野の人々には生死に関わる災害情報すら届かないのが現状だ。プロヴァンスは企業の責任者に面会を申し入れ、局地通信システムのカバー範囲を緊急通信チャンネルだけでも構わないので近郊の荒野まで広げることはできないかと懇願した。\n「メシさえろくに食えない荒野の連中に、ヘアトリートメントの広告を見せてどうするんだ？我々に何の利益がある？」\n「希望の伝達だとかご立派な理想論は結構だ。それは君たち天災トランスポーターの願いに過ぎない。」\n「どうしてもダメなの……？」\nプロヴァンス自身も、おそらく聞き入れてはもらえないだろうとわかっていた。もし緊急通信回線を敷いてもらえれば、将来もしもの事態が起きた際に、情報をいち早く伝えることができるというのに……\nしかしプロヴァンスは諦めなかった。最高の結果を残すことはできなくとも、もっと上手くやることはできるはずだ。ならば、手を尽くさない理由などない。\n「……さっき、ヘアトリートメントの広告って言ってなかった？」\n「それなら、こういう交換条件はどうかな。えっと、僕が――」",
+      "typeIcon": "arc-x",
+      "uniEquipIcon": "uniequip_002_prove",
+      "typeName1": "ARC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_prove_1",
+        "uniequip_002_prove_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "respawn_time",
+              "value": -25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "再配置までの時間が<@ba.kw>短い</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "respawn_time",
+              "value": -25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "再配置までの時間が<@ba.kw>短い</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、20%の確率でその攻撃のみ攻撃力が185%に上昇。敵が正面2マスにいる時、その確率が55%に上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ハンターアロー",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob2",
+                      "value": 0.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.85,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、20%の確率でその攻撃のみ攻撃力が195%<@ba.talpu>（+10%）</>に上昇。敵が正面2マスにいる時、その確率が55%に上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "ハンターアロー",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob2",
+                      "value": 0.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.95,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "respawn_time",
+              "value": -25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "再配置までの時間が<@ba.kw>短い</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、20%の確率でその攻撃のみ攻撃力が190%に上昇。敵が正面2マスにいる時、その確率が60%に上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ハンターアロー",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob2",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.9,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、20%の確率でその攻撃のみ攻撃力が200%<@ba.talpu>（+10%）</>に上昇。敵が正面2マスにいる時、その確率が60%に上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "ハンターアロー",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob2",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1081,5 +1721,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

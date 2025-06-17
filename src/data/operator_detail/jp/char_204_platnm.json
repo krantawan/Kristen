@@ -150,6 +150,7 @@
       "cost": 13
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_204_platnm#1",
@@ -616,16 +617,698 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "力溜め",
+          "description": "次回攻撃までの間隔が長いほど攻撃力が上昇(最大2.5秒まで、攻撃力が140%に上昇)",
+          "blackboard": [
+            {
+              "key": "attack@min_delta",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_delta",
+              "value": 2.5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@min_atk_scale",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_atk_scale",
+              "value": 1.4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "力溜め",
+          "description": "次回攻撃までの間隔が長いほど攻撃力が上昇(最大2.5秒まで、攻撃力が150%<@ba.talpu>(+10%)</>に上昇)",
+          "blackboard": [
+            {
+              "key": "attack@min_delta",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_delta",
+              "value": 2.5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@min_atk_scale",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "力溜め",
+          "description": "次回攻撃までの間隔が長いほど攻撃力が上昇(最大2.5秒まで、攻撃力が180%に上昇)",
+          "blackboard": [
+            {
+              "key": "attack@min_delta",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_delta",
+              "value": 2.5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@min_atk_scale",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_atk_scale",
+              "value": 1.8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "力溜め",
+          "description": "次回攻撃までの間隔が長いほど攻撃力が上昇(最大2.5秒まで、攻撃力が190%<@ba.talpu>(+10%)</>に上昇)",
+          "blackboard": [
+            {
+              "key": "attack@min_delta",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_delta",
+              "value": 2.5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@min_atk_scale",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_atk_scale",
+              "value": 1.9,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_platnm",
       "moduleName": "プラチナの記章",
-      "desc": "プラチナは敵との距離を保って火力で制圧することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、速射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "プラチナは敵との距離を保って火力で制圧することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、速射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_platnm",
       "moduleName": "一人旅セット",
-      "desc": "休暇を取ったプラチナは、サーミへと向かった。\n元々はドクターも誘っていたのだが、薄給なロドスの仕事に対して昇給の望みを抱かないのと同じように、書類の山に囲まれたドクターが一緒に来てくれるとは彼女も思ってはいなかった。\n何はともあれ、二か月の休暇を取ることはできたのだから、それは良いことである。\nサーミの土地に足を踏み入れると、クルビア人が丁寧な物腰で自らの別荘へと招いてくれた。\n平原には雪が降っており、どこぞで摘んだのだろう花を抱えた男性を先頭にして、雪の上を静かに進む群衆の姿がある。\n彼らは黙って男性のあとをついて歩き、湖畔のほうへと向かっていた。\nその中の子供が一人、足を滑らせて転んでしまった。\nプラチナが手を貸して起こしてやると、花びらがその手のひらに舞い落ちる。\n彼女はその時、昔を思い出した。\nまだ彼女が独立騎士だった頃、押し掛けてきたファンたちが手渡してくる花々は、綺麗で、良い香りがして、いつまでもみずみずしくあるかのように思えたものだ。\nそうして彼女はふと、花を抱えて歩く人々を見て、彼らがその花を誰に捧げようとしているのかを知りたくなった。\n\n湖畔には真っ白な祭壇が高くそびえ立っていて、人々が真っ赤な花をその周りに散らしていた。\n「ここでは皆で、昔亡くなったとある英雄を弔っているんだ。先頭の男はその英雄の末裔でね。あれは、あの部族特有の習慣なのさ。」\nプラチナがガイドとして雇ったクルビア人は、そう説明してくれた。\n人々は花を湖に撒きながら、踊ったり、歌ったりしている。\n名も知らぬその歌の厳かな曲調に合わせて、焚き火の炎が揺らめいていた。\n涙を流す人もいれば、黙祷している人もいる。彼らの目は純粋な敬慕の光で輝いていた。\n人々が焚き火のそばで食べ物を分け合うさまを遠くから眺めていると、彼らはプラチナを手招きしてくれた。\n言葉が通じずとも、気持ちは通じ合うものである。\n彼女は現地の酒を味わったり、老婦人から真っ赤な花をもらったりした。\n「賑やかだな……」\nプラチナはそう思った。\nそんな時、彼女はさっき助け起こした子供に手を引かれた。\nその子は楽しげにくるくると回りながら焚き火のほうへと駆けて行き、食べ物をたくさん持って戻ってきた。\n彼女はその好意を受け止め、目の前の人々を見やった。\n部族は英雄を育み、英雄は生涯をかけてウルサスと戦って、国境で死を遂げたという。\n数え切れないほどの人間たちがその物語を記憶に刻み、外から来た彼女のような人に伝えてくれるのだ。\n一方で――逃げ延びた一人の暗殺者の物語は、ナイフとフォークで切られた肉と一緒に呑み下され、ここにない血痕と残骸は柔らかいナプキンで拭き取られていった。\n\n湖畔から平原まではかなりの距離がある。\nクルビア人は毛布に包まったまま相変わらず遠くに立っていた。\n彼は別荘の灯りに照らされながら、再びガイドを頼まれるのを待っている。\nプラチナは焚き火のそばに立ち、群衆を眺めながら、ただの一言も喋らずにいた。"
+      "desc": "休暇を取ったプラチナは、サーミへと向かった。\n元々はドクターも誘っていたのだが、薄給なロドスの仕事に対して昇給の望みを抱かないのと同じように、書類の山に囲まれたドクターが一緒に来てくれるとは彼女も思ってはいなかった。\n何はともあれ、二か月の休暇を取ることはできたのだから、それは良いことである。\nサーミの土地に足を踏み入れると、クルビア人が丁寧な物腰で自らの別荘へと招いてくれた。\n平原には雪が降っており、どこぞで摘んだのだろう花を抱えた男性を先頭にして、雪の上を静かに進む群衆の姿がある。\n彼らは黙って男性のあとをついて歩き、湖畔のほうへと向かっていた。\nその中の子供が一人、足を滑らせて転んでしまった。\nプラチナが手を貸して起こしてやると、花びらがその手のひらに舞い落ちる。\n彼女はその時、昔を思い出した。\nまだ彼女が独立騎士だった頃、押し掛けてきたファンたちが手渡してくる花々は、綺麗で、良い香りがして、いつまでもみずみずしくあるかのように思えたものだ。\nそうして彼女はふと、花を抱えて歩く人々を見て、彼らがその花を誰に捧げようとしているのかを知りたくなった。\n\n湖畔には真っ白な祭壇が高くそびえ立っていて、人々が真っ赤な花をその周りに散らしていた。\n「ここでは皆で、昔亡くなったとある英雄を弔っているんだ。先頭の男はその英雄の末裔でね。あれは、あの部族特有の習慣なのさ。」\nプラチナがガイドとして雇ったクルビア人は、そう説明してくれた。\n人々は花を湖に撒きながら、踊ったり、歌ったりしている。\n名も知らぬその歌の厳かな曲調に合わせて、焚き火の炎が揺らめいていた。\n涙を流す人もいれば、黙祷している人もいる。彼らの目は純粋な敬慕の光で輝いていた。\n人々が焚き火のそばで食べ物を分け合うさまを遠くから眺めていると、彼らはプラチナを手招きしてくれた。\n言葉が通じずとも、気持ちは通じ合うものである。\n彼女は現地の酒を味わったり、老婦人から真っ赤な花をもらったりした。\n「賑やかだな……」\nプラチナはそう思った。\nそんな時、彼女はさっき助け起こした子供に手を引かれた。\nその子は楽しげにくるくると回りながら焚き火のほうへと駆けて行き、食べ物をたくさん持って戻ってきた。\n彼女はその好意を受け止め、目の前の人々を見やった。\n部族は英雄を育み、英雄は生涯をかけてウルサスと戦って、国境で死を遂げたという。\n数え切れないほどの人間たちがその物語を記憶に刻み、外から来た彼女のような人に伝えてくれるのだ。\n一方で――逃げ延びた一人の暗殺者の物語は、ナイフとフォークで切られた肉と一緒に呑み下され、ここにない血痕と残骸は柔らかいナプキンで拭き取られていった。\n\n湖畔から平原まではかなりの距離がある。\nクルビア人は毛布に包まったまま相変わらず遠くに立っていた。\n彼は別荘の灯りに照らされながら、再びガイドを頼まれるのを待っている。\nプラチナは焚き火のそばに立ち、群衆を眺めながら、ただの一言も喋らずにいた。",
+      "typeIcon": "mar-x",
+      "uniEquipIcon": "uniequip_002_platnm",
+      "typeName1": "MAR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_platnm_1",
+        "uniequip_002_platnm_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "飛行ユニットを攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "飛行ユニットを攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "次回攻撃までの間隔が長いほど攻撃力が上昇（最大2.5秒まで、攻撃力が190%に上昇）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "力溜め",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@min_delta",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_delta",
+                      "value": 2.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@min_atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_atk_scale",
+                      "value": 1.9,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "次回攻撃までの間隔が長いほど攻撃力が上昇（最大2.5秒まで、攻撃力が200%<@ba.talpu>（+10%）</>に上昇）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "力溜め",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@min_delta",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_delta",
+                      "value": 2.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@min_atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_atk_scale",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "飛行ユニットを攻撃時、攻撃力が<@ba.kw>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "次回攻撃までの間隔が長いほど攻撃力が上昇（最大2.5秒まで、攻撃力が200%に上昇）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "力溜め",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@min_delta",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_delta",
+                      "value": 2.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@min_atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_atk_scale",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "次回攻撃までの間隔が長いほど攻撃力が上昇（最大2.5秒まで、攻撃力が210%<@ba.talpu>（+10%）</>に上昇）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "力溜め",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@min_delta",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_delta",
+                      "value": 2.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@min_atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_atk_scale",
+                      "value": 2.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1079,5 +1762,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

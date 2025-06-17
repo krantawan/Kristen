@@ -169,6 +169,7 @@
       "cost": 24
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_017_huang#1",
@@ -757,16 +758,777 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+28",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 28,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 45,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "紧急除颤",
+          "description": "在生命值低于25%时，仅一次回复50%的生命值并在3秒内使生命值不低于50%",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.25,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[heal].hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[lock].min_hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[lock].duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "紧急除颤",
+          "description": "在生命值低于25%时，仅一次回复50%的生命值并在4<@ba.talpu>（+1）</>秒内使生命值不低于50%",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.25,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[heal].hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[lock].min_hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[lock].duration",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "紧急除颤",
+          "description": "在生命值低于25%时，仅一次回复50%的生命值并在6秒内使生命值不低于50%",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.25,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[heal].hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[lock].min_hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[lock].duration",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "紧急除颤",
+          "description": "在生命值低于25%时，仅一次回复50%的生命值并在7<@ba.talpu>（+1）</>秒内使生命值不低于50%",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.25,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[heal].hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[lock].min_hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "huang_t_1[lock].duration",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "严酷训练",
+          "description": "在战场停留15秒后获得<$ba.buffres>抵抗</>",
+          "blackboard": [
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "严酷训练",
+          "description": "在战场停留12<@ba.talpu>（-3）</>秒后获得<$ba.buffres>抵抗</>",
+          "blackboard": [
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_huang",
       "moduleName": "煌证章",
-      "desc": "干员煌擅长近身以凌厉攻势阻击敌人\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使强攻手职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员煌擅长近身以凌厉攻势阻击敌人\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使强攻手职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_huang",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_huang",
       "moduleName": "过载的武器与过热的心脏",
-      "desc": "“......入选浩然阁的每位少卿，都曾经手一桩让他们无从查起的棘手案件。”\n“难怪你对我的事情这么上心，***的，因为它足够复杂对吧，光听那一大串数字就让人脑袋爆炸了。”\n“不。是因为我的一位前辈。”\n“怎么说？”\n“我在刚就任大理寺少卿那年，依例翻检过往卷宗，却发现那位前辈为了扳倒一个巨奸，在弹劾对方时使用了伪造的证据。尽管他当时已经退休，我还是说服监察司将他召回京城治罪。”\n“呃，不想评价你做得对不对。请问这和我有什么关系？”\n“我此后才知道，那位前辈并非正常退休，也压根没在老家种地养老......他隐去身份，受命追查一系列悬案......他当时几乎已经追查到了第三个孩子的行踪，而就在此时，我那么刚好地知道了他早年犯的过错——你干嘛，别捏我肩膀啊......”\n“你被利用了。也就是说，要不是这档子事，我爸的事情早就水落石出了？！你别那个表情，我又没怪你。只能说这件事真的足够复杂......你接着说。”\n“当年，你父亲突然得到调迁，前往维多利亚；而在那个前辈被收监之后的半月，大理寺卷牍库某夜意外失火，整个南区的卷宗尽数化为灰烬......天师说得没错，身为大理寺少卿，必须调查这件事的真相，而要调查这件事的真相，必须放弃大理寺少卿的身份......所以我必须，将它接过来。”\n“还是那句话！把你知道的都告诉我。全部。赶快。”\n“不，你帮不上忙，你现在只是个‘寄居罗德岛的维多利亚人’，你只需要告诉我你知道的、经历的所有事情，剩下的交给我。”\n“这是什么屁话！莫名其妙死在异国他乡的是我爸不是你爸，在档案上被写成死人、那么长的时间里只能游来荡去的是我不是你。你这会儿不戴着面具了，怎么说话还是没比戴着面具时好多少！哎呀，我知道你在顾忌什么，但有什么可怕的！我可是罗德岛的精英干员，你见识过我的链锯没有，你见识过我的温度没有？就算案子再复杂、敌人再多，他们还能一辈子缩在阴影里不出来？”\n“......”\n“......欸，对了，你刚刚说，当年你那个前辈已经快追查到第三个孩子的行踪了？”"
+      "desc": "“......入选浩然阁的每位少卿，都曾经手一桩让他们无从查起的棘手案件。”\n“难怪你对我的事情这么上心，***的，因为它足够复杂对吧，光听那一大串数字就让人脑袋爆炸了。”\n“不。是因为我的一位前辈。”\n“怎么说？”\n“我在刚就任大理寺少卿那年，依例翻检过往卷宗，却发现那位前辈为了扳倒一个巨奸，在弹劾对方时使用了伪造的证据。尽管他当时已经退休，我还是说服监察司将他召回京城治罪。”\n“呃，不想评价你做得对不对。请问这和我有什么关系？”\n“我此后才知道，那位前辈并非正常退休，也压根没在老家种地养老......他隐去身份，受命追查一系列悬案......他当时几乎已经追查到了第三个孩子的行踪，而就在此时，我那么刚好地知道了他早年犯的过错——你干嘛，别捏我肩膀啊......”\n“你被利用了。也就是说，要不是这档子事，我爸的事情早就水落石出了？！你别那个表情，我又没怪你。只能说这件事真的足够复杂......你接着说。”\n“当年，你父亲突然得到调迁，前往维多利亚；而在那个前辈被收监之后的半月，大理寺卷牍库某夜意外失火，整个南区的卷宗尽数化为灰烬......天师说得没错，身为大理寺少卿，必须调查这件事的真相，而要调查这件事的真相，必须放弃大理寺少卿的身份......所以我必须，将它接过来。”\n“还是那句话！把你知道的都告诉我。全部。赶快。”\n“不，你帮不上忙，你现在只是个‘寄居罗德岛的维多利亚人’，你只需要告诉我你知道的、经历的所有事情，剩下的交给我。”\n“这是什么屁话！莫名其妙死在异国他乡的是我爸不是你爸，在档案上被写成死人、那么长的时间里只能游来荡去的是我不是你。你这会儿不戴着面具了，怎么说话还是没比戴着面具时好多少！哎呀，我知道你在顾忌什么，但有什么可怕的！我可是罗德岛的精英干员，你见识过我的链锯没有，你见识过我的温度没有？就算案子再复杂、敌人再多，他们还能一辈子缩在阴影里不出来？”\n“......”\n“......欸，对了，你刚刚说，当年你那个前辈已经快追查到第三个孩子的行踪了？”",
+      "typeIcon": "cen-x",
+      "uniEquipIcon": "uniequip_002_huang",
+      "typeName1": "CEN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_huang_1",
+        "uniequip_002_huang_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "同时攻击阻挡的<@ba.kw>所有敌人</>，攻击被阻挡的敌人攻击力提升至<@ba.kw>{atk_scale:0%}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 270,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "同时攻击阻挡的<@ba.kw>所有敌人</>，攻击被阻挡的敌人攻击力提升至<@ba.kw>{atk_scale:0%}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "在战场停留15秒后获得<$ba.buffres>抵抗</>，30秒后攻击力+4%，45秒后攻速+7",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "严酷训练",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "huang_t_2[e_002_atk].atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk_speed].attack_speed",
+                      "value": 7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2.interval",
+                      "value": 15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2.one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk].interval",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk_speed].interval",
+                      "value": 45,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "在战场停留12<@ba.talpu>（-3）</>秒后获得<$ba.buffres>抵抗</>，30秒后攻击力+4%，45秒后攻速+7",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "严酷训练",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "huang_t_2[e_002_atk].atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk_speed].attack_speed",
+                      "value": 7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2.interval",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2.one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk].interval",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk_speed].interval",
+                      "value": 45,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 285,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 86,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "同时攻击阻挡的<@ba.kw>所有敌人</>，攻击被阻挡的敌人攻击力提升至<@ba.kw>{atk_scale:0%}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "在战场停留15秒后获得<$ba.buffres>抵抗</>，30秒后攻击力+6%，45秒后攻速+12",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "严酷训练",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "huang_t_2[e_002_atk].atk",
+                      "value": 0.06,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk_speed].attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2.interval",
+                      "value": 15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2.one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk].interval",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk_speed].interval",
+                      "value": 45,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "在战场停留12<@ba.talpu>（-3）</>秒后获得<$ba.buffres>抵抗</>，30秒后攻击力+6%，45秒后攻速+12",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "严酷训练",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "huang_t_2[e_002_atk].atk",
+                      "value": 0.06,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk_speed].attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2.interval",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2.one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk].interval",
+                      "value": 30,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "huang_t_2[e_002_atk_speed].interval",
+                      "value": 45,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1220,5 +1982,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

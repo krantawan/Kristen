@@ -150,6 +150,48 @@
       "cost": 34
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "attack@chain.max_target",
+          "value": 3
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@chain.max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</> (improved after Elite 2)",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "attack@chain.max_target",
+          "value": 4
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@chain.max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</>",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_135_halo#1",
@@ -632,16 +674,547 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +28",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 28,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Passion for Research",
+          "description": "Gains +3 ASPD for every 15 seconds this unit remains on the battlefield, stacking up to 5 times",
+          "blackboard": {
+            "max_stack_cnt": 5,
+            "interval": 15,
+            "attack_speed": 3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Passion for Research",
+          "description": "Gains +4 ASPD for every 15 seconds this unit remains on the battlefield, stacking up to 5 times",
+          "blackboard": {
+            "max_stack_cnt": 5,
+            "interval": 15,
+            "attack_speed": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_halo",
       "moduleName": "Astgenne's Badge",
-      "desc": "Operator Astgenne has demonstrated a remarkable aptitude for employing Arts to attack multiple enemies in series.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Chain Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Astgenne has demonstrated a remarkable aptitude for employing Arts to attack multiple enemies in series.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Caster Operator during field operations to exercise Chain Caster responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_halo",
       "moduleName": "Unassembled Clock",
-      "desc": "It's a present, one picked out by Astesia for her sister. By now, it's been a whole year since she asked the workshop her sister frequented for a full set of clock parts. The blueprint for the completed thing is her own design, down to the types and itty-bitty details of the parts, but the whole thing was entrusted to the mentor Astgenne trusted most.\nIt was meant for Astesia to personally give to Astgenne at their birthday party, but the silly girl hasn't celebrated her birthday at home in ages.\nSo she waits, for the right moment.\nAnd in the end, she gifts it to Astgenne as a farewell present, the day she sends her off to university. She knows Astgenne is bound to like it.\n\nElena likes it indeed, and would love to assemble it. But looking at this pile of fragments, each a piece of art, she's struck by the feeling that she shouldn't complete it on her own.\nShe needs to find some free time—and take up a little of her older sister's—when they can assemble it together.\n...Or so she intends. She makes a note to herself on her pad before diving headfirst into her endless university courses and projects.\nIt's always on her mind, always. Every time she meets her sister, Astgenne wants to yank her over to the dorms, so they can complete the gift she gave her together.\nBut she blinks, and deadline for her thesis, and the requisites for her defense, and the pressure of her projects all loom, sucking away all her spare time. Every time she thinks of it, the crush of reality suppresses her urge.\nSome desires are untempered by time, but life and work are more than capable of postponing the realization of a wish, indefinitely\n.......\nOwing to some circumstances, she's now been sent out by Rhine Lab and become a Rhodes Island Operator. Her Rhine Lab colleagues helped her pack everything, and she now stands in her brand new vacuum of a room, unpacking that minor mountain of personal belongings and experimental equipment, bit by bit.\nShe finds a box laden with dust, and those dolts back at the lab didn't even pack her a dusting cloth. With no better option, she sounds the bell on the dorm room next door, first to say hi to her new neighbor, and second to borrow a rag to wipe off the dust.\nThe door opens.\nAnd there's Astesia, who stuffs clean wet wipes and an all-purpose toolbox into her dumbstruck little sister's hands.\n......\nOne wonders if perhaps, after the sisters have finished sorting out the room, that's the sound of a clock we can hear."
+      "desc": "It's a present, one picked out by Astesia for her sister. By now, it's been a whole year since she asked the workshop her sister frequented for a full set of clock parts. The blueprint for the completed thing is her own design, down to the types and itty-bitty details of the parts, but the whole thing was entrusted to the mentor Astgenne trusted most.\nIt was meant for Astesia to personally give to Astgenne at their birthday party, but the silly girl hasn't celebrated her birthday at home in ages.\nSo she waits, for the right moment.\nAnd in the end, she gifts it to Astgenne as a farewell present, the day she sends her off to university. She knows Astgenne is bound to like it.\n\nElena likes it indeed, and would love to assemble it. But looking at this pile of fragments, each a piece of art, she's struck by the feeling that she shouldn't complete it on her own.\nShe needs to find some free time—and take up a little of her older sister's—when they can assemble it together.\n...Or so she intends. She makes a note to herself on her pad before diving headfirst into her endless university courses and projects.\nIt's always on her mind, always. Every time she meets her sister, Astgenne wants to yank her over to the dorms, so they can complete the gift she gave her together.\nBut she blinks, and deadline for her thesis, and the requisites for her defense, and the pressure of her projects all loom, sucking away all her spare time. Every time she thinks of it, the crush of reality suppresses her urge.\nSome desires are untempered by time, but life and work are more than capable of postponing the realization of a wish, indefinitely\n.......\nOwing to some circumstances, she's now been sent out by Rhine Lab and become a Rhodes Island Operator. Her Rhine Lab colleagues helped her pack everything, and she now stands in her brand new vacuum of a room, unpacking that minor mountain of personal belongings and experimental equipment, bit by bit.\nShe finds a box laden with dust, and those dolts back at the lab didn't even pack her a dusting cloth. With no better option, she sounds the bell on the dorm room next door, first to say hi to her new neighbor, and second to borrow a rag to wipe off the dust.\nThe door opens.\nAnd there's Astesia, who stuffs clean wet wipes and an all-purpose toolbox into her dumbstruck little sister's hands.\n......\nOne wonders if perhaps, after the sisters have finished sorting out the room, that's the sound of a clock we can hear.",
+      "typeIcon": "cha-y",
+      "uniEquipIcon": "uniequip_002_halo",
+      "typeName1": "CHA",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_halo_1",
+        "uniequip_002_halo_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@chain.max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@chain.max_target}</> enemies. Each jump <@ba.kw>no longer deals less damage</> and inflicts a brief <$ba.sluggish>Slow</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 62,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@chain.max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@chain.max_target}</> enemies. Each jump <@ba.kw>no longer deals less damage</> and inflicts a brief <$ba.sluggish>Slow</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains +4 ASPD for every 10 seconds this unit remains on the battlefield, stacking up to 6 times",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Passion for Research",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 74,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@chain.max_target",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "skill@chain.atk_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@chain.max_target}</> enemies. Each jump <@ba.kw>no longer deals less damage</> and inflicts a brief <$ba.sluggish>Slow</>",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains +4 ASPD for every 10 seconds this unit remains on the battlefield, stacking up to 7 times",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Passion for Research",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1095,5 +1668,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

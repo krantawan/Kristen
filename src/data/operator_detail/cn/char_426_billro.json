@@ -169,6 +169,36 @@
       "cost": 24
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "def",
+            "value": 2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "magic_resistance",
+            "value": 20,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_426_billro#1",
@@ -761,21 +791,1149 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+34",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 34,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 80,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "生命之餐",
+          "description": "开启技能时立即恢复30%最大生命值；\\n<$ba.charged>蓄力</>时效果翻倍",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "billro_t_1[enhance].heal_scale",
+              "value": 0.6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "生命之餐",
+          "description": "开启技能时立即恢复35%<@ba.talpu>（+5%）</>最大生命值；\\n<$ba.charged>蓄力</>时效果翻倍",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.35,
+              "valueStr": null
+            },
+            {
+              "key": "billro_t_1[enhance].heal_scale",
+              "value": 0.7,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "生命之餐",
+          "description": "开启技能时立即恢复40%最大生命值；\\n<$ba.charged>蓄力</>时效果翻倍",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "billro_t_1[enhance].heal_scale",
+              "value": 0.8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "生命之餐",
+          "description": "开启技能时立即恢复45%<@ba.talpu>（+5%）</>最大生命值；\\n<$ba.charged>蓄力</>时效果翻倍",
+          "blackboard": [
+            {
+              "key": "heal_scale",
+              "value": 0.45,
+              "valueStr": null
+            },
+            {
+              "key": "billro_t_1[enhance].heal_scale",
+              "value": 0.9,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "蓄势待发",
+          "description": "技力超过上限时，技力自然回复速度+0.6/秒",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_billro",
       "moduleName": "卡涅利安证章",
-      "desc": "干员卡涅利安擅长适时造成大规模法术杀伤\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使阵法术师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员卡涅利安擅长适时造成大规模法术杀伤\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使阵法术师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_billro",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_billro",
       "moduleName": "风信子与匕首",
-      "desc": "霍恩洛厄伯爵草草用过晚饭，刚踏进别墅的卧室，卡涅利安突然出现在他身后。\n“这么晚了，你来做什么？”\n“您担心的事情办妥了，我是来向您禀报的。”\n“哦，知道了。”\n一阵晚风吹进室内，长长的窗帘不住飘动。为了明日巡游方便而暂且离开高塔的伯爵感受到些微的寒意。\n“等等，有什么必要——不对，我是说，有这么快吗？”\n“当然。”\n“真的？以防万一，我再确认一下。明天的巡游上，你——”\n“以防万一？您不信任我？”\n\n仿佛被总是插言的侍卫激怒了，伯爵用力跺了跺脚。\n“我怎么可能信你？乐器真能这么快学会？你该不会学的是三角铁吧？”\n“正如您所料。”\n“正如我所料？你就打算在明天我巡游的时候敲三角铁？！”\n“正是。顺便，您这话对三角铁爱好者可不太尊重。”\n“你！去年有人来高塔拜访的时候，其他侍卫都在奏乐，只有你一个人傻站着，让他们看了个大笑话！”\n“上个月隔壁城市的使节来访，您非让我站在侍卫里装样子。结果，他往桌子下面安窃听器的时候，我习惯性地用手头的武器横在他脖子上，才想起自己拿的不是剑，是小号。”\n“卡涅利安！！”\n“我直说吧，照顾您已经够累了，我可没闲工夫学什么乐器。”\n“我不管！你必须学！必须学！”\n小孩子脾气的伯爵看着眼前桀骜不驯的侍卫，总算没有气得跳起来，只是摔门而去。\n\n而门刚一合上，卡涅利安就按住了腰间的剑。\n“好了，出来吧，窗帘后面的那位。\n“议会派送来的刺客，对吧？你们真相信那位野心勃勃的表亲会在伯爵身死，他继承爵位之后让城市议会自治？\n“算了，我换个问题。你喜欢文雅一点的死法，还是直接点的？\n“......你不说话，那就客随主便？”\n刺客还来不及动弹，帘幕已经化作嘴唇，书架化作双颚，烛台化作利齿，一口咬住窗边的猎物，咀嚼、吞咽，最后散落一地。\n\n“结束了。还不进来吗？”\n伯爵从门后探出一个脑袋，确认危险已经彻底解除之后，强打精神走了进来。\n“反应很快，即兴表演也很到位。做得不错。”\n“不用你夸。”\n两人看着被杂物和鲜血弄得一片狼藉的别墅卧室，相顾无言。\n未遂的刺杀不是没发生过，但此前都是在高塔里，而霍恩洛厄伯爵的高塔还没失修到能让刺客侵入卧室的地步。\n过了一会儿，伯爵突然开了口。\n“卡涅利安。”\n“怎么？我可不会用法术打扫房间。”\n“我也不指望你会。”\n“明智的判断。”\n“我是说，你真不学个什么乐器吗？”\n“啊？原来你是真的怕丢面子？”\n“哪有！我就是有点好奇，你——”\n伯爵涨红了脸，嘴唇一开一合，最后还是没说出话，转身跑出了卧室。\n卡涅利安摇了摇头，看向床头一盆盛放的风信子，还有盆前那柄说是用来防身，实际派不上什么用场，只能给伯爵提供一点心理安慰的匕首。\n虽然还未刺进任何一个人的身体，刀刃却已经被鲜血染红。"
+      "desc": "霍恩洛厄伯爵草草用过晚饭，刚踏进别墅的卧室，卡涅利安突然出现在他身后。\n“这么晚了，你来做什么？”\n“您担心的事情办妥了，我是来向您禀报的。”\n“哦，知道了。”\n一阵晚风吹进室内，长长的窗帘不住飘动。为了明日巡游方便而暂且离开高塔的伯爵感受到些微的寒意。\n“等等，有什么必要——不对，我是说，有这么快吗？”\n“当然。”\n“真的？以防万一，我再确认一下。明天的巡游上，你——”\n“以防万一？您不信任我？”\n\n仿佛被总是插言的侍卫激怒了，伯爵用力跺了跺脚。\n“我怎么可能信你？乐器真能这么快学会？你该不会学的是三角铁吧？”\n“正如您所料。”\n“正如我所料？你就打算在明天我巡游的时候敲三角铁？！”\n“正是。顺便，您这话对三角铁爱好者可不太尊重。”\n“你！去年有人来高塔拜访的时候，其他侍卫都在奏乐，只有你一个人傻站着，让他们看了个大笑话！”\n“上个月隔壁城市的使节来访，您非让我站在侍卫里装样子。结果，他往桌子下面安窃听器的时候，我习惯性地用手头的武器横在他脖子上，才想起自己拿的不是剑，是小号。”\n“卡涅利安！！”\n“我直说吧，照顾您已经够累了，我可没闲工夫学什么乐器。”\n“我不管！你必须学！必须学！”\n小孩子脾气的伯爵看着眼前桀骜不驯的侍卫，总算没有气得跳起来，只是摔门而去。\n\n而门刚一合上，卡涅利安就按住了腰间的剑。\n“好了，出来吧，窗帘后面的那位。\n“议会派送来的刺客，对吧？你们真相信那位野心勃勃的表亲会在伯爵身死，他继承爵位之后让城市议会自治？\n“算了，我换个问题。你喜欢文雅一点的死法，还是直接点的？\n“......你不说话，那就客随主便？”\n刺客还来不及动弹，帘幕已经化作嘴唇，书架化作双颚，烛台化作利齿，一口咬住窗边的猎物，咀嚼、吞咽，最后散落一地。\n\n“结束了。还不进来吗？”\n伯爵从门后探出一个脑袋，确认危险已经彻底解除之后，强打精神走了进来。\n“反应很快，即兴表演也很到位。做得不错。”\n“不用你夸。”\n两人看着被杂物和鲜血弄得一片狼藉的别墅卧室，相顾无言。\n未遂的刺杀不是没发生过，但此前都是在高塔里，而霍恩洛厄伯爵的高塔还没失修到能让刺客侵入卧室的地步。\n过了一会儿，伯爵突然开了口。\n“卡涅利安。”\n“怎么？我可不会用法术打扫房间。”\n“我也不指望你会。”\n“明智的判断。”\n“我是说，你真不学个什么乐器吗？”\n“啊？原来你是真的怕丢面子？”\n“哪有！我就是有点好奇，你——”\n伯爵涨红了脸，嘴唇一开一合，最后还是没说出话，转身跑出了卧室。\n卡涅利安摇了摇头，看向床头一盆盛放的风信子，还有盆前那柄说是用来防身，实际派不上什么用场，只能给伯爵提供一点心理安慰的匕首。\n虽然还未刺进任何一个人的身体，刀刃却已经被鲜血染红。",
+      "typeIcon": "plx-x",
+      "uniEquipIcon": "uniequip_002_billro",
+      "typeName1": "PLX",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_billro_1",
+        "uniequip_002_billro_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 66,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常时<@ba.kw>不攻击</>且防御力和法术抗性更大幅度<@ba.kw>提升</>，技能开启时保留部分效果且攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 230,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 76,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[max_hp_buff].max_hp",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[max_hp_enhance_buff].max_hp",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常时<@ba.kw>不攻击</>且防御力和法术抗性更大幅度<@ba.kw>提升</>，技能开启时保留部分效果且攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能期间提高自身30%生命值上限，开启技能时立即恢复40%最大生命值；\\n<$ba.charged>蓄力</>时效果翻倍",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "生命之餐",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_t_1[enhance].heal_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能期间提高自身30%生命值上限，开启技能时立即恢复45%<@ba.talpu>（+5%）</>最大生命值；\\n<$ba.charged>蓄力</>时效果翻倍",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "生命之餐",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.45,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_t_1[enhance].heal_scale",
+                      "value": 0.9,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 260,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[max_hp_buff].max_hp",
+                      "value": 0.45,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_e_002[max_hp_enhance_buff].max_hp",
+                      "value": 0.9,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常时<@ba.kw>不攻击</>且防御力和法术抗性更大幅度<@ba.kw>提升</>，技能开启时保留部分效果且攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能期间提高自身45%生命值上限，开启技能时立即恢复45%最大生命值；\\n<$ba.charged>蓄力</>时效果翻倍",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "生命之餐",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.45,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_t_1[enhance].heal_scale",
+                      "value": 0.9,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能期间提高自身45%生命值上限，开启技能时立即恢复50%<@ba.talpu>（+5%）</>最大生命值；\\n<$ba.charged>蓄力</>时效果翻倍",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "生命之餐",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "billro_t_1[enhance].heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_billro",
       "moduleName": "乡音",
-      "desc": "萨尔贡语里有个描述情绪的词，专指“他乡遇故知的惊喜”。可见“乡音”对萨尔贡人的意义。然而，当蜜蜡突然出现在莱塔尼亚的餐馆里，并坐在姐姐面前时，卡涅利安的手缓缓从耳朵里的通讯终端上放下，脸上闪现的是难得的惊慌。\n“姐姐，惊......惊喜？嘿嘿......”\n卡涅利安飞快地关闭了话筒。\n蜜蜡没有忘记姐姐曾关照她不要来莱塔尼亚，她心虚地解释自己是顺路经过。一戳即破的谎言，卡涅利安甚至能想到是哪个罗德岛干员多管了闲事。\n她当然不会那么扫兴。她对安克赫娜嘘寒问暖，了解她旅途的趣闻，她们的餐桌氛围温馨和谐，耳朵里则是另一番景象。\n“头儿！怎么不回话了！目标快走进法阵中心了！”\n“是潜伏的餐馆里出事了吗！”\n“姐姐，你耳朵里好像嗡嗡的？”\n“哦，音乐而已。莱塔尼亚人的音乐还不错，你会喜欢的。”\n“头儿！你人呢！”\n卡涅利安起身：“唉，音乐有点吵。我去调整一下。”\n姐姐提起的“音乐”令蜜蜡不自信起来。相隔数年才重逢，陌生的国家带给了姐姐变化：早已习惯了华丽曲调的她，还会喜欢“那个”吗？她抓紧了包裹，羞于打开。\n卡涅利安回来了，快得出奇。她摘掉了通讯终端，脸上总算有了放松的笑容。\n“姐姐，音乐呢？”\n“结束了。有更重要的东西等我品味——”\n一个来自家乡的词，代表一种情绪。这个词配合卡涅利安令人安心的眼神，好似某种源石技艺，将蜜蜡的担忧驱散了。她终于从包里掏出了“那个”——一个朴素的萨尔贡叉铃，与莱塔尼亚格格不入。\n“哦！我还以为你早就丢了它！这可是我唯一玩得转的乐器。”\n叮铃，叮铃，是来自家乡的温暖而质朴的声音。\n“真怀念。还记得吗，小时候我总拿着它哄你。”\n“姐姐在莱塔尼亚的事，一定很重要。”\n“什么？不，我只是......”\n“记得偶尔停下来，听听它，好吗？偶尔......你忙到来不及回信，没时间回家乡的时候，都听听它......”\n卡涅利安放弃了嘴硬，目光变得柔软。她想说：好吧，我会记得回信，也会尽快回到家乡。但她并没有说出不知何时才能兑现的承诺，而是拿起了叉铃轻轻摇动。\n真奇妙啊，在这莱塔尼亚的餐馆里，好像听见了萨尔贡的树叶在沙沙作响。她和安克赫娜，总称这些声音是森林在奏乐。她们曾经很喜欢。"
+      "desc": "萨尔贡语里有个描述情绪的词，专指“他乡遇故知的惊喜”。可见“乡音”对萨尔贡人的意义。然而，当蜜蜡突然出现在莱塔尼亚的餐馆里，并坐在姐姐面前时，卡涅利安的手缓缓从耳朵里的通讯终端上放下，脸上闪现的是难得的惊慌。\n“姐姐，惊......惊喜？嘿嘿......”\n卡涅利安飞快地关闭了话筒。\n蜜蜡没有忘记姐姐曾关照她不要来莱塔尼亚，她心虚地解释自己是顺路经过。一戳即破的谎言，卡涅利安甚至能想到是哪个罗德岛干员多管了闲事。\n她当然不会那么扫兴。她对安克赫娜嘘寒问暖，了解她旅途的趣闻，她们的餐桌氛围温馨和谐，耳朵里则是另一番景象。\n“头儿！怎么不回话了！目标快走进法阵中心了！”\n“是潜伏的餐馆里出事了吗！”\n“姐姐，你耳朵里好像嗡嗡的？”\n“哦，音乐而已。莱塔尼亚人的音乐还不错，你会喜欢的。”\n“头儿！你人呢！”\n卡涅利安起身：“唉，音乐有点吵。我去调整一下。”\n姐姐提起的“音乐”令蜜蜡不自信起来。相隔数年才重逢，陌生的国家带给了姐姐变化：早已习惯了华丽曲调的她，还会喜欢“那个”吗？她抓紧了包裹，羞于打开。\n卡涅利安回来了，快得出奇。她摘掉了通讯终端，脸上总算有了放松的笑容。\n“姐姐，音乐呢？”\n“结束了。有更重要的东西等我品味——”\n一个来自家乡的词，代表一种情绪。这个词配合卡涅利安令人安心的眼神，好似某种源石技艺，将蜜蜡的担忧驱散了。她终于从包里掏出了“那个”——一个朴素的萨尔贡叉铃，与莱塔尼亚格格不入。\n“哦！我还以为你早就丢了它！这可是我唯一玩得转的乐器。”\n叮铃，叮铃，是来自家乡的温暖而质朴的声音。\n“真怀念。还记得吗，小时候我总拿着它哄你。”\n“姐姐在莱塔尼亚的事，一定很重要。”\n“什么？不，我只是......”\n“记得偶尔停下来，听听它，好吗？偶尔......你忙到来不及回信，没时间回家乡的时候，都听听它......”\n卡涅利安放弃了嘴硬，目光变得柔软。她想说：好吧，我会记得回信，也会尽快回到家乡。但她并没有说出不知何时才能兑现的承诺，而是拿起了叉铃轻轻摇动。\n真奇妙啊，在这莱塔尼亚的餐馆里，好像听见了萨尔贡的树叶在沙沙作响。她和安克赫娜，总称这些声音是森林在奏乐。她们曾经很喜欢。",
+      "typeIcon": "plx-y",
+      "uniEquipIcon": "uniequip_003_billro",
+      "typeName1": "PLX",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_billro_1",
+        "uniequip_003_billro_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "范围内敌人越多造成的伤害越高（最高提升<@ba.kw>{damage_scale:0%}</>）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_valid_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "范围内敌人越多造成的伤害越高（最高提升<@ba.kw>{damage_scale:0%}</>）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_valid_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技力超过上限时，技力自然回复速度+0.8/秒；蓄力状态开启技能时，更不容易受到敌人攻击",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "蓄势待发",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 95,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "范围内敌人越多造成的伤害越高（最高提升<@ba.kw>{damage_scale:0%}</>）",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_valid_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技力超过上限时，技力自然回复速度+1.0/秒；蓄力状态开启技能时，更不容易受到敌人攻击",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "蓄势待发",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1229,5 +2387,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

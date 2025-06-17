@@ -150,6 +150,24 @@
       "cost": 22
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ],
+      "overrideDescription": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_421_crow#1",
@@ -624,16 +642,531 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DEF +25",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -6 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Into the Groove",
+          "description": "ASPD +2 after defeating an enemy (stacks up to 8 times)",
+          "blackboard": {
+            "attack_speed": 2,
+            "max_stack_cnt": 8
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Into the Groove",
+          "description": "ASPD +3 after defeating an enemy (stacks up to 8 times)",
+          "blackboard": {
+            "attack_speed": 3,
+            "max_stack_cnt": 8
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Into the Groove",
+          "description": "ASPD +3 after defeating an enemy (stacks up to 12 times)",
+          "blackboard": {
+            "attack_speed": 3,
+            "max_stack_cnt": 12
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_crow",
       "moduleName": "La Pluma's Badge",
-      "desc": "Operator La Pluma has demonstrated a remarkable aptitude in dispatching enemy swathes with little to no support.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Reaper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator La Pluma has demonstrated a remarkable aptitude in dispatching enemy swathes with little to no support.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Reaper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_crow",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_crow",
       "moduleName": "Aqua Blue Dawn",
-      "desc": "Why do people like to drink?\nWhen Rafaela first began her bartending job, the question floated to her mind from time to time.\nShe can always ask her papá when she has a question. But this is a work thing—Papá usually barely talks to her about his work, so likewise, she'd better not ask him about hers.\nAnd she doesn't want to ask her hermano about it.\nEspecially not her hermano.\nSo she'll ask a customer! People are always coming and going in Dossoles, but in just a short time, Rafaela's learned to recognize a lot of regulars, and they all like to talk to her.\nAccording to the person dancing wildly to the jota while calling her 'Rafa' and 'chica' at the top of their lungs, you drink for the color, the mouthfeel, the taste, and for a moment of joy.\nBut according to the person calling her 'Señorita Silva' while leaning on the bar counter, sluggishly lifting a hand as they sing fado, you drink just to forget and be free from your worries for a while.\n'Thanks for asking,' they add more often than not.\nRafaela isn't sure if she comprehended all these answers, but she makes sure to remember every one. It's how it should be, she thinks.\nTimes change.\nAs the landship sails, there's a regular thrumming all throughout the hold. Rafaela hasn't gotten used to this noise yet—after all, it's nothing like fowlbeast chirps or beating waves—but she doesn't react badly to it at all.\nShe's asked another operator before, and now she knows this is how it should be on the ship.\nIn the landship, music is more varied too, with lots she's never heard before.\nEven so, the person who dances wildly while calling her 'Rafa' and 'chica' at the top of their lungs is still there. When she meets this kind of person, she does as they request, and squeezes some of the sweetest fruit juice into their drinks, adding some of the most bracing syrup. But at the same time, she secretly dilutes these flavors until they make for the coolest, most reinvigorating flavors. She gives whoever's drinking it a moment of joy, and all the wake-up they need to bask in that joy.\nAnd there's still the person who calls her 'Señorita Silva' and 'Miss La Pluma' while leaning on the bar counter, sluggishly lifting a hand. When she meets this kind of person, she does as they quietly ask her, and pulls the strongest, most biting bottles from the racks to pour into their glass. But at the same time, she doesn't forget to mix in a little of the finest pedigree, sourced locally from Logroño. She watches them down a glass of bitter drink, but knows the taste left behind won't be totally astringent.\n'Thank you,' they say in approval more often than not. Sometimes she nods, but feels strange about it, so other times she just doesn't nod at all.\nOf course, this method of mixology isn't entirely described in the Dossoles Guide to Cocktails, but she makes a note of it in there herself.\nAnd she's already given the book away to someone who deserves it. She may not have it anymore, but she's learned it by heart.\nRafaela feels that this way is good.\nThis is how it should be."
+      "desc": "Why do people like to drink?\nWhen Rafaela first began her bartending job, the question floated to her mind from time to time.\nShe can always ask her papá when she has a question. But this is a work thing—Papá usually barely talks to her about his work, so likewise, she'd better not ask him about hers.\nAnd she doesn't want to ask her hermano about it.\nEspecially not her hermano.\nSo she'll ask a customer! People are always coming and going in Dossoles, but in just a short time, Rafaela's learned to recognize a lot of regulars, and they all like to talk to her.\nAccording to the person dancing wildly to the jota while calling her 'Rafa' and 'chica' at the top of their lungs, you drink for the color, the mouthfeel, the taste, and for a moment of joy.\nBut according to the person calling her 'Señorita Silva' while leaning on the bar counter, sluggishly lifting a hand as they sing fado, you drink just to forget and be free from your worries for a while.\n'Thanks for asking,' they add more often than not.\nRafaela isn't sure if she comprehended all these answers, but she makes sure to remember every one. It's how it should be, she thinks.\nTimes change.\nAs the landship sails, there's a regular thrumming all throughout the hold. Rafaela hasn't gotten used to this noise yet—after all, it's nothing like fowlbeast chirps or beating waves—but she doesn't react badly to it at all.\nShe's asked another operator before, and now she knows this is how it should be on the ship.\nIn the landship, music is more varied too, with lots she's never heard before.\nEven so, the person who dances wildly while calling her 'Rafa' and 'chica' at the top of their lungs is still there. When she meets this kind of person, she does as they request, and squeezes some of the sweetest fruit juice into their drinks, adding some of the most bracing syrup. But at the same time, she secretly dilutes these flavors until they make for the coolest, most reinvigorating flavors. She gives whoever's drinking it a moment of joy, and all the wake-up they need to bask in that joy.\nAnd there's still the person who calls her 'Señorita Silva' and 'Miss La Pluma' while leaning on the bar counter, sluggishly lifting a hand. When she meets this kind of person, she does as they quietly ask her, and pulls the strongest, most biting bottles from the racks to pour into their glass. But at the same time, she doesn't forget to mix in a little of the finest pedigree, sourced locally from Logroño. She watches them down a glass of bitter drink, but knows the taste left behind won't be totally astringent.\n'Thank you,' they say in approval more often than not. Sometimes she nods, but feels strange about it, so other times she just doesn't nod at all.\nOf course, this method of mixology isn't entirely described in the Dossoles Guide to Cocktails, but she makes a note of it in there herself.\nAnd she's already given the book away to someone who deserves it. She may not have it anymore, but she's learned it by heart.\nRafaela feels that this way is good.\nThis is how it should be.",
+      "typeIcon": "rea-x",
+      "uniEquipIcon": "uniequip_002_crow",
+      "typeName1": "REA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_crow_1",
+        "uniequip_002_crow_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 18,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 18,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 24,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ASPD +3 after defeating an enemy (stacks up to 12 times); while at max stacks, ATK +5%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Into the Groove",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ASPD +3 after defeating an enemy (stacks up to 12 times); while at max stacks, ATK +8%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Into the Groove",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1087,5 +1620,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

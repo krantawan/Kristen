@@ -151,6 +151,7 @@
       "cost": 10
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_4144_chilc#1",
@@ -630,16 +631,593 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃速度+5",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 5,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 100,
+        "atk": 0,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "鋭い五感",
+          "description": "配置後35秒間、自身と攻撃範囲内の味方は自然環境からのダメージと<$ba.dt.element>元素損傷</>を受けなくなる",
+          "blackboard": [
+            {
+              "key": "immune_duration",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "鋭い五感",
+          "description": "配置後40<@ba.talpu>（+5）</>秒間、自身と攻撃範囲内の味方は自然環境からのダメージと<$ba.dt.element>元素損傷</>を受けなくなる",
+          "blackboard": [
+            {
+              "key": "immune_duration",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "鋭い五感",
+          "description": "配置後45秒間、自身と攻撃範囲内の味方は自然環境からのダメージと<$ba.dt.element>元素損傷</>を受けなくなる",
+          "blackboard": [
+            {
+              "key": "immune_duration",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "鋭い五感",
+          "description": "配置後50<@ba.talpu>（+5）</>秒間、自身と攻撃範囲内の味方は自然環境からのダメージと<$ba.dt.element>元素損傷</>を受けなくなる",
+          "blackboard": [
+            {
+              "key": "immune_duration",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_chilc",
       "moduleName": "チルチャックの記章",
-      "desc": "チルチャックは罠解除による作戦補助に秀でている。\n外勤部門の決定に基づき\n外勤任務においては先鋒オペレーターとして区分し、偵察兵の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "チルチャックは罠解除による作戦補助に秀でている。\n外勤部門の決定に基づき\n外勤任務においては先鋒オペレーターとして区分し、偵察兵の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_chilc",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_chilc",
       "moduleName": "オリジナルピッキングツール",
-      "desc": "ある日、アカフラのジャングルの外れにある、二十年以上の熟成酒だけを取り扱うドゥリンのバーにて……\n「昨日、スピリッツ愛好家協会の格納庫で起きたこと、聞いたか？」\n「そりゃあ、俺は現場に呼び出されたからな。今回は前よりもでかい騒ぎになって、ドゥリン保護協会がまたしばらくは大忙しさ。」\n「たしか前は、あの自走ロボの制御チップがシャンパンでダメになったせいでそうなったよな。今回は何が起きたんだ？」\n「今回はビールだよ。」\n「は？また酒が原因なのか？」\n「お前、あの格納庫に行ったことあるか？あいつらときたら、酒も全部あそこに詰め込んで、樽も瓶もそこら中に散らかしっぱなしだからな。問題が出ないほうがおかしいくらいだ。」\n「ったく、本当に懲りない奴らだな！前回も『鉄人スピリッツ号』を叩きのめすのに相当苦労したはずだろ。今回はどうしたんだ？」\n「今回は協会の奴らが自力で『鉄人スピリッツ号』を何とかしようとしたんだけどな。結局、あいつらのエンジニアは今そろいもそろって病院で唸ってるよ。」\n「そりゃ悲惨だな……でもそれじゃ、誰かを頼るしかなくなったってことか？」\n「それが、あいつらも悪運が強くてな。助けてくれって要請したらすぐ、ある達人が名乗りを上げて解決してくれたんだ。」\n「達人って？詳しく教えてくれよ。」\n「それが、てんで知らないよそ者なんだよ。お前よりも背が低いくらいだが、これがカラクリや罠を解除する専門家を自称してるんだ。みんな、初めはよそのエンジニアだと思ってたんだが、自分はエンジニアじゃなくて冒険者だとか言い張ってさ。曰く、ここでは物資の補給をしてるだけで、迷宮？とかいうところに戻るとかなんとか。だから協会としても、そいつを酔っ払いか何かだと思ってたんだが、それでも前金を払ってやらせてみることにしたんだ。そしたら、そいつは身軽な動きで、さっと格納庫に入っていってな。」\n「だが、『鉄人』はカラクリでも罠でもないだろ。」\n「食い扶持になる技術ってのは、何か通じるものがあるんだろうさ。おかげで俺が着いた時には、格納庫はもう開放されていて、『鉄人』もそのよそ者に無事バラされてたんだ。」\n「あいつらときたら、そういう腕の立つ奴によく会うもんだな――で、問題は解決したんだろ？そんならどうして、今日は協会の奴を見かけないんだ？」\n「格納庫を開けてもらった礼として、そのよそ者にビールも渡したらかなり喜ばれたらしくてな。そいつが酒好きと見た協会の奴らは、すぐにそいつも混ぜて祝いの宴会を派手に開いたんだと。」\n「……それで？」\n「そのよそ者ときたら、俺は大して飲めないぞとか言いながら、そりゃもうたっぷり飲んでたんだと！」"
+      "desc": "ある日、アカフラのジャングルの外れにある、二十年以上の熟成酒だけを取り扱うドゥリンのバーにて……\n「昨日、スピリッツ愛好家協会の格納庫で起きたこと、聞いたか？」\n「そりゃあ、俺は現場に呼び出されたからな。今回は前よりもでかい騒ぎになって、ドゥリン保護協会がまたしばらくは大忙しさ。」\n「たしか前は、あの自走ロボの制御チップがシャンパンでダメになったせいでそうなったよな。今回は何が起きたんだ？」\n「今回はビールだよ。」\n「は？また酒が原因なのか？」\n「お前、あの格納庫に行ったことあるか？あいつらときたら、酒も全部あそこに詰め込んで、樽も瓶もそこら中に散らかしっぱなしだからな。問題が出ないほうがおかしいくらいだ。」\n「ったく、本当に懲りない奴らだな！前回も『鉄人スピリッツ号』を叩きのめすのに相当苦労したはずだろ。今回はどうしたんだ？」\n「今回は協会の奴らが自力で『鉄人スピリッツ号』を何とかしようとしたんだけどな。結局、あいつらのエンジニアは今そろいもそろって病院で唸ってるよ。」\n「そりゃ悲惨だな……でもそれじゃ、誰かを頼るしかなくなったってことか？」\n「それが、あいつらも悪運が強くてな。助けてくれって要請したらすぐ、ある達人が名乗りを上げて解決してくれたんだ。」\n「達人って？詳しく教えてくれよ。」\n「それが、てんで知らないよそ者なんだよ。お前よりも背が低いくらいだが、これがカラクリや罠を解除する専門家を自称してるんだ。みんな、初めはよそのエンジニアだと思ってたんだが、自分はエンジニアじゃなくて冒険者だとか言い張ってさ。曰く、ここでは物資の補給をしてるだけで、迷宮？とかいうところに戻るとかなんとか。だから協会としても、そいつを酔っ払いか何かだと思ってたんだが、それでも前金を払ってやらせてみることにしたんだ。そしたら、そいつは身軽な動きで、さっと格納庫に入っていってな。」\n「だが、『鉄人』はカラクリでも罠でもないだろ。」\n「食い扶持になる技術ってのは、何か通じるものがあるんだろうさ。おかげで俺が着いた時には、格納庫はもう開放されていて、『鉄人』もそのよそ者に無事バラされてたんだ。」\n「あいつらときたら、そういう腕の立つ奴によく会うもんだな――で、問題は解決したんだろ？そんならどうして、今日は協会の奴を見かけないんだ？」\n「格納庫を開けてもらった礼として、そのよそ者にビールも渡したらかなり喜ばれたらしくてな。そいつが酒好きと見た協会の奴らは、すぐにそいつも混ぜて祝いの宴会を派手に開いたんだと。」\n「……それで？」\n「そのよそ者ときたら、俺は大して飲めないぞとか言いながら、そりゃもうたっぷり飲んでたんだと！」",
+      "typeIcon": "age-x",
+      "uniEquipIcon": "uniequip_002_chilc",
+      "typeName1": "AGE",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_chilc_1",
+        "uniequip_002_chilc_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31064",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31084",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に狙われにくい",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 23,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に狙われにくい",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置後53秒間、自身と攻撃範囲内の味方は自然環境からのダメージと<$ba.dt.element>元素損傷</>を受けなくなる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "鋭い五感",
+                  "description": null,
+                  "rangeId": "2-2",
+                  "blackboard": [
+                    {
+                      "key": "immune_duration",
+                      "value": 53,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置後58<@ba.talpu>（+5）</>秒間、自身と攻撃範囲内の味方は自然環境からのダメージと<$ba.dt.element>元素損傷</>を受けなくなる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "鋭い五感",
+                  "description": null,
+                  "rangeId": "2-2",
+                  "blackboard": [
+                    {
+                      "key": "immune_duration",
+                      "value": 58,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵に狙われにくい",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置後60秒間、自身と攻撃範囲内の味方は自然環境からのダメージと<$ba.dt.element>元素損傷</>を受けなくなる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "鋭い五感",
+                  "description": null,
+                  "rangeId": "2-2",
+                  "blackboard": [
+                    {
+                      "key": "immune_duration",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置後65<@ba.talpu>（+5）</>秒間、自身と攻撃範囲内の味方は自然環境からのダメージと<$ba.dt.element>元素損傷</>を受けなくなる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "鋭い五感",
+                  "description": null,
+                  "rangeId": "2-2",
+                  "blackboard": [
+                    {
+                      "key": "immune_duration",
+                      "value": 65,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1093,5 +1671,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -152,6 +152,36 @@
       "cost": 9
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "interval",
+            "value": 3,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "cost",
+            "value": -3,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_322_lmlee#1",
@@ -756,21 +786,1087 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+30",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 30,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 300,
+        "atk": 55,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "三寸不爛の舌",
+          "description": "ブロックしている敵の攻撃速度-7、自身の攻撃速度+7。周囲8マス内にいる敵が1体のみの場合、効果値倍増",
+          "blackboard": [
+            {
+              "key": "lmlee_t_1[enemy].attack_speed",
+              "value": -7,
+              "valueStr": null
+            },
+            {
+              "key": "lmlee_t_1[self].attack_speed",
+              "value": 7,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "三寸不爛の舌",
+          "description": "ブロックしている敵の攻撃速度-8<@ba.talpu>（+1）</>、自身の攻撃速度+8<@ba.talpu>（+1）</>。周囲8マス内にいる敵が1体のみの場合、効果値倍増",
+          "blackboard": [
+            {
+              "key": "lmlee_t_1[enemy].attack_speed",
+              "value": -8,
+              "valueStr": null
+            },
+            {
+              "key": "lmlee_t_1[self].attack_speed",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "三寸不爛の舌",
+          "description": "ブロックしている敵の攻撃速度-14、自身の攻撃速度+14。周囲8マス内にいる敵が1体のみの場合、効果値倍増",
+          "blackboard": [
+            {
+              "key": "lmlee_t_1[enemy].attack_speed",
+              "value": -14,
+              "valueStr": null
+            },
+            {
+              "key": "lmlee_t_1[self].attack_speed",
+              "value": 14,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "三寸不爛の舌",
+          "description": "ブロックしている敵の攻撃速度-15<@ba.talpu>（+1）</>、自身の攻撃速度+15<@ba.talpu>（+1）</>。周囲8マス内にいる敵が1体のみの場合、効果値倍増",
+          "blackboard": [
+            {
+              "key": "lmlee_t_1[enemy].attack_speed",
+              "value": -15,
+              "valueStr": null
+            },
+            {
+              "key": "lmlee_t_1[self].attack_speed",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "世渡りの知恵",
+          "description": "特性によるコスト消費時、所持コストが5以上の場合、代わりにコストを5消費して、自身が次に受ける<$ba.stun>スタン</>/<$ba.frozen>凍結</>の効果を打ち消し、その効果を付与した対象を3秒間スタンさせる（効果中及び消費分のコスト不足時は発動しない）",
+          "blackboard": [
+            {
+              "key": "extra_cost",
+              "value": -5,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_lmlee",
       "moduleName": "リーの記章",
-      "desc": "リーは繰り返し戦場に切り込む戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、行商人の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "リーは繰り返し戦場に切り込む戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、行商人の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_lmlee",
       "moduleName": "「無問吉凶」",
-      "desc": "「リー先生、その……どうでしょう？」\nリーはスーツケースから羅盤を取り出し、部屋の中で時計回りと逆方向にそれぞれ三周した。片手は印を結びながら、口の中では何やらぶつぶつと唱えていた。\n「ご友人のおっしゃる通り、会社の経営が不調なのは、この部屋の問題のようですねぇ」\n「四方をご覧ください、東に窓がないために陽の気に欠け、北は家具が何もなく富を集めにくい。南はもう一つのビルに面していて、いわゆる競合者が顔を突き合わしてる。そして一番致命的なのが、西に野菜売りの市場……ああなんてことを」\n「野菜市場がどうしたのですか？」\n「殺気が濃厚すぎるんですよ」\n「なるほど、なるほど！　さすが大先生です！」依頼人はリーのそばに近寄り、何一つ書かれていない羅盤をのぞき込む。盤面は鏡のように、哀愁を帯びた顔を映している。\n「天地万物、気の流れでつながっているものです。気の流れが合えば吉、合わなければ凶。この部屋は四方の流れが不順である上、五行もことごとく相克しており、まさしく避けるべき家そのものですよ。ここに長く留まれば、商売が順調にいかなくなるばかりか、部屋の持ち主ももしかしたら……」\n「だ、大先生、どうか、どうかお助けくださいませ！」\n「まあまあ慌てなさらずに。龍門での初めてのお客様ですからね、これも何かしらの縁ですから、一つアフターサービスをいたしましょう。別の場所をお教えいたしますので、三日内にここから引っ越しなさってください。こちらの部屋は、私めがどうにかいたしましょう」\n「ありがとうございます、ありがとうございます！」\n\n「それで元の半分もない値段で、こちらの部屋を借りたというわけですか？」\nのちに、リーは食事の場で子供三人にこの話をした。ウンは腹を抱えっぱなしで、アに至っては地面に転がるほど笑いこけていた。ワイフーだけは詐欺犯を前にしたように、リーをじっと見つめている。\n「本当に羅盤から風水を読み取れるんですか？」\nリーは悠々と一口お茶を飲み、また例の羅盤を取り出した。子供三人も寄ってきて、盤面には好奇心に満ちた三つの顔が映った。\n「内装業の会社を開いていた人でね。ここ数キロ範囲内の街は全部、内装工事を終えたばかりの新築ビルばかりだからねぇ。受けられるような仕事もまともにないだろう？あながち嘘でもないのさ」"
+      "desc": "「リー先生、その……どうでしょう？」\nリーはスーツケースから羅盤を取り出し、部屋の中で時計回りと逆方向にそれぞれ三周した。片手は印を結びながら、口の中では何やらぶつぶつと唱えていた。\n「ご友人のおっしゃる通り、会社の経営が不調なのは、この部屋の問題のようですねぇ」\n「四方をご覧ください、東に窓がないために陽の気に欠け、北は家具が何もなく富を集めにくい。南はもう一つのビルに面していて、いわゆる競合者が顔を突き合わしてる。そして一番致命的なのが、西に野菜売りの市場……ああなんてことを」\n「野菜市場がどうしたのですか？」\n「殺気が濃厚すぎるんですよ」\n「なるほど、なるほど！　さすが大先生です！」依頼人はリーのそばに近寄り、何一つ書かれていない羅盤をのぞき込む。盤面は鏡のように、哀愁を帯びた顔を映している。\n「天地万物、気の流れでつながっているものです。気の流れが合えば吉、合わなければ凶。この部屋は四方の流れが不順である上、五行もことごとく相克しており、まさしく避けるべき家そのものですよ。ここに長く留まれば、商売が順調にいかなくなるばかりか、部屋の持ち主ももしかしたら……」\n「だ、大先生、どうか、どうかお助けくださいませ！」\n「まあまあ慌てなさらずに。龍門での初めてのお客様ですからね、これも何かしらの縁ですから、一つアフターサービスをいたしましょう。別の場所をお教えいたしますので、三日内にここから引っ越しなさってください。こちらの部屋は、私めがどうにかいたしましょう」\n「ありがとうございます、ありがとうございます！」\n\n「それで元の半分もない値段で、こちらの部屋を借りたというわけですか？」\nのちに、リーは食事の場で子供三人にこの話をした。ウンは腹を抱えっぱなしで、アに至っては地面に転がるほど笑いこけていた。ワイフーだけは詐欺犯を前にしたように、リーをじっと見つめている。\n「本当に羅盤から風水を読み取れるんですか？」\nリーは悠々と一口お茶を飲み、また例の羅盤を取り出した。子供三人も寄ってきて、盤面には好奇心に満ちた三つの顔が映った。\n「内装業の会社を開いていた人でね。ここ数キロ範囲内の街は全部、内装工事を終えたばかりの新築ビルばかりだからねぇ。受けられるような仕事もまともにないだろう？あながち嘘でもないのさ」",
+      "typeIcon": "mer-x",
+      "uniEquipIcon": "uniequip_002_lmlee",
+      "typeName1": "MER",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_lmlee_1",
+        "uniequip_002_lmlee_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 260,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 67,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "特性によるコスト消費時、所持コストが5以上の場合、代わりにコストを5消費して、自身が次に受ける<$ba.stun>スタン</>/<$ba.frozen>凍結</>の効果を打ち消し、その効果を付与した対象を4秒間スタンさせる（効果中及び消費分のコスト不足時は発動しない）",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "世渡りの知恵",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "extra_cost",
+                      "value": -5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 74,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "特性によるコスト消費時、所持コストが4以上の場合、代わりにコストを4消費して、自身が次に受ける<$ba.stun>スタン</>/<$ba.frozen>凍結</>の効果を打ち消し、その効果を付与した対象を4秒間スタンさせる（効果中及び消費分のコスト不足時は発動しない）",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "世渡りの知恵",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "extra_cost",
+                      "value": -4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_lmlee",
       "moduleName": "「ただ善悪を思う」",
-      "desc": "街ゆく人影も少ない、ある炎天下の午後。リーはおかもちを手に、■記商会の目立たない扉を叩いた。\n「ったく、どこのボンクラだ。最期の食事を持ってくんのにご丁寧にノックなんかしやがって。さっさと持ってこい。」\n「すみません、お邪魔しますよ。リンさんから、こいつを届けてほしいって頼まれましてねぇ。」\n「……てめえかよ。で、本当にあいつのために働いてんのか？」\nリーはそれには答えずに、おかもちから小皿に盛られた料理を一皿ずつ取り出して、男の前の四角い机に並べていく。\n「俺たち兄弟の好み、はっきり覚えてやがんだな。」\n「当然じゃないですか。あなたたち尚蜀の人は、好き嫌いが激しいですからねぇ。あなた以外は皆辛いのが苦手で、故郷の家庭料理ばかり食べてたでしょう。」\n男は、トウガラシのかけらも見当たらない机を眺めてため息をついた。「だが、こんなもんを喜んで食ってた連中はみんな死んじまった。」\n「てっきりその話は避けるとばかり思ってましたよ。」\n「そっちこそ、自分の手も汚れてるってことくらい自覚してると思ってたがな。」\n「裏社会を牛耳るのと人を殺すのはまるで違うでしょう。あなたが自分で選んだことじゃないですか。」\n「俺たちゃカタギじゃないんだぞ。実権を奪れなんて言われたら、ほかのやり方なんて思いつかねぇんだ。」\nリーは首を振ると、おかもちから最後の一皿を取り出した。\nすると男の目が輝く。\n「おお、尚蜀の麻辣豆腐もあったのか――いや待て、てんで赤くないじゃねぇか。どうせ龍門の料理人が作ったんだろ。こんなもん食えるかよ。」\n「作ったのはおれですよ。」\n男は疑わしげな顔で豆腐をつまみ、口に入れて転がしてみた。するとたちまち辛味が広がり、彼は何度もむせこんだ。\n「げほっ、ごほっ、さすがはリー大先生、こいつはお手上げだ。」\n「辛くなさそうに見えて辛い物を作る方法なんて、いくらでもあるもんです。」\n「そりゃあそうだろうよ。手練手管のリー先生様は、戦わずして俺に取って代わるなり、新しくあの老いぼれネズミと張り合える奴になったくらいのご手腕だ。あんたの輝かしい未来を祝福してやらねぇとな。」\n「輝かしい未来だなんてそんな。おれは、龍門でもうしばらく穏やかに過ごしたいだけですよ。」\n「信じると思うか？」\n「初めっからおれを疑いながらも、あなたは結局おれの言う通りにしてたじゃないですか。おれの言うことがどれも本当だってわかってたんでしょう？」\n「……あんたが俺をハメたのも、その穏やかな暮らしのためか？」\n「自分だけのためじゃありませんがね。」\n「俺を倒したよそ者のあんたが、これからはあの老いぼれネズミの上客になるってんなら、穏やかな暮らしなんて簡単に手に入るだろう。だが、『自分だけのためじゃない』ってのはどういう意味だ？」\n「あなたが失脚した今、龍門にはもう影響力のあるヤクザは残ってません。そんで、リンさんが、散り散りになったチンピラ崩れが治安を乱すのを止める手立てがあるなんて言ったもんで、おれはそいつを信じてるんです。」\n男は暫し呆けた顔をしてから、やがて箸を手にした。\n「出て行ってくれ。あんたにこの道でやっていくつもりがねぇのなら、なおさら手を汚さねぇほうがいい。」\n「まあそう慌てずに。」\nリーは男の懐目がけて何かを放り投げた。\n「こいつは？」\n「車の鍵ですよ。あなたが本気で、世のため人のために何かをしたいと思うなら、そいつを使ってください。乗ればどこへ向かえばいいかはおのずとわかりますんでね……」\n「……もう二度と、みんな揃った食卓をダメにしないでくださいよ。」"
+      "desc": "街ゆく人影も少ない、ある炎天下の午後。リーはおかもちを手に、■記商会の目立たない扉を叩いた。\n「ったく、どこのボンクラだ。最期の食事を持ってくんのにご丁寧にノックなんかしやがって。さっさと持ってこい。」\n「すみません、お邪魔しますよ。リンさんから、こいつを届けてほしいって頼まれましてねぇ。」\n「……てめえかよ。で、本当にあいつのために働いてんのか？」\nリーはそれには答えずに、おかもちから小皿に盛られた料理を一皿ずつ取り出して、男の前の四角い机に並べていく。\n「俺たち兄弟の好み、はっきり覚えてやがんだな。」\n「当然じゃないですか。あなたたち尚蜀の人は、好き嫌いが激しいですからねぇ。あなた以外は皆辛いのが苦手で、故郷の家庭料理ばかり食べてたでしょう。」\n男は、トウガラシのかけらも見当たらない机を眺めてため息をついた。「だが、こんなもんを喜んで食ってた連中はみんな死んじまった。」\n「てっきりその話は避けるとばかり思ってましたよ。」\n「そっちこそ、自分の手も汚れてるってことくらい自覚してると思ってたがな。」\n「裏社会を牛耳るのと人を殺すのはまるで違うでしょう。あなたが自分で選んだことじゃないですか。」\n「俺たちゃカタギじゃないんだぞ。実権を奪れなんて言われたら、ほかのやり方なんて思いつかねぇんだ。」\nリーは首を振ると、おかもちから最後の一皿を取り出した。\nすると男の目が輝く。\n「おお、尚蜀の麻辣豆腐もあったのか――いや待て、てんで赤くないじゃねぇか。どうせ龍門の料理人が作ったんだろ。こんなもん食えるかよ。」\n「作ったのはおれですよ。」\n男は疑わしげな顔で豆腐をつまみ、口に入れて転がしてみた。するとたちまち辛味が広がり、彼は何度もむせこんだ。\n「げほっ、ごほっ、さすがはリー大先生、こいつはお手上げだ。」\n「辛くなさそうに見えて辛い物を作る方法なんて、いくらでもあるもんです。」\n「そりゃあそうだろうよ。手練手管のリー先生様は、戦わずして俺に取って代わるなり、新しくあの老いぼれネズミと張り合える奴になったくらいのご手腕だ。あんたの輝かしい未来を祝福してやらねぇとな。」\n「輝かしい未来だなんてそんな。おれは、龍門でもうしばらく穏やかに過ごしたいだけですよ。」\n「信じると思うか？」\n「初めっからおれを疑いながらも、あなたは結局おれの言う通りにしてたじゃないですか。おれの言うことがどれも本当だってわかってたんでしょう？」\n「……あんたが俺をハメたのも、その穏やかな暮らしのためか？」\n「自分だけのためじゃありませんがね。」\n「俺を倒したよそ者のあんたが、これからはあの老いぼれネズミの上客になるってんなら、穏やかな暮らしなんて簡単に手に入るだろう。だが、『自分だけのためじゃない』ってのはどういう意味だ？」\n「あなたが失脚した今、龍門にはもう影響力のあるヤクザは残ってません。そんで、リンさんが、散り散りになったチンピラ崩れが治安を乱すのを止める手立てがあるなんて言ったもんで、おれはそいつを信じてるんです。」\n男は暫し呆けた顔をしてから、やがて箸を手にした。\n「出て行ってくれ。あんたにこの道でやっていくつもりがねぇのなら、なおさら手を汚さねぇほうがいい。」\n「まあそう慌てずに。」\nリーは男の懐目がけて何かを放り投げた。\n「こいつは？」\n「車の鍵ですよ。あなたが本気で、世のため人のために何かをしたいと思うなら、そいつを使ってください。乗ればどこへ向かえばいいかはおのずとわかりますんでね……」\n「……もう二度と、みんな揃った食卓をダメにしないでくださいよ。」",
+      "typeIcon": "mer-y",
+      "uniEquipIcon": "uniequip_003_lmlee",
+      "typeName1": "MER",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_lmlee_1",
+        "uniequip_003_lmlee_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 57,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "特性によるコスト消費時、攻撃力+4%、最大5回まで",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 69,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 43,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "特性によるコスト消費時、攻撃力+4%、最大5回まで",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ブロックしている敵の攻撃速度-17、自身の攻撃速度+17。周囲8マス内にいる敵が1体のみの場合、効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "三寸不爛の舌",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lmlee_t_1[enemy].attack_speed",
+                      "value": -17,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lmlee_t_1[self].attack_speed",
+                      "value": 17,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ブロックしている敵の攻撃速度-18<@ba.talpu>（+1）</>、自身の攻撃速度+18<@ba.talpu>（+1）</>。周囲8マス内にいる敵が1体のみの場合、効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "三寸不爛の舌",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lmlee_t_1[enemy].attack_speed",
+                      "value": -18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lmlee_t_1[self].attack_speed",
+                      "value": 18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 76,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "特性によるコスト消費時、攻撃力+4%、最大5回まで",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ブロックしている敵の攻撃速度-20、自身の攻撃速度+20。周囲8マス内にいる敵が1体のみの場合、効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "三寸不爛の舌",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lmlee_t_1[enemy].attack_speed",
+                      "value": -20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lmlee_t_1[self].attack_speed",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ブロックしている敵の攻撃速度-21<@ba.talpu>（+1）</>、自身の攻撃速度+21<@ba.talpu>（+1）</>。周囲8マス内にいる敵が1体のみの場合、効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "三寸不爛の舌",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lmlee_t_1[enemy].attack_speed",
+                      "value": -21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lmlee_t_1[self].attack_speed",
+                      "value": 21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1224,5 +2320,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

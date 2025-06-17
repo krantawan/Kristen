@@ -151,6 +151,28 @@
       "cost": 30
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": "1-3"
+    }
+  ],
   "skins": [
     {
       "skinId": "char_440_pinecn#1",
@@ -648,16 +670,618 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+28",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 28,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 55,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ポータブル電源",
+          "description": "配置後、60秒間SP自然回復速度+0.2sp/秒",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "ポータブル電源",
+          "description": "配置後、60秒間SP自然回復速度+0.25<@ba.talpu>（+0.05）</>sp/秒",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.25,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ポータブル電源",
+          "description": "配置後、60秒間SP自然回復速度+0.45sp/秒",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.45,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "ポータブル電源",
+          "description": "配置後、60秒間SP自然回復速度+0.5<@ba.talpu>（+0.05）</>sp/秒",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_pinecn",
       "moduleName": "パインコーンの記章",
-      "desc": "パインコーンは近距離射撃によって複数の敵を火力で制圧することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては狙撃オペレーターとして区分し、散弾射手の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "パインコーンは近距離射撃によって複数の敵を火力で制圧することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては狙撃オペレーターとして区分し、散弾射手の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_pinecn",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_pinecn",
       "moduleName": "ポータブル電源",
-      "desc": "ロドスの食堂にて。\n「みんな元気ー？特別番組『ロドスに響く謎の歌声を追え』！お送りするのは、みんなの友達カシャだよ！今日はさっそく、オペレーターへのインタビューから始めていこっか！ミナ、謎の歌声事件については聞いたことあるよね？」\n「えっと……あんまり聞いたことないです。」\n「今大注目の事件なんだよ！っていうのも、奇妙な謎だらけだからね。食堂ホールのスピーカーから、一週間連続で、毎日午前中の決まった時間に歌声が聴こえてきてるんだ。でも、その歌声を気に入った人が放送室担当に聞いてみても――音楽なんて流してないし、放送室では誰も歌ってないんだって！」\n「その時間は、船の上のほうのプラットフォームで壁を張り替えていたので……残念ですが、聞き逃してたみたいですね。」\n「それじゃあ頼みたいことがあるんだけどさ。発音と歌詞から言って、例の歌は、クルビア人のオペレーターが歌ってるはずなんだ！女の人の声で、こう聴こえてくるんだよ。『進め進め進め、ガガガと鳴らせ掘削機！開拓開拓開拓だ、都市の未来を切り拓け！♪』」\n「舞い上がったほこりが目にしみて――あれ？つい続きを歌っちゃいましたけど……」\n「そう、その歌！っていうか、声もそっくりじゃん！でも、あの歌はもっと元気があったんだよね！」\n「現場で歌ってるときに元気がないと、現場監督にサボリだと思われちゃいますから。それにしても、この歌を歌える人なんてほかに……」\n「――怪しいな。ミナは仕事中歌うのが習慣なんだよね？その上、謎の歌声が聴こえるタイミングはちょうど仕事をしてたんでしょ？仕事してた場所を見せてもらったらわかるかも。」\n食堂の上にあるプラットフォームにて。\n「やっほーみんな！あたしたちは果たして真相に近付いているのか、一緒に最後まで追ってみよう！ミナが直してるのはこの壁なんだよね？……って待って！今、何を見つけたと思う！？」\n「これですか？私のモバイルバッテリーです。工事が終わるまで置きっぱなしにしていて……」\n「あたしが言ってるのは、その上にある――カラオケ用のマイクだよ！」\n「えっと、それは息抜き用のやつなんです。この船窓からは、遠くの綺麗な移動都市が見えますよね？それを見てると思わず「開拓開拓」って歌いたくなっちゃって。でも、私のワイヤレススピーカーは壊れてるので、その音が下の階まで届くことはないと思いますよ。」\n「ん？あっ！」\n驚きの声を上げたカシャは、そのままマイクを掴んだ。\n「みんな！あの歌声の正体がついに明らかになったよ！謎の歌姫はなんと――」\nミナはその傍ら、困惑したようにマイクをいじる。それは目の前のワイヤレススピーカーに繋がっているはず、なのだが――実際には彼女のうっかりで「食堂ホール」のスピーカーに繋がってしまっていたようだ。\n「えっ……本当に、私だったんですか？」\n誰にも聞かれていないと思って、何も気にせず情感を込めて歌っていたことを思い出し、ミナは思わず顔を覆った。"
+      "desc": "ロドスの食堂にて。\n「みんな元気ー？特別番組『ロドスに響く謎の歌声を追え』！お送りするのは、みんなの友達カシャだよ！今日はさっそく、オペレーターへのインタビューから始めていこっか！ミナ、謎の歌声事件については聞いたことあるよね？」\n「えっと……あんまり聞いたことないです。」\n「今大注目の事件なんだよ！っていうのも、奇妙な謎だらけだからね。食堂ホールのスピーカーから、一週間連続で、毎日午前中の決まった時間に歌声が聴こえてきてるんだ。でも、その歌声を気に入った人が放送室担当に聞いてみても――音楽なんて流してないし、放送室では誰も歌ってないんだって！」\n「その時間は、船の上のほうのプラットフォームで壁を張り替えていたので……残念ですが、聞き逃してたみたいですね。」\n「それじゃあ頼みたいことがあるんだけどさ。発音と歌詞から言って、例の歌は、クルビア人のオペレーターが歌ってるはずなんだ！女の人の声で、こう聴こえてくるんだよ。『進め進め進め、ガガガと鳴らせ掘削機！開拓開拓開拓だ、都市の未来を切り拓け！♪』」\n「舞い上がったほこりが目にしみて――あれ？つい続きを歌っちゃいましたけど……」\n「そう、その歌！っていうか、声もそっくりじゃん！でも、あの歌はもっと元気があったんだよね！」\n「現場で歌ってるときに元気がないと、現場監督にサボリだと思われちゃいますから。それにしても、この歌を歌える人なんてほかに……」\n「――怪しいな。ミナは仕事中歌うのが習慣なんだよね？その上、謎の歌声が聴こえるタイミングはちょうど仕事をしてたんでしょ？仕事してた場所を見せてもらったらわかるかも。」\n食堂の上にあるプラットフォームにて。\n「やっほーみんな！あたしたちは果たして真相に近付いているのか、一緒に最後まで追ってみよう！ミナが直してるのはこの壁なんだよね？……って待って！今、何を見つけたと思う！？」\n「これですか？私のモバイルバッテリーです。工事が終わるまで置きっぱなしにしていて……」\n「あたしが言ってるのは、その上にある――カラオケ用のマイクだよ！」\n「えっと、それは息抜き用のやつなんです。この船窓からは、遠くの綺麗な移動都市が見えますよね？それを見てると思わず「開拓開拓」って歌いたくなっちゃって。でも、私のワイヤレススピーカーは壊れてるので、その音が下の階まで届くことはないと思いますよ。」\n「ん？あっ！」\n驚きの声を上げたカシャは、そのままマイクを掴んだ。\n「みんな！あの歌声の正体がついに明らかになったよ！謎の歌姫はなんと――」\nミナはその傍ら、困惑したようにマイクをいじる。それは目の前のワイヤレススピーカーに繋がっているはず、なのだが――実際には彼女のうっかりで「食堂ホール」のスピーカーに繋がってしまっていたようだ。\n「えっ……本当に、私だったんですか？」\n誰にも聞かれていないと思って、何も気にせず情感を込めて歌っていたことを思い出し、ミナは思わず顔を覆った。",
+      "typeIcon": "rpr-x",
+      "uniEquipIcon": "uniequip_002_pinecn",
+      "typeName1": "RPR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_pinecn_1",
+        "uniequip_002_pinecn_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31023",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30033",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31063",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃し、自身の正面横3マスにいる敵を攻撃時攻撃力が<@ba.kw>160%</>まで上昇",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 36,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃し、自身の正面横3マスにいる敵を攻撃時攻撃力が<@ba.kw>160%</>まで上昇",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置後、70秒間SP自然回復速度+0.5sp/秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ポータブル電源",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置後、70秒間SP自然回復速度+0.55<@ba.talpu>（+0.05）</>sp/秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "ポータブル電源",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 70,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内の<@ba.kw>敵全員</>を同時に攻撃し、自身の正面横3マスにいる敵を攻撃時攻撃力が<@ba.kw>160%</>まで上昇",
+                  "prefabKey": "-1",
+                  "rangeId": "1-3"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置後、75秒間SP自然回復速度+0.55sp/秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ポータブル電源",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 75,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置後、75秒間SP自然回復速度+0.6<@ba.talpu>（+0.05）</>sp/秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "ポータブル電源",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 75,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1111,5 +1735,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -151,6 +151,36 @@
       "cost": 25
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "def",
+            "value": 2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "magic_resistance",
+            "value": 20,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_388_mint#1",
@@ -636,16 +666,718 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 15,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "地質学者",
+          "description": "スキル未発動時、隣接4マス内の味方全員の防御力+5％",
+          "blackboard": [
+            {
+              "key": "def",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0,
+              "valueStr": null
+            },
+            {
+              "key": "taunt_level",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "地質学者",
+          "description": "スキル未発動時、隣接4マス内の味方全員の防御力+7%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "def",
+              "value": 0.07,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0,
+              "valueStr": null
+            },
+            {
+              "key": "taunt_level",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "地質学者",
+          "description": "スキル未発動時、隣接4マス内の味方全員の防御力+10％\nスキル発動中、敵に狙われにくくなる",
+          "blackboard": [
+            {
+              "key": "def",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0,
+              "valueStr": null
+            },
+            {
+              "key": "taunt_level",
+              "value": -1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "地質学者",
+          "description": "スキル未発動時、隣接4マス内の味方全員の防御力+12%<@ba.talpu>（+2%）</>\nスキル発動中、敵に狙われにくくなる",
+          "blackboard": [
+            {
+              "key": "def",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0,
+              "valueStr": null
+            },
+            {
+              "key": "taunt_level",
+              "value": -1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mint",
       "moduleName": "ミントの記章",
-      "desc": "ミントは機を見計らって広範囲アーツ攻撃を仕掛けることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、法陣術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ミントは機を見計らって広範囲アーツ攻撃を仕掛けることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、法陣術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_mint",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mint",
       "moduleName": "集中力維持装置",
-      "desc": "四十二回目の迷子を経験した後、ミントはようやく他のオペレーターのアドバイスに従い、集中力を鍛えることに決めた。\nフリーマーケットでたくさんの道具を買い、彼女は訓練を開始した。\n・メトロノーム\n店主さんによるとこれは楽器を学び始めたばかりのリターニア人が使う道具で、リズムを取るためのものらしい。『集中力を高める100の方法』には規則的な周期で鳴る音は集中力を高め、リズムに合わせて自分の思考を整理することで考えを明確化できるようにすると書いてあったから、きっと役に立つはず。\n「チク、タク、チク、タク、チク、タク、小石、さん、小枝、さん、お外、には、たく、さん、キラ、キラ、キラ、キラ、綺麗、だな、気に、なる、行って、みよう……」\n・シンギングボウル\n「いつまでも響き渡る穏やかで透き通った音を浴びていると、心が安らぎ自分自身と向き合うことができる。」\nこれが鳴らす音は、プラマニクスさんの鈴の音みたいに心を落ち着かせてくれる……もしかしてこれもイェラグから伝わってきたものなのかな？たしかイェラグにはカランドっていう聖なる山があるんだよね。他にもクリフハートさんが色々教えてくれたんだ。いつか私も行ってみたいなぁ。きっとたくさん地質学の知見が得られるはず！あ、そういえば黒流樹海も行きたい場所リストに入れてあったっけ。そっちの方はまずアスベストスさんにお話を伺ってみるべきかな？それにしても、アスベストスさんが持ってるドアは見るからにすごそう……\n・集中力訓練カード\nこれは私が集中力を高める訓練をするって聞いたスカイフレア先輩が送ってくださったプレゼント。「対象年齢：3～5歳。誤って飲み込まないようにご注意ください」って、先輩はなんでこんな子供用のものを私に？\n・「怪物の本」用のブックバンド\nこれは集中力の訓練とは関係ないけど、テーブルに置きっぱなしになってたから一緒にしまっておこう。\n・石ころ\nサガさんいわく、何の変哲のない石ころでもいいから一つの物事に気を集中すれば、心は静まり、万物の根底にある本質について思いを巡らせることができるんだって。それからサガさんが瞑想に誘ってくれて、一緒に集中力を高めてみたんだけど……それにしてもあの納豆ご飯、すっごく美味しかったなぁ。\nその後、四十三回目の迷子となったことで集中力の訓練は失敗に終わり、覚え書きもここまでになっている。最後の記録は消火器についてだった。\n・消火器\nスカイフレア先輩が怒りのあまりに起こした火を、これで消し止めることができた。なんだか……集中力不足が引き起こす最悪の事態を解決する上で、他の道具よりも役に立ったような……\nでも……後でちゃんと謝らないと……"
+      "desc": "四十二回目の迷子を経験した後、ミントはようやく他のオペレーターのアドバイスに従い、集中力を鍛えることに決めた。\nフリーマーケットでたくさんの道具を買い、彼女は訓練を開始した。\n・メトロノーム\n店主さんによるとこれは楽器を学び始めたばかりのリターニア人が使う道具で、リズムを取るためのものらしい。『集中力を高める100の方法』には規則的な周期で鳴る音は集中力を高め、リズムに合わせて自分の思考を整理することで考えを明確化できるようにすると書いてあったから、きっと役に立つはず。\n「チク、タク、チク、タク、チク、タク、小石、さん、小枝、さん、お外、には、たく、さん、キラ、キラ、キラ、キラ、綺麗、だな、気に、なる、行って、みよう……」\n・シンギングボウル\n「いつまでも響き渡る穏やかで透き通った音を浴びていると、心が安らぎ自分自身と向き合うことができる。」\nこれが鳴らす音は、プラマニクスさんの鈴の音みたいに心を落ち着かせてくれる……もしかしてこれもイェラグから伝わってきたものなのかな？たしかイェラグにはカランドっていう聖なる山があるんだよね。他にもクリフハートさんが色々教えてくれたんだ。いつか私も行ってみたいなぁ。きっとたくさん地質学の知見が得られるはず！あ、そういえば黒流樹海も行きたい場所リストに入れてあったっけ。そっちの方はまずアスベストスさんにお話を伺ってみるべきかな？それにしても、アスベストスさんが持ってるドアは見るからにすごそう……\n・集中力訓練カード\nこれは私が集中力を高める訓練をするって聞いたスカイフレア先輩が送ってくださったプレゼント。「対象年齢：3～5歳。誤って飲み込まないようにご注意ください」って、先輩はなんでこんな子供用のものを私に？\n・「怪物の本」用のブックバンド\nこれは集中力の訓練とは関係ないけど、テーブルに置きっぱなしになってたから一緒にしまっておこう。\n・石ころ\nサガさんいわく、何の変哲のない石ころでもいいから一つの物事に気を集中すれば、心は静まり、万物の根底にある本質について思いを巡らせることができるんだって。それからサガさんが瞑想に誘ってくれて、一緒に集中力を高めてみたんだけど……それにしてもあの納豆ご飯、すっごく美味しかったなぁ。\nその後、四十三回目の迷子となったことで集中力の訓練は失敗に終わり、覚え書きもここまでになっている。最後の記録は消火器についてだった。\n・消火器\nスカイフレア先輩が怒りのあまりに起こした火を、これで消し止めることができた。なんだか……集中力不足が引き起こす最悪の事態を解決する上で、他の道具よりも役に立ったような……\nでも……後でちゃんと謝らないと……",
+      "typeIcon": "plx-x",
+      "uniEquipIcon": "uniequip_002_mint",
+      "typeName1": "PLX",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_mint_1",
+        "uniequip_002_mint_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル未発動時、隣接4マス内の味方全員の防御力+18%\nスキル発動中、敵に狙われにくくなる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "地質学者",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル未発動時、隣接4マス内の味方全員の防御力+20%<@ba.talpu>（+2%）</>\nスキル発動中、敵に狙われにくくなる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "地質学者",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 52,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル未発動時、隣接4マス内の味方全員の防御力+21%\nスキル発動中、敵に狙われにくくなる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "地質学者",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキル未発動時、隣接4マス内の味方全員の防御力+23%<@ba.talpu>（+2%）</>\nスキル発動中、敵に狙われにくくなる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "地質学者",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1107,5 +1839,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

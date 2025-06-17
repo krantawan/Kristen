@@ -151,6 +151,24 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ],
+      "overrideDescription": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_491_humus#1",
@@ -618,16 +636,581 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +35",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 35,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 30,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Re-recycle",
+          "description": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</>; caps at 60% of Max HP",
+          "blackboard": {
+            "max_hp_ratio": 0.6,
+            "def": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Re-recycle",
+          "description": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</>; caps at 64% <@ba.talpu>(+4%)</> of Max HP",
+          "blackboard": {
+            "max_hp_ratio": 0.64,
+            "def": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Re-recycle",
+          "description": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</>; caps at 100% of Max HP",
+          "blackboard": {
+            "max_hp_ratio": 1,
+            "def": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Re-recycle",
+          "description": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</>; caps at 104% <@ba.talpu>(+4%)</> of Max HP",
+          "blackboard": {
+            "max_hp_ratio": 1.04,
+            "def": 0
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_humus",
       "moduleName": "Humus's Badge",
-      "desc": "Operator Humus has demonstrated a remarkable aptitude in dispatching enemy swathes with little to no support.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Reaper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Humus has demonstrated a remarkable aptitude in dispatching enemy swathes with little to no support.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Reaper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_humus",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_humus",
       "moduleName": "Badlands Exotic Toolkit",
-      "desc": "This is a story from when Humus just came aboard.\nHearing they'd gotten a waste processing station's foreman from the Columbian frontier, several operators from Engineering had their curiosities piqued, wanting to see if someone with that kind of work experience had any special skills.\nWhen Humus checked in at Engineering, carrying his heap of trustworthy tools, clearly used for years, everyone present had quite the scare.\nFirstly, the box used to carry them was intimidatingly huge—only someone used to rough work like Humus could carry that thing about by one hand. Secondly, aside from the usual tools was a smorgasbord of bizarrely-shaped wonders whose usages were unclear, enough to perplex anyone who saw them.\nFortunately, Humus is the type who's happy to share. Over the next few hours, Engineering's operators gained a considerable boost to their knowledge.\n'This one's a multifunction remote control, with a lot of leeway for remodeling. Just do this... this... reassemble it quickly, and it'll transform from a TV remote to an RC detonator. It's high-power, has a huge effective range, and it's a treat to use.\n'This one's basically just an average hand cranked dynamo, but with a little souped-up functionality—it can generate electricity while it threshes corn or maybe peels potatoes. We were constantly out of power at the processing station, after all, and usually we only had corn or potatoes to eat.\n'As for this sickle, I made it out of a car door I pulled off. That car was a real funny one—after it came in written off, we had to shelve it for forever because it was just too rugged, and tearing the thing apart took some massive effort. I made the sickle's form overkill enough so if I pull it out and it scares people off, then that's one less pointless fight.'\nIt so happened that moments after the conclusion of this eye-opening equipment seminar, the bell sounded for dinnertime. Completely dazed, the operators of Engineering were itching to take this out-of-the-ordinary new colleague to the canteen for the welcome party they'd set up in advance. At the table, Humus told his curious coworkers a few stories, of people and things out on the frontier that in his eyes were just everyday life. Yet it was only after his captive audience had finished taking in his stories that they realized <i>why</i> Humus had the skillset that he did.\nThe frontier's not a place you survive with just the average Joe's common sense."
+      "desc": "This is a story from when Humus just came aboard.\nHearing they'd gotten a waste processing station's foreman from the Columbian frontier, several operators from Engineering had their curiosities piqued, wanting to see if someone with that kind of work experience had any special skills.\nWhen Humus checked in at Engineering, carrying his heap of trustworthy tools, clearly used for years, everyone present had quite the scare.\nFirstly, the box used to carry them was intimidatingly huge—only someone used to rough work like Humus could carry that thing about by one hand. Secondly, aside from the usual tools was a smorgasbord of bizarrely-shaped wonders whose usages were unclear, enough to perplex anyone who saw them.\nFortunately, Humus is the type who's happy to share. Over the next few hours, Engineering's operators gained a considerable boost to their knowledge.\n'This one's a multifunction remote control, with a lot of leeway for remodeling. Just do this... this... reassemble it quickly, and it'll transform from a TV remote to an RC detonator. It's high-power, has a huge effective range, and it's a treat to use.\n'This one's basically just an average hand cranked dynamo, but with a little souped-up functionality—it can generate electricity while it threshes corn or maybe peels potatoes. We were constantly out of power at the processing station, after all, and usually we only had corn or potatoes to eat.\n'As for this sickle, I made it out of a car door I pulled off. That car was a real funny one—after it came in written off, we had to shelve it for forever because it was just too rugged, and tearing the thing apart took some massive effort. I made the sickle's form overkill enough so if I pull it out and it scares people off, then that's one less pointless fight.'\nIt so happened that moments after the conclusion of this eye-opening equipment seminar, the bell sounded for dinnertime. Completely dazed, the operators of Engineering were itching to take this out-of-the-ordinary new colleague to the canteen for the welcome party they'd set up in advance. At the table, Humus told his curious coworkers a few stories, of people and things out on the frontier that in his eyes were just everyday life. Yet it was only after his captive audience had finished taking in his stories that they realized <i>why</i> Humus had the skillset that he did.\nThe frontier's not a place you survive with just the average Joe's common sense.",
+      "typeIcon": "rea-x",
+      "uniEquipIcon": "uniequip_002_humus",
+      "typeName1": "REA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_humus_1",
+        "uniequip_002_humus_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31023",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30033",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 10,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 14,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</> that caps at 100% of Max HP; +5% DEF while this <$ba.barrier>Barrier</> is active",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Re-recycle",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</> that caps at 104% <@ba.talpu>(+4%)</> of Max HP; +5% DEF while this <$ba.barrier>Barrier</> is active",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Re-recycle",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.05,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</> that caps at 100% of Max HP; +8% DEF while this <$ba.barrier>Barrier</> is active",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Re-recycle",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</> that caps at 104% <@ba.talpu>(+4%)</> of Max HP; +8% DEF while this <$ba.barrier>Barrier</> is active",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Re-recycle",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp_ratio",
+                      "value": 1.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1081,5 +1664,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -150,6 +150,28 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "scale",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1024_hbisc2#1",
@@ -609,16 +631,618 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+22",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 22,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "朝瞬の花",
+          "description": "攻撃時、対象に6%の<$ba.magicfragile>対術脆弱</>効果を5秒間付与する",
+          "blackboard": [
+            {
+              "key": "weak[magic][limit]",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.06,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "朝瞬の花",
+          "description": "攻撃時、対象に8%<@ba.talpu>（+2%）</>の<$ba.magicfragile>対術脆弱</>効果を5秒間付与する",
+          "blackboard": [
+            {
+              "key": "weak[magic][limit]",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.08,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "朝瞬の花",
+          "description": "攻撃時、対象に12%の<$ba.magicfragile>対術脆弱</>効果を5秒間付与する",
+          "blackboard": [
+            {
+              "key": "weak[magic][limit]",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "朝瞬の花",
+          "description": "攻撃時、対象に14%<@ba.talpu>（+2%）</>の<$ba.magicfragile>対術脆弱</>効果を5秒間付与する",
+          "blackboard": [
+            {
+              "key": "weak[magic][limit]",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.14,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_hbisc2",
       "moduleName": "濯塵ハイビスカスの記章",
-      "desc": "濯塵ハイビスカスはアーツで敵を攻撃すると共に味方を治療することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、呪癒師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "濯塵ハイビスカスはアーツで敵を攻撃すると共に味方を治療することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、呪癒師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_hbisc2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_hbisc2",
       "moduleName": "結晶のブローチ",
-      "desc": "「本日分の郵便物はこれで全部です！皆さんもうすぐ退院なので、量は少ないですけど、仕分けお願いしますね、ハイビスカス先生！」\n「ありがとう。本当は従業員ではないあなたに、こんな仕事をさせてはいけないのですが。特にあなたのような、傷が癒えて間もない、まだ鉱石病が進行している方には……」ハイビスカスは女の子に紙を折って作った花を渡し、小包や手紙を一点ずつ手に取った。そして、これは六号病床に、この手紙は十三号病床のおじいさんに、この大きくて軽い小包は五号監護病室の女の子に、中身はきっとこの前約束したお人形ね……といった具合で確認を進める。\n「とんでもないです！もう動けるようになったんだから、ベッドでじっとなんてしてられません。」女の子は上着を羽織り直し、最上部のボタン二つを丁寧にかけると、紙の花をえりにつけた。「私、トランスポーターなんです。怪我をしてロドスで治療を受けてる間はもう息が詰まりそうで……ハイビスカス先生も、動いたほうが回復も早くなると言ってましたよね？」\n「とはいえ、病状の進行には気を付けてくださいね。」ハイビスカスは手につけたサーベイランスマシンを見せた。\n女の子はその意図を察し、同じ位置に着けているサーベイランスマシンを小突いてみせる｡\n「退院後はトランスポーターの仕事に復帰するのですか？」\n「ええ。ずっとトランスポーターをしてましたから。あちこち走り回るのが性に合ってるみたいで。それにちょっとした傷や痛みは大して気にならないですし。」\n「鉱石病はちょっとした傷や痛みなどではありません。診断の結果には常に気を配っていただかなくては。」\n「それもわかってます。けど太陽がいずれ沈むように、人も土に帰るものですから。それでも日々生きていかなきゃいけない、そう思いませんか？」\n…… \n「ハイビスカス先生、この荷物を届けたらもう退院の手続きに行っちゃいますが、先生の方で何か送りたい荷物とかはないですか？私の復帰後の、一番目のお客さんになってもらいたいんです。」\n「ええ、もちろん。ところで次はどこへ向かうのですか？」\n「まず故郷のヴィセハイムへ帰るつもりです。そういえば……確かあの時、アフターグロー区で鉱石病患者の治療を指揮していたのがハイビスカス先生でしたね。」\nハイビスカスはブローチを外す。源石製の、花を象ったそのブローチはすでに活性を失っている。花を構成する不活性な結晶は力を発しておらず、灰燼や、枯れ枝や、乾ききった涙と同じく無機質なものだ。それでも、灰燼や、枯れ枝や、乾ききった涙とはまったく異なっていた――心を込めてハイビスカスの花の形に彫ってくれた人がいたおかげで、黒い結晶のブローチは今なお光を放っている。\n「では、この花のブローチを、私の代わりにヴィセハイムに送っていただけますか。この花はヴィセハイムで咲くべきだと思うのです。」\nヴィセハイムも、そしてあなたも、本当の意味で回復することを願って……"
+      "desc": "「本日分の郵便物はこれで全部です！皆さんもうすぐ退院なので、量は少ないですけど、仕分けお願いしますね、ハイビスカス先生！」\n「ありがとう。本当は従業員ではないあなたに、こんな仕事をさせてはいけないのですが。特にあなたのような、傷が癒えて間もない、まだ鉱石病が進行している方には……」ハイビスカスは女の子に紙を折って作った花を渡し、小包や手紙を一点ずつ手に取った。そして、これは六号病床に、この手紙は十三号病床のおじいさんに、この大きくて軽い小包は五号監護病室の女の子に、中身はきっとこの前約束したお人形ね……といった具合で確認を進める。\n「とんでもないです！もう動けるようになったんだから、ベッドでじっとなんてしてられません。」女の子は上着を羽織り直し、最上部のボタン二つを丁寧にかけると、紙の花をえりにつけた。「私、トランスポーターなんです。怪我をしてロドスで治療を受けてる間はもう息が詰まりそうで……ハイビスカス先生も、動いたほうが回復も早くなると言ってましたよね？」\n「とはいえ、病状の進行には気を付けてくださいね。」ハイビスカスは手につけたサーベイランスマシンを見せた。\n女の子はその意図を察し、同じ位置に着けているサーベイランスマシンを小突いてみせる｡\n「退院後はトランスポーターの仕事に復帰するのですか？」\n「ええ。ずっとトランスポーターをしてましたから。あちこち走り回るのが性に合ってるみたいで。それにちょっとした傷や痛みは大して気にならないですし。」\n「鉱石病はちょっとした傷や痛みなどではありません。診断の結果には常に気を配っていただかなくては。」\n「それもわかってます。けど太陽がいずれ沈むように、人も土に帰るものですから。それでも日々生きていかなきゃいけない、そう思いませんか？」\n…… \n「ハイビスカス先生、この荷物を届けたらもう退院の手続きに行っちゃいますが、先生の方で何か送りたい荷物とかはないですか？私の復帰後の、一番目のお客さんになってもらいたいんです。」\n「ええ、もちろん。ところで次はどこへ向かうのですか？」\n「まず故郷のヴィセハイムへ帰るつもりです。そういえば……確かあの時、アフターグロー区で鉱石病患者の治療を指揮していたのがハイビスカス先生でしたね。」\nハイビスカスはブローチを外す。源石製の、花を象ったそのブローチはすでに活性を失っている。花を構成する不活性な結晶は力を発しておらず、灰燼や、枯れ枝や、乾ききった涙と同じく無機質なものだ。それでも、灰燼や、枯れ枝や、乾ききった涙とはまったく異なっていた――心を込めてハイビスカスの花の形に彫ってくれた人がいたおかげで、黒い結晶のブローチは今なお光を放っている。\n「では、この花のブローチを、私の代わりにヴィセハイムに送っていただけますか。この花はヴィセハイムで咲くべきだと思うのです。」\nヴィセハイムも、そしてあなたも、本当の意味で回復することを願って……",
+      "typeIcon": "inc-x",
+      "uniEquipIcon": "uniequip_002_hbisc2",
+      "typeName1": "INC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_hbisc2_1",
+        "uniequip_002_hbisc2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、対象に17%の<$ba.magicfragile>対術脆弱</>状態を5秒間付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "朝瞬の花",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "weak[magic][limit]",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.17,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、対象に19%<@ba.talpu>（+2%）</>の<$ba.magicfragile>対術脆弱</>状態を5秒間付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "朝瞬の花",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "weak[magic][limit]",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.19,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、対象に20%の<$ba.magicfragile>対術脆弱</>状態を5秒間付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "朝瞬の花",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "weak[magic][limit]",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、対象に22%<@ba.talpu>（+2%）</>の<$ba.magicfragile>対術脆弱</>状態を5秒間付与",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "朝瞬の花",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "weak[magic][limit]",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.22,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1072,5 +1696,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

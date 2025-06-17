@@ -151,6 +151,44 @@
       "cost": 12
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk",
+            "value": 2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "mid_stack_cnt",
+            "value": 20,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_stack_cnt",
+            "value": 40,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "通常時は攻撃せずブロック数が0となり、攻撃力が<@ba.kw>+{atk:0%}</>まで徐々に上昇していく（最大値になるまでの時間は<@ba.kw>{max_stack_cnt}</>秒）\nスキル終了時、特性による攻撃力上昇効果をリセットする",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4064_mlynar#1",
@@ -720,6 +758,338 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 360,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "遊侠",
+          "description": "攻撃時、攻撃力が105％まで上昇。周囲一定範囲内に敵3体以上いる場合、攻撃力が110％まで上昇し、被ダメージ-10％",
+          "blackboard": [
+            {
+              "key": "atk_scale_base",
+              "value": 1.05,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale_up",
+              "value": 1.1,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "遊侠",
+          "description": "攻撃時、攻撃力が108%<@ba.talpu>（+3%）</>まで上昇。周囲一定範囲内に敵3体以上いる場合、攻撃力が113%<@ba.talpu>（+3%）</>まで上昇し、被ダメージ-10％",
+          "blackboard": [
+            {
+              "key": "atk_scale_base",
+              "value": 1.08,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale_up",
+              "value": 1.13,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "遊侠",
+          "description": "攻撃時、攻撃力が110％まで上昇。周囲一定範囲内に敵3体以上いる場合、攻撃力が115％まで上昇し、被ダメージ-15％",
+          "blackboard": [
+            {
+              "key": "atk_scale_base",
+              "value": 1.1,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale_up",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "遊侠",
+          "description": "攻撃時、攻撃力が113%<@ba.talpu>（+3%）</>まで上昇。周囲一定範囲内に敵3体以上いる場合、攻撃力が118%<@ba.talpu>（+3%）</>まで上昇し、被ダメージ-15％",
+          "blackboard": [
+            {
+              "key": "atk_scale_base",
+              "value": 1.13,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale_up",
+              "value": 1.18,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "我関せず",
+          "description": "配置中、敵に攻撃されやすくなり、味方【カジミエーシュ】が攻撃を受ける度、ムリナールの攻撃力の15％の確定ダメージで敵に反撃する",
+          "blackboard": [
+            {
+              "key": "taunt_level",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "我関せず",
+          "description": "配置中、敵に攻撃されやすくなり、味方【カジミエーシュ】が攻撃を受ける度、ムリナールの攻撃力の18%<@ba.talpu>（+3%）</>の確定ダメージで敵に反撃する",
+          "blackboard": [
+            {
+              "key": "taunt_level",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 0.18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [],
   "voice_lines": [
     {
@@ -1172,5 +1542,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -137,6 +137,28 @@
       "cost": 22
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "heal_scale",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "治療範囲が広く、遠く離れた味方を治療時、HP回復効果が<@ba.kw>{heal_scale:0%}</>になる",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_348_ceylon#1",
@@ -611,16 +633,648 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "湖畔の散策者",
+          "description": "攻撃力+3%、戦場中に水場がある場合効果値が+9%まで上昇",
+          "blackboard": [
+            {
+              "key": "ceylon_t_1[common].atk",
+              "value": 0.03,
+              "valueStr": null
+            },
+            {
+              "key": "celyon_t_1[map].atk",
+              "value": 0.06,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "湖畔の散策者",
+          "description": "攻撃力+4%<@ba.talpu>(+1%)</>、戦場中に水場がある場合効果値が+15%<@ba.talpu>(+6%)</>まで上昇",
+          "blackboard": [
+            {
+              "key": "ceylon_t_1[common].atk",
+              "value": 0.04,
+              "valueStr": null
+            },
+            {
+              "key": "celyon_t_1[map].atk",
+              "value": 0.11,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "湖畔の散策者",
+          "description": "攻撃力+5%、戦場中に水場がある場合効果値が+18%まで上昇",
+          "blackboard": [
+            {
+              "key": "ceylon_t_1[common].atk",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "celyon_t_1[map].atk",
+              "value": 0.13,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "湖畔の散策者",
+          "description": "攻撃力+6%<@ba.talpu>(+1%)</>、戦場中に水場がある場合効果値が+24%<@ba.talpu>(+6%)</>まで上昇",
+          "blackboard": [
+            {
+              "key": "ceylon_t_1[common].atk",
+              "value": 0.06,
+              "valueStr": null
+            },
+            {
+              "key": "celyon_t_1[map].atk",
+              "value": 0.18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_ceylon",
       "moduleName": "セイロンの記章",
-      "desc": "セイロンは広範囲の治療を行うと同時に、有益な効果を付与することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、療養師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "セイロンは広範囲の治療を行うと同時に、有益な効果を付与することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、療養師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_ceylon",
       "moduleName": "フィールドワークセット",
-      "desc": "病院の廊下に置かれた長椅子に、本を読んでいる学生と教師と思わしき佇まいの女性が並んで座り、その隣では悩ましげな表情を浮かべた労働者が、何やらぼそぼそとつぶやいていた。\n「ピーター・デイビスさん。」\n医者が検査結果を持って検査室から現れた。\n名前を呼ばれた労働者は緊張した面持ちで顔を上げ、学生は読んでいた本を閉じた。\n「――血液中の源石結晶密度はやや高めですが、鉱石病の兆候は見られません。」\n「次に、セイロン・ドルクスさん。」\n「同じく血液中の源石結晶密度はやや高めですが、こちらも同様に鉱石病の兆候は見られません。」\nその場の三人は同時にほっとした表情を浮かべると、学生は嬉しそうに「ほら先生、二人とも大丈夫でしたわ！」と教師に向かって声を上げた。\n「運が良かっただけよ。」\n教師は険しい表情で頭を左右に振った。\n「フィールドワークは規定の安全区域で時間を遵守して実施するだけでなく、防護措置もしっかり取るべきだと注意したはずよ。専用の防護服もなしに、高度に活性化した源石と接触するのは極めて危険な行為なの。それに、私たちには本来採掘場に入る権利はないのよ。あなたのあらゆる行動が責任問題に繋がる可能性だってあったの。セイロン、優等生のあなたがどうしてこんなこと……」\n「ですが、どうしても本で学んだ理論を証明したくて……それに、もしデイビスさんたちに採掘を中止するよう提言しなければ、きっと突発的な感染事故が起きたに違いありませんわ。そのようなことを見過ごすなんて――」\n「もしその判断が誤りだったら？」\nセイロンは言葉に詰まった。沈黙の後、彼女は頭を垂れて「申し訳ございません。」と深く詫びた。\n「除名処分にはしないけど、この科目は再履修してもらうわ。」\n教師は長椅子から立ち上がった。\n「今回が初めてのフィールドワークだし、これ以上は言わないけれど、今後はきちんと防護措置にも気を配りなさいね。」\n\n教師が離れると、顔をこわばらせていた労働者がようやく口を開いた。\n「俺たちは感謝してもしきれねぇってのに、そのせいで君に迷惑をかけちまったみたいで……先生は君が悪いと思ってるみたいだったし……」\n「いえ、どうかお気になさらず。」\nセイロンは微笑んでみせた。\n「先生の仰りたいことはよく分かっているつもりです。この科目では、こういったことをしっかり覚える必要があるからこそのお言葉ですわ。恐怖を知り、最悪の結果を予測し、その責任を担えるかの判断をできるようにならなければいけませんの。」\n「その後に初めて、選択を行えるようになるのですから。」"
+      "desc": "病院の廊下に置かれた長椅子に、本を読んでいる学生と教師と思わしき佇まいの女性が並んで座り、その隣では悩ましげな表情を浮かべた労働者が、何やらぼそぼそとつぶやいていた。\n「ピーター・デイビスさん。」\n医者が検査結果を持って検査室から現れた。\n名前を呼ばれた労働者は緊張した面持ちで顔を上げ、学生は読んでいた本を閉じた。\n「――血液中の源石結晶密度はやや高めですが、鉱石病の兆候は見られません。」\n「次に、セイロン・ドルクスさん。」\n「同じく血液中の源石結晶密度はやや高めですが、こちらも同様に鉱石病の兆候は見られません。」\nその場の三人は同時にほっとした表情を浮かべると、学生は嬉しそうに「ほら先生、二人とも大丈夫でしたわ！」と教師に向かって声を上げた。\n「運が良かっただけよ。」\n教師は険しい表情で頭を左右に振った。\n「フィールドワークは規定の安全区域で時間を遵守して実施するだけでなく、防護措置もしっかり取るべきだと注意したはずよ。専用の防護服もなしに、高度に活性化した源石と接触するのは極めて危険な行為なの。それに、私たちには本来採掘場に入る権利はないのよ。あなたのあらゆる行動が責任問題に繋がる可能性だってあったの。セイロン、優等生のあなたがどうしてこんなこと……」\n「ですが、どうしても本で学んだ理論を証明したくて……それに、もしデイビスさんたちに採掘を中止するよう提言しなければ、きっと突発的な感染事故が起きたに違いありませんわ。そのようなことを見過ごすなんて――」\n「もしその判断が誤りだったら？」\nセイロンは言葉に詰まった。沈黙の後、彼女は頭を垂れて「申し訳ございません。」と深く詫びた。\n「除名処分にはしないけど、この科目は再履修してもらうわ。」\n教師は長椅子から立ち上がった。\n「今回が初めてのフィールドワークだし、これ以上は言わないけれど、今後はきちんと防護措置にも気を配りなさいね。」\n\n教師が離れると、顔をこわばらせていた労働者がようやく口を開いた。\n「俺たちは感謝してもしきれねぇってのに、そのせいで君に迷惑をかけちまったみたいで……先生は君が悪いと思ってるみたいだったし……」\n「いえ、どうかお気になさらず。」\nセイロンは微笑んでみせた。\n「先生の仰りたいことはよく分かっているつもりです。この科目では、こういったことをしっかり覚える必要があるからこそのお言葉ですわ。恐怖を知り、最悪の結果を予測し、その責任を担えるかの判断をできるようにならなければいけませんの。」\n「その後に初めて、選択を行えるようになるのですから。」",
+      "typeIcon": "wah-x",
+      "uniEquipIcon": "uniequip_002_ceylon",
+      "typeName1": "WAH",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_ceylon_1",
+        "uniequip_002_ceylon_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身が<$ba.buffres>レジスト</>状態になり、敵に狙われにくくなる",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身が<$ba.buffres>レジスト</>状態になり、敵に狙われにくくなる",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+8%、戦場中に水場がある場合効果値が+30%まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "湖畔の散策者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ceylon_t_1[common].atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "celyon_t_1[map].atk",
+                      "value": 0.22,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+9%<@ba.talpu>（+1%）</>、戦場中に水場がある場合効果値が+36%<@ba.talpu>（+6%）</>まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "湖畔の散策者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ceylon_t_1[common].atk",
+                      "value": 0.09,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "celyon_t_1[map].atk",
+                      "value": 0.27,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "自身が<$ba.buffres>レジスト</>状態になり、敵に狙われにくくなる",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+11%、戦場中に水場がある場合効果値が+42%まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "湖畔の散策者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ceylon_t_1[common].atk",
+                      "value": 0.11,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "celyon_t_1[map].atk",
+                      "value": 0.31,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+12%<@ba.talpu>（+1%）</>、戦場中に水場がある場合効果値が+48%<@ba.talpu>（+6%）</>まで上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "湖畔の散策者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ceylon_t_1[common].atk",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "celyon_t_1[map].atk",
+                      "value": 0.36,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1064,5 +1718,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

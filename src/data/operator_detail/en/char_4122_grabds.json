@@ -151,6 +151,24 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "sluggish",
+          "value": 0.8
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4122_grabds#1",
@@ -625,16 +643,638 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +23",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 65,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Please Behave",
+          "description": "ASPD +6; When the target is a [Wild Beast], slightly increases the duration of <$ba.sluggish>Slow</> from Trait",
+          "blackboard": {
+            "attack_speed": 6,
+            "sluggish_addition": 0.2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Please Behave",
+          "description": "ASPD +8 <@ba.talpu>(+2)</>; When the target is a [Wild Beast], slightly increases the duration of <$ba.sluggish>Slow</> from Trait",
+          "blackboard": {
+            "attack_speed": 8,
+            "sluggish_addition": 0.2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Please Behave",
+          "description": "ASPD +10; When the target is a [Wild Beast], increases the duration of <$ba.sluggish>Slow</> from Trait",
+          "blackboard": {
+            "attack_speed": 10,
+            "sluggish_addition": 0.4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Please Behave",
+          "description": "ASPD +12 <@ba.talpu>(+2)</>; When the target is a [Wild Beast], increases the duration of <$ba.sluggish>Slow</> from Trait",
+          "blackboard": {
+            "attack_speed": 12,
+            "sluggish_addition": 0.4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_grabds",
       "moduleName": "Grain Buds' Badge",
-      "desc": "Operator Grain Buds has demonstrated a remarkable aptitude for impeding the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Decel Binder responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Grain Buds has demonstrated a remarkable aptitude for impeding the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Supporter Operator during field operations to exercise Decel Binder responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_grabds",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_grabds",
       "moduleName": "On the Field",
-      "desc": "May 10th\nIt feels like I'm going in circles. These so-called 'social activities' keep dragging me back to Dahuang. Not only does the weather not suit me, I can barely understand their accent, and I heard that their pickled vegetables are super super salty! I don't know how I'm going to make it an entire year.\nAs I expected, nothing's gone right since I arrived. I thought I could at least talk to people, but I keep tripping over my own tongue. Not only can nobody understand a word I say, but the stockbeasts keep running away from me!\n\nMay 21st\nI've run into a strange young girl, standing tiptoe atop the backs of the stockbeasts. She jumped around on top of them, and at first glance you'd think she was a fowlbeast that had fallen into the herd. There I was, one leg sunk deep in the mud while my other foot is barely covered, trudging through the muck, when she started laughing at me.\n'Sillyhead!', she said.\nMe...?\n'Take off your shoes!'\nEh?\n'I'll teach you how to walk on top of the stockbeasts so you don't have to go through the mud.'\nI got thrown off the stockbeasts' backs eight times that day, and I'm sure I ate more mud than rice by dinner time. She thumped me across my back, her plumage flapping about as she laughed. Though my luck may be bad, looking at her smiling face makes me feel that there's nothing that can hold me down for long.\n\nJuly 8th\nThat girl was crouching down by the stockbeast pen this time, swaying her head as she played her flute to the herd.\n'Hey, Claypot! Come, quick!'\nWho...?\n'You're new here, right Claypot? I forgot to tell you last time, but my name's Grain Buds!'\nOh, was she talking to me?\n'Do you want to learn how to talk to stockbeasts? I'd say I'm better at it than anyone in all of Yan!'\nShe held my face in one hand, while holding a stockbeast's in the other, and told us to look into each other's eyes. That day might be the first time I realized a stockbeast's bright, intelligent eyes possess the same basic range of emotions as any man. Since then, the stockbeasts really did stop running away from the sound of my voice. I never expected someone like me—who's always getting chased and nipped by tuskbeasts—to suddenly have a group of animal friends.\n\nOctober 4th\nI was out searching for Grain Buds when I ran into her along with another youth who appeared to be a schoolboy. They were playing some odd game where they threw small pieces of bone.\n'Claypot! Come play with us!'\nOh, alright...\n'He's 'Big Buffalo', have you two not met before?'\nI'm afraid not...\n'These were left over from Shu's stew! I don't really know all the rules myself, so you'll have to explain, Big Buffalo!'\nI had no idea that you could turn stockbeast leg bones into toys. A shame I was so clumsy, though. I couldn't catch the bones for quite a long while, and kept accidentally flinging them at their heads instead. Big Buffalo was a nice guy. Didn't talk much, just like me. However, every time he went off to work, he wanted to bring me along. Sometimes Grain Buds would lie down on a stockbeast's back, or hang from a tree. Sometimes she would help us out with work, and other times she would drag us off to play. Out here in the boundless fields, it almost felt like we were a family.\n\nMay 20th\nAs I was leaving Dahuang by car, a group of stockbeasts wandering the fields walked past. Looking at their chubby figures fade into the distance behind us, I suddenly began to feel uneasy, just like I did a year ago when I left home by myself to come to Dahuang. Setting aside not being able to see Dahuang's fields and stockbeasts any longer, would I be able to find friends as good as Grain Buds and Big Buffalo at school? I don't know how I'm going to make it through the next two school years."
+      "desc": "May 10th\nIt feels like I'm going in circles. These so-called 'social activities' keep dragging me back to Dahuang. Not only does the weather not suit me, I can barely understand their accent, and I heard that their pickled vegetables are super super salty! I don't know how I'm going to make it an entire year.\nAs I expected, nothing's gone right since I arrived. I thought I could at least talk to people, but I keep tripping over my own tongue. Not only can nobody understand a word I say, but the stockbeasts keep running away from me!\n\nMay 21st\nI've run into a strange young girl, standing tiptoe atop the backs of the stockbeasts. She jumped around on top of them, and at first glance you'd think she was a fowlbeast that had fallen into the herd. There I was, one leg sunk deep in the mud while my other foot is barely covered, trudging through the muck, when she started laughing at me.\n'Sillyhead!', she said.\nMe...?\n'Take off your shoes!'\nEh?\n'I'll teach you how to walk on top of the stockbeasts so you don't have to go through the mud.'\nI got thrown off the stockbeasts' backs eight times that day, and I'm sure I ate more mud than rice by dinner time. She thumped me across my back, her plumage flapping about as she laughed. Though my luck may be bad, looking at her smiling face makes me feel that there's nothing that can hold me down for long.\n\nJuly 8th\nThat girl was crouching down by the stockbeast pen this time, swaying her head as she played her flute to the herd.\n'Hey, Claypot! Come, quick!'\nWho...?\n'You're new here, right Claypot? I forgot to tell you last time, but my name's Grain Buds!'\nOh, was she talking to me?\n'Do you want to learn how to talk to stockbeasts? I'd say I'm better at it than anyone in all of Yan!'\nShe held my face in one hand, while holding a stockbeast's in the other, and told us to look into each other's eyes. That day might be the first time I realized a stockbeast's bright, intelligent eyes possess the same basic range of emotions as any man. Since then, the stockbeasts really did stop running away from the sound of my voice. I never expected someone like me—who's always getting chased and nipped by tuskbeasts—to suddenly have a group of animal friends.\n\nOctober 4th\nI was out searching for Grain Buds when I ran into her along with another youth who appeared to be a schoolboy. They were playing some odd game where they threw small pieces of bone.\n'Claypot! Come play with us!'\nOh, alright...\n'He's 'Big Buffalo', have you two not met before?'\nI'm afraid not...\n'These were left over from Shu's stew! I don't really know all the rules myself, so you'll have to explain, Big Buffalo!'\nI had no idea that you could turn stockbeast leg bones into toys. A shame I was so clumsy, though. I couldn't catch the bones for quite a long while, and kept accidentally flinging them at their heads instead. Big Buffalo was a nice guy. Didn't talk much, just like me. However, every time he went off to work, he wanted to bring me along. Sometimes Grain Buds would lie down on a stockbeast's back, or hang from a tree. Sometimes she would help us out with work, and other times she would drag us off to play. Out here in the boundless fields, it almost felt like we were a family.\n\nMay 20th\nAs I was leaving Dahuang by car, a group of stockbeasts wandering the fields walked past. Looking at their chubby figures fade into the distance behind us, I suddenly began to feel uneasy, just like I did a year ago when I left home by myself to come to Dahuang. Setting aside not being able to see Dahuang's fields and stockbeasts any longer, would I be able to find friends as good as Grain Buds and Big Buffalo at school? I don't know how I'm going to make it through the next two school years.",
+      "typeIcon": "dec-x",
+      "uniEquipIcon": "uniequip_002_grabds",
+      "typeName1": "DEC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_grabds_1",
+        "uniequip_002_grabds_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "SP recovery +0.2/s when there are enemies within range",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "SP recovery +0.2/s when there are enemies within range",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ASPD +12; When the target is a [Wild Beast], increases the duration of <$ba.sluggish>Slow</> from Trait",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Please Behave",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sluggish_addition",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ASPD +14 <@ba.talpu>(+2)</>; When the target is a [Wild Beast], increases the duration of <$ba.sluggish>Slow</> from Trait",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Please Behave",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 14,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sluggish_addition",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 41,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "SP recovery +0.2/s when there are enemies within range",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ASPD +14; When the target is a [Wild Beast], further increases the duration of <$ba.sluggish>Slow</> from Trait",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Please Behave",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 14,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sluggish_addition",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ASPD +16 <@ba.talpu>(+2)</>; When the target is a [Wild Beast], further increases the duration of <$ba.sluggish>Slow</> from Trait",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Please Behave",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 16,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sluggish_addition",
+                      "value": 0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1088,5 +1728,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

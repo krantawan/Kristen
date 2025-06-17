@@ -151,6 +151,7 @@
       "cost": 19
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_171_bldsk#1",
@@ -644,16 +645,566 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+27",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 27,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "血液サンプル回収",
+          "description": "攻撃範囲内で敵が倒れた時、自身と範囲内のランダムな味方1人のSPを1回復",
+          "blackboard": [
+            {
+              "key": "bldsk_t_1[self].sp",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "bldsk_t_1[rand].sp",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "血液サンプル回収",
+          "description": "攻撃範囲内で敵が倒れた時、自身と範囲内のランダムな味方1人のSPを2回復",
+          "blackboard": [
+            {
+              "key": "bldsk_t_1[self].sp",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "bldsk_t_1[rand].sp",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_bldsk",
       "moduleName": "ワルファリンの記章",
-      "desc": "ワルファリンは戦場でオペレーターを治療することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、医師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ワルファリンは戦場でオペレーターを治療することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、医師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_bldsk",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_bldsk",
       "moduleName": "緊急用予備血液",
-      "desc": "【血液センターのサンプル採取問題に関する医療部オペレーターとの質疑応答記録】\nロドスのメディカルチェックは、その過程の細部に至るまで本人に公開されています。受検者の要望によっての検査項目の増減も可能ですし、すべての手続き及びプロセスは完全にオープンであり、そこには如何なる欺瞞も存在しません。\n患者の情報は厳格なセキュリティにって守られ、現在に至るまで我々が設立した血液センターから血液サンプルが失われたことは一度としてないんです。そうです、一度としてです。\nそれらのサンプルが安全な監視下に置かれていること、疾病の治療という目的でのみ使用されること、ともにロドスの名において保証します……え？血液センターの管理人ですか？\nおほん、血液センターを管理されているのは、ロドスの古参メンバーの一人であるワルファリン先生ですとも。\nブラッドブルードが目を光らせている以上、ほんの一滴であっても血液を盗み出せる者などいないでしょう。管理人がワルファリン先生であるからこそ、ロドスの血液センターは外敵からの如何なる脅威に晒されることはないと、我々は自信を持って断言できるのです。\n\n【ワルファリンの日記より抜粋】\n今日、新人オペレーターたちの採血分析が終了した。この頃やたらと新人が多くないか？フェリーン、ペッロー、リーベリ、そしてサルカズ……数多くの新人にその何倍もの回数の採血をしたものだから、最初は食欲をそそっていたはずの匂いで、最後には胸やけを起こしてしまったわ。\nケルシーは妾の卓越した自制心を褒めて然るべきであろう。節操なく暴れ回る小僧どもはおろか、一族の老いぼれどもですら、こうした忍耐においては妾の足元に及ぶべくもない。\n……まあいい、連中と比べたところで何の意味もない。\nそれより、せっかくロドスにこれだけ多くの人材が集まっているのだ。仕事の合間に少しばかり余分に採血をしても、何の問題もないはず。あのスカジとかいうオペレーターに加えて、スペクターにグレイディーア……このような絶好の機会を逃す手などあろうはずもない！\nそれに、ドクターだ。\nドクターめ。まったく、見ているだけで研究者としての心をくすぐりおる。妙なものだ、あの匂いは一体どこから来ておるのだ？どうして妾はこんなにも強く惹きつけられる？他のブラッドブルードはどんな反応を示す？クロージャは……いや、あいつは参考にならんな。\n妾の見立てが間違っていなければ、ドクターの身体には何か秘密が隠されている。ケルシーならばその秘密を知っているはずだが、奴は話したがらぬし、他人が探るのにもいい顔はせぬだろう。\nおのれ、ケルシーの奴め！真相を明るみに出すチャンスを目の前にぶら下げながら、その探求を禁じるとはどういう了見だ？\nいや、最近はケルシーの監視もそれほど厳しくない。折りを見て試してみてもよいのではないか？\nうむ、少し計画を練ってみるとしよう……"
+      "desc": "【血液センターのサンプル採取問題に関する医療部オペレーターとの質疑応答記録】\nロドスのメディカルチェックは、その過程の細部に至るまで本人に公開されています。受検者の要望によっての検査項目の増減も可能ですし、すべての手続き及びプロセスは完全にオープンであり、そこには如何なる欺瞞も存在しません。\n患者の情報は厳格なセキュリティにって守られ、現在に至るまで我々が設立した血液センターから血液サンプルが失われたことは一度としてないんです。そうです、一度としてです。\nそれらのサンプルが安全な監視下に置かれていること、疾病の治療という目的でのみ使用されること、ともにロドスの名において保証します……え？血液センターの管理人ですか？\nおほん、血液センターを管理されているのは、ロドスの古参メンバーの一人であるワルファリン先生ですとも。\nブラッドブルードが目を光らせている以上、ほんの一滴であっても血液を盗み出せる者などいないでしょう。管理人がワルファリン先生であるからこそ、ロドスの血液センターは外敵からの如何なる脅威に晒されることはないと、我々は自信を持って断言できるのです。\n\n【ワルファリンの日記より抜粋】\n今日、新人オペレーターたちの採血分析が終了した。この頃やたらと新人が多くないか？フェリーン、ペッロー、リーベリ、そしてサルカズ……数多くの新人にその何倍もの回数の採血をしたものだから、最初は食欲をそそっていたはずの匂いで、最後には胸やけを起こしてしまったわ。\nケルシーは妾の卓越した自制心を褒めて然るべきであろう。節操なく暴れ回る小僧どもはおろか、一族の老いぼれどもですら、こうした忍耐においては妾の足元に及ぶべくもない。\n……まあいい、連中と比べたところで何の意味もない。\nそれより、せっかくロドスにこれだけ多くの人材が集まっているのだ。仕事の合間に少しばかり余分に採血をしても、何の問題もないはず。あのスカジとかいうオペレーターに加えて、スペクターにグレイディーア……このような絶好の機会を逃す手などあろうはずもない！\nそれに、ドクターだ。\nドクターめ。まったく、見ているだけで研究者としての心をくすぐりおる。妙なものだ、あの匂いは一体どこから来ておるのだ？どうして妾はこんなにも強く惹きつけられる？他のブラッドブルードはどんな反応を示す？クロージャは……いや、あいつは参考にならんな。\n妾の見立てが間違っていなければ、ドクターの身体には何か秘密が隠されている。ケルシーならばその秘密を知っているはずだが、奴は話したがらぬし、他人が探るのにもいい顔はせぬだろう。\nおのれ、ケルシーの奴め！真相を明るみに出すチャンスを目の前にぶら下げながら、その探求を禁じるとはどういう了見だ？\nいや、最近はケルシーの監視もそれほど厳しくない。折りを見て試してみてもよいのではないか？\nうむ、少し計画を練ってみるとしよう……",
+      "typeIcon": "phy-x",
+      "uniEquipIcon": "uniequip_002_bldsk",
+      "typeName1": "PHY",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_bldsk_1",
+        "uniequip_002_bldsk_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の味方を治療時、HP治療効果<@ba.kw>+15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の味方を治療時、HP治療効果<@ba.kw>+15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内で敵が倒れた時、自身と範囲内のランダムな味方1人のSPを2回復し、倒れた敵は【エリート】または【ボス】の場合、SPをさらに1回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "血液サンプル回収",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "bldsk_t_1[self][no].sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[rand][no].sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[self][ex].sp",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[rand][ex].sp",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の味方を治療時、HP治療効果<@ba.kw>+15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内で敵が倒れた時、自身と範囲内のランダムな味方1人のSPを2回復し、倒れた敵は【エリート】または【ボス】の場合、SPをさらに2回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "血液サンプル回収",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "bldsk_t_1[self][no].sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[rand][no].sp",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[self][ex].sp",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "bldsk_t_1[rand][ex].sp",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1107,5 +1658,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

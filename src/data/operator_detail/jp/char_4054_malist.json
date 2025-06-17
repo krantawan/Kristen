@@ -150,6 +150,52 @@
       "cost": 23
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "init_atk_scale",
+            "value": 0.2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "delta_atk_scale",
+            "value": 0.15,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_atk_scale",
+            "value": 1.1,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "3",
+          "value": {
+            "key": "max_stack_cnt",
+            "value": 6,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（最大は攻撃力の110%まで）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4054_malist#1",
@@ -620,16 +666,663 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 100,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "インスピレーション",
+          "description": "攻撃時、10%の確率でその攻撃のみ攻撃力が150％に上昇",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "インスピレーション",
+          "description": "攻撃時、15％<@ba.talpu>（+5%）</>の確率でその攻撃のみ攻撃力が150％に上昇",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "インスピレーション",
+          "description": "攻撃時、25%の確率でその攻撃のみ攻撃力が150％に上昇",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.25,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "インスピレーション",
+          "description": "攻撃時、30%<@ba.talpu>（+5%）</>の確率でその攻撃のみ攻撃力が150％に上昇",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_malist",
       "moduleName": "ミニマリストの記章",
-      "desc": "ミニマリストは浮遊ユニットを操り、敵を追撃することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては術師オペレーターとして区分し、操機術師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ミニマリストは浮遊ユニットを操り、敵を追撃することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては術師オペレーターとして区分し、操機術師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_malist",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_malist",
       "moduleName": "「新しいふるさと」",
-      "desc": "「治療の時間だよ、ミニマリスト。」\nその言葉と共に再び戸を叩く音がした。\nミニマリストは声もノックする音も無視して、机の上のねじれた模型に目を向けた。こんなデザインのものを提出してニュー・ゼルウェルツァのランドマークにするくらいなら、今すぐこの船を跳び下りた方がマシだ！\n彼はすぐ模型から目をそらした。自ら造ったこの模型が、今は彼を苦しめている。それはまるで誇り高き己の作り手をあざ笑っているかのようであった。享楽というものをまるで解していないのだと。\n「オレにはできない……」\n彼は自分に言い訳をしたかった。その場をぐるぐると回る足取りが早まっていく。まるでピンと張った糸に引っ張られるように。彼はかつて、今と同じ早足で「設計代表」の後ろ姿を追っていた。その肩書を自らの手にしてからも、緊張が増すことはあれど減ることはなかった。一生は短い。立ち止まっている時間はない。責任感が、右足の痛みと同じくそう思い出させた。\n立ち止まっている場合ではない。\n彼は、とにかくインスピレーションを得ようとして部屋中を漁った。図面が屋内を舞い、模型が床に落ちても、アイデアは湧いてこない。彼は苦悩のあまり頭をかきむしった末に、ついにある物に目を向けた。\nベリートマト酒の入った樽である。\nキャッチが置いていったものだ。一族の者は皆酒好きだった。多くのドゥリンにとって、享楽と酒は切っても切れない関係にある。樽を見て不意に、師匠が窓の外のドームをゆったりと眺めながら、卓に着いて飲むことがあったことを、彼は思い出した。\nやや抵抗を感じたものの、自分も試してみたいという考えが一度浮かべば、抑え込むことはできそうになかった。彼はなんとか樽をこじ開け、その中身を杯になみなみに注いだ。鼻腔に飛び込む酒の香りにぼんやりしていると、彼はふと杯の中に映る影が記憶の欠片のように見えた気がした。\n「興味があるなら、試してみればいい。」\nあの日、師匠の言葉に促され、手渡された酒瓶の中身を一気に流し込んだ。酒の強さで目が回り、仕事どころではなくなった。彼は痛みで正気を保とうと、右足の小さく群れなす石をかきむしった。\nそんな彼を見て、師匠は笑った。\n「生を享受することは我々ドゥリンの美徳だ。私たちの故郷はそうして興った。スディチ、覚えておくといい。お前とて例外ではないのだからな。」\nかつて聞いたその言葉を思い出し、意識を取り戻す。気付けば、彼は静かに椅子に座り、キャッチ、師匠、そして一族の人々と同じように杯を携えてゆったりと窓の外を眺めていた。彼の手は無意識に足の石をかきむしろうとしていたが、中空で動きを止めた。\n石によって生じる痛みは、酒に目を向ける前にすでに消えていた。\n「ガヴィル、やっと来たのね！こいつ、ずっと部屋に閉じこもって返事しないんだよ！」\n「アタシに任せろ――」\nそんな時、扉が予兆もなく開いた。勢い良く繰り出されたガヴィルの拳は、あと一センチでミニマリストの鼻に当たるところだった。\n「ガヴィル？ちょうどよかった。医療部に連れて行ってくれよ。治療を受けないと。って、なんで突っ立ってるんだ？」\nガヴィルはミニマリストの後方をちらっと見た。そこには娯楽施設のシンプルな模型と空になったの杯が置かれている。彼女はすべてを理解し、笑みを浮かべた。\n「ーーっ痛ぁ！！なにするんだ、ガヴィル！治療を受ける前に酒なんか飲むわけないだろ！香りだけ嗅いで樽に戻したんだよ！」"
+      "desc": "「治療の時間だよ、ミニマリスト。」\nその言葉と共に再び戸を叩く音がした。\nミニマリストは声もノックする音も無視して、机の上のねじれた模型に目を向けた。こんなデザインのものを提出してニュー・ゼルウェルツァのランドマークにするくらいなら、今すぐこの船を跳び下りた方がマシだ！\n彼はすぐ模型から目をそらした。自ら造ったこの模型が、今は彼を苦しめている。それはまるで誇り高き己の作り手をあざ笑っているかのようであった。享楽というものをまるで解していないのだと。\n「オレにはできない……」\n彼は自分に言い訳をしたかった。その場をぐるぐると回る足取りが早まっていく。まるでピンと張った糸に引っ張られるように。彼はかつて、今と同じ早足で「設計代表」の後ろ姿を追っていた。その肩書を自らの手にしてからも、緊張が増すことはあれど減ることはなかった。一生は短い。立ち止まっている時間はない。責任感が、右足の痛みと同じくそう思い出させた。\n立ち止まっている場合ではない。\n彼は、とにかくインスピレーションを得ようとして部屋中を漁った。図面が屋内を舞い、模型が床に落ちても、アイデアは湧いてこない。彼は苦悩のあまり頭をかきむしった末に、ついにある物に目を向けた。\nベリートマト酒の入った樽である。\nキャッチが置いていったものだ。一族の者は皆酒好きだった。多くのドゥリンにとって、享楽と酒は切っても切れない関係にある。樽を見て不意に、師匠が窓の外のドームをゆったりと眺めながら、卓に着いて飲むことがあったことを、彼は思い出した。\nやや抵抗を感じたものの、自分も試してみたいという考えが一度浮かべば、抑え込むことはできそうになかった。彼はなんとか樽をこじ開け、その中身を杯になみなみに注いだ。鼻腔に飛び込む酒の香りにぼんやりしていると、彼はふと杯の中に映る影が記憶の欠片のように見えた気がした。\n「興味があるなら、試してみればいい。」\nあの日、師匠の言葉に促され、手渡された酒瓶の中身を一気に流し込んだ。酒の強さで目が回り、仕事どころではなくなった。彼は痛みで正気を保とうと、右足の小さく群れなす石をかきむしった。\nそんな彼を見て、師匠は笑った。\n「生を享受することは我々ドゥリンの美徳だ。私たちの故郷はそうして興った。スディチ、覚えておくといい。お前とて例外ではないのだからな。」\nかつて聞いたその言葉を思い出し、意識を取り戻す。気付けば、彼は静かに椅子に座り、キャッチ、師匠、そして一族の人々と同じように杯を携えてゆったりと窓の外を眺めていた。彼の手は無意識に足の石をかきむしろうとしていたが、中空で動きを止めた。\n石によって生じる痛みは、酒に目を向ける前にすでに消えていた。\n「ガヴィル、やっと来たのね！こいつ、ずっと部屋に閉じこもって返事しないんだよ！」\n「アタシに任せろ――」\nそんな時、扉が予兆もなく開いた。勢い良く繰り出されたガヴィルの拳は、あと一センチでミニマリストの鼻に当たるところだった。\n「ガヴィル？ちょうどよかった。医療部に連れて行ってくれよ。治療を受けないと。って、なんで突っ立ってるんだ？」\nガヴィルはミニマリストの後方をちらっと見た。そこには娯楽施設のシンプルな模型と空になったの杯が置かれている。彼女はすべてを理解し、笑みを浮かべた。\n「ーーっ痛ぁ！！なにするんだ、ガヴィル！治療を受ける前に酒なんか飲むわけないだろ！香りだけ嗅いで樽に戻したんだよ！」",
+      "typeIcon": "fun-y",
+      "uniEquipIcon": "uniequip_002_malist",
+      "typeName1": "FUN",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_malist_1",
+        "uniequip_002_malist_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（最大は攻撃力の120%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 85,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（最大は攻撃力の120%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、30%の確率でその攻撃のみ攻撃力が155%に上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "インスピレーション",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.55,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、35%<@ba.talpu>（+5%）</>の確率でその攻撃のみ攻撃力が155%に上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "インスピレーション",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.55,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（最大は攻撃力の120%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、30%の確率でその攻撃のみ攻撃力が160%に上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "インスピレーション",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、35%<@ba.talpu>（+5%）</>の確率でその攻撃のみ攻撃力が160%に上昇",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "インスピレーション",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1091,5 +1784,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -206,6 +206,7 @@
       "cost": 20
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_002_amiya#1",
@@ -853,36 +854,1181 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "最大HP+200",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 200,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+30",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 30,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 70,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "#",
+          "name": "？？？",
+          "description": "？？？？？",
+          "blackboard": [],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "アブソープション",
+          "description": "敵を攻撃する度SPが2回復、敵を倒すと更に8回復",
+          "blackboard": [
+            {
+              "key": "amiya_t_1[atk].sp",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "amiya_t_1[kill].sp",
+              "value": 8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "1",
+          "name": "アブソープション",
+          "description": "敵を攻撃する度SPが3<@ba.talpu>(+1)</>回復、敵を倒すと更に10<@ba.talpu>(+2)</>回復",
+          "blackboard": [
+            {
+              "key": "amiya_t_1[atk].sp",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "amiya_t_1[kill].sp",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_amiya",
       "moduleName": "アーミヤの記章",
-      "desc": "アーミヤは敵に対するアーツ攻撃に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、中堅術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "アーミヤは敵に対するアーツ攻撃に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、中堅術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_amiya",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_amiya",
       "moduleName": "DWDB-221E",
-      "desc": "始めにいくつかのぼんやりとした人影が、次にまばゆい光が見えた。\n光はゆっくりと遠ざかり、天に昇ったかと思うと、輝くまだら模様となって――ほどなくそれも消えていき、無意味な漆黒だけが残る。\nその輝くまだら模様を形作る小さな点の一つ一つが天体であり、そして星々の故郷の名が「宇宙」であることを、あなたは思い出した。\nふいに視界が開けて、滑らかな金属と密閉された空間、そして透明な窓があなたのもう一つの目となった。\n――その窓を通して、あなたは巨大な灰色の球体を見ていたのだ。\nあの常人には理解の及ばぬ巨大な構造物の中で、それは生みの親を静かに待っている……\nあなたは突然感極まり、ある種の体液が視界を滲ませた。その感情の出処は、赤子の――我が子の生まれる瞬間を見たことにあるようだった。\n新たな運命、その魂に託された思い……しかしあの大きな構造物を前にすれば、この小さな命はなんと取るに足らないことだろうか。\nふと視線を下に向け、大小様々な作業用の戦艦が目に入ると、数学者であるあなたはすぐさま冗談じみた比較を行った。\n――あの中で一番小さな戦艦ですら、人類の赤子の数千万倍はあるだろう、と。\nだが、あなたたちはやってのけたのだ。\n遙か遠い昔、火を起こし、あるいは狩りを始めたその時代から、今日この日まで歩んで見せた。\nあなたはそれを誇らしく思った。\nどういうわけか、その誇らしさはまるで自分自身のものかのように感じて――その瞬間、さらに多くの情報が脳内へと流れ込んできた。\nあなたは自分が誰かを思いだし、あの人工衛星の設計者が己であることを理解した。\nそうしてあなたは、長い長い亜空間での旅を終え、ついに衛星の完成を目にする瞬間を迎えたのだ。\n名誉、財産、家族、理想……そんな言葉が浮かんでは、渦を巻いて消えていき、最後に残ったのはたった一つ……\n……\n…\n「未来……」\n「なんだって？お前、一体何が見えたんだ？」\n「……」\n「おい、返事しろ！おい！」\n全員が沈黙すると、そばにいた若い女性が慌てだした。\n「彼の脳を調べて！ああもう、データベースとの通信プロトコルを確立したばかりでこんなに急ぐべきじゃないって言ったでしょ！やっと最初の転送に成功したところだったのに！」\n「……すまなかった。」\n「はあ？何がだよ。」\n「実は……これまで、私は君たち惑星エンジニアのことが好きじゃなかったんだ。どうも見かけ倒しの研究ばかりしているように思えて……だが、違った。私には見えた。君の過去を見て、それに共感し、君の感情もに触れたんだ。まさしく……何にも代えがたいものだった。」\n「まさか……」\n「ああ。君がどこにでもいる父親らしく子供や家族を思い出しながら、あの驚くべき人工の月を見る様を感じたよ。しかも、それは想像を絶する体験だった……我々は成功したんだ。」\n再び、全員が沈黙する。\n「それなら……」沈黙を打ち破ったのは比較的若い赤髪の女性だった。「それは、私たちの時代やこれからの時代を、どう記録するのかな？」\n「くだらない出来事の寄せ集めが記録されていくだけだろうな。」誰かが無頓着に言葉を返す。「そんなの嫌ってほどわかってるだろ。だけど今後は、奴らもおいそれと歴史を好き勝手飾り立てることはできなくなるさ。」\n「人類をもう少し信じてあげたらどうかしら。」老齢の女性は自然に腰かけ、姿勢を楽にして続けた。「私たちはもう充分に教訓を得たでしょう。後世の人々が同じ轍を踏むことはないはずよ。」\n誰かが苦笑いした。それが美しい願いにすぎないのはわかりきっているからだ。\n「……ともあれ、俺たちは成功したんだよな？DWDB-221Eがこうも早く実るとは……驚いたよ。」\nそう言うと、無造作な髪の男はすっくと立ち上がった。\n「そうとなったら、いい加減DWDB-221Eって呼び方は止さないか？プロジェクトコードに命名規則があるのは知ってるが、俺たちの仕事にはAmaのような機械的で冷たい略称じゃなく……もっと立派な正式名称を付ける価値があるはずだろう！？」彼は半年以上繰り返してきた提案を再び持ち出した。「たとえば、そうだな……『運命』、あるいは『世界の真理』とか。」\n先ほどまでと打って変わって、気まずい沈黙が場を包んだ。\n「『黒い王冠』は？一部現象にともなう視覚効果を直感的に言い表すと、まさにそういう感じでしょ。」\n「微妙だな。つまらん歴史ドラマのタイトルみたいに聞こえるし。」\n「それなら……」\nきりのない議論を始めんばかりの部下たちを遮った老女は、窓の外の星々を見やった。\n悪い報せもいくつか入ってきてはいるが、無数に連なる過去の歴史がそうであったように、どんな苦境も人類は乗り越えていくのだろう。\n「こう名付けるのはどうかしら。」\n「――『文明の存続』計画。」"
+      "desc": "始めにいくつかのぼんやりとした人影が、次にまばゆい光が見えた。\n光はゆっくりと遠ざかり、天に昇ったかと思うと、輝くまだら模様となって――ほどなくそれも消えていき、無意味な漆黒だけが残る。\nその輝くまだら模様を形作る小さな点の一つ一つが天体であり、そして星々の故郷の名が「宇宙」であることを、あなたは思い出した。\nふいに視界が開けて、滑らかな金属と密閉された空間、そして透明な窓があなたのもう一つの目となった。\n――その窓を通して、あなたは巨大な灰色の球体を見ていたのだ。\nあの常人には理解の及ばぬ巨大な構造物の中で、それは生みの親を静かに待っている……\nあなたは突然感極まり、ある種の体液が視界を滲ませた。その感情の出処は、赤子の――我が子の生まれる瞬間を見たことにあるようだった。\n新たな運命、その魂に託された思い……しかしあの大きな構造物を前にすれば、この小さな命はなんと取るに足らないことだろうか。\nふと視線を下に向け、大小様々な作業用の戦艦が目に入ると、数学者であるあなたはすぐさま冗談じみた比較を行った。\n――あの中で一番小さな戦艦ですら、人類の赤子の数千万倍はあるだろう、と。\nだが、あなたたちはやってのけたのだ。\n遙か遠い昔、火を起こし、あるいは狩りを始めたその時代から、今日この日まで歩んで見せた。\nあなたはそれを誇らしく思った。\nどういうわけか、その誇らしさはまるで自分自身のものかのように感じて――その瞬間、さらに多くの情報が脳内へと流れ込んできた。\nあなたは自分が誰かを思いだし、あの人工衛星の設計者が己であることを理解した。\nそうしてあなたは、長い長い亜空間での旅を終え、ついに衛星の完成を目にする瞬間を迎えたのだ。\n名誉、財産、家族、理想……そんな言葉が浮かんでは、渦を巻いて消えていき、最後に残ったのはたった一つ……\n……\n…\n「未来……」\n「なんだって？お前、一体何が見えたんだ？」\n「……」\n「おい、返事しろ！おい！」\n全員が沈黙すると、そばにいた若い女性が慌てだした。\n「彼の脳を調べて！ああもう、データベースとの通信プロトコルを確立したばかりでこんなに急ぐべきじゃないって言ったでしょ！やっと最初の転送に成功したところだったのに！」\n「……すまなかった。」\n「はあ？何がだよ。」\n「実は……これまで、私は君たち惑星エンジニアのことが好きじゃなかったんだ。どうも見かけ倒しの研究ばかりしているように思えて……だが、違った。私には見えた。君の過去を見て、それに共感し、君の感情もに触れたんだ。まさしく……何にも代えがたいものだった。」\n「まさか……」\n「ああ。君がどこにでもいる父親らしく子供や家族を思い出しながら、あの驚くべき人工の月を見る様を感じたよ。しかも、それは想像を絶する体験だった……我々は成功したんだ。」\n再び、全員が沈黙する。\n「それなら……」沈黙を打ち破ったのは比較的若い赤髪の女性だった。「それは、私たちの時代やこれからの時代を、どう記録するのかな？」\n「くだらない出来事の寄せ集めが記録されていくだけだろうな。」誰かが無頓着に言葉を返す。「そんなの嫌ってほどわかってるだろ。だけど今後は、奴らもおいそれと歴史を好き勝手飾り立てることはできなくなるさ。」\n「人類をもう少し信じてあげたらどうかしら。」老齢の女性は自然に腰かけ、姿勢を楽にして続けた。「私たちはもう充分に教訓を得たでしょう。後世の人々が同じ轍を踏むことはないはずよ。」\n誰かが苦笑いした。それが美しい願いにすぎないのはわかりきっているからだ。\n「……ともあれ、俺たちは成功したんだよな？DWDB-221Eがこうも早く実るとは……驚いたよ。」\nそう言うと、無造作な髪の男はすっくと立ち上がった。\n「そうとなったら、いい加減DWDB-221Eって呼び方は止さないか？プロジェクトコードに命名規則があるのは知ってるが、俺たちの仕事にはAmaのような機械的で冷たい略称じゃなく……もっと立派な正式名称を付ける価値があるはずだろう！？」彼は半年以上繰り返してきた提案を再び持ち出した。「たとえば、そうだな……『運命』、あるいは『世界の真理』とか。」\n先ほどまでと打って変わって、気まずい沈黙が場を包んだ。\n「『黒い王冠』は？一部現象にともなう視覚効果を直感的に言い表すと、まさにそういう感じでしょ。」\n「微妙だな。つまらん歴史ドラマのタイトルみたいに聞こえるし。」\n「それなら……」\nきりのない議論を始めんばかりの部下たちを遮った老女は、窓の外の星々を見やった。\n悪い報せもいくつか入ってきてはいるが、無数に連なる過去の歴史がそうであったように、どんな苦境も人類は乗り越えていくのだろう。\n「こう名付けるのはどうかしら。」\n「――『文明の存続』計画。」",
+      "typeIcon": "ccr-y",
+      "uniEquipIcon": "uniequip_002_amiya",
+      "typeName1": "CCR",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_amiya_1",
+        "uniequip_002_amiya_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "通常攻撃が敵【エリート】または【ボス】に命中するたびにSPが<@ba.kw>{sp}</>回復",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "通常攻撃が敵【エリート】または【ボス】に命中するたびにSPが<@ba.kw>{sp}</>回復",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵を攻撃する度SPが3回復、敵を倒すと更に8回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "アブソープション",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "amiya_t_1[atk].sp",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "amiya_t_1[kill].sp",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵を攻撃する度SPが4<@ba.talpu>（+1）</>回復、敵を倒すと更に10<@ba.talpu>（+2）</>回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 5,
+                  "prefabKey": "1",
+                  "name": "アブソープション",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "amiya_t_1[atk].sp",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "amiya_t_1[kill].sp",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "通常攻撃が敵【エリート】または【ボス】に命中するたびにSPが<@ba.kw>{sp}</>回復",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵を攻撃する度SPが3回復、敵を倒すと更に10回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "アブソープション",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "amiya_t_1[atk].sp",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "amiya_t_1[kill].sp",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵を攻撃する度SPが4<@ba.talpu>（+1）</>回復、敵を倒すと更に12<@ba.talpu>（+2）</>回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 5,
+                  "prefabKey": "1",
+                  "name": "アブソープション",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "amiya_t_1[atk].sp",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "amiya_t_1[kill].sp",
+                      "value": 12,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_001_amiya3",
       "moduleName": "アーミヤの記章（医療）",
-      "desc": "アーミヤが悲しみと向き合い手に入れた力。\nテレジアの感情がアーツユニットを形作っている。\n内に秘めたる深い感情は仲間を癒やす力となり、痛切な悲しみは敵を深淵へと引きずり込む。\n医療オペレーター試験を経た後、アーミヤに特別に本記章を授与し、\nその記念とする。"
+      "desc": "アーミヤが悲しみと向き合い手に入れた力。\nテレジアの感情がアーツユニットを形作っている。\n内に秘めたる深い感情は仲間を癒やす力となり、痛切な悲しみは敵を深淵へと引きずり込む。\n医療オペレーター試験を経た後、アーミヤに特別に本記章を授与し、\nその記念とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_amiya3",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_amiya3",
       "moduleName": "焦げ跡のついたワンピース",
-      "desc": "ケルシーは司令室の入り口でしばし立ち止まっていた。\n「ケルシー先生？」室内にいる人物が、先に彼女に気が付いた。\n会議テーブルのそばに腰かけた少女は顔を上げた。ケルシーに顔を見せようと頑張って背筋を伸ばすものの、それでもその頭はほとんど目の前に積まれたファイルの山に隠れ、辛うじて耳の先だけが向こうから見える状態になっていた。\n「今のところ、あのリターニアの商隊の責任者からは、提携の条項に異議は出ていない。」ケルシーは少女のほうへ歩み寄ると、テーブルの上に散らばったファイルを拾い上げた。「とはいえそれは、彼らが条項を全面的に受け入れるという意味ではない。」\n「そうですね。交渉の時も、口調こそとても丁寧でしたが、私を見る目つきが……その、冷たくて怖かったですから。」少女は、まだ周囲に敵意を感じるかのように眉をひそめた。\n「だが、できるだけ……」\n「『できるだけ人の感情に影響されないように。特にマイナスの感情には』ですよね。」少女は微笑んだ。「大丈夫です。Mantraさんの小隊がすでに、あの人たちを監視していますから。Logosさんが言うには、あの人たちがロドスに悪さをしようとすれば、その前にアーツユニットを持ったその手が凍り付いてしまうだろうとのことでした。」\n恐らくLogosは意図的に表現をおさえて、呪術を食らえばどうなるかというマイナス面の効果についての描写を減らして話したのだろう。ほかのオペレーターも、まだこの幼き新たなリーダーに少しずつ慣れているところだ。それゆえ彼らは、無意識に彼女のことを、昔と同じ守るべき子供だと思ってしまうのだが、誰もがこの十一歳の子供が見せる隙のなさと有能さに衝撃を受けることになる。\nアーミヤは驚くようなスピードで成長を遂げている。つい三ヶ月前に作ったワンピースはすでに袖丈が足りなくなっているうえに、精神面の成長については言うまでもないことだ。しばらくの間、ケルシーは日々、アーミヤが前日と少し変わっていると感じていた。それは自分の時間感覚がおかしくなっているためだろうか。それとも「魔王」の影響がまだ完全には制御しきれていないせいだろうか。\n「ケルシー先生……」アーミヤの声が、少しだけか細くなった。「私、また夢を見たんです。」\n「……どんな夢を見たんだ？」\n「ある人が出てくる夢でした……その女の人は、私の隣に座って、私の手を握ったまま、色んな話をしてくれたんです。私の過去や、まだ経験していないことについてまで。」\n「未来について語ったと？」\n「ええと……はい、多分。鉄でできた城壁のある、とても大きな移動都市で、戦争が起きて、たくさんの人が……特にサルカズが多く亡くなったとか。黒い石がそこかしこに生えていたとも聞きました。」\n「その話を聞かせてくれた人物は……」\n「すごく悲しんでいました。でも、強い人でしたから、ずっと泣いていたわけではありませんでしたよ。自分は諦めない、未来はきっとよくなるはずだって言っていました。」\nケルシーは少女に手を差し伸べた。この一年、彼女たちは今は亡き人についてはあまり話してこなかった。アーミヤにはまだ、少しの慰めが必要なのかもしれない。\n「恋しく思うのは当然だ、アーミヤ。テレジアへの思いを抑える必要はない。」\n「あの……確かに、テレジアさんにはすごく会いたいです。すごく、すごく。でも、夢に出てきたのはテレジアさんじゃありませんでした。」アーミヤは、目を大きく見開いて言った。「夢の中で会ったあの人は、私自身だと思います。」\n少し驚いた様子のケルシーを、アーミヤが抱きしめた。\n「たくさんお話ししたので、なんだかお腹がすいちゃいました。」少女はいじらしくケルシーの手を握ってゆらすと、司令室の外へと向かいながら、おしゃべりを続けた。「そろそろ一緒に夕飯を食べませんか？」\n「何がいいですかね……豆のシチューなんてどうでしょうか？Scoutさんが、ニンジンを入れると甘くなるぞって教えてくれたんですが……」\n「わあっ、ウルサスって今はこんなに気温が低いんですね……ずっと動かないでいると、とっても寒いんじゃないでしょうか？」\n「ケルシー先生……先生……」\nケルシーはアーミヤの手を握り、歩きながら、ふと思った。\nクロージャは良い働きをしているようだ。この廊下が、いつの間にかこんなに明るくなっていたとは、と。"
+      "desc": "ケルシーは司令室の入り口でしばし立ち止まっていた。\n「ケルシー先生？」室内にいる人物が、先に彼女に気が付いた。\n会議テーブルのそばに腰かけた少女は顔を上げた。ケルシーに顔を見せようと頑張って背筋を伸ばすものの、それでもその頭はほとんど目の前に積まれたファイルの山に隠れ、辛うじて耳の先だけが向こうから見える状態になっていた。\n「今のところ、あのリターニアの商隊の責任者からは、提携の条項に異議は出ていない。」ケルシーは少女のほうへ歩み寄ると、テーブルの上に散らばったファイルを拾い上げた。「とはいえそれは、彼らが条項を全面的に受け入れるという意味ではない。」\n「そうですね。交渉の時も、口調こそとても丁寧でしたが、私を見る目つきが……その、冷たくて怖かったですから。」少女は、まだ周囲に敵意を感じるかのように眉をひそめた。\n「だが、できるだけ……」\n「『できるだけ人の感情に影響されないように。特にマイナスの感情には』ですよね。」少女は微笑んだ。「大丈夫です。Mantraさんの小隊がすでに、あの人たちを監視していますから。Logosさんが言うには、あの人たちがロドスに悪さをしようとすれば、その前にアーツユニットを持ったその手が凍り付いてしまうだろうとのことでした。」\n恐らくLogosは意図的に表現をおさえて、呪術を食らえばどうなるかというマイナス面の効果についての描写を減らして話したのだろう。ほかのオペレーターも、まだこの幼き新たなリーダーに少しずつ慣れているところだ。それゆえ彼らは、無意識に彼女のことを、昔と同じ守るべき子供だと思ってしまうのだが、誰もがこの十一歳の子供が見せる隙のなさと有能さに衝撃を受けることになる。\nアーミヤは驚くようなスピードで成長を遂げている。つい三ヶ月前に作ったワンピースはすでに袖丈が足りなくなっているうえに、精神面の成長については言うまでもないことだ。しばらくの間、ケルシーは日々、アーミヤが前日と少し変わっていると感じていた。それは自分の時間感覚がおかしくなっているためだろうか。それとも「魔王」の影響がまだ完全には制御しきれていないせいだろうか。\n「ケルシー先生……」アーミヤの声が、少しだけか細くなった。「私、また夢を見たんです。」\n「……どんな夢を見たんだ？」\n「ある人が出てくる夢でした……その女の人は、私の隣に座って、私の手を握ったまま、色んな話をしてくれたんです。私の過去や、まだ経験していないことについてまで。」\n「未来について語ったと？」\n「ええと……はい、多分。鉄でできた城壁のある、とても大きな移動都市で、戦争が起きて、たくさんの人が……特にサルカズが多く亡くなったとか。黒い石がそこかしこに生えていたとも聞きました。」\n「その話を聞かせてくれた人物は……」\n「すごく悲しんでいました。でも、強い人でしたから、ずっと泣いていたわけではありませんでしたよ。自分は諦めない、未来はきっとよくなるはずだって言っていました。」\nケルシーは少女に手を差し伸べた。この一年、彼女たちは今は亡き人についてはあまり話してこなかった。アーミヤにはまだ、少しの慰めが必要なのかもしれない。\n「恋しく思うのは当然だ、アーミヤ。テレジアへの思いを抑える必要はない。」\n「あの……確かに、テレジアさんにはすごく会いたいです。すごく、すごく。でも、夢に出てきたのはテレジアさんじゃありませんでした。」アーミヤは、目を大きく見開いて言った。「夢の中で会ったあの人は、私自身だと思います。」\n少し驚いた様子のケルシーを、アーミヤが抱きしめた。\n「たくさんお話ししたので、なんだかお腹がすいちゃいました。」少女はいじらしくケルシーの手を握ってゆらすと、司令室の外へと向かいながら、おしゃべりを続けた。「そろそろ一緒に夕飯を食べませんか？」\n「何がいいですかね……豆のシチューなんてどうでしょうか？Scoutさんが、ニンジンを入れると甘くなるぞって教えてくれたんですが……」\n「わあっ、ウルサスって今はこんなに気温が低いんですね……ずっと動かないでいると、とっても寒いんじゃないでしょうか？」\n「ケルシー先生……先生……」\nケルシーはアーミヤの手を握り、歩きながら、ふと思った。\nクロージャは良い働きをしているようだ。この廊下が、いつの間にかこんなに明るくなっていたとは、と。",
+      "typeIcon": "inc-x",
+      "uniEquipIcon": "uniequip_002_amiya3",
+      "typeName1": "INC",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_amiya3_1",
+        "uniequip_002_amiya3_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方全員の最大HP+9%。スキル発動中、1秒ごとに味方全員のHPを最大値の3%回復する",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "切実なる嘱望",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.09,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.03,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>術ダメージ</>を与え、敵を攻撃する度攻撃範囲内の味方1人のHPを与ダメージの<@ba.kw>{scale:0%}</>回復",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方全員の最大HP+10%。スキル発動中、1秒ごとに味方全員のHPを最大値の3.5%回復する",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "切実なる嘱望",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.035,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_001_amiya2",
       "moduleName": "アーミヤの記章（前衛）",
-      "desc": "アーミヤが怒りと向き合い手に入れた力。\n抑圧を受けた多くの者の怒りが、アーツを切り裂く長剣を形作っている。\n混沌とした怒りは腐敗を焼き尽くす業火となり、冷静な怒りは憎しみを断ち切る刃となる。\n前衛オペレーター試験を経た後、アーミヤに特別に本記章を授与し、\nその記念とする。"
+      "desc": "アーミヤが怒りと向き合い手に入れた力。\n抑圧を受けた多くの者の怒りが、アーツを切り裂く長剣を形作っている。\n混沌とした怒りは腐敗を焼き尽くす業火となり、冷静な怒りは憎しみを断ち切る刃となる。\n前衛オペレーター試験を経た後、アーミヤに特別に本記章を授与し、\nその記念とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_amiya2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_amiya2",
       "moduleName": "調律を待つ怒りの弦",
-      "desc": "アーミヤはそろそろ寝る準備をしようと、パジャマに手を伸ばした――が、すぐに手を引いた。そういえば、まだ一つやるべきことが残っていた。\nもう一度デスクに向き直り、インクの出が悪くなったペンを何度か振る。そして、まだ何も書かれていないタグを取り出した。\n――損傷品番号：037\n――損傷品の種類：ヴァイオリン\nその二行だけをアーミヤは書き記した。本来であればより詳しく記載する必要があるが、レム・ビリトンの至るところにあるサカビンノキで作られたそれは、ごくありふれたヴァイオリンにすぎない。六歳の誕生日プレゼントとして贈られ、母から弾き方を手取り足取り教えられた。アーミヤが正しい構え方を覚えられるよう、母は面白い言葉遊びをいくつも考えてくれた。しかし今となっては、もうなに一つ思い出せない。ただ、「楽譜どおりに弓を動かすのではなく、自分の気持ちを弦に乗せることが大切」という母の教えだけは、はっきりと覚えている。\nアーミヤはその言葉の通りに弾こうとした。だがヴァイオリンから響いたのは澄んだ音色ではなく、悲痛な叫びと泣き声だった。一本目の弦が激しくねじれ始める。まるで入国審査の列に紛れ込もうと体をかがめ、不安げに人混みの奥へと身を潜めようとする人のように。続けて二本目の弦が震え始める。それは採掘現場に押し込まれた人が、手元のわずかな温もりを留めつつ、血で染まった鞭から少しでも離れようと、隅で縮み上がっている様に似ていた。さらに三本目の弦が、狂ったように震え始める。空気中にきらめく活性源石の粉塵が、廃倉庫内の血生臭さと腐敗臭を際立たせており、このような悪臭には耐えられないとばかりに。そして最後の弦が、行き交う悲鳴の中で叫びを上げる。どうして？どうして？どうして？――しかし、どの弦もそれに答えなかった。アーミヤがはっと我に返ると、弦はすべて切れており、ヴァイオリン本体には青黒い焼け跡が残されていた。\nタグをぼろぼろになったヴァイオリンのネックに結び付け、アーミヤはそっと箱にしまい込む。その箱には他にも色々なものが収められていた。ドクターが旅路で捕まえたオリジムシの殻で作ったホイッスル。テレジアが編んでくれた、引っ張ると変な音が鳴る帽子。自分のためにと、ケルシーが動物の模様を彫ってくれたサーベイランスマシン……。どれも青黒い焼け跡がついており、再び使われる機会を箱の中で待ち続けていた。\nそれは、いつの日になるのだろう――。アーミヤは無意識にそう考えた。胸の裡に渦巻く名もなき怒りの炎に燃やされることがなくなるまで。大地を焼き尽くす怒りの炎が、すべて鎮まるまで。だが、それは一体いつだろうか？果たしてその瞬間を目にする日が来るのだろうか？アーミヤは、そんな日を想像することもできなかった。\n箱を閉じようとしたとき、アーミヤはヴァイオリンの側面に目立たない小さな凹みがあることに気づいた。それは、焼け跡ではなく……そう、アーミヤは思い出した。それはヴァイオリンをもらったばかりの頃。何度やっても思った通りの音が出ないことに腹を立て、弓をヴァイオリンに投げつけた時についた傷だ。\nアーミヤはふと笑みをこぼした。胸の裡に渦巻く名もなき怒りは混沌として掴みどころがないが、記憶のうちにある身勝手でちっぽけな怒りの正体はよく知っており、整理も制御も難しくなかった。\nアーミヤは「怒るってどういうことかわかったよ」と母に告げる幼い自分の姿を見た。怒ることは、どうして想像していることと現実の結果が異なっているのか、理解できないこと。頭の中では譜面通りの音を鳴らしているにもかかわらず、実際に弾いてみると不協和音が響いてしまうように。だから、何度も何度も試さなきゃ。ひとつも音を外さなくなるまで。うまく弾けなくても、腹を立てなくなるまで……。幼いアーミヤは、「もう二度と弓を投げたりしない」と母に誓った。そんなことをしても、何の解決にもならないもの。\nそうして、アーミヤは箱からぼろぼろのヴァイオリンを取り出した。明日、いや明後日でもいい。このヴァイオリンを直そう。そして、もう一度奏でよう――。"
+      "desc": "アーミヤはそろそろ寝る準備をしようと、パジャマに手を伸ばした――が、すぐに手を引いた。そういえば、まだ一つやるべきことが残っていた。\nもう一度デスクに向き直り、インクの出が悪くなったペンを何度か振る。そして、まだ何も書かれていないタグを取り出した。\n――損傷品番号：037\n――損傷品の種類：ヴァイオリン\nその二行だけをアーミヤは書き記した。本来であればより詳しく記載する必要があるが、レム・ビリトンの至るところにあるサカビンノキで作られたそれは、ごくありふれたヴァイオリンにすぎない。六歳の誕生日プレゼントとして贈られ、母から弾き方を手取り足取り教えられた。アーミヤが正しい構え方を覚えられるよう、母は面白い言葉遊びをいくつも考えてくれた。しかし今となっては、もうなに一つ思い出せない。ただ、「楽譜どおりに弓を動かすのではなく、自分の気持ちを弦に乗せることが大切」という母の教えだけは、はっきりと覚えている。\nアーミヤはその言葉の通りに弾こうとした。だがヴァイオリンから響いたのは澄んだ音色ではなく、悲痛な叫びと泣き声だった。一本目の弦が激しくねじれ始める。まるで入国審査の列に紛れ込もうと体をかがめ、不安げに人混みの奥へと身を潜めようとする人のように。続けて二本目の弦が震え始める。それは採掘現場に押し込まれた人が、手元のわずかな温もりを留めつつ、血で染まった鞭から少しでも離れようと、隅で縮み上がっている様に似ていた。さらに三本目の弦が、狂ったように震え始める。空気中にきらめく活性源石の粉塵が、廃倉庫内の血生臭さと腐敗臭を際立たせており、このような悪臭には耐えられないとばかりに。そして最後の弦が、行き交う悲鳴の中で叫びを上げる。どうして？どうして？どうして？――しかし、どの弦もそれに答えなかった。アーミヤがはっと我に返ると、弦はすべて切れており、ヴァイオリン本体には青黒い焼け跡が残されていた。\nタグをぼろぼろになったヴァイオリンのネックに結び付け、アーミヤはそっと箱にしまい込む。その箱には他にも色々なものが収められていた。ドクターが旅路で捕まえたオリジムシの殻で作ったホイッスル。テレジアが編んでくれた、引っ張ると変な音が鳴る帽子。自分のためにと、ケルシーが動物の模様を彫ってくれたサーベイランスマシン……。どれも青黒い焼け跡がついており、再び使われる機会を箱の中で待ち続けていた。\nそれは、いつの日になるのだろう――。アーミヤは無意識にそう考えた。胸の裡に渦巻く名もなき怒りの炎に燃やされることがなくなるまで。大地を焼き尽くす怒りの炎が、すべて鎮まるまで。だが、それは一体いつだろうか？果たしてその瞬間を目にする日が来るのだろうか？アーミヤは、そんな日を想像することもできなかった。\n箱を閉じようとしたとき、アーミヤはヴァイオリンの側面に目立たない小さな凹みがあることに気づいた。それは、焼け跡ではなく……そう、アーミヤは思い出した。それはヴァイオリンをもらったばかりの頃。何度やっても思った通りの音が出ないことに腹を立て、弓をヴァイオリンに投げつけた時についた傷だ。\nアーミヤはふと笑みをこぼした。胸の裡に渦巻く名もなき怒りは混沌として掴みどころがないが、記憶のうちにある身勝手でちっぽけな怒りの正体はよく知っており、整理も制御も難しくなかった。\nアーミヤは「怒るってどういうことかわかったよ」と母に告げる幼い自分の姿を見た。怒ることは、どうして想像していることと現実の結果が異なっているのか、理解できないこと。頭の中では譜面通りの音を鳴らしているにもかかわらず、実際に弾いてみると不協和音が響いてしまうように。だから、何度も何度も試さなきゃ。ひとつも音を外さなくなるまで。うまく弾けなくても、腹を立てなくなるまで……。幼いアーミヤは、「もう二度と弓を投げたりしない」と母に誓った。そんなことをしても、何の解決にもならないもの。\nそうして、アーミヤは箱からぼろぼろのヴァイオリンを取り出した。明日、いや明後日でもいい。このヴァイオリンを直そう。そして、もう一度奏でよう――。",
+      "typeIcon": "aft-x",
+      "uniEquipIcon": "uniequip_002_amiya2",
+      "typeName1": "AFT",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_amiya2_1",
+        "uniequip_002_amiya2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 26,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵をブロックしていない時、攻撃速度<@ba.kw>+{attack_speed}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵をブロックしていない時、攻撃速度<@ba.kw>+{attack_speed}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方全員の攻撃力と防御力+8%、スキル発動中素質の効果倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "蒼き怒火",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.08,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵をブロックしていない時、攻撃速度<@ba.kw>+{attack_speed}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方全員の攻撃力と防御力+9%、スキル発動中素質の効果倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "蒼き怒火",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.09,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.09,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1336,5 +2482,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

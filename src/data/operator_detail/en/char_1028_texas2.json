@@ -151,6 +151,7 @@
       "cost": 10
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_1028_texas2#1",
@@ -759,16 +760,514 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +22",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 22,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -2 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -2,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Texas Tradition",
+          "description": "Gains +10% ATK during the duration of the passive skill; When defeating an enemy for the first time, fully restores HP and reactivates the effects of the passive skill",
+          "blackboard": {
+            "atk": 0.1,
+            "hp_ratio": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Texas Tradition",
+          "description": "Gains +20% ATK during the duration of the passive skill; When defeating an enemy for the first time, fully restores HP and reactivates the effects of the passive skill",
+          "blackboard": {
+            "atk": 0.2,
+            "hp_ratio": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Texas Swordsmanship",
+          "description": "Before defeating an enemy for the first time after each deployment, gains +8 ASPD and reduces all damage taken by 25%",
+          "blackboard": {
+            "attack_speed": 8,
+            "damage_resistance": 0.25
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Texas Swordsmanship",
+          "description": "Before defeating an enemy for the first time after each deployment, gains +10 <@ba.talpu>(+2)</> ASPD and reduces all damage taken by 30% <@ba.talpu>(+5%)</>",
+          "blackboard": {
+            "attack_speed": 10,
+            "damage_resistance": 0.3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_texas2",
       "moduleName": "Texas the Omertosa's Badge",
-      "desc": "Operator Texas the Omertosa has demonstrated a remarkable aptitude in repeated battlefield penetration.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Executor responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Texas the Omertosa has demonstrated a remarkable aptitude in repeated battlefield penetration.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Executor responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_texas2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_texas2",
       "moduleName": "Blueberry & Dark Chocolate",
-      "desc": "Nothing could be more stupid than having to name your own weapon, Texas thinks, staring at the form in front of her.\nNuova Volsinii forbids the carrying of weapons, even hidden ones, but Penguin Logistics is without a doubt a special case. Hence, their need to file a little additional registration. It doesn't mean they can use weapons in urban areas, but simply that under certain circumstances, their weapons will be returned to them.\nWhich is not to say she has to go through something as dumb as weapon NAMING, of course, it's just—she sees Exusiai elatedly wracking the ol' noggin and filling in names she came up with a second ago for each one of her guns, and she catches the gaze Exusiai throws her way from time to time— appreciation mixed with eagerness—and she knows that if she doesn't do it herself, Exusiai will snatch away her paperwork and give her two new swords names so stupid you'd call them groundbreaking.\nShe really can't say she's all that invested in these blades, given that she only reluctantly accepted them as a gift in the first place. Frankly, she's not even the type to get hung up on this stuff—if the swords she'd been using before weren't of fairly unique make, she'd probably have changed weapons several times over by now.\nMoreover, the maker of these twin swords was doubtlessly trying to draw some sort of... spiritual thing from the story of the Texas family name, which was then affixed squarely on top. And despite the fact that it made even more headache for her, it led even the official inspecting her weapons to cast her an expectant look, as if to say 'surely, arms such as these must have wonderful names.'\nThe door opens with a groan, and in come Sora and Croissant toting bags of all sizes. Their new base is in dire need of dressing up, and the two of them have always been on decor duty.\n'Oh my gosh, Texas, you've been sitting there for three hours,' Sora can't help but exclaim when she finds, after moving to Texas's side, that the form is still in the exact same shape as when she left.\nTexas gives a shrug of the shoulders, hands the pen to her, and makes it clear: Texas is checked out.\n'I'm busy sorting out the base! I can't help you with this,' Sora says, mouth curling to one side. 'Besides, it's not like this family stuff has anything to do with me—I'm just some performer.'\nTexas rolls her eyes. She'd finally laid out her whole past to her friends, and now it was nothing more than a harmless joke between them. She shoots a look at Croissant, but the Forte raises her hands as if to say she's all tied up herself. Still, something seems to hit her immediately after, and she pulls something out of a bag and slings it to Texas.\n'Bought it on the way. Think it over nice 'n slow, now—ya got plenty time 'n all.'\nTexas catches it, looks down, and finds it's a box of chocolates.\nHaving said her piece, Croissant heads into the kitchen. She's bought a bumper crop of cookware, and tonight will be her first time flexing her skills in Nuova Volsinii.\nSora switches a new record onto the gramophone. Melodious music fills the new base, while she begins to read the script she has in hand. She's gotten a new job, no doubt.\nExusiai's battle with her forms seems to be nearing a close, and one look at her face tells you she's pretty damn satisfied with what she's accomplished, but Texas knows the next time she fetches her weapons, she's not going to remember a single one of the names she thought up here.\nThis is my life now.\nTexas tears open the packaging, pulls out a stick and begins to slowly chew on it, but the feel of the chocolate as it gradually melts in her mouth, on top of everything she sees and hears and senses right now, leads to a moment of inspiration.\nShe promptly puts pen to form, fills in the name 'Blueberry & Dark Chocolate' a few times before tossing the pen aside.\nExusiai leans in to steal a glance, and bluntly tells her, 'I gotta say, partner, those are <i>really</i> stupid names.'\n'I agree.' Texas leans back in her office chair, gives her body a stretch, and puts her earphones on. 'But that's just the right amount of stupid.'"
+      "desc": "Nothing could be more stupid than having to name your own weapon, Texas thinks, staring at the form in front of her.\nNuova Volsinii forbids the carrying of weapons, even hidden ones, but Penguin Logistics is without a doubt a special case. Hence, their need to file a little additional registration. It doesn't mean they can use weapons in urban areas, but simply that under certain circumstances, their weapons will be returned to them.\nWhich is not to say she has to go through something as dumb as weapon NAMING, of course, it's just—she sees Exusiai elatedly wracking the ol' noggin and filling in names she came up with a second ago for each one of her guns, and she catches the gaze Exusiai throws her way from time to time— appreciation mixed with eagerness—and she knows that if she doesn't do it herself, Exusiai will snatch away her paperwork and give her two new swords names so stupid you'd call them groundbreaking.\nShe really can't say she's all that invested in these blades, given that she only reluctantly accepted them as a gift in the first place. Frankly, she's not even the type to get hung up on this stuff—if the swords she'd been using before weren't of fairly unique make, she'd probably have changed weapons several times over by now.\nMoreover, the maker of these twin swords was doubtlessly trying to draw some sort of... spiritual thing from the story of the Texas family name, which was then affixed squarely on top. And despite the fact that it made even more headache for her, it led even the official inspecting her weapons to cast her an expectant look, as if to say 'surely, arms such as these must have wonderful names.'\nThe door opens with a groan, and in come Sora and Croissant toting bags of all sizes. Their new base is in dire need of dressing up, and the two of them have always been on decor duty.\n'Oh my gosh, Texas, you've been sitting there for three hours,' Sora can't help but exclaim when she finds, after moving to Texas's side, that the form is still in the exact same shape as when she left.\nTexas gives a shrug of the shoulders, hands the pen to her, and makes it clear: Texas is checked out.\n'I'm busy sorting out the base! I can't help you with this,' Sora says, mouth curling to one side. 'Besides, it's not like this family stuff has anything to do with me—I'm just some performer.'\nTexas rolls her eyes. She'd finally laid out her whole past to her friends, and now it was nothing more than a harmless joke between them. She shoots a look at Croissant, but the Forte raises her hands as if to say she's all tied up herself. Still, something seems to hit her immediately after, and she pulls something out of a bag and slings it to Texas.\n'Bought it on the way. Think it over nice 'n slow, now—ya got plenty time 'n all.'\nTexas catches it, looks down, and finds it's a box of chocolates.\nHaving said her piece, Croissant heads into the kitchen. She's bought a bumper crop of cookware, and tonight will be her first time flexing her skills in Nuova Volsinii.\nSora switches a new record onto the gramophone. Melodious music fills the new base, while she begins to read the script she has in hand. She's gotten a new job, no doubt.\nExusiai's battle with her forms seems to be nearing a close, and one look at her face tells you she's pretty damn satisfied with what she's accomplished, but Texas knows the next time she fetches her weapons, she's not going to remember a single one of the names she thought up here.\nThis is my life now.\nTexas tears open the packaging, pulls out a stick and begins to slowly chew on it, but the feel of the chocolate as it gradually melts in her mouth, on top of everything she sees and hears and senses right now, leads to a moment of inspiration.\nShe promptly puts pen to form, fills in the name 'Blueberry & Dark Chocolate' a few times before tossing the pen aside.\nExusiai leans in to steal a glance, and bluntly tells her, 'I gotta say, partner, those are <i>really</i> stupid names.'\n'I agree.' Texas leans back in her office chair, gives her body a stretch, and puts her earphones on. 'But that's just the right amount of stupid.'",
+      "typeIcon": "exe-y",
+      "uniEquipIcon": "uniequip_002_texas2",
+      "typeName1": "EXE",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_texas2_1",
+        "uniequip_002_texas2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 53,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains +25% ATK during the duration of the passive skill; When defeating an enemy for the first time, fully restores HP and reactivates the effects of the passive skill",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Texas Tradition",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Gains +28% ATK during the duration of the passive skill; When defeating an enemy for the first time, fully restores HP and reactivates the effects of the passive skill",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Texas Tradition",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.28,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1222,5 +1721,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

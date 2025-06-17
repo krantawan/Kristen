@@ -137,6 +137,24 @@
       "cost": 22
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "heal_scale",
+          "value": 0.8
+        }
+      ],
+      "overrideDescription": "Has a large healing range, but the healing amount on farther targets is reduced to <@ba.kw>{heal_scale:0%}</>",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_348_ceylon#1",
@@ -611,16 +629,596 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Lake Walker",
+          "description": "ATK +3%, when there is water terrain on the battlefield, the effect becomes ATK +9%",
+          "blackboard": {
+            "ceylon_t_1[common].atk": 0.03,
+            "celyon_t_1[map].atk": 0.06
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Lake Walker",
+          "description": "ATK +4%<@ba.talpu> (+1%)</>, when there is water terrain on the battlefield, the effect becomes ATK +15%<@ba.talpu> (+6%)</>",
+          "blackboard": {
+            "ceylon_t_1[common].atk": 0.04,
+            "celyon_t_1[map].atk": 0.11
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Lake Walker",
+          "description": "ATK +5%, when there is water terrain on the battlefield, the effect becomes ATK +18%",
+          "blackboard": {
+            "ceylon_t_1[common].atk": 0.05,
+            "celyon_t_1[map].atk": 0.13
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Lake Walker",
+          "description": "ATK +6%<@ba.talpu> (+1%)</>, when there is water terrain on the battlefield, the effect becomes ATK +24%<@ba.talpu> (+6%)</>",
+          "blackboard": {
+            "ceylon_t_1[common].atk": 0.06,
+            "celyon_t_1[map].atk": 0.18
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_ceylon",
       "moduleName": "Ceylon's Badge",
-      "desc": "Operator Ceylon has demonstrated a remarkable aptitude for wide-range healing in tandem with endowment of effects of benefit upon Operators.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Therapist responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Ceylon has demonstrated a remarkable aptitude for wide-range healing in tandem with endowment of effects of benefit upon Operators.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Medic Operator during field operations to exercise Therapist responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_ceylon",
       "moduleName": "Field Research Equipment",
-      "desc": "On a hospital corridor bench, a student reading a book sits side by side with a middle-aged woman of professorly airs. Next to them, a distressed-looking worker anxiously mumbles to himself.\n'Peter Davis.' A doctor steps out, test results in hand. The worker whose name has now been called tensely lifts his head. The student shuts her book.\n'—Elevated BOCD, no signs of Oripathy.'\n'Ceylon Doykos. Elevated BOCD, no signs of Oripathy.'\nThe three let out a collective sigh. 'See!' the student starts to tell the other woman in excitement. 'I'm fine, Professor!'\n'More like you're lucky,' the professor replies sternly, shaking her head.\n'I've warned you two before. Outdoor investigations are to be carried out within stipulated safe regions, during designated times, and proper protective measures have to be taken. Without specialized protective gear, coming into contact with highly activated Originium is exceedingly dangerous. Moreover, we have no right to extract ore from the mines. The mines can hold you liable for anything you've done. Ceylon, you're supposed to be a model student.'\n'But I want to verify the theories I see in my textbooks... and besides, if I hadn't warned Mr. Davis and the others to halt their work, there would've been an acute infection incident. I couldn't—'\n'What if you'd judged wrong?'\nCeylon stops in her tracks. After a moment, she droops her head. 'Sorry.'\n'I'm not expelling you, but you will have to retake this course,' says Ceylon's professor says as she gets up from the bench. 'It was only your first field outing. Be mindful of properly protecting yourself in future.'\n\nOnce the professor has left, only then does the mine-worker nervously move to say a word of thanks.\n'Thank you for saving us. I don't know if we've burdened you... Your professor sounds like she thinks you did the wrong thing.'\n'No, not at all,' Ceylon replies with a smile.\n'I know what my professor thinks. She just has to teach me these things as part of the course. I need to know fear, and the worst case, and I have to weigh whether the responsibility's something I can take.'\n'It's when I learn all that that I can truly make my own choices.'"
+      "desc": "On a hospital corridor bench, a student reading a book sits side by side with a middle-aged woman of professorly airs. Next to them, a distressed-looking worker anxiously mumbles to himself.\n'Peter Davis.' A doctor steps out, test results in hand. The worker whose name has now been called tensely lifts his head. The student shuts her book.\n'—Elevated BOCD, no signs of Oripathy.'\n'Ceylon Doykos. Elevated BOCD, no signs of Oripathy.'\nThe three let out a collective sigh. 'See!' the student starts to tell the other woman in excitement. 'I'm fine, Professor!'\n'More like you're lucky,' the professor replies sternly, shaking her head.\n'I've warned you two before. Outdoor investigations are to be carried out within stipulated safe regions, during designated times, and proper protective measures have to be taken. Without specialized protective gear, coming into contact with highly activated Originium is exceedingly dangerous. Moreover, we have no right to extract ore from the mines. The mines can hold you liable for anything you've done. Ceylon, you're supposed to be a model student.'\n'But I want to verify the theories I see in my textbooks... and besides, if I hadn't warned Mr. Davis and the others to halt their work, there would've been an acute infection incident. I couldn't—'\n'What if you'd judged wrong?'\nCeylon stops in her tracks. After a moment, she droops her head. 'Sorry.'\n'I'm not expelling you, but you will have to retake this course,' says Ceylon's professor says as she gets up from the bench. 'It was only your first field outing. Be mindful of properly protecting yourself in future.'\n\nOnce the professor has left, only then does the mine-worker nervously move to say a word of thanks.\n'Thank you for saving us. I don't know if we've burdened you... Your professor sounds like she thinks you did the wrong thing.'\n'No, not at all,' Ceylon replies with a smile.\n'I know what my professor thinks. She just has to teach me these things as part of the course. I need to know fear, and the worst case, and I have to weigh whether the responsibility's something I can take.'\n'It's when I learn all that that I can truly make my own choices.'",
+      "typeIcon": "wah-x",
+      "uniEquipIcon": "uniequip_002_ceylon",
+      "typeName1": "WAH",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_ceylon_1",
+        "uniequip_002_ceylon_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain <$ba.buffres>status resistance</>, and become less likely to be attacked",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain <$ba.buffres>status resistance</>, and become less likely to be attacked",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +8%, when there is water terrain on the battlefield, the effect becomes ATK +30%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Lake Walker",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ceylon_t_1[common].atk",
+                      "value": 0.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "celyon_t_1[map].atk",
+                      "value": 0.22,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +9% <@ba.talpu>(+1%)</>, when there is water terrain on the battlefield, the effect becomes ATK +36% <@ba.talpu>(+6%)</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Lake Walker",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ceylon_t_1[common].atk",
+                      "value": 0.09,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "celyon_t_1[map].atk",
+                      "value": 0.27,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "magic_resistance",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Gain <$ba.buffres>status resistance</>, and become less likely to be attacked",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +11%, when there is water terrain on the battlefield, the effect becomes ATK +42%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Lake Walker",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ceylon_t_1[common].atk",
+                      "value": 0.11,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "celyon_t_1[map].atk",
+                      "value": 0.31,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "ATK +12% <@ba.talpu>(+1%)</>, when there is water terrain on the battlefield, the effect becomes ATK +48% <@ba.talpu>(+6%)</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Lake Walker",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ceylon_t_1[common].atk",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "celyon_t_1[map].atk",
+                      "value": 0.36,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1064,5 +1662,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

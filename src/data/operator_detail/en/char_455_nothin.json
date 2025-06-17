@@ -151,6 +151,28 @@
       "cost": 8
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "interval",
+          "value": 3
+        },
+        {
+          "key": "cost",
+          "value": -3
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_455_nothin#1",
@@ -645,16 +667,605 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -3 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -3,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +25",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Unexpected Strike",
+          "description": "After not attacking for 4 seconds, increase the ATK of the next attack to 125% and <$ba.stun>Stun</> the target for 3 seconds",
+          "blackboard": {
+            "delay": 4,
+            "atk_scale": 1.25,
+            "stun": 3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Unexpected Strike",
+          "description": "After not attacking for 4 seconds, increase the ATK of the next attack to 130% <@ba.talpu>(+5%)</> and <$ba.stun>Stun</> the target for 3 seconds",
+          "blackboard": {
+            "delay": 4,
+            "atk_scale": 1.3,
+            "stun": 3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Unexpected Strike",
+          "description": "After not attacking for 4 seconds, increase the ATK of the next attack to 150% and <$ba.stun>Stun</> the target for 4 seconds",
+          "blackboard": {
+            "delay": 4,
+            "atk_scale": 1.5,
+            "stun": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Unexpected Strike",
+          "description": "After not attacking for 4 seconds, increase the ATK of the next attack to 155% <@ba.talpu>(+5%)</> and <$ba.stun>Stun</> the target for 4 seconds",
+          "blackboard": {
+            "delay": 4,
+            "atk_scale": 1.55,
+            "stun": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_nothin",
       "moduleName": "Mr. Nothing’s Badge",
-      "desc": "Operator Mr. Nothing has demonstrated a remarkable aptitude in repeated battlefield penetration.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Merchant responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Mr. Nothing has demonstrated a remarkable aptitude in repeated battlefield penetration.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Merchant responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_nothin",
       "moduleName": "'Shelter from the Rain'",
-      "desc": "When he left Lien’s, it had been raining for several days and nights in Kou-wu City. The fallen sycamore leaves densely covered the ground, burying the smell of fish beneath the soil. He bolted the gate of the kung fu hall from the inside, and in the dead of night, took a copper rod from the weapon rack used for emergencies, climbed the wall, and left the courtyard. \nNot long afterwards, a town near Kou-wu City found itself one sunglass-sporting fortune-teller extra. On sunny days, he would set up his stall at intersections, and on rainy days with few pedestrians, he would take his umbrella and go fishing by the river outside town. The umbrella perfectly covered him, its ribs heavy so it would not blow away. Some envied him for living such a flamboyant lifestyle - was he so attuned to Heaven's will that he could keep his head up above the ocean of mundane affairs? Others accused him of being a cheat and a fraud, questioning if he really knew his own destiny. \n'Of course. How could I not know?' He would reply with a smile. \nAn umbrella only protects one from the rain, but not against concealed weapons like arrows or darts. His umbrella torn, he has no choice but to pack his bags and find another town where he could mend his umbrella. Numerous are the days of dark wind and rain, and he gradually feels that he had nowhere to go. All he knows is that the endpoint of his life will still be at that martial arts hall. He needs not walk the path that follows afterwards, but he knows not how to traverse the path leading there. The inch of ground beneath his umbrella is hardly enough for him to settle down, for it is no solid roof. \nBut it is then that he meets a strange group of people. Later, he learns another saying from those people. If translated into mandarin Yanese, it would be 'Heaven's mandate lies in man.' \n––The above is what Operator Mr. Nothing told you personally. Rhodes Island is currently running from a small-scale Catastrophe in the making at full speed, but Mr. Nothing is lying on a chair without a worry in the world, his umbrella tied and tucked away at his side. Through the porthole, you can see the sun behind the Originium rain. \n'The sky clears after the rain passes. The Heavens have eyes, and gaze down upon us. Say, Doctor, would you care for a pair of sunglasses?'"
+      "desc": "When he left Lien’s, it had been raining for several days and nights in Kou-wu City. The fallen sycamore leaves densely covered the ground, burying the smell of fish beneath the soil. He bolted the gate of the kung fu hall from the inside, and in the dead of night, took a copper rod from the weapon rack used for emergencies, climbed the wall, and left the courtyard. \nNot long afterwards, a town near Kou-wu City found itself one sunglass-sporting fortune-teller extra. On sunny days, he would set up his stall at intersections, and on rainy days with few pedestrians, he would take his umbrella and go fishing by the river outside town. The umbrella perfectly covered him, its ribs heavy so it would not blow away. Some envied him for living such a flamboyant lifestyle - was he so attuned to Heaven's will that he could keep his head up above the ocean of mundane affairs? Others accused him of being a cheat and a fraud, questioning if he really knew his own destiny. \n'Of course. How could I not know?' He would reply with a smile. \nAn umbrella only protects one from the rain, but not against concealed weapons like arrows or darts. His umbrella torn, he has no choice but to pack his bags and find another town where he could mend his umbrella. Numerous are the days of dark wind and rain, and he gradually feels that he had nowhere to go. All he knows is that the endpoint of his life will still be at that martial arts hall. He needs not walk the path that follows afterwards, but he knows not how to traverse the path leading there. The inch of ground beneath his umbrella is hardly enough for him to settle down, for it is no solid roof. \nBut it is then that he meets a strange group of people. Later, he learns another saying from those people. If translated into mandarin Yanese, it would be 'Heaven's mandate lies in man.' \n––The above is what Operator Mr. Nothing told you personally. Rhodes Island is currently running from a small-scale Catastrophe in the making at full speed, but Mr. Nothing is lying on a chair without a worry in the world, his umbrella tied and tucked away at his side. Through the porthole, you can see the sun behind the Originium rain. \n'The sky clears after the rain passes. The Heavens have eyes, and gaze down upon us. Say, Doctor, would you care for a pair of sunglasses?'",
+      "typeIcon": "mer-x",
+      "uniEquipIcon": "uniequip_002_nothin",
+      "typeName1": "MER",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_nothin_1",
+        "uniequip_002_nothin_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Has <@ba.kw>reduced</> Redeployment Time, but <@ba.kw>DP Cost</> is not refunded upon retreating; While deployed, <@ba.kw>2 DP</> are consumed every 3 seconds (automatically retreats without sufficient DP)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Has <@ba.kw>reduced</> Redeployment Time, but <@ba.kw>DP Cost</> is not refunded upon retreating; While deployed, <@ba.kw>2 DP</> are consumed every 3 seconds (automatically retreats without sufficient DP)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After not attacking for 4 seconds, increase the ATK of the next attack to 165% and <$ba.stun>Stun</> the target for 5 seconds",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Unexpected Strike",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After not attacking for 4 seconds, increase the ATK of the next attack to 170% <@ba.talpu>(+5%)</> and <$ba.stun>Stun</> the target for 5 seconds",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Unexpected Strike",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Has <@ba.kw>reduced</> Redeployment Time, but <@ba.kw>DP Cost</> is not refunded upon retreating; While deployed, <@ba.kw>2 DP</> are consumed every 3 seconds (automatically retreats without sufficient DP)",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After not attacking for 3 seconds, increase the ATK of the next attack to 175% and <$ba.stun>Stun</> the target for 5 seconds",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Unexpected Strike",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After not attacking for 3 seconds, increase the ATK of the next attack to 180% <@ba.talpu>(+5%)</> and <$ba.stun>Stun</> the target for 5 seconds",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Unexpected Strike",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1108,5 +1719,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

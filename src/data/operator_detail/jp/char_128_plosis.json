@@ -125,6 +125,7 @@
       "cost": 17
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_128_plosis#1",
@@ -602,16 +603,577 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+21",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 21,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 55,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "スキルブースト",
+          "description": "配置中、味方全員のSPの自動回復速度＋0.15sp/秒（同種の効果は高いほうのみ適用）",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "スキルブースト",
+          "description": "配置中、味方全員のSPの自動回復速度＋0.3sp/秒（同種の効果は高いほうのみ適用）",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_plosis",
       "moduleName": "フィリオプシスの記章",
-      "desc": "フィリオプシスは同時に複数のオペレーターを治療することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、群癒師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "フィリオプシスは同時に複数のオペレーターを治療することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、群癒師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_plosis",
       "moduleName": "医療環境分析装置",
-      "desc": "「もし源石に本当に情報を蓄積する機構が備わっており、さらに我々がそれをデコードし言語化できるようになれば、クルビアの科学技術は飛躍的な発展を遂げることだろう！」\n「大きな壁に突き当たった。現状の電子計算設備では、源石が宿す膨大で乱雑な情報をさばききれない。より適した計算媒体がなければ……」\n「人間に計算させるだと！？確かに大胆な考えだが、現実的か否か……検討させてくれ。」\n「人間を計算媒体とするデコーダーのプロトタイプが完成した。あとは人選だ。頭脳明晰かつ機敏に反応できる者を実験対象としたい。その中でもコンピューターやデータの扱いに長けた者が適任だ。」\n「人選が決まった。コードネーム：フィリオプシス。」\n「ライン生命を見渡しても、彼女以上の適任はいないだろう。実験に伴うリスクを彼女に伝える必要はない、と上からは言われているが、彼女にはその全てをありのままに伝えた。クルビア人として、一人の人間としての最低限のモラルだ。」\n「彼女の同意が得られた！彼女なら受けてくれると思っていた！見込み違いではなかったのだ！」\n「実験前期の注意点と操作マニュアルの把握が完了した。さすがの物覚えの良さだ。さて、いよいよ明日、実験開始だ。クルビアの未来をこの手に掴むときが来たのだ！」\n「実験は順調だ。全数値共に安定して制御範囲内にあり、このペースで少しずつ、少しずつ……なっ！なんだこれは！早く切断――」\n「セーフティ機能がすぐに作動したが、彼女はすでに……損傷を受けて、脳が……」\n「それだけではない。源石感染まで……」\n「（途切れ途切れに響くすすり泣き）」\n「上が寄越した人員が応急措置を行っている。だが、これでは……」\n「私のせいだ、全て私のせいだ……」\n「彼女が事故発生までに受け取った情報を元に、人体埋め込み式のチップを制作した。これが彼女の脳の一部機能を肩代わりしてくれるはずだ。」\n「部門責任者たちはこの提案を大いに称えた。奴らが何を考えているかなど丸わかりだ。」\n「チップ埋め込みの手術は成功した。しかし彼女は一切の反応示さない。」\n「彼女が目覚めた！だが言語中枢に……問題が生じているようだ。」\n「脳内に声が――既知の言語からは逸脱した声が響き、精神に大きな負担を掛けている。」\n「そして、機械的な言語ロジックを用いることでしか、その苦痛を軽減できないと彼女は語った。」\n「彼女はクルビア初の、チップを埋め込まれて生き延びた人間だ。これは偉業とさえ言えるだろう。」\n「だが、彼女の目に映るこの大地は、どうやら前とは全く異なるものとなったらしい。」\n「私も脳にチップを埋め込むことにした。傷口はまだ痛むが、それでも知りたいのだ。源石が宿す情報が、いったい彼女にどのような変化をもたらしたのかを。」\n「そして、彼女が聞いた声の正体を。」\n「私は必ず、実験を再現してみせる。」\n――ライン生命、*未知*プロジェクト責任者生前の録音より"
+      "desc": "「もし源石に本当に情報を蓄積する機構が備わっており、さらに我々がそれをデコードし言語化できるようになれば、クルビアの科学技術は飛躍的な発展を遂げることだろう！」\n「大きな壁に突き当たった。現状の電子計算設備では、源石が宿す膨大で乱雑な情報をさばききれない。より適した計算媒体がなければ……」\n「人間に計算させるだと！？確かに大胆な考えだが、現実的か否か……検討させてくれ。」\n「人間を計算媒体とするデコーダーのプロトタイプが完成した。あとは人選だ。頭脳明晰かつ機敏に反応できる者を実験対象としたい。その中でもコンピューターやデータの扱いに長けた者が適任だ。」\n「人選が決まった。コードネーム：フィリオプシス。」\n「ライン生命を見渡しても、彼女以上の適任はいないだろう。実験に伴うリスクを彼女に伝える必要はない、と上からは言われているが、彼女にはその全てをありのままに伝えた。クルビア人として、一人の人間としての最低限のモラルだ。」\n「彼女の同意が得られた！彼女なら受けてくれると思っていた！見込み違いではなかったのだ！」\n「実験前期の注意点と操作マニュアルの把握が完了した。さすがの物覚えの良さだ。さて、いよいよ明日、実験開始だ。クルビアの未来をこの手に掴むときが来たのだ！」\n「実験は順調だ。全数値共に安定して制御範囲内にあり、このペースで少しずつ、少しずつ……なっ！なんだこれは！早く切断――」\n「セーフティ機能がすぐに作動したが、彼女はすでに……損傷を受けて、脳が……」\n「それだけではない。源石感染まで……」\n「（途切れ途切れに響くすすり泣き）」\n「上が寄越した人員が応急措置を行っている。だが、これでは……」\n「私のせいだ、全て私のせいだ……」\n「彼女が事故発生までに受け取った情報を元に、人体埋め込み式のチップを制作した。これが彼女の脳の一部機能を肩代わりしてくれるはずだ。」\n「部門責任者たちはこの提案を大いに称えた。奴らが何を考えているかなど丸わかりだ。」\n「チップ埋め込みの手術は成功した。しかし彼女は一切の反応示さない。」\n「彼女が目覚めた！だが言語中枢に……問題が生じているようだ。」\n「脳内に声が――既知の言語からは逸脱した声が響き、精神に大きな負担を掛けている。」\n「そして、機械的な言語ロジックを用いることでしか、その苦痛を軽減できないと彼女は語った。」\n「彼女はクルビア初の、チップを埋め込まれて生き延びた人間だ。これは偉業とさえ言えるだろう。」\n「だが、彼女の目に映るこの大地は、どうやら前とは全く異なるものとなったらしい。」\n「私も脳にチップを埋め込むことにした。傷口はまだ痛むが、それでも知りたいのだ。源石が宿す情報が、いったい彼女にどのような変化をもたらしたのかを。」\n「そして、彼女が聞いた声の正体を。」\n「私は必ず、実験を再現してみせる。」\n――ライン生命、*未知*プロジェクト責任者生前の録音より",
+      "typeIcon": "rin-x",
+      "uniEquipIcon": "uniequip_002_plosis",
+      "typeName1": "RIN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_001_plosis_11",
+        "uniequip_002_plosis_12"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲<@ba.kw>拡大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲<@ba.kw>拡大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方全員のSPの自動回復速度+0.3sp/秒、攻撃範囲内の味方に対するの効果値が+0.33sp/秒になる（同種の効果は高いほうのみ適用）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "スキルブースト",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.33,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲<@ba.kw>拡大</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": true,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "y-3",
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方全員のSPの自動回復速度+0.3sp/秒、攻撃範囲内の味方に対するの効果値が+0.35sp/秒になる（同種の効果は高いほうのみ適用）",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "11",
+                  "name": "スキルブースト",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.35,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1065,5 +1627,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

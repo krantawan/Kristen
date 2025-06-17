@@ -150,6 +150,92 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 4,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.2,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "弾が装填されている状態でのみ攻撃でき、攻撃力が<@ba.kw>{atk_scale:0%}</>に上昇する。攻撃をしていない時は弾の装填を行う（最大装弾数：{value}。昇進1で装弾数上昇）",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 6,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.2,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "弾が装填されている状態でのみ攻撃でき、攻撃力が<@ba.kw>{atk_scale:0%}</>に上昇する。攻撃をしていない時は弾の装填を行う（最大装弾数：{value}。昇進2で装弾数上昇）",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "value",
+            "value": 8,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.2,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "弾が装填されている状態でのみ攻撃でき、攻撃力が<@ba.kw>{atk_scale:0%}</>に上昇する。攻撃をしていない時は弾の装填を行う（最大装弾数：{value}）",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4117_ray#1",
@@ -719,16 +805,607 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+37",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 37,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 120,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "巡回のおとも",
+          "description": "攻撃範囲内に「サンドビースト」を1体配置可能。サンドビーストを配置後、15秒間その周囲8マスを自身の追加攻撃範囲と見なす。自身は該当範囲内の敵を優先して攻撃するようになり、対象への物理の与ダメージ+10%",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 0.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10034_ray_sndbst",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "巡回のおとも",
+          "description": "攻撃範囲内に「サンドビースト」を1体配置可能。サンドビーストを配置後、25秒間その周囲8マスを自身の追加攻撃範囲と見なす。自身は該当範囲内の敵を優先して攻撃するようになり、対象への物理の与ダメージ+15%",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10034_ray_sndbst",
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "一意専心",
+          "description": "同じ敵を攻撃する度攻撃力+8%、最大3回まで",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "一意専心",
+          "description": "同じ敵を攻撃する度攻撃力+9%<@ba.talpu>（+1%）</>、最大3回まで",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.09,
+              "valueStr": null
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_ray",
       "moduleName": "レイの記章",
-      "desc": "レイは火力をためて敵を撃ち抜くのに秀でている。 \n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、狩人の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "レイは火力をためて敵を撃ち抜くのに秀でている。 \n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、狩人の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_ray",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_ray",
       "moduleName": "「月光と踊る」",
-      "desc": "人事部事件記録RF-099-47 \n【一日目】 \n本日午前、オペレーター・レイが行方不明になっていることが明らかになった。彼女は離艦に際して事前にいかなる形の申請も出しておらず、我々は外勤部と共に合同調査を開始した。 \n【二日目】 \n外勤部が捜索を取りまとめ、我々もここ数日のレイの動きを調査している。どうやら彼女は失踪前夜、珍しく、オペレーターが主催するダンスパーティーに参加していたらしい。そこで我々は、レイの友人である工房の職人見習い、アランナに詳しく話を聞いてみた。 \n「あいつがパーティーに参加するなんて驚きだよ！ま、あんな絞り出しクッキーみたいな前髪をしてるやつなんてそうそういないから、それで確信したんだけどさ。」 \n「そうなんですね。彼女は何をしていましたか？」 \n「そうだな……隅っこでじっと座ってたかな。これに関しちゃいつものあいつらしいが。」 \n「誰かと会ったり話したりなどは？」 \n「確か杖をついた婆さんと一緒に座ってたような……」 \n「何かやり取りはありましたか？」 \n「いや？特に何も。ずっとだんまりだったぜ。あの一角だけダンスパーティーっていうか、サウナみたいな雰囲気になってたな。」 \n【三日目】 \nレイと一緒にいた老婦人が、定年退職した後方支援部の元オペレーターであり、現在は患者としてロドスで治療を受けている人物だと判明した。彼女に話を聞いたところ、ダンスパーティーに出席した理由を聞くことができた。 \n彼女は若い頃ダンス教師だったのだが、鉱石病のせいでその道を諦めざるを得なくなったという。さらに、今では左足の結晶化が深刻で、杖がなければ歩けなくなってしまったそうだ。 \n「ただ、若い人たちが踊っているのを見たくて行ってみただけなのよ。」――と、彼女は言っていた。 \n【四日目】 \n一日の努力虚しく調査が空振りに終わり、引き上げようとしていたその時、捜索隊が二つの青い影を発見した。戦闘態勢を整えた外勤オペレーターたちはアーツで入念に確認したのち、その警戒を解いた。捜索目標であるレイを発見したのだ。 \n彼女の傍らには荒野に住む駄獣がいた。厚い皮に刻まれたしわに青くおぼろげな光を揺らめかせ、その駄獣は荒い息遣いで踊るように巨大な身体をくねらせていた。一方、同じように青くおぼろげな光をまとったレイはただじっとしたまま、珍しく子供のように笑っていた。 \n【補足情報】 \nのちにレイは、「青くおぼろげなベンチ光」が蛍殻オリジムシの粉状のフェロモンから発されていたことを知った。これが皮膚に触れてしまうと、耐え難いほどのかゆみを与える。駄獣が「踊って」いたのはこのせいだったのだ。しかし、レイ自身は何ともなかったというのは……彼女の生理的耐性の測定結果が「優秀」なのは伊達ではないとでも評しておこう。 \n「それで、どうして急に船を離れたんですか？」 \n「クルビアの荒野に住んでる、大きな駄獣を見つけたくて。月の歩みと一緒に踊るところを、また見られたらいいなって。」 \n「ええと……それは、先日のダンスパーティーと何か関係が？ご老人と一緒に座っていたそうですが、そこに理由があるんでしょうか？」 \n「うん。あの人の目を見たから。踊りたいって目をしてた。それでふと思いついたの。駄獣を踊らせに行こうって。」 \n「……えっ？」 \n「ええと。」 \n「では、その方にはもう会いましたか？今回の経験をお話ししてみては？」 \n「会ってない……けど、話してもいいかも。よかったら……うちの代わりに、話してあげてくれる？」"
+      "desc": "人事部事件記録RF-099-47 \n【一日目】 \n本日午前、オペレーター・レイが行方不明になっていることが明らかになった。彼女は離艦に際して事前にいかなる形の申請も出しておらず、我々は外勤部と共に合同調査を開始した。 \n【二日目】 \n外勤部が捜索を取りまとめ、我々もここ数日のレイの動きを調査している。どうやら彼女は失踪前夜、珍しく、オペレーターが主催するダンスパーティーに参加していたらしい。そこで我々は、レイの友人である工房の職人見習い、アランナに詳しく話を聞いてみた。 \n「あいつがパーティーに参加するなんて驚きだよ！ま、あんな絞り出しクッキーみたいな前髪をしてるやつなんてそうそういないから、それで確信したんだけどさ。」 \n「そうなんですね。彼女は何をしていましたか？」 \n「そうだな……隅っこでじっと座ってたかな。これに関しちゃいつものあいつらしいが。」 \n「誰かと会ったり話したりなどは？」 \n「確か杖をついた婆さんと一緒に座ってたような……」 \n「何かやり取りはありましたか？」 \n「いや？特に何も。ずっとだんまりだったぜ。あの一角だけダンスパーティーっていうか、サウナみたいな雰囲気になってたな。」 \n【三日目】 \nレイと一緒にいた老婦人が、定年退職した後方支援部の元オペレーターであり、現在は患者としてロドスで治療を受けている人物だと判明した。彼女に話を聞いたところ、ダンスパーティーに出席した理由を聞くことができた。 \n彼女は若い頃ダンス教師だったのだが、鉱石病のせいでその道を諦めざるを得なくなったという。さらに、今では左足の結晶化が深刻で、杖がなければ歩けなくなってしまったそうだ。 \n「ただ、若い人たちが踊っているのを見たくて行ってみただけなのよ。」――と、彼女は言っていた。 \n【四日目】 \n一日の努力虚しく調査が空振りに終わり、引き上げようとしていたその時、捜索隊が二つの青い影を発見した。戦闘態勢を整えた外勤オペレーターたちはアーツで入念に確認したのち、その警戒を解いた。捜索目標であるレイを発見したのだ。 \n彼女の傍らには荒野に住む駄獣がいた。厚い皮に刻まれたしわに青くおぼろげな光を揺らめかせ、その駄獣は荒い息遣いで踊るように巨大な身体をくねらせていた。一方、同じように青くおぼろげな光をまとったレイはただじっとしたまま、珍しく子供のように笑っていた。 \n【補足情報】 \nのちにレイは、「青くおぼろげなベンチ光」が蛍殻オリジムシの粉状のフェロモンから発されていたことを知った。これが皮膚に触れてしまうと、耐え難いほどのかゆみを与える。駄獣が「踊って」いたのはこのせいだったのだ。しかし、レイ自身は何ともなかったというのは……彼女の生理的耐性の測定結果が「優秀」なのは伊達ではないとでも評しておこう。 \n「それで、どうして急に船を離れたんですか？」 \n「クルビアの荒野に住んでる、大きな駄獣を見つけたくて。月の歩みと一緒に踊るところを、また見られたらいいなって。」 \n「ええと……それは、先日のダンスパーティーと何か関係が？ご老人と一緒に座っていたそうですが、そこに理由があるんでしょうか？」 \n「うん。あの人の目を見たから。踊りたいって目をしてた。それでふと思いついたの。駄獣を踊らせに行こうって。」 \n「……えっ？」 \n「ええと。」 \n「では、その方にはもう会いましたか？今回の経験をお話ししてみては？」 \n「会ってない……けど、話してもいいかも。よかったら……うちの代わりに、話してあげてくれる？」",
+      "typeIcon": "hun-x",
+      "uniEquipIcon": "uniequip_002_ray",
+      "typeName1": "HUN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_ray_1",
+        "uniequip_002_ray_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "弾を撃ち切った後、次弾装填時の装弾数+1",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10034_ray_sndbst": [
+              {
+                "key": "respawn_time",
+                "value": -5,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "弾を撃ち切った後、次弾装填時の装弾数+1",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内に「サンドビースト」を1体配置可能。サンドビーストを配置後、25秒間その周囲8マスを自身の追加攻撃範囲と見なす。自身は該当範囲内の敵を優先して攻撃するようになり、対象への物理の与ダメージ+18%、サンドビーストの再配置時間-5秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "巡回のおとも",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10034_ray_sndbst",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {
+            "token_10034_ray_sndbst": [
+              {
+                "key": "respawn_time",
+                "value": -10,
+                "valueStr": null
+              }
+            ]
+          },
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "弾を撃ち切った後、次弾装填時の装弾数+1",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内に「サンドビースト」を1体配置可能。サンドビーストを配置後、25秒間その周囲8マスを自身の追加攻撃範囲と見なす。自身は該当範囲内の敵を優先して攻撃するようになり、対象への物理の与ダメージ+20%、サンドビーストの再配置時間-10秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "巡回のおとも",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10034_ray_sndbst",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1189,6 +1866,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10034_ray_sndbst"
   ],
   "patch_info": {}
 }

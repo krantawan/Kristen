@@ -169,6 +169,36 @@
       "cost": 25
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "def",
+            "value": 2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "magic_resistance",
+            "value": 20,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_388_mint#1",
@@ -666,16 +696,722 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 15,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "地质学者",
+          "description": "技能未开启时，周围四格友方单位的防御力+5%",
+          "blackboard": [
+            {
+              "key": "def",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0,
+              "valueStr": null
+            },
+            {
+              "key": "taunt_level",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "地质学者",
+          "description": "技能未开启时，周围四格友方单位的防御力+7%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "def",
+              "value": 0.07,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0,
+              "valueStr": null
+            },
+            {
+              "key": "taunt_level",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "地质学者",
+          "description": "技能未开启时，周围四格友方单位的防御力+10%；技能开启时，自身不容易受到敌人攻击",
+          "blackboard": [
+            {
+              "key": "def",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0,
+              "valueStr": null
+            },
+            {
+              "key": "taunt_level",
+              "value": -1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "地质学者",
+          "description": "技能未开启时，周围四格友方单位的防御力+12%<@ba.talpu>（+2%）</>；技能开启时，自身不容易受到敌人攻击",
+          "blackboard": [
+            {
+              "key": "def",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0,
+              "valueStr": null
+            },
+            {
+              "key": "taunt_level",
+              "value": -1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mint",
       "moduleName": "薄绿证章",
-      "desc": "干员薄绿擅长适时造成大规模法术杀伤\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使阵法术师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员薄绿擅长适时造成大规模法术杀伤\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使阵法术师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_mint",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mint",
       "moduleName": "注意力保持装置",
-      "desc": "薄绿在第四十二次走丢之后，决定按其他干员所说，训练自己集中注意力。\n从旧货市场淘来大量工具后，训练开始了。\n-节拍器。店家说这是莱塔尼亚人在初学乐器时会用的小工具，用以辅助把握节拍，不过《提升专注力的一百种方法》上说，有规律的声音有助于集中注意力，让人跟随节奏规划自己脑中的思考，捋清逻辑。“滴、答、滴、答、滴、答、小石头、小树枝、外边有、很多的、亮闪闪、很喜欢、想看看、那就去......”\n-音疗钵。“在温柔绵长的纯净音疗中，感受宁静，专注自我。”“咚——”这个声音......和初雪小姐的铃音一样，让人感到安静......不知道这个东西是不是也来自谢拉格？我记得谢拉格有座圣山，崖心小姐讲过很多那里的情况，迟早有一天我也要去看看，肯定能收获很多地质知识！黑流树海也在待去名单上，我要不要先去咨询一下石棉小姐？她那个门板看起来很厉害......\n-注意力训练卡片。这个是天火学姐听说我要开始注意力训练送的礼物。“适合3-5岁孩童使用，注意防止孩童误食”，天火学姐为什么给我买这个？\n-咬人书绑带。这个和注意力训练无关，刚刚看到它在桌子上，也一起收在这里好了，嘿嘿。\n-小石头。嵯峨告诉我，集中于眼下的一件事、一个物品，哪怕只是对着一块平平无奇的小石头，也能静下心来，思考本原真意。她带着我打坐冥想，集中注意力，可是后来......纳豆拌饭真的太好吃了。\n第四十三次走丢。注意力训练宣告失败，感受记录也停在了这里。最后一项物品记录是灭火器。\n-灭火器。扑灭了天火学姐发火导致的燃烧，好像......好像比其他工具更能解决注意力不集中带来的最可怕的后果......\n呜......但还是要好好道歉才行......"
+      "desc": "薄绿在第四十二次走丢之后，决定按其他干员所说，训练自己集中注意力。\n从旧货市场淘来大量工具后，训练开始了。\n-节拍器。店家说这是莱塔尼亚人在初学乐器时会用的小工具，用以辅助把握节拍，不过《提升专注力的一百种方法》上说，有规律的声音有助于集中注意力，让人跟随节奏规划自己脑中的思考，捋清逻辑。“滴、答、滴、答、滴、答、小石头、小树枝、外边有、很多的、亮闪闪、很喜欢、想看看、那就去......”\n-音疗钵。“在温柔绵长的纯净音疗中，感受宁静，专注自我。”“咚——”这个声音......和初雪小姐的铃音一样，让人感到安静......不知道这个东西是不是也来自谢拉格？我记得谢拉格有座圣山，崖心小姐讲过很多那里的情况，迟早有一天我也要去看看，肯定能收获很多地质知识！黑流树海也在待去名单上，我要不要先去咨询一下石棉小姐？她那个门板看起来很厉害......\n-注意力训练卡片。这个是天火学姐听说我要开始注意力训练送的礼物。“适合3-5岁孩童使用，注意防止孩童误食”，天火学姐为什么给我买这个？\n-咬人书绑带。这个和注意力训练无关，刚刚看到它在桌子上，也一起收在这里好了，嘿嘿。\n-小石头。嵯峨告诉我，集中于眼下的一件事、一个物品，哪怕只是对着一块平平无奇的小石头，也能静下心来，思考本原真意。她带着我打坐冥想，集中注意力，可是后来......纳豆拌饭真的太好吃了。\n第四十三次走丢。注意力训练宣告失败，感受记录也停在了这里。最后一项物品记录是灭火器。\n-灭火器。扑灭了天火学姐发火导致的燃烧，好像......好像比其他工具更能解决注意力不集中带来的最可怕的后果......\n呜......但还是要好好道歉才行......",
+      "typeIcon": "plx-x",
+      "uniEquipIcon": "uniequip_002_mint",
+      "typeName1": "PLX",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_mint_1",
+        "uniequip_002_mint_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常时<@ba.kw>不攻击</>且防御力和法术抗性更大幅度<@ba.kw>提升</>，技能开启时保留部分效果且攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 47,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常时<@ba.kw>不攻击</>且防御力和法术抗性更大幅度<@ba.kw>提升</>，技能开启时保留部分效果且攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能未开启时，周围四格友方单位的防御力+18%；技能开启时，自身不容易受到敌人攻击",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "地质学者",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能未开启时，周围四格友方单位的防御力+20%<@ba.talpu>（+2%）</>；技能开启时，自身不容易受到敌人攻击",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "地质学者",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 52,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "soil_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常时<@ba.kw>不攻击</>且防御力和法术抗性更大幅度<@ba.kw>提升</>，技能开启时保留部分效果且攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能未开启时，周围四格友方单位的防御力+21%；技能开启时，自身不容易受到敌人攻击",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "地质学者",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能未开启时，周围四格友方单位的防御力+23%<@ba.talpu>（+2%）</>；技能开启时，自身不容易受到敌人攻击",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "地质学者",
+                  "description": null,
+                  "rangeId": "x-5",
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "taunt_level",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1137,5 +1873,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

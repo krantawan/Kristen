@@ -150,6 +150,28 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "ep_heal_ratio",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4114_harold#1",
@@ -601,16 +623,578 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 35,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "我即ち兵営なり",
+          "description": "攻撃範囲内にいる元素損傷蓄積値が上限値の50％を超える味方は、受ける<$ba.dt.element>元素損傷</>-12%",
+          "blackboard": [
+            {
+              "key": "ep_damage_resistance",
+              "value": 0.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "我即ち兵営なり",
+          "description": "攻撃範囲内にいる元素損傷蓄積値が上限値の50％を超える味方は、受ける<$ba.dt.element>元素損傷</>-15%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "ep_damage_resistance",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "我即ち兵営なり",
+          "description": "攻撃範囲内にいる元素損傷蓄積値が上限値の50％を超える味方は、受ける<$ba.dt.element>元素損傷</>-15%",
+          "blackboard": [
+            {
+              "key": "ep_damage_resistance",
+              "value": 0.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "我即ち兵営なり",
+          "description": "攻撃範囲内にいる元素損傷蓄積値が上限値の50％を超える味方は、受ける<$ba.dt.element>元素損傷</>-18%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "ep_damage_resistance",
+              "value": 0.18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_harold",
       "moduleName": "ハロルドの記章",
-      "desc": "ハロルドは広範囲の治療を行うと同時に、\nオペレーターの元素損傷を回復させることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、放浪医の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ハロルドは広範囲の治療を行うと同時に、\nオペレーターの元素損傷を回復させることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、放浪医の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_harold",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_harold",
       "moduleName": "足ケアセット",
-      "desc": "リスバーンへ \n送ってくれたレッグケアセットを受け取ったぞ。効果はなかなかだ。おかげで、もうマトモな足が一本しか残されていないこの老いぼれも、冷え込む時でもそれほどつらい思いはせずに済みそうだ。ところで、これはフレイヤの兄が新しく開いた製薬工場で作ったものらしいな。それを聞いて驚いたよ。私がイェラグで任務に当たっていた時には、彼はまだ地元で名の知れた貧乏青年だったじゃないか！どうやら、ここ数年でヴィクトリア人に薬を売ってがっぽり稼いだようだな。まさか工場まで開くとは。 \n一つ気になったのは、このスプレーの配合だ。よく確かめてみたんだが、これは当時私が駄獣の骨接ぎに使っていた処方をベースにしていないか？そこにイェラグ産の薬草を数種類加えるだけでこれほどの効果をもたらすとは、確かにお前たちにはイェラガンドのご加護があるらしい。 \nそれで、お前とフレイヤはどうしてる？レンタル駄獣屋は順調か？前々回は、銀心湖のほとりに家を建てるなんて言ってたが、写真の一枚も送ってくれないのはどういうわけだ？こっちは、そのうちイェラグに行った時にはお前の家に泊めてもらおうと目論んでいるのに。そういえば以前、シルバーアッシュ家のご当主にお前とフレイヤのことを話したが、幸い基本的にはお前たちの結婚に反対していないとのことだ。彼女との生活を楽しめよ、兄弟。 \n\"それにしても、イェラグ人との結婚がどんな体験かは想像もつかないな。結婚に至るまではどう進めるんだ？興味本位で聞いて悪いが、新郎新婦はやっぱり銀心湖やアングザール殿へ行って、イェラガンド像の前で儀式をするのか？新郎新婦の両親の立ち合いは必要になるのか？ \nまあ、何はともあれ結婚おめでとう。この先、お前たちのところでケガをした駄獣が出た時は、その足の骨を接いでやれるチャンスが私にあるよう願っているよ。\" \n結局、我々のような戦争で不運に見舞われた人間は、他に助けてくれる人間もいない以上、お互い頼り合って「骨を接いで」歩いて行かねばならん。私は貴族ではあるが、豪奢な帽子を被った不運な老いぼれでしかない。折れた駄獣の骨を接ぐ技術こそあるが、自分のダメになった足の骨までは接げはしない。ましてや、お前たち全員となればそこまでの余力もない。それでも、足を失くした哀れな老いぼれが、我が「同類」に憐憫の情を抱くことを許してほしいのだが――製薬工場のツテを頼りに、調べてもらえないだろうか？あとどれだけのヴィクトリア兵が、「骨を接いで」もらわねば歩けない状況にあるのかを。 \n近い将来、誰もが健康な両足を持てるよう願っている。 \nハロルド"
+      "desc": "リスバーンへ \n送ってくれたレッグケアセットを受け取ったぞ。効果はなかなかだ。おかげで、もうマトモな足が一本しか残されていないこの老いぼれも、冷え込む時でもそれほどつらい思いはせずに済みそうだ。ところで、これはフレイヤの兄が新しく開いた製薬工場で作ったものらしいな。それを聞いて驚いたよ。私がイェラグで任務に当たっていた時には、彼はまだ地元で名の知れた貧乏青年だったじゃないか！どうやら、ここ数年でヴィクトリア人に薬を売ってがっぽり稼いだようだな。まさか工場まで開くとは。 \n一つ気になったのは、このスプレーの配合だ。よく確かめてみたんだが、これは当時私が駄獣の骨接ぎに使っていた処方をベースにしていないか？そこにイェラグ産の薬草を数種類加えるだけでこれほどの効果をもたらすとは、確かにお前たちにはイェラガンドのご加護があるらしい。 \nそれで、お前とフレイヤはどうしてる？レンタル駄獣屋は順調か？前々回は、銀心湖のほとりに家を建てるなんて言ってたが、写真の一枚も送ってくれないのはどういうわけだ？こっちは、そのうちイェラグに行った時にはお前の家に泊めてもらおうと目論んでいるのに。そういえば以前、シルバーアッシュ家のご当主にお前とフレイヤのことを話したが、幸い基本的にはお前たちの結婚に反対していないとのことだ。彼女との生活を楽しめよ、兄弟。 \n\"それにしても、イェラグ人との結婚がどんな体験かは想像もつかないな。結婚に至るまではどう進めるんだ？興味本位で聞いて悪いが、新郎新婦はやっぱり銀心湖やアングザール殿へ行って、イェラガンド像の前で儀式をするのか？新郎新婦の両親の立ち合いは必要になるのか？ \nまあ、何はともあれ結婚おめでとう。この先、お前たちのところでケガをした駄獣が出た時は、その足の骨を接いでやれるチャンスが私にあるよう願っているよ。\" \n結局、我々のような戦争で不運に見舞われた人間は、他に助けてくれる人間もいない以上、お互い頼り合って「骨を接いで」歩いて行かねばならん。私は貴族ではあるが、豪奢な帽子を被った不運な老いぼれでしかない。折れた駄獣の骨を接ぐ技術こそあるが、自分のダメになった足の骨までは接げはしない。ましてや、お前たち全員となればそこまでの余力もない。それでも、足を失くした哀れな老いぼれが、我が「同類」に憐憫の情を抱くことを許してほしいのだが――製薬工場のツテを頼りに、調べてもらえないだろうか？あとどれだけのヴィクトリア兵が、「骨を接いで」もらわねば歩けない状況にあるのかを。 \n近い将来、誰もが健康な両足を持てるよう願っている。 \nハロルド",
+      "typeIcon": "wdm-x",
+      "uniEquipIcon": "uniequip_002_harold",
+      "typeName1": "WDM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_harold_1",
+        "uniequip_002_harold_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 27,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内にいる元素損傷蓄積値が上限値の50%を超える味方は、受ける<$ba.dt.element>元素損傷</>-20%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "我即ち兵営なり",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内にいる元素損傷蓄積値が上限値の50%を超える味方は、受ける<$ba.dt.element>元素損傷</>-23%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "我即ち兵営なり",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内にいる元素損傷蓄積値が上限値の50%を超える味方は、受ける<$ba.dt.element>元素損傷</>-23%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "我即ち兵営なり",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内にいる元素損傷蓄積値が上限値の50%を超える味方は、受ける<$ba.dt.element>元素損傷</>-26%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "我即ち兵営なり",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_resistance",
+                      "value": 0.26,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1064,5 +1648,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

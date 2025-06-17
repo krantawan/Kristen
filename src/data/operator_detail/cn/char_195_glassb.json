@@ -154,6 +154,28 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "sluggish",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_195_glassb#1",
@@ -632,16 +654,594 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 65,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "探知者",
+          "description": "防御力-35%，但攻击速度+18",
+          "blackboard": [
+            {
+              "key": "def",
+              "value": -0.35,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "探知者",
+          "description": "防御力-35%，但攻击速度+21<@ba.talpu>（+3）</>",
+          "blackboard": [
+            {
+              "key": "def",
+              "value": -0.35,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 21,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_glassb",
       "moduleName": "真理证章",
-      "desc": "干员真理擅长牵制敌人\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使凝滞师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员真理擅长牵制敌人\n根据外勤部门决议\n在外勤任务中划分为辅助干员，行使凝滞师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_glassb",
       "moduleName": "读书笔记",
-      "desc": "低筋粉 180克；瘤奶 120克；糖粉 90克；莓干 60克；羽兽卵液 22克；盐 1克\n虽然是最基础的饼干，但是古米很喜欢吃。\n瘤奶放至室温加入糖粉，拌匀后加入羽兽卵液。莓干需要切成小片，整颗莓干口感略酸。低筋粉过筛加入，揉匀后修整成切面长宽均4厘米左右的长块。\n备注：若给索尼娅需要做更大些。娜塔莉娅喜欢吃多加些盐的。罗莎琳的要淋上蜂蜜。\n放入冰箱冷冻1小时，取出切片，放入预热170度的烤箱20分钟即可完成。\n......\n原来是这样......我竟然一直以为这位上司就是最后的幕后黑手！现在再回翻以前的描述，他确实做了很多他原本不会做的事。如此明显地放过打探消息的主角、在大会上那样真心地宣誓，还有他与他夫人竟是真心相爱，而不是政治联姻......他竟然以自杀作为开端......\n虽然有作者故意设计出的叙述诡计的影响，但我确实因为一种先入为主的无意识忽略了很多不寻常的细节。\n人们或许真的会在某种特定的环境下被各方信息所影响，忽视掉一些原本很明显的信息。\n我确实忽视过很多。\n这也是我在以后需要时常反思的地方。\n......\n在罗德岛这些日子，我向博士借阅了许多书籍。作为一名学生，我确实经历了大多数同龄人不曾经历过的事情。以我现在的知识水平，书中提到的一些问题我并不能深刻地理解，只是有了这段经历，我或许能感受到作者的意图。\n正如《深林》这本书中关于“群体性”的一段：“做过一次坏事的人发现自己不会受到惩罚，因为周围知道这件事的人选择视而不见，继续过着自己的‘好日子’，所以他们才会去做第二次第三次。只要有人愿意死盯着，喊出声来，这片混沌就能被破开。”\n只要有人愿意死盯着，喊出声来，这片混沌就能被破开。\n\n——节选自真理的读书笔记"
+      "desc": "低筋粉 180克；瘤奶 120克；糖粉 90克；莓干 60克；羽兽卵液 22克；盐 1克\n虽然是最基础的饼干，但是古米很喜欢吃。\n瘤奶放至室温加入糖粉，拌匀后加入羽兽卵液。莓干需要切成小片，整颗莓干口感略酸。低筋粉过筛加入，揉匀后修整成切面长宽均4厘米左右的长块。\n备注：若给索尼娅需要做更大些。娜塔莉娅喜欢吃多加些盐的。罗莎琳的要淋上蜂蜜。\n放入冰箱冷冻1小时，取出切片，放入预热170度的烤箱20分钟即可完成。\n......\n原来是这样......我竟然一直以为这位上司就是最后的幕后黑手！现在再回翻以前的描述，他确实做了很多他原本不会做的事。如此明显地放过打探消息的主角、在大会上那样真心地宣誓，还有他与他夫人竟是真心相爱，而不是政治联姻......他竟然以自杀作为开端......\n虽然有作者故意设计出的叙述诡计的影响，但我确实因为一种先入为主的无意识忽略了很多不寻常的细节。\n人们或许真的会在某种特定的环境下被各方信息所影响，忽视掉一些原本很明显的信息。\n我确实忽视过很多。\n这也是我在以后需要时常反思的地方。\n......\n在罗德岛这些日子，我向博士借阅了许多书籍。作为一名学生，我确实经历了大多数同龄人不曾经历过的事情。以我现在的知识水平，书中提到的一些问题我并不能深刻地理解，只是有了这段经历，我或许能感受到作者的意图。\n正如《深林》这本书中关于“群体性”的一段：“做过一次坏事的人发现自己不会受到惩罚，因为周围知道这件事的人选择视而不见，继续过着自己的‘好日子’，所以他们才会去做第二次第三次。只要有人愿意死盯着，喊出声来，这片混沌就能被破开。”\n只要有人愿意死盯着，喊出声来，这片混沌就能被破开。\n\n——节选自真理的读书笔记",
+      "typeIcon": "dec-y",
+      "uniEquipIcon": "uniequip_002_glassb",
+      "typeName1": "DEC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_glassb_1",
+        "uniequip_002_glassb_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，并对敌人造成<@ba.kw>较长</>的<$ba.sluggish>停顿</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，并对敌人造成<@ba.kw>较长</>的<$ba.sluggish>停顿</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "防御力-35%，但攻击速度+21，技能期间攻速加成额外提升5",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "探知者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": -0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "glassb_e_t_1[skill].attack_speed",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "防御力-35%，但攻击速度+24<@ba.talpu>（+3）</>，技能期间攻速加成额外提升5",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "探知者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": -0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 24,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "glassb_e_t_1[skill].attack_speed",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sluggish",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>法术伤害</>，并对敌人造成<@ba.kw>较长</>的<$ba.sluggish>停顿</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "防御力-35%，但攻击速度+21，技能期间攻速加成额外提升10",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "探知者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": -0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "glassb_e_t_1[skill].attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "防御力-35%，但攻击速度+24<@ba.talpu>（+3）</>，技能期间攻速加成额外提升10",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "探知者",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": -0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack_speed",
+                      "value": 24,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "glassb_e_t_1[skill].attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1095,5 +1695,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

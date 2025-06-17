@@ -151,6 +151,28 @@
       "cost": 24
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@append_atk_scale",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1027_greyy2#1",
@@ -637,16 +659,571 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+32",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 32,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ライトニングチェーン",
+          "description": "攻撃時、25%の確率で攻撃対象を2秒間<$ba.sluggish>足止め</>する",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.25,
+              "valueStr": null
+            },
+            {
+              "key": "attack@sluggish",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ライトニングチェーン",
+          "description": "攻撃時、40%の確率で攻撃対象を2秒間<$ba.sluggish>足止め</>する",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "attack@sluggish",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_greyy2",
       "moduleName": "承曦グレイの記章",
-      "desc": "承曦グレイは遠距離から地上にいる複数の敵を攻撃することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、投擲手の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "承曦グレイは遠距離から地上にいる複数の敵を攻撃することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、投擲手の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_greyy2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_greyy2",
       "moduleName": "新型電子制御装置の試作品",
-      "desc": "荒野でグレイが先ほど完成させたばかりの試作品をテストしている。\n彼はこのためにもう何日も徹夜しており、夜中にこっそりと灯りをつけてデバッグやコンパイルの作業をすることもままあった。そうして慎重に作業に取り組んでいると、時折彼は子供の頃にぼろ家で過ごした日々のことを思い出した。母は拾ってきたジャンクにアーツで少し手を加え、日が沈んで真っ暗になった家でも本が読めるようにと、僅かな光を灯してくれたものだった。しばらくするとジャンクには限界がきて、鼻を刺すような煙とまぶしい火花をまき散らし、それまでで一番明るい光を一瞬だけ放った後、辺りはまた暗闇に包まれるのだ。\n今やグレイはこの真っ暗な荒野にすっかり慣れきっていた。荒野には灯りも、彼以外の人間も存在しない。蛍が放つ微かな光はたった二歩先の闇すら照らせず、後にはごうごうと吹き荒れる風があるばかり。時にはその音すらも聞こえなくなった。\nグレイはスタンドを組み立て、データを入力し、装置を起動した。これが一体何をもたらしてくれるのかは、彼自身にもはっきりとはわからなかった。ただ数日前に算出したデータ通りのものをなんとか実現させ、それが何らかの結果をもたらしてくれることを期待していただけだ。\nもしかしたら、村一つが安定した電力供給を得られるようになるかもしれない。もしかしたら、ある技術において欠けていた要素がようやく補えるのかもしれない。あるいは、何も起こらずただまぶしいばかりの火花が飛び散るだけかもしれない。\nもはや暗闇を恐れることはない彼だったが、それでもこの瞬間は緊張を覚えた。火花の一つすらも起こせないかもしれないと思うと、どうしても不安に駆られた。\n「怖がらないで、私の愛しい子。私は福祉施設で働くうちに多くの死の淵にある人々を見てきたわ。家族に見守られている時には、どんな感情にだって意味があるの。けれどただ恐れているだけなのはダメ。恐怖は何も生み出せないのよ。」\n装置が輝き出すと、驚いた蛍は散り散りになり、荒野の闇へと消えていった。\n装置の光は暗闇を照らしたが、火花を散らす間もなく、その光は闇に飲まれてしまった。\n「また失敗だ……」\nグレイは気落ちして、地面に寝そべった。風が吹きすさぶ荒野の中でも、母が自分を抱きしめてくれているような気がして、寒さは感じなかった。\nそうして彼が目を閉じた時、遠く離れた村の電力システムが突然高能率で駆動し始め、村中に光が満ちた。しかし、この夜更け過ぎの静けさの中では、深い眠りに落ちたグレイも含めて誰一人としてそれを知ることはなかった。\n照明が輝く自室から、Mechanistが窓の外に目を向けると、空で星が一つきらりと瞬いたかと思えば、荒野に真っ白な光が灯った。まるで永遠に燃え尽きることのない星々が、ついに地面に降り注いできたかのように。\nMechanistは読んでいた本を閉じ、外に出た。\n「私の愛しい子、たとえ恐れを抱いたとしても、決してその足を止めないで！」"
+      "desc": "荒野でグレイが先ほど完成させたばかりの試作品をテストしている。\n彼はこのためにもう何日も徹夜しており、夜中にこっそりと灯りをつけてデバッグやコンパイルの作業をすることもままあった。そうして慎重に作業に取り組んでいると、時折彼は子供の頃にぼろ家で過ごした日々のことを思い出した。母は拾ってきたジャンクにアーツで少し手を加え、日が沈んで真っ暗になった家でも本が読めるようにと、僅かな光を灯してくれたものだった。しばらくするとジャンクには限界がきて、鼻を刺すような煙とまぶしい火花をまき散らし、それまでで一番明るい光を一瞬だけ放った後、辺りはまた暗闇に包まれるのだ。\n今やグレイはこの真っ暗な荒野にすっかり慣れきっていた。荒野には灯りも、彼以外の人間も存在しない。蛍が放つ微かな光はたった二歩先の闇すら照らせず、後にはごうごうと吹き荒れる風があるばかり。時にはその音すらも聞こえなくなった。\nグレイはスタンドを組み立て、データを入力し、装置を起動した。これが一体何をもたらしてくれるのかは、彼自身にもはっきりとはわからなかった。ただ数日前に算出したデータ通りのものをなんとか実現させ、それが何らかの結果をもたらしてくれることを期待していただけだ。\nもしかしたら、村一つが安定した電力供給を得られるようになるかもしれない。もしかしたら、ある技術において欠けていた要素がようやく補えるのかもしれない。あるいは、何も起こらずただまぶしいばかりの火花が飛び散るだけかもしれない。\nもはや暗闇を恐れることはない彼だったが、それでもこの瞬間は緊張を覚えた。火花の一つすらも起こせないかもしれないと思うと、どうしても不安に駆られた。\n「怖がらないで、私の愛しい子。私は福祉施設で働くうちに多くの死の淵にある人々を見てきたわ。家族に見守られている時には、どんな感情にだって意味があるの。けれどただ恐れているだけなのはダメ。恐怖は何も生み出せないのよ。」\n装置が輝き出すと、驚いた蛍は散り散りになり、荒野の闇へと消えていった。\n装置の光は暗闇を照らしたが、火花を散らす間もなく、その光は闇に飲まれてしまった。\n「また失敗だ……」\nグレイは気落ちして、地面に寝そべった。風が吹きすさぶ荒野の中でも、母が自分を抱きしめてくれているような気がして、寒さは感じなかった。\nそうして彼が目を閉じた時、遠く離れた村の電力システムが突然高能率で駆動し始め、村中に光が満ちた。しかし、この夜更け過ぎの静けさの中では、深い眠りに落ちたグレイも含めて誰一人としてそれを知ることはなかった。\n照明が輝く自室から、Mechanistが窓の外に目を向けると、空で星が一つきらりと瞬いたかと思えば、荒野に真っ白な光が灯った。まるで永遠に燃え尽きることのない星々が、ついに地面に降り注いできたかのように。\nMechanistは読んでいた本を閉じ、外に出た。\n「私の愛しい子、たとえ恐れを抱いたとしても、決してその足を止めないで！」",
+      "typeIcon": "bom-x",
+      "uniEquipIcon": "uniequip_002_greyy2",
+      "typeName1": "BOM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_greyy2_1",
+        "uniequip_002_greyy2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常攻撃は<@ba.kw>地面上</>の敵に<@ba.kw>3回</>の範囲物理ダメージを与える（2回目以降は余震、与ダメージが攻撃力の50%になる）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 12,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常攻撃は<@ba.kw>地面上</>の敵に<@ba.kw>3回</>の範囲物理ダメージを与える（2回目以降は余震、与ダメージが攻撃力の50%になる）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、40%の確率で攻撃対象を2秒間<$ba.sluggish>足止め</>する。<$ba.sluggish>足止め</>されている敵への与ダメージ+10%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ライトニングチェーン",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常攻撃は<@ba.kw>地面上</>の敵に<@ba.kw>3回</>の範囲物理ダメージを与える（2回目以降は余震、与ダメージが攻撃力の50%になる）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、40%の確率で攻撃対象を2秒間<$ba.sluggish>足止め</>する。<$ba.sluggish>足止め</>されている敵への与ダメージ+15%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ライトニングチェーン",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1100,5 +1677,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

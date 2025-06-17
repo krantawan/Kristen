@@ -151,6 +151,7 @@
       "cost": 16
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_245_cello#1",
@@ -720,16 +721,636 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 300,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "言葉なき哀歌",
+          "description": "1秒ごとに攻撃範囲内の敵に攻撃力の6%の<$ba.dt.apoptosis2>壊死損傷</>を与える",
+          "blackboard": [
+            {
+              "key": "ep_damage_ratio",
+              "value": 0.06,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish",
+              "value": 0,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "言葉なき哀歌",
+          "description": "1秒ごとに攻撃範囲内の敵に攻撃力の8%の<$ba.dt.apoptosis2>壊死損傷</>を与え、0.2秒<$ba.sluggish>足止め</>する",
+          "blackboard": [
+            {
+              "key": "ep_damage_ratio",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "言葉なき哀歌",
+          "description": "1秒ごとに攻撃範囲内の敵に攻撃力の10%の<$ba.dt.apoptosis2>壊死損傷</>を与え、0.2秒<$ba.sluggish>足止め</>する",
+          "blackboard": [
+            {
+              "key": "ep_damage_ratio",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "精神逆構築",
+          "description": "攻撃範囲内の敵が受ける<$ba.dt.apoptosis2>壊死損傷</>の効果値+20%",
+          "blackboard": [
+            {
+              "key": "ep_damage_scale",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "精神逆構築",
+          "description": "攻撃範囲内の敵が受ける<$ba.dt.apoptosis2>壊死損傷</>の効果値+22%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "ep_damage_scale",
+              "value": 1.22,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_cello",
       "moduleName": "ヴィルトゥオーサの記章",
-      "desc": "ヴィルトゥオーサは敵へ元素損傷を与え味方を援護することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、祭儀師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ヴィルトゥオーサは敵へ元素損傷を与え味方を援護することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、祭儀師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_cello",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_cello",
       "moduleName": "デクレシェンド",
-      "desc": "今日はチェロのレッスンの日だ。先生がかなり遅れてやって来たが、生徒は何も気にしていない。そもそも、彼女は一度たりともこの先生に好感を持ったことはなかった。あのチェロ独奏曲、もう自分ひとりで最後まで演奏できるはずなのに、先生はいつもまだ不十分だと言うのだ。\nたしかに、先生のように演奏するにはまだまだ力不足だろう。かつては楽譜へと入り込み、会ったこともない作曲家と心ゆくまで話をしてみたいと思ったこともある。しかし、真っ白な紙に書かれた漆黒の記号は、いつも黙り込んだままだった。この神秘的な作曲家はすでに百年以上も前に亡くなっている。聞いた話によれば、彼女は生涯を孤独に過ごし、数冊の楽譜が世に出回っていることを除けば、その人生のほとんどが謎に包まれている。生徒には楽章の中の波打つ情熱と悲しみも理解できなければ、楽譜に記された「永遠に愛する者」がどんな人物なのか、なぜその者が狂乱に陥っていったのかもわからなかった。\nだから、彼女はただ譜面通りに演奏するしかない。初めは、まだ思い通りに弾けていた。音符は手の届く範囲にあり、しっかりと彼女の中に落とし込まれていった。しかし、楽章が進むと、曲は激情的なフレーズへと突入した。スキップに反復、華麗なトリルや装飾音が彼女を情熱的に掻き抱く。音たちに誘われるがまま熱狂的なダンスに興じるが、ステップを踏むごとに、足取りがどんどんおぼつかなくなっていく。荒々しい強弱記号の数々が猛然と視界に飛び込んできたかと思えば、次の瞬間には楽譜の端へと素早くスライドしていく。彼女はそんな音たちを掴もうとした。音たちと過ごした輝かしい時を掴もうとした。どこまでも続く楽譜の線を必死に駆け抜け、ついには疲れ果てた。弦の振動が感情の昂ぶりを引き起こせなくなり、代わりにメトロノームの音だけが、カチ、カチ、カチ……と耳元に残っている。先ほどの情熱的な音楽は、惜しげもなく去ってしまった。まるで、この裏切りが最初から定められていたかのように。\n華やかな音色と共に指先の活力も失われ、ついに辺りに響くのはただメトロノームの音のみとなった。カチ、カチ、カチ……その不完全な沈黙は別れの宣言へと変わった。心の底に抑えつけていた憤怒と絶望が、涙となって溢れ出した。ぼやけていく視界の中、目の前にある真っ白な楽譜だけが、最後まで抵抗せよと自分を奮い立たせようとする。彼女は羽ペンを手に取ると、先ほどのスキップに反復、華麗なトリルや装飾音、荒々しい強弱記号をすべて楽譜に記していった。真っ黒な文字はさながら鋼鉄の枷だ。自分がすでに狂ってしまっていることはわかっている。だけど、永遠に愛する者を傍に繋ぎ止めておくには、これしかないのだ。これで、己の命は終止符が訪れるまで、音楽と共に流れるだろう。\nその瞬間、チェロの音が突如として止んだ。はっと我に返った時、生徒は自分が弓を握り、静かにチェロを抱えていることに気づいた。弦の振動も、メトロノームの音もない。練習室の中にこだましているのは、自分の粗い呼吸音だけ。チェロを支える生徒の手の甲を、黒い手袋をつけた手でそっと撫でながら、サンクタの先生はいつもの穏やかな口調で言う。\n「今日の演奏はとても素晴らしかったわ。」その言葉からは喜びの感情が伝わってきた。「作曲家の命は、彼女の愛と共にあなたの演奏の中で流れ続けるのよ。」"
+      "desc": "今日はチェロのレッスンの日だ。先生がかなり遅れてやって来たが、生徒は何も気にしていない。そもそも、彼女は一度たりともこの先生に好感を持ったことはなかった。あのチェロ独奏曲、もう自分ひとりで最後まで演奏できるはずなのに、先生はいつもまだ不十分だと言うのだ。\nたしかに、先生のように演奏するにはまだまだ力不足だろう。かつては楽譜へと入り込み、会ったこともない作曲家と心ゆくまで話をしてみたいと思ったこともある。しかし、真っ白な紙に書かれた漆黒の記号は、いつも黙り込んだままだった。この神秘的な作曲家はすでに百年以上も前に亡くなっている。聞いた話によれば、彼女は生涯を孤独に過ごし、数冊の楽譜が世に出回っていることを除けば、その人生のほとんどが謎に包まれている。生徒には楽章の中の波打つ情熱と悲しみも理解できなければ、楽譜に記された「永遠に愛する者」がどんな人物なのか、なぜその者が狂乱に陥っていったのかもわからなかった。\nだから、彼女はただ譜面通りに演奏するしかない。初めは、まだ思い通りに弾けていた。音符は手の届く範囲にあり、しっかりと彼女の中に落とし込まれていった。しかし、楽章が進むと、曲は激情的なフレーズへと突入した。スキップに反復、華麗なトリルや装飾音が彼女を情熱的に掻き抱く。音たちに誘われるがまま熱狂的なダンスに興じるが、ステップを踏むごとに、足取りがどんどんおぼつかなくなっていく。荒々しい強弱記号の数々が猛然と視界に飛び込んできたかと思えば、次の瞬間には楽譜の端へと素早くスライドしていく。彼女はそんな音たちを掴もうとした。音たちと過ごした輝かしい時を掴もうとした。どこまでも続く楽譜の線を必死に駆け抜け、ついには疲れ果てた。弦の振動が感情の昂ぶりを引き起こせなくなり、代わりにメトロノームの音だけが、カチ、カチ、カチ……と耳元に残っている。先ほどの情熱的な音楽は、惜しげもなく去ってしまった。まるで、この裏切りが最初から定められていたかのように。\n華やかな音色と共に指先の活力も失われ、ついに辺りに響くのはただメトロノームの音のみとなった。カチ、カチ、カチ……その不完全な沈黙は別れの宣言へと変わった。心の底に抑えつけていた憤怒と絶望が、涙となって溢れ出した。ぼやけていく視界の中、目の前にある真っ白な楽譜だけが、最後まで抵抗せよと自分を奮い立たせようとする。彼女は羽ペンを手に取ると、先ほどのスキップに反復、華麗なトリルや装飾音、荒々しい強弱記号をすべて楽譜に記していった。真っ黒な文字はさながら鋼鉄の枷だ。自分がすでに狂ってしまっていることはわかっている。だけど、永遠に愛する者を傍に繋ぎ止めておくには、これしかないのだ。これで、己の命は終止符が訪れるまで、音楽と共に流れるだろう。\nその瞬間、チェロの音が突如として止んだ。はっと我に返った時、生徒は自分が弓を握り、静かにチェロを抱えていることに気づいた。弦の振動も、メトロノームの音もない。練習室の中にこだましているのは、自分の粗い呼吸音だけ。チェロを支える生徒の手の甲を、黒い手袋をつけた手でそっと撫でながら、サンクタの先生はいつもの穏やかな口調で言う。\n「今日の演奏はとても素晴らしかったわ。」その言葉からは喜びの感情が伝わってきた。「作曲家の命は、彼女の愛と共にあなたの演奏の中で流れ続けるのよ。」",
+      "typeIcon": "rit-x",
+      "uniEquipIcon": "uniequip_002_cello",
+      "typeName1": "RIT",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_cello_1",
+        "uniequip_002_cello_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 135,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵【エリート】・【ボス】に与える元素損傷<@ba.kw>+18%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 175,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵【エリート】・【ボス】に与える元素損傷<@ba.kw>+18%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の敵が受ける<$ba.dt.apoptosis2>壊死損傷</>の効果値+28%、<$ba.dt.apoptosis2>壊死損傷</>の爆発効果中の対象に3%の<$ba.elementfragile>対元素脆弱</>を付与する",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "精神逆構築",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の敵が受ける<$ba.dt.apoptosis2>壊死損傷</>の効果値+30%<@ba.talpu>（+2%）</>、<$ba.dt.apoptosis2>壊死損傷</>の爆発効果中の対象に3%の<$ba.elementfragile>対元素脆弱</>を付与する",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "精神逆構築",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.03,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "敵【エリート】・【ボス】に与える元素損傷<@ba.kw>+18%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.18,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の敵が受ける<$ba.dt.apoptosis2>壊死損傷</>の効果値+33%、<$ba.dt.apoptosis2>壊死損傷</>の爆発効果中の対象に5%の<$ba.elementfragile>対元素脆弱</>を付与する",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "精神逆構築",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.33,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃範囲内の敵が受ける<$ba.dt.apoptosis2>壊死損傷</>の効果値+35%<@ba.talpu>（+2%）</>、<$ba.dt.apoptosis2>壊死損傷</>の爆発効果中の対象に5%の<$ba.elementfragile>対元素脆弱</>を付与する",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "精神逆構築",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ep_damage_scale",
+                      "value": 1.35,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1183,5 +1804,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

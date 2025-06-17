@@ -151,6 +151,32 @@
       "cost": 12
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "atk",
+          "value": 2
+        },
+        {
+          "key": "mid_stack_cnt",
+          "value": 20
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 40
+        }
+      ],
+      "overrideDescription": "Normally does not attack and has 0 Block; When skill is inactive, ATK gradually increases up to <@ba.kw>+{atk:0%}</> over <@ba.kw>{max_stack_cnt}</> seconds. ATK is reset when the skill ends",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4064_mlynar#1",
@@ -720,6 +746,243 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +25",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 360,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Wanderer",
+          "description": "ATK increased to 105% when attacking. If there are 3 or more enemies nearby, ATK increased to 110%, and take 10% less damage",
+          "blackboard": {
+            "atk_scale_base": 1.05,
+            "cnt": 3,
+            "atk_scale_up": 1.1,
+            "damage_resistance": 0.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "Wanderer",
+          "description": "ATK increased to 108%<@ba.talpu>(+3%)</>when attacking. If there are 3 or more enemies nearby, ATK increased to 113%<@ba.talpu>(+3%)</>, and take 10% less damage",
+          "blackboard": {
+            "atk_scale_base": 1.08,
+            "cnt": 3,
+            "atk_scale_up": 1.13,
+            "damage_resistance": 0.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Wanderer",
+          "description": "ATK increased to 110% when attacking. If there are 3 or more enemies nearby, ATK increased to 115%, and take 15% less damage",
+          "blackboard": {
+            "atk_scale_base": 1.1,
+            "cnt": 3,
+            "atk_scale_up": 1.15,
+            "damage_resistance": 0.15
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "Wanderer",
+          "description": "ATK increased to 113%<@ba.talpu>(+3%)</> when attacking. If there are 3 or more enemies nearby, ATK increased to 118%<@ba.talpu>(+3%)</>, and take 15% less damage",
+          "blackboard": {
+            "atk_scale_base": 1.13,
+            "cnt": 3,
+            "atk_scale_up": 1.18,
+            "damage_resistance": 0.15
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Unmoved",
+          "description": "More likely to be attacked while deployed. When any Kazimierz Operator is attacked, reflect 15% of Młynar's ATK as True Damage",
+          "blackboard": {
+            "taunt_level": 1,
+            "atk_scale": 0.15
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Unmoved",
+          "description": "More likely to be attacked while deployed. When any Kazimierz Operator is attacked, reflect 18%<@ba.talpu>(+3%)</> of Młynar's ATK as True Damage",
+          "blackboard": {
+            "taunt_level": 1,
+            "atk_scale": 0.18
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [],
   "voice_lines": [
     {
@@ -1172,5 +1435,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

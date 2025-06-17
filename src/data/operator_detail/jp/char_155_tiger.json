@@ -138,6 +138,7 @@
       "cost": 10
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_155_tiger#1",
@@ -608,16 +609,618 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "迅虎拳",
+          "description": "15%の確率で近距離物理攻撃を回避、回避成功時自身の次の攻撃は攻撃力+80%",
+          "blackboard": [
+            {
+              "key": "tiger_t_1[evade].prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "charge_on_evade.atk",
+              "value": 0.8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "迅虎拳",
+          "description": "18%<@ba.talpu>(+3%)</>の確率で近距離物理攻撃を回避、回避成功時自身の次の攻撃は攻撃力+80%",
+          "blackboard": [
+            {
+              "key": "tiger_t_1[evade].prob",
+              "value": 0.18,
+              "valueStr": null
+            },
+            {
+              "key": "charge_on_evade.atk",
+              "value": 0.8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "迅虎拳",
+          "description": "30%の確率で近距離物理攻撃を回避、回避成功時自身の次の攻撃は攻撃力+100%",
+          "blackboard": [
+            {
+              "key": "tiger_t_1[evade].prob",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "charge_on_evade.atk",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "迅虎拳",
+          "description": "33%<@ba.talpu>(+3%)</>の確率で近距離物理攻撃を回避、回避成功時自身の次の攻撃は攻撃力+100%",
+          "blackboard": [
+            {
+              "key": "tiger_t_1[evade].prob",
+              "value": 0.33,
+              "valueStr": null
+            },
+            {
+              "key": "charge_on_evade.atk",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_tiger",
       "moduleName": "インドラの記章",
-      "desc": "インドラは接近戦で優位に立つことに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、闘士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "インドラは接近戦で優位に立つことに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては前衛オペレーターとして区分し、闘士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_tiger",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_tiger",
       "moduleName": "「ハンナの脱臼手当セット」",
-      "desc": "「体感を安定させろ。ステップをコントロールするんだ……」\nノーポート区を縄張りとするギャングのリーダーは、自分にそう言い聞かせていた。\n遠のきかける意識の中、インドラは己を奮い立たせ、応戦体勢を取る。\n間もなく勝敗は決するだろう。恐らく、次の一撃で。 \n「まだやるつもりか？」\nそんな相手の冷静な声は、自分の荒い呼吸音でほとんどかき消されていた。 \n乱れた銀髪が額から垂れ落ちて視界を遮り、眼前に立つ揺るぎない金色の人影は、街灯に照らされさらにぼやけて見えた。\n「勝ち誇ってんじゃねーぞ、このチビ……俺はまだ、負けてねぇ！」\nインドラは呼吸を整えて、重心を後ろに引いた左足へと悟られぬように移しながら、長髪を肩の後ろに引っかけた。そうして拳を上げて構えると、指を曲げ、使い込まれたナックルダスターをさらに強く握りこんだ。 \n「よく覚えておくんだな、よそ者が。この辺りは俺様の――グラスゴーのインドラ様のシマなんだよ！」\n言うやいなや、銀色の影が地面を蹴り、瞬く間に相手の目の前へと迫る。振り上げた左手で全力の一撃を放つかに見えたそれはしかし、その勢いで身体をひねり、次に繰り出す右のこぶしにすべての力を込めていた。 \nインドラは、金髪の少女が耳元でささやくのを聞いた。\n「ああ。グラスゴーのインドラだな。覚えておこう。」\nそれはいつも通りの落ち着いた声だった。\nインドラは覚えている――バランスを崩したあと、冷たいアスファルトに叩きつけられるだろうと思っていた彼女の身体には、想像したような硬い感触は訪れず、目を閉じたまま……太陽の光の中に落ちていくような感覚を覚えたことを。 \n「ん？逃げるって、何の話だ？わりぃ、ヴィーナ……ちとぼーっとしてた。」 \n「グラスゴー戦術指南のことだ。貴様が要約したのだろう？第四条に記されているのは、最も重要な『逃げるべき時は逃げろ』だったな。」 \n「おう、そうだぜ！そいつは長いことストリートで喧嘩してて覚えたことの集大成だからな。」 \n「だが、我々が初めて出会ったあの時は違った。貴様はあの夜、なぜ逃げなかった？」 \n「んー、ちょっと考えてみるよ。」インドラはうつむくと、しばらく考え込んだ。「昔なら、逃げを選ぶのは生き延びるためだったんだ。ストリートで食ってくには、まず自分の命を守んねーといけねぇからな。でも……」 \n「でも、何だ？」\nシージは座り直すと、インドラのほうへ目を向けた。 \nインドラも顔を上げ、シージへと目を向けた。ジムの照明が明滅する中、二対の金色の瞳が見つめ合い、インドラはアスランの瞳の中に己の姿を見た。 \n「でも、太陽が嫌いなフェリーンなんかいねーだろ？」\nインドラはにやりと笑うと、無邪気な様子で白い歯をのぞかせた。"
+      "desc": "「体感を安定させろ。ステップをコントロールするんだ……」\nノーポート区を縄張りとするギャングのリーダーは、自分にそう言い聞かせていた。\n遠のきかける意識の中、インドラは己を奮い立たせ、応戦体勢を取る。\n間もなく勝敗は決するだろう。恐らく、次の一撃で。 \n「まだやるつもりか？」\nそんな相手の冷静な声は、自分の荒い呼吸音でほとんどかき消されていた。 \n乱れた銀髪が額から垂れ落ちて視界を遮り、眼前に立つ揺るぎない金色の人影は、街灯に照らされさらにぼやけて見えた。\n「勝ち誇ってんじゃねーぞ、このチビ……俺はまだ、負けてねぇ！」\nインドラは呼吸を整えて、重心を後ろに引いた左足へと悟られぬように移しながら、長髪を肩の後ろに引っかけた。そうして拳を上げて構えると、指を曲げ、使い込まれたナックルダスターをさらに強く握りこんだ。 \n「よく覚えておくんだな、よそ者が。この辺りは俺様の――グラスゴーのインドラ様のシマなんだよ！」\n言うやいなや、銀色の影が地面を蹴り、瞬く間に相手の目の前へと迫る。振り上げた左手で全力の一撃を放つかに見えたそれはしかし、その勢いで身体をひねり、次に繰り出す右のこぶしにすべての力を込めていた。 \nインドラは、金髪の少女が耳元でささやくのを聞いた。\n「ああ。グラスゴーのインドラだな。覚えておこう。」\nそれはいつも通りの落ち着いた声だった。\nインドラは覚えている――バランスを崩したあと、冷たいアスファルトに叩きつけられるだろうと思っていた彼女の身体には、想像したような硬い感触は訪れず、目を閉じたまま……太陽の光の中に落ちていくような感覚を覚えたことを。 \n「ん？逃げるって、何の話だ？わりぃ、ヴィーナ……ちとぼーっとしてた。」 \n「グラスゴー戦術指南のことだ。貴様が要約したのだろう？第四条に記されているのは、最も重要な『逃げるべき時は逃げろ』だったな。」 \n「おう、そうだぜ！そいつは長いことストリートで喧嘩してて覚えたことの集大成だからな。」 \n「だが、我々が初めて出会ったあの時は違った。貴様はあの夜、なぜ逃げなかった？」 \n「んー、ちょっと考えてみるよ。」インドラはうつむくと、しばらく考え込んだ。「昔なら、逃げを選ぶのは生き延びるためだったんだ。ストリートで食ってくには、まず自分の命を守んねーといけねぇからな。でも……」 \n「でも、何だ？」\nシージは座り直すと、インドラのほうへ目を向けた。 \nインドラも顔を上げ、シージへと目を向けた。ジムの照明が明滅する中、二対の金色の瞳が見つめ合い、インドラはアスランの瞳の中に己の姿を見た。 \n「でも、太陽が嫌いなフェリーンなんかいねーだろ？」\nインドラはにやりと笑うと、無邪気な様子で白い歯をのぞかせた。",
+      "typeIcon": "fgt-y",
+      "uniEquipIcon": "uniequip_002_tiger",
+      "typeName1": "FGT",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_tiger_1",
+        "uniequip_002_tiger_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵を1体までブロックできる\nHPが最大値の50%を上回った場合、攻撃速度<@ba.vup>+{attack_speed}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵を1体までブロックできる\nHPが最大値の50%を上回った場合、攻撃速度<@ba.vup>+{attack_speed}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "30%の確率で近接物理攻撃を回避、回避成功時自身の次の攻撃は攻撃力+110%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "迅虎拳",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "tiger_t_1[evade].prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "charge_on_evade.atk",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "33%<@ba.talpu>（+3%）</>の確率で近接物理攻撃を回避、回避成功時自身の次の攻撃は攻撃力+110%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "迅虎拳",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "tiger_t_1[evade].prob",
+                      "value": 0.33,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "charge_on_evade.atk",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "敵を1体までブロックできる\nHPが最大値の50%を上回った場合、攻撃速度<@ba.vup>+{attack_speed}</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "30%の確率で近接物理攻撃を回避、回避成功時自身の次の攻撃は攻撃力+120%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "迅虎拳",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "tiger_t_1[evade].prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "charge_on_evade.atk",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "33%<@ba.talpu>（+3%）</>の確率で近接物理攻撃を回避、回避成功時自身の次の攻撃は攻撃力+120%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "迅虎拳",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "tiger_t_1[evade].prob",
+                      "value": 0.33,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "charge_on_evade.atk",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1071,5 +1674,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

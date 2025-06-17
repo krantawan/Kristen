@@ -168,6 +168,36 @@
       "cost": 26
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "times",
+            "value": 3,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "times_2",
+            "value": 0,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4110_delphn#1",
@@ -647,16 +677,722 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 130,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "濯洗剑锋",
+          "description": "攻击生命值高于80%的敌人时造成的伤害提高10%",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.8,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "濯洗剑锋",
+          "description": "攻击生命值高于80%的敌人时造成的伤害提高12%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.8,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "濯洗剑锋",
+          "description": "攻击生命值高于80%的敌人时造成的伤害提高18%",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.8,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "濯洗剑锋",
+          "description": "攻击生命值高于80%的敌人时造成的伤害提高20%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.8,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "挥斩敌愁",
+          "description": "在【恶兆湍流】中，攻击【萨卡兹】敌人时攻击力提升至120%，且可额外储存一个仅用于攻击【萨卡兹】敌人的攻击能量",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.2,
+              "valueStr": null
+            },
+            {
+              "key": "times_2",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_delphn",
       "moduleName": "戴菲恩证章",
-      "desc": "干员戴菲恩常年与源石技艺为伴\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使秘术师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员戴菲恩常年与源石技艺为伴\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使秘术师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_delphn",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_delphn",
       "moduleName": "正义黯淡",
-      "desc": "“今天已经是我外勤任务的第二百三十一天，周围的一切对我来说已经十分陌生......”\n黎明，戴菲恩借着尚未燃尽的篝火微光写下日记的第一句后便顿住了，她突然意识到，离伦蒂尼姆那场大战结束已经快一年了。当她以游侠的身份重新游历维多利亚的边陲时，她看到了太多未曾留意的不公，也渐渐习惯了用剑去执行自己心中的正义。\n所以当她得知附近还藏有一队萨卡兹游民正威胁当地人，并四处劫掠时，她就为自己定好了下一个目的地。“或许又是些还没来得及赶到伦蒂尼姆，就发现战争早已结束的倒霉蛋。”\n“救救我......”\n她循着声音转过头，一名幼小的菲林女孩自阴影中探出了头。\n女孩颤抖地指着远处的黑色地平线，戴菲恩才看到了四个提着刀慢慢靠近的人影。\n“他们都是魔族佬，你能送我回家吗？”女孩说。\n戴菲恩抽出了剑匣中本属于母亲的长剑，源石技艺在剑身上流转，光芒照亮了女孩恐惧的脸庞，数道浅浅的鞭痕和黑色的结晶清晰可见。\n远处的人影停下了，不消片刻便转身离开，消失在了地平线上的黑暗里。\n“你想我送你回家？”\n女孩犹豫了片刻，不敢直视戴菲恩凌厉的眼神，只是低垂着脑袋点了点头。\n可女孩回到营地时却被拒之门外，营地的头目警惕地防范着紧跟其后的戴菲恩。\n而戴菲恩一眼便看到了营地中的菲林感染者们藏着鞭子聚在一起，试图藏住四名战战兢兢的萨卡兹小孩。\n戴菲恩的怒火在燃烧：“你们靠着无辜孩子假装被追杀这套把戏骗人来营地，伤害了很多人。”\n“你回去吧。”戴菲恩放走了女孩，又指着头目，“你跟我走，那些被你们伤害的无辜的人需要一个交代。”\n“我在救我手下的人。”\n戴菲恩摇摇头，“这不是借口，你有想过这些孩子长大后会变成什么样吗？”\n她带着头目走了很远，远到营地中的目光再也无法触及。\n“我会联系罗德岛帮他们。现在，举起你的刀。”\n在出外勤任务的第二百三十一天，戴菲恩背着又多了一道痕迹的剑匣，朝着离维多利亚越来越远的方向前行。"
+      "desc": "“今天已经是我外勤任务的第二百三十一天，周围的一切对我来说已经十分陌生......”\n黎明，戴菲恩借着尚未燃尽的篝火微光写下日记的第一句后便顿住了，她突然意识到，离伦蒂尼姆那场大战结束已经快一年了。当她以游侠的身份重新游历维多利亚的边陲时，她看到了太多未曾留意的不公，也渐渐习惯了用剑去执行自己心中的正义。\n所以当她得知附近还藏有一队萨卡兹游民正威胁当地人，并四处劫掠时，她就为自己定好了下一个目的地。“或许又是些还没来得及赶到伦蒂尼姆，就发现战争早已结束的倒霉蛋。”\n“救救我......”\n她循着声音转过头，一名幼小的菲林女孩自阴影中探出了头。\n女孩颤抖地指着远处的黑色地平线，戴菲恩才看到了四个提着刀慢慢靠近的人影。\n“他们都是魔族佬，你能送我回家吗？”女孩说。\n戴菲恩抽出了剑匣中本属于母亲的长剑，源石技艺在剑身上流转，光芒照亮了女孩恐惧的脸庞，数道浅浅的鞭痕和黑色的结晶清晰可见。\n远处的人影停下了，不消片刻便转身离开，消失在了地平线上的黑暗里。\n“你想我送你回家？”\n女孩犹豫了片刻，不敢直视戴菲恩凌厉的眼神，只是低垂着脑袋点了点头。\n可女孩回到营地时却被拒之门外，营地的头目警惕地防范着紧跟其后的戴菲恩。\n而戴菲恩一眼便看到了营地中的菲林感染者们藏着鞭子聚在一起，试图藏住四名战战兢兢的萨卡兹小孩。\n戴菲恩的怒火在燃烧：“你们靠着无辜孩子假装被追杀这套把戏骗人来营地，伤害了很多人。”\n“你回去吧。”戴菲恩放走了女孩，又指着头目，“你跟我走，那些被你们伤害的无辜的人需要一个交代。”\n“我在救我手下的人。”\n戴菲恩摇摇头，“这不是借口，你有想过这些孩子长大后会变成什么样吗？”\n她带着头目走了很远，远到营地中的目光再也无法触及。\n“我会联系罗德岛帮他们。现在，举起你的刀。”\n在出外勤任务的第二百三十一天，戴菲恩背着又多了一道痕迹的剑匣，朝着离维多利亚越来越远的方向前行。",
+      "typeIcon": "msc-y",
+      "uniEquipIcon": "uniequip_002_delphn",
+      "typeName1": "MSC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_delphn_1",
+        "uniequip_002_delphn_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 95,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "拥有已储存的攻击能量时，攻击速度+30",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "拥有已储存的攻击能量时，攻击速度+30",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击生命值高于80%的敌人时造成的伤害提高21%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "濯洗剑锋",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.21,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击生命值高于80%的敌人时造成的伤害提高23%<@ba.talpu>（+2%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "濯洗剑锋",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 92,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "拥有已储存的攻击能量时，攻击速度+30",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击生命值高于80%的敌人时造成的伤害提高23%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "濯洗剑锋",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击生命值高于80%的敌人时造成的伤害提高25%<@ba.talpu>（+2%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "濯洗剑锋",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1110,5 +1846,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -138,6 +138,28 @@
       "cost": 20
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "prob",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_215_mantic#1",
@@ -627,16 +649,690 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+30",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 30,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "暗殺の毒針",
+          "description": "6秒間攻撃せずにいると、<$ba.invisible>ステルス</>状態になる。攻撃時、<$ba.invisible>ステルス</>状態を解除し、その攻撃のみ攻撃力+25%",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.25,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "暗殺の毒針",
+          "description": "6秒間攻撃せずにいると、<$ba.invisible>ステルス</>状態になる。攻撃時、<$ba.invisible>ステルス</>状態を解除し、その攻撃のみ攻撃力+29%<@ba.talpu>(+4%)</>",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.29,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "暗殺の猛毒",
+          "description": "5秒間攻撃せずにいると、<$ba.invisible>ステルス</>状態になる。攻撃時、<$ba.invisible>ステルス</>状態を解除し、その攻撃のみ攻撃力+50%",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "暗殺の猛毒",
+          "description": "5秒間攻撃せずにいると、<$ba.invisible>ステルス</>状態になる。攻撃時、<$ba.invisible>ステルス</>状態を解除し、その攻撃のみ攻撃力+54%<@ba.talpu>(+4%)</>",
+          "blackboard": [
+            {
+              "key": "delay",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 0.54,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_mantic",
       "moduleName": "マンティコアの記章",
-      "desc": "マンティコアは身を潜め、敵を待ち伏せし奇襲する戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、潜伏者の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "マンティコアは身を潜め、敵を待ち伏せし奇襲する戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、潜伏者の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_mantic",
       "moduleName": "訓練用尻尾保護セット",
-      "desc": "雑貨屋の倉庫入口に貼られた付箋：\nごめんなさい。ちょっと具合が悪くなっちゃったから、30分だけ早退してお医者さんに行くね。\n前に怪我したところがちゃんと治ってなかったみたいで……急に身体があちこち痛くなっちゃって。\nだけど今日の入荷分はもう棚卸しできてるし、わたしのことが嫌いな人もお店までは追いかけて来てないから、安心してね。\n\n作りの甘い香水瓶に貼られた便箋：\nずっとわたしを気にかけてくれて、いつもわたしを見つけてくれて、ありがとう。\nこれ、プレゼントだよ。\n感謝の気持ちを表すには、これだけじゃ全然足りないから、わたしにできることがほかにもあったら必ず教えてね。\nわたしの病気は多分この先もっと悪くなっちゃうと思うんだけど、その時が来たら、これを見てたまにわたしを思い出してくれたら嬉しいな。\nでも、思い出せなくたっていいからね。\n\n市場の砂に埋もれた付箋：\nこんにちは。商品の整理とか、砂埃の掃除は必要ない？\nほかの仕事でも何でもやるから、代わりに食べ物を少し分けてほしいの。\nわたしがどこにいるかはわからないかもしれないけど、怖がらないで。\nどんな仕事でも、真面目にきちんとやるからね。\n\nナイフの下敷きになっている便せん：\n任務完了。\n\nロドス休憩室内掲示板の隅に貼られた付箋（周りのカラフルな付箋でほとんど隠れてしまっている）：\nパーティーで聴いたみんなの歌、すごく素敵だった。\nうるさいって人もいたみたいだけど、わたしは全然そう思わなかったよ。\nでも、次は防音がしっかりした会場でやることになりそうなら、その時はここにお知らせを貼ってほしいな。\nそれから、飲み物をオススメしてくれた人へ、ありがとう。\nオレンジ色の甘酸っぱいやつ、美味しかった。\n――マンティコア"
+      "desc": "雑貨屋の倉庫入口に貼られた付箋：\nごめんなさい。ちょっと具合が悪くなっちゃったから、30分だけ早退してお医者さんに行くね。\n前に怪我したところがちゃんと治ってなかったみたいで……急に身体があちこち痛くなっちゃって。\nだけど今日の入荷分はもう棚卸しできてるし、わたしのことが嫌いな人もお店までは追いかけて来てないから、安心してね。\n\n作りの甘い香水瓶に貼られた便箋：\nずっとわたしを気にかけてくれて、いつもわたしを見つけてくれて、ありがとう。\nこれ、プレゼントだよ。\n感謝の気持ちを表すには、これだけじゃ全然足りないから、わたしにできることがほかにもあったら必ず教えてね。\nわたしの病気は多分この先もっと悪くなっちゃうと思うんだけど、その時が来たら、これを見てたまにわたしを思い出してくれたら嬉しいな。\nでも、思い出せなくたっていいからね。\n\n市場の砂に埋もれた付箋：\nこんにちは。商品の整理とか、砂埃の掃除は必要ない？\nほかの仕事でも何でもやるから、代わりに食べ物を少し分けてほしいの。\nわたしがどこにいるかはわからないかもしれないけど、怖がらないで。\nどんな仕事でも、真面目にきちんとやるからね。\n\nナイフの下敷きになっている便せん：\n任務完了。\n\nロドス休憩室内掲示板の隅に貼られた付箋（周りのカラフルな付箋でほとんど隠れてしまっている）：\nパーティーで聴いたみんなの歌、すごく素敵だった。\nうるさいって人もいたみたいだけど、わたしは全然そう思わなかったよ。\nでも、次は防音がしっかりした会場でやることになりそうなら、その時はここにお知らせを貼ってほしいな。\nそれから、飲み物をオススメしてくれた人へ、ありがとう。\nオレンジ色の甘酸っぱいやつ、美味しかった。\n――マンティコア",
+      "typeIcon": "amb-x",
+      "uniEquipIcon": "uniequip_002_mantic",
+      "typeName1": "AMB",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_mantic_1",
+        "uniequip_002_mantic_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30054",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 58,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 72,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 27,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "5秒間攻撃せずにいると、<$ba.invisible>ステルス</>状態になる。攻撃時、<$ba.invisible>ステルス</>状態を解除し、その攻撃のみ攻撃力+55%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "暗殺の猛毒",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.55,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "5秒間攻撃せずにいると、<$ba.invisible>ステルス</>状態になる。攻撃時、<$ba.invisible>ステルス</>状態を解除し、その攻撃のみ攻撃力+59%<@ba.talpu>（+4%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "暗殺の猛毒",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.59,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 31,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻撃範囲内の敵全員の移動速度<@ba.kw>-20%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "5秒間攻撃せずにいると、<$ba.invisible>ステルス</>状態になる。攻撃時、<$ba.invisible>ステルス</>状態を解除し、その攻撃のみ攻撃力+60%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "暗殺の猛毒",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "5秒間攻撃せずにいると、<$ba.invisible>ステルス</>状態になる。攻撃時、<$ba.invisible>ステルス</>状態を解除し、その攻撃のみ攻撃力+64%<@ba.talpu>（+4%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "暗殺の猛毒",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "delay",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.64,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1090,5 +1786,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

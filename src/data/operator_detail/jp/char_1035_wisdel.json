@@ -150,6 +150,36 @@
       "cost": 25
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@append_atk_scale",
+            "value": 0.5,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "attack@enable_third_attack",
+            "value": 0,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1035_wisdel#1",
@@ -716,16 +746,770 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+32",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 32,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ビッグサプライズ！",
+          "description": "通常攻撃が攻撃主対象に残影を付与する。残影はウィシャデルの余震を受けると15%の確率で爆発し、周囲一定範囲内の敵全員に攻撃力の120%の物理ダメージを与え、0.5秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "attack@main_atk_scale",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@bomb_atk_scale",
+              "value": 1.2,
+              "valueStr": null
+            },
+            {
+              "key": "attack@stun",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@range_radius",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "ビッグサプライズ！",
+          "description": "通常攻撃が攻撃主対象に残影を付与する。残影はウィシャデルの余震を受けると15%の確率で爆発し、周囲一定範囲内の敵全員に攻撃力の130%<@ba.talpu>（+10%）</>の物理ダメージを与え、0.5秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "attack@main_atk_scale",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@bomb_atk_scale",
+              "value": 1.3,
+              "valueStr": null
+            },
+            {
+              "key": "attack@stun",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@range_radius",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ビッグサプライズ！",
+          "description": "攻撃主対象への攻撃力が115%まで上昇し、さらに残影を付与する。残影はウィシャデルの余震を受けると15%の確率で爆発し、周囲一定範囲内の敵全員に攻撃力の150%の物理ダメージを与え、1秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "attack@main_atk_scale",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@bomb_atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            },
+            {
+              "key": "attack@stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@range_radius",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "ビッグサプライズ！",
+          "description": "攻撃主対象への攻撃力が115%まで上昇し、さらに残影を付与する。残影はウィシャデルの余震を受けると15%の確率で爆発し、周囲一定範囲内の敵全員に攻撃力の160%<@ba.talpu>（+10%）</>の物理ダメージを与え、1秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "attack@main_atk_scale",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@bomb_atk_scale",
+              "value": 1.6,
+              "valueStr": null
+            },
+            {
+              "key": "attack@stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "attack@range_radius",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "くたばり損ない",
+          "description": "配置後、攻撃範囲内に「レヴァナントの影」を1体召喚する。自身の周囲に「レヴァナントの影」がいると<$ba.camou>迷彩</>状態になる",
+          "blackboard": [],
+          "tokenKey": "token_10035_wisdel_wward",
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_wisdel",
       "moduleName": "ウィシャデルの記章",
-      "desc": "ウィシャデルは遠距離から地上にいる複数の敵を攻撃することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては狙撃オペレーターとして区分し、投擲手の責務を担う \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "ウィシャデルは遠距離から地上にいる複数の敵を攻撃することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては狙撃オペレーターとして区分し、投擲手の責務を担う \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_wisdel",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_wisdel",
       "moduleName": "「ご先祖ランチャー」",
-      "desc": "砂丘の上に一つの鎧が立っていた。\n彼はもはや、自分がどこから来たのかすら忘れかけていた。身体もひどく損耗しており両足の長さは不揃いで、肩の鎧は片方失われ、そこから暗く空っぽな内側が露になってしまっている。\n剣もまた、折れていた。どうやら同族に斬りかかった時に折れてしまったようだ。奴は風車へと逃げ込み、日が暮れるまで手を下すのを待ってくれと懇願してきたのだ。その時になれば、自分の身体の中で遊んでいる子供たちも皆家に帰るから、と。彼はその要望に応じた。二、三時間などという時間は、彼らのような生命体にとっては取るに足らないものなのだ。彼は丘の上に腰を下ろし、日が沈むまで待つと、引き返して、唸り声をあげる風車を殺した。\n古の高塔深くに身を寄せる幽霊、大図書館の瓦礫に埋もれた書籍、舵取りのいない砂賊船、命をはかりにかける天秤……彼は魔王との約束を忘れてはおらず、長き旅を続けてきたのは、各地へ散り散りになった同族をカズデルへ連れ戻すためだった。そして彼自身が、その最後の一人なのである。\n視界に広がる果てしない金色は何だろうか？砂漠か、海か、あるいは無数に築かれてきたカズデルのうちの一つだろうか？\n鎧が沈んでいく。彼はもはや、記憶と歴史の境界線が分からなくなるのと同じように、身体と砂粒を区別できなくなっていた。このまま頭のてっぺんまで砂に覆われてしまえば、彼は完全に姿を消すことになるだろう。\n「カン、カンカン」\n頭上から何やら叩く音がした。\n羽獣が彼の頭に生えた草を食べ物として啄んでいるのかもしれない。\n「ガン――ガン――」\n彼を呑み込んだ砂丘が揺れ始めた。\nいや、揺れているのは砂丘ではなく、彼自身の身体だ。何者かが彼を足蹴にしている。その構えを見るに、どうやら彼を――最古のレヴァナントにして、カズデル最初の守護者であり、すべての魔王の側近参謀であった彼を、ボールのように蹴り転がそうとしているようだ。\n「貴様――」\n「喋れるの？だったら死んだフリなんかしないでちょうだい。あちこち回ってここまであんたを運んできてやったんだから、そろそろ役に立ってもらわないと。さもなきゃガラクタとして売り捌いてやるわよ！」\n「……目的はなんだ？」\n「あらまぁ、冷静なのね？昔図体がデカかった頃は、ひたすら『出ていけ』だの『憎い』だの『異種族め』だの宣ってたくせに。こっちはてっきり、あんたがあたしより読み書きに疎くて、それ以外の言葉を喋れないんじゃないかとすら思ってたくらいなのよ。」\n「よもや殿下がお選びになった人間が、こうも粗野な……」\n「口ぶりだけはそのまんまね。でも、口汚さを取り戻すのは後にして、それよりさっさと働いて。」\n「何を――」\n彼の身体が宙を舞う。\n「力加減は十分かしら？もっと爆薬を加えてやったほうがいい？」\n彼は飛んでいた。\n足元の砂丘を掠め、廃墟を飛び越え、そして――\nカズデルに。\n彼が二度と相まみえることのないと思っていたその場所に届くほど高く。\nこのまま飛んでいけば、彼はもうじきかつての王庭議事堂へと直撃するだろう。彼が一族の魂の残り火をもって、魔王イレーシュに誓いを立てた地に――\n「ウィシャデル、（サルカズ語）――！」\n「あらあら、そんなにご自分を呪いたいのかしら、あたしの愛しいご先祖さま？」若きサルカズは、声を上げて笑った。「さあ、もっと強烈にぶっ飛ばして、あのオンボロをきれいさっぱり片付けた後、一緒に――家に帰るわよ！」"
+      "desc": "砂丘の上に一つの鎧が立っていた。\n彼はもはや、自分がどこから来たのかすら忘れかけていた。身体もひどく損耗しており両足の長さは不揃いで、肩の鎧は片方失われ、そこから暗く空っぽな内側が露になってしまっている。\n剣もまた、折れていた。どうやら同族に斬りかかった時に折れてしまったようだ。奴は風車へと逃げ込み、日が暮れるまで手を下すのを待ってくれと懇願してきたのだ。その時になれば、自分の身体の中で遊んでいる子供たちも皆家に帰るから、と。彼はその要望に応じた。二、三時間などという時間は、彼らのような生命体にとっては取るに足らないものなのだ。彼は丘の上に腰を下ろし、日が沈むまで待つと、引き返して、唸り声をあげる風車を殺した。\n古の高塔深くに身を寄せる幽霊、大図書館の瓦礫に埋もれた書籍、舵取りのいない砂賊船、命をはかりにかける天秤……彼は魔王との約束を忘れてはおらず、長き旅を続けてきたのは、各地へ散り散りになった同族をカズデルへ連れ戻すためだった。そして彼自身が、その最後の一人なのである。\n視界に広がる果てしない金色は何だろうか？砂漠か、海か、あるいは無数に築かれてきたカズデルのうちの一つだろうか？\n鎧が沈んでいく。彼はもはや、記憶と歴史の境界線が分からなくなるのと同じように、身体と砂粒を区別できなくなっていた。このまま頭のてっぺんまで砂に覆われてしまえば、彼は完全に姿を消すことになるだろう。\n「カン、カンカン」\n頭上から何やら叩く音がした。\n羽獣が彼の頭に生えた草を食べ物として啄んでいるのかもしれない。\n「ガン――ガン――」\n彼を呑み込んだ砂丘が揺れ始めた。\nいや、揺れているのは砂丘ではなく、彼自身の身体だ。何者かが彼を足蹴にしている。その構えを見るに、どうやら彼を――最古のレヴァナントにして、カズデル最初の守護者であり、すべての魔王の側近参謀であった彼を、ボールのように蹴り転がそうとしているようだ。\n「貴様――」\n「喋れるの？だったら死んだフリなんかしないでちょうだい。あちこち回ってここまであんたを運んできてやったんだから、そろそろ役に立ってもらわないと。さもなきゃガラクタとして売り捌いてやるわよ！」\n「……目的はなんだ？」\n「あらまぁ、冷静なのね？昔図体がデカかった頃は、ひたすら『出ていけ』だの『憎い』だの『異種族め』だの宣ってたくせに。こっちはてっきり、あんたがあたしより読み書きに疎くて、それ以外の言葉を喋れないんじゃないかとすら思ってたくらいなのよ。」\n「よもや殿下がお選びになった人間が、こうも粗野な……」\n「口ぶりだけはそのまんまね。でも、口汚さを取り戻すのは後にして、それよりさっさと働いて。」\n「何を――」\n彼の身体が宙を舞う。\n「力加減は十分かしら？もっと爆薬を加えてやったほうがいい？」\n彼は飛んでいた。\n足元の砂丘を掠め、廃墟を飛び越え、そして――\nカズデルに。\n彼が二度と相まみえることのないと思っていたその場所に届くほど高く。\nこのまま飛んでいけば、彼はもうじきかつての王庭議事堂へと直撃するだろう。彼が一族の魂の残り火をもって、魔王イレーシュに誓いを立てた地に――\n「ウィシャデル、（サルカズ語）――！」\n「あらあら、そんなにご自分を呪いたいのかしら、あたしの愛しいご先祖さま？」若きサルカズは、声を上げて笑った。「さあ、もっと強烈にぶっ飛ばして、あのオンボロをきれいさっぱり片付けた後、一緒に――家に帰るわよ！」",
+      "typeIcon": "bom-x",
+      "uniEquipIcon": "uniequip_002_wisdel",
+      "typeName1": "BOM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_wisdel_1",
+        "uniequip_002_wisdel_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常攻撃は<@ba.kw>地面上</>の敵に<@ba.kw>3回</>の範囲物理ダメージを与える（2回目以降は余震、与ダメージが攻撃力の50%になる）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常攻撃は<@ba.kw>地面上</>の敵に<@ba.kw>3回</>の範囲物理ダメージを与える（2回目以降は余震、与ダメージが攻撃力の50%になる）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃主対象への攻撃力が120%まで上昇し、さらに残影を付与する。残影はウィシャデルの余震を受けると15%の確率で爆発し、周囲一定範囲内の敵全員に攻撃力の170%の物理ダメージを与え、1秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ビッグサプライズ！",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃主対象への攻撃力が120%まで上昇し、さらに残影を付与する。残影はウィシャデルの余震を受けると15%の確率で爆発し、周囲一定範囲内の敵全員に攻撃力の180%<@ba.talpu>（+10%）</>の物理ダメージを与え、1秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "ビッグサプライズ！",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常攻撃は<@ba.kw>地面上</>の敵に<@ba.kw>3回</>の範囲物理ダメージを与える（2回目以降は余震、与ダメージが攻撃力の50%になる）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃主対象への攻撃力が125%まで上昇し、さらに残影を付与する。残影はウィシャデルの余震を受けると15%の確率で爆発し、周囲一定範囲内の敵全員に攻撃力の175%の物理ダメージを与え、1秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ビッグサプライズ！",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃主対象への攻撃力が125%まで上昇し、さらに残影を付与する。残影はウィシャデルの余震を受けると15%の確率で爆発し、周囲一定範囲内の敵全員に攻撃力の185%<@ba.talpu>（+10%）</>の物理ダメージを与え、1秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "ビッグサプライズ！",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@main_atk_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@prob",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@bomb_atk_scale",
+                      "value": 1.85,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@range_radius",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1186,6 +1970,9 @@
       "phase": "PHASE_2",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10035_wisdel_wward"
   ],
   "patch_info": {}
 }

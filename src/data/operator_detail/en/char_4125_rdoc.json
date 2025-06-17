@@ -151,6 +151,24 @@
       "cost": 16
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4125_rdoc#1",
@@ -629,16 +647,721 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +200",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 200,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 0,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Field Medic",
+          "description": "Max HP +3%, attacks ignore 30 DEF",
+          "blackboard": {
+            "max_hp": 0.03,
+            "def_penetrate_fixed": 30
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Field Medic",
+          "description": "Max HP +3%, attacks ignore 50 <@ba.talpu>(+20)</> DEF",
+          "blackboard": {
+            "max_hp": 0.03,
+            "def_penetrate_fixed": 50
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Field Medic",
+          "description": "Max HP +6%, attacks ignore 60 DEF",
+          "blackboard": {
+            "max_hp": 0.06,
+            "def_penetrate_fixed": 60
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Field Medic",
+          "description": "Max HP +6%, attacks ignore 80 <@ba.talpu>(+20)</> DEF",
+          "blackboard": {
+            "max_hp": 0.06,
+            "def_penetrate_fixed": 80
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Field Medic",
+          "description": "Max HP +12%, attacks ignore 120 DEF",
+          "blackboard": {
+            "max_hp": 0.12,
+            "def_penetrate_fixed": 120
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Field Medic",
+          "description": "Max HP +12%, attacks ignore 140 <@ba.talpu>(+20)</> DEF",
+          "blackboard": {
+            "max_hp": 0.12,
+            "def_penetrate_fixed": 140
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Sympathicus Simulation",
+          "description": "When healing an allied unit, any healing in excess of that unit's Max HP will be converted into a rapidly-decaying <$ba.barrier>Barrier</>",
+          "blackboard": {
+            "dec_rate": -0.2,
+            "scale": 50
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Sympathicus Simulation",
+          "description": "When healing an allied unit, any healing in excess of that unit's Max HP will be converted into a decaying <$ba.barrier>Barrier</>",
+          "blackboard": {
+            "dec_rate": -0.1,
+            "scale": 50
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_rdoc",
       "moduleName": "Doc's Badge",
-      "desc": "Operator Doc has demonstrated a remarkable aptitude for rallying forward operators.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations. In witness whereof,\nThis badge is hereby conferred upon the above named, whether this band of soldiers needs such recognition notwithstanding."
+      "desc": "Operator Doc has demonstrated a remarkable aptitude for rallying forward operators.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations. In witness whereof,\nThis badge is hereby conferred upon the above named, whether this band of soldiers needs such recognition notwithstanding.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_rdoc",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_rdoc",
       "moduleName": "'The Third Power'",
-      "desc": "'I thank you for saving him. We would be glad to pay you, but... we cannot bring you with us.'\nSo elaborates an elderly Feline woman, sat in the shade of a wagon's canopy. Beside her lies a light and dirtied mattress, upon which a Lupo man about her age writhes, limbs as if tied in knots. But his face is peaceful enough, and his sweat has more or less subsided—effects of the medicine.\n'Don't worry, I promise I won't hold you up. I may even be able to help you further.'\nA tan-skinned middle-aged man continues to try and persuade him. He has no obvious racial characteristics, rendering him slightly mysterious.\n'Look, we get disasters on this route all the time. That's why it's all us old folks running it. Why should you have to risk it?'\n'There's a Catastrophe Messenger in town; I have a map he drew. Your destination should be within comms range of that city. If this is about safety, then all the more reason I should come with you.'\n'We... but we only have enough water and rations for ourselves. We don't mean to be stingy, but when supplies are this scarce we can't afford another mouth...'\n'I have my own provisions. We just need to follow the route on the map, and you won't run out of food or water. Add in my supplies, and we'll have even more flexibility.'\n'This old wagon of ours only sits two at the front. We couldn't possibly trouble you.'\n'I can sit with the cargo, I've no problem with that.'\n'Well—we'll unload as soon as we get there and there's nothing for us to haul back. If we leave first, you won't have a ride back to Siracusa for quite a while.'\n'Doesn't matter, I'll rendezvous with my friends in the city... I just insist on finding my way there alone, that's all. I know you mean well, madam, but you don't need to worry for me. I'm just as concerned for the two of you. Your health, I mean.'\n'......\n'*sigh*\n'I know what you're going for. We <i>do</i> see people like you now and then. But that city's people want for everything, and just the little we send them hardly even makes a difference sometimes. You'll see as much if you go; with bad luck, you'll die there yourself... In the end, whether it's the city folk or us outside, we're all good people living tough lives.\n'We're old. We're used to it. But why should you have to?'\nGustave Kateb lifts his head and gazes in the direction he's bound for. He cannot see anything resembling a road, and though he hears that it's a gargantuan structure that spits earth, smoke, and dust and is assembled from an array of nomadic plates, no city has yet entered his vision. Only the haze of sand and ash on the horizon, reflected in eyes of the same shade.\n'You're not wrong. I still know far too little about this place, and my past experience won't always apply. Even if I'm prepared physically, I have no basis to claim I'm ready mentally.\n'But time is short, and there's too much to do. Overthinking this gets me nowhere. So stop trying to talk me out of it and let's go.'\nThe city's name is Kazdel. To him, the place is completely unfamiliar. Even its name cannot be found in the land of his birth.\nBut that does not matter. He is a doctor. Whether at home or afar, he is always pressed to go to wherever needs him most."
+      "desc": "'I thank you for saving him. We would be glad to pay you, but... we cannot bring you with us.'\nSo elaborates an elderly Feline woman, sat in the shade of a wagon's canopy. Beside her lies a light and dirtied mattress, upon which a Lupo man about her age writhes, limbs as if tied in knots. But his face is peaceful enough, and his sweat has more or less subsided—effects of the medicine.\n'Don't worry, I promise I won't hold you up. I may even be able to help you further.'\nA tan-skinned middle-aged man continues to try and persuade him. He has no obvious racial characteristics, rendering him slightly mysterious.\n'Look, we get disasters on this route all the time. That's why it's all us old folks running it. Why should you have to risk it?'\n'There's a Catastrophe Messenger in town; I have a map he drew. Your destination should be within comms range of that city. If this is about safety, then all the more reason I should come with you.'\n'We... but we only have enough water and rations for ourselves. We don't mean to be stingy, but when supplies are this scarce we can't afford another mouth...'\n'I have my own provisions. We just need to follow the route on the map, and you won't run out of food or water. Add in my supplies, and we'll have even more flexibility.'\n'This old wagon of ours only sits two at the front. We couldn't possibly trouble you.'\n'I can sit with the cargo, I've no problem with that.'\n'Well—we'll unload as soon as we get there and there's nothing for us to haul back. If we leave first, you won't have a ride back to Siracusa for quite a while.'\n'Doesn't matter, I'll rendezvous with my friends in the city... I just insist on finding my way there alone, that's all. I know you mean well, madam, but you don't need to worry for me. I'm just as concerned for the two of you. Your health, I mean.'\n'......\n'*sigh*\n'I know what you're going for. We <i>do</i> see people like you now and then. But that city's people want for everything, and just the little we send them hardly even makes a difference sometimes. You'll see as much if you go; with bad luck, you'll die there yourself... In the end, whether it's the city folk or us outside, we're all good people living tough lives.\n'We're old. We're used to it. But why should you have to?'\nGustave Kateb lifts his head and gazes in the direction he's bound for. He cannot see anything resembling a road, and though he hears that it's a gargantuan structure that spits earth, smoke, and dust and is assembled from an array of nomadic plates, no city has yet entered his vision. Only the haze of sand and ash on the horizon, reflected in eyes of the same shade.\n'You're not wrong. I still know far too little about this place, and my past experience won't always apply. Even if I'm prepared physically, I have no basis to claim I'm ready mentally.\n'But time is short, and there's too much to do. Overthinking this gets me nowhere. So stop trying to talk me out of it and let's go.'\nThe city's name is Kazdel. To him, the place is completely unfamiliar. Even its name cannot be found in the land of his birth.\nBut that does not matter. He is a doctor. Whether at home or afar, he is always pressed to go to wherever needs him most.",
+      "typeIcon": "ins-y",
+      "uniEquipIcon": "uniequip_002_rdoc",
+      "typeName1": "INS",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_rdoc_1",
+        "uniequip_002_rdoc_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Can also be deployed on Ranged tiles",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "buildable_type",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Can also be deployed on Ranged tiles",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "buildable_type",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Max HP +15%, attacks ignore 150 DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Field Medic",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 150,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Max HP +15%, attacks ignore 170 <@ba.talpu>(+20)</> DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Field Medic",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 170,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Can also be deployed on Ranged tiles",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "buildable_type",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Max HP +18%, attacks ignore 180 DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Field Medic",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 180,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Max HP +18%, attacks ignore 200 <@ba.talpu>(+20)</> DEF",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Field Medic",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 200,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1092,5 +1815,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

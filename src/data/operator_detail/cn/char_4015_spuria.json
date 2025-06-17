@@ -169,6 +169,28 @@
       "cost": 12
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "hp_ratio",
+            "value": 0.01,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4015_spuria#1",
@@ -640,16 +662,666 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+24",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 24,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 45,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "装弹对比实验",
+          "description": "每次攻击时有30%概率触发下列效果之一：攻击变为二连击；目标<$ba.stun>晕眩</>0.5秒；攻击无视目标防御力的60%",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.3,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "def_penetrate",
+              "value": 0.6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "装弹对比实验",
+          "description": "每次攻击时有50%概率触发下列效果之一：攻击变为二连击；目标<$ba.stun>晕眩</>1秒；攻击无视目标防御力的60%",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "def_penetrate",
+              "value": 0.6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "装弹对比实验",
+          "description": "每次攻击时有70%概率触发下列效果之一：攻击变为二连击；目标<$ba.stun>晕眩</>1秒；攻击无视目标防御力的80%",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.7,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "def_penetrate",
+              "value": 0.8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_spuria",
       "moduleName": "空构证章",
-      "desc": "干员空构擅长以出人意料的方式作战\n根据外勤部门决议\n在外勤任务中划分为特种干员，行使怪杰职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员空构擅长以出人意料的方式作战\n根据外勤部门决议\n在外勤任务中划分为特种干员，行使怪杰职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_spuria",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_spuria",
       "moduleName": "无人机喷涂套装",
-      "desc": "身后传来异样的声响，蕾缪安转身举起铳，指向声响的来源。\n是一架无人机。在看到这架在气流中嗡响着的“精密仪器”的一瞬间，蕾缪安就猜到了它的主人。\n“这又是什么把戏？”略带无奈地叹了口气之后，蕾缪安盯着无人机的镜头，收起了铳。\n“你今天没有来找我，是我赢了。\n“连续九十九天，看来这已经是你的极限了，学姐。”无人机传来的声音略带戏谑。\n“时间有限，我可没那么多闲工夫一直陪着问题少女玩。\n“所以今天也是由这架小可爱替你来上课吗，莉雅？”蕾缪安继续向教学楼走去。被这架她称之为“小可爱”的无人机跟随，已经是她习以为常的事了。\n透过无人机的摄像头，斯普莉雅观察着这位有着粉色长发的萨科塔。在校长和老师们都放弃督促自己去上课以后，只有这个粉发萨科塔一直坚持做着“叫斯普莉雅去上课”这件无聊的事情。\n该怎么说呢？很有趣，很值得观察。\n从传输而来的画面中，斯普莉雅耐心地观察着粉发萨科塔的一举一动，观察着她今天又将如何找到自己，或是找到自己为她准备的“小礼物”。\n出神只有一瞬，“砰”的一声传来，斯普莉雅意识到，无人机又被粉发萨科塔给打坏了。\n“之前的无人机，是全息影像，这个才是真正的‘小可爱’吧？好技术可不是这么用的。\n“别躲了，想要观察我，不如站到我跟前来，大大方方看，仔仔细细看。”蕾缪安再次收起了铳。\n“啊啊啊，果然还是骗不过学姐吗......”斯普莉雅从屋顶跃下，一副用尽气力的样子，躺倒在蕾缪安身边的长椅上。\n“不过，还是我赢了。\n“而且，学姐输了两次。一次是没能坚持叫我去上课，另一次，是用铳打坏了我准备送给你的小礼物。”\n“哦？\n“要不，你再看看周围？”蕾缪安的话音刚落，一阵清亮的哨声传来，列队整齐的学生们，人人头顶着七八个冰淇淋球从眼前跑过，斯普莉雅一脸困惑。\n“该上课了，小莉雅。今天的社会实践课内容，是在户外护送甜品。”粉发的萨科塔蹲在长椅边，斯普莉雅转过头去，想要避开她的目光，却被炽烈的阳光闪得目眩。\n吵闹的街道中，斯普莉雅只听得清蕾缪安的低语。\n“把‘小可爱’修好以后再送给我，记得喷上我喜欢的颜色。”"
+      "desc": "身后传来异样的声响，蕾缪安转身举起铳，指向声响的来源。\n是一架无人机。在看到这架在气流中嗡响着的“精密仪器”的一瞬间，蕾缪安就猜到了它的主人。\n“这又是什么把戏？”略带无奈地叹了口气之后，蕾缪安盯着无人机的镜头，收起了铳。\n“你今天没有来找我，是我赢了。\n“连续九十九天，看来这已经是你的极限了，学姐。”无人机传来的声音略带戏谑。\n“时间有限，我可没那么多闲工夫一直陪着问题少女玩。\n“所以今天也是由这架小可爱替你来上课吗，莉雅？”蕾缪安继续向教学楼走去。被这架她称之为“小可爱”的无人机跟随，已经是她习以为常的事了。\n透过无人机的摄像头，斯普莉雅观察着这位有着粉色长发的萨科塔。在校长和老师们都放弃督促自己去上课以后，只有这个粉发萨科塔一直坚持做着“叫斯普莉雅去上课”这件无聊的事情。\n该怎么说呢？很有趣，很值得观察。\n从传输而来的画面中，斯普莉雅耐心地观察着粉发萨科塔的一举一动，观察着她今天又将如何找到自己，或是找到自己为她准备的“小礼物”。\n出神只有一瞬，“砰”的一声传来，斯普莉雅意识到，无人机又被粉发萨科塔给打坏了。\n“之前的无人机，是全息影像，这个才是真正的‘小可爱’吧？好技术可不是这么用的。\n“别躲了，想要观察我，不如站到我跟前来，大大方方看，仔仔细细看。”蕾缪安再次收起了铳。\n“啊啊啊，果然还是骗不过学姐吗......”斯普莉雅从屋顶跃下，一副用尽气力的样子，躺倒在蕾缪安身边的长椅上。\n“不过，还是我赢了。\n“而且，学姐输了两次。一次是没能坚持叫我去上课，另一次，是用铳打坏了我准备送给你的小礼物。”\n“哦？\n“要不，你再看看周围？”蕾缪安的话音刚落，一阵清亮的哨声传来，列队整齐的学生们，人人头顶着七八个冰淇淋球从眼前跑过，斯普莉雅一脸困惑。\n“该上课了，小莉雅。今天的社会实践课内容，是在户外护送甜品。”粉发的萨科塔蹲在长椅边，斯普莉雅转过头去，想要避开她的目光，却被炽烈的阳光闪得目眩。\n吵闹的街道中，斯普莉雅只听得清蕾缪安的低语。\n“把‘小可爱’修好以后再送给我，记得喷上我喜欢的颜色。”",
+      "typeIcon": "gee-x",
+      "uniEquipIcon": "uniequip_002_spuria",
+      "typeName1": "GEE",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_spuria_1",
+        "uniequip_002_spuria_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "生命值高于80%时，技力自然回复速度+0.25/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 35,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 31,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "生命值高于80%时，技力自然回复速度+0.25/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "每次攻击时有70%概率触发下列效果之一：攻击变为二连击；目标晕眩1秒；攻击无视目标防御力的80%；且触发时当次攻击的攻击力提升至110%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "装弹对比实验",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "生命值高于80%时，技力自然回复速度+0.25/秒",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "每次攻击时有70%概率触发下列效果之一：攻击变为二连击；目标晕眩1秒；攻击无视目标防御力的80%；且触发时当次攻击的攻击力提升至115%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "装弹对比实验",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1111,5 +1783,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

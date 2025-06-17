@@ -170,6 +170,7 @@
       "cost": 33
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_416_zumama#1",
@@ -751,26 +752,1388 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+27",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 27,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 70,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "勇冠三军",
+          "description": "生命值高于一半时，攻击造成108%伤害；生命值不高于一半时，获得10%的<$ba.protect>庇护</>",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.08,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "勇冠三军",
+          "description": "生命值高于一半时，攻击造成110%<@ba.talpu>（+2%）</>伤害；生命值不高于一半时，获得12%<@ba.talpu>（+2%）</>的<$ba.protect>庇护</>",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.12,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "勇冠三军",
+          "description": "生命值高于一半时，攻击造成115%伤害；生命值不高于一半时，获得20%的<$ba.protect>庇护</>",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "勇冠三军",
+          "description": "生命值高于一半时，攻击造成117%<@ba.talpu>（+2%）</>伤害；生命值不高于一半时，获得22%<@ba.talpu>（+2%）</>的<$ba.protect>庇护</>",
+          "blackboard": [
+            {
+              "key": "hp_ratio",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "damage_resistance",
+              "value": 0.22,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.17,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "愈战愈勇",
+          "description": "阻挡敌人时技力回复速度+0.2/秒",
+          "blackboard": [
+            {
+              "key": "sp_recovery_per_sec",
+              "value": 0.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_zumama",
       "moduleName": "森蚺证章",
-      "desc": "干员森蚺擅长在抵挡伤害的同时迎战敌人\n根据外勤部门决议\n在外勤任务中划分为重装干员，行使决战者职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员森蚺擅长在抵挡伤害的同时迎战敌人\n根据外勤部门决议\n在外勤任务中划分为重装干员，行使决战者职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_zumama",
       "moduleName": "祖玛玛的工具箱",
-      "desc": "考评表编号：RDLEDSG03\n干员代号：森蚺\n姓名：祖玛玛\n已报到时间：半年\n......\n参与项目：\n1.巨型机械“暴躁铁皮”的设计、研发、零件生产与组装。\n2.训练场全新能量发生装置的检测、修复与升级。\n3.遥控无人机群武器挂载方案的改进设计。\n4.罗德岛本舰自动航行系统的检修。\n5.部分超级机械改型的自研计划现已通过审核，并在工程部立项。\n......\n12.智能作业平台Lancet-2的日常维护、涂装以及情绪的交流与疏导（备注：此为干员自己申请并在工程部未正式授权的状态下执行，考虑到Lancet-2对森蚺的行为并不排斥，故工程部不过多干涉）。\n......\n综合评定：\n干员森蚺入职工程部以来，参与多个项目，在各方面均有不俗表现，现已初步具备独立研发作业的能力。\n......\n负责人补充（根据口述直录）：\n哎呀，每次考评都要搞这么正式吗，很耽误工作的......我徒弟的话，值得培养，刚学会检测微型电容元件的性能，就自己摸索着把整块精密面板都装好了，很有天赋，这点和我特别像！而且还勤奋，这半年已经把本舰上所有工程学相关的藏书都看了，还到处找人讨论，其实真正厉害的技术多半都不会写在书上啦，她要学的还有很多。至于她为什么这么急切，我哪儿知道，可能是来罗德岛之后，还没惊掉过下巴吧......不是说她人生一共有两次重要的启蒙，一次是小时候目睹移动城市经过，一次是在阿卡胡拉看见会说话的Lancet-2。我能看出她的期待，对机械的，对自己的，这意味着某种可能性......不远的将来，她应该能亲手造出让她自己也震惊的机械吧，那也许是能引领泰拉技术革新的造物。到时候我把工程部部长的位置让给她也不是没可能......最后一句是开玩笑的不要记下来。\n\n日期：12月13日\n核准人：可露希尔"
+      "desc": "考评表编号：RDLEDSG03\n干员代号：森蚺\n姓名：祖玛玛\n已报到时间：半年\n......\n参与项目：\n1.巨型机械“暴躁铁皮”的设计、研发、零件生产与组装。\n2.训练场全新能量发生装置的检测、修复与升级。\n3.遥控无人机群武器挂载方案的改进设计。\n4.罗德岛本舰自动航行系统的检修。\n5.部分超级机械改型的自研计划现已通过审核，并在工程部立项。\n......\n12.智能作业平台Lancet-2的日常维护、涂装以及情绪的交流与疏导（备注：此为干员自己申请并在工程部未正式授权的状态下执行，考虑到Lancet-2对森蚺的行为并不排斥，故工程部不过多干涉）。\n......\n综合评定：\n干员森蚺入职工程部以来，参与多个项目，在各方面均有不俗表现，现已初步具备独立研发作业的能力。\n......\n负责人补充（根据口述直录）：\n哎呀，每次考评都要搞这么正式吗，很耽误工作的......我徒弟的话，值得培养，刚学会检测微型电容元件的性能，就自己摸索着把整块精密面板都装好了，很有天赋，这点和我特别像！而且还勤奋，这半年已经把本舰上所有工程学相关的藏书都看了，还到处找人讨论，其实真正厉害的技术多半都不会写在书上啦，她要学的还有很多。至于她为什么这么急切，我哪儿知道，可能是来罗德岛之后，还没惊掉过下巴吧......不是说她人生一共有两次重要的启蒙，一次是小时候目睹移动城市经过，一次是在阿卡胡拉看见会说话的Lancet-2。我能看出她的期待，对机械的，对自己的，这意味着某种可能性......不远的将来，她应该能亲手造出让她自己也震惊的机械吧，那也许是能引领泰拉技术革新的造物。到时候我把工程部部长的位置让给她也不是没可能......最后一句是开玩笑的不要记下来。\n\n日期：12月13日\n核准人：可露希尔",
+      "typeIcon": "hes-x",
+      "uniEquipIcon": "uniequip_002_zumama",
+      "typeName1": "HES",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_zumama_1",
+        "uniequip_002_zumama_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "缓慢回复技力，只有阻挡敌人时恢复技力回复速度",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 95,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 80,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "缓慢回复技力，只有阻挡敌人时恢复技力回复速度",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "阻挡敌人时技力回复速度+0.4/秒",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "愈战愈勇",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 105,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 85,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.8,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "缓慢回复技力，只有阻挡敌人时恢复技力回复速度",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "阻挡敌人时技力回复速度+0.55/秒",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "愈战愈勇",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.55,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_zumama",
       "moduleName": "“小小的丑东西”",
-      "desc": "那些驶过荒野的巨大东西到底是什么？祖玛玛百思不得其解，三天没有睡好觉。\n嘉维尔看着祖玛玛厚重的黑眼圈，一边表示了适当的关切，一边挥出了如同往常的毫无保留的一拳，祖玛玛被打倒在地，不过，这次她却没有急着站起来。\n“祖鲁扎克爷爷说那是移动城市，移动城市是什么？”祖玛玛看向蓝色的天空，向好友抛出了这个困扰了自己整整三天的问题，她从来没有这么困惑过，连树上长出了从没见过的蘑菇都只让祖玛玛想了一天半而已。\n嘉维尔给出了一个自认为充满智慧的回答，一句从祖鲁扎克爷爷那里听来的谚语：“因为所以，自有道理。”她活动着自己的手腕，“祖玛玛，你休息够了没？我们该继续了！”\n祖玛玛突然感到有点无聊，她爬了起来，走向移动城市曾经驶过的地方。移动城市的轮廓仍然能隐隐约约看见，但眼睛所跨越的距离比腿脚远得多，一个孩子的脚步怎么能追上行驶的机械？直到夕阳落下，祖玛玛感觉自己和移动城市之间的距离也没有缩短分毫。\n她有些丧气，沮丧地坐在地上，却被什么东西硌了一下，她从屁股底下摸出来一个奇奇怪怪的金属圈，祖玛玛曾瞥见部族里最有见识的大哥拿出过差不多的东西，是叫什么来着？“锣帽”？也许是“骡猫”？\n祖玛玛把它放进了自己的口袋。这个小玩意可能根本就不是从移动城市上掉下来的，可能只是一位粗心的旅人落下的东西，但祖玛玛此时此刻就是很喜欢它。\n她开始收集这些废铜烂铁和怪异零件，并不择手段地把它们组合在一起。一开始是用线捆住，后来是用胶水粘，直到有一天，祖玛玛从一支过路的商队那里听说了什么是焊接。\n终于有一天，这个奇怪的小玩意从祖玛玛的手中诞生了，嘉维尔和特米米的评价都是“很丑”，但祖玛玛还是很喜欢它。\n祖玛玛把它捧在手心，又来到了曾经看到移动城市的那个地方。那座移动城市早已不见踪影，但祖玛玛总觉得自己还能感觉到它行驶所带来的震动。\n一个奇怪的黎博利突然出现在了祖玛玛身边：“小姑娘，你在想什么？”\n祖玛玛紧紧捏着自己手中的这个小小的丑东西，把自己的手捏得生疼。\n“我想让它动起来。”"
+      "desc": "那些驶过荒野的巨大东西到底是什么？祖玛玛百思不得其解，三天没有睡好觉。\n嘉维尔看着祖玛玛厚重的黑眼圈，一边表示了适当的关切，一边挥出了如同往常的毫无保留的一拳，祖玛玛被打倒在地，不过，这次她却没有急着站起来。\n“祖鲁扎克爷爷说那是移动城市，移动城市是什么？”祖玛玛看向蓝色的天空，向好友抛出了这个困扰了自己整整三天的问题，她从来没有这么困惑过，连树上长出了从没见过的蘑菇都只让祖玛玛想了一天半而已。\n嘉维尔给出了一个自认为充满智慧的回答，一句从祖鲁扎克爷爷那里听来的谚语：“因为所以，自有道理。”她活动着自己的手腕，“祖玛玛，你休息够了没？我们该继续了！”\n祖玛玛突然感到有点无聊，她爬了起来，走向移动城市曾经驶过的地方。移动城市的轮廓仍然能隐隐约约看见，但眼睛所跨越的距离比腿脚远得多，一个孩子的脚步怎么能追上行驶的机械？直到夕阳落下，祖玛玛感觉自己和移动城市之间的距离也没有缩短分毫。\n她有些丧气，沮丧地坐在地上，却被什么东西硌了一下，她从屁股底下摸出来一个奇奇怪怪的金属圈，祖玛玛曾瞥见部族里最有见识的大哥拿出过差不多的东西，是叫什么来着？“锣帽”？也许是“骡猫”？\n祖玛玛把它放进了自己的口袋。这个小玩意可能根本就不是从移动城市上掉下来的，可能只是一位粗心的旅人落下的东西，但祖玛玛此时此刻就是很喜欢它。\n她开始收集这些废铜烂铁和怪异零件，并不择手段地把它们组合在一起。一开始是用线捆住，后来是用胶水粘，直到有一天，祖玛玛从一支过路的商队那里听说了什么是焊接。\n终于有一天，这个奇怪的小玩意从祖玛玛的手中诞生了，嘉维尔和特米米的评价都是“很丑”，但祖玛玛还是很喜欢它。\n祖玛玛把它捧在手心，又来到了曾经看到移动城市的那个地方。那座移动城市早已不见踪影，但祖玛玛总觉得自己还能感觉到它行驶所带来的震动。\n一个奇怪的黎博利突然出现在了祖玛玛身边：“小姑娘，你在想什么？”\n祖玛玛紧紧捏着自己手中的这个小小的丑东西，把自己的手捏得生疼。\n“我想让它动起来。”",
+      "typeIcon": "hes-y",
+      "uniEquipIcon": "uniequip_003_zumama",
+      "typeName1": "HES",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_zumama_1",
+        "uniequip_003_zumama_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 80,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.999,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "不阻挡敌人时无法自我回复技力，阻挡敌人时恢复技力回复速度且攻击力+15%，防御力+15%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 95,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.999,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "不阻挡敌人时无法自我回复技力，阻挡敌人时恢复技力回复速度且攻击力+15%，防御力+15%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "生命值高于一半时，攻击造成120%伤害；生命值不高于一半时，获得25%的<$ba.protect>庇护</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "勇冠三军",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "生命值高于一半时，攻击造成122%<@ba.talpu>（+2%）</>伤害；生命值不高于一半时，获得27%<@ba.talpu>（+2%）</>的<$ba.protect>庇护</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "勇冠三军",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.22,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 85,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 110,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -0.999,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "不阻挡敌人时无法自我回复技力，阻挡敌人时恢复技力回复速度且攻击力+15%，防御力+15%",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "生命值高于一半时，攻击造成123%伤害；生命值不高于一半时，获得28%的<$ba.protect>庇护</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "勇冠三军",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.28,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.23,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "生命值高于一半时，攻击造成125%<@ba.talpu>（+2%）</>伤害；生命值不高于一半时，获得30%<@ba.talpu>（+2%）</>的<$ba.protect>庇护</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "勇冠三军",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_004_zumama",
       "moduleName": "森蚺特限证章",
-      "desc": "森蚺已获得特别认证许可\n根据外勤部门决议\n在生息演算行动中以改良策略应对敌人\n特别颁发此证章\n以兹证明\n“很简单，摁下按钮，那座山就会被轰碎。”"
+      "desc": "森蚺已获得特别认证许可\n根据外勤部门决议\n在生息演算行动中以改良策略应对敌人\n特别颁发此证章\n以兹证明\n“很简单，摁下按钮，那座山就会被轰碎。”",
+      "typeIcon": "ra-a",
+      "uniEquipIcon": "uniequip_004_zumama",
+      "typeName1": "RA",
+      "typeName2": "A",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 280,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 80,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "在<@ba.kw>生息演算</>中，拥有食物效果时可以回复技力，且开启技能时会吸引大范围的敌人走向自身所在位置",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "range_radius",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 340,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 110,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "在<@ba.kw>生息演算</>中，拥有食物效果时可以回复技力，且开启技能时会吸引大范围的敌人走向自身所在位置",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "range_radius",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_target",
+                      "value": 128,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "阻挡敌人时技力回复速度+0.2/秒；在<@ba.kw>生息演算</>中，阻挡敌人时技力回复速度+0.4/秒，技能期间阻挡数+1且可同时攻击阻挡的所有敌人，被阻挡的敌人受到20%的<$ba.physicfragile>【物理脆弱】</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "#",
+                  "name": "愈战愈勇",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 380,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 130,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "在<@ba.kw>生息演算</>中，拥有食物效果时可以回复技力，且开启技能时会吸引大范围的敌人走向自身所在位置",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "sp_recover_ratio",
+                      "value": -1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "range_radius",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "block_cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_target",
+                      "value": 128,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "阻挡敌人时技力回复速度+0.2/秒；在<@ba.kw>生息演算</>中，阻挡敌人时技力回复速度+0.4/秒，技能期间阻挡数+2且可同时攻击阻挡的所有敌人，被阻挡的敌人受到40%的<$ba.physicfragile>【物理脆弱】</>",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "#",
+                  "name": "愈战愈勇",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1232,5 +2595,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

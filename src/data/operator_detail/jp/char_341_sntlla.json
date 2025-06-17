@@ -151,6 +151,7 @@
       "cost": 33
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_341_sntlla#1",
@@ -625,16 +626,655 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+32",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 32,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "寒地の民",
+          "description": "配置から20秒後、攻撃力+10%、<$ba.buffres>レジスト</>状態になる",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "寒地の民",
+          "description": "配置から20秒後、攻撃力+13%<@ba.talpu>（+3%）</>、<$ba.buffres>レジスト</>状態になる",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.13,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "寒地の民",
+          "description": "配置から20秒後、攻撃力+15%、<$ba.buffres>レジスト</>状態になる",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "寒地の民",
+          "description": "配置から20秒後、攻撃力+18%<@ba.talpu>（+3%）</>、<$ba.buffres>レジスト</>状態になる",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.18,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_sntlla",
       "moduleName": "サンタラの記章",
-      "desc": "サンタラは複数の敵に対するアーツ攻撃に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、拡散術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "サンタラは複数の敵に対するアーツ攻撃に秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、拡散術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_sntlla",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_sntlla",
       "moduleName": "「アイス・ブレイジャー」",
-      "desc": "サンタラは炎が上がる酒を一気に飲み干すと、冷たい雪の結晶を伴う息を一つ吐く。\nその中に滾る炎熱に、彼女はいささか驚きを隠せずにいた。\nサーミにはこのようなものは存在しないのだ。\n彼女がサーミを去ってからまだそれほど時間は経っておらず、ロドスの人々と特別親しくなったわけでもない。\n急性の鉱石病を発症したことで休養が必要にならなければ、ここに留まることもなかっただろう。\nましてや、艦内のバーでスペシャルカクテルを味わうなど考えられないことだった。\nそんな彼女の隣に、決して歓迎できない客が座った。ウルサス人の男性だ。\n彼はサンタラをよそ者扱いすることなく、情熱的な挨拶をしてきた。\n無論それは、サンタラからしてみれば、粗野なウルサス人の独り言に過ぎないのだが。\nロドスにいる時はこちらからウルサス人に手出ししないとは約束していたが、だからといって彼女には、ウルサス人に対する嫌悪感を隠すつもりもない。\nそれゆえに、周囲の気温は瞬時に数度下がった。\nウルサス人のほうも何かを察したようで、それ以上話しかけようとはせずにグレープジュースを注文し、そしてサンタラにもスペシャルカクテルを注文して寄越した。\nしかし、彼女はそれを受け入れず――\nバーテンダーがカクテルのグラスから手を離した瞬間、その燃えるカクテルは氷へ姿を変えてしまった。\nウルサス人はサンタラの前に置かれたカクテルを手にとると、なんとかそれを融かして飲める状態にしようとした。\nけれど、それは難しいことだった。\n隣にいるシャーマンが、絶えずグラスの中に固まった酒の温度を下げ続けているとなればなおさらだ。\n偶然の出会いは、今や二人の力比べの場と化していた。\n氷を融かさんとするウルサス人と、氷の中に閉じこもってしまったフェリーン。\n二人の競い合いは、バーの常連客が皆店を出て、バーテンダーが閉店準備を始めてもなお続いていた。\n見かねたバーテンダーは、二人を追い出して店を閉めるために、凍った酒の入ったグラスを取り上げ……\n静かな戦いは、一度幕を下ろしたのである。\nそこで、サンタラは何も言わずに立ち去ろうとしたが、「ウルサス人」は突然彼女を呼び止めた。\n――その声は、サンタラがよく知るものだ。\nそれはロドスで初めてできた友人……とあるフェリーンのオペレーターの声だった。\nサンタラが振り返ると、声の主は変装を解き、フェリーンの耳をあらわにした。\n彼女は性別も、性格も、種族すらをも偽っていたのだ。\nサンタラは彼女がこうしたことに長けているのを知ってはいたが、決して受け入れられない悪ふざけに感じた。\n「あのお酒、私からなら受け取ってくれてたのかしら？」\nそう聞くと、彼女はどこからともなくカクテルを取り出した。その表面には冷たく青い炎が揺れている。\n「逆に言うと、私がウルサス人だったら、友達になることすらできなかったってこと？」\n「へーえ、あなたってそういう人なのね、サンタラ。あの国から受けた苦しみを、ただ耳が丸いだけの知らない善人にもぶつけるつもりなの？」\nサンタラは一瞬友人の無責任な悪ふざけを責めようとしたが、相手の湿った髪の毛を見て自分の行いを振り返り反論を呑み込んだ。\n胸に滾る憎悪はそう易々と収まるものではないが、彼女は理性的な人間なのだ。\n「一口どう？」と、フェリーンはカクテルを半分ほど喉に流してから、青色の炎を吐き出し、中身が半分残ったグラスをサンタラへと手渡す。\nグラスを受け取ったサンタラは、それを一気に飲み干した。\n彼女が再び口を開いたとき、鮮やかな炎が一瞬だけ宙を舞った。"
+      "desc": "サンタラは炎が上がる酒を一気に飲み干すと、冷たい雪の結晶を伴う息を一つ吐く。\nその中に滾る炎熱に、彼女はいささか驚きを隠せずにいた。\nサーミにはこのようなものは存在しないのだ。\n彼女がサーミを去ってからまだそれほど時間は経っておらず、ロドスの人々と特別親しくなったわけでもない。\n急性の鉱石病を発症したことで休養が必要にならなければ、ここに留まることもなかっただろう。\nましてや、艦内のバーでスペシャルカクテルを味わうなど考えられないことだった。\nそんな彼女の隣に、決して歓迎できない客が座った。ウルサス人の男性だ。\n彼はサンタラをよそ者扱いすることなく、情熱的な挨拶をしてきた。\n無論それは、サンタラからしてみれば、粗野なウルサス人の独り言に過ぎないのだが。\nロドスにいる時はこちらからウルサス人に手出ししないとは約束していたが、だからといって彼女には、ウルサス人に対する嫌悪感を隠すつもりもない。\nそれゆえに、周囲の気温は瞬時に数度下がった。\nウルサス人のほうも何かを察したようで、それ以上話しかけようとはせずにグレープジュースを注文し、そしてサンタラにもスペシャルカクテルを注文して寄越した。\nしかし、彼女はそれを受け入れず――\nバーテンダーがカクテルのグラスから手を離した瞬間、その燃えるカクテルは氷へ姿を変えてしまった。\nウルサス人はサンタラの前に置かれたカクテルを手にとると、なんとかそれを融かして飲める状態にしようとした。\nけれど、それは難しいことだった。\n隣にいるシャーマンが、絶えずグラスの中に固まった酒の温度を下げ続けているとなればなおさらだ。\n偶然の出会いは、今や二人の力比べの場と化していた。\n氷を融かさんとするウルサス人と、氷の中に閉じこもってしまったフェリーン。\n二人の競い合いは、バーの常連客が皆店を出て、バーテンダーが閉店準備を始めてもなお続いていた。\n見かねたバーテンダーは、二人を追い出して店を閉めるために、凍った酒の入ったグラスを取り上げ……\n静かな戦いは、一度幕を下ろしたのである。\nそこで、サンタラは何も言わずに立ち去ろうとしたが、「ウルサス人」は突然彼女を呼び止めた。\n――その声は、サンタラがよく知るものだ。\nそれはロドスで初めてできた友人……とあるフェリーンのオペレーターの声だった。\nサンタラが振り返ると、声の主は変装を解き、フェリーンの耳をあらわにした。\n彼女は性別も、性格も、種族すらをも偽っていたのだ。\nサンタラは彼女がこうしたことに長けているのを知ってはいたが、決して受け入れられない悪ふざけに感じた。\n「あのお酒、私からなら受け取ってくれてたのかしら？」\nそう聞くと、彼女はどこからともなくカクテルを取り出した。その表面には冷たく青い炎が揺れている。\n「逆に言うと、私がウルサス人だったら、友達になることすらできなかったってこと？」\n「へーえ、あなたってそういう人なのね、サンタラ。あの国から受けた苦しみを、ただ耳が丸いだけの知らない善人にもぶつけるつもりなの？」\nサンタラは一瞬友人の無責任な悪ふざけを責めようとしたが、相手の湿った髪の毛を見て自分の行いを振り返り反論を呑み込んだ。\n胸に滾る憎悪はそう易々と収まるものではないが、彼女は理性的な人間なのだ。\n「一口どう？」と、フェリーンはカクテルを半分ほど喉に流してから、青色の炎を吐き出し、中身が半分残ったグラスをサンタラへと手渡す。\nグラスを受け取ったサンタラは、それを一気に飲み干した。\n彼女が再び口を開いたとき、鮮やかな炎が一瞬だけ宙を舞った。",
+      "typeIcon": "spc-y",
+      "uniEquipIcon": "uniequip_002_sntlla",
+      "typeName1": "SPC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_sntlla_1",
+        "uniequip_002_sntlla_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "cost",
+              "value": -8,
+              "valueStr": null
+            },
+            {
+              "key": "max_hp",
+              "value": 80,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "配置コスト<@ba.kw>減少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "敵に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "cost",
+              "value": -8,
+              "valueStr": null
+            },
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "配置コスト<@ba.kw>減少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "敵に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置から15秒後、攻撃力+18%、<$ba.buffres>レジスト</>状態になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "寒地の民",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置から15秒後、攻撃力+21%<@ba.talpu>（+3%）</>、<$ba.buffres>レジスト</>状態になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "寒地の民",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "cost",
+              "value": -8,
+              "valueStr": null
+            },
+            {
+              "key": "max_hp",
+              "value": 155,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "配置コスト<@ba.kw>減少</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "敵に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置から15秒後、攻撃力+20%、自身が<$ba.buffres>レジスト</>状態になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "寒地の民",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置から15秒後、攻撃力+23%<@ba.talpu>（+3%）</>、<$ba.buffres>レジスト</>状態になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "寒地の民",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "one_minus_status_resistance",
+                      "value": -0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1088,5 +1728,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

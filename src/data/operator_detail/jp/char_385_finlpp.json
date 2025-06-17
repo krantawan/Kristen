@@ -151,6 +151,28 @@
       "cost": 19
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "heal_scale",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "治療範囲が広く、遠く離れた味方を治療時、HP回復効果が<@ba.kw>{heal_scale:0%}</>になる",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_385_finlpp#1",
@@ -617,16 +639,521 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+23",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 23,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 35,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "クイックメンド",
+          "description": "味方を回復後、対象に2秒の<$ba.buffres>レジスト</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "status_resistance[limit]",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "クイックメンド",
+          "description": "味方を回復後、対象に4秒の<$ba.buffres>レジスト</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "status_resistance[limit]",
+              "value": 4,
+              "valueStr": null
+            },
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_finlpp",
       "moduleName": "セイリュウの記章",
-      "desc": "セイリュウは広範囲の治療を行うと同時に、有益な効果を付与することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、療養師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "セイリュウは広範囲の治療を行うと同時に、有益な効果を付与することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、療養師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_finlpp",
       "moduleName": "「江河の唄」",
-      "desc": "どこでなくしたのか、炎国での任務時になんとなく買ったお守りが見当たらなくなった。現地の人が、お寺でご加護を授かったものだと得意げに語っていたお守りだ。\nどうしたものかと悩んでいると、「セイリュウ」というオペレーターに訊ねてみてはどうかとアドバイスされた。セイリュウ……あまり印象にない名前だが、後方支援部の遺失物取り扱い担当の新人だろうか？\n宿舎を訪ねてみたが、どうやら不在のようだ……\n会議室にもいない……\n結局、私は大浴場で彼女を見つけた。点検の仕事を終えてちょうど――入浴中のようだ。外にまでご機嫌な歌声が響いており、なんとも見事な高音だった。しばらく待っていたが……こんなに長湯して、気分が悪くならないのだろうか？\n「ごめんね、待たせちゃったかな。」\n「ロドスの汚染物質排出処理自体は合格だけど、それに使うろ過設備の清掃がちょっと疎かになっちゃってたんだ。どのエリアにも堆積物が溜まってて、その処理に何度も行き来する必要があったから、全部終わってやっとお風呂に……ふふっ。」\n「あ、お目当てのお守りは……えーっと……」\n彼女が取り出した袋を開けると、私のお守りが目に入った。他にも、ビー玉やヘアピン、試験管、果ては挿弾子までもが入っているようだった。\n「これ……全部ろ過設備の中で見つけたの？」\n「そうだよ。最初はどれも泥だらけになっちゃってたけど、ちゃんと洗ってあるから安心して。」\n私は「どうしてそんなところに？」と言いかけてなんとか言葉を呑み込んだ。それは、自分自身に問いかけるべきだろう……\n後に、エンジニア部の友人と当時の故障点検について話す機会があった。問題はまさに汚染物質排出システムの詰まりにあったのだが、セイリュウが清掃しなければ誰も気付かないところだったらしい。\n入職してたった一日のセイリュウが、一人で清掃任務をすべて引き受け、ドロドロになったろ過設備の中に丸二日もこもっていたと聞いて驚いた。\nそしてその詰まりの「元凶」が、私たちがうっかりなくしてしまった「宝物」の数々だったという事実には、頭の上がらない思いだった。\nそんなことを考えていると、私が感謝の言葉を述べたときのセイリュウの恥ずかしそうな笑顔が浮かんだ。彼女はただ「これからは気をつけてね」と言って、いくつかの注意事項を述べただけだった。\n蛇口をひねったり、スイッチを押したりといった動作一つで、水はいとも容易くすべてを流し去ってしまう。そして水がすべてを流し去るからこそ、我々は見えない場所に堆積していく汚物に気付くことができないのだ。\nセイリュウはロドスの艦上汚染物質排出関連の業務を担当することになったらしい。なにかお返しがしたかったが、彼女の好みが分からなかったので、石鹸を買ってプレゼントした。しかし彼女の元に届いた石鹸は一箱だけではなかったらしい。それだけ多くの者が、彼女に感謝の気持ちを伝えたかったということだろう。\n\n――セイリュウの定期評定にて、あるオペレーターの口述まとめ。"
+      "desc": "どこでなくしたのか、炎国での任務時になんとなく買ったお守りが見当たらなくなった。現地の人が、お寺でご加護を授かったものだと得意げに語っていたお守りだ。\nどうしたものかと悩んでいると、「セイリュウ」というオペレーターに訊ねてみてはどうかとアドバイスされた。セイリュウ……あまり印象にない名前だが、後方支援部の遺失物取り扱い担当の新人だろうか？\n宿舎を訪ねてみたが、どうやら不在のようだ……\n会議室にもいない……\n結局、私は大浴場で彼女を見つけた。点検の仕事を終えてちょうど――入浴中のようだ。外にまでご機嫌な歌声が響いており、なんとも見事な高音だった。しばらく待っていたが……こんなに長湯して、気分が悪くならないのだろうか？\n「ごめんね、待たせちゃったかな。」\n「ロドスの汚染物質排出処理自体は合格だけど、それに使うろ過設備の清掃がちょっと疎かになっちゃってたんだ。どのエリアにも堆積物が溜まってて、その処理に何度も行き来する必要があったから、全部終わってやっとお風呂に……ふふっ。」\n「あ、お目当てのお守りは……えーっと……」\n彼女が取り出した袋を開けると、私のお守りが目に入った。他にも、ビー玉やヘアピン、試験管、果ては挿弾子までもが入っているようだった。\n「これ……全部ろ過設備の中で見つけたの？」\n「そうだよ。最初はどれも泥だらけになっちゃってたけど、ちゃんと洗ってあるから安心して。」\n私は「どうしてそんなところに？」と言いかけてなんとか言葉を呑み込んだ。それは、自分自身に問いかけるべきだろう……\n後に、エンジニア部の友人と当時の故障点検について話す機会があった。問題はまさに汚染物質排出システムの詰まりにあったのだが、セイリュウが清掃しなければ誰も気付かないところだったらしい。\n入職してたった一日のセイリュウが、一人で清掃任務をすべて引き受け、ドロドロになったろ過設備の中に丸二日もこもっていたと聞いて驚いた。\nそしてその詰まりの「元凶」が、私たちがうっかりなくしてしまった「宝物」の数々だったという事実には、頭の上がらない思いだった。\nそんなことを考えていると、私が感謝の言葉を述べたときのセイリュウの恥ずかしそうな笑顔が浮かんだ。彼女はただ「これからは気をつけてね」と言って、いくつかの注意事項を述べただけだった。\n蛇口をひねったり、スイッチを押したりといった動作一つで、水はいとも容易くすべてを流し去ってしまう。そして水がすべてを流し去るからこそ、我々は見えない場所に堆積していく汚物に気付くことができないのだ。\nセイリュウはロドスの艦上汚染物質排出関連の業務を担当することになったらしい。なにかお返しがしたかったが、彼女の好みが分からなかったので、石鹸を買ってプレゼントした。しかし彼女の元に届いた石鹸は一箱だけではなかったらしい。それだけ多くの者が、彼女に感謝の気持ちを伝えたかったということだろう。\n\n――セイリュウの定期評定にて、あるオペレーターの口述まとめ。",
+      "typeIcon": "wah-y",
+      "uniEquipIcon": "uniequip_002_finlpp",
+      "typeName1": "WAH",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_finlpp_1",
+        "uniequip_002_finlpp_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30033",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30053",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30083",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "治療範囲が広く、遠く離れた味方を治療時もHP治療効果が<@ba.kw>減少しない</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 26,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 26,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "治療範囲が広く、遠く離れた味方を治療時もHP治療効果が<@ba.kw>減少しない</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキルの回復効果+10%",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": "尽きぬ源泉",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "治療範囲が広く、遠く離れた味方を治療時もHP治療効果が<@ba.kw>減少しない</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "スキルの回復効果+20%",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": "尽きぬ源泉",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1080,5 +1607,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

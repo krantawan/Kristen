@@ -151,6 +151,36 @@
       "cost": 24
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "def",
+            "value": 2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "magic_resistance",
+            "value": 20,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4080_lin#1",
@@ -712,16 +742,738 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+34",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 34,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "万策の構え",
+          "description": "1度の被ダメージが150以下であればそれを無効化できる浄瑠壁を持つ。150を超えた場合は浄瑠壁が破壊され、周囲一定範囲内の敵全員にリンの攻撃力の60％の術ダメージを与え、さらに1秒間<$ba.stun>スタン</>させる。浄瑠壁は12秒後に再生成される",
+          "blackboard": [
+            {
+              "key": "value",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 0.6,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "万策の構え",
+          "description": "1度の被ダメージが150以下であればそれを無効化できる浄瑠壁を持つ。150を超えた場合は浄瑠壁が破壊され、周囲一定範囲内の敵全員にリンの攻撃力の70％<@ba.talpu>（+10%）</>の術ダメージを与え、さらに1秒間<$ba.stun>スタン</>させる。浄瑠壁は12秒後に再生成される",
+          "blackboard": [
+            {
+              "key": "value",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 0.7,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 12,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "万策の構え",
+          "description": "1度の被ダメージが200以下であればそれを無効化できる浄瑠壁を持つ。200を超えた場合は浄瑠壁が破壊され、周囲一定範囲内の敵全員にリンの攻撃力の100％の術ダメージを与え、さらに1秒間<$ba.stun>スタン</>させる。浄瑠壁は8秒後に再生成される",
+          "blackboard": [
+            {
+              "key": "value",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "万策の構え",
+          "description": "1度の被ダメージが200以下であればそれを無効化できる浄瑠壁を持つ。200を超えた場合は浄瑠壁が破壊され、周囲一定範囲内の敵全員にリンの攻撃力の110%<@ba.talpu>（+10%）</>の術ダメージを与え、さらに1秒間<$ba.stun>スタン</>させる。浄瑠壁は8秒後に再生成される",
+          "blackboard": [
+            {
+              "key": "value",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.1,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "interval",
+              "value": 8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "韜晦",
+          "description": "被撃時、50％の確率でSPを1回復",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.5,
+              "valueStr": null
+            },
+            {
+              "key": "sp",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "2",
+          "name": "韜晦",
+          "description": "被撃時、55％<@ba.talpu>（+5％）</>の確率でSPを1回復",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.55,
+              "valueStr": null
+            },
+            {
+              "key": "sp",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_lin",
       "moduleName": "リンの記章",
-      "desc": "リンは機を見計らって広範囲アーツ攻撃を仕掛けることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、法陣術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "リンは機を見計らって広範囲アーツ攻撃を仕掛けることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては術師オペレーターとして区分し、法陣術師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_lin",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_lin",
       "moduleName": "「聡明怜悧」",
-      "desc": "夜更け過ぎ、街灯が徐々に消えゆく中で、道端に構えた屋台の前に吊るされた灯りだけが、ゆらゆらと揺れている。\nそこでは鍋から湯気が立ちのぼり、その向こうには、鍋のそばに腰かけた店主の顔が見え隠れしている。\n遠目に見知った人影を見止めた彼は、おもむろに立ち上がると、軽く伸びをした。\n「久しぶりですね、お嬢さん。」\n「最近忙しくて。ようやく時間を作れたの。」\n「ご多忙ですなあ。毎日ここをお通りになるのを見かけてますが、店のほうにはしばらくいらしてませんでしたし。」\n「車仔麺（チェージャイミン）一つ。麺は油麵（ヤウミン）で、スープはカレーベース、トッピングに魚団子も二つ追加でお願い。」\n「はいよ。」\n女性客は調理台の近くにゆっくりと腰を下ろした。\n店主はそれに背を向けて、地面に落ちた鱗獣のように腰を曲げ、料理の準備に取り掛かる。\nスープを碗に注ぎ、麺をゆで、具を手際よく切り分けていく。\nその一連の動作は、まるで流れる水のように滑らかだった。\n「こんなに遅くまでやってるなんて、ずいぶん繫盛してるみたいね。」\n「これも全部鼠王さんの……や、昔は鼠王さんの、今はお嬢さんのおかげですよ。俺が見習いだった時分には、こんな時間まで店を開けとく勇気がある奴なんて誰もいませんでしたからね。」\n「薬は足りてるの？」\n「ツテはあるんで、切らしたことはありません。発作なんか起こしちまったら、お嬢さんに迷惑かけちまいますから。」\n「身体は大事にしなさいよ。病気が悪化したら、一番困るのはあなた自身なんだから。」\n「俺の命はあなた方親子に拾ってもらったもんですから……お嬢さんがまだうちに麺を食いに来てくれるだけで光栄ってもんですよ。」\n「そう。お父さんの願いはいつだって変わらず、みんなが良い暮らしを送れるように――」\n――その時、包丁とまな板が奏でていた規則的な音の中に、鈍い音が割り込んで話の腰を折った。\n「おっと、すいません……新しい鍛冶屋の腕がどうも悪くてね。力ずくじゃないと切れない時があるんです。前に世話んなってた隣の鍛冶屋は『包丁の梁（リャン）』なんて呼ばれてて、あいつに頼めば鋭くピカピカに仕上げてくれたもんなんですが。」\n「その人はどうしたの？」\n「死にましたよ。五年前にね。」\n「五年経っても覚えてもらってるなんて、きっといい人だったんでしょう。」\n「いい奴ってほどじゃありませんよ……情には篤いが無鉄砲で、頑固者で。……バカな真似をしたのは、たったの一度だけでしたがね。」\n「あれは大きな過ちだったわ。」\n「お嬢さんや鼠王さんみたいな賢い方は、なんだってお見通しなんでしょう。俺らみたいな下々のもんはたまにバカなことをやらかしますから、これからも遠慮なく躾けてやってください。」\n「それでも、私の言うことを聞いてくれるの？」\n「あいつが死んだ理由を聞かずにおいてくれたこと、ありがたく思ってますよ。」\n「やっぱり私を恨んでるのね。」\n「言ったでしょう、この命はお二人に拾ってもらったもんだって。恩人を恨むはずなんかありません。」\n「……」\n「さ、お嬢さん。麺が出来上がりましたよ。」\n店主はどんぶりを客に出すと、その場を離れず、彼女がきれいに平らげる様をそばで眺めていた。\n食べ終えると、客は鞄から小銭を取り出し机に置いた。\n「お釣りはいらないわ。」\n「どうも。夜道は暗いですから、気をつけてお帰りください。」\n「心配しないで。目端は利くほうだから。」\n「それでも、どうかお気を付けて。俺たちにはお嬢さんが必要ですから。」\n「あなたも、もう遅いしそろそろ帰りなさい。」\n「お嬢さん……」\n「あなたを恨む度胸なんてありませんが、一つだけ聞かせてください。」\n「当時と同じようなことが今起きたとしたら、お嬢さんは同じようなことをなさるんでしょうか？」\n「ええ。」\n「今私がここにいるのは、龍門が二度とあの頃に戻らないようにするためだから。」"
+      "desc": "夜更け過ぎ、街灯が徐々に消えゆく中で、道端に構えた屋台の前に吊るされた灯りだけが、ゆらゆらと揺れている。\nそこでは鍋から湯気が立ちのぼり、その向こうには、鍋のそばに腰かけた店主の顔が見え隠れしている。\n遠目に見知った人影を見止めた彼は、おもむろに立ち上がると、軽く伸びをした。\n「久しぶりですね、お嬢さん。」\n「最近忙しくて。ようやく時間を作れたの。」\n「ご多忙ですなあ。毎日ここをお通りになるのを見かけてますが、店のほうにはしばらくいらしてませんでしたし。」\n「車仔麺（チェージャイミン）一つ。麺は油麵（ヤウミン）で、スープはカレーベース、トッピングに魚団子も二つ追加でお願い。」\n「はいよ。」\n女性客は調理台の近くにゆっくりと腰を下ろした。\n店主はそれに背を向けて、地面に落ちた鱗獣のように腰を曲げ、料理の準備に取り掛かる。\nスープを碗に注ぎ、麺をゆで、具を手際よく切り分けていく。\nその一連の動作は、まるで流れる水のように滑らかだった。\n「こんなに遅くまでやってるなんて、ずいぶん繫盛してるみたいね。」\n「これも全部鼠王さんの……や、昔は鼠王さんの、今はお嬢さんのおかげですよ。俺が見習いだった時分には、こんな時間まで店を開けとく勇気がある奴なんて誰もいませんでしたからね。」\n「薬は足りてるの？」\n「ツテはあるんで、切らしたことはありません。発作なんか起こしちまったら、お嬢さんに迷惑かけちまいますから。」\n「身体は大事にしなさいよ。病気が悪化したら、一番困るのはあなた自身なんだから。」\n「俺の命はあなた方親子に拾ってもらったもんですから……お嬢さんがまだうちに麺を食いに来てくれるだけで光栄ってもんですよ。」\n「そう。お父さんの願いはいつだって変わらず、みんなが良い暮らしを送れるように――」\n――その時、包丁とまな板が奏でていた規則的な音の中に、鈍い音が割り込んで話の腰を折った。\n「おっと、すいません……新しい鍛冶屋の腕がどうも悪くてね。力ずくじゃないと切れない時があるんです。前に世話んなってた隣の鍛冶屋は『包丁の梁（リャン）』なんて呼ばれてて、あいつに頼めば鋭くピカピカに仕上げてくれたもんなんですが。」\n「その人はどうしたの？」\n「死にましたよ。五年前にね。」\n「五年経っても覚えてもらってるなんて、きっといい人だったんでしょう。」\n「いい奴ってほどじゃありませんよ……情には篤いが無鉄砲で、頑固者で。……バカな真似をしたのは、たったの一度だけでしたがね。」\n「あれは大きな過ちだったわ。」\n「お嬢さんや鼠王さんみたいな賢い方は、なんだってお見通しなんでしょう。俺らみたいな下々のもんはたまにバカなことをやらかしますから、これからも遠慮なく躾けてやってください。」\n「それでも、私の言うことを聞いてくれるの？」\n「あいつが死んだ理由を聞かずにおいてくれたこと、ありがたく思ってますよ。」\n「やっぱり私を恨んでるのね。」\n「言ったでしょう、この命はお二人に拾ってもらったもんだって。恩人を恨むはずなんかありません。」\n「……」\n「さ、お嬢さん。麺が出来上がりましたよ。」\n店主はどんぶりを客に出すと、その場を離れず、彼女がきれいに平らげる様をそばで眺めていた。\n食べ終えると、客は鞄から小銭を取り出し机に置いた。\n「お釣りはいらないわ。」\n「どうも。夜道は暗いですから、気をつけてお帰りください。」\n「心配しないで。目端は利くほうだから。」\n「それでも、どうかお気を付けて。俺たちにはお嬢さんが必要ですから。」\n「あなたも、もう遅いしそろそろ帰りなさい。」\n「お嬢さん……」\n「あなたを恨む度胸なんてありませんが、一つだけ聞かせてください。」\n「当時と同じようなことが今起きたとしたら、お嬢さんは同じようなことをなさるんでしょうか？」\n「ええ。」\n「今私がここにいるのは、龍門が二度とあの頃に戻らないようにするためだから。」",
+      "typeIcon": "plx-x",
+      "uniEquipIcon": "uniequip_002_lin",
+      "typeName1": "PLX",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_lin_1",
+        "uniequip_002_lin_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 62,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "被撃時、50%の確率でSPを2回復",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "韜晦",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "被撃時、55%<@ba.talpu>（+5%）</>の確率でSPを2回復",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "2",
+                  "name": "韜晦",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 77,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 53,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def",
+                      "value": 2.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].def",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lin_e_002[buff].magic_resistance",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "通常時<@ba.kw>攻撃しない</>、防御力と術耐性がさらに大幅<@ba.kw>上昇</>\nスキル発動中、防御力と術耐性の上昇効果を一部維持し、通常攻撃が攻撃範囲内の敵全員に<@ba.kw>範囲術ダメージ</>を与える",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "被撃時、75%の確率でSPを2回復",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "韜晦",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "被撃時、80%<@ba.talpu>（+5%）</>の確率でSPを2回復",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "2",
+                  "name": "韜晦",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1175,5 +1927,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

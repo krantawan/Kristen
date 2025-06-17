@@ -169,6 +169,52 @@
       "cost": 23
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "init_atk_scale",
+            "value": 0.2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "delta_atk_scale",
+            "value": 0.15,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_atk_scale",
+            "value": 1.1,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "3",
+          "value": {
+            "key": "max_stack_cnt",
+            "value": 6,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "操作<@ba.kw>浮游单元</>造成<@ba.kw>法术伤害</>\\n单元攻击同一敌人伤害提升（最高造成干员110%攻击力的伤害）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4013_kjera#1",
@@ -655,16 +701,707 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "低眉",
+          "description": "攻击力+5%，攻击范围内存在2格以上的地面地形时，改为攻击力+11%",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "kjera_t_1[high].atk",
+              "value": 0.11,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "低眉",
+          "description": "攻击力+8%<@ba.talpu>（+3%）</>，攻击范围内存在2格以上的地面地形时，改为攻击力+14%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "kjera_t_1[high].atk",
+              "value": 0.14,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "低眉",
+          "description": "攻击力+10%，攻击范围内存在2格以上的地面地形时，改为攻击力+16%",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "kjera_t_1[high].atk",
+              "value": 0.16,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "低眉",
+          "description": "攻击力+13%<@ba.talpu>（+3%）</>，攻击范围内存在2格以上的地面地形时，改为攻击力+19%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.13,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "kjera_t_1[high].atk",
+              "value": 0.19,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_kjera",
       "moduleName": "耶拉证章",
-      "desc": "干员耶拉擅长操纵浮游单元协同作战，追击敌人\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使驭械术师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员耶拉擅长操纵浮游单元协同作战，追击敌人\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使驭械术师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_kjera",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_kjera",
       "moduleName": "以雪为线",
-      "desc": "一种久违的、遥远的感觉回到祂的心中。\n空气仍在流动，汇聚成风。风从那边奔腾而来，越过臂膀、脊背，穿过指缝，发出声响。对谢拉格的人们来说，这风也算得上寒冷了。\n风的声音开始紊乱，成束的呼啸被扰动，它们裹挟着的呓语，像是支离破碎的歌，穿过千百万次日出日落，始终萦绕在身边。这呓语积蓄在空气里，延伸出黑色的刺。黑色的雨滴挂在刺的尖端，几乎就要落在大地上，落在山和树之间，要把山和树都变成它的模样。它吵闹，充满敌意，不可违抗。它危险。\n祂意念始动，但现在这要花费不少精力，不像从前了。\n祂探进千百万次日出日落间堆积的皑雪，像是在寻找织物中的线头，祂捻起其中的一根，于是空气的流向变动，积雪也应祂的意念腾空，一张帷幔就此织成。祂把帷幔推向黑雨，把它驱离脚下的土地，就像祂无数次做过的那样。\n“雅儿，雅儿？”\n轻声的呼唤突破风和雪织就的帷幔，重新传入耳中，雅儿从短暂的恍惚中回过神来。打了一半的织物靠在自己怀中，雅儿一只手还捏着棒针，刚刚在另一只手中捻着的线头已经落回线堆中。\n“抱歉，圣女大人，我好像走神了。”\n这是雅儿向圣女学习织艺的第三天。恩雅在蔓珠院的这一间别室里挂满了亲手织作的挂毯。对她来说，练习编织，也是修行的一环。\n“唔......是么，会不会是我教得太快了？”\n坐在雅儿对面的恩雅倒没有责备，神情反而带上了些歉意。她同样手持棒针，手捻线头，一件相似的织物躺在臂弯，但是看起来要比雅儿怀里的完整得多、美观得多。\n“那倒不至于，比您讲经的时候好理解多了。”\n恩雅闻言，带着笑意伸手探进线堆，拾起线头，递回给雅儿。\n“我在讲经的时候你可不会这么深思熟虑。”\n雅儿接过线头，一股温暖的意念流过她的指尖。她要把手中这件织物完成。\n“我在想，圣女大人的针法，和祂织就风雪的针法，说不定还有几分相似呢。”\n窗外风雪愈急，似乎吹动了屋内的挂毯。\n一种久违的、亲切的感觉回到她的心中。"
+      "desc": "一种久违的、遥远的感觉回到祂的心中。\n空气仍在流动，汇聚成风。风从那边奔腾而来，越过臂膀、脊背，穿过指缝，发出声响。对谢拉格的人们来说，这风也算得上寒冷了。\n风的声音开始紊乱，成束的呼啸被扰动，它们裹挟着的呓语，像是支离破碎的歌，穿过千百万次日出日落，始终萦绕在身边。这呓语积蓄在空气里，延伸出黑色的刺。黑色的雨滴挂在刺的尖端，几乎就要落在大地上，落在山和树之间，要把山和树都变成它的模样。它吵闹，充满敌意，不可违抗。它危险。\n祂意念始动，但现在这要花费不少精力，不像从前了。\n祂探进千百万次日出日落间堆积的皑雪，像是在寻找织物中的线头，祂捻起其中的一根，于是空气的流向变动，积雪也应祂的意念腾空，一张帷幔就此织成。祂把帷幔推向黑雨，把它驱离脚下的土地，就像祂无数次做过的那样。\n“雅儿，雅儿？”\n轻声的呼唤突破风和雪织就的帷幔，重新传入耳中，雅儿从短暂的恍惚中回过神来。打了一半的织物靠在自己怀中，雅儿一只手还捏着棒针，刚刚在另一只手中捻着的线头已经落回线堆中。\n“抱歉，圣女大人，我好像走神了。”\n这是雅儿向圣女学习织艺的第三天。恩雅在蔓珠院的这一间别室里挂满了亲手织作的挂毯。对她来说，练习编织，也是修行的一环。\n“唔......是么，会不会是我教得太快了？”\n坐在雅儿对面的恩雅倒没有责备，神情反而带上了些歉意。她同样手持棒针，手捻线头，一件相似的织物躺在臂弯，但是看起来要比雅儿怀里的完整得多、美观得多。\n“那倒不至于，比您讲经的时候好理解多了。”\n恩雅闻言，带着笑意伸手探进线堆，拾起线头，递回给雅儿。\n“我在讲经的时候你可不会这么深思熟虑。”\n雅儿接过线头，一股温暖的意念流过她的指尖。她要把手中这件织物完成。\n“我在想，圣女大人的针法，和祂织就风雪的针法，说不定还有几分相似呢。”\n窗外风雪愈急，似乎吹动了屋内的挂毯。\n一种久违的、亲切的感觉回到她的心中。",
+      "typeIcon": "fun-y",
+      "uniEquipIcon": "uniequip_002_kjera",
+      "typeName1": "FUN",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_kjera_1",
+        "uniequip_002_kjera_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 18,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "操作<@ba.kw>浮游单元</>造成<@ba.kw>法术伤害</>\\n单元攻击同一敌人伤害提升（最高造成干员120%攻击力的伤害）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "操作<@ba.kw>浮游单元</>造成<@ba.kw>法术伤害</>\\n单元攻击同一敌人伤害提升（最高造成干员120%攻击力的伤害）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击力+15%，攻击范围内存在2格以上的地面地形时，改为攻击力+21%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "低眉",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.21,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击力+18%<@ba.talpu>（+3%）</>，攻击范围内存在2格以上的地面地形时，改为攻击力+24%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "低眉",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.24,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 102,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "操作<@ba.kw>浮游单元</>造成<@ba.kw>法术伤害</>\\n单元攻击同一敌人伤害提升（最高造成干员120%攻击力的伤害）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击力+18%，攻击范围内存在2格以上的地面地形时，改为攻击力+24%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "低眉",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.24,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击力+21%<@ba.talpu>（+3%）</>，攻击范围内存在2格以上的地面地形时，改为攻击力+27%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "低眉",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.27,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1126,5 +1863,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -151,6 +151,32 @@
       "cost": 16
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "duration",
+          "value": 20
+        },
+        {
+          "key": "atk",
+          "value": 0
+        },
+        {
+          "key": "max_hp",
+          "value": 0
+        }
+      ],
+      "overrideDescription": "Does not retreat upon receiving lethal damage, instead swaps to a <Substitute> (Substitute has 0 Block). Swaps back to the original after 20 seconds",
+      "prefabKey": "-1",
+      "rangeId": "x-4"
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1023_ghost2#1",
@@ -716,21 +742,1041 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +33",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 33,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 80,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Embraced Self",
+          "description": "<Substitute> reduces Movement Speed of nearby enemies by 20%, and deals 20% ATK as Arts damage to them per second",
+          "blackboard": {
+            "move_speed": -0.2,
+            "atk_scale": 0.2,
+            "talent_override_rangeid_flag": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Embraced Self",
+          "description": "<Substitute> reduces Movement Speed of nearby enemies by 30%, and deals 30% ATK as Arts damage to them per second",
+          "blackboard": {
+            "move_speed": -0.3,
+            "atk_scale": 0.3,
+            "talent_override_rangeid_flag": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Embraced Self",
+          "description": "<Substitute> reduces Movement Speed of nearby enemies by 40%, and deals 40% ATK as Arts damage to them per second",
+          "blackboard": {
+            "move_speed": -0.4,
+            "atk_scale": 0.4,
+            "talent_override_rangeid_flag": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Ægir's Depths",
+          "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +20% Max HP",
+          "blackboard": {
+            "max_hp": 0.2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Ægir's Depths",
+          "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +23% <@ba.talpu>(+3%)</> Max HP",
+          "blackboard": {
+            "max_hp": 0.23
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_ghost2",
       "moduleName": "Specter the Unchained's Badge",
-      "desc": "Operator Specter the Unchained has demonstrated a remarkable aptitude for repeated contention with the enemy upon the battlefield.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Dollkeeper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Specter the Unchained has demonstrated a remarkable aptitude for repeated contention with the enemy upon the battlefield.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Dollkeeper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_ghost2",
       "moduleName": "'Vinyl Record' Box",
-      "desc": "Specter draws a record from the record box and puts it on the gramophone, and melodious music arises.\nShe has no missions today. The only thing she needs to do is let herself relax, place herself into the best possible state to be thrown into the next mission, the next battle.\nThe record is a masterpiece of the Iberian Golden Age, bought by her off an Iberian operator's hands.\nSpecter closes her eyes, lets herself sink into the sofa, and enjoys it in stillness.\nShe couldn't tell you a thing about what accomplishments marked Iberia's Golden Age, but she can sense from the music the splendor of that age, and how its people must have been so proud of their successes.\nIt's not godawful at all, she concedes.\nShe never masks her disdain for the glories of dry land's culture, but she has no intents of applying that prejudice to the arts—\nYes. Prejudice.\nShe even admits as much to the Doctor, while continuing on her merry way.\nBut her insistence isn't without meaning.\nBesides, she believes that while her and the Captain seem to have it in common, there's actually quite the distinction.\nThe Captain's arrogance comes from that good old Captain purview of Chief Designer. But she—she thinks—she doesn't care where her power comes from, and she's passionate about what undertakings she has these days. But still, sometimes she can't help but wonder—how has that statue in her hometown ended up? How about her hometown itself?\nThe music comes to a crackling halt.\nLaurentina opens her eyes, and what gradually seeps into view is her familiar ceiling. She knows, terrifyingly, she'll get even more used to this environment in time. She's not panicked about it. In order to panic in a new environment, you need to not want to leave the old one, but she's practically forgotten just how her life in Ægir felt to live.\nFrom the record box she now pulls a sawblade, and gently wipes over it, swapping for a new record to continue playing all the while. Maybe, just as the Iberians used all the methods under the sun to record their Golden Age, she can try and get back into her once most beloved activity—sculpting.\nHer one stroke of luck: she might just be stuck away from home for a good while longer. She still has enough time to remember how it looked, she thinks, with no lack of self-mocking irony."
+      "desc": "Specter draws a record from the record box and puts it on the gramophone, and melodious music arises.\nShe has no missions today. The only thing she needs to do is let herself relax, place herself into the best possible state to be thrown into the next mission, the next battle.\nThe record is a masterpiece of the Iberian Golden Age, bought by her off an Iberian operator's hands.\nSpecter closes her eyes, lets herself sink into the sofa, and enjoys it in stillness.\nShe couldn't tell you a thing about what accomplishments marked Iberia's Golden Age, but she can sense from the music the splendor of that age, and how its people must have been so proud of their successes.\nIt's not godawful at all, she concedes.\nShe never masks her disdain for the glories of dry land's culture, but she has no intents of applying that prejudice to the arts—\nYes. Prejudice.\nShe even admits as much to the Doctor, while continuing on her merry way.\nBut her insistence isn't without meaning.\nBesides, she believes that while her and the Captain seem to have it in common, there's actually quite the distinction.\nThe Captain's arrogance comes from that good old Captain purview of Chief Designer. But she—she thinks—she doesn't care where her power comes from, and she's passionate about what undertakings she has these days. But still, sometimes she can't help but wonder—how has that statue in her hometown ended up? How about her hometown itself?\nThe music comes to a crackling halt.\nLaurentina opens her eyes, and what gradually seeps into view is her familiar ceiling. She knows, terrifyingly, she'll get even more used to this environment in time. She's not panicked about it. In order to panic in a new environment, you need to not want to leave the old one, but she's practically forgotten just how her life in Ægir felt to live.\nFrom the record box she now pulls a sawblade, and gently wipes over it, swapping for a new record to continue playing all the while. Maybe, just as the Iberians used all the methods under the sun to record their Golden Age, she can try and get back into her once most beloved activity—sculpting.\nHer one stroke of luck: she might just be stuck away from home for a good while longer. She still has enough time to remember how it looked, she thinks, with no lack of self-mocking irony.",
+      "typeIcon": "pum-x",
+      "uniEquipIcon": "uniequip_002_ghost2",
+      "typeName1": "PUM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_ghost2_1",
+        "uniequip_002_ghost2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but ATK is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 230,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 69,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but ATK is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> reduces Movement Speed of nearby enemies by 50%, and deals 60% ATK as Arts damage to them per second. When swapping back, gain 8 SP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Embraced Self",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> reduces Movement Speed of nearby enemies by 50%, and deals 60% ATK as Arts damage to them per second. When swapping back, gain 8 SP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": "Embraced Self",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 83,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but ATK is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> reduces Movement Speed of nearby enemies by 60%, and deals 80% ATK as Arts damage to them per second. When swapping back, gain 15 SP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Embraced Self",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "move_speed",
+                      "value": -0.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> reduces Movement Speed of nearby enemies by 60%, and deals 80% ATK as Arts damage to them per second. When swapping back, gain 15 SP",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": "Embraced Self",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "sp",
+                      "value": 15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_ghost2",
       "moduleName": "The Beauty in the Incomplete",
-      "desc": "'It is as if slaughtering those overgrown cuts of meat has become our unignorable, even our one-and-only, calling.'\nThe clock ticks and tocks. The dreadnought obstructs the rays as they come down from the dome. Ulpianus lifts his head and fixes his eyes on the flickering indicator lights, as if in thought.\n'It ought not be,' the young female Consul replies, following a long hesitation.\n'Of course it ought not. When an Ægir wakes, the first thought that enters their mind should not be of what they've lost, never. Nor of how to take back what they've lost.' Ulpianus is silent for a juncture, some kind of emotion flowing about his raspy throat. After a good while, he sighs, 'Oh, how many magnificent works we once made.'\n'And now, the battle to survive has become the only to-do list that this new generation knows.'\n'Battle. A glorious word, to be sure. And yet, our outstanding creativity and pursuit of beauty have been all but forgotten.'\nThe two simultaneously gaze afar. Lights dazzle beneath the dome.\n'...Not by choice.' Ulpianus adds.\nGladiia shoots a glance at Ulpianus, mulls over the wording for a moment, then speaks inquisitively: 'You were never the type to be so receptive to sentimentality.'\n'Indeed.' Ulpianus does not halt this time. 'We should address this matter solemnly. Our culture is in the midst of being permanently altered by these protracted days of calamity.'\nA colossal rumbling cuts short Gladiia's pregnant pause. More ships are entering port, a new fleet of migration and reconstruction, and she is left to ponder in earnest what Ulpianus has said. Over the pursuit of beauty, over the creation of the new. Before she was born, or perhaps earlier than that... centuries ago? Millennia? When the Ægir founded this stark and grand culture—did they imagine that now, its radiance would be so dull?\nDid they make any preparations for the present day?\nGladiia's thoughts are lost for but an instant. To her, the past is of unimportance. More vital are what preparations she is soon to make, what things she <i>can</i> do.\n'A new Abyssal Hunter.' Ulpianus unceremoniously breaks the silence. 'I hear she previously had quite an interest in the arts. Ballet, opera, she's dabbled in it all.'\n'Laurentina has mentioned a rather profound recollection of the sculpture in her hometown.'\n'Then she still retains some of the essence what all Ægir should have by rights.' Ulpianus turns around. The Consul's light attire for the season cannot conceal his body scarred by experimentation. 'What is she like? If she truly is an epitome of Ægir life from days gone by, then being forced away from the proper course of things must fill her with so much hate.'\n'No. Such sentimentality is but a small supplement to her whole.'\nGladiia breaks into a rare smile. This, despite how her smiles always took careful observation and judgment, on the muscular and nervous levels.\n'She creates a beauty of her own through battle. One of the sorts you speak of, with great exuberance.'\nUlpianus makes a light and noncommittal harrumph in response, after which he soon leaves Gladiia by herself under those gigantic shadows to appreciate the serenity.\nThe grand hall echoes with only the sounds of the Ægir's footsteps forward."
+      "desc": "'It is as if slaughtering those overgrown cuts of meat has become our unignorable, even our one-and-only, calling.'\nThe clock ticks and tocks. The dreadnought obstructs the rays as they come down from the dome. Ulpianus lifts his head and fixes his eyes on the flickering indicator lights, as if in thought.\n'It ought not be,' the young female Consul replies, following a long hesitation.\n'Of course it ought not. When an Ægir wakes, the first thought that enters their mind should not be of what they've lost, never. Nor of how to take back what they've lost.' Ulpianus is silent for a juncture, some kind of emotion flowing about his raspy throat. After a good while, he sighs, 'Oh, how many magnificent works we once made.'\n'And now, the battle to survive has become the only to-do list that this new generation knows.'\n'Battle. A glorious word, to be sure. And yet, our outstanding creativity and pursuit of beauty have been all but forgotten.'\nThe two simultaneously gaze afar. Lights dazzle beneath the dome.\n'...Not by choice.' Ulpianus adds.\nGladiia shoots a glance at Ulpianus, mulls over the wording for a moment, then speaks inquisitively: 'You were never the type to be so receptive to sentimentality.'\n'Indeed.' Ulpianus does not halt this time. 'We should address this matter solemnly. Our culture is in the midst of being permanently altered by these protracted days of calamity.'\nA colossal rumbling cuts short Gladiia's pregnant pause. More ships are entering port, a new fleet of migration and reconstruction, and she is left to ponder in earnest what Ulpianus has said. Over the pursuit of beauty, over the creation of the new. Before she was born, or perhaps earlier than that... centuries ago? Millennia? When the Ægir founded this stark and grand culture—did they imagine that now, its radiance would be so dull?\nDid they make any preparations for the present day?\nGladiia's thoughts are lost for but an instant. To her, the past is of unimportance. More vital are what preparations she is soon to make, what things she <i>can</i> do.\n'A new Abyssal Hunter.' Ulpianus unceremoniously breaks the silence. 'I hear she previously had quite an interest in the arts. Ballet, opera, she's dabbled in it all.'\n'Laurentina has mentioned a rather profound recollection of the sculpture in her hometown.'\n'Then she still retains some of the essence what all Ægir should have by rights.' Ulpianus turns around. The Consul's light attire for the season cannot conceal his body scarred by experimentation. 'What is she like? If she truly is an epitome of Ægir life from days gone by, then being forced away from the proper course of things must fill her with so much hate.'\n'No. Such sentimentality is but a small supplement to her whole.'\nGladiia breaks into a rare smile. This, despite how her smiles always took careful observation and judgment, on the muscular and nervous levels.\n'She creates a beauty of her own through battle. One of the sorts you speak of, with great exuberance.'\nUlpianus makes a light and noncommittal harrumph in response, after which he soon leaves Gladiia by herself under those gigantic shadows to appreciate the serenity.\nThe grand hall echoes with only the sounds of the Ægir's footsteps forward.",
+      "typeIcon": "pum-y",
+      "uniEquipIcon": "uniequip_003_ghost2",
+      "typeName1": "PUM",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_ghost2_1",
+        "uniequip_003_ghost2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but HP is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 230,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 48,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but HP is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +25% Max HP and +0.3 SP/second",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Ægir's Depths",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +28% <@ba.talpu>(+3%)</> Max HP and +0.3 SP/second (only the highest effect of this type takes place)",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Ægir's Depths",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.28,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but HP is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +30% Max HP and +0.5 SP/second",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Ægir's Depths",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +33% <@ba.talpu>(+3%)</> Max HP and +0.5 SP/second (only the highest effect of this type takes place)",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Ægir's Depths",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_hp",
+                      "value": 0.33,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp_recovery_per_sec",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1192,5 +2238,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

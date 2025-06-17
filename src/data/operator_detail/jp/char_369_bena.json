@@ -151,6 +151,44 @@
       "cost": 17
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "duration",
+            "value": 20,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "atk",
+            "value": 0,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_hp",
+            "value": 0,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "致命的なダメージを受けても撤退せず、<身替り>と入れ替わり戦闘を続行する（身替りのブロック数は0）。20秒後<身替り>から再び自身に入れ替わる",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_369_bena#1",
@@ -614,16 +652,657 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 100,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ベナの角度計",
+          "description": "<身替り>の攻撃が術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0,
+              "valueStr": null
+            },
+            {
+              "key": "talent_override_rangeid_flag",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ベナの角度計",
+          "description": "<身替り>の物理と術の被ダメージ-20％、攻撃が術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.2,
+              "valueStr": null
+            },
+            {
+              "key": "talent_override_rangeid_flag",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "ベナの角度計",
+          "description": "<身替り>の物理と術の被ダメージ-23%<@ba.talpu>（+3）</>、攻撃が術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.23,
+              "valueStr": null
+            },
+            {
+              "key": "talent_override_rangeid_flag",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ベナの角度計",
+          "description": "<身替り>の物理と術の被ダメージ-40％、攻撃が術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "talent_override_rangeid_flag",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "ベナの角度計",
+          "description": "<身替り>の物理と術の被ダメージ-43%<@ba.talpu>（+3）</>、攻撃が術ダメージを与える",
+          "blackboard": [
+            {
+              "key": "damage_resistance",
+              "value": 0.43,
+              "valueStr": null
+            },
+            {
+              "key": "talent_override_rangeid_flag",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_bena",
       "moduleName": "ベナの記章",
-      "desc": "ベナは戦場において身替わりを用いて敵を翻弄することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、傀儡師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ベナは戦場において身替わりを用いて敵を翻弄することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、傀儡師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_bena",
       "moduleName": "『ジェフリー今昔童話集』ハードカバー版",
-      "desc": "むかしむかし、ある遠くの森の中にお城が建っていました。\nお城には子供が一人で住んでいました。\n子供は毎朝、倉庫からパンを取り出し、井戸から水を汲むと、それを一日の食事としました。\nそして日が沈むと、寝室のベッドで安らかな眠りにつきました。\n何日も、何年も。\n外の森はどこまでも暗く、獣の雄叫びがいつも鳴り響いています。\nですが、子供はそれを気にしたことはありませんでした。\n堅固なお城が守ってくれていたからです。\nしかし、形あるお城はいつか崩れる定めです。\n子供がどれだけ修繕しても、お城のひび割れは日に日に増していきました。\n子供はすっかり困り果ててしまいました。\nそんなある日、魔女がお城の門を叩きました。\n子供はこれまで一度も門を開けたことはありませんでした。\n門の外にある全てを、本能的に恐れていたからです。\nそれでも門の向こうで魔女が懇願する声を聞いて、優しい子供は門を開き、魔女をお城に迎え入れました。\nお城にある食べ物は子供が生きていく分だけしかありませんでしたが、子供はそれを魔女に半分分け与えました。\n魔女は食料を分け与える選択をした子供が大層気に入ったようです。\n数日後、魔女が子供に一つ提案をしました。\n「一つだけ、願いを叶えてあげましょう。」\n一つだけ……子供はずいぶんと考えました。\nお城を綺麗に修理して、前みたいな生活がしたい？\nだけど、魔女がいなくなった後にまた城が壊れてきたら、どうすればいいんだろう。\n\n悩み抜いた末、ようやく完璧な願いを思いつきました。\n「お城と一緒に、森を出たい。」\n\nそうして子供は旅立ちました。\n子供の後ろには、子供と似た姿で、子供を守り続ける小さなお城が付いて回ったとさ。\n\n――『ジェフリー今昔童話集』「子供のお城」より抜粋"
+      "desc": "むかしむかし、ある遠くの森の中にお城が建っていました。\nお城には子供が一人で住んでいました。\n子供は毎朝、倉庫からパンを取り出し、井戸から水を汲むと、それを一日の食事としました。\nそして日が沈むと、寝室のベッドで安らかな眠りにつきました。\n何日も、何年も。\n外の森はどこまでも暗く、獣の雄叫びがいつも鳴り響いています。\nですが、子供はそれを気にしたことはありませんでした。\n堅固なお城が守ってくれていたからです。\nしかし、形あるお城はいつか崩れる定めです。\n子供がどれだけ修繕しても、お城のひび割れは日に日に増していきました。\n子供はすっかり困り果ててしまいました。\nそんなある日、魔女がお城の門を叩きました。\n子供はこれまで一度も門を開けたことはありませんでした。\n門の外にある全てを、本能的に恐れていたからです。\nそれでも門の向こうで魔女が懇願する声を聞いて、優しい子供は門を開き、魔女をお城に迎え入れました。\nお城にある食べ物は子供が生きていく分だけしかありませんでしたが、子供はそれを魔女に半分分け与えました。\n魔女は食料を分け与える選択をした子供が大層気に入ったようです。\n数日後、魔女が子供に一つ提案をしました。\n「一つだけ、願いを叶えてあげましょう。」\n一つだけ……子供はずいぶんと考えました。\nお城を綺麗に修理して、前みたいな生活がしたい？\nだけど、魔女がいなくなった後にまた城が壊れてきたら、どうすればいいんだろう。\n\n悩み抜いた末、ようやく完璧な願いを思いつきました。\n「お城と一緒に、森を出たい。」\n\nそうして子供は旅立ちました。\n子供の後ろには、子供と似た姿で、子供を守り続ける小さなお城が付いて回ったとさ。\n\n――『ジェフリー今昔童話集』「子供のお城」より抜粋",
+      "typeIcon": "pum-y",
+      "uniEquipIcon": "uniequip_002_bena",
+      "typeName1": "PUM",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_bena_1",
+        "uniequip_002_bena_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30074",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "致命的なダメージを受けても撤退せず、<身替り>と入れ替わり戦闘を続行する（身替りのブロック数は0、HPが<@ba.kw>上昇</>）。20秒後<身替り>から再び自身に入れ替わる",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "致命的なダメージを受けても撤退せず、<身替り>と入れ替わり戦闘を続行する（身替りのブロック数は0、HPが<@ba.kw>上昇</>）。20秒後<身替り>から再び自身に入れ替わる",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<身替り>の物理と術の被ダメージ-43%、攻撃が術ダメージを与える",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ベナの角度計",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.43,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<身替り>の物理と術の被ダメージ-46%<@ba.talpu>（+3）</>、攻撃が術ダメージを与える",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "ベナの角度計",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.46,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 280,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "致命的なダメージを受けても撤退せず、<身替り>と入れ替わり戦闘を続行する（身替りのブロック数は0、HPが<@ba.kw>上昇</>）。20秒後<身替り>から再び自身に入れ替わる",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<身替り>の物理と術の被ダメージ-45%、攻撃が術ダメージを与える",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ベナの角度計",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.45,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<身替り>の物理と術の被ダメージ-48%<@ba.talpu>（+3）</>、攻撃が術ダメージを与える",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "ベナの角度計",
+                  "description": null,
+                  "rangeId": "x-4",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.48,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1077,5 +1756,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

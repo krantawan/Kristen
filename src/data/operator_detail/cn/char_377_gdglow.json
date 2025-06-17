@@ -168,6 +168,52 @@
       "cost": 22
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "init_atk_scale",
+            "value": 0.2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "delta_atk_scale",
+            "value": 0.15,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_atk_scale",
+            "value": 1.1,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "3",
+          "value": {
+            "key": "max_stack_cnt",
+            "value": 6,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "操作<@ba.kw>浮游单元</>造成<@ba.kw>法术伤害</>\\n单元攻击同一敌人伤害提升（最高造成干员110%攻击力的伤害）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_377_gdglow#1",
@@ -775,16 +821,732 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二天赋效果增强",
+      "buff": {}
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "信标的愤怒",
+          "description": "技能开启后浮游单元攻击时有10%概率自爆（回到干员身边）对小范围敌人造成澄闪200%攻击力的法术伤害",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.015,
+              "valueStr": null
+            },
+            {
+              "key": "attack@atk_scale_2",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_stack_cnt",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "信标的愤怒",
+          "description": "技能开启后浮游单元攻击时有10%概率自爆（回到干员身边）对小范围敌人造成澄闪215%<@ba.talpu>（+15%）</>攻击力的法术伤害",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.015,
+              "valueStr": null
+            },
+            {
+              "key": "attack@atk_scale_2",
+              "value": 2.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_stack_cnt",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "信标的愤怒",
+          "description": "技能开启后浮游单元攻击时有10%概率自爆（回到干员身边）对小范围敌人造成澄闪300%攻击力的法术伤害",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.015,
+              "valueStr": null
+            },
+            {
+              "key": "attack@atk_scale_2",
+              "value": 3,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_stack_cnt",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 2,
+          "prefabKey": "1",
+          "name": "信标的愤怒",
+          "description": "技能开启后浮游单元攻击时有10%概率自爆（回到干员身边）对小范围敌人造成澄闪315%<@ba.talpu>（+15%）</>攻击力的法术伤害",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.015,
+              "valueStr": null
+            },
+            {
+              "key": "attack@atk_scale_2",
+              "value": 3.15,
+              "valueStr": null
+            },
+            {
+              "key": "attack@max_stack_cnt",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "精准导流",
+          "description": "自身与浮游单元无视敌人15点法术抗性",
+          "blackboard": [
+            {
+              "key": "magic_resist_penetrate_fixed",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 5,
+          "prefabKey": "2",
+          "name": "精准导流",
+          "description": "自身与浮游单元无视敌人18<@ba.talpu>（+3）</>点法术抗性",
+          "blackboard": [
+            {
+              "key": "magic_resist_penetrate_fixed",
+              "value": 18,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_gdglow",
       "moduleName": "澄闪证章",
-      "desc": "干员澄闪擅长操纵浮游单元协同作战，追击敌人\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使驭械术师职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员澄闪擅长操纵浮游单元协同作战，追击敌人\n根据外勤部门决议\n在外勤任务中划分为术师干员，行使驭械术师职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_gdglow",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_gdglow",
       "moduleName": "“辛劳之翼”",
-      "desc": "深夜时分，苏茜还在翻阅着课本，明天就要考源石技艺理论了，她得抓紧时间最后复习一遍。笔记就摊在课本旁，自己曾经不理解与曲解的部分，如今在笔记本上都有正确的注解。\n该睡觉了......她的眼皮开始提醒她。\n于是，在入睡前，她把明天考试要用的东西塞进背包里，转头翻开了日程表。表上将她每一日要做的事情梳理得清清楚楚——这是她在夏栎小姐那里做工时养成的习惯，每天都要采购、按时营业、清点库存、清理店铺，事情多且繁杂，还时常遇到突发事件，把该做的事情写在日程表上，能让她安心不少。\n日程表上记着她明日要做的事情：\n上午\n（7:30—9:30）要考试了！\n（9:30—10:30）去源石技艺理论入门课当助教\n中午\n（12:00—13:00）理发店帮忙\n下午\n（14:00—16:00）去训练场练练手/给莱娜小姐整理苗圃（去前问问，不一定当天）\n（17:00—18:00）理发店帮忙\n（18:00—21:00）酒吧帮忙\n（21:00—22:00）看看书\n苏茜盯着日程表想了一会，缩短了去酒吧打工的时间，同时，在下面添加了一条新日程：\n（20:00—？）找理论课老师聊一下未来\n罗德岛的老师和干员们都很负责任，苏茜一点都不担心自己过不了考试。但关于今后自己将会做什么，老师确实是很好的聊天对象。\n最近，她对自己那时刻外溢的静电有了些控制，同时，很少有人知道，她在给别人理发时已经开始使用自己在术师课程里学的小技巧，用微弱的电荷让理发更加快捷。\n这一切，都是为了——\n苏茜把日程表往后翻了几页，然后停了下来。在数张尚未填写的纸页中，有一张已经早早填上了一条重要日程：\n给妈妈汇钱\n虽然妈妈一直告诉她用不着这样做，但她还是想给家里寄些什么。妈妈也总在这时候给她汇钱，这种行为不知不觉间已然成了两人间互道平安的方式。\n苏茜把日程表翻回了明天的那一页，在那条新加的日程上摩挲了好几下。\n她是个脚踏实地的人，即使想象出了遥远宏伟的未来，那也不是她现在的生活。她更倾向于读好每一本书，做好每一份工，抓住每一个机会。毕竟想象是不确定的，但当下的每一天，在罗德岛的生活，已然是努力便可见回报，而她真正想要的，恰恰就是这个。\n于是她修改了一下日程：\n（20:00—？）找理论课老师聊一下课程安排\n这才是她该问的问题。\n该睡觉了......干涩的眼睛拉了拉眼皮，想要立刻关上这窗户。\n于是，她乖乖合上日程表，关灯睡觉，试图让那因紧张而过分跳动的心脏平复下来，争取明天考个好分数。\n明天仍是辛劳的一天，明天也仍将满载而归。\n......\n苏茜心满意足地在温暖中沉入了梦乡。"
+      "desc": "深夜时分，苏茜还在翻阅着课本，明天就要考源石技艺理论了，她得抓紧时间最后复习一遍。笔记就摊在课本旁，自己曾经不理解与曲解的部分，如今在笔记本上都有正确的注解。\n该睡觉了......她的眼皮开始提醒她。\n于是，在入睡前，她把明天考试要用的东西塞进背包里，转头翻开了日程表。表上将她每一日要做的事情梳理得清清楚楚——这是她在夏栎小姐那里做工时养成的习惯，每天都要采购、按时营业、清点库存、清理店铺，事情多且繁杂，还时常遇到突发事件，把该做的事情写在日程表上，能让她安心不少。\n日程表上记着她明日要做的事情：\n上午\n（7:30—9:30）要考试了！\n（9:30—10:30）去源石技艺理论入门课当助教\n中午\n（12:00—13:00）理发店帮忙\n下午\n（14:00—16:00）去训练场练练手/给莱娜小姐整理苗圃（去前问问，不一定当天）\n（17:00—18:00）理发店帮忙\n（18:00—21:00）酒吧帮忙\n（21:00—22:00）看看书\n苏茜盯着日程表想了一会，缩短了去酒吧打工的时间，同时，在下面添加了一条新日程：\n（20:00—？）找理论课老师聊一下未来\n罗德岛的老师和干员们都很负责任，苏茜一点都不担心自己过不了考试。但关于今后自己将会做什么，老师确实是很好的聊天对象。\n最近，她对自己那时刻外溢的静电有了些控制，同时，很少有人知道，她在给别人理发时已经开始使用自己在术师课程里学的小技巧，用微弱的电荷让理发更加快捷。\n这一切，都是为了——\n苏茜把日程表往后翻了几页，然后停了下来。在数张尚未填写的纸页中，有一张已经早早填上了一条重要日程：\n给妈妈汇钱\n虽然妈妈一直告诉她用不着这样做，但她还是想给家里寄些什么。妈妈也总在这时候给她汇钱，这种行为不知不觉间已然成了两人间互道平安的方式。\n苏茜把日程表翻回了明天的那一页，在那条新加的日程上摩挲了好几下。\n她是个脚踏实地的人，即使想象出了遥远宏伟的未来，那也不是她现在的生活。她更倾向于读好每一本书，做好每一份工，抓住每一个机会。毕竟想象是不确定的，但当下的每一天，在罗德岛的生活，已然是努力便可见回报，而她真正想要的，恰恰就是这个。\n于是她修改了一下日程：\n（20:00—？）找理论课老师聊一下课程安排\n这才是她该问的问题。\n该睡觉了......干涩的眼睛拉了拉眼皮，想要立刻关上这窗户。\n于是，她乖乖合上日程表，关灯睡觉，试图让那因紧张而过分跳动的心脏平复下来，争取明天考个好分数。\n明天仍是辛劳的一天，明天也仍将满载而归。\n......\n苏茜心满意足地在温暖中沉入了梦乡。",
+      "typeIcon": "fun-x",
+      "uniEquipIcon": "uniequip_002_gdglow",
+      "typeName1": "FUN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_gdglow_1",
+        "uniequip_002_gdglow_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 22,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "操作<@ba.kw>浮游单元</>造成<@ba.kw>法术伤害</>\\n单元攻击同一敌人伤害提升（单元初始伤害提高，最高造成干员110%攻击力的伤害）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "操作<@ba.kw>浮游单元</>造成<@ba.kw>法术伤害</>\\n单元攻击同一敌人伤害提升（单元初始伤害提高，最高造成干员110%攻击力的伤害）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能开启后浮游单元攻击时有10%概率自爆（回到干员身边）对小范围敌人造成澄闪340%攻击力的法术伤害",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "信标的愤怒",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能开启后浮游单元攻击时有10%概率自爆（回到干员身边）对小范围敌人造成澄闪355%<@ba.talpu>（+15%）</>攻击力的法术伤害",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "1",
+                  "name": "信标的愤怒",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.55,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "操作<@ba.kw>浮游单元</>造成<@ba.kw>法术伤害</>\\n单元攻击同一敌人伤害提升（单元初始伤害提高，最高造成干员110%攻击力的伤害）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能开启后浮游单元攻击时有10%概率自爆（回到干员身边）对小范围敌人造成澄闪360%攻击力的法术伤害",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "信标的愤怒",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "技能开启后浮游单元攻击时有10%概率自爆（回到干员身边）对小范围敌人造成澄闪375%<@ba.talpu>（+15%）</>攻击力的法术伤害",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 2,
+                  "prefabKey": "1",
+                  "name": "信标的愤怒",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.015,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@atk_scale_2",
+                      "value": 3.75,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@max_stack_cnt",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1238,5 +2000,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

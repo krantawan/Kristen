@@ -154,6 +154,28 @@
       "cost": 19
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 0.8,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_140_whitew#1",
@@ -632,16 +654,652 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 75,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "精神摧毁",
+          "description": "攻击使目标的特殊能力失效，持续1秒",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "精神摧毁",
+          "description": "攻击使目标的特殊能力失效，持续2<@ba.talpu>（+1）</>秒",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "精神摧毁",
+          "description": "攻击使目标的特殊能力失效，持续5秒",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "精神摧毁",
+          "description": "攻击使目标的特殊能力失效，持续6<@ba.talpu>（+1）</>秒",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_whitew",
       "moduleName": "拉普兰德证章",
-      "desc": "干员拉普兰德擅长在较大范围内阻击敌人\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使领主职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员拉普兰德擅长在较大范围内阻击敌人\n根据外勤部门决议\n在外勤任务中划分为近卫干员，行使领主职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_whitew",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_whitew",
       "moduleName": "“幼狼的牙齿”",
-      "desc": "为了打造这件武器，刀匠苦思冥想了很久。\n萨卢佐家的家主亲自上门，请刀匠为他的女儿打造一件独一无二的武器。\n他接下这份委托，不仅是因为敬畏家族的权势——\n来自东国的刀匠相信，刀身的反光能折射一个人的灵魂，挥舞武器即是挥舞命运。\n他曾打造过需五人之力才能抬起的野太刀，于是那名持刀的武士在战场上所向披靡，却在年老时伤病缠身，饮恨自尽。\n他曾打造过一柄华贵板正但暗藏锋芒的佩剑，于是那位难得的王者终生未出一剑，却威震八方，气定四野。\n他也曾想要向那位西西里夫人献上忠诚，却被她有些厌烦地拒绝，于是他理解了，她究竟怎样统治着这个充斥着暴力的国度，又掩藏着何等的疲倦与无奈。\n但现在，他不知道，那头古怪的幼狼，应该配上怎样的牙齿。\n精致的细剑？因为她将学会来自她父亲的所有诡谲和不可捉摸？\n致命的巨斧？因为她难以摒弃血脉中荒野的呼唤？\n不，都不够。刀匠将半成品丢进熔炉。\n她像她的父亲一样残忍、优雅又难以捉摸，却截然不同。\n“还没有好吗？我最亲爱的父亲说要等到我的成年礼，但我们的敌人，今晚就想见到它。”\n刀匠解释道，他在打造一件能配得上她的武器。可越是绞尽脑汁，他越是难以想象这件武器该有的样子。\n“这对呢？”\n她漫不经心地选择了那对剑。\n曾经，他想要打造出一件足以印证自己技艺的武器。这对剑寄托了他过多的巧思，因而越来越复杂，能配合法术效果却难以承载精巧的操纵，甚至无法被剑鞘收纳。\n“注定无法完成的失败品？”白狼挥舞着这对剑，露出笑容，“我很喜欢。”\n刀匠请求，她独一无二的灵魂配得上更特别的武器。\n“......先生，你是不是搞错了什么？我来这里拿的是一件称手的工具。它很适合用来杀人，也很结实。我喜欢它的造型，所以，以后也打算留着。这样足够了。”\n刀匠失魂落魄地看着她离开。\n也许，他最好的作品是被自己摒弃掉的失败品。\n也许，能被武器定义的灵魂从来苍白。\n那天晚上，声名远扬的刀匠宣布隐退，而萨卢佐家的拉普兰德，第一次挥舞起她标志性的武器——\n日后，人们称之为“幼狼的牙齿”。"
+      "desc": "为了打造这件武器，刀匠苦思冥想了很久。\n萨卢佐家的家主亲自上门，请刀匠为他的女儿打造一件独一无二的武器。\n他接下这份委托，不仅是因为敬畏家族的权势——\n来自东国的刀匠相信，刀身的反光能折射一个人的灵魂，挥舞武器即是挥舞命运。\n他曾打造过需五人之力才能抬起的野太刀，于是那名持刀的武士在战场上所向披靡，却在年老时伤病缠身，饮恨自尽。\n他曾打造过一柄华贵板正但暗藏锋芒的佩剑，于是那位难得的王者终生未出一剑，却威震八方，气定四野。\n他也曾想要向那位西西里夫人献上忠诚，却被她有些厌烦地拒绝，于是他理解了，她究竟怎样统治着这个充斥着暴力的国度，又掩藏着何等的疲倦与无奈。\n但现在，他不知道，那头古怪的幼狼，应该配上怎样的牙齿。\n精致的细剑？因为她将学会来自她父亲的所有诡谲和不可捉摸？\n致命的巨斧？因为她难以摒弃血脉中荒野的呼唤？\n不，都不够。刀匠将半成品丢进熔炉。\n她像她的父亲一样残忍、优雅又难以捉摸，却截然不同。\n“还没有好吗？我最亲爱的父亲说要等到我的成年礼，但我们的敌人，今晚就想见到它。”\n刀匠解释道，他在打造一件能配得上她的武器。可越是绞尽脑汁，他越是难以想象这件武器该有的样子。\n“这对呢？”\n她漫不经心地选择了那对剑。\n曾经，他想要打造出一件足以印证自己技艺的武器。这对剑寄托了他过多的巧思，因而越来越复杂，能配合法术效果却难以承载精巧的操纵，甚至无法被剑鞘收纳。\n“注定无法完成的失败品？”白狼挥舞着这对剑，露出笑容，“我很喜欢。”\n刀匠请求，她独一无二的灵魂配得上更特别的武器。\n“......先生，你是不是搞错了什么？我来这里拿的是一件称手的工具。它很适合用来杀人，也很结实。我喜欢它的造型，所以，以后也打算留着。这样足够了。”\n刀匠失魂落魄地看着她离开。\n也许，他最好的作品是被自己摒弃掉的失败品。\n也许，能被武器定义的灵魂从来苍白。\n那天晚上，声名远扬的刀匠宣布隐退，而萨卢佐家的拉普兰德，第一次挥舞起她标志性的武器——\n日后，人们称之为“幼狼的牙齿”。",
+      "typeIcon": "lor-x",
+      "uniEquipIcon": "uniequip_002_whitew",
+      "typeName1": "LOR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_whitew_1",
+        "uniequip_002_whitew_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 110,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击附带<@ba.vup>{atk_scale_m:0%}</>攻击力的法术伤害",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击附带<@ba.vup>{atk_scale_m:0%}</>攻击力的法术伤害",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标的特殊能力失效并获得4%的<$ba.fragile>脆弱</>，持续6秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "精神摧毁",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标的特殊能力失效并获得4%的<$ba.fragile>脆弱</>，持续7<@ba.talpu>（+1）</>秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "精神摧毁",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 175,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "攻击附带<@ba.vup>{atk_scale_m:0%}</>攻击力的法术伤害",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 0.8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale_m",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标的特殊能力失效并获得8%的<$ba.fragile>脆弱</>，持续6秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "精神摧毁",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 6,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击使目标的特殊能力失效并获得8%的<$ba.fragile>脆弱</>，持续7<@ba.talpu>（+1）</>秒",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "精神摧毁",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 7,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.08,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1095,5 +1753,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -125,6 +125,7 @@
       "cost": 20
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_196_sunbr#1",
@@ -603,16 +604,673 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+21",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 21,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 400,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "フライパンマスター",
+          "description": "攻撃時、10%の確率でその攻撃のみ攻撃力が150％に上昇、敵を0.5秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "フライパンマスター",
+          "description": "攻撃時、13%<@ba.talpu>(+3%)</>の確率でその攻撃のみ攻撃力が150％に上昇、敵を0.5秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.13,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 1.5,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "フライパンマスター",
+          "description": "攻撃時、15%の確率でその攻撃のみ攻撃力が200％に上昇、敵を1秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.15,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "フライパンマスター",
+          "description": "攻撃時、18%<@ba.talpu>(+3%)</>の確率でその攻撃のみ攻撃力が200％に上昇、敵を1秒間<$ba.stun>スタン</>させる",
+          "blackboard": [
+            {
+              "key": "prob",
+              "value": 0.18,
+              "valueStr": null
+            },
+            {
+              "key": "atk_scale",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_sunbr",
       "moduleName": "グムの記章",
-      "desc": "グムは戦線を維持すると同時に、友軍への医療支援も行う。 \n外勤部門の決定に基づき \n外勤任務においては重装オペレーターとして区分し、庇護衛士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "グムは戦線を維持すると同時に、友軍への医療支援も行う。 \n外勤部門の決定に基づき \n外勤任務においては重装オペレーターとして区分し、庇護衛士の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_sunbr",
       "moduleName": "はちみつパイの詰め合わせ",
-      "desc": "おばあちゃんに料理を教わるために、ラーダはキッチンへ様々な調味料と香り高いライ麦粉を並べた。\n今日はおばあちゃんの一番の得意料理、あまーいはちみつパイの作り方を教えてもらうのだ。\n甘くておいしいはちみつをたっぷり、それからフルーツジャムにサクサクのナッツもたくさん入れよう！\nラーダはそう心に決めていた。\nとっても大きなはちみつパイを作って、大好きな人たちと一緒に食べれば、ひと口ごとにあまーい幸せが広がって、みんな大満足になれるはず……\n彼女はそう考えていたのだ。\n大好きなものを、大好きな人たちと分け合う。これ以上の幸せなんてあるだろうか。\n……\n「ラーダ、急いで荷造りするぞ。今は最悪の状況だ。これ以上学校には残ってられねえ。」\n教室に入ってくるやいなや、リーダーのソニアお姉ちゃんがそう言った。\nラーダはあまり深く考えず、良い子で頷いた。\n「うん、すぐやるよ。」\nそこへそばにいたアンナお姉ちゃんが呼び止めてくる。\n「ラーダ、少しいいですか。」\nアンナお姉ちゃんは、ラーダにはちみつパイを一切れ手渡してこう言った。\n「あなたも食べてください。学校の食料がほとんど燃えてしまっても今まで凌いでこられたのは、あなたが持っていたはちみつパイのおかげですし……」\nすると、ロザリンお姉ちゃんが大きな声で笑って肯定する。\n「しかもこのパイ、こんなにでかくて甘いしな！」\n続けて、ナターリアお姉ちゃんも、ラーダを褒めてくれた。\n「本当にあなたのおかげよ、ラーダ。これがあれば、ひと口食べるだけでお腹いっぱいになれるものね。」\nソニアお姉ちゃんもその言葉に頷いて、「そうだな」と言ったが、すぐに顔をしかめてしまった。\n「なのにオマエは全然食ってねえだろ。こないだもアタシらの分を用意するばっかりで、ビスケットまでほかの連中に分けてたじゃねえか。」\n\nお姉ちゃんたちはラーダを囲んで、多めに食べなさい、と残った食べ物を渡してくれた。\nそんなたくさんの食べ物と一切れのはちみつパイを両手に持って、ラーダはまばたきをなんとか堪え、お姉ちゃんたちに背を向けた。\nできるだけ音を立てないように鼻をすすり、こぼれてしまった涙を拭う。\n乾燥して切れた唇をわずかに開き、パイを口元に持っていくと、大袈裟にかぶりつくフリをしながら、ほんの少しだけパイ生地と中の餡を歯で削り取って、口の中に含んだ。\n彼女は思った。\n（……甘いなあ。すっごく甘い……）\n（なんでこんなに甘いんだろう。……こんなにおいしいパイ、ラーダは初めて食べたよ……）\n「……うん！いっぱい食べさせてもらっちゃった……ありがとね！」\nラーダは振り返ると、ほとんど大きさの変わっていないパイを急いでバッグに詰め込んで、心配そうなお姉ちゃんたちにとびきりの笑顔を向けた。\n「もう心配しないでっ！これでほんとに大丈夫！」\n「ラーダのパイはたっくさんはちみつが入ってるから、すぐに満腹の元気もりもりになれちゃうもん！」\n（――お姉ちゃんたちと一緒ならね。）\nラーダは、ひそかにそう思った。\n（お姉ちゃんたちと一緒だったら、何をするのも苦しくないし、何にも怖くないんだから。）"
+      "desc": "おばあちゃんに料理を教わるために、ラーダはキッチンへ様々な調味料と香り高いライ麦粉を並べた。\n今日はおばあちゃんの一番の得意料理、あまーいはちみつパイの作り方を教えてもらうのだ。\n甘くておいしいはちみつをたっぷり、それからフルーツジャムにサクサクのナッツもたくさん入れよう！\nラーダはそう心に決めていた。\nとっても大きなはちみつパイを作って、大好きな人たちと一緒に食べれば、ひと口ごとにあまーい幸せが広がって、みんな大満足になれるはず……\n彼女はそう考えていたのだ。\n大好きなものを、大好きな人たちと分け合う。これ以上の幸せなんてあるだろうか。\n……\n「ラーダ、急いで荷造りするぞ。今は最悪の状況だ。これ以上学校には残ってられねえ。」\n教室に入ってくるやいなや、リーダーのソニアお姉ちゃんがそう言った。\nラーダはあまり深く考えず、良い子で頷いた。\n「うん、すぐやるよ。」\nそこへそばにいたアンナお姉ちゃんが呼び止めてくる。\n「ラーダ、少しいいですか。」\nアンナお姉ちゃんは、ラーダにはちみつパイを一切れ手渡してこう言った。\n「あなたも食べてください。学校の食料がほとんど燃えてしまっても今まで凌いでこられたのは、あなたが持っていたはちみつパイのおかげですし……」\nすると、ロザリンお姉ちゃんが大きな声で笑って肯定する。\n「しかもこのパイ、こんなにでかくて甘いしな！」\n続けて、ナターリアお姉ちゃんも、ラーダを褒めてくれた。\n「本当にあなたのおかげよ、ラーダ。これがあれば、ひと口食べるだけでお腹いっぱいになれるものね。」\nソニアお姉ちゃんもその言葉に頷いて、「そうだな」と言ったが、すぐに顔をしかめてしまった。\n「なのにオマエは全然食ってねえだろ。こないだもアタシらの分を用意するばっかりで、ビスケットまでほかの連中に分けてたじゃねえか。」\n\nお姉ちゃんたちはラーダを囲んで、多めに食べなさい、と残った食べ物を渡してくれた。\nそんなたくさんの食べ物と一切れのはちみつパイを両手に持って、ラーダはまばたきをなんとか堪え、お姉ちゃんたちに背を向けた。\nできるだけ音を立てないように鼻をすすり、こぼれてしまった涙を拭う。\n乾燥して切れた唇をわずかに開き、パイを口元に持っていくと、大袈裟にかぶりつくフリをしながら、ほんの少しだけパイ生地と中の餡を歯で削り取って、口の中に含んだ。\n彼女は思った。\n（……甘いなあ。すっごく甘い……）\n（なんでこんなに甘いんだろう。……こんなにおいしいパイ、ラーダは初めて食べたよ……）\n「……うん！いっぱい食べさせてもらっちゃった……ありがとね！」\nラーダは振り返ると、ほとんど大きさの変わっていないパイを急いでバッグに詰め込んで、心配そうなお姉ちゃんたちにとびきりの笑顔を向けた。\n「もう心配しないでっ！これでほんとに大丈夫！」\n「ラーダのパイはたっくさんはちみつが入ってるから、すぐに満腹の元気もりもりになれちゃうもん！」\n（――お姉ちゃんたちと一緒ならね。）\nラーダは、ひそかにそう思った。\n（お姉ちゃんたちと一緒だったら、何をするのも苦しくないし、何にも怖くないんだから。）",
+      "typeIcon": "gua-x",
+      "uniEquipIcon": "uniequip_002_sunbr",
+      "typeName1": "GUA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_sunbr_1",
+        "uniequip_002_sunbr_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30053",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30073",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30043",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の味方を治療時、HP治療効果<@ba.kw>+15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 48,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の味方を治療時、HP治療効果<@ba.kw>+15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、20%の確率でその攻撃のみ攻撃力が200%に上昇し、敵を1.5秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "フライパンマスター",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、23%<@ba.talpu>（+3%）</>の確率でその攻撃のみ攻撃力が200%に上昇し、敵を1.5秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "フライパンマスター",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 250,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "HPが50%未満の味方を治療時、HP治療効果<@ba.kw>+15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "hp_ratio",
+                      "value": 0.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、23%の確率でその攻撃のみ攻撃力が200%に上昇し、敵を1.5秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "フライパンマスター",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.23,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、26%<@ba.talpu>（+3%）</>の確率でその攻撃のみ攻撃力が200%に上昇し、敵を1.5秒間<$ba.stun>スタン</>させる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "フライパンマスター",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.26,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 1.5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1066,5 +1724,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

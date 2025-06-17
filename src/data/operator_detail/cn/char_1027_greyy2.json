@@ -169,6 +169,28 @@
       "cost": 24
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "attack@append_atk_scale",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1027_greyy2#1",
@@ -667,16 +689,575 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+32",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 32,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "窃光链缚",
+          "description": "攻击时有25%的几率对攻击目标造成2秒的<$ba.sluggish>停顿</>",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.25,
+              "valueStr": null
+            },
+            {
+              "key": "attack@sluggish",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "窃光链缚",
+          "description": "攻击时有40%的几率对攻击目标造成2秒的<$ba.sluggish>停顿</>",
+          "blackboard": [
+            {
+              "key": "attack@prob",
+              "value": 0.4,
+              "valueStr": null
+            },
+            {
+              "key": "attack@sluggish",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_greyy2",
       "moduleName": "承曦格雷伊证章",
-      "desc": "干员承曦格雷伊擅长远距离打击复数地面敌人\n根据外勤部门决议\n在外勤任务中划分为狙击干员，行使投掷手职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员承曦格雷伊擅长远距离打击复数地面敌人\n根据外勤部门决议\n在外勤任务中划分为狙击干员，行使投掷手职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_greyy2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_greyy2",
       "moduleName": "新型电控设备技术原型",
-      "desc": "格雷伊在荒野测试自己刚造出来的技术原型。\n他已经为了这个东西熬了好几天夜，经常在晚上偷偷点起一盏灯调试编译。这样的小心翼翼让他想起小时候的破旧房屋里，母亲会用捡来的材料催动一点源石技艺，在太阳西沉后为他们一片黑暗的家点起一小点光亮，让他可以凑着光看一会儿书。直到那些材料被消耗殆尽，爆发出刺鼻的烟尘和耀眼的火花，在一瞬前所未有的光亮之后，四周再次归于黑暗。\n他现在已经很熟悉这片漆黑的荒野，荒野上没有灯光，没有除了他以外的其他人。微弱的萤火照不亮哪怕两步路的距离，只剩下呼呼的风声，有时连风都听不到。\n格雷伊搭起支架，输入数据，架上设备运转起来。他并不是很清楚这个东西究竟能带来什么，只是一串几天前算出的数据，他想方设法地实现它，期待能得到什么结果。也许是一个村庄能得到稳定的供电，也许是一项技术终于能填补上稍有缺憾的一环，也许什么也没有，只是爆出一团耀眼但无用的火花。\n他早就不再害怕黑暗，但他还是紧张起来，担心自己这次连一团火花都爆不出来。\n“你不要害怕，我的孩子。我在福利院上班，我看过太多将死的人，他们的亲人围在身边，那个时候任何一种情感都很有用，只是不要害怕，害怕做不了任何事。”\n设备闪烁起来，萤火被惊扰，扑闪着飞向更远的荒野，很快被黑暗吞噬。\n光芒照亮黑暗，但光芒也很快就消散在黑暗里，甚至来不及爆出一团火花。\n“又失败了......”\n格雷伊颓然地倒在地上。荒野上有风吹过，他没有觉得冷，只觉得是母亲抱住了他。\n他闭上眼，极远处的村庄供电设备突然急速地运转，整座村庄闪烁起来，但在这安静的深夜，没有人看到，包括终于陷入熟睡的格雷伊。\n屋内，Mechanist的灯光芒骤放，他看向窗外，天上的一颗星冲他闪烁了一下，荒野上亮起一团炽白的光芒，仿佛永不熄灭的星辰终于落到了地面。\nMechanist合上自己在看的书，走了出去。\n“你尽管害怕，我的孩子，但是不要停下！”"
+      "desc": "格雷伊在荒野测试自己刚造出来的技术原型。\n他已经为了这个东西熬了好几天夜，经常在晚上偷偷点起一盏灯调试编译。这样的小心翼翼让他想起小时候的破旧房屋里，母亲会用捡来的材料催动一点源石技艺，在太阳西沉后为他们一片黑暗的家点起一小点光亮，让他可以凑着光看一会儿书。直到那些材料被消耗殆尽，爆发出刺鼻的烟尘和耀眼的火花，在一瞬前所未有的光亮之后，四周再次归于黑暗。\n他现在已经很熟悉这片漆黑的荒野，荒野上没有灯光，没有除了他以外的其他人。微弱的萤火照不亮哪怕两步路的距离，只剩下呼呼的风声，有时连风都听不到。\n格雷伊搭起支架，输入数据，架上设备运转起来。他并不是很清楚这个东西究竟能带来什么，只是一串几天前算出的数据，他想方设法地实现它，期待能得到什么结果。也许是一个村庄能得到稳定的供电，也许是一项技术终于能填补上稍有缺憾的一环，也许什么也没有，只是爆出一团耀眼但无用的火花。\n他早就不再害怕黑暗，但他还是紧张起来，担心自己这次连一团火花都爆不出来。\n“你不要害怕，我的孩子。我在福利院上班，我看过太多将死的人，他们的亲人围在身边，那个时候任何一种情感都很有用，只是不要害怕，害怕做不了任何事。”\n设备闪烁起来，萤火被惊扰，扑闪着飞向更远的荒野，很快被黑暗吞噬。\n光芒照亮黑暗，但光芒也很快就消散在黑暗里，甚至来不及爆出一团火花。\n“又失败了......”\n格雷伊颓然地倒在地上。荒野上有风吹过，他没有觉得冷，只觉得是母亲抱住了他。\n他闭上眼，极远处的村庄供电设备突然急速地运转，整座村庄闪烁起来，但在这安静的深夜，没有人看到，包括终于陷入熟睡的格雷伊。\n屋内，Mechanist的灯光芒骤放，他看向窗外，天上的一颗星冲他闪烁了一下，荒野上亮起一团炽白的光芒，仿佛永不熄灭的星辰终于落到了地面。\nMechanist合上自己在看的书，走了出去。\n“你尽管害怕，我的孩子，但是不要停下！”",
+      "typeIcon": "bom-x",
+      "uniEquipIcon": "uniequip_002_greyy2",
+      "typeName1": "BOM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_greyy2_1",
+        "uniequip_002_greyy2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击对小范围的<@ba.kw>地面</>敌人造成<@ba.kw>三次</>物理伤害（后两次为余震，伤害降低至攻击力的50％）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 12,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击对小范围的<@ba.kw>地面</>敌人造成<@ba.kw>三次</>物理伤害（后两次为余震，伤害降低至攻击力的50％）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击时有40%的几率对攻击目标造成2秒的<$ba.sluggish>停顿</>，对处于<$ba.sluggish>停顿</>中的敌人造成的伤害提升10％",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "窃光链缚",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻击对小范围的<@ba.kw>地面</>敌人造成<@ba.kw>三次</>物理伤害（后两次为余震，伤害降低至攻击力的50％）",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻击时有40%的几率对攻击目标造成2秒的<$ba.sluggish>停顿</>，对处于<$ba.sluggish>停顿</>中的敌人造成的伤害提升15％",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "窃光链缚",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1130,5 +1711,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

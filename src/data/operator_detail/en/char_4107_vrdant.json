@@ -151,6 +151,36 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "duration",
+          "value": 20
+        },
+        {
+          "key": "atk",
+          "value": 0
+        },
+        {
+          "key": "max_hp",
+          "value": 0
+        },
+        {
+          "key": "talent_override_rangeid_flag",
+          "value": 1
+        }
+      ],
+      "overrideDescription": "Does not retreat upon receiving lethal damage, instead swaps to a <Substitute> (Substitute has 0 Block). Swaps back to the original after 20 seconds",
+      "prefabKey": "-1",
+      "rangeId": "x-4"
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4107_vrdant#1",
@@ -606,16 +636,592 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +160",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 160,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 100,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Vegetative Regeneration",
+          "description": "<Substitute> restores 2% HP per second",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.02
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Vegetative Regeneration",
+          "description": "<Substitute> restores 2.5% <@ba.talpu>(+0.5%)</> HP per second",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.025
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Vegetative Regeneration",
+          "description": "<Substitute> restores 3.5% HP per second",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.035
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Vegetative Regeneration",
+          "description": "<Substitute> restores 4% <@ba.talpu>(+0.5%)</> HP per second",
+          "blackboard": {
+            "hp_recovery_per_sec_by_max_hp_ratio": 0.04
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_vrdant",
       "moduleName": "Verdant's Badge",
-      "desc": "Operator Verdant has demonstrated a remarkable aptitude for repeated contention with the enemy upon the battlefield.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Dollkeeper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Verdant has demonstrated a remarkable aptitude for repeated contention with the enemy upon the battlefield.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Specialist Operator during field operations to exercise Dollkeeper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_vrdant",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_vrdant",
       "moduleName": "Trophies from the Jungle",
-      "desc": "Verdant only manages a single step before a vine thicker than his arm bursts out from the bushes, lunging straight for his waist. The guide by his side tosses a spear, and as if conscious, the vine shrinks back into the tangle.\n'How do they grow so thick?!'\nThe guide scratches his head. 'That's just how they are. You're only here because you were after them, right? How could you not know?'\n'Suppose my boss was lying by omission then,' Verdant sighs. 'He said, there's carnivorous plants snapping about in the depths of the Acahuallan jungle. Keep one indoors, sorts out your Originium slug problem just like that. The big new thing amongst the Victorian gentry, he was betting...'\nThe guide only half-comprehends. All he can really think to ask is 'Do you still want one, then?'\nVerdant clutches his head in his hands. 'Just give me a bit to think about it. He'll be right storming if I don't get a sample, but I want to make sure I save my own <i>life</i> first.'\n'Huh? Save your life? Didn't you tell us you could take on five of our tribe's warriors before we left? Five of us could handle that thing no problem. You think the chief'd let me come here alone with you otherwise?'\n'Well... listen, just think of it as the terms of the job...'\nAt that moment, a vine silently ensnares the guide's ankle, and tugs him away for the undergrowth. Verdant hastily grabs hold of his hand, but the vine's stronger than he expects—so strong, he feels like his shoes are practically plowing the soil under him.\nHe curses his boss in his head, then with his free hand, switches out the vial on his saw, points at the guide's ankle and pulls the trigger. Out bursts a chemical spray, and in no time, the vine around his leg, and the entire thicket, have all withered yellow.\nThe guide springs back up from the ground. 'Brother, thank you! I don't know what to even say—we can pluck that thing and bring it back now!'\n'No, forget it. That was my strongest defoliant I just sprayed—the whole plant's on the way out. Not much point even picking it now.'\n'That's fine, there's always next time! With your wonder drugs, next time we'll get it for sure!'\n'Um, right.'\n'Let me tell you, people who can't back up their words are the kind our tribe hates most, and until just now, I thought you were sketchy as hell, but you did that thing in one go! Now I believe you—you CAN take five at once!'\n'W-Well, yeah, sure I can.'\n'I've got to tell the whole tribe when we get back how you're—you're this!' The guide throws Verdant a thumbs up. 'I bet people'll want to wrestle you, but you'll be fine! Just give 'em a puff of that drug and they'll soften right up, then even a little runt like you can flick 'em over, hahahaha!'\nUnprepared for the guide to start chattering away, Verdant blushes and quietly listens, picturing the proud Tiacauh coming to challenge him one after another. A helpless chill runs down his spine.\nBut compared to heading back and coping with his boss's thunderous temper... maybe this isn't so bad, he suddenly thinks.\nSo tonight he'll drop the pretense, eat and drink merrily, and prepare to get thrashed a couple dozen times."
+      "desc": "Verdant only manages a single step before a vine thicker than his arm bursts out from the bushes, lunging straight for his waist. The guide by his side tosses a spear, and as if conscious, the vine shrinks back into the tangle.\n'How do they grow so thick?!'\nThe guide scratches his head. 'That's just how they are. You're only here because you were after them, right? How could you not know?'\n'Suppose my boss was lying by omission then,' Verdant sighs. 'He said, there's carnivorous plants snapping about in the depths of the Acahuallan jungle. Keep one indoors, sorts out your Originium slug problem just like that. The big new thing amongst the Victorian gentry, he was betting...'\nThe guide only half-comprehends. All he can really think to ask is 'Do you still want one, then?'\nVerdant clutches his head in his hands. 'Just give me a bit to think about it. He'll be right storming if I don't get a sample, but I want to make sure I save my own <i>life</i> first.'\n'Huh? Save your life? Didn't you tell us you could take on five of our tribe's warriors before we left? Five of us could handle that thing no problem. You think the chief'd let me come here alone with you otherwise?'\n'Well... listen, just think of it as the terms of the job...'\nAt that moment, a vine silently ensnares the guide's ankle, and tugs him away for the undergrowth. Verdant hastily grabs hold of his hand, but the vine's stronger than he expects—so strong, he feels like his shoes are practically plowing the soil under him.\nHe curses his boss in his head, then with his free hand, switches out the vial on his saw, points at the guide's ankle and pulls the trigger. Out bursts a chemical spray, and in no time, the vine around his leg, and the entire thicket, have all withered yellow.\nThe guide springs back up from the ground. 'Brother, thank you! I don't know what to even say—we can pluck that thing and bring it back now!'\n'No, forget it. That was my strongest defoliant I just sprayed—the whole plant's on the way out. Not much point even picking it now.'\n'That's fine, there's always next time! With your wonder drugs, next time we'll get it for sure!'\n'Um, right.'\n'Let me tell you, people who can't back up their words are the kind our tribe hates most, and until just now, I thought you were sketchy as hell, but you did that thing in one go! Now I believe you—you CAN take five at once!'\n'W-Well, yeah, sure I can.'\n'I've got to tell the whole tribe when we get back how you're—you're this!' The guide throws Verdant a thumbs up. 'I bet people'll want to wrestle you, but you'll be fine! Just give 'em a puff of that drug and they'll soften right up, then even a little runt like you can flick 'em over, hahahaha!'\nUnprepared for the guide to start chattering away, Verdant blushes and quietly listens, picturing the proud Tiacauh coming to challenge him one after another. A helpless chill runs down his spine.\nBut compared to heading back and coping with his boss's thunderous temper... maybe this isn't so bad, he suddenly thinks.\nSo tonight he'll drop the pretense, eat and drink merrily, and prepare to get thrashed a couple dozen times.",
+      "typeIcon": "pum-y",
+      "uniEquipIcon": "uniequip_002_vrdant",
+      "typeName1": "PUM",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_vrdant_1",
+        "uniequip_002_vrdant_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31033",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31023",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31053",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 145,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but HP is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": "x-4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 38,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but HP is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": "x-4"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> restores 3.5% HP per second and gains +5 RES",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Vegetative Regeneration",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.035,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> restores 4% <@ba.talpu>(+0.5%)</> HP per second and gains +5 RES",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Vegetative Regeneration",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 185,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_hp",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Instead of retreating when defeated, switch to a <Substitute> (Substitute has 0 Block, but HP is <@ba.kw>increased</>) for 20 seconds before switching back to the original",
+                  "prefabKey": "-1",
+                  "rangeId": "x-4"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> restores 3.5% HP per second and gains +8 RES",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Vegetative Regeneration",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.035,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "<Substitute> restores 4% <@ba.talpu>(+0.5%)</> HP per second and gains +8 RES",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Vegetative Regeneration",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec_by_max_hp_ratio",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "magic_resistance",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1069,5 +1675,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

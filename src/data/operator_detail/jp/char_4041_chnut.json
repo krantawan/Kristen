@@ -150,6 +150,28 @@
       "cost": 14
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "ep_heal_ratio",
+            "value": 0.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4041_chnut#1",
@@ -620,16 +642,578 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+15",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 15,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 100,
+        "atk": 35,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "地固め",
+          "description": "地面マスにいるユニットを治療する時、<$ba.dt.element>元素損傷</>に対する治療効果+10%",
+          "blackboard": [
+            {
+              "key": "ep_heal_scale",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "地固め",
+          "description": "地面マスにいるユニットを治療する時、<$ba.dt.element>元素損傷</>に対する治療効果+13%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "ep_heal_scale",
+              "value": 1.13,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "地固め",
+          "description": "地面マスにいるユニットを治療する時、<$ba.dt.element>元素損傷</>に対する治療効果+20%",
+          "blackboard": [
+            {
+              "key": "ep_heal_scale",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "地固め",
+          "description": "地面マスにいるユニットを治療する時、<$ba.dt.element>元素損傷</>に対する治療効果+23%<@ba.talpu>（+3%）</>",
+          "blackboard": [
+            {
+              "key": "ep_heal_scale",
+              "value": 1.23,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_chnut",
       "moduleName": "チェストナットの記章",
-      "desc": "チェストナットは広範囲の治療を行うと同時に、オペレーターの元素損傷を回復させることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、放浪医の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "チェストナットは広範囲の治療を行うと同時に、オペレーターの元素損傷を回復させることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては医療オペレーターとして区分し、放浪医の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_chnut",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_chnut",
       "moduleName": "地上旅行記念の鉱石灯",
-      "desc": "この鉱石灯には、各地で手に入れた石がちりばめられている。\nこれはイェラグで採れる氷晶石。あの時、特別対応で駄獣のベビーシートに座らされていたチェストナットは、レンタルしてきたコートの前を強く閉め直した。レンタルとは言うものの、実際には一番小さいサイズでも裾が地面についてしまうため、店主は気前よく無料でそれを着せてくれていた。そうして長い登山の末、一行は日の出の時刻に山頂にたどり着くことができた。淡い金色の陽光が氷晶石越しにチェストナットの顔を照らす中、彼は人々に高々と持ち上げられ、歓声の中に埋もれた。\nこれはレム・ビリトンの黄鉄鉱。あの時、元々彼は間欠泉の見学に訪れただけだったのだが、ちょうどかつてないスケールの噴出が起き、近辺の坑道が陥落してしまったところに居合わせた。チェストナットは逃げ惑う人の群れをかき分け、医師の資格証明書を掲げながら人波を逆行していった。そうして、ひと晩中治療にあたった彼は、坑夫たちが差し出す煤のついたお金を受け取ろうとせず、代わりにきれいに形を整えられた黄鉄鉱を一つもらうことにした。\nこれはサーミの木の根の化石。あの時、旅を続けるうちに極北まで来ていたチェストナットは、次に向かうべき場所がわからず、現地の人にこの化石で占ってもらうことにした。その人曰く、何千万年も地下に埋もれていたこの木の根はこう言っているそうだった。「君の想像よりも、大地はずっと広大だ。立ち止まるな。」\nこれは炎国の璞玉。あの時、チェストナットは今にも殴り合いを始めそうな若者たちと出会った。そこで彼は、若者たちを温かい料理の並ぶ屋台に座らせ、璞玉を質に入れて得たお金で地元の料理を奢ってやった。おいしいものを食べた若者たちは、肩を叩き合って和解すると、金を出し合い璞玉を買い戻してくれた。人々の争いがすべて今日のように簡単に解決できればいいのに、とチェストナットは思った。彼は医者として、喜んで人を救いたいと思っているが、無意味な争いで血が流されるのは見たくないのだ。\nこれは琥珀の結晶。あの時、チェストナットは、クルビアでこの昆虫が包み込まれた琥珀を見つけた。アーススピリットとエイヤフィヤトラによる鑑定ののち、中にいる昆虫はサルゴン一帯にしかいないもので、なぜクルビアにこれが現れたのかは彼女たちにもわからないとのことだった。そして今、三人は荒野を突き進むロドス本艦に乗っており、前方にはサルゴンの果てしない砂漠が広がっている。\n琥珀を返してもらったチェストナットは、そろそろ故郷に戻ってみようとそう思った。\nその後、地底に戻った彼は、再び馴染み深いガレ場の前にやってきた。湿った石壁には灯光茸がちらほら生えており、チェストナットは背伸びして、その灯光茸と背比べをしてみた。すると、小さな頭が彼の周りに集まってきて、地上で見聞きしたことを聞かせてもらおうと待っている。\n並んだ鉱石灯が発する様々な色の優しい光が、好奇心に見たたくさんの目を照らしていて、幼い頃を思わせる。唯一違うのは、自分がお話を聞かせる側になったことだけだ。チェストナットはつい笑った。\n「この鉱石は、どれも違う川や湖、山や谷から採れたものなんだ。どのお話を聞いてみたい？」"
+      "desc": "この鉱石灯には、各地で手に入れた石がちりばめられている。\nこれはイェラグで採れる氷晶石。あの時、特別対応で駄獣のベビーシートに座らされていたチェストナットは、レンタルしてきたコートの前を強く閉め直した。レンタルとは言うものの、実際には一番小さいサイズでも裾が地面についてしまうため、店主は気前よく無料でそれを着せてくれていた。そうして長い登山の末、一行は日の出の時刻に山頂にたどり着くことができた。淡い金色の陽光が氷晶石越しにチェストナットの顔を照らす中、彼は人々に高々と持ち上げられ、歓声の中に埋もれた。\nこれはレム・ビリトンの黄鉄鉱。あの時、元々彼は間欠泉の見学に訪れただけだったのだが、ちょうどかつてないスケールの噴出が起き、近辺の坑道が陥落してしまったところに居合わせた。チェストナットは逃げ惑う人の群れをかき分け、医師の資格証明書を掲げながら人波を逆行していった。そうして、ひと晩中治療にあたった彼は、坑夫たちが差し出す煤のついたお金を受け取ろうとせず、代わりにきれいに形を整えられた黄鉄鉱を一つもらうことにした。\nこれはサーミの木の根の化石。あの時、旅を続けるうちに極北まで来ていたチェストナットは、次に向かうべき場所がわからず、現地の人にこの化石で占ってもらうことにした。その人曰く、何千万年も地下に埋もれていたこの木の根はこう言っているそうだった。「君の想像よりも、大地はずっと広大だ。立ち止まるな。」\nこれは炎国の璞玉。あの時、チェストナットは今にも殴り合いを始めそうな若者たちと出会った。そこで彼は、若者たちを温かい料理の並ぶ屋台に座らせ、璞玉を質に入れて得たお金で地元の料理を奢ってやった。おいしいものを食べた若者たちは、肩を叩き合って和解すると、金を出し合い璞玉を買い戻してくれた。人々の争いがすべて今日のように簡単に解決できればいいのに、とチェストナットは思った。彼は医者として、喜んで人を救いたいと思っているが、無意味な争いで血が流されるのは見たくないのだ。\nこれは琥珀の結晶。あの時、チェストナットは、クルビアでこの昆虫が包み込まれた琥珀を見つけた。アーススピリットとエイヤフィヤトラによる鑑定ののち、中にいる昆虫はサルゴン一帯にしかいないもので、なぜクルビアにこれが現れたのかは彼女たちにもわからないとのことだった。そして今、三人は荒野を突き進むロドス本艦に乗っており、前方にはサルゴンの果てしない砂漠が広がっている。\n琥珀を返してもらったチェストナットは、そろそろ故郷に戻ってみようとそう思った。\nその後、地底に戻った彼は、再び馴染み深いガレ場の前にやってきた。湿った石壁には灯光茸がちらほら生えており、チェストナットは背伸びして、その灯光茸と背比べをしてみた。すると、小さな頭が彼の周りに集まってきて、地上で見聞きしたことを聞かせてもらおうと待っている。\n並んだ鉱石灯が発する様々な色の優しい光が、好奇心に見たたくさんの目を照らしていて、幼い頃を思わせる。唯一違うのは、自分がお話を聞かせる側になったことだけだ。チェストナットはつい笑った。\n「この鉱石は、どれも違う川や湖、山や谷から採れたものなんだ。どのお話を聞いてみたい？」",
+      "typeIcon": "wdm-x",
+      "uniEquipIcon": "uniequip_002_chnut",
+      "typeName1": "WDM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_chnut_1",
+        "uniequip_002_chnut_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30103",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31043",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30023",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 24,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "地面マスにいるユニットを治療する時、<$ba.dt.element>元素損傷</>に対する治療効果+25%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "地固め",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "地面マスにいるユニットを治療する時、<$ba.dt.element>元素損傷</>に対する治療効果+28%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "地固め",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 70,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_ratio",
+                      "value": 0.6,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "味方のHPを回復し、同時に対象に蓄積された<$ba.dt.element>元素損傷</>を自身の攻撃力の<@ba.kw>{ep_heal_ratio:0%}</>の値分治療する（HP最大の味方も<$ba.dt.element>元素損傷</>の治療対象となる）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "地面マスにいるユニットを治療する時、<$ba.dt.element>元素損傷</>に対する治療効果+27%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "地固め",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.27,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "地面マスにいるユニットを治療する時、<$ba.dt.element>元素損傷</>に対する治療効果+30%<@ba.talpu>（+3%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "地固め",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "ep_heal_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1083,5 +1667,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

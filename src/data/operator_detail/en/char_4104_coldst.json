@@ -150,6 +150,68 @@
       "cost": 21
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 4
+        },
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ],
+      "overrideDescription": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}, improved at Elite 1).",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_1",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 6
+        },
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ],
+      "overrideDescription": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}, improved at Elite 2).",
+      "prefabKey": "-1",
+      "rangeId": null
+    },
+    {
+      "unlockCondition": {
+        "phase": "PHASE_2",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 8
+        },
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ],
+      "overrideDescription": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}).",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4104_coldst#1",
@@ -620,16 +682,596 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -10 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 105,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Not to be Outdone",
+          "description": "If no attack is made for 2 seconds, the next attack deals 120% ATK as Physical damage",
+          "blackboard": {
+            "atk_scale": 1.2,
+            "attack@delay": 2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Not to be Outdone",
+          "description": "If no attack is made for 2 seconds, the next attack deals 123% <@ba.talpu>(+3%)</> ATK as Physical damage",
+          "blackboard": {
+            "atk_scale": 1.23,
+            "attack@delay": 2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Not to be Outdone",
+          "description": "If no attack is made for 2 seconds, the next attack deals 130% ATK as Physical damage",
+          "blackboard": {
+            "atk_scale": 1.3,
+            "attack@delay": 2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "Not to be Outdone",
+          "description": "If no attack is made for 2 seconds, the next attack deals 133% <@ba.talpu>(+3%)</> ATK as Physical damage",
+          "blackboard": {
+            "atk_scale": 1.33,
+            "attack@delay": 2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_coldst",
       "moduleName": "Coldshot's Badge",
-      "desc": "Operator Coldshot has demonstrated a remarkable aptitude for storing and unleashing capacitance-based firepower to penetrative ends when facing the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Hunter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Coldshot has demonstrated a remarkable aptitude for storing and unleashing capacitance-based firepower to penetrative ends when facing the enemy.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Hunter responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_coldst",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_coldst",
       "moduleName": "'Unbridled'",
-      "desc": "'What a fine beast.' When the ranch owner takes Helena to see the burdenbeast that evening, this is the first thought that crosses her mind.\nThe burdenbeast stands proud in the corral, its stocky build much larger than any burdenbeast Helena has ever tamed. Fresh scars mar its face and neck, while a fading name is branded onto the side of its belly by hot iron, making it seem particularly extraordinary.\nExtraordinary—an apt word to describe what the burdenbeast has endured. The ranch owner tells Helena that it took the hunters quite some effort to capture it. Tracking the beast alone took five days, as its tracks led them across mountains and valleys, through forests and creeks, almost straight into a full-on Catastrophe. Only after almost wearing out their boots and exhausting all their tranquilizer arrows did they finally manage to bring this legendary burdenbeast back. Many renowned riders have since tried to tame it, all to no avail.\n'What a fine beast,' Helena exclaims.\n'That's right. That's why you're our last hope at taming it,' the ranch owner responds, sounding slightly defeated. 'If even you can't tame it, I'll have no choice but to send it to the slaughterhouse.'\nHelena takes out the bridle and vaults over the fence.\nShe advances slowly and gently towards the burdenbeast until they are less than half a meter apart. In one hand, she holds the bridle; with the other, she caresses its face, fingers tracing the new and old scars. Before anyone can react, she slips the bridle over its neck, tightens the reins, and effortlessly flips onto the beast's back.\nThe ranch owner's gasp is instantly drowned out by the beast's deafening neighs. Helena quickly steadies herself, holding tightly onto the reins no matter how hard the beast kicks and shakes. Enraged, the beast rears up on its hind legs and lets out a furious cry. Helena leans forward, pressing her body entirely against its back. Despite all these years, even as its mane has hardened and its hide has grown rough, the vigor and life force of the wild still course through its veins.\nHelena recalls the evening of her seventeenth birthday. Her father had given her a burdenbeast as a present and had used a hot iron to brand its name onto the side of its belly. 'Anna.'\n'Anna. What a fine beast.' That was what Helena had thought.\nDiscreetly, Helena takes out a dagger from her pocket and, with a gentle nick, cuts the rein. With all its strength, 'Anna' shakes off the bridle and Helena. For a fleeting moment, Helena feels as if their gazes meet, though she cannot be sure. Half a second later, 'Anna' clears the fence with a single leap.\n'Holy! You nearly had it, Helena!' The ranch owner's tone is a mix of excitement and shame.\n'What a fine beast.' That's all Helena says as she gets back up, pats the dirt off herself, and watches as the burdenbeast gallops back into the wild."
+      "desc": "'What a fine beast.' When the ranch owner takes Helena to see the burdenbeast that evening, this is the first thought that crosses her mind.\nThe burdenbeast stands proud in the corral, its stocky build much larger than any burdenbeast Helena has ever tamed. Fresh scars mar its face and neck, while a fading name is branded onto the side of its belly by hot iron, making it seem particularly extraordinary.\nExtraordinary—an apt word to describe what the burdenbeast has endured. The ranch owner tells Helena that it took the hunters quite some effort to capture it. Tracking the beast alone took five days, as its tracks led them across mountains and valleys, through forests and creeks, almost straight into a full-on Catastrophe. Only after almost wearing out their boots and exhausting all their tranquilizer arrows did they finally manage to bring this legendary burdenbeast back. Many renowned riders have since tried to tame it, all to no avail.\n'What a fine beast,' Helena exclaims.\n'That's right. That's why you're our last hope at taming it,' the ranch owner responds, sounding slightly defeated. 'If even you can't tame it, I'll have no choice but to send it to the slaughterhouse.'\nHelena takes out the bridle and vaults over the fence.\nShe advances slowly and gently towards the burdenbeast until they are less than half a meter apart. In one hand, she holds the bridle; with the other, she caresses its face, fingers tracing the new and old scars. Before anyone can react, she slips the bridle over its neck, tightens the reins, and effortlessly flips onto the beast's back.\nThe ranch owner's gasp is instantly drowned out by the beast's deafening neighs. Helena quickly steadies herself, holding tightly onto the reins no matter how hard the beast kicks and shakes. Enraged, the beast rears up on its hind legs and lets out a furious cry. Helena leans forward, pressing her body entirely against its back. Despite all these years, even as its mane has hardened and its hide has grown rough, the vigor and life force of the wild still course through its veins.\nHelena recalls the evening of her seventeenth birthday. Her father had given her a burdenbeast as a present and had used a hot iron to brand its name onto the side of its belly. 'Anna.'\n'Anna. What a fine beast.' That was what Helena had thought.\nDiscreetly, Helena takes out a dagger from her pocket and, with a gentle nick, cuts the rein. With all its strength, 'Anna' shakes off the bridle and Helena. For a fleeting moment, Helena feels as if their gazes meet, though she cannot be sure. Half a second later, 'Anna' clears the fence with a single leap.\n'Holy! You nearly had it, Helena!' The ranch owner's tone is a mix of excitement and shame.\n'What a fine beast.' That's all Helena says as she gets back up, pats the dirt off herself, and watches as the burdenbeast gallops back into the wild.",
+      "typeIcon": "hun-x",
+      "uniEquipIcon": "uniequip_002_coldst",
+      "typeName1": "HUN",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_coldst_1",
+        "uniequip_002_coldst_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 128,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 53,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When Ammo count is empty, the next reload +1 Ammo additionally",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 168,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When Ammo count is empty, the next reload +1 Ammo additionally",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "If no attack is made for 2 seconds, the next attack deals 135% ATK as Physical damage",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Not to be Outdone",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@delay",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "If no attack is made for 2 seconds, the next attack deals 138% <@ba.talpu>(+3%)</> ATK as Physical damage",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Not to be Outdone",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.38,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@delay",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 205,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 75,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When Ammo count is empty, the next reload +1 Ammo additionally",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "extra_add",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 8,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "If no attack is made for 2 seconds, the next attack deals 138% ATK as Physical damage",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Not to be Outdone",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.38,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@delay",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "If no attack is made for 2 seconds, the next attack deals 141% <@ba.talpu>(+3%)</> ATK as Physical damage",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "Not to be Outdone",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.41,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@delay",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1083,5 +1725,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

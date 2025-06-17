@@ -151,6 +151,36 @@
       "cost": 8
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "interval",
+            "value": 3,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "cost",
+            "value": -3,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4155_talr#1",
@@ -618,16 +648,593 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-3秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -3,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 200,
+        "atk": 25,
+        "def": 20,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "慎重な客選び",
+          "description": "自身にブロックされていない敵への与ダメージ+10%",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 1.1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "慎重な客選び",
+          "description": "自身にブロックされていない敵への与ダメージ+15%<@ba.talpu>（+5%）</>",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 1.15,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "慎重な客選び",
+          "description": "自身にブロックされていない敵への与ダメージ+20%",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 1.2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "慎重な客選び",
+          "description": "自身にブロックされていない敵への与ダメージ+25%<@ba.talpu>（+5%）</>",
+          "blackboard": [
+            {
+              "key": "damage_scale",
+              "value": 1.25,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_talr",
       "moduleName": "フィグリーノの記章",
-      "desc": "フィグリーノは繰り返し戦場に切り込む戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、行商人の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "フィグリーノは繰り返し戦場に切り込む戦術に秀でている。\n外勤部門の決定に基づき\n外勤任務においては特殊オペレーターとして区分し、行商人の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_talr",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_talr",
       "moduleName": "「大物」",
-      "desc": "その男が店に入ってきたのは、ちょうど雨が降ってきたばかりの頃だった。\n年齢は六十歳ほどで、身なりは整っており、厳粛な表情も相まって貫禄のある男だった。サテンのコートには雨粒が付いていたが、ルキーノは慣れた様子で出迎えて服を預かった。ルキーノを見て男は数秒立ち止まり、それからウンベルトがしびれを切らして待っている作業室へと足早に入っていく。\nルキーノは祖父と客人にはそれ以上干渉せず、預かったコートをハンガーに掛けた。そのコートはとても繊細な仕立てで、生地も上質なものが使われていた。何よりも目についたのは、内ポケットに収められている磨き上げられた黒い携帯式クロスボウだった。この人は相当な大物だ、とルキーノは感じた。\nほどなくして、作業室から口論の声が聞こえてきた。扉の隙間から漏れ出す断片的な言葉だけが、ルキーノの耳に届いてくる。\n「……ルッカの物……これで最後……」\n「……お前が……手を下した……無慈悲に……」\n「……マシーナ……たった一人の……娘……」\n「なんで、お父さんとお母さんの名前を……？」ルキーノは好奇心を抑えきれず、作業室に近づこうとした。その瞬間、床に物が落ちる音と、先ほどの男の叫び声が聞こえてきた。「……私も、あいつの肉親だ！」\n作業室の扉が突然開かれた。例の男がまるで壁のように祖父との間に立ちはだかる。その男が振り返ってルキーノに掌を差し出すと、そこには銀色の指輪があった。\n「これはルッカの指輪だ。そろそろお前に渡す頃合いだろう。」そう言って、男は指輪を取り出す。その眼差しと言葉は、期待に満ち溢れていた。\n男の肩越しに、整えられていたはずの作業台がめちゃくちゃになっているのが見えた。生地やメジャーは床に散らばっており、ウンベルトは部屋の片隅に身を寄せている。これほどやつれ果てた祖父の姿を見るのは初めてのことだった。指輪を受け取ろうとしたルキーノだが、手を伸ばした瞬間、男への好奇心は怒りへと変わった。そしてルキーノは男の手を払いのけ、指輪はぽとりと絨毯の上に落ちた。\n「あなた、誰ですか？ぼくもおじいちゃんも、失礼な客は相手しませんから。」\n男の眼差しに宿っていた期待は、瞬く間に消え失せた。代わりにその目は怒りで満たされ、緑色の光が映し出されている。ルキーノはそのとき、ようやく男の瞳が自分と同じ色をしていることに気が付いた。\n「デ・モンターノはあなたを歓迎しません。」ルキーノは勇気を奮い立たせ、姿勢を正して言った。「さあ、出て行ってください。」\n毅然とした命令だった。ルキーノは、男の眉間に集まっていた怒りが自分の言葉によってかき消されたことに驚いた。男の目尻からはわずかな失望の色が窺えたが、すぐに厳粛な表情がそれを覆い隠した。\n「……望むならそうしよう、小さなサルトリアよ。ではな。」男は雨に濡れたコートを羽織り、最後にルキーノを一瞥すると、扉をくぐり夜の雨の中に消えていった。\n「おじいちゃん、あの人は一体誰なの？」\n「娘を殺した父親さ。名前までは知らなくていい。」\n「あいつは『大物』になろうと、シラクーザのゲームに手を出した。これは当然の報いなんだよ。」"
+      "desc": "その男が店に入ってきたのは、ちょうど雨が降ってきたばかりの頃だった。\n年齢は六十歳ほどで、身なりは整っており、厳粛な表情も相まって貫禄のある男だった。サテンのコートには雨粒が付いていたが、ルキーノは慣れた様子で出迎えて服を預かった。ルキーノを見て男は数秒立ち止まり、それからウンベルトがしびれを切らして待っている作業室へと足早に入っていく。\nルキーノは祖父と客人にはそれ以上干渉せず、預かったコートをハンガーに掛けた。そのコートはとても繊細な仕立てで、生地も上質なものが使われていた。何よりも目についたのは、内ポケットに収められている磨き上げられた黒い携帯式クロスボウだった。この人は相当な大物だ、とルキーノは感じた。\nほどなくして、作業室から口論の声が聞こえてきた。扉の隙間から漏れ出す断片的な言葉だけが、ルキーノの耳に届いてくる。\n「……ルッカの物……これで最後……」\n「……お前が……手を下した……無慈悲に……」\n「……マシーナ……たった一人の……娘……」\n「なんで、お父さんとお母さんの名前を……？」ルキーノは好奇心を抑えきれず、作業室に近づこうとした。その瞬間、床に物が落ちる音と、先ほどの男の叫び声が聞こえてきた。「……私も、あいつの肉親だ！」\n作業室の扉が突然開かれた。例の男がまるで壁のように祖父との間に立ちはだかる。その男が振り返ってルキーノに掌を差し出すと、そこには銀色の指輪があった。\n「これはルッカの指輪だ。そろそろお前に渡す頃合いだろう。」そう言って、男は指輪を取り出す。その眼差しと言葉は、期待に満ち溢れていた。\n男の肩越しに、整えられていたはずの作業台がめちゃくちゃになっているのが見えた。生地やメジャーは床に散らばっており、ウンベルトは部屋の片隅に身を寄せている。これほどやつれ果てた祖父の姿を見るのは初めてのことだった。指輪を受け取ろうとしたルキーノだが、手を伸ばした瞬間、男への好奇心は怒りへと変わった。そしてルキーノは男の手を払いのけ、指輪はぽとりと絨毯の上に落ちた。\n「あなた、誰ですか？ぼくもおじいちゃんも、失礼な客は相手しませんから。」\n男の眼差しに宿っていた期待は、瞬く間に消え失せた。代わりにその目は怒りで満たされ、緑色の光が映し出されている。ルキーノはそのとき、ようやく男の瞳が自分と同じ色をしていることに気が付いた。\n「デ・モンターノはあなたを歓迎しません。」ルキーノは勇気を奮い立たせ、姿勢を正して言った。「さあ、出て行ってください。」\n毅然とした命令だった。ルキーノは、男の眉間に集まっていた怒りが自分の言葉によってかき消されたことに驚いた。男の目尻からはわずかな失望の色が窺えたが、すぐに厳粛な表情がそれを覆い隠した。\n「……望むならそうしよう、小さなサルトリアよ。ではな。」男は雨に濡れたコートを羽織り、最後にルキーノを一瞥すると、扉をくぐり夜の雨の中に消えていった。\n「おじいちゃん、あの人は一体誰なの？」\n「娘を殺した父親さ。名前までは知らなくていい。」\n「あいつは『大物』になろうと、シラクーザのゲームに手を出した。これは当然の報いなんだよ。」",
+      "typeIcon": "mer-x",
+      "uniEquipIcon": "uniequip_002_talr",
+      "typeName1": "MER",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_talr_1",
+        "uniequip_002_talr_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30094",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 62,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身にブロックされていない敵への与ダメージ+27%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "慎重な客選び",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.27,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身にブロックされていない敵への与ダメージ+32%<@ba.talpu>（+5%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "慎重な客選び",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.32,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 220,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再配置までの時間が<@ba.kw>短い</>\n撤退時に<@ba.kw>コスト</>を返却しない\n配置中、3秒ごとにコストを<@ba.kw>2</>消費（所持コスト不足時自動的に撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身にブロックされていない敵への与ダメージ+30%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "慎重な客選び",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "自身にブロックされていない敵への与ダメージ+35%<@ba.talpu>（+5%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "慎重な客選び",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale",
+                      "value": 1.35,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1081,5 +1688,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

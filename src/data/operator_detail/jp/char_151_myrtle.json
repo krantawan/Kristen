@@ -138,6 +138,7 @@
       "cost": 10
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_151_myrtle#1",
@@ -635,16 +636,540 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+22",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 22,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 50,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "黄金の林檎",
+          "description": "配置中、味方【先鋒】のHPが1秒ごとに25回復",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "黄金の林檎",
+          "description": "配置中、味方【先鋒】のHPが1秒ごとに28<@ba.talpu>(+3)</>回復",
+          "blackboard": [
+            {
+              "key": "hp_recovery_per_sec",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_myrtle",
       "moduleName": "テンニンカの記章",
-      "desc": "テンニンカは戦場における仲間の士気の鼓舞に秀でている。\n外勤部門の決定に基づき\n外勤任務においては先鋒オペレーターとして区分し、旗手の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "テンニンカは戦場における仲間の士気の鼓舞に秀でている。\n外勤部門の決定に基づき\n外勤任務においては先鋒オペレーターとして区分し、旗手の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_myrtle",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_myrtle",
       "moduleName": "「コレクション」",
-      "desc": "【探しています】 \n宝物庫の整理をしてたら、すごく大事なお宝がなくなっちゃってたの。拾ってくれた人がいたら、あたしに返してね。よろしく！連絡はテンニンカまで！ \n追伸： \nこれじゃ何を失くしたか伝わらないから、もっと詳しく書けってドゥリンに言われちゃった。 \nお宝の説明： \n小さくて薄いカードに、あたしの名前が書いてあるやつだよ。普段はきれいなカードホルダーの中に入れてあるの。地上で手に入れた中では一番の宝物！ \n（以下、筆跡が別の色に変わっている） \n宝物庫もお宝もみんなピンと来ないってほんと！？それもちゃんと説明しろってドゥリンがうるさいから書いとくね。 \nうちの街の子どもはみーんな自分の宝物庫を持ってて、大事なものを全部そこに入れとくの。たとえば、ピストルにして遊べるかんぬきとかね。（これ、地元特有の風習だったのに、隣の商店街の連中にパクられたの！マジムカつく！） \nあたしは地元の街と商店街三つを縄張りにしてる分、当然誰が見ても感動しちゃうような一番豊富なコレクションを持ってるの。今は、地上で集めたいいものだってたくさん入ってるし―― \n↑ドゥリンにペンを取られて話が途切れちゃった。 \n無駄が多すぎ、要点絞れとか言うんだよ。早く寝てくれないかなー。 \n参照用！コレクションの内容： \n絶対に汚れないテーブルクロス。（あたしの最初のお宝！） \nパパが発明した素材でできてて、いくら落書きしても汚れないの。あたしもパパの説明をたっくさん聞いてようやく原理が理解できたくらい、すっごく不思議なアイテムだよ。 \n見た目が旗に似てたから、その時にはもう、あたしの戦いにどこまでも付き合ってもらおうって決めてたんだ。里の人にはからかわれたりもしたけど、これはあたしの大将軍への道を最初から最後まで見届けてくれた宝物なの。だから地上にくるときも、迷わず持ってくることにしたんだ。 \n失くしたお宝のほうも、このテーブルクロスと同じくらい大事なものなんだよ。 \nさらに追伸： \nこれ、リンゴちゃんのことじゃないからね！ \nあれもお宝だけど、失くしてないもん！エンジニア部に貸しただけ！ \n追加情報！： \n探してるお宝は、あたしがロドスで初めて手に入れたものなの。 \nほかの人いわく、ロドスの一員になった証なんだって！ \n正直あたし、最初はロドスのこと特になんとも思ってなかったけど、過ごしてるうちに結構いいところだなあって気付いてさ。 \nどこへ行っても何か新しいことが待ってるし、みんな優しいし、あたしの話をちゃんと聞いてくれて、このテンニンカ大将軍の実力を信頼してくれるし、実際みんなの役にも立てるし！なにより、誰もあたしの旗を笑ったりしないからね。ドクターなんかはむしろ気に入ってくれてるくらい！ \nロドスにいると楽しいからその証ってやつも大事になってきて、あたしにとってのお宝になったんだ。 \nこれだけ書けばもう伝わるよね？ \n…… \n「テンちゃんさー、探してるお宝ってもしかして……IDカード？」 \n「そういえばそんな名前だったかも……あああっ、思い出した！それだよそれ！」 \n「でもさー……それなら、胸元に付いてない？」 \n「うっそぉ！？」"
+      "desc": "【探しています】 \n宝物庫の整理をしてたら、すごく大事なお宝がなくなっちゃってたの。拾ってくれた人がいたら、あたしに返してね。よろしく！連絡はテンニンカまで！ \n追伸： \nこれじゃ何を失くしたか伝わらないから、もっと詳しく書けってドゥリンに言われちゃった。 \nお宝の説明： \n小さくて薄いカードに、あたしの名前が書いてあるやつだよ。普段はきれいなカードホルダーの中に入れてあるの。地上で手に入れた中では一番の宝物！ \n（以下、筆跡が別の色に変わっている） \n宝物庫もお宝もみんなピンと来ないってほんと！？それもちゃんと説明しろってドゥリンがうるさいから書いとくね。 \nうちの街の子どもはみーんな自分の宝物庫を持ってて、大事なものを全部そこに入れとくの。たとえば、ピストルにして遊べるかんぬきとかね。（これ、地元特有の風習だったのに、隣の商店街の連中にパクられたの！マジムカつく！） \nあたしは地元の街と商店街三つを縄張りにしてる分、当然誰が見ても感動しちゃうような一番豊富なコレクションを持ってるの。今は、地上で集めたいいものだってたくさん入ってるし―― \n↑ドゥリンにペンを取られて話が途切れちゃった。 \n無駄が多すぎ、要点絞れとか言うんだよ。早く寝てくれないかなー。 \n参照用！コレクションの内容： \n絶対に汚れないテーブルクロス。（あたしの最初のお宝！） \nパパが発明した素材でできてて、いくら落書きしても汚れないの。あたしもパパの説明をたっくさん聞いてようやく原理が理解できたくらい、すっごく不思議なアイテムだよ。 \n見た目が旗に似てたから、その時にはもう、あたしの戦いにどこまでも付き合ってもらおうって決めてたんだ。里の人にはからかわれたりもしたけど、これはあたしの大将軍への道を最初から最後まで見届けてくれた宝物なの。だから地上にくるときも、迷わず持ってくることにしたんだ。 \n失くしたお宝のほうも、このテーブルクロスと同じくらい大事なものなんだよ。 \nさらに追伸： \nこれ、リンゴちゃんのことじゃないからね！ \nあれもお宝だけど、失くしてないもん！エンジニア部に貸しただけ！ \n追加情報！： \n探してるお宝は、あたしがロドスで初めて手に入れたものなの。 \nほかの人いわく、ロドスの一員になった証なんだって！ \n正直あたし、最初はロドスのこと特になんとも思ってなかったけど、過ごしてるうちに結構いいところだなあって気付いてさ。 \nどこへ行っても何か新しいことが待ってるし、みんな優しいし、あたしの話をちゃんと聞いてくれて、このテンニンカ大将軍の実力を信頼してくれるし、実際みんなの役にも立てるし！なにより、誰もあたしの旗を笑ったりしないからね。ドクターなんかはむしろ気に入ってくれてるくらい！ \nロドスにいると楽しいからその証ってやつも大事になってきて、あたしにとってのお宝になったんだ。 \nこれだけ書けばもう伝わるよね？ \n…… \n「テンちゃんさー、探してるお宝ってもしかして……IDカード？」 \n「そういえばそんな名前だったかも……あああっ、思い出した！それだよそれ！」 \n「でもさー……それなら、胸元に付いてない？」 \n「うっそぉ！？」",
+      "typeIcon": "bea-x",
+      "uniEquipIcon": "uniequip_002_myrtle",
+      "typeName1": "BEA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_myrtle_1",
+        "uniequip_002_myrtle_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30103",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30033",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31053",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "スキル発動中、ブロック数が0になるが、前方にいる味方1人のブロック数<@ba.kw>+1</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 130,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "スキル発動中、ブロック数が0になるが、前方にいる味方1人のブロック数<@ba.kw>+1</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方【先鋒】のHPが1秒ごとに28回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "黄金の林檎",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 28,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方【先鋒】のHPが1秒ごとに31<@ba.talpu>（+3）</>回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "黄金の林檎",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 31,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 150,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "スキル発動中、ブロック数が0になるが、前方にいる味方1人のブロック数<@ba.kw>+1</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方【先鋒】のHPが1秒ごとに30回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "黄金の林檎",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 30,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置中、味方【先鋒】のHPが1秒ごとに33<@ba.talpu>（+3）</>回復",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "黄金の林檎",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "hp_recovery_per_sec",
+                      "value": 33,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1088,5 +1613,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -150,6 +150,7 @@
       "cost": 14
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_456_ash#1",
@@ -719,21 +720,949 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +27",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 27,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Auxiliary Equipment",
+          "description": "After deployment, immediately throw a Stun Grenade at an enemy within range, <$ba.stun>Stunning</> them and nearby enemies for 3 seconds",
+          "blackboard": {
+            "stun": 3
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Auxiliary Equipment",
+          "description": "After deployment, immediately throw a Stun Grenade at an enemy within range, <$ba.stun>Stunning</> them and nearby enemies for 4 seconds",
+          "blackboard": {
+            "stun": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Breaching Specialist",
+          "description": "During the first deployment, DP Cost -3 and gain 17 SP after deployment",
+          "blackboard": {
+            "runtime_cost": -3,
+            "sp": 17
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Breaching Specialist",
+          "description": "During the first deployment, DP Cost -3 and gain 20 <@ba.talpu>(+3)</> SP after deployment",
+          "blackboard": {
+            "runtime_cost": -3,
+            "sp": 20
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_ash",
       "moduleName": "Ash's Badge",
-      "desc": "Operator Ash has demonstrated a remarkable aptitude in both long-distance support fire and assault and breaching of fortified targets.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations. In witness whereof,\nThis badge is hereby conferred upon the above named, whether this band of soldiers needs such recognition notwithstanding."
+      "desc": "Operator Ash has demonstrated a remarkable aptitude in both long-distance support fire and assault and breaching of fortified targets.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations. In witness whereof,\nThis badge is hereby conferred upon the above named, whether this band of soldiers needs such recognition notwithstanding.",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_ash",
       "moduleName": "Tactical Breaching Round Pack",
-      "desc": "Jacob Roland never thought much about it.\nWhat it meant to be a Kazimierz competition knight of little renown.\nTo be able to find a job in Columbia.\nJust how weird this job was.\nIronforge City, Southern District, in a small meeting room inside the Maylander Security and Defense Company’s office building.\nHe carefully wipes down his small shield and accompanying weapon.\nQuietly awaiting the arrival of his 'superior.'\nJacob takes stock of the meeting room.\nFive unique 'professionals' sit around him.\nThe Sargonian to his side is showing off his muscles.\nThis brawny man, over two meters tall, boasts that he could smash through the walls with brute strength alone.\nThe Bolívarian soldier talking to him is assembling a crossbow, the head of each bolt conspicuously marked with different colors.\nThe Leithanian caster leaning against the wall fiddles with an Arts Unit, the device occasionally emitting electric noises.\nClosest to the window are two tight-lipped Victorian soldiers.\nOne of them holds a sledgehammer with a head larger than his own.\n\nEach of them looks like they've been through a hundred battles, endured countless trials and tribulations.\nBut what about himself? The toughest battle he ever endured... was just a match in a Kazimierz arena.\nIs he really qualified for this job?\nWhy would a Columbian recruit a group of warriors from all across the world?\nJust as these thoughts run through his mind, someone pushes open the door.\nA tall, red-haired lady wearing sunglasses walks in.\nShe has a small gun hanging from her waist, but she is not a Sankta.\nShe walks up to the podium, clearly in no hurry.\n\n'Welcome to my squad.'\n'You can call me Ash.'"
+      "desc": "Jacob Roland never thought much about it.\nWhat it meant to be a Kazimierz competition knight of little renown.\nTo be able to find a job in Columbia.\nJust how weird this job was.\nIronforge City, Southern District, in a small meeting room inside the Maylander Security and Defense Company’s office building.\nHe carefully wipes down his small shield and accompanying weapon.\nQuietly awaiting the arrival of his 'superior.'\nJacob takes stock of the meeting room.\nFive unique 'professionals' sit around him.\nThe Sargonian to his side is showing off his muscles.\nThis brawny man, over two meters tall, boasts that he could smash through the walls with brute strength alone.\nThe Bolívarian soldier talking to him is assembling a crossbow, the head of each bolt conspicuously marked with different colors.\nThe Leithanian caster leaning against the wall fiddles with an Arts Unit, the device occasionally emitting electric noises.\nClosest to the window are two tight-lipped Victorian soldiers.\nOne of them holds a sledgehammer with a head larger than his own.\n\nEach of them looks like they've been through a hundred battles, endured countless trials and tribulations.\nBut what about himself? The toughest battle he ever endured... was just a match in a Kazimierz arena.\nIs he really qualified for this job?\nWhy would a Columbian recruit a group of warriors from all across the world?\nJust as these thoughts run through his mind, someone pushes open the door.\nA tall, red-haired lady wearing sunglasses walks in.\nShe has a small gun hanging from her waist, but she is not a Sankta.\nShe walks up to the podium, clearly in no hurry.\n\n'Welcome to my squad.'\n'You can call me Ash.'",
+      "typeIcon": "mar-y",
+      "uniEquipIcon": "uniequip_002_ash",
+      "typeName1": "MAR",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_ash_1",
+        "uniequip_002_ash_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are ground enemies within range, ASPD <@ba.kw>+8</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 33,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are ground enemies within range, ASPD <@ba.kw>+8</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "During the first deployment, DP Cost -4 and gain 17 SP on deployment",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Breaching Specialist",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "runtime_cost",
+                      "value": -4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 17,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "During the first deployment, DP Cost -4 and gain 20 <@ba.talpu>(+3)</> SP on deployment",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Breaching Specialist",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "runtime_cost",
+                      "value": -4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 20,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "When there are ground enemies within range, ASPD <@ba.kw>+8</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack_speed",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "During the first deployment, DP Cost -5 and gain 17 SP on deployment",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Breaching Specialist",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "runtime_cost",
+                      "value": -5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 17,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "During the first deployment, DP Cost -5 and gain 20 <@ba.talpu>(+3)</> SP on deployment",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Breaching Specialist",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "runtime_cost",
+                      "value": -5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "sp",
+                      "value": 20,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_ash",
       "moduleName": "Modified Breaching Grenade",
-      "desc": "'So, they've got a president?'\n'Yeah, I heard that’s what they call their leader.'\n'Wait, hold up a sec.'\n'You just told me Victoria is ruled by a king. Leithanien is ruled by empresses, and Ursus has an emperor.'\n'But the leader of the Columbians... is a president??'\n'Yeah... Something wrong with that?'\n\nThe strange mercenary before Thumbtack seems lost in thought.\nEver since the mercenary team calling themselves 'Team Rainbow' showed up at Rhodes Island, the soldier woman named 'Ash' had been asking all kinds of strange questions.\n\n'Then I have one more question.'\n'Fire away.'\n'Do they happen to have a city named New York?'\n'Huh? Are you talking about County York? That's a city in Victoria.'\n'In other words, Victoria has a County York, but Columbia doesn’t have a New York??'\n'That's right.'\n\nThe soldier falls silent again, muttering something along the lines of 'this makes no sense.'\nThumbtack recalls an incident last week at the cafeteria, when Ash was shocked to see blue tomatoes and square potatoes.\nMost of the operators were visibly perplexed.\nJust what kind of country do they come from?\n\n'Now that I think about it...'\nThumbtack decides to change the topic.\n'When we get a day off this week, the folks from Engineering are going to play football on the deck. Want to watch?'\n'Football... what exactly is that?'\n'Have you never seen a football game before? 11 players on each side, and they try to kick a ball into the other team’s goal.'\n'Oh! Yeah, I know that one.'\nFor a moment, the expression on Ash’s face becomes much softer.\n\nThat's something comforting to her?\nThumbtack remains at a loss.\n"
+      "desc": "'So, they've got a president?'\n'Yeah, I heard that’s what they call their leader.'\n'Wait, hold up a sec.'\n'You just told me Victoria is ruled by a king. Leithanien is ruled by empresses, and Ursus has an emperor.'\n'But the leader of the Columbians... is a president??'\n'Yeah... Something wrong with that?'\n\nThe strange mercenary before Thumbtack seems lost in thought.\nEver since the mercenary team calling themselves 'Team Rainbow' showed up at Rhodes Island, the soldier woman named 'Ash' had been asking all kinds of strange questions.\n\n'Then I have one more question.'\n'Fire away.'\n'Do they happen to have a city named New York?'\n'Huh? Are you talking about County York? That's a city in Victoria.'\n'In other words, Victoria has a County York, but Columbia doesn’t have a New York??'\n'That's right.'\n\nThe soldier falls silent again, muttering something along the lines of 'this makes no sense.'\nThumbtack recalls an incident last week at the cafeteria, when Ash was shocked to see blue tomatoes and square potatoes.\nMost of the operators were visibly perplexed.\nJust what kind of country do they come from?\n\n'Now that I think about it...'\nThumbtack decides to change the topic.\n'When we get a day off this week, the folks from Engineering are going to play football on the deck. Want to watch?'\n'Football... what exactly is that?'\n'Have you never seen a football game before? 11 players on each side, and they try to kick a ball into the other team’s goal.'\n'Oh! Yeah, I know that one.'\nFor a moment, the expression on Ash’s face becomes much softer.\n\nThat's something comforting to her?\nThumbtack remains at a loss.\n",
+      "typeIcon": "mar-x",
+      "uniEquipIcon": "uniequip_003_ash",
+      "typeName1": "MAR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_ash_1",
+        "uniequip_003_ash_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 14,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 12,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 19,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 16,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After deployment, immediately throw a Stun Grenade at an enemy within range, <$ba.stun>Stunning</> them and nearby enemies for 5 seconds; for 5s, Ash deals +7% Physical damage to those enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Auxiliary Equipment",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "stun",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "scale_duration",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.07,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 170,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 22,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 19,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "After deployment, immediately throw a Stun Grenade at an enemy within range, <$ba.stun>Stunning</> them and nearby enemies for 6 seconds; for 6s, Ash deals +10% Physical damage to those enemies",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Auxiliary Equipment",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "stun",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "scale_duration",
+                      "value": 6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1167,5 +2096,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

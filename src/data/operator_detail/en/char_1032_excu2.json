@@ -150,6 +150,24 @@
       "cost": 23
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ],
+      "overrideDescription": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1032_excu2#1",
@@ -747,16 +765,621 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DEF +22",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 22,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +26",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 26,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 70,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "The Chosen One",
+          "description": "Attacks have a 10% chance to hit twice; this chance increases by 3% for each ammo consumed while a skill is active, resetting when the skill ends",
+          "blackboard": {
+            "prob": 0.1,
+            "prob_add": 0.03
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "The Chosen One",
+          "description": "Attacks have a 13% <@ba.talpu>(+3%)</> chance to hit twice; this chance increases by 3% for each ammo consumed while a skill is active, resetting when the skill ends",
+          "blackboard": {
+            "prob": 0.13,
+            "prob_add": 0.03
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "The Chosen One",
+          "description": "Attacks have a 20% chance to hit twice; this chance increases by 5% for each ammo consumed while a skill is active, resetting when the skill ends",
+          "blackboard": {
+            "prob": 0.2,
+            "prob_add": 0.05
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "The Chosen One",
+          "description": "Attacks have a 23% <@ba.talpu>(+3%)</> chance to hit twice; this chance increases by 5% for each ammo consumed while a skill is active, resetting when the skill ends",
+          "blackboard": {
+            "prob": 0.23,
+            "prob_add": 0.05
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Empathy by Shotgun",
+          "description": "For every Laterano Operator deployed, increases the ammo capacity of this unit's ammo-based skills by +1 (stacks up to 4 times)",
+          "blackboard": {
+            "add_count": 1,
+            "add_count_max_stack": 4
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_excu2",
       "moduleName": "Executor the Ex Foedere's Badge",
-      "desc": "Operator Executor the Ex Foedere has demonstrated a remarkable aptitude in dispatching enemy swathes with little to no support.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Reaper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Executor the Ex Foedere has demonstrated a remarkable aptitude in dispatching enemy swathes with little to no support.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Reaper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_excu2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_excu2",
       "moduleName": "Unanswered",
-      "desc": "'Federico, how's this one?'\n'Extrapolating based on the Sanctilaminium Ambrosii outer wall searchlight covers, it has not been used in at least a year.'\n'It looks a little worn, but the size is about right. We'll just have to cut it open down the middle, wipe it clean, then we can place that flower inside.'\n'Have you obtained the inhabitants' permission?'\n'Oren dragged a batch of supplies over when he sent the commandos, and these are the scraps the inhabitants don't need anymore. Leave it to me once we're on overtime—I don't want to see you cracking it open by hand.'\n'We have at most an hour before the monastery resumes its journey.'\n'We'll make it. That reminds me, though, Federico...'\n'What is it?'\n'I don't believe that gardener left a will.'\n'Monastery resident Clément Dubois has received an appropriate burial. He did not leave behind an executable will, nor any other personal estate.'\n'Um, you know I'm trying to ask, right?'\n'You wish to understand why I am preserving this flower.'\n'This isn't your first time handling an assignment with so much baggage, right? But I've never seen you leave a keepsake for yourself before... Are you doing okay?'\n'My assignment is complete. But there as still unaddressed doubts raised by the Sanctilaminium Ambrosii.'\n'If I'm remembering correctly, there was this quote from some Saint: 'A gun needs a target, but not every question can have an answer.''\n'I cannot overlook any issues. They will directly impact any followup assignments.'\n'*sigh* What am I even worrying over? Wait, don't tell me you questioned His Holiness when you went to report the mission progress?'\n'I did, but did not receive an answer.'\n'So that's why you're insisting on giving a nearly burnt-out flower another drying. Now I get it. Still, I have to say one thing—whether you can keep it preserved or not doesn't depend much on this glass bell I'm cutting. It's already dead. It's not the flower it was before, Federico.'\n'Richele, your word count in this conversation is significantly above-average.'\n'Ahaha, just making small talk. And I'm not even going to ask where you got that average from. Alright, it's settled—after we give this a wash, we'll stick it onto the pedestal. It'll be as pretty as what they sell in stores.'\n'Thank you.' Federico takes the grimy glass bell from his coworker's hands, and walks out of the junk-filled shed.\n'Well, then. What kind of answer will you find, Laterano's newest Saint?'"
+      "desc": "'Federico, how's this one?'\n'Extrapolating based on the Sanctilaminium Ambrosii outer wall searchlight covers, it has not been used in at least a year.'\n'It looks a little worn, but the size is about right. We'll just have to cut it open down the middle, wipe it clean, then we can place that flower inside.'\n'Have you obtained the inhabitants' permission?'\n'Oren dragged a batch of supplies over when he sent the commandos, and these are the scraps the inhabitants don't need anymore. Leave it to me once we're on overtime—I don't want to see you cracking it open by hand.'\n'We have at most an hour before the monastery resumes its journey.'\n'We'll make it. That reminds me, though, Federico...'\n'What is it?'\n'I don't believe that gardener left a will.'\n'Monastery resident Clément Dubois has received an appropriate burial. He did not leave behind an executable will, nor any other personal estate.'\n'Um, you know I'm trying to ask, right?'\n'You wish to understand why I am preserving this flower.'\n'This isn't your first time handling an assignment with so much baggage, right? But I've never seen you leave a keepsake for yourself before... Are you doing okay?'\n'My assignment is complete. But there as still unaddressed doubts raised by the Sanctilaminium Ambrosii.'\n'If I'm remembering correctly, there was this quote from some Saint: 'A gun needs a target, but not every question can have an answer.''\n'I cannot overlook any issues. They will directly impact any followup assignments.'\n'*sigh* What am I even worrying over? Wait, don't tell me you questioned His Holiness when you went to report the mission progress?'\n'I did, but did not receive an answer.'\n'So that's why you're insisting on giving a nearly burnt-out flower another drying. Now I get it. Still, I have to say one thing—whether you can keep it preserved or not doesn't depend much on this glass bell I'm cutting. It's already dead. It's not the flower it was before, Federico.'\n'Richele, your word count in this conversation is significantly above-average.'\n'Ahaha, just making small talk. And I'm not even going to ask where you got that average from. Alright, it's settled—after we give this a wash, we'll stick it onto the pedestal. It'll be as pretty as what they sell in stores.'\n'Thank you.' Federico takes the grimy glass bell from his coworker's hands, and walks out of the junk-filled shed.\n'Well, then. What kind of answer will you find, Laterano's newest Saint?'",
+      "typeIcon": "rea-x",
+      "uniEquipIcon": "uniequip_002_excu2",
+      "typeName1": "REA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_excu2_1",
+        "uniequip_002_excu2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 24,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 50,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 32,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking, there is a 30% chance to perform an additional attack that ignores 150 DEF; this chance increases by 5% for each ammo consumed while a skill is active, resetting when the skill ends",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "The Chosen One",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob_add",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 150,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking, there is a 33% <@ba.talpu>(+3%)</> chance to perform an additional attack that ignores 150 DEF; this chance increases by 5% for each ammo consumed while a skill is active, resetting when the skill ends",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "The Chosen One",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.33,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob_add",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 150,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 7,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking, there is a 35% chance to perform an additional attack that ignores 300 DEF; this chance increases by 5% for each ammo consumed while a skill is active, resetting when the skill ends",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "The Chosen One",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.35,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob_add",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 300,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "When attacking, there is a 38% <@ba.talpu>(+3%)</> chance to perform an additional attack that ignores 300 DEF; this chance increases by 5% for each ammo consumed while a skill is active, resetting when the skill ends",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "The Chosen One",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "prob",
+                      "value": 0.38,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "prob_add",
+                      "value": 0.05,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 300,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1218,5 +1841,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

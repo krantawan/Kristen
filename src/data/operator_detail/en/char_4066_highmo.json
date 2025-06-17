@@ -150,6 +150,24 @@
       "cost": 22
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ],
+      "overrideDescription": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4066_highmo#1",
@@ -620,16 +638,578 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +160",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 160,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves First Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 250,
+        "atk": 40,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Sustenance from the Reaper",
+          "description": "Recover 18 <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count",
+          "blackboard": {
+            "value": 18
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Sustenance from the Reaper",
+          "description": "Recover 23 <@ba.talpu>(+5)</> <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count",
+          "blackboard": {
+            "value": 23
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Sustenance from the Reaper",
+          "description": "Recover 30 <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count",
+          "blackboard": {
+            "value": 30
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Sustenance from the Reaper",
+          "description": "Recover 35 <@ba.talpu>(+5)</> <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count",
+          "blackboard": {
+            "value": 35
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Interfluence from Maladie",
+          "description": "In [Mizuki & Caerula Arbor], ASPD +10, Block +1",
+          "blackboard": {
+            "attack_speed": 10,
+            "block_cnt": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Interfluence from Maladie",
+          "description": "In [Mizuki & Caerula Arbor], ASPD +25, Block +1",
+          "blackboard": {
+            "attack_speed": 25,
+            "block_cnt": 1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_highmo",
       "moduleName": "Highmore's Badge",
-      "desc": "Operator Highmore has demonstrated a remarkable aptitude in dispatching enemy swathes with little to no support.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Reaper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Highmore has demonstrated a remarkable aptitude in dispatching enemy swathes with little to no support.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Reaper responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_highmo",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_highmo",
       "moduleName": "'Weighing Anchor'",
-      "desc": "This is not the first time I bring you out to sea. You've heard countless ocean tales from me.\nYou already know how the tides flow, and how they ebb. You know that when pale blue light shines in the surface, you are no longer to bother the fins and seabeasts. You know that when the pinnacle of Oberos Lighthouse touches the very top of the Shadow-Moon, we Ægir should return home.\nYou are familiar with the skyscraping surges, and the smallest of sprays. You've learned to converse with them, haven't you? You love to chatter with them, and they are glad to tell you how they are feeling. Do you still remember what they told you? They are but one part of the sea; they are one and the same. You know where the surges will stop and rest, and you know where the tiniest suds will assimilate into the ocean. I have nothing left to tell you now. Hence, this time will be very different; you must prepare yourself, and you must listen to me.\nWe are familiar with the earth and ocean; they have made me and my vessel old, unable to reach farther places. You see? The briny winds dry my cheeks, the air erodes at my bones, the starlight presses down on my shoulders, and if not for you, even lifting this oar would likely be beyond me. But you are different. Your arms are still growing, your bones and flesh are sturdier than mine, your eyes livelier, and your thoughts brighter. You should make it to higher, farther waters. Young child, you must sail far. Child, this sea will be very different. Gone will be the fins you know, gone will be the fearsome seabeasts, and there will be no lighthouse to guide your way, as your destination is in the seas beyond where the stars shine... However, still there will be tides there, still there will be waves, and still there will be countless glimmering specks of ocean foam just like you, Highmore. I trust that, just as before, you will be familiar with these new tides, and familiar with these new waves. They will tell you stories even I haven't heard. You must accompany the twin moons—no, you must go somewhere higher, farther, vaster than the twin moons...\nThe meaning of a voyage is not mine to give, for you will find it yourself. But first you must remember, Highmore, remember what I've told you. A voyage is by no means a retreat, and the reason we leave our home is by no means our disappointment with it. Your voyage is because you are young, because you are sturdy, and because it is for a home as young and hope-filled as you. Once you have seen tide upon tide, seen wave upon wave, you must return home, and you must return to tell us.\nHighmore, a voyage is not a farewell. You must remember, remember your anchor, for so long as you have your anchor, your vessel will be sure to make landfall; so long as you have your anchor, you, voyaging child, will be sure to return home."
+      "desc": "This is not the first time I bring you out to sea. You've heard countless ocean tales from me.\nYou already know how the tides flow, and how they ebb. You know that when pale blue light shines in the surface, you are no longer to bother the fins and seabeasts. You know that when the pinnacle of Oberos Lighthouse touches the very top of the Shadow-Moon, we Ægir should return home.\nYou are familiar with the skyscraping surges, and the smallest of sprays. You've learned to converse with them, haven't you? You love to chatter with them, and they are glad to tell you how they are feeling. Do you still remember what they told you? They are but one part of the sea; they are one and the same. You know where the surges will stop and rest, and you know where the tiniest suds will assimilate into the ocean. I have nothing left to tell you now. Hence, this time will be very different; you must prepare yourself, and you must listen to me.\nWe are familiar with the earth and ocean; they have made me and my vessel old, unable to reach farther places. You see? The briny winds dry my cheeks, the air erodes at my bones, the starlight presses down on my shoulders, and if not for you, even lifting this oar would likely be beyond me. But you are different. Your arms are still growing, your bones and flesh are sturdier than mine, your eyes livelier, and your thoughts brighter. You should make it to higher, farther waters. Young child, you must sail far. Child, this sea will be very different. Gone will be the fins you know, gone will be the fearsome seabeasts, and there will be no lighthouse to guide your way, as your destination is in the seas beyond where the stars shine... However, still there will be tides there, still there will be waves, and still there will be countless glimmering specks of ocean foam just like you, Highmore. I trust that, just as before, you will be familiar with these new tides, and familiar with these new waves. They will tell you stories even I haven't heard. You must accompany the twin moons—no, you must go somewhere higher, farther, vaster than the twin moons...\nThe meaning of a voyage is not mine to give, for you will find it yourself. But first you must remember, Highmore, remember what I've told you. A voyage is by no means a retreat, and the reason we leave our home is by no means our disappointment with it. Your voyage is because you are young, because you are sturdy, and because it is for a home as young and hope-filled as you. Once you have seen tide upon tide, seen wave upon wave, you must return home, and you must return to tell us.\nHighmore, a voyage is not a farewell. You must remember, remember your anchor, for so long as you have your anchor, your vessel will be sure to make landfall; so long as you have your anchor, you, voyaging child, will be sure to return home.",
+      "typeIcon": "rea-x",
+      "uniEquipIcon": "uniequip_002_highmo",
+      "typeName1": "REA",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_highmo_1",
+        "uniequip_002_highmo_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31014",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 230,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 5,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Recover 35 <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Sustenance from the Reaper",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 35,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Recover 40 <@ba.talpu>(+5)</> <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Sustenance from the Reaper",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "attack_speed",
+              "value": 6,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 60,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Recover 40 <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Sustenance from the Reaper",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 40,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Recover 45 <@ba.talpu>(+5)</> <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Sustenance from the Reaper",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "value",
+                      "value": 45,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1083,5 +1663,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

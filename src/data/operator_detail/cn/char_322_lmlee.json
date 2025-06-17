@@ -170,6 +170,36 @@
       "cost": 9
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "interval",
+            "value": 3,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "cost",
+            "value": -3,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_322_lmlee#1",
@@ -786,21 +816,1091 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻击力+30",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 30,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一天赋效果增强",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 300,
+        "atk": 55,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "和气生财",
+          "description": "老鲤阻挡目标时，使其攻击速度-7，且自身攻击速度+7；当周围八格内仅存在一个敌人时效果翻倍",
+          "blackboard": [
+            {
+              "key": "lmlee_t_1[enemy].attack_speed",
+              "value": -7,
+              "valueStr": null
+            },
+            {
+              "key": "lmlee_t_1[self].attack_speed",
+              "value": 7,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "和气生财",
+          "description": "老鲤阻挡目标时，使其攻击速度-8<@ba.talpu>（+1）</>，且自身攻击速度+8<@ba.talpu>（+1）</>；当周围八格内仅存在一个敌人时效果翻倍",
+          "blackboard": [
+            {
+              "key": "lmlee_t_1[enemy].attack_speed",
+              "value": -8,
+              "valueStr": null
+            },
+            {
+              "key": "lmlee_t_1[self].attack_speed",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "和气生财",
+          "description": "老鲤阻挡目标时，使其攻击速度-14，且自身攻击速度+14；当周围八格内仅存在一个敌人时效果翻倍",
+          "blackboard": [
+            {
+              "key": "lmlee_t_1[enemy].attack_speed",
+              "value": -14,
+              "valueStr": null
+            },
+            {
+              "key": "lmlee_t_1[self].attack_speed",
+              "value": 14,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "和气生财",
+          "description": "老鲤阻挡目标时，使其攻击速度-15<@ba.talpu>（+1）</>，且自身攻击速度+15<@ba.talpu>（+1）</>；当周围八格内仅存在一个敌人时效果翻倍",
+          "blackboard": [
+            {
+              "key": "lmlee_t_1[enemy].attack_speed",
+              "value": -15,
+              "valueStr": null
+            },
+            {
+              "key": "lmlee_t_1[self].attack_speed",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "有备无患",
+          "description": "特性消耗费用时，若费用足够则改为消耗5费用，抵消自身受到的下一次<$ba.stun>晕眩</>/<$ba.frozen>冻结</>，并使攻击来源晕眩3秒",
+          "blackboard": [
+            {
+              "key": "extra_cost",
+              "value": -5,
+              "valueStr": null
+            },
+            {
+              "key": "stun",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_lmlee",
       "moduleName": "老鲤证章",
-      "desc": "干员老鲤擅长反复切入战场\n根据外勤部门决议\n在外勤任务中划分为特种干员，行使行商职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员老鲤擅长反复切入战场\n根据外勤部门决议\n在外勤任务中划分为特种干员，行使行商职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "original",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_lmlee",
       "moduleName": "“无问吉凶”",
-      "desc": "“鲤先生，您看这个......看出什么了？”\n老鲤从手提箱里拿出一个罗盘，在房间里正反各转了三圈。一手捏诀，口中念念有词。\n“你朋友说得对，你这公司开不下去，就是这房子的问题。”\n“你看你这间屋子，东面无窗，是少阳气，北面悬空，难以聚财，南面正对另一栋写字楼，这是冤家聚首，最要命的，这西面就是菜市......啧。”\n“菜市怎么了？”\n“杀气过重啊。”\n“有理，有理！不愧是大师！”委托人凑到老鲤身边，看着空无一字的罗盘。盘面如镜，映着一张愁眉不展的脸。\n“天地万物气场相通，气场相合就是吉，气场不合就是凶。这间屋子四方不顺五行尽克，简直可以说是凶宅啊。待的时间长了，别说生意不利，只怕这房主人都......”\n“大师，大师您可得救救我啊！”\n“莫慌莫慌，你是我在龙门的第一个客人，看来是你我有缘，今日就送你一个售后服务，你三日内速速搬走，我另告诉你一个去处。这间房子我帮你料理了便是。”\n“多谢大师，多谢大师！”\n\n“然后你就用不到原来一半的价格租到了这间房子？”\n后来，老鲤在饭桌上给三个孩子讲了这个故事。吽捂着肚子笑个不停，阿笑得满地打滚，槐琥像抓着诈骗犯一样，紧紧盯着老鲤。\n“你真的能从罗盘上看出风水？”\n老鲤悠悠喝了口茶，又拿出那个罗盘，三个孩子围了过来。盘面上映着三个好奇的脑袋。\n“那人开的是装修公司，可这方圆几里大街上，都是装修好不久的新楼，他哪来的生意可做？我可不算骗人。”"
+      "desc": "“鲤先生，您看这个......看出什么了？”\n老鲤从手提箱里拿出一个罗盘，在房间里正反各转了三圈。一手捏诀，口中念念有词。\n“你朋友说得对，你这公司开不下去，就是这房子的问题。”\n“你看你这间屋子，东面无窗，是少阳气，北面悬空，难以聚财，南面正对另一栋写字楼，这是冤家聚首，最要命的，这西面就是菜市......啧。”\n“菜市怎么了？”\n“杀气过重啊。”\n“有理，有理！不愧是大师！”委托人凑到老鲤身边，看着空无一字的罗盘。盘面如镜，映着一张愁眉不展的脸。\n“天地万物气场相通，气场相合就是吉，气场不合就是凶。这间屋子四方不顺五行尽克，简直可以说是凶宅啊。待的时间长了，别说生意不利，只怕这房主人都......”\n“大师，大师您可得救救我啊！”\n“莫慌莫慌，你是我在龙门的第一个客人，看来是你我有缘，今日就送你一个售后服务，你三日内速速搬走，我另告诉你一个去处。这间房子我帮你料理了便是。”\n“多谢大师，多谢大师！”\n\n“然后你就用不到原来一半的价格租到了这间房子？”\n后来，老鲤在饭桌上给三个孩子讲了这个故事。吽捂着肚子笑个不停，阿笑得满地打滚，槐琥像抓着诈骗犯一样，紧紧盯着老鲤。\n“你真的能从罗盘上看出风水？”\n老鲤悠悠喝了口茶，又拿出那个罗盘，三个孩子围了过来。盘面上映着三个好奇的脑袋。\n“那人开的是装修公司，可这方圆几里大街上，都是装修好不久的新楼，他哪来的生意可做？我可不算骗人。”",
+      "typeIcon": "mer-x",
+      "uniEquipIcon": "uniequip_002_lmlee",
+      "typeName1": "MER",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_lmlee_1",
+        "uniequip_002_lmlee_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再部署时间<@ba.kw>减少</>，撤退时不返还<@ba.kw>部署费用</>，在场时每3秒消耗<@ba.kw>2</>点部署费用（不足时自动撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 260,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 67,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再部署时间<@ba.kw>减少</>，撤退时不返还<@ba.kw>部署费用</>，在场时每3秒消耗<@ba.kw>2</>点部署费用（不足时自动撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "特性消耗费用时，若费用足够则改为消耗5费用，抵消自身受到的下一次<$ba.stun>晕眩</>/<$ba.frozen>冻结</>，并使攻击来源晕眩4秒",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "有备无患",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "extra_cost",
+                      "value": -5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 300,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 74,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cost",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "再部署时间<@ba.kw>减少</>，撤退时不返还<@ba.kw>部署费用</>，在场时每3秒消耗<@ba.kw>2</>点部署费用（不足时自动撤退）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "特性消耗费用时，若费用足够则改为消耗4费用，抵消自身受到的下一次<$ba.stun>晕眩</>/<$ba.frozen>冻结</>，并使攻击来源晕眩4秒",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "有备无患",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "extra_cost",
+                      "value": -4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "stun",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     },
     {
       "moduleId": "uniequip_003_lmlee",
       "moduleName": "“但思善恶”",
-      "desc": "天气炎热，又是下午，街上行人寥寥。老鲤提着食盒，在■记商会不起眼的门上敲了敲。\n“哪个没眼力见的，送个断头饭，哪有这么多礼数？赶紧拿进来吧。”\n“打搅了。林先生让我来给你送饭。”\n“......居然是你？原来你真的在给他做事？”\n老鲤不答，从食盒里一一取出几碟小菜，排在男人面前的方几上。\n“你把我们弟兄几个的口味记得很清啊。”\n“当然记得清。你们这伙尚蜀人口味怪得很，除了你，没一个喜欢吃辣，偏偏又只喜欢家乡菜。”\n男人看着一点辣椒也无的方几，叹了口气：“可他们都死了。”\n“我以为你会避讳这件事。”\n“我以为你知道自己的手也不干净。”\n“夺权和杀人差得远。你自己选的。”\n“我们是混道上的，你出主意让我夺权就是叫我没得选。”\n老鲤摇了摇头，从食盒里取出最后一盘菜肴。\n男人眼睛一亮。\n“哦，原来还有一份尚蜀麻辣豆腐——等等，盘子里一点红色都没有，一看就是龙门厨子胡搞的尚蜀菜，我没兴趣。”\n“我做的。”\n男人怀疑地搛起一块豆腐，放入口中抿了抿，随即被辣得连连咳嗽。\n“咳、咳，不愧是鲤先生的手艺，我甘拜下风。”\n“让人吃辣而不见辣，办法总是有的。”\n“当然，当然，兵不血刃代替了我，成了下一个和那老鼠掰手腕的人，不愧是妙计百出的鲤先生，我可得祝你前程似锦哪。”\n“什么前程似锦，我不过想在龙门过两天安生日子罢了。”\n“你觉得我会信？”\n“你从一开始就怀疑我，但你最终总会照着我说的做，因为你知道，我说的其实都是真的。”\n“......你把我算到这一步，就为了你自己的安生日子？”\n“不光是自己的。”\n“弄倒了我，你这个外来户从此就是那老鼠的座上宾，想要安生日子倒不难，可什么叫‘不光是自己的’？”\n“你失势后，龙门再无其他成气候的黑道。林先生说他有办法让剩下的乌合之众不至于为害一方，我信他。”\n男人呆了半晌，然后拿起筷子。\n“先生出去吧。既然志不在此，就更别脏了自己的手。”\n“别忙。”\n老鲤把什么东西抛了出去，落在男人怀里。\n“这是？”\n“车钥匙。如果你真想做点好事，就上车吧，到了车上，你自然知道该往哪开......\n“......别再坏了一桌好菜。”"
+      "desc": "天气炎热，又是下午，街上行人寥寥。老鲤提着食盒，在■记商会不起眼的门上敲了敲。\n“哪个没眼力见的，送个断头饭，哪有这么多礼数？赶紧拿进来吧。”\n“打搅了。林先生让我来给你送饭。”\n“......居然是你？原来你真的在给他做事？”\n老鲤不答，从食盒里一一取出几碟小菜，排在男人面前的方几上。\n“你把我们弟兄几个的口味记得很清啊。”\n“当然记得清。你们这伙尚蜀人口味怪得很，除了你，没一个喜欢吃辣，偏偏又只喜欢家乡菜。”\n男人看着一点辣椒也无的方几，叹了口气：“可他们都死了。”\n“我以为你会避讳这件事。”\n“我以为你知道自己的手也不干净。”\n“夺权和杀人差得远。你自己选的。”\n“我们是混道上的，你出主意让我夺权就是叫我没得选。”\n老鲤摇了摇头，从食盒里取出最后一盘菜肴。\n男人眼睛一亮。\n“哦，原来还有一份尚蜀麻辣豆腐——等等，盘子里一点红色都没有，一看就是龙门厨子胡搞的尚蜀菜，我没兴趣。”\n“我做的。”\n男人怀疑地搛起一块豆腐，放入口中抿了抿，随即被辣得连连咳嗽。\n“咳、咳，不愧是鲤先生的手艺，我甘拜下风。”\n“让人吃辣而不见辣，办法总是有的。”\n“当然，当然，兵不血刃代替了我，成了下一个和那老鼠掰手腕的人，不愧是妙计百出的鲤先生，我可得祝你前程似锦哪。”\n“什么前程似锦，我不过想在龙门过两天安生日子罢了。”\n“你觉得我会信？”\n“你从一开始就怀疑我，但你最终总会照着我说的做，因为你知道，我说的其实都是真的。”\n“......你把我算到这一步，就为了你自己的安生日子？”\n“不光是自己的。”\n“弄倒了我，你这个外来户从此就是那老鼠的座上宾，想要安生日子倒不难，可什么叫‘不光是自己的’？”\n“你失势后，龙门再无其他成气候的黑道。林先生说他有办法让剩下的乌合之众不至于为害一方，我信他。”\n男人呆了半晌，然后拿起筷子。\n“先生出去吧。既然志不在此，就更别脏了自己的手。”\n“别忙。”\n老鲤把什么东西抛了出去，落在男人怀里。\n“这是？”\n“车钥匙。如果你真想做点好事，就上车吧，到了车上，你自然知道该往哪开......\n“......别再坏了一桌好菜。”",
+      "typeIcon": "mer-y",
+      "uniEquipIcon": "uniequip_003_lmlee",
+      "typeName1": "MER",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_003_lmlee_1",
+        "uniequip_003_lmlee_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 57,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "每次特性消耗费用时攻击力+4%，最多可以叠加5次",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 69,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 43,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "每次特性消耗费用时攻击力+4%，最多可以叠加5次",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "老鲤阻挡目标时，使其攻击速度-17，且自身攻击速度+17；当周围八格内仅存在一个敌人时效果翻倍",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "和气生财",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lmlee_t_1[enemy].attack_speed",
+                      "value": -17,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lmlee_t_1[self].attack_speed",
+                      "value": 17,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "老鲤阻挡目标时，使其攻击速度-18<@ba.talpu>（+1）</>，且自身攻击速度+18<@ba.talpu>（+1）</>；当周围八格内仅存在一个敌人时效果翻倍",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "和气生财",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lmlee_t_1[enemy].attack_speed",
+                      "value": -18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lmlee_t_1[self].attack_speed",
+                      "value": 18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 76,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 50,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "每次特性消耗费用时攻击力+4%，最多可以叠加5次",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10_root",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "interval",
+                      "value": 3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.04,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "老鲤阻挡目标时，使其攻击速度-20，且自身攻击速度+20；当周围八格内仅存在一个敌人时效果翻倍",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "和气生财",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lmlee_t_1[enemy].attack_speed",
+                      "value": -20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lmlee_t_1[self].attack_speed",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "老鲤阻挡目标时，使其攻击速度-21<@ba.talpu>（+1）</>，且自身攻击速度+21<@ba.talpu>（+1）</>；当周围八格内仅存在一个敌人时效果翻倍",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "和气生财",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "lmlee_t_1[enemy].attack_speed",
+                      "value": -21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "lmlee_t_1[self].attack_speed",
+                      "value": 21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1254,5 +2354,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

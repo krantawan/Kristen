@@ -150,6 +150,7 @@
       "cost": 24
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_4088_hodrer#1",
@@ -739,16 +740,568 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Max HP +250",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 250,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +45",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 45,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "Improves Second Talent",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 500,
+        "atk": 80,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Do or Die",
+          "description": "ATK increases to 105% when attacking an enemy; if the target is <$ba.stun>stunned</> or <$ba.root>bound</>, ATK further increases to 125%",
+          "blackboard": {
+            "atk_scale": 1.25,
+            "atk_scale_2": 1.05
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Do or Die",
+          "description": "ATK increases to 110% when attacking an enemy; if the target is <$ba.stun>stunned</> or <$ba.root>bound</>, ATK further increases to 140%",
+          "blackboard": {
+            "atk_scale": 1.4,
+            "atk_scale_2": 1.1
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "Cloak of Lingering Flame",
+          "description": "Provides an 18% <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit",
+          "blackboard": {
+            "damage_resistance": 0.18
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "Cloak of Lingering Flame",
+          "description": "Provides a 21% <@ba.talpu>(+3%)</> <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit",
+          "blackboard": {
+            "damage_resistance": 0.21
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_hodrer",
       "moduleName": "Hoederer's Badge",
-      "desc": "Operator Hoederer has demonstrated a remarkable aptitude for wielding heavy melee weapons in combat.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Crusher responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Hoederer has demonstrated a remarkable aptitude for wielding heavy melee weapons in combat.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Guard Operator during field operations to exercise Crusher responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_hodrer",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_hodrer",
       "moduleName": "A New Life",
-      "desc": "By the time class let out, the sun is already setting. Hoederer looks out the window at the deep orange sun, hanging low on the city's edge. Its gentle light filters through gaps in the clouds, illuminating the Babel flag fluttering, mirroring the flag of the Military Commission opposite it. He feels a rare stir of emotion—Kazdel, his broken yet vibrant hometown, was about to settle peacefully into slumber. This was a scene he had only imagined as a child; he couldn't even remember how many times he'd dreamed of it coming true—hundreds? Maybe more?\nIn the empty room, a knock at the door interrupts his thoughts. He opens it to see a stranger.\n'Mr. Hoederer, General Manfred has invited you to pay him a visit,' the stranger says.\n'I haven't touched base with the Military Commission in a long time.'\n'The General understands. He said you might need some time,' the visitor continues. 'I'm only here as his messenger.'\nManfred... the current head of the Military Commission, who had played a role in Kazdel's development...\n'The General also said that if you refused, he'd come see you himself next time,' the messenger adds, before Hoederer can respond.\nManfred, he thinks, lowering his head. The streetlights are starting to come on, and he sees both the messenger and his own shadow begin to blur.\n'Please, go back,' he says to the visitor. 'We'll find time to visit the General, but not today.' Then he closes the door.\nHoederer turns around and speaks to the shadows in the empty classroom. 'Welcome back.'\n'Hmph.' A figure emerges from the shadows, her back turned to Hoederer. She starts to clean the classroom.\n'You hesitated.' Ines remarks.\n'I... some things are complicated.'\n'Including your feelings on them.'\n'Right.'\n'You're not denying it.'\n'Right.'\n'...'\n'I told you, our top priority right now is saving enough money to open up that shop you always wanted,' Hoederer says. 'The rest can wait.'\n'I know,' she says, pausing slightly. 'I've always known.'\nThen they leave together in silence, walking down the street. They look up at the twin gray-blue moons lighting the sky, casting a glow over Kazdel's old district, where ruined buildings stand resilient in the night. Rows of rusted, iron-roofed houses stretch endlessly, and red-brown fields reflect the flickering light from blazing furnaces. Crumbling roads twist through the hills and valleys, carrying the city's lifeblood—an unceasing flow of people—to their destinations."
+      "desc": "By the time class let out, the sun is already setting. Hoederer looks out the window at the deep orange sun, hanging low on the city's edge. Its gentle light filters through gaps in the clouds, illuminating the Babel flag fluttering, mirroring the flag of the Military Commission opposite it. He feels a rare stir of emotion—Kazdel, his broken yet vibrant hometown, was about to settle peacefully into slumber. This was a scene he had only imagined as a child; he couldn't even remember how many times he'd dreamed of it coming true—hundreds? Maybe more?\nIn the empty room, a knock at the door interrupts his thoughts. He opens it to see a stranger.\n'Mr. Hoederer, General Manfred has invited you to pay him a visit,' the stranger says.\n'I haven't touched base with the Military Commission in a long time.'\n'The General understands. He said you might need some time,' the visitor continues. 'I'm only here as his messenger.'\nManfred... the current head of the Military Commission, who had played a role in Kazdel's development...\n'The General also said that if you refused, he'd come see you himself next time,' the messenger adds, before Hoederer can respond.\nManfred, he thinks, lowering his head. The streetlights are starting to come on, and he sees both the messenger and his own shadow begin to blur.\n'Please, go back,' he says to the visitor. 'We'll find time to visit the General, but not today.' Then he closes the door.\nHoederer turns around and speaks to the shadows in the empty classroom. 'Welcome back.'\n'Hmph.' A figure emerges from the shadows, her back turned to Hoederer. She starts to clean the classroom.\n'You hesitated.' Ines remarks.\n'I... some things are complicated.'\n'Including your feelings on them.'\n'Right.'\n'You're not denying it.'\n'Right.'\n'...'\n'I told you, our top priority right now is saving enough money to open up that shop you always wanted,' Hoederer says. 'The rest can wait.'\n'I know,' she says, pausing slightly. 'I've always known.'\nThen they leave together in silence, walking down the street. They look up at the twin gray-blue moons lighting the sky, casting a glow over Kazdel's old district, where ruined buildings stand resilient in the night. Rows of rusted, iron-roofed houses stretch endlessly, and red-brown fields reflect the flickering light from blazing furnaces. Crumbling roads twist through the hills and valleys, carrying the city's lifeblood—an unceasing flow of people—to their destinations.",
+      "typeIcon": "cru-x",
+      "uniEquipIcon": "uniequip_002_hodrer",
+      "typeName1": "CRU",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_hodrer_1",
+        "uniequip_002_hodrer_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30155",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 290,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 92,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Have <@ba.kw>+20%</> healing effectiveness",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 380,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 112,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Have <@ba.kw>+20%</> healing effectiveness",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Provides a 24% <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit, and deals +6% Physical damage to enemies",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Cloak of Lingering Flame",
+                  "description": null,
+                  "rangeId": "b-1",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.24,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.06,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Provides a 27% <@ba.talpu>(+3%)</> <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit, and deals +6% Physical damage to enemies",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Cloak of Lingering Flame",
+                  "description": null,
+                  "rangeId": "b-1",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.06,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 450,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 130,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "Have <@ba.kw>+20%</> healing effectiveness",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "heal_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Provides a 28% <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit, and deals +10% Physical damage to enemies",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "2",
+                  "name": "Cloak of Lingering Flame",
+                  "description": null,
+                  "rangeId": "b-1",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.28,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Provides a 31% <@ba.talpu>(+3%)</> <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit, and deals +10% Physical damage to enemies",
+                  "talentIndex": 1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "2",
+                  "name": "Cloak of Lingering Flame",
+                  "description": null,
+                  "rangeId": "b-1",
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.31,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1202,5 +1755,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -169,6 +169,7 @@
       "cost": 21
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_4109_baslin#1",
@@ -655,16 +656,595 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再部署时间-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "防御力+25",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "DEF",
+              "formulaItem": "ADDITION",
+              "value": 25,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "生命上限+200",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "MAX_HP",
+              "formulaItem": "ADDITION",
+              "value": 200,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "部署费用-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false,
+        "palsyImmune": false,
+        "attractImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "威权教诲",
+          "description": "法术抗性+6，周围8格有友方干员时，法术抗性额外+2",
+          "blackboard": [
+            {
+              "key": "baslin_t[self].magic_resistance",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "baslin_t[ally].magic_resistance",
+              "value": 2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "威权教诲",
+          "description": "法术抗性+12，周围8格有友方干员时，法术抗性额外+4",
+          "blackboard": [
+            {
+              "key": "baslin_t[self].magic_resistance",
+              "value": 12,
+              "valueStr": null
+            },
+            {
+              "key": "baslin_t[ally].magic_resistance",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_baslin",
       "moduleName": "深律证章",
-      "desc": "干员深律在维持战线的同时为友军提供医疗支援\n根据外勤部门决议\n在外勤任务中划分为重装干员，行使守护者职责\n特别颁发此证章\n以兹证明"
+      "desc": "干员深律在维持战线的同时为友军提供医疗支援\n根据外勤部门决议\n在外勤任务中划分为重装干员，行使守护者职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_baslin",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_baslin",
       "moduleName": "受赐玩物",
-      "desc": "米夏挥手掠过晶石状的夜灯，就像扬起清风扇灭蜡烛，夜灯随即熄灭，高塔的书房变得昏暗，唯一的光亮来自窗外的夕阳。\n崔林特尔梅天色将暮，几尺厚的塔墙之外传来雾霭般的乐音，厚重又朦胧，它仿佛不存在，但又让人看不穿。米夏辨认出了这首乐曲，巴赫第十二交响曲“晚霞”，第三乐章，福特冈爱乐乐团演奏，指挥风格像是利切卡尔，又像是罗尔兹曼伯爵——罗尔兹曼伯爵现在还能进入崔林特尔梅吗？赫琳玛特已经把他送去了黑色的府邸，就在十三个月之前，是米夏自己送去的文书......\n一声闷响在耳边荡漾开来，这声闷响他再熟悉不过，这是他的源石技艺。无声的音波自周身向外传播，推开了“晚霞”的声音，直到书房的每个角落都被纳入其中。房间隔绝了声响，米夏的思绪也隔绝了杂乱的念想。\n米夏拿起那一副响板，它比一般的响板要沉得多，制成它的木材更厚实，上面镶嵌——或者说曾经镶嵌着的金丝完全没有考虑声学构造，把响板原有的音色完全破坏了，更不要说那颗夸张的宝石。这副响板因为它们而显得华美、尊贵，已经不再能够发出本应发出的声音。它不再是一件合格的乐器，而是一件绝佳的赏赐、一件绝佳的玩物。\n自他受赐的那天起，米夏就没有真正爱惜过这件赏赐品，他不想要一件不再能够正常发声的乐器——他知道将这副响板赐给自己的那个人正是这个意思。米夏因此害怕这副响板，憎恨这副响板，这副响板似乎无时无刻不在刺痛着他。\n他不愿把它带在身边，他宁愿就把它当成一件玩物，一件孩童的玩物，任性处置，直到金丝脱落，直到原先光滑乌黑的表面布满划痕。他甚至曾经想过把它扔掉，扔到山野，扔到风中，扔回那一片凝固的晚霞里。\n“你得把它留在身边。一件玩具就能伤害你？你得把它留在身边，证明你和它不一样。这不是为了鲁珀坎，这是为了你自己。”那声音好像离他很近，但实际上又比任何声音都要遥远。米夏知道那声音就是留下它的理由。米夏还记得望向那座高塔的时候，它投下的黑影总能让他坚强。\n米夏望向窗外，唯独望见了金色的晚霞。"
+      "desc": "米夏挥手掠过晶石状的夜灯，就像扬起清风扇灭蜡烛，夜灯随即熄灭，高塔的书房变得昏暗，唯一的光亮来自窗外的夕阳。\n崔林特尔梅天色将暮，几尺厚的塔墙之外传来雾霭般的乐音，厚重又朦胧，它仿佛不存在，但又让人看不穿。米夏辨认出了这首乐曲，巴赫第十二交响曲“晚霞”，第三乐章，福特冈爱乐乐团演奏，指挥风格像是利切卡尔，又像是罗尔兹曼伯爵——罗尔兹曼伯爵现在还能进入崔林特尔梅吗？赫琳玛特已经把他送去了黑色的府邸，就在十三个月之前，是米夏自己送去的文书......\n一声闷响在耳边荡漾开来，这声闷响他再熟悉不过，这是他的源石技艺。无声的音波自周身向外传播，推开了“晚霞”的声音，直到书房的每个角落都被纳入其中。房间隔绝了声响，米夏的思绪也隔绝了杂乱的念想。\n米夏拿起那一副响板，它比一般的响板要沉得多，制成它的木材更厚实，上面镶嵌——或者说曾经镶嵌着的金丝完全没有考虑声学构造，把响板原有的音色完全破坏了，更不要说那颗夸张的宝石。这副响板因为它们而显得华美、尊贵，已经不再能够发出本应发出的声音。它不再是一件合格的乐器，而是一件绝佳的赏赐、一件绝佳的玩物。\n自他受赐的那天起，米夏就没有真正爱惜过这件赏赐品，他不想要一件不再能够正常发声的乐器——他知道将这副响板赐给自己的那个人正是这个意思。米夏因此害怕这副响板，憎恨这副响板，这副响板似乎无时无刻不在刺痛着他。\n他不愿把它带在身边，他宁愿就把它当成一件玩物，一件孩童的玩物，任性处置，直到金丝脱落，直到原先光滑乌黑的表面布满划痕。他甚至曾经想过把它扔掉，扔到山野，扔到风中，扔回那一片凝固的晚霞里。\n“你得把它留在身边。一件玩具就能伤害你？你得把它留在身边，证明你和它不一样。这不是为了鲁珀坎，这是为了你自己。”那声音好像离他很近，但实际上又比任何声音都要遥远。米夏知道那声音就是留下它的理由。米夏还记得望向那座高塔的时候，它投下的黑影总能让他坚强。\n米夏望向窗外，唯独望见了金色的晚霞。",
+      "typeIcon": "gua-y",
+      "uniEquipIcon": "uniequip_002_baslin",
+      "typeName1": "GUA",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_baslin_1",
+        "uniequip_002_baslin_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31054",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 265,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "受到的伤害减少<@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 345,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "受到的伤害减少<@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "法术抗性+12，周围8格有友方干员时，自身与其法术抗性额外+4",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "威权教诲",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "baslin_t[self].magic_resistance",
+                      "value": 12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "baslin_t[ally].magic_resistance",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resistance",
+                      "value": 4,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 410,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 32,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "受到的伤害减少<@ba.kw>15%</>",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "damage_resistance",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "法术抗性+14，周围8格有友方干员时，自身与其法术抗性额外+5",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "威权教诲",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "baslin_t[self].magic_resistance",
+                      "value": 14,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "baslin_t[ally].magic_resistance",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "magic_resistance",
+                      "value": 5,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1126,5 +1706,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

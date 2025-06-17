@@ -151,6 +151,7 @@
       "cost": 27
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_431_ashlok#1",
@@ -617,16 +618,658 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+32",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 32,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 50,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "砲術訓練",
+          "description": "通常時攻撃力+4％。隣接4マスがすべて地面マスの時攻撃力+8％",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.04,
+              "valueStr": null
+            },
+            {
+              "key": "ashlok_t_1.atk",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "砲術訓練",
+          "description": "通常時攻撃力+6%<@ba.talpu>（+2%）</>。隣接4マスがすべて地面マスの時攻撃力+10%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.06,
+              "valueStr": null
+            },
+            {
+              "key": "ashlok_t_1.atk",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "砲術訓練",
+          "description": "通常時攻撃力+8％。隣接4マスがすべて地面マスの時攻撃力+16％",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "ashlok_t_1.atk",
+              "value": 0.16,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "砲術訓練",
+          "description": "通常時攻撃力+10%<@ba.talpu>（+2%）</>。隣接4マスがすべて地面マスの時攻撃力+18%<@ba.talpu>（+2%）</>",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "ashlok_t_1.atk",
+              "value": 0.18,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 4,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_ashlok",
       "moduleName": "アッシュロックの記章",
-      "desc": "アッシュロックは戦線を維持しつつ遠距離火力支援を行うことに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては重装オペレーターとして区分し、堅城砲手の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "アッシュロックは戦線を維持しつつ遠距離火力支援を行うことに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては重装オペレーターとして区分し、堅城砲手の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_ashlok",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_ashlok",
       "moduleName": "外出必需品セット",
-      "desc": "日暮れも近くなった頃、人波が通りの両端から引いていき、雪で洗われた路面が姿を見せる。グレイナティはわずかにためらったが、ついに一歩踏み出して、路面を踏みしめた。\n「滑るな……それもかなり。すぐにも転んでしまいそうだ。」最初に頭に浮かんだ考えはそれだった。\n「だが、転ばずにいられたら、なかなか面白そうだ。」続けざまに、そんな考えが頭をよぎった。\nグレイナティはサングラス越しに周りの状況を慎重に観察した。真っ直ぐに長く伸びた通りは、助走をつけるには十分だ。すっかりがらんどうになった今、誰かに見られる心配もいらないだろう。\n「……一、二の、さん！」数歩下がった後、冷たい風に逆らって走り出す。一歩ごとに速度は増していったが、彼女はある地点で急に足を止め、慣性に身を任せてそのまま前へと滑り出した。\nそうして、やがて動きが止まると、きびすを返して長い通りの逆側へと駆けていき、同じことを繰り返す。\n1メートル、2メートル、3メートル……走る速度も、滑る速度もだんだんと上がっていき、繰り返す度に滑走距離は伸びていった。\n彼女の鼓動もまた、駆けるリズムと共に加速し、心拍数の乱れが浮遊感をもたらす。体が軽く感じて、まるで大河の――時間という名の大河の水面へと浮かび出るような心地になった。\n「怖がらずにもっとスピードを出してみなさい。大丈夫だよ、私たちが受け止めるから。」彼女がぼんやりしていると、耳元をごうごうと吹き荒れる風の奥から、懐かしい激励の声が聞こえた気がした。\nあの当時と似た今の状況が、ホコリの積もった幼き日々の記憶の奥からそれを呼び起こしたのだ。道の向こうには、笑顔の夫婦がこちらに向かって手を広げている。\nそれゆえ彼女は、全力で駆けだした。しかし、足元の小石が彼女をたちまち現実へと引き戻してくる。\n「カイちゃん、起こしてあげよっか？」夕陽を遮った人影が、こちらに手を差し出した。\n「どうしてここに？」グレイナティはその手を取った。\n手を借りて立ち上がると、彼女は身体に付いた雪をはたいて、遠くに落ちたサングラスと帽子を拾い上げた。\n「だって、ビールを買いに出かけたっきり、こんな遅くなっても帰ってこないんだもの。心配になって様子を見に来たの。」\n「こほん、別に何事もなかったが。」\n「嘘ばっかり。目が赤くなってるじゃない。」\n「太陽がまぶしくてな。」\n「へえ、もう沈んでる太陽が？」\n「……手を貸してくれてありがとう。」彼女は帽子とサングラスを再び身に着けると、真っ赤な目元と赤く染まった頬を隠した。\n「どういたしまして。」\n「それより、今さらそんなにしっかり変装しなくていいと思うわよ、カイちゃん。」\n「なぜだ？」\n「この通りには、窓ガラスがマジックミラーになってるお店があってね。外から中は見えないけど、中からは外の様子がはっきり見えてるの。」\n「ということは、さっきの私の様子も……」\n「そういうこと。……あの店は満席だったし、お客さんの中にはカイちゃんのファンもいたからね。」"
+      "desc": "日暮れも近くなった頃、人波が通りの両端から引いていき、雪で洗われた路面が姿を見せる。グレイナティはわずかにためらったが、ついに一歩踏み出して、路面を踏みしめた。\n「滑るな……それもかなり。すぐにも転んでしまいそうだ。」最初に頭に浮かんだ考えはそれだった。\n「だが、転ばずにいられたら、なかなか面白そうだ。」続けざまに、そんな考えが頭をよぎった。\nグレイナティはサングラス越しに周りの状況を慎重に観察した。真っ直ぐに長く伸びた通りは、助走をつけるには十分だ。すっかりがらんどうになった今、誰かに見られる心配もいらないだろう。\n「……一、二の、さん！」数歩下がった後、冷たい風に逆らって走り出す。一歩ごとに速度は増していったが、彼女はある地点で急に足を止め、慣性に身を任せてそのまま前へと滑り出した。\nそうして、やがて動きが止まると、きびすを返して長い通りの逆側へと駆けていき、同じことを繰り返す。\n1メートル、2メートル、3メートル……走る速度も、滑る速度もだんだんと上がっていき、繰り返す度に滑走距離は伸びていった。\n彼女の鼓動もまた、駆けるリズムと共に加速し、心拍数の乱れが浮遊感をもたらす。体が軽く感じて、まるで大河の――時間という名の大河の水面へと浮かび出るような心地になった。\n「怖がらずにもっとスピードを出してみなさい。大丈夫だよ、私たちが受け止めるから。」彼女がぼんやりしていると、耳元をごうごうと吹き荒れる風の奥から、懐かしい激励の声が聞こえた気がした。\nあの当時と似た今の状況が、ホコリの積もった幼き日々の記憶の奥からそれを呼び起こしたのだ。道の向こうには、笑顔の夫婦がこちらに向かって手を広げている。\nそれゆえ彼女は、全力で駆けだした。しかし、足元の小石が彼女をたちまち現実へと引き戻してくる。\n「カイちゃん、起こしてあげよっか？」夕陽を遮った人影が、こちらに手を差し出した。\n「どうしてここに？」グレイナティはその手を取った。\n手を借りて立ち上がると、彼女は身体に付いた雪をはたいて、遠くに落ちたサングラスと帽子を拾い上げた。\n「だって、ビールを買いに出かけたっきり、こんな遅くなっても帰ってこないんだもの。心配になって様子を見に来たの。」\n「こほん、別に何事もなかったが。」\n「嘘ばっかり。目が赤くなってるじゃない。」\n「太陽がまぶしくてな。」\n「へえ、もう沈んでる太陽が？」\n「……手を貸してくれてありがとう。」彼女は帽子とサングラスを再び身に着けると、真っ赤な目元と赤く染まった頬を隠した。\n「どういたしまして。」\n「それより、今さらそんなにしっかり変装しなくていいと思うわよ、カイちゃん。」\n「なぜだ？」\n「この通りには、窓ガラスがマジックミラーになってるお店があってね。外から中は見えないけど、中からは外の様子がはっきり見えてるの。」\n「ということは、さっきの私の様子も……」\n「そういうこと。……あの店は満席だったし、お客さんの中にはカイちゃんのファンもいたからね。」",
+      "typeIcon": "for-x",
+      "uniEquipIcon": "uniequip_002_ashlok",
+      "typeName1": "FOR",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_ashlok_1",
+        "uniequip_002_ashlok_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30034",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 235,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "ブロックされている敵を攻撃時、攻撃力が<@ba.vup>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 290,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "ブロックされている敵を攻撃時、攻撃力が<@ba.vup>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "通常時攻撃力+10%。前後2マスがすべて地面マスの場合、攻撃力+16%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "砲術訓練",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ashlok_t_1.atk",
+                      "value": 0.16,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "通常時攻撃力+12%<@ba.talpu>（+2%）</>。前後2マスがすべて地面マスの場合、攻撃力+18%<@ba.talpu>（+2%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "砲術訓練",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ashlok_t_1.atk",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 325,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 70,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "ブロックされている敵を攻撃時、攻撃力が<@ba.vup>{atk_scale:0%}</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "通常時攻撃力+10%。前後2マスがすべて地面マスの場合、攻撃力+20%",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "砲術訓練",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ashlok_t_1.atk",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "通常時攻撃力+12%<@ba.talpu>（+2%）</>。前後2マスがすべて地面マスの場合、攻撃力+22%<@ba.talpu>（+2%）</>",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "砲術訓練",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "ashlok_t_1.atk",
+                      "value": 0.22,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1080,5 +1723,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

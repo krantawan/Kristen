@@ -150,6 +150,7 @@
       "cost": 13
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_206_gnosis#1",
@@ -707,16 +708,716 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+33",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 33,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第一素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 80,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "堅氷",
+          "description": "攻撃時、対象に1秒の<$ba.cold>寒冷</>状態を付与する。攻撃範囲内の<$ba.cold>寒冷</>状態の敵に15%の<$ba.fragile>脆弱</>状態を付与する。<$ba.frozen>凍結</>状態の敵に対しては<$ba.fragile>脆弱</>の効果値倍増",
+          "blackboard": [
+            {
+              "key": "cold",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale_cold",
+              "value": 1.15,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale_freeze",
+              "value": 1.3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "堅氷",
+          "description": "攻撃時、対象に1秒の<$ba.cold>寒冷</>状態を付与する。攻撃範囲内の<$ba.cold>寒冷</>状態の敵に17%<@ba.talpu>（+2%）</>の<$ba.fragile>脆弱</>状態を付与する。<$ba.frozen>凍結</>状態の敵に対しては<$ba.fragile>脆弱</>の効果値倍増",
+          "blackboard": [
+            {
+              "key": "cold",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale_cold",
+              "value": 1.17,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale_freeze",
+              "value": 1.34,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "堅氷",
+          "description": "攻撃時、対象に1秒の<$ba.cold>寒冷</>状態を付与する。攻撃範囲内の<$ba.cold>寒冷</>状態の敵に25%の<$ba.fragile>脆弱</>状態を付与する。<$ba.frozen>凍結</>状態の敵に対しては<$ba.fragile>脆弱</>の効果値倍増",
+          "blackboard": [
+            {
+              "key": "cold",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale_cold",
+              "value": 1.25,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale_freeze",
+              "value": 1.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "堅氷",
+          "description": "攻撃時、対象に1秒の<$ba.cold>寒冷</>状態を付与する。攻撃範囲内の<$ba.cold>寒冷</>状態の敵に27%<@ba.talpu>（+2%）</>の<$ba.fragile>脆弱</>状態を付与する。<$ba.frozen>凍結</>状態の敵に対しては<$ba.fragile>脆弱</>の効果値倍増",
+          "blackboard": [
+            {
+              "key": "cold",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale_cold",
+              "value": 1.27,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale_freeze",
+              "value": 1.54,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "履霜",
+          "description": "配置から10秒後、配置されている間味方【カランド貿易】全員に<$ba.buffres>レジスト</>状態を付与する",
+          "blackboard": [
+            {
+              "key": "interval",
+              "value": 10,
+              "valueStr": null
+            },
+            {
+              "key": "one_minus_status_resistance",
+              "value": -0.5,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_gnosis",
       "moduleName": "ノーシスの記章",
-      "desc": "ノーシスは風雪を操って敵を弱らせることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、呪詛師の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ノーシスは風雪を操って敵を弱らせることに秀でている。\n外勤部門の決定に基づき\n外勤任務においては補助オペレーターとして区分し、呪詛師の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_gnosis",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_gnosis",
       "moduleName": "「誓言」",
-      "desc": "イェラグの名が広まるにつれて、イェラグの雪山も次第に人々に知られるようになった。\n中でも永遠に溶けることのない源石氷晶は、誠実さの象徴として追い求める者が後を絶たなかった。\n源石氷晶は確かに実在するが、実際に手に入れるのは極めて困難だった。なぜならそれは最も険しい山の頂を探してやっと見つかる可能性がある、という程度の非常に希少なものだからである。それを求めてやってきた人々の多くは、何の成果も得られないままに落胆して帰る羽目になった。\nしかしノーシスにとって、その在処を特定するのはさほど難しいことではなかった。代々イェラグの書物を守ってきたエーデルワイス家の人間は、誰よりも雪境（ヒーラ）のことを知り尽くしている。\nむしろ彼にとっては、登山の方が困難であった。\nそれというのも、彼はイェラグで過ごした少年時代ですら書物の山で時間を過ごすのを好む子供だったからだ。さらに一家全員でヴィクトリアに移ると、ほとんどの時間を勉学に費やすようになった。\nそのためエンシオディスとともにイェラグに戻った後も、彼は雪山への挑戦に微塵も興味を示すことはなかった。\nしかしその日、彼は一人雪山へと足を踏み入れ、古い手記に従って人里離れた山頂を目指した。辿り着いた頂では、源石氷晶が採掘されるのを静かに待っていた。\n源石氷晶を見たノーシスは過去を思い出さずにはいられなかった。\nイェラグを強大な国家へと変えるという夢を実現させる手段は、彼がヴィクトリアで様々なことを学ぶうちにどんどん変化していった。そして最終的には、自分の出した結論が幼少期にエンシオディスとともに夢見た未来とは真逆であることを認めざるを得なくなった。\nだから彼は別れ際に交わした約束を思い出すと、心に引っかかりを覚えるようになっていた――エンシオディスはヴィクトリアにくるだろうか？もしきたとして意見が一致しなくなった場合はどうすべきだろうか？と。\n果てして、エンシオディスはやってきた。二人の間に衝突こそ起きなかったが、理念に食い違いが生じていることは互いが理解していた。それでも同じ夢のため、二人は手を取り合うと決めたのだった。\n雪山事変ではエンシオディスの計画を逆手に取り、さらに過激な手段でエンシオディスに決断を強いることも考えていた。\n思考し、判断し、迷い、さらに思考を繰り返す。誰もいない片隅で、無数のアイデアを頭に巡らせる。自分はそれを実行することになるだろうと彼は考えていたが、結局そうすることはなかった。\nあの部屋で再び握手を交わしたあの瞬間、ノーシスは自分が何を選ぶのか悟ったのだ。\nエンシオディスはどうやらドクターに氷晶を送ったらしい。ノーシスもまたそれを手に入れることにしたが、それを誰かに渡すつもりはなかった。\n雪山事変が収束し、何の特別な意味もないその日に、彼は一人雪山へと踏み込んだ――氷晶で剣を打ち、自らに贈るために。\n氷晶で作られた剣は実戦には向かない。もし武器を剣に変えるつもりならば、別で戦闘用の物も作らねばならなかったが、その必要はなかった。その剣を戦闘に用いるつもりなどなく、永遠に日の目を見ることがないようしまい込んでおくつもりだったからだ。\n氷晶は永久不変の忠誠を象徴している。彼はエンシオディスに忠誠を誓ったことは一度もないし、今後もそうすることはないだろう。彼が忠誠を誓うのは、自分自身にだけだった。\nそして彼が選んだのは――\n腰元の通信機から振動が伝わってきた。通信ネットワークは今やイェラグ全域を網羅しており、雪山の中にいても信号を受信できる。\n「会議の時間だ。」\n「わかっている。」\n源石氷晶を慎重に採取ししまい込むと、彼は振り返って山を下った。\nカランド貿易の最高技術責任者である彼には、暇な時間などそう多くはないのだ。"
+      "desc": "イェラグの名が広まるにつれて、イェラグの雪山も次第に人々に知られるようになった。\n中でも永遠に溶けることのない源石氷晶は、誠実さの象徴として追い求める者が後を絶たなかった。\n源石氷晶は確かに実在するが、実際に手に入れるのは極めて困難だった。なぜならそれは最も険しい山の頂を探してやっと見つかる可能性がある、という程度の非常に希少なものだからである。それを求めてやってきた人々の多くは、何の成果も得られないままに落胆して帰る羽目になった。\nしかしノーシスにとって、その在処を特定するのはさほど難しいことではなかった。代々イェラグの書物を守ってきたエーデルワイス家の人間は、誰よりも雪境（ヒーラ）のことを知り尽くしている。\nむしろ彼にとっては、登山の方が困難であった。\nそれというのも、彼はイェラグで過ごした少年時代ですら書物の山で時間を過ごすのを好む子供だったからだ。さらに一家全員でヴィクトリアに移ると、ほとんどの時間を勉学に費やすようになった。\nそのためエンシオディスとともにイェラグに戻った後も、彼は雪山への挑戦に微塵も興味を示すことはなかった。\nしかしその日、彼は一人雪山へと足を踏み入れ、古い手記に従って人里離れた山頂を目指した。辿り着いた頂では、源石氷晶が採掘されるのを静かに待っていた。\n源石氷晶を見たノーシスは過去を思い出さずにはいられなかった。\nイェラグを強大な国家へと変えるという夢を実現させる手段は、彼がヴィクトリアで様々なことを学ぶうちにどんどん変化していった。そして最終的には、自分の出した結論が幼少期にエンシオディスとともに夢見た未来とは真逆であることを認めざるを得なくなった。\nだから彼は別れ際に交わした約束を思い出すと、心に引っかかりを覚えるようになっていた――エンシオディスはヴィクトリアにくるだろうか？もしきたとして意見が一致しなくなった場合はどうすべきだろうか？と。\n果てして、エンシオディスはやってきた。二人の間に衝突こそ起きなかったが、理念に食い違いが生じていることは互いが理解していた。それでも同じ夢のため、二人は手を取り合うと決めたのだった。\n雪山事変ではエンシオディスの計画を逆手に取り、さらに過激な手段でエンシオディスに決断を強いることも考えていた。\n思考し、判断し、迷い、さらに思考を繰り返す。誰もいない片隅で、無数のアイデアを頭に巡らせる。自分はそれを実行することになるだろうと彼は考えていたが、結局そうすることはなかった。\nあの部屋で再び握手を交わしたあの瞬間、ノーシスは自分が何を選ぶのか悟ったのだ。\nエンシオディスはどうやらドクターに氷晶を送ったらしい。ノーシスもまたそれを手に入れることにしたが、それを誰かに渡すつもりはなかった。\n雪山事変が収束し、何の特別な意味もないその日に、彼は一人雪山へと踏み込んだ――氷晶で剣を打ち、自らに贈るために。\n氷晶で作られた剣は実戦には向かない。もし武器を剣に変えるつもりならば、別で戦闘用の物も作らねばならなかったが、その必要はなかった。その剣を戦闘に用いるつもりなどなく、永遠に日の目を見ることがないようしまい込んでおくつもりだったからだ。\n氷晶は永久不変の忠誠を象徴している。彼はエンシオディスに忠誠を誓ったことは一度もないし、今後もそうすることはないだろう。彼が忠誠を誓うのは、自分自身にだけだった。\nそして彼が選んだのは――\n腰元の通信機から振動が伝わってきた。通信ネットワークは今やイェラグ全域を網羅しており、雪山の中にいても信号を受信できる。\n「会議の時間だ。」\n「わかっている。」\n源石氷晶を慎重に採取ししまい込むと、彼は振り返って山を下った。\nカランド貿易の最高技術責任者である彼には、暇な時間などそう多くはないのだ。",
+      "typeIcon": "umd-x",
+      "uniEquipIcon": "uniequip_002_gnosis",
+      "typeName1": "UMD",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_gnosis_1",
+        "uniequip_002_gnosis_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30135",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 105,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "対象に10%の<$ba.weaken>虚弱</>効果を2秒間付与する",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": -0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "対象に10%の<$ba.weaken>虚弱</>効果を2秒間付与する",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": -0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、対象に1秒の<$ba.cold>寒冷</>状態を付与する。攻撃範囲内の<$ba.cold>寒冷</>状態の敵に28%の<$ba.fragile>脆弱</>状態を付与する。<$ba.frozen>凍結</>状態の敵に対しては<$ba.fragile>脆弱</>の効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "堅氷",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale_cold",
+                      "value": 1.28,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale_freeze",
+                      "value": 1.56,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cold",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、対象に1秒の<$ba.cold>寒冷</>状態を付与する。攻撃範囲内の<$ba.cold>寒冷</>状態の敵に30%<@ba.talpu>（+2%）</>の<$ba.fragile>脆弱</>状態を付与する。<$ba.frozen>凍結</>状態の敵に対しては<$ba.fragile>脆弱</>の効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "堅氷",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale_cold",
+                      "value": 1.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale_freeze",
+                      "value": 1.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cold",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 145,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 30,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "対象に10%の<$ba.weaken>虚弱</>効果を2秒間付与する",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": -0.1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 2,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、対象に1秒の<$ba.cold>寒冷</>状態を付与する。攻撃範囲内の<$ba.cold>寒冷</>状態の敵に30%の<$ba.fragile>脆弱</>状態を付与する。<$ba.frozen>凍結</>状態の敵に対しては<$ba.fragile>脆弱</>の効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "堅氷",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale_cold",
+                      "value": 1.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale_freeze",
+                      "value": 1.6,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cold",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃時、対象に1秒の<$ba.cold>寒冷</>状態を付与する。攻撃範囲内の<$ba.cold>寒冷</>状態の敵に32%<@ba.talpu>（+2%）</>の<$ba.fragile>脆弱</>状態を付与する。<$ba.frozen>凍結</>状態の敵に対しては<$ba.fragile>脆弱</>の効果値倍増",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "堅氷",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "damage_scale_cold",
+                      "value": 1.32,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale_freeze",
+                      "value": 1.64,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cold",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1170,5 +1871,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

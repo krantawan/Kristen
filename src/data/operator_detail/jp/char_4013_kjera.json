@@ -151,6 +151,52 @@
       "cost": 23
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "init_atk_scale",
+            "value": 0.2,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "delta_atk_scale",
+            "value": 0.15,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_atk_scale",
+            "value": 1.1,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "3",
+          "value": {
+            "key": "max_stack_cnt",
+            "value": 6,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（最大は攻撃力の110%まで）",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4013_kjera#1",
@@ -625,16 +671,703 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-10秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -10,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "俯瞰",
+          "description": "攻撃力+5％。攻撃範囲内に3箇所以上地面マスがある場合、攻撃力上昇効果が+11％になる",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "kjera_t_1[high].atk",
+              "value": 0.11,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "俯瞰",
+          "description": "攻撃力+8%<@ba.talpu>（+3%）</>。攻撃範囲内に3箇所以上地面マスがある場合、攻撃力上昇効果が+14%<@ba.talpu>（+3%）</>になる",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.08,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "kjera_t_1[high].atk",
+              "value": 0.14,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "俯瞰",
+          "description": "攻撃力+10％。攻撃範囲内に3箇所以上地面マスがある時、攻撃力上昇効果が+16％になる",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "kjera_t_1[high].atk",
+              "value": 0.16,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "俯瞰",
+          "description": "攻撃力+13%<@ba.talpu>（+3%）</>。攻撃範囲内に3箇所以上地面マスがある時、攻撃力上昇効果が+19%<@ba.talpu>（+3%）</>になる",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.13,
+              "valueStr": null
+            },
+            {
+              "key": "cnt",
+              "value": 2,
+              "valueStr": null
+            },
+            {
+              "key": "kjera_t_1[high].atk",
+              "value": 0.19,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_kjera",
       "moduleName": "イェラの記章",
-      "desc": "イェラは浮遊ユニットを操り、敵を追撃することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては術師オペレーターとして区分し、操機術師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。"
+      "desc": "イェラは浮遊ユニットを操り、敵を追撃することに秀でている。 \n外勤部門の決定に基づき \n外勤任務においては術師オペレーターとして区分し、操機術師の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_kjera",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_kjera",
       "moduleName": "雪を紡いで",
-      "desc": "長らく失われていた、遠い昔の感覚が、心の中に戻ってきた。\n流れる空気が集まって、風を生み出す。そうして吹き付ける風が腕や背中をなぞっては、指の隙間をかすめて音を立てた。イェラグの人々にとっては、この風はいささか冷たすぎるかもしれない。\nそのうち、風の音が乱れ始めた。束になったその音は、混ざりこむうわごとに乱されて、支離滅裂な歌となり、百万の日出と日没を貫いてはいつまでも身体にまとわりついてくる。この音は空気中に蓄積して、黒い棘を伸ばしていった。黒い雨粒が棘の先端から滴り落ち、今にも大地に、そして山と木の間に落ちて黒く塗りつぶさんとしている。それは騒がしく、敵意に満ちていて、決して抗いようのない危険そのものだった。\nこれまで通り、どうすべきか考えを巡らせる。だが、これまでと違って、それには今や随分と労力を要した。\n百万の日出と日没の間に積もった雪を探り、織物の中の一糸を手繰るようにしてつまんでみると、空気の流れが変わった。意思に従って、積もった雪は舞い上がり、一枚の幕を織り成していく。そうして、何度もそうしてきた通り、その幕で黒い雨を受け止め、足元の土地から追い払った。\n――\n「ヤエル。ヤエル？」\n柔らかく呼ぶ声が、風雪の織り成す幕をすり抜けて耳へと届く。ヤエルがハッと我に返ると、その腕には半分までで止まった編み物が掛けられていた。片手には編み針を持っているが、先ほどまでもう片方の手でつまんでいたはずの糸は、毛糸玉の中に戻ってしまっている。\n「ごめんなさいね、巫女様。なんだかぼーっとしちゃって。」\nヤエルが巫女に編み物を習い始めて、これで三日目だ。この蔓珠院にあるエンヤの部屋の壁には、一面に手製の織物が掛けられている。彼女にとって、編み物は修行の一環でもあるのだ。\n「むぅ……そうですか。私の教え方が難しすぎたせいでしょうか？」\nヤエルの向かいに座っているエンヤは、彼女を責めるどころか申し訳なさそうな顔をした。エンヤもその手に編み針を持ち、毛糸をつまんでいて、ヤエルが編んでいるものと似た編み物を腕に掛けていたが、その完成度は段違いで、見栄えも良いものだった。\n「そんなことないわ。あなたのお説法より、ずっとわかりやすいくらい。」\nエンヤはそれを聞くと笑みを浮かべて、毛糸玉へと手を伸ばし、糸をつまんでヤエルに差し出した。\n「私が説法をしている時に、あなたがそこまで深く考え込んでいたことなんてありませんよ。」\nヤエルが糸を受け取れば、温かな気持ちが指へと伝わってくる。彼女は、この織物をきちんと完成させないと、と思った。\n「巫女様の編み方と、イェラガンドが風雪を編む時のやり方は、似てるような気がしただけよ。」\n窓の外では吹雪が激しさを増しており、屋内の織物までを揺らしてしまいそうなくらいだ。\n長らく失われていた、温かな感覚が、心の中に戻ってきた。"
+      "desc": "長らく失われていた、遠い昔の感覚が、心の中に戻ってきた。\n流れる空気が集まって、風を生み出す。そうして吹き付ける風が腕や背中をなぞっては、指の隙間をかすめて音を立てた。イェラグの人々にとっては、この風はいささか冷たすぎるかもしれない。\nそのうち、風の音が乱れ始めた。束になったその音は、混ざりこむうわごとに乱されて、支離滅裂な歌となり、百万の日出と日没を貫いてはいつまでも身体にまとわりついてくる。この音は空気中に蓄積して、黒い棘を伸ばしていった。黒い雨粒が棘の先端から滴り落ち、今にも大地に、そして山と木の間に落ちて黒く塗りつぶさんとしている。それは騒がしく、敵意に満ちていて、決して抗いようのない危険そのものだった。\nこれまで通り、どうすべきか考えを巡らせる。だが、これまでと違って、それには今や随分と労力を要した。\n百万の日出と日没の間に積もった雪を探り、織物の中の一糸を手繰るようにしてつまんでみると、空気の流れが変わった。意思に従って、積もった雪は舞い上がり、一枚の幕を織り成していく。そうして、何度もそうしてきた通り、その幕で黒い雨を受け止め、足元の土地から追い払った。\n――\n「ヤエル。ヤエル？」\n柔らかく呼ぶ声が、風雪の織り成す幕をすり抜けて耳へと届く。ヤエルがハッと我に返ると、その腕には半分までで止まった編み物が掛けられていた。片手には編み針を持っているが、先ほどまでもう片方の手でつまんでいたはずの糸は、毛糸玉の中に戻ってしまっている。\n「ごめんなさいね、巫女様。なんだかぼーっとしちゃって。」\nヤエルが巫女に編み物を習い始めて、これで三日目だ。この蔓珠院にあるエンヤの部屋の壁には、一面に手製の織物が掛けられている。彼女にとって、編み物は修行の一環でもあるのだ。\n「むぅ……そうですか。私の教え方が難しすぎたせいでしょうか？」\nヤエルの向かいに座っているエンヤは、彼女を責めるどころか申し訳なさそうな顔をした。エンヤもその手に編み針を持ち、毛糸をつまんでいて、ヤエルが編んでいるものと似た編み物を腕に掛けていたが、その完成度は段違いで、見栄えも良いものだった。\n「そんなことないわ。あなたのお説法より、ずっとわかりやすいくらい。」\nエンヤはそれを聞くと笑みを浮かべて、毛糸玉へと手を伸ばし、糸をつまんでヤエルに差し出した。\n「私が説法をしている時に、あなたがそこまで深く考え込んでいたことなんてありませんよ。」\nヤエルが糸を受け取れば、温かな気持ちが指へと伝わってくる。彼女は、この織物をきちんと完成させないと、と思った。\n「巫女様の編み方と、イェラガンドが風雪を編む時のやり方は、似てるような気がしただけよ。」\n窓の外では吹雪が激しさを増しており、屋内の織物までを揺らしてしまいそうなくらいだ。\n長らく失われていた、温かな感覚が、心の中に戻ってきた。",
+      "typeIcon": "fun-y",
+      "uniEquipIcon": "uniequip_002_kjera",
+      "typeName1": "FUN",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_kjera_1",
+        "uniequip_002_kjera_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31044",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30104",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 18,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（最大は攻撃力の120%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 90,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 23,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（最大は攻撃力の120%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+15%。攻撃範囲内に3箇所以上地面マスがある場合、攻撃力上昇効果が+21%になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "俯瞰",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.21,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+18%<@ba.talpu>（+3%）</>。攻撃範囲内に3箇所以上地面マスがある場合、攻撃力上昇効果が+24%<@ba.talpu>（+3%）</>になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "俯瞰",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.24,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 102,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 28,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "init_atk_scale",
+                      "value": 0.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "delta_atk_scale",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_atk_scale",
+                      "value": 1.2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 7,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "<@ba.kw>浮遊ユニット</>を操作して敵に<@ba.kw>術ダメージ</>を与える\n浮遊ユニットが連続で同一目標を攻撃時、与ダメージが上昇（最大は攻撃力の120%まで）",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+18%。攻撃範囲内に3箇所以上地面マスがある場合、攻撃力上昇効果が+24%になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "俯瞰",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.18,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.24,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "攻撃力+21%<@ba.talpu>（+3%）</>。攻撃範囲内に3箇所以上地面マスがある場合、攻撃力上昇効果が+27%<@ba.talpu>（+3%）</>になる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "俯瞰",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk",
+                      "value": 0.21,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "cnt",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "kjera_t_1[high].atk",
+                      "value": 0.27,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1096,5 +1829,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

@@ -151,6 +151,24 @@
       "cost": 24
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "attack@append_atk_scale",
+          "value": 0.5
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "-1",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_1027_greyy2#1",
@@ -637,16 +655,530 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -4 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "ATK +32",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 32,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "Redeployment Time -6 sec",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "DP Cost -1",
+      "buff": {
+        "attributes": {
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 150,
+        "atk": 60,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Light-Stealing Chain",
+          "description": "Attacks have 25% chance to <$ba.sluggish>Slow</> the target for 2 seconds",
+          "blackboard": {
+            "attack@prob": 0.25,
+            "attack@sluggish": 2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "Light-Stealing Chain",
+          "description": "Attacks have 40% chance to <$ba.sluggish>Slow</> the target for 2 seconds",
+          "blackboard": {
+            "attack@prob": 0.4,
+            "attack@sluggish": 2
+          },
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_greyy2",
       "moduleName": "Greyy the Lightningbearer's Badge",
-      "desc": "Operator Greyy the Lightningbearer has demonstrated a remarkable aptitude for attacking enemies from long range across a simultaneous multiplicity of terrains.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Flinger responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named."
+      "desc": "Operator Greyy the Lightningbearer has demonstrated a remarkable aptitude for attacking enemies from long range across a simultaneous multiplicity of terrains.\nThe Field Operations Department has thus passed the following resolution:\nThis operator shall be appointed a Sniper Operator during field operations to exercise Flinger responsibilities.\nIn witness whereof,\nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_greyy2",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_greyy2",
       "moduleName": "Experimental ECU Prototype",
-      "desc": "Greyy tested his newly created prototype in the wilderness.\nHe had stayed up several entire nights to work on the thing, sneakily lighting a lamp so he could debug and compile. Such caution reminded him of growing up in his shanty, where his mother would use salvaged materials to work a bit of Arts, igniting a small spark of light in their dark home after the sun had set, allowing him to read for a while in its glow. Then the fuel burned out, erupting in pungent smoke and dazzling sparks, spurring a moment of tremendous brightness before plunging them into darkness again.\nHe was now quite familiar with this pitch-black wilderness, devoid of light and any other people besides himself. Dim fireflies couldn't illuminate even a couple of steps ahead, leaving only the whooshing of the wind, and sometimes not even that.\nGreyy set up his framework, input data, racked the equipment on the frame, and started it running. He wasn't entirely sure what this thing could bring about, just a string of data he had calculated a few days ago; he was doing his best to bring it to life, hoping for some results. Maybe it could provide stable power to a village, perhaps it could fill in a missing piece of a technical puzzle, or maybe it would amount to nothing more than a dazzling but useless spark.\nHe was no longer afraid of the darkness, but he still grew tense, fearing that he might not even produce a spark this time.\n'Don't be scared, boy. I work at the poor house, I've seen too many dying people surrounded by loved ones. In times like those, all emotions mean something, just don't be afraid, fear doesn't help.'\nThe device flickered to life, disturbing the fireflies, causing them to flutter and fly farther into the wilderness, where they were quickly swallowed by the darkness.\nThe light illuminated the night, but it quickly dissipated within the dark, not even managing to burst into a spark.\n'Another failure...'\nGreyy slumped to the ground in despair. The wind blew across the wilderness. He didn't feel cold, only the sensation of his mother embracing him.\nHe closed his eyes, and in the far distance, the generator in the village suddenly spun into action, the entire settlement flickering to life. Yet in this quiet night, no one saw it, including Greyy, who had finally fallen into a deep sleep.\nInside, Mechanist's light suddenly intensified. He looked out the window, and a star in the sky blinked at him, a brilliant white light shining on the wastelands, as if an eternal star had finally touched the ground.\nMechanist closed the book he had been reading and walked out.\n'You can be scared, boy, but don't stop!'"
+      "desc": "Greyy tested his newly created prototype in the wilderness.\nHe had stayed up several entire nights to work on the thing, sneakily lighting a lamp so he could debug and compile. Such caution reminded him of growing up in his shanty, where his mother would use salvaged materials to work a bit of Arts, igniting a small spark of light in their dark home after the sun had set, allowing him to read for a while in its glow. Then the fuel burned out, erupting in pungent smoke and dazzling sparks, spurring a moment of tremendous brightness before plunging them into darkness again.\nHe was now quite familiar with this pitch-black wilderness, devoid of light and any other people besides himself. Dim fireflies couldn't illuminate even a couple of steps ahead, leaving only the whooshing of the wind, and sometimes not even that.\nGreyy set up his framework, input data, racked the equipment on the frame, and started it running. He wasn't entirely sure what this thing could bring about, just a string of data he had calculated a few days ago; he was doing his best to bring it to life, hoping for some results. Maybe it could provide stable power to a village, perhaps it could fill in a missing piece of a technical puzzle, or maybe it would amount to nothing more than a dazzling but useless spark.\nHe was no longer afraid of the darkness, but he still grew tense, fearing that he might not even produce a spark this time.\n'Don't be scared, boy. I work at the poor house, I've seen too many dying people surrounded by loved ones. In times like those, all emotions mean something, just don't be afraid, fear doesn't help.'\nThe device flickered to life, disturbing the fireflies, causing them to flutter and fly farther into the wilderness, where they were quickly swallowed by the darkness.\nThe light illuminated the night, but it quickly dissipated within the dark, not even managing to burst into a spark.\n'Another failure...'\nGreyy slumped to the ground in despair. The wind blew across the wilderness. He didn't feel cold, only the sensation of his mother embracing him.\nHe closed his eyes, and in the far distance, the generator in the village suddenly spun into action, the entire settlement flickering to life. Yet in this quiet night, no one saw it, including Greyy, who had finally fallen into a deep sleep.\nInside, Mechanist's light suddenly intensified. He looked out the window, and a star in the sky blinked at him, a brilliant white light shining on the wastelands, as if an eternal star had finally touched the ground.\nMechanist closed the book he had been reading and walked out.\n'You can be scared, boy, but don't stop!'",
+      "typeIcon": "bom-x",
+      "uniEquipIcon": "uniequip_002_greyy2",
+      "typeName1": "BOM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_greyy2_1",
+        "uniequip_002_greyy2_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30064",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30024",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30084",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 160,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 10,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>three instances</> of Physical damage to <@ba.kw>ground</> enemies in a small area (The second and third instances are shockwaves that have half the normal ATK)",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 200,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 30,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 12,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>three instances</> of Physical damage to <@ba.kw>ground</> enemies in a small area (The second and third instances are shockwaves that have half the normal ATK)",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks have a 40% chance to <$ba.sluggish>Slow</> the target for 2 seconds, and <$ba.sluggish>Slowed</> enemies take +10% damage",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Light-Stealing Chain",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 240,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 40,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "attack@append_atk_scale",
+                      "value": 0.5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@enable_third_attack",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "Attacks deal <@ba.kw>three instances</> of Physical damage to <@ba.kw>ground</> enemies in a small area (The second and third instances are shockwaves that have half the normal ATK)",
+                  "prefabKey": "-1",
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "Attacks have a 40% chance to <$ba.sluggish>Slow</> the target for 2 seconds, and <$ba.sluggish>Slowed</> enemies take +15% damage",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "Light-Stealing Chain",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "attack@prob",
+                      "value": 0.4,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "attack@sluggish",
+                      "value": 2,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1100,5 +1632,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

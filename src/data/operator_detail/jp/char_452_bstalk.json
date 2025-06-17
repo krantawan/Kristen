@@ -151,6 +151,28 @@
       "cost": 13
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "atk_scale",
+            "value": 1.5,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "",
+      "prefabKey": "",
+      "rangeId": null
+    }
+  ],
   "skins": [
     {
       "skinId": "char_452_bstalk#1",
@@ -629,16 +651,700 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃速度+8",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATTACK_SPEED",
+              "formulaItem": "ADDITION",
+              "value": 8,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-6秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -6,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "プロブリーダー",
+          "description": "戦術召集点にハガネガニを援軍として召喚可能\n援軍が倒された時、20秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10014_bstalk_crab",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "プロブリーダー",
+          "description": "戦術召集点にハガネガニを援軍として召喚可能\n援軍が倒された時、17秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10014_bstalk_crab",
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "プロブリーダー",
+          "description": "戦術召集点にハガネガニを援軍として召喚可能\n援軍が倒された時、15秒後に再召喚される",
+          "blackboard": [
+            {
+              "key": "cnt",
+              "value": 1,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": "token_10014_bstalk_crab",
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_bstalk",
       "moduleName": "ビーンストークの記章",
-      "desc": "ビーンストークは戦術召集点を設置して援軍を呼び、後続の展開に余裕を持たせる戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては先鋒オペレーターとして区分し、戦術家の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。\n"
+      "desc": "ビーンストークは戦術召集点を設置して援軍を呼び、後続の展開に余裕を持たせる戦術に秀でている。 \n外勤部門の決定に基づき \n外勤任務においては先鋒オペレーターとして区分し、戦術家の責務を担う。 \n特別に本記章を授与し、 \nその証明とする。\n",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_blkngt",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_bstalk",
       "moduleName": "カニカニビュッフェ",
-      "desc": "「ビーンストークさん、この前業者さんに依頼した宣伝文と説明書の草案がやっと届きましたよ！」\n「やったぁ、早速見てみよう！」\nハガネガニ用スマート給餌器「カニカニビュッフェ」！本製品は最新のスマート技術を駆使して、ハガネガニ飼育のよくあるお悩みを解決するべく開発されました！ご自宅を留守にする際、ハガネガニから目を離すのが心配なあなたも、衛生面に不安の残る給餌器を置いておくのは、ハガネガニの健康に影響しそうで怖いというあなたも！「カニカニビュッフェ」があれば、そんな心配はもうご無用！これ一台でハガネガニちゃんに、健康に優しく衛生的で、一日に必要なエネルギーがしっかり備わった、栄養バランス抜群のご飯をご提供します！\n「なかなかいい感じですね。『最新のスマート技術』というのはどういうものなんですか？」\n「メイヤーさんに頼んで作ってもらった、生き物の動作に反応して動くシステムのことだよ。交換条件として、ぴーちゃんを貸して、生き物を模したスマートロボットの開発に協力しなきゃいけなかったけど。」\n「なるほど……」\n本製品を初めてご使用になる際には、説明書の指示に従って給餌器とフード入れを組み立てた後、タッチパネルから給餌器の基本設定を完了してください。「カニカニビュッフェ」では、デフォルトで三種類の給餌プランが登録されていますが、そのほかにも、お客様ご自身で設定した給餌プランを最大十種類まで保存することができます。また、ハガネガニの食事シーンを絶対に見逃したくないという方には、今なら別売りの外付けカメラを二割引き価格でご提供いたします。\n「外付けカメラって、誰のアイデアなんですか？」\n「あたしが訓練期間に思いついたことだよ！一時期、ハガネガニの戦力検証用に、教官たちがあの子たちに小型カメラを取り付けてたんだけどね。それでピンと来て、給餌器をもっとグレードアップさせられるんじゃないかなと思ったんだ！可愛いペットの動画って、クルビアの都市間ネットワークでは大人気だからね！」\nハガネガニは雑食性の生き物です。体重の10%以下の量を目安として、一日に一回フードを与えるよう設定してください。また「カニカニビュッフェ」では給餌の際、フリーズドライフードをセットすれば、細かく砕かずそのままお使いいただけます。また、本製品と同時発売の「ビーンストーク印の特選ハガネガニフード」もオススメです。十五種類の無添加材料をバランス良く配合したこのフードなら、ハガネガニちゃんは毎日満腹大満足！ハサミももっとパワフルになること間違いなしです！\nご使用時の注意：\n1.本製品を乳幼児の食事用に使わないでください。\n2.フードがこぼれないよう、本製品は平らな場所に置いてください。\n「あっ、もう一つ追加で――給餌プラン設定時は、ハガネガニにその様子を見せないようにしてください。ハガネガニの中には、優れた学習能力を持つ個体が存在するため、給餌器の使い方を学習する恐れがあります……これでよし。」\n「そ、それ本当ですか？」\n「もちろん。だってぴーちゃんがそうだもん。ちょっとでも目を離すと、すぐに他の子たちとおやつタイムを始めちゃうんだよね。」"
+      "desc": "「ビーンストークさん、この前業者さんに依頼した宣伝文と説明書の草案がやっと届きましたよ！」\n「やったぁ、早速見てみよう！」\nハガネガニ用スマート給餌器「カニカニビュッフェ」！本製品は最新のスマート技術を駆使して、ハガネガニ飼育のよくあるお悩みを解決するべく開発されました！ご自宅を留守にする際、ハガネガニから目を離すのが心配なあなたも、衛生面に不安の残る給餌器を置いておくのは、ハガネガニの健康に影響しそうで怖いというあなたも！「カニカニビュッフェ」があれば、そんな心配はもうご無用！これ一台でハガネガニちゃんに、健康に優しく衛生的で、一日に必要なエネルギーがしっかり備わった、栄養バランス抜群のご飯をご提供します！\n「なかなかいい感じですね。『最新のスマート技術』というのはどういうものなんですか？」\n「メイヤーさんに頼んで作ってもらった、生き物の動作に反応して動くシステムのことだよ。交換条件として、ぴーちゃんを貸して、生き物を模したスマートロボットの開発に協力しなきゃいけなかったけど。」\n「なるほど……」\n本製品を初めてご使用になる際には、説明書の指示に従って給餌器とフード入れを組み立てた後、タッチパネルから給餌器の基本設定を完了してください。「カニカニビュッフェ」では、デフォルトで三種類の給餌プランが登録されていますが、そのほかにも、お客様ご自身で設定した給餌プランを最大十種類まで保存することができます。また、ハガネガニの食事シーンを絶対に見逃したくないという方には、今なら別売りの外付けカメラを二割引き価格でご提供いたします。\n「外付けカメラって、誰のアイデアなんですか？」\n「あたしが訓練期間に思いついたことだよ！一時期、ハガネガニの戦力検証用に、教官たちがあの子たちに小型カメラを取り付けてたんだけどね。それでピンと来て、給餌器をもっとグレードアップさせられるんじゃないかなと思ったんだ！可愛いペットの動画って、クルビアの都市間ネットワークでは大人気だからね！」\nハガネガニは雑食性の生き物です。体重の10%以下の量を目安として、一日に一回フードを与えるよう設定してください。また「カニカニビュッフェ」では給餌の際、フリーズドライフードをセットすれば、細かく砕かずそのままお使いいただけます。また、本製品と同時発売の「ビーンストーク印の特選ハガネガニフード」もオススメです。十五種類の無添加材料をバランス良く配合したこのフードなら、ハガネガニちゃんは毎日満腹大満足！ハサミももっとパワフルになること間違いなしです！\nご使用時の注意：\n1.本製品を乳幼児の食事用に使わないでください。\n2.フードがこぼれないよう、本製品は平らな場所に置いてください。\n「あっ、もう一つ追加で――給餌プラン設定時は、ハガネガニにその様子を見せないようにしてください。ハガネガニの中には、優れた学習能力を持つ個体が存在するため、給餌器の使い方を学習する恐れがあります……これでよし。」\n「そ、それ本当ですか？」\n「もちろん。だってぴーちゃんがそうだもん。ちょっとでも目を離すと、すぐに他の子たちとおやつタイムを始めちゃうんだよね。」",
+      "typeIcon": "tac-y",
+      "uniEquipIcon": "uniequip_002_blkngt",
+      "typeName1": "TAC",
+      "typeName2": "Y",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 40,
+      "missionList": [
+        "uniequip_002_bstalk_1",
+        "uniequip_002_bstalk_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30023",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 20000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 15,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30093",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 25000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 1,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31013",
+            "count": 6,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 30000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 100,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 15,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が165%まで上昇\n援軍がブロックしている敵は味方ユニットから狙われやすくなる",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 125,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 20,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が165%まで上昇\n援軍がブロックしている敵は味方ユニットから狙われやすくなる",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵をブロック中、防御力+10%。倒された時、15秒後に再召喚される",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "プロブリーダー",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "戦術召集点にハガネガニを援軍として召喚可能。敵をブロック中、ハガネガニの防御力+10%。援軍が倒された時、15秒後に再召喚される",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "プロブリーダー",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10014_bstalk_crab",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 140,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.65,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "攻撃範囲内で<@ba.kw>戦術召集点</>を指定し援軍を召喚できる\n自身が援軍によってブロックされている敵を攻撃する場合、攻撃力が165%まで上昇\n援軍がブロックしている敵は味方ユニットから狙われやすくなる",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "敵をブロック中、防御力+15%。倒された時、15秒後に再召喚される",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "プロブリーダー",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "block_cnt",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "interval",
+                      "value": 15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": true,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": -1,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "taunt_level",
+                      "value": 1,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def",
+                      "value": 0.15,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "戦術召集点にハガネガニを援軍として召喚可能。敵をブロック中、ハガネガニの防御力+15%。援軍が倒された時、15秒後に再召喚される",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "プロブリーダー",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "cnt",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": "token_10014_bstalk_crab",
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1091,6 +1797,9 @@
       "phase": "PHASE_1",
       "level": 1
     }
+  ],
+  "tokens": [
+    "token_10014_bstalk_crab"
   ],
   "patch_info": {}
 }

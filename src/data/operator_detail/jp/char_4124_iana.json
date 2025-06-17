@@ -151,6 +151,52 @@
       "cost": 15
     }
   },
+  "trait": [
+    {
+      "unlockCondition": {
+        "phase": "PHASE_0",
+        "level": 1
+      },
+      "requiredPotentialRank": 0,
+      "blackboard": [
+        {
+          "key": "0",
+          "value": {
+            "key": "duration",
+            "value": 20,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "1",
+          "value": {
+            "key": "atk",
+            "value": 0,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "2",
+          "value": {
+            "key": "max_hp",
+            "value": 0,
+            "valueStr": null
+          }
+        },
+        {
+          "key": "3",
+          "value": {
+            "key": "talent_override_rangeid_flag",
+            "value": 1,
+            "valueStr": null
+          }
+        }
+      ],
+      "overrideDescription": "致命的なダメージを受けても撤退せず、<身替り>と入れ替わり戦闘を続行する（身替りのブロック数は0）。20秒後<身替り>から再び自身に入れ替わる",
+      "prefabKey": "-1",
+      "rangeId": "x-1"
+    }
+  ],
   "skins": [
     {
       "skinId": "char_4124_iana#1",
@@ -617,16 +663,796 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+27",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 27,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ジェミニ・レプリケーター",
+          "description": "配置時、本体の代わりに配置マスにホログラムを出現させる。ホログラムは攻撃できず、攻撃を受けると攻撃者のステルス状態を6秒間無効化させ、自身が<身替り>と入れ替わる",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "weak[limit]",
+              "value": 0,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "block_cnt",
+              "value": -2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_0",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "ジェミニ・レプリケーター",
+          "description": "配置時、本体の代わりに配置マスにホログラムを出現させる。ホログラムは攻撃できず、攻撃を受けると攻撃者のステルス状態を6秒間無効化させ、自身が<身替り>と入れ替わる",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "weak[limit]",
+              "value": 0,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1,
+              "valueStr": null
+            },
+            {
+              "key": "block_cnt",
+              "value": -2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ジェミニ・レプリケーター",
+          "description": "配置時、本体の代わりに配置マスにホログラムを出現させる。ホログラムは攻撃できず、攻撃を受けると攻撃者に6秒間、ステルス状態を無効化させ、10%の脆弱状態を付与し、自身が<身替り>と入れ替わる",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "weak[limit]",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.1,
+              "valueStr": null
+            },
+            {
+              "key": "block_cnt",
+              "value": -2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "ジェミニ・レプリケーター",
+          "description": "配置時、本体の代わりに配置マスにホログラムを出現させる。ホログラムは攻撃できず、攻撃を受けると攻撃者に6秒間、ステルス状態を無効化させ、12%<@ba.talpu>（+2%）</>の脆弱状態を付与し、自身が<身替り>と入れ替わる",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "weak[limit]",
+              "value": 6,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.12,
+              "valueStr": null
+            },
+            {
+              "key": "block_cnt",
+              "value": -2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "ジェミニ・レプリケーター",
+          "description": "配置時、本体の代わりに配置マスにホログラムを出現させる。ホログラムは攻撃できず、攻撃を受けると攻撃者に8秒間、ステルス状態を無効化させ、20%の脆弱状態を付与し、自身が<身替り>と入れ替わる",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "weak[limit]",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.2,
+              "valueStr": null
+            },
+            {
+              "key": "block_cnt",
+              "value": -2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "1",
+          "name": "ジェミニ・レプリケーター",
+          "description": "配置時、本体の代わりに配置マスにホログラムを出現させる。ホログラムは攻撃できず、攻撃を受けると攻撃者に8秒間、ステルス状態を無効化させ、22%<@ba.talpu>（+2%）</>の脆弱状態を付与し、自身が<身替り>と入れ替わる",
+          "blackboard": [
+            {
+              "key": "duration",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "weak[limit]",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "damage_scale",
+              "value": 1.22,
+              "valueStr": null
+            },
+            {
+              "key": "block_cnt",
+              "value": -2,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_iana",
       "moduleName": "Ianaの記章",
-      "desc": "Ianaは戦場において身替わりを用いて敵を翻弄することに秀でている。\n外勤部門の決定に基づき \n外勤任務においては特殊オペレーターとして区分し、その証として特別にこの記章を授ける。 \nだがしかし、彼らのような人々に本当にこのような証明が必要なのであろうか？"
+      "desc": "Ianaは戦場において身替わりを用いて敵を翻弄することに秀でている。\n外勤部門の決定に基づき \n外勤任務においては特殊オペレーターとして区分し、その証として特別にこの記章を授ける。 \nだがしかし、彼らのような人々に本当にこのような証明が必要なのであろうか？",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_iana",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_iana",
       "moduleName": "「遥けき未知の世界」",
-      "desc": "「音声記録開始。ロドス、レインボー小隊、コードネームIana。チーム内通信のため機密保持厳守。」 \n「あー、テレポート事故から今日で――日数はメインキャンプに戻り次第補足するけど、とりあえず――サルゴンでの実験開始から四十一日目。」 \n「昼間のうちに、初日に設置したカメラをすべて回収して、今はその成果を端末に取り込んでるところ。ただ、ここの端末は有線接続しかできないし、車に積み込んだコンピュータの性能では、私のアルゴリズムは処理できない。だから具体的な分析作業はメインキャンプに戻ってからでないとできないわ。」 \n「とはいえ、ここには自分自身の目も頭もあるし、取り込み作業を進める傍ら、昼からずっと手作業で写真の分析を行ってるところ。これで少なくとも初期段階の仮説は立てられるし、これまで各地で行ってきた観測結果もある程度検証できるはずよ。」 \n「コロンビア――いえ、テラのクルビア人たちは最近、高エネルギーの粒子線のような実験装置を発射して、空に穴を開けた。『空は偽りのものである』という見方はまもなく常識に、一般的な世論になるでしょうね。」 \n「そして私たちの実験は、その偽りの空の層の整合性や均一性を推測するのに役立つ可能性がある。」 \n「肉眼でこうした写真を観察した結果、星々は時間や観測エリアによって明らかな不連続性を示していた。さらにその実態は、ここの文献に記載されているものを遙かに上回っているわ。結論を出すには、まだコンピュータを使った分析結果を待つ必要があるけど、私の第一印象と大きくズレはしないと思う。」 \n「つまり、空の整合性というもの自体が存在せず、その本質はエリア別に投影されただけのもので、投影元は空の外側にあるかもしれない、ということね。他にもいくつか仮説を立てているわ。」 \n「だけど、私はここが地球型惑星であるという仮説に依然として自信を持っている――というのも、一般的な光学観測による結果もその仮説を支持しているからよ。それを完全に説明できる人はほとんどいないようだけど、現地の人たちはみな、普遍的にその認識を持ってはいるみたい。一度も海を見たことがない人たちでも、足元の大地は平らではなく丸いことを知っているの。」 \n「ここの人たちは無線通信技術を知っているものの、彼らの信号ではこの惑星の電離層までは届かないみたい。そこで代替案として、帯域幅が広く、エネルギーコストもほとんど無視できる一種の中継リンクのような仕組みを使っているの。だけど、その技術があるからか、中波信号を使った遠距離無線通信は試みたことすらないようだった。だから文献だけでは、問題がD層とF層のどちらにあるかは判断できない――もちろん、テラという惑星が、地球と同じ大気と日照条件を持っていることが前提となる仮説ではあるけれど。個人的には、その可能性は高いと思うわ。」 \n「彼らの技術や技術移転の方法、そして技術発展の根源は、私たちのものとは完全に違うように見えて、実は共通点もある。」 \n「……」 \n「実は、この地でカール・ジャンスキーの実験を再現してみたの。ここでは誰も思いついてないみたいだから、私が代わりに。どうしても我慢できなくてね、ごめんなさい。」 \n「テラの人々は、私たちがどこから来たのかなんて知らないけど、それでも外の世界に対する好奇心は高まりつつあるように思う。」 \n「だから、彼らの助けに……探索者の一員になりたいのよ。」 \n「どこにいたって、私の想いは変わらない。」 \n「……」 \n「さて、アンテナがどんな信号を拾ったか見てみようかしら……」 \n「え？」 \n「この強度に、この……周期……」 \n「……これは一体？」"
+      "desc": "「音声記録開始。ロドス、レインボー小隊、コードネームIana。チーム内通信のため機密保持厳守。」 \n「あー、テレポート事故から今日で――日数はメインキャンプに戻り次第補足するけど、とりあえず――サルゴンでの実験開始から四十一日目。」 \n「昼間のうちに、初日に設置したカメラをすべて回収して、今はその成果を端末に取り込んでるところ。ただ、ここの端末は有線接続しかできないし、車に積み込んだコンピュータの性能では、私のアルゴリズムは処理できない。だから具体的な分析作業はメインキャンプに戻ってからでないとできないわ。」 \n「とはいえ、ここには自分自身の目も頭もあるし、取り込み作業を進める傍ら、昼からずっと手作業で写真の分析を行ってるところ。これで少なくとも初期段階の仮説は立てられるし、これまで各地で行ってきた観測結果もある程度検証できるはずよ。」 \n「コロンビア――いえ、テラのクルビア人たちは最近、高エネルギーの粒子線のような実験装置を発射して、空に穴を開けた。『空は偽りのものである』という見方はまもなく常識に、一般的な世論になるでしょうね。」 \n「そして私たちの実験は、その偽りの空の層の整合性や均一性を推測するのに役立つ可能性がある。」 \n「肉眼でこうした写真を観察した結果、星々は時間や観測エリアによって明らかな不連続性を示していた。さらにその実態は、ここの文献に記載されているものを遙かに上回っているわ。結論を出すには、まだコンピュータを使った分析結果を待つ必要があるけど、私の第一印象と大きくズレはしないと思う。」 \n「つまり、空の整合性というもの自体が存在せず、その本質はエリア別に投影されただけのもので、投影元は空の外側にあるかもしれない、ということね。他にもいくつか仮説を立てているわ。」 \n「だけど、私はここが地球型惑星であるという仮説に依然として自信を持っている――というのも、一般的な光学観測による結果もその仮説を支持しているからよ。それを完全に説明できる人はほとんどいないようだけど、現地の人たちはみな、普遍的にその認識を持ってはいるみたい。一度も海を見たことがない人たちでも、足元の大地は平らではなく丸いことを知っているの。」 \n「ここの人たちは無線通信技術を知っているものの、彼らの信号ではこの惑星の電離層までは届かないみたい。そこで代替案として、帯域幅が広く、エネルギーコストもほとんど無視できる一種の中継リンクのような仕組みを使っているの。だけど、その技術があるからか、中波信号を使った遠距離無線通信は試みたことすらないようだった。だから文献だけでは、問題がD層とF層のどちらにあるかは判断できない――もちろん、テラという惑星が、地球と同じ大気と日照条件を持っていることが前提となる仮説ではあるけれど。個人的には、その可能性は高いと思うわ。」 \n「彼らの技術や技術移転の方法、そして技術発展の根源は、私たちのものとは完全に違うように見えて、実は共通点もある。」 \n「……」 \n「実は、この地でカール・ジャンスキーの実験を再現してみたの。ここでは誰も思いついてないみたいだから、私が代わりに。どうしても我慢できなくてね、ごめんなさい。」 \n「テラの人々は、私たちがどこから来たのかなんて知らないけど、それでも外の世界に対する好奇心は高まりつつあるように思う。」 \n「だから、彼らの助けに……探索者の一員になりたいのよ。」 \n「どこにいたって、私の想いは変わらない。」 \n「……」 \n「さて、アンテナがどんな信号を拾ったか見てみようかしら……」 \n「え？」 \n「この強度に、この……周期……」 \n「……これは一体？」",
+      "typeIcon": "pum-x",
+      "uniEquipIcon": "uniequip_002_iana",
+      "typeName1": "PUM",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 50,
+      "missionList": [
+        "uniequip_002_iana_1",
+        "uniequip_002_iana_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31034",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 40000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "31064",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 50000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 8,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30014",
+            "count": 5,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 60000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 45,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 25,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "致命的なダメージを受けても撤退せず、<身替り>と入れ替わり戦闘を続行する（身替りのブロック数は0、攻撃力が<@ba.kw>上昇</>）。20秒後<身替り>から再び自身に入れ替わる",
+                  "prefabKey": "-1",
+                  "rangeId": "x-1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 55,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 35,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "致命的なダメージを受けても撤退せず、<身替り>と入れ替わり戦闘を続行する（身替りのブロック数は0、攻撃力が<@ba.kw>上昇</>）。20秒後<身替り>から再び自身に入れ替わる",
+                  "prefabKey": "-1",
+                  "rangeId": "x-1"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置時、本体の代わりに配置マスにホログラムを出現させる。ホログラムは攻撃できず、攻撃を受けると攻撃者に10秒間、ステルス状態を無効化させ、25%の脆弱状態を付与し、自身が<身替り>と入れ替わる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ジェミニ・レプリケーター",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.25,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "block_cnt",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置時、本体の代わりに配置マスにホログラムを出現させる。ホログラムは攻撃できず、攻撃を受けると攻撃者に10秒間、ステルス状態を無効化させ、27%<@ba.talpu>（+2%）</>の脆弱状態を付与し、自身が<身替り>と入れ替わる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "ジェミニ・レプリケーター",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.27,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "block_cnt",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "atk",
+              "value": 65,
+              "valueStr": null
+            },
+            {
+              "key": "def",
+              "value": 40,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "TRAIT_DATA_ONLY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 20,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "atk",
+                      "value": 0.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "talent_override_rangeid_flag",
+                      "value": 1,
+                      "valueStr": null
+                    }
+                  ],
+                  "overrideDescripton": "致命的なダメージを受けても撤退せず、<身替り>と入れ替わり戦闘を続行する（身替りのブロック数は0、攻撃力が<@ba.kw>上昇</>）。20秒後<身替り>から再び自身に入れ替わる",
+                  "prefabKey": "-1",
+                  "rangeId": "x-1"
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置時、本体の代わりに配置マスにホログラムを出現させる。ホログラムは攻撃できず、攻撃を受けると攻撃者に10秒間、ステルス状態を無効化させ、28%の脆弱状態を付与し、自身が<身替り>と入れ替わる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "ジェミニ・レプリケーター",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.28,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "block_cnt",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                },
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "配置時、本体の代わりに配置マスにホログラムを出現させる。ホログラムは攻撃できず、攻撃を受けると攻撃者に10秒間、ステルス状態を無効化させ、30%<@ba.talpu>（+2%）</>の脆弱状態を付与し、自身が<身替り>と入れ替わる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 4,
+                  "prefabKey": "1",
+                  "name": "ジェミニ・レプリケーター",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "duration",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "weak[limit]",
+                      "value": 10,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "damage_scale",
+                      "value": 1.3,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "block_cnt",
+                      "value": -2,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1080,5 +1906,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }

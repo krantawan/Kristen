@@ -150,6 +150,7 @@
       "cost": 24
     }
   },
+  "trait": [],
   "skins": [
     {
       "skinId": "char_2012_typhon#1",
@@ -742,16 +743,673 @@
       ]
     }
   ],
+  "potentialRanks": [
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "再配置時間-4秒",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "RESPAWN_TIME",
+              "formulaItem": "ADDITION",
+              "value": -4,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "BUFF",
+      "description": "攻撃力+34",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "ATK",
+              "formulaItem": "ADDITION",
+              "value": 34,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "CUSTOM",
+      "description": "第二素質強化",
+      "buff": {}
+    },
+    {
+      "type": "BUFF",
+      "description": "配置コスト-1",
+      "buff": {
+        "attributes": {
+          "abnormalFlags": null,
+          "abnormalImmunes": null,
+          "abnormalAntis": null,
+          "abnormalCombos": null,
+          "abnormalComboImmunes": null,
+          "attributeModifiers": [
+            {
+              "attributeType": "COST",
+              "formulaItem": "ADDITION",
+              "value": -1,
+              "loadFromBlackboard": false,
+              "fetchBaseValueFromSourceEntity": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "favorKeyFrames": [
+    {
+      "level": 0,
+      "data": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    },
+    {
+      "level": 50,
+      "data": {
+        "maxHp": 0,
+        "atk": 110,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0,
+        "maxDeckStackCnt": 0,
+        "tauntLevel": 0,
+        "massLevel": 0,
+        "baseForceLevel": 0,
+        "stunImmune": false,
+        "silenceImmune": false,
+        "sleepImmune": false,
+        "frozenImmune": false,
+        "levitateImmune": false,
+        "disarmedCombatImmune": false,
+        "fearedImmune": false
+      }
+    }
+  ],
+  "talents": [
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_1",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "鋭牙の如く",
+          "description": "連続攻撃時、敵の防御力を最大40%まで無視できる（攻撃するたびに防御力無視の割合+5%）。3秒間攻撃せずにいると効果がリセットされる",
+          "blackboard": [
+            {
+              "key": "max_stack_cnt",
+              "value": 8,
+              "valueStr": null
+            },
+            {
+              "key": "def_penetrate",
+              "value": 0.05,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "1",
+          "name": "鋭牙の如く",
+          "description": "連続攻撃時、敵の防御力を最大50%まで無視できる（攻撃するたびに防御力無視の割合+10%）。8秒間攻撃せずにいると効果がリセットされる",
+          "blackboard": [
+            {
+              "key": "max_stack_cnt",
+              "value": 5,
+              "valueStr": null
+            },
+            {
+              "key": "def_penetrate",
+              "value": 0.1,
+              "valueStr": null
+            },
+            {
+              "key": "duration",
+              "value": 8,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 0,
+          "prefabKey": "2",
+          "name": "泥沼の如く",
+          "description": "スキル発動中、同じ敵に初めてダメージを与える際、攻撃力が160%まで上昇し、3秒間<$ba.sluggish>足止め</>状態にする",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.6,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        },
+        {
+          "unlockCondition": {
+            "phase": "PHASE_2",
+            "level": 1
+          },
+          "requiredPotentialRank": 4,
+          "prefabKey": "2",
+          "name": "泥沼の如く",
+          "description": "スキル発動中、同じ敵に初めてダメージを与える際、攻撃力が170%<@ba.talpu>（+10%）</>まで上昇し、3秒間<$ba.sluggish>足止め</>する",
+          "blackboard": [
+            {
+              "key": "atk_scale",
+              "value": 1.7,
+              "valueStr": null
+            },
+            {
+              "key": "sluggish",
+              "value": 3,
+              "valueStr": null
+            }
+          ],
+          "tokenKey": null,
+          "isHideTalent": false
+        }
+      ]
+    }
+  ],
   "modules": [
     {
       "moduleId": "uniequip_001_typhon",
       "moduleName": "ティフォンの記章",
-      "desc": "ティフォンは距離を保って火力で大型の敵を制圧することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、破城射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。"
+      "desc": "ティフォンは距離を保って火力で大型の敵を制圧することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、破城射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "uniEquipIcon": "uniequip_001_typhon",
+      "typeName1": "ORIGINAL",
+      "typeName2": "",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 0,
+      "missionList": [],
+      "unlockFavors": {},
+      "itemCost": {},
+      "module_upgrades": []
     },
     {
       "moduleId": "uniequip_002_typhon",
       "moduleName": "自然の容認",
-      "desc": "背の高いフェルトハットをかぶり、毛皮の襟巻で顔のほとんどを覆い隠したとある夫婦が足を止めた。\nそれから彼らは慎重に、恭しく荷物から血の滴る肉を取り出し、その血を木の根に垂らした後、肉を枝へと吊るす。\nそうして彼らは、曖昧で、自分たち自身意味をよく理解していない音節の連なりを唱え始めた。\nそんな中、彼らの娘はそう遠くない辺りにいて、のろのろと夫婦に付いてきていた。\n彼女は両親と手を繋ぎたいと思ったが、あいにく両手は塞がっている。\n今日は彼女にとって初めて、大人のように武器を携えて外へ出た日だったのだ。\n武器を持つことは戦うことを意味しており、戦うのならば油断は許されない、という両親の教えに従い、彼女は矢をつがえたまま弓を持ち歩いていた。\n「あの子にも、いずれはこういうことを教えてあげないと。」と、母の声が言った。「弓の引き方やナイフの研ぎ方、罠の仕掛け方、それから、恐れを抱かないこと、どんなものにも対抗できる力を身につけること……そうしなければ生きてはいけないということも。だって、私たちがサルカズであることはいずれ気付かれてしまうでしょう。そうなれば、サルカズを受け入れてくれる場所なんてどこにもないのだから。」\n「だが、もう昔の生活には戻らないと約束したじゃないか。」今度は父の声が聞こえた。「それに……あの子とも約束していただろう？確かあの日は虹が出ていて、私は森に入って膝鎧でそれを受け止めていたな。覚えているか？」\n「その時あの子はまだ生まれてもいなかったじゃない……はぁ、まあいいわ。」母の声がずいぶんと柔らかくなった。「さっき言ったようなことはもちろん教えるけれど、祈りも捧げるようにしましょう。たとえ、サーミの地にサルカズへの祝福を請うのが荒唐無稽なことだとしてもね。とにかく、私たち脱走兵は連中に見つかりさえしなければそれでいいのだし……」\n娘はふと、道端に佇む粗末な木彫りに気を引かれて足を止めた。\n聞こえていた両親の声は徐々に遠ざかっていく。\n木彫りが指し示す方向には、必ず良いものがたんまり置かれた木のうろがあることを彼女は知っていた。\n何か家に足りないものがあり、それを手に入れる術がない時、両親がよくそんな木のうろを探していたからだ。\n彼女は色鮮やかな飾り結びが欲しくなり、木彫りが示す方向へと、狭い木々の隙間を縫って進んだ。\nその道すがら、木のうろでの物々交換に使うため、果実やきれいな石など、ぴんと来たものを拾っては矢筒に入れながら。\nけれどそうしているうちに、いつの間にか彼女は野獣が潜む森へと足を踏み入れていた。\n……\n時が経ち、サルカズの少女はそんな幼い頃の経験をすべて忘れてしまっていた。\n両親が自分を探して呼んだ名前も、両親を驚かせようと手を見せた時、そこに結んでいた飾り結びの色も――\nその時の両親の反応すらも。\n\n「見てくれ、この子を生かしてくれたのは……」\n男は娘の矢筒を指さして、信じられないという顔で愛する妻を呼び寄せた。\nその中にサルカズの夫婦が見たものは、小さな矢筒の底に残った、雪の塊が融けたかのような湿った跡だった。"
+      "desc": "背の高いフェルトハットをかぶり、毛皮の襟巻で顔のほとんどを覆い隠したとある夫婦が足を止めた。\nそれから彼らは慎重に、恭しく荷物から血の滴る肉を取り出し、その血を木の根に垂らした後、肉を枝へと吊るす。\nそうして彼らは、曖昧で、自分たち自身意味をよく理解していない音節の連なりを唱え始めた。\nそんな中、彼らの娘はそう遠くない辺りにいて、のろのろと夫婦に付いてきていた。\n彼女は両親と手を繋ぎたいと思ったが、あいにく両手は塞がっている。\n今日は彼女にとって初めて、大人のように武器を携えて外へ出た日だったのだ。\n武器を持つことは戦うことを意味しており、戦うのならば油断は許されない、という両親の教えに従い、彼女は矢をつがえたまま弓を持ち歩いていた。\n「あの子にも、いずれはこういうことを教えてあげないと。」と、母の声が言った。「弓の引き方やナイフの研ぎ方、罠の仕掛け方、それから、恐れを抱かないこと、どんなものにも対抗できる力を身につけること……そうしなければ生きてはいけないということも。だって、私たちがサルカズであることはいずれ気付かれてしまうでしょう。そうなれば、サルカズを受け入れてくれる場所なんてどこにもないのだから。」\n「だが、もう昔の生活には戻らないと約束したじゃないか。」今度は父の声が聞こえた。「それに……あの子とも約束していただろう？確かあの日は虹が出ていて、私は森に入って膝鎧でそれを受け止めていたな。覚えているか？」\n「その時あの子はまだ生まれてもいなかったじゃない……はぁ、まあいいわ。」母の声がずいぶんと柔らかくなった。「さっき言ったようなことはもちろん教えるけれど、祈りも捧げるようにしましょう。たとえ、サーミの地にサルカズへの祝福を請うのが荒唐無稽なことだとしてもね。とにかく、私たち脱走兵は連中に見つかりさえしなければそれでいいのだし……」\n娘はふと、道端に佇む粗末な木彫りに気を引かれて足を止めた。\n聞こえていた両親の声は徐々に遠ざかっていく。\n木彫りが指し示す方向には、必ず良いものがたんまり置かれた木のうろがあることを彼女は知っていた。\n何か家に足りないものがあり、それを手に入れる術がない時、両親がよくそんな木のうろを探していたからだ。\n彼女は色鮮やかな飾り結びが欲しくなり、木彫りが示す方向へと、狭い木々の隙間を縫って進んだ。\nその道すがら、木のうろでの物々交換に使うため、果実やきれいな石など、ぴんと来たものを拾っては矢筒に入れながら。\nけれどそうしているうちに、いつの間にか彼女は野獣が潜む森へと足を踏み入れていた。\n……\n時が経ち、サルカズの少女はそんな幼い頃の経験をすべて忘れてしまっていた。\n両親が自分を探して呼んだ名前も、両親を驚かせようと手を見せた時、そこに結んでいた飾り結びの色も――\nその時の両親の反応すらも。\n\n「見てくれ、この子を生かしてくれたのは……」\n男は娘の矢筒を指さして、信じられないという顔で愛する妻を呼び寄せた。\nその中にサルカズの夫婦が見たものは、小さな矢筒の底に残った、雪の塊が融けたかのような湿った跡だった。",
+      "typeIcon": "sie-x",
+      "uniEquipIcon": "uniequip_002_typhon",
+      "typeName1": "SIE",
+      "typeName2": "X",
+      "showEvolvePhase": "PHASE_2",
+      "unlockLevel": 60,
+      "missionList": [
+        "uniequip_002_typhon_1",
+        "uniequip_002_typhon_2"
+      ],
+      "unlockFavors": {
+        "1": 0,
+        "2": 2732,
+        "3": 10070
+      },
+      "itemCost": {
+        "1": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30115",
+            "count": 2,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 80000,
+            "type": "GOLD"
+          }
+        ],
+        "2": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_1",
+            "count": 60,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30145",
+            "count": 3,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 100000,
+            "type": "GOLD"
+          }
+        ],
+        "3": [
+          {
+            "id": "mod_unlock_token",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "mod_update_token_2",
+            "count": 20,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "30125",
+            "count": 4,
+            "type": "MATERIAL"
+          },
+          {
+            "id": "4001",
+            "count": 120000,
+            "type": "GOLD"
+          }
+        ]
+      },
+      "module_upgrades": [
+        {
+          "equipLevel": 1,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 120,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 60,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "重量ランクが3以上の敵を攻撃時、攻撃力が<@ba.kw>115%</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 2,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 180,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 78,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "重量ランクが3以上の敵を攻撃時、攻撃力が<@ba.kw>115%</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "連続攻撃時、敵の防御力を最大55%まで無視できる（攻撃するたびに防御力無視の割合+11%）。8秒間攻撃せずにいると、効果がリセットされる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "鋭牙の如く",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate",
+                      "value": 0.11,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 8,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        },
+        {
+          "equipLevel": 3,
+          "attributeBlackboard": [
+            {
+              "key": "max_hp",
+              "value": 210,
+              "valueStr": null
+            },
+            {
+              "key": "atk",
+              "value": 90,
+              "valueStr": null
+            }
+          ],
+          "tokenAttributeBlackboard": {},
+          "parts": [
+            {
+              "target": "DISPLAY",
+              "isToken": false,
+              "talents": [],
+              "trait": [
+                {
+                  "additionalDescription": "重量ランクが3以上の敵を攻撃時、攻撃力が<@ba.kw>115%</>まで上昇",
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            },
+            {
+              "target": "TALENT_DATA_ONLY",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "連続攻撃時、敵の防御力を最大60%まで無視できる（攻撃するたびに防御力無視の割合+12%）。10秒間攻撃せずにいると効果がリセットされる",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "1",
+                  "name": "鋭牙の如く",
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "max_stack_cnt",
+                      "value": 5,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "def_penetrate",
+                      "value": 0.12,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "duration",
+                      "value": 10,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": false
+                }
+              ],
+              "trait": []
+            },
+            {
+              "target": "TALENT",
+              "isToken": false,
+              "talents": [
+                {
+                  "displayRangeId": false,
+                  "upgradeDescription": "",
+                  "talentIndex": 0,
+                  "unlockCondition": {
+                    "phase": "PHASE_2",
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": null,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.15,
+                      "valueStr": null
+                    },
+                    {
+                      "key": "value",
+                      "value": 3,
+                      "valueStr": null
+                    }
+                  ],
+                  "tokenKey": null,
+                  "isHideTalent": true
+                }
+              ],
+              "trait": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "voice_lines": [
@@ -1205,5 +1863,6 @@
       "level": 1
     }
   ],
+  "tokens": [],
   "patch_info": {}
 }
