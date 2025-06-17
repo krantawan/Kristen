@@ -23,11 +23,42 @@ export type OperatorSkill = {
   blackboard?: Array<{ key: string; value: number }>;
 };
 
+export type ModuleUpgrade = {
+  equipLevel: number;
+  attributeBlackboard: {
+    key: string;
+    value: number;
+  }[];
+};
+
 export type OperatorModule = {
-  uniEquipId?: string;
-  equipName?: string;
-  description?: string;
-  phases?: unknown[];
+  moduleId: string;
+  moduleName: string;
+  desc: string;
+  typeIcon?: string;
+  uniEquipIcon?: string;
+  typeName1?: string;
+  typeName2?: "X" | "Y" | "Z";
+  showEvolvePhase?: string;
+  unlockLevel?: number;
+  itemCost?: Record<string, ItemCost[]>;
+  statBonus?: ModuleStatBonus;
+  module_upgrades?: ModuleUpgrade[];
+};
+
+export type ItemCost = {
+  id: string;
+  count: number;
+  type: string;
+};
+
+export type ModuleStatBonus = {
+  [level: string]: {
+    maxHp?: number;
+    atk?: number;
+    def?: number;
+    [key: string]: number | undefined;
+  };
 };
 
 export type BuildingSkill = {
@@ -60,7 +91,7 @@ export type MetaInfo = {
   name: string;
   nationId?: string;
   appellation?: string;
-  tagList: [];
+  tagList: string[];
   illustrator?: string;
   voiceActor?: {
     en?: string;
@@ -92,6 +123,24 @@ export type MetaInfo = {
   }[];
 };
 
+export type PotentialBonus = {
+  type: string;
+  value: number;
+  buff?: {
+    attributes?: {
+      attributeModifiers?: {
+        attributeType: string;
+        value: number;
+      }[];
+    };
+  };
+};
+
+export type FavorKeyFrame = {
+  level: number;
+  data: Record<string, number>;
+};
+
 export type OperatorDetail = {
   id: string;
   skins: OperatorSkin[];
@@ -103,6 +152,8 @@ export type OperatorDetail = {
   patch_info: unknown;
   meta_info: MetaInfo;
   phases?: Phase[];
+  favorKeyFrames?: FavorKeyFrame[];
+  potentialRanks?: PotentialBonus[];
 };
 
 export type OperatorSummary = {

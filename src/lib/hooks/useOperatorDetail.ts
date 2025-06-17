@@ -5,6 +5,8 @@ import {
   BuildingSkill,
   MetaInfo,
   Phase,
+  FavorKeyFrame,
+  PotentialBonus,
 } from "@/types/operator";
 
 type Lang = "cn" | "en" | "jp";
@@ -20,6 +22,8 @@ export type OperatorDetail = {
   patch_info: unknown;
   meta_info: MetaInfo;
   phases?: Phase[];
+  favorKeyFrames?: FavorKeyFrame[];
+  potentialRanks?: PotentialBonus[];
 };
 
 export async function getOperatorDetail(
@@ -68,6 +72,13 @@ export async function getOperatorDetail(
     patch_info: primary?.patch_info ?? fallback.patch_info,
     meta_info: primary?.meta_info ?? fallback.meta_info,
     phases: primary?.phases ?? fallback.phases,
+    favorKeyFrames:
+      primary?.favorKeyFrames?.length && primary.favorKeyFrames.length > 0
+        ? primary.favorKeyFrames
+        : fallback.favorKeyFrames,
+    potentialRanks: primary?.potentialRanks?.length
+      ? primary.potentialRanks
+      : fallback.potentialRanks,
   };
 
   return merged;

@@ -8,10 +8,8 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/operator_detail/button";
 import { Card } from "@/components/ui/operator_detail/card";
 import { Badge } from "@/components/ui/operator_detail/badge";
-import { Slider } from "@/components/ui/operator_detail/slider";
 import { getOperatorAssetUrl } from "@/lib/getOperatorAssetUrl";
 import { getOperatorDetail } from "@/lib/hooks/useOperatorDetail";
-import AnimatedStat from "@/components/ui/operator_detail/AnimateStat";
 import type {
   OperatorDetail,
   OperatorSummary,
@@ -24,55 +22,10 @@ import {
 } from "@/app/components/operator/details/config";
 import { useTranslations } from "next-intl";
 import { OperatorHeader } from "./details/OperatorHeader";
-import {
-  Heart,
-  Shield,
-  Swords,
-  Zap,
-  Timer,
-  Blocks,
-  Diamond,
-  Wallet,
-} from "lucide-react";
 
-import rangeTable from "@/data/operator_detail/range_table.json";
-import OperatorRange from "@/components/ui/operator_detail/OperatorRange";
-import PromotionRequirements from "@/components/ui/operator_detail/PromotionRequirements";
-
-const labelMap: Record<string, { label: string; icon: React.ReactNode }> = {
-  maxHp: {
-    label: "Health",
-    icon: <Heart size={16} className="text-red-400" />,
-  },
-  atk: {
-    label: "Attack",
-    icon: <Swords size={16} className="text-orange-400" />,
-  },
-  def: {
-    label: "Defense",
-    icon: <Shield size={16} className="text-blue-400" />,
-  },
-  magicResistance: {
-    label: "Magic Res",
-    icon: <Diamond size={16} className="text-purple-400" />,
-  },
-  cost: {
-    label: "DP Cost",
-    icon: <Wallet size={16} className="text-yellow-400" />,
-  },
-  blockCnt: {
-    label: "Block",
-    icon: <Blocks size={16} className="text-green-400" />,
-  },
-  baseAttackTime: {
-    label: "Atk Interval",
-    icon: <Zap size={16} className="text-pink-400" />,
-  },
-  respawnTime: {
-    label: "Redeploy",
-    icon: <Timer size={16} className="text-gray-400" />,
-  },
-};
+import OperatorStats from "./details/OperatorStats";
+import OperatorProfile from "./details/OperatorProfile";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 // Memoized loading skeleton component
 const LoadingSkeleton = React.memo(() => (
@@ -157,50 +110,11 @@ export default function OperatorPageClient({
   // Phase selector
   const [selectedPhaseIndex, setSelectedPhaseIndex] = useState(0);
   const [selectedLevel, setSelectedLevel] = useState(1);
-  const currentPhase = opDetail?.phases?.[selectedPhaseIndex];
-  const evolveCost = currentPhase?.evolveCost ?? [];
-
-  const levelData = useMemo(() => {
-    if (!currentPhase || !selectedLevel) return {};
-
-    const keyframes = currentPhase.attributesKeyFrames ?? [];
-    const sorted = [...keyframes].sort((a, b) => a.level - b.level);
-
-    const lower = sorted.findLast((f) => f.level <= selectedLevel);
-    const upper = sorted.find((f) => f.level >= selectedLevel);
-
-    if (!lower || !upper) return {};
-
-    const percent =
-      lower.level === upper.level
-        ? 0
-        : (selectedLevel - lower.level) / (upper.level - lower.level);
-
-    const keys = Object.keys(lower.data);
-    const result: Record<string, number> = {};
-
-    keys.forEach((key) => {
-      const a = lower.data[key];
-      const b = upper.data[key];
-      if (typeof a === "number" && typeof b === "number") {
-        result[key] = parseFloat((a + (b - a) * percent).toFixed(2));
-      } else {
-        result[key] = a;
-      }
-    });
-
-    return result;
-  }, [currentPhase, selectedLevel]);
 
   // Skin selector
   const [selectedSkinIndex, setSelectedSkinIndex] = useState(0);
   const [fallback, setFallback] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
-  // Range
-  const rangeId = currentPhase?.rangeId;
-  const range = rangeId ? rangeTable[rangeId as keyof typeof rangeTable] : null;
-  const rangeGrid = range?.grids ?? [];
 
   const t = useTranslations("components.OperatorsPage");
 
@@ -220,8 +134,12 @@ export default function OperatorPageClient({
         if (isMounted && detail) {
           setOpDetail(detail);
           setSelectedSkinIndex(0);
-          setSelectedPhaseIndex(0);
-          setSelectedLevel(detail.phases?.[0]?.maxLevel ?? 1);
+          setSelectedPhaseIndex(
+            detail.phases?.length ? detail.phases.length - 1 : 0
+          );
+          setSelectedLevel(
+            detail.phases?.[detail.phases.length - 1]?.maxLevel ?? 1
+          );
         }
       } catch (error) {
         console.error("Failed to fetch operator detail:", error);
@@ -412,89 +330,90 @@ export default function OperatorPageClient({
                 ).toLowerCase()}.png`}
               />
               {/* Stat Section */}
-              <div className="p-4 space-y-3">
-                {/* Phase Select */}
-                <div className="flex items-center gap-2">
-                  {opDetail.phases?.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => {
-                        setSelectedPhaseIndex(idx);
-                        const maxLv = opDetail?.phases?.[idx]?.maxLevel ?? 1;
-                        setSelectedLevel(maxLv);
-                      }}
-                      className={cn(
-                        "px-3 py-1 text-sm border",
-                        idx === selectedPhaseIndex
-                          ? "bg-yellow-400 text-black font-semibold"
-                          : "bg-zinc-800 text-white"
-                      )}
-                    >
-                      E{idx}
-                    </button>
-                  ))}
-                </div>
+              <OperatorStats
+                opDetail={opDetail}
+                selectedPhaseIndex={selectedPhaseIndex}
+                setSelectedPhaseIndex={setSelectedPhaseIndex}
+                selectedLevel={selectedLevel}
+                setSelectedLevel={setSelectedLevel}
+              />
 
-                {/* Level Slider */}
-                <div className="flex items-center gap-2">
-                  <span className="text-sm font-medium">Lv</span>
-                  <Slider
-                    min={1}
-                    max={currentPhase?.maxLevel ?? 1}
-                    value={[selectedLevel]}
-                    onValueChange={([val]) => setSelectedLevel(val)}
-                    className="flex-1"
-                  />
-                  <span className="text-sm font-bold">
-                    {selectedLevel} / {currentPhase?.maxLevel ?? "?"}
-                  </span>
-                </div>
+              <div className="border-t dark:border-zinc-800">
+                <div className="w-full overflow-x-auto">
+                  <Tabs defaultValue="profile">
+                    <TabsList className="flex flex-wrap md:flex-nowrap gap-2 px-2">
+                      <TabsTrigger
+                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
+                        value="profile"
+                      >
+                        Profile
+                      </TabsTrigger>
+                      <TabsTrigger
+                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
+                        value="modules"
+                      >
+                        Modules
+                      </TabsTrigger>
+                      <TabsTrigger
+                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
+                        value="skills"
+                      >
+                        Skills
+                      </TabsTrigger>
+                      <TabsTrigger
+                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
+                        value="talents"
+                      >
+                        Talents
+                      </TabsTrigger>
+                      <TabsTrigger
+                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
+                        value="voice"
+                      >
+                        Voice
+                      </TabsTrigger>
+                      <TabsTrigger
+                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
+                        value="story"
+                      >
+                        Story
+                      </TabsTrigger>
+                    </TabsList>
 
-                {/* Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
-                  {Object.entries(labelMap).map(([key, { label, icon }]) => (
-                    <div
-                      key={key}
-                      className="flex flex-col bg-zinc-900 p-2 border border-zinc-700"
-                    >
-                      <div className="flex items-center gap-1 text-zinc-400">
-                        {icon}
-                        <span>{label}</span>
+                    <TabsContent value="profile">
+                      <OperatorProfile opDetail={opDetail} />
+                    </TabsContent>
+
+                    <TabsContent value="modules">
+                      <div className="text-sm text-zinc-400 h-200 p-4">
+                        Modules section coming soon...
                       </div>
-                      <span className="font-semibold text-white">
-                        <AnimatedStat
-                          value={levelData?.[key] ?? 0}
-                          fractionDigits={
-                            ["baseAttackTime", "respawnTime"].includes(key)
-                              ? 1
-                              : 0
-                          }
-                        />
-                        {["baseAttackTime", "respawnTime"].includes(key)
-                          ? "s"
-                          : ""}
-                      </span>
-                    </div>
-                  ))}
+                    </TabsContent>
+
+                    <TabsContent value="skills">
+                      <div className="text-sm text-zinc-400 h-200 p-4">
+                        Skills section coming soon...
+                      </div>
+                    </TabsContent>
+
+                    <TabsContent value="talents">
+                      <div className="text-sm text-zinc-400 h-200 p-4">
+                        Talents section coming soon...
+                      </div>
+                    </TabsContent>
+                    <TabsContent value="voice">
+                      <div className="text-sm text-zinc-400 h-200 p-4">
+                        Voice section coming soon...
+                      </div>
+                    </TabsContent>
+
+                    <TabsContent value="story">
+                      <div className="text-sm text-zinc-400 h-200 p-4">
+                        Story section coming soon...
+                      </div>
+                    </TabsContent>
+                  </Tabs>
                 </div>
-
-                <div className="flex flex-col md:flex-row gap-4 items-start">
-                  {/* Range */}
-                  <div className="shrink-0 pr-2">
-                    <OperatorRange grids={rangeGrid} />
-                  </div>
-
-                  {/* Promotion Requirements */}
-                  <PromotionRequirements
-                    items={evolveCost}
-                    rarity={opDetail.meta_info.rarity}
-                    phase={selectedPhaseIndex}
-                  />
-                </div>
-              </div>
-
-              <div className="border-t dark:border-zinc-800 p-4">
-                Coming Soon...
               </div>
             </Card>
           </div>
