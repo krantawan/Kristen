@@ -93,7 +93,7 @@ export async function generateMetadata({
     description: `View detailed information about ${operator.name}, including stats, skills, and skins.`,
     openGraph: {
       title: `${operator.name} - Arknights Operator`,
-      description: `View detailed information about ${operator.name}`,
+      description: `${operator.itemUsage}`,
       url: `https://kristen-lab.vercel.app/operators/${slug}`,
       siteName: "Kristen Arknights DB",
       images: [
