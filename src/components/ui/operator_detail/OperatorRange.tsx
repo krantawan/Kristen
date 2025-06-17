@@ -14,10 +14,10 @@ const OperatorRange: React.FC<OperatorRangeProps> = ({ grids }) => {
   const rows = grids.map((g) => g.row);
   const cols = grids.map((g) => g.col);
 
-  const minRow = Math.min(...rows, 0);
-  const maxRow = Math.max(...rows, 0);
-  const minCol = Math.min(...cols, 0);
-  const maxCol = Math.max(...cols, 0);
+  const minRow = Math.min(...rows, -1);
+  const maxRow = Math.max(...rows, 1);
+  const minCol = Math.min(...cols, -1);
+  const maxCol = Math.max(...cols, 1);
 
   const height = maxRow - minRow + 1;
   const width = maxCol - minCol + 1;

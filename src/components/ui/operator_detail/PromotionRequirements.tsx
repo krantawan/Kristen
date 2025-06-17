@@ -5,7 +5,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/operator_detail/tooltip";
+} from "@/components/ui/tooltip";
 
 export type MaterialItem = {
   id: string;
