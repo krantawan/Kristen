@@ -99,15 +99,15 @@ export async function generateMetadata({
       images: [
         {
           url: `https://kristen-lab.vercel.app/operators/${operator.id}.png`,
-          width: 1200,
-          height: 630,
+          width: 256,
+          height: 256,
           alt: operator.name,
         },
       ],
       type: "website",
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
     },
   };
 }
