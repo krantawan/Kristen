@@ -72,11 +72,7 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <MobileMenu
-        isOpen={isMobileMenuOpen}
-        toggleTheme={toggleTheme}
-        isDarkMode={isDarkMode}
-      />
+      <MobileMenu isOpen={isMobileMenuOpen} />
     </header>
   );
 }
