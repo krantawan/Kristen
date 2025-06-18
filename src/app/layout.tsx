@@ -44,16 +44,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       : cantataOne.variable;
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={`${fontClass} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <html lang={locale} suppressHydrationWarning>
+        <body className={`${fontClass} antialiased`}>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <BackgroundRotator />
             {children}
             <Analytics />
           </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }

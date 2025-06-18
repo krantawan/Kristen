@@ -8,14 +8,11 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 
-type Props = {
-  isDarkMode: boolean;
-  toggleTheme: () => void;
-};
-
-export default function ThemeToggle({ isDarkMode, toggleTheme }: Props) {
+export default function ThemeToggle() {
   const t = useTranslations("header.menu");
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -24,11 +21,13 @@ export default function ThemeToggle({ isDarkMode, toggleTheme }: Props) {
 
   if (!mounted) return null;
 
+  const isDarkMode = resolvedTheme === "dark";
+
   return (
     <Tooltip>
       <TooltipTrigger asChild>
         <button
-          onClick={toggleTheme}
+          onClick={() => setTheme(isDarkMode ? "light" : "dark")}
           aria-label="Toggle dark mode"
           className="p-2 text-gray-300 hover:text-[#FACC15] transition-colors"
         >
