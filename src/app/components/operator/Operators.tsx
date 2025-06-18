@@ -1,9 +1,5 @@
 "use client";
 
-import operatorsData from "@/data/operators.json";
-import Image from "next/image";
-import Link from "next/link";
-import { useState, useMemo, useEffect } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import {
@@ -30,40 +26,36 @@ import {
   limitedOperatorIds,
   OperatorRarity,
 } from "@/app/components/operator/details/config";
+import Image from "next/image";
+import Link from "next/link";
+import { useState, useMemo, useEffect } from "react";
 
-function toSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^a-z0-9\-]/g, "");
-}
+type OperatorSummary = {
+  id: string;
+  name: string;
+  name_jp?: string;
+  name_cn?: string;
+  slug: string;
+  rarity: number;
+  profession: string;
+  subProfession: string;
+  isNotObtainable?: boolean;
+  source: "global" | "cn-only";
+};
 
-export default function OperatorsGridRedesigned() {
+export default function OperatorsGrid({
+  operators,
+}: {
+  operators: OperatorSummary[];
+}) {
   const t = useTranslations("components.OperatorsPage");
   const locale = useLocale();
 
-  useEffect(() => {
-    const savedSpoilerSetting = localStorage.getItem("showCnOnlySpoiler");
-    if (savedSpoilerSetting !== null) {
-      setShowCnOnlySpoiler(savedSpoilerSetting === "true");
-    }
-  }, []);
-
-  const operators = operatorsData as {
-    id: string;
-    name: string;
-    name_cn: string;
-    name_jp: string;
-    rarity: number;
-    image: string;
-    position: string;
-    profession: string;
-    subProfession: string;
-    tagList: string[];
-    nationId: string;
-    obtainable: boolean;
-    source: string;
-  }[];
+  const displayName = (character: OperatorSummary) => {
+    if (locale === "ja" && character.name_jp) return character.name_jp;
+    if (locale === "zh" && character.name_cn) return character.name_cn;
+    return character.name;
+  };
 
   // Main filters (visible in header)
   const [searchTerm, setSearchTerm] = useState("");
@@ -72,7 +64,6 @@ export default function OperatorsGridRedesigned() {
   const [showCnOnlySpoiler, setShowCnOnlySpoiler] = useState(false);
 
   // Advanced filters (in modal)
-  const [positionFilter, setPositionFilter] = useState("all");
   const [rarityFilter, setRarityFilter] = useState("all");
   const [limitedFilter, setLimitedFilter] = useState("all");
   const [sortOption, setSortOption] = useState("rarity-desc");
@@ -84,6 +75,13 @@ export default function OperatorsGridRedesigned() {
 
   const itemsPerPage = 50;
   const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    const savedSpoilerSetting = localStorage.getItem("showCnOnlySpoiler");
+    if (savedSpoilerSetting !== null) {
+      setShowCnOnlySpoiler(savedSpoilerSetting === "true");
+    }
+  }, []);
 
   const filteredSubProfessions = useMemo(() => {
     if (professionFilter === "all") {
@@ -110,9 +108,6 @@ export default function OperatorsGridRedesigned() {
       subProfessionFilter === "all" ||
       operator.subProfession === subProfessionFilter;
 
-    const matchesPosition =
-      positionFilter === "all" || operator.position === positionFilter;
-
     const matchesRarity =
       rarityFilter === "all" || operator.rarity.toString() === rarityFilter;
 
@@ -125,7 +120,6 @@ export default function OperatorsGridRedesigned() {
       matchesSearch &&
       matchesProfession &&
       matchesSubProfession &&
-      matchesPosition &&
       matchesRarity &&
       matchesLimited
     );
@@ -154,7 +148,6 @@ export default function OperatorsGridRedesigned() {
   );
 
   const professions = Array.from(new Set(operators.map((op) => op.profession)));
-  const positions = Array.from(new Set(operators.map((op) => op.position)));
   const rarities = Array.from(
     new Set(operators.map((op) => op.rarity.toString()))
   ).sort((a, b) => Number(a) - Number(b));
@@ -163,7 +156,6 @@ export default function OperatorsGridRedesigned() {
     setSearchTerm("");
     setProfessionFilter("all");
     setSubProfessionFilter("all");
-    setPositionFilter("all");
     setRarityFilter("all");
     setLimitedFilter("all");
     setSortOption("rarity-desc");
@@ -174,7 +166,6 @@ export default function OperatorsGridRedesigned() {
     searchTerm !== "" ||
     professionFilter !== "all" ||
     subProfessionFilter !== "all" ||
-    positionFilter !== "all" ||
     rarityFilter !== "all" ||
     limitedFilter !== "all" ||
     sortOption !== "rarity-desc";
@@ -281,12 +272,13 @@ export default function OperatorsGridRedesigned() {
                   onCheckedChange={(checked) => {
                     const newValue = !!checked;
                     setShowCnOnlySpoiler(newValue);
-                    localStorage.setItem(
-                      "showCnOnlySpoiler",
-                      newValue.toString()
-                    );
+                    if (typeof window !== "undefined") {
+                      localStorage.setItem(
+                        "showCnOnlySpoiler",
+                        newValue.toString()
+                      );
+                    }
                   }}
-                  className="data-[state=checked]:border-blue-600 data-[state=checked]:bg-blue-600 data-[state=checked]:text-white data-[state=checked]:[&>svg]:text-white dark:data-[state=checked]:border-blue-700 dark:data-[state=checked]:bg-blue-700 dark:data-[state=checked]:[&>svg]:text-white"
                 />
                 <span className="text-sm font-medium text-gray-900 dark:text-gray-300">
                   {t("filter.cn_spoiler")}
@@ -320,34 +312,6 @@ export default function OperatorsGridRedesigned() {
                     </DialogTitle>
                   </DialogHeader>
                   <div className="space-y-4">
-                    {/* Position Filter */}
-                    <div className="space-y-2">
-                      <Label>{t("filter.positions.title")}</Label>
-                      <Select
-                        value={positionFilter}
-                        onValueChange={(value) => {
-                          setPositionFilter(value);
-                          setCurrentPage(1);
-                        }}
-                      >
-                        <SelectTrigger>
-                          <SelectValue
-                            placeholder={t("filter.positions.title")}
-                          />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="all">
-                            {t("filter.positions.all_position")}
-                          </SelectItem>
-                          {positions.map((pos) => (
-                            <SelectItem key={pos} value={pos}>
-                              {t("filter.positions." + pos)}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
                     {/* Rarity Filter */}
                     <div className="space-y-2">
                       <Label>{t("filter.rarity.title")}</Label>
@@ -599,34 +563,6 @@ export default function OperatorsGridRedesigned() {
                   </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4">
-                  {/* Position Filter */}
-                  <div className="space-y-2">
-                    <Label>{t("filter.positions.title")}</Label>
-                    <Select
-                      value={positionFilter}
-                      onValueChange={(value) => {
-                        setPositionFilter(value);
-                        setCurrentPage(1);
-                      }}
-                    >
-                      <SelectTrigger>
-                        <SelectValue
-                          placeholder={t("filter.positions.title")}
-                        />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="all">
-                          {t("filter.positions.all_position")}
-                        </SelectItem>
-                        {positions.map((pos) => (
-                          <SelectItem key={pos} value={pos}>
-                            {t("filter.positions." + pos)}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
                   {/* Rarity Filter */}
                   <div className="space-y-2">
                     <Label>{t("filter.rarity.title")}</Label>
@@ -740,7 +676,7 @@ export default function OperatorsGridRedesigned() {
           {paginatedOperators.map((character) => (
             <Link
               key={character.id}
-              href={`/operators/${toSlug(character.name)}`}
+              href={`/operators/${character.slug}`}
               className={`relative group block hover:scale-105 transition-transform duration-300 ${
                 character.source === "cn-only" && !showCnOnlySpoiler
                   ? "blur-xs"
@@ -786,8 +722,8 @@ export default function OperatorsGridRedesigned() {
                   />
                   <div className="text-white text-center text-sm leading-tight font-semibold">
                     {(() => {
-                      const name =
-                        locale === "ja" ? character.name_jp : character.name;
+                      const name = displayName(character);
+
                       if (name.includes(" the ")) {
                         const [before, after] = name.split(" the ");
                         return (
@@ -798,6 +734,7 @@ export default function OperatorsGridRedesigned() {
                           </>
                         );
                       }
+
                       return name;
                     })()}
                   </div>
@@ -837,7 +774,22 @@ export default function OperatorsGridRedesigned() {
 
                 <div className="lg:hidden absolute bottom-1 left-1 right-1 z-20 px-2 space-y-1 text-center">
                   <div className="text-white font-bold text-sm leading-tight truncate">
-                    {locale === "ja" ? character.name_jp : character.name}
+                    {(() => {
+                      const name = displayName(character);
+
+                      if (name.includes(" the ")) {
+                        const [before, after] = name.split(" the ");
+                        return (
+                          <>
+                            {before}
+                            <br />
+                            the {after}
+                          </>
+                        );
+                      }
+
+                      return name;
+                    })()}
                   </div>
                   <div className="text-white text-xs bg-black/50 rounded px-1 py-0.5">
                     {character.subProfession}
