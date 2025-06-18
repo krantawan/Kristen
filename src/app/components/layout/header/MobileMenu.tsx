@@ -1,5 +1,3 @@
-// components/ui/MobileMenu.tsx
-
 "use client";
 
 import Link from "next/link";
@@ -8,17 +6,7 @@ import LanguageDropdown from "./LanguageDropdown";
 import ThemeToggle from "./ThemeToggle";
 import { useTranslations } from "next-intl";
 
-type MobileMenuProps = {
-  isOpen: boolean;
-  toggleTheme: () => void;
-  isDarkMode: boolean;
-};
-
-export default function MobileMenu({
-  isOpen,
-  toggleTheme,
-  isDarkMode,
-}: MobileMenuProps) {
+export default function MobileMenu({ isOpen }: { isOpen: boolean }) {
   const t = useTranslations("header.menu");
   if (!isOpen) return null;
   return (
