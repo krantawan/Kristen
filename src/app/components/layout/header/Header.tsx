@@ -51,7 +51,7 @@ export default function Header() {
             <LanguageDropdown />
           </div>
           <div className="h-8 flex items-center justify-center border border-[#333] rounded px-1">
-            <ThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+            <ThemeToggle />
           </div>
         </div>
 
