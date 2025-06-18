@@ -4,8 +4,10 @@ import path from "path";
 export type OperatorSummary = {
   id: string;
   name: string;
-  name_jp?: string;
+  appellation?: string;
+  name_en?: string;
   name_cn?: string;
+  name_jp?: string;
   slug: string;
   rarity: number;
   profession: string;
@@ -48,12 +50,13 @@ export async function loadOperatorSummaries(
 
       summaries.push({
         id: json.id,
-        name,
+        name: meta.name ?? "",
+        appellation: meta.appellation?.trim() ?? "",
         slug,
         rarity: meta.rarity ?? 0,
         profession: meta.profession ?? "",
         subProfession: meta.subProfessionId ?? "",
-        isNotObtainable: meta.isNotObtainable ?? false,
+        isNotObtainable: !isObtainable,
         source: "global",
       });
     } catch (error) {
@@ -65,22 +68,33 @@ export async function loadOperatorSummaries(
 }
 
 export async function getAllOperatorsWithSource(): Promise<OperatorSummary[]> {
-  const cnOps = await loadOperatorSummaries("cn", true);
-  const jpOps = await loadOperatorSummaries("jp", true);
+  const cnOps = await loadOperatorSummaries("cn", false);
+  const jpOps = await loadOperatorSummaries("jp", false);
   const enOps = await loadOperatorSummaries("en", false);
 
-  const cnMap = new Map(cnOps.map((op) => [op.id, op.name]));
-  const jpMap = new Map(jpOps.map((op) => [op.id, op.name]));
-  const enMap = new Map(enOps.map((op) => [op.id, op.name]));
+  const cnNameMap = new Map(cnOps.map((op) => [op.id, op.name]));
+  const jpNameMap = new Map(jpOps.map((op) => [op.id, op.name]));
+  const enAppellationMap = new Map(
+    enOps.map((op) => [op.id, op.appellation || op.name])
+  );
+
   const enIds = new Set(enOps.map((op) => op.id));
 
-  const combined = cnOps.map((op) => ({
-    ...op,
-    name: enMap.get(op.id) ?? op.name,
-    name_cn: cnMap.get(op.id) ?? "",
-    name_jp: jpMap.get(op.id) ?? "",
-    source: enIds.has(op.id) ? ("global" as const) : ("cn-only" as const),
-  }));
+  const combined = cnOps.map((op) => {
+    const id = op.id;
+    const name_en = enAppellationMap.get(id) ?? "";
+    const name_cn = cnNameMap.get(id) ?? "";
+    const name_jp = jpNameMap.get(id) ?? "";
+
+    return {
+      ...op,
+      name: name_en || name_cn || name_jp || op.name,
+      name_en,
+      name_cn,
+      name_jp,
+      source: enIds.has(id) ? ("global" as const) : ("cn-only" as const),
+    };
+  });
 
   return combined;
 }

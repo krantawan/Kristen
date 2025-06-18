@@ -1,46 +1,18 @@
 "use client";
 
-import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function ThemeToggle() {
-  const t = useTranslations("header.menu");
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
-  const isDarkMode = resolvedTheme === "dark";
-
   return (
-    <Tooltip>
-      <TooltipTrigger asChild>
-        <button
-          onClick={() => setTheme(isDarkMode ? "light" : "dark")}
-          aria-label="Toggle dark mode"
-          className="p-2 text-gray-300 hover:text-[#FACC15] transition-colors"
-        >
-          {isDarkMode ? (
-            <Moon className="h-4 w-4" />
-          ) : (
-            <Sun className="h-4 w-4" />
-          )}
-        </button>
-      </TooltipTrigger>
-      <TooltipContent side="bottom">
-        {isDarkMode ? t("switch_to_light_mode") : t("switch_to_dark_mode")}
-      </TooltipContent>
-    </Tooltip>
+    <Link href="https://ko-fi.com/kranchww_" target="_blank">
+      <Image
+        src="/web-ui/kofi_symbol.png"
+        alt="Ko-fi"
+        width={32}
+        height={32}
+        className="p-1 hover:scale-130 transition-all duration-300"
+      />
+    </Link>
   );
 }

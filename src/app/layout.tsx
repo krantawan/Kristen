@@ -2,7 +2,6 @@ import { NextIntlClientProvider, useMessages, useLocale } from "next-intl";
 import { ReactNode } from "react";
 import { Prompt, Noto_Sans_JP, Cantata_One } from "next/font/google";
 import "@/app/globals.css";
-import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import BackgroundRotator from "./components/layout/BackgroundRotator";
 
@@ -44,16 +43,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       : cantataOne.variable;
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <html lang={locale} suppressHydrationWarning>
-        <body className={`${fontClass} antialiased`}>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <BackgroundRotator />
-            {children}
-            <Analytics />
-          </NextIntlClientProvider>
-        </body>
-      </html>
-    </ThemeProvider>
+    <html lang={locale} suppressHydrationWarning className="dark">
+      <body className={`${fontClass} antialiased`}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <BackgroundRotator />
+          {children}
+          <Analytics />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

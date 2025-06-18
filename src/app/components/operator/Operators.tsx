@@ -33,8 +33,10 @@ import { useState, useMemo, useEffect } from "react";
 type OperatorSummary = {
   id: string;
   name: string;
+  appellation?: string;
   name_jp?: string;
   name_cn?: string;
+  name_en?: string;
   slug: string;
   rarity: number;
   profession: string;
@@ -48,13 +50,15 @@ export default function OperatorsGrid({
 }: {
   operators: OperatorSummary[];
 }) {
+  //console.log("Debug Operators:", operators);
   const t = useTranslations("components.OperatorsPage");
   const locale = useLocale();
 
-  const displayName = (character: OperatorSummary) => {
-    if (locale === "ja" && character.name_jp) return character.name_jp;
-    if (locale === "zh" && character.name_cn) return character.name_cn;
-    return character.name;
+  const displayName = (op: OperatorSummary) => {
+    if (locale === "zh" && op.name_cn) return op.name_cn;
+    if (locale === "ja" && op.name_jp) return op.name_jp;
+    if (locale === "en" && op.name_en) return op.name_en;
+    return op.appellation;
   };
 
   // Main filters (visible in header)
@@ -73,7 +77,7 @@ export default function OperatorsGrid({
   const [isFilterModalOpenDesktop, setIsFilterModalOpenDesktop] =
     useState(false);
 
-  const itemsPerPage = 50;
+  const itemsPerPage = 49;
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -724,7 +728,7 @@ export default function OperatorsGrid({
                     {(() => {
                       const name = displayName(character);
 
-                      if (name.includes(" the ")) {
+                      if (name && name.includes(" the ")) {
                         const [before, after] = name.split(" the ");
                         return (
                           <>
@@ -777,7 +781,7 @@ export default function OperatorsGrid({
                     {(() => {
                       const name = displayName(character);
 
-                      if (name.includes(" the ")) {
+                      if (name && name.includes(" the ")) {
                         const [before, after] = name.split(" the ");
                         return (
                           <>
