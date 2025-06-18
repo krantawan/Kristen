@@ -86,7 +86,7 @@ export default function MobileMenu({
 
       <div className="flex justify-between items-center pt-4 border-t border-[#333]">
         <LanguageDropdown />
-        <ThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+        <ThemeToggle />
       </div>
     </div>
   );
