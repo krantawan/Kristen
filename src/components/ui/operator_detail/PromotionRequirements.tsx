@@ -9,8 +9,8 @@ import {
 
 export type MaterialItem = {
   id: string;
-  name: string;
-  iconId: string;
+  name?: string;
+  iconId?: string;
   count: number;
 };
 
@@ -42,6 +42,24 @@ const getLmdCost = (rarity: number = 0, phase: number = 0): number => {
   return costPair[phase - 1] ?? 0;
 };
 
+const itemMap: Record<string, { name: string; iconId: string }> = {
+  "4001": { name: "LMD", iconId: "GOLD" },
+  mod_unlock_token: { name: "Module Data Block", iconId: "mod_unlock_token" },
+  mod_update_token_1: {
+    name: "Update Device (T1)",
+    iconId: "mod_update_token_1",
+  },
+  mod_update_token_2: {
+    name: "Update Device (T2)",
+    iconId: "mod_update_token_2",
+  },
+  "30135": { name: "D32 Steel", iconId: "MTL_SL_DS" },
+  "30145": { name: "Polyester Pack", iconId: "MTL_SL_RUSH3" },
+  "30115": { name: "Polymerization Preparation", iconId: "MTL_SL_PP" },
+  "30125": { name: "Bipolar Nanoflake", iconId: "MTL_SL_BN" },
+  "30155": { name: "Nucleic Crystal Sinter", iconId: "MTL_SL_SHJ" },
+};
+
 const PromotionRequirements: React.FC<PromotionRequirementProps> = ({
   items,
   title = "Promotion Requirements",
@@ -49,18 +67,25 @@ const PromotionRequirements: React.FC<PromotionRequirementProps> = ({
   phase,
 }) => {
   const lmd = getLmdCost(rarity, phase);
-  const fullItems = lmd
-    ? [{ id: "4001", name: "LMD", iconId: "GOLD", count: lmd }, ...items]
-    : items;
+  const baseItems = lmd ? [{ id: "4001", count: lmd }, ...items] : items;
+
+  const fullItems = baseItems.map((item) => {
+    const mapped = itemMap[item.id];
+    return {
+      ...item,
+      name: mapped?.name ?? item.name ?? item.id,
+      iconId: mapped?.iconId ?? item.iconId ?? item.id,
+    };
+  });
 
   return (
     <TooltipProvider>
       <div className="flex flex-col">
         <h3 className="text-sm font-semibold text-zinc-300 mb-1">{title}</h3>
         {fullItems.length > 0 ? (
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap gap-2">
             {fullItems.map((mat, idx) => (
-              <Tooltip key={idx}>
+              <Tooltip key={mat.id + "-" + idx}>
                 <TooltipTrigger asChild>
                   <div className="flex flex-col items-center relative text-center">
                     <Image

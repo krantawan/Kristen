@@ -23,14 +23,6 @@ export type OperatorSkill = {
   blackboard?: Array<{ key: string; value: number }>;
 };
 
-export type ModuleUpgrade = {
-  equipLevel: number;
-  attributeBlackboard: {
-    key: string;
-    value: number;
-  }[];
-};
-
 export type OperatorModule = {
   moduleId: string;
   moduleName: string;
@@ -38,18 +30,68 @@ export type OperatorModule = {
   typeIcon?: string;
   uniEquipIcon?: string;
   typeName1?: string;
-  typeName2?: "X" | "Y" | "Z";
+  typeName2?: "X" | "Y" | "Z" | "A" | "B" | "C";
   showEvolvePhase?: string;
   unlockLevel?: number;
   itemCost?: Record<string, ItemCost[]>;
   statBonus?: ModuleStatBonus;
   module_upgrades?: ModuleUpgrade[];
+  missionList?: ModuleMission[];
 };
+
+export type ModuleMission = {
+  missionId: string;
+  description: string;
+};
+
+export type ModuleUpgrade = {
+  equipLevel: number;
+  attributeBlackboard: {
+    key: string;
+    value: number;
+  }[];
+  parts: ModuleUpgradePart[];
+  itemCost?: Record<string, ItemCost[]>;
+  unlockCondition?: {
+    phase: string;
+    level: number;
+  };
+};
+
+export type ModuleUpgradePart = {
+  target: string;
+  isToken: boolean;
+  trait?: ModuleTrait[];
+  talents?: ModuleTalent[];
+};
+
+export type ModuleTrait = {
+  additionalDescription: string;
+  requiredPotentialRank?: number;
+  overrideDescription?: string;
+  blackboard?: {
+    key: string;
+    value: number;
+  }[];
+};
+
+export type ModuleTalent = {
+  talentIndex: number;
+  name?: string;
+  upgradeDescription?: string;
+  requiredPotentialRank: number;
+  blackboard?: {
+    key: string;
+    value: number;
+  }[];
+};
+
+export type ItemType = "MATERIAL" | "GOLD";
 
 export type ItemCost = {
   id: string;
   count: number;
-  type: string;
+  type: ItemType;
 };
 
 export type ModuleStatBonus = {

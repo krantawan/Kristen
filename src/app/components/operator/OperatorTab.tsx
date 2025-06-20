@@ -3,6 +3,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import OperatorProfile from "./details/OperatorProfile";
 import type { OperatorDetail } from "@/types/operator";
+import OperatorModules from "./details/OperatorModules";
 
 export default function OperatorTabs({
   opDetail,
@@ -37,9 +38,7 @@ export default function OperatorTabs({
           </TabsContent>
 
           <TabsContent value="modules">
-            <div className="text-sm text-zinc-400 h-200 p-4">
-              Modules section coming soon...
-            </div>
+            <OperatorModules modules={opDetail.modules} />
           </TabsContent>
 
           <TabsContent value="skills">

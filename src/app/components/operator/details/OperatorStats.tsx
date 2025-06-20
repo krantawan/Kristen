@@ -6,16 +6,7 @@ import AnimatedStat from "@/components/ui/operator_detail/AnimateStat";
 import PromotionRequirements from "@/components/ui/operator_detail/PromotionRequirements";
 import OperatorRange from "@/components/ui/operator_detail/OperatorRange";
 import rangeTable from "@/data/operator_detail/range_table.json";
-import {
-  Heart,
-  Shield,
-  Swords,
-  Zap,
-  Timer,
-  Blocks,
-  Diamond,
-  Wallet,
-} from "lucide-react";
+
 import type { OperatorDetail } from "@/types/operator";
 import { cn } from "@/lib/utils";
 import {
@@ -31,41 +22,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-const labelMap: Record<string, { label: string; icon: React.ReactNode }> = {
-  maxHp: {
-    label: "Health",
-    icon: <Heart size={16} className="text-red-400" />,
-  },
-  atk: {
-    label: "Attack",
-    icon: <Swords size={16} className="text-orange-400" />,
-  },
-  def: {
-    label: "Defense",
-    icon: <Shield size={16} className="text-blue-400" />,
-  },
-  magicResistance: {
-    label: "Magic Res",
-    icon: <Diamond size={16} className="text-purple-400" />,
-  },
-  cost: {
-    label: "DP Cost",
-    icon: <Wallet size={16} className="text-yellow-400" />,
-  },
-  blockCnt: {
-    label: "Block",
-    icon: <Blocks size={16} className="text-green-400" />,
-  },
-  baseAttackTime: {
-    label: "Atk Interval",
-    icon: <Zap size={16} className="text-pink-400" />,
-  },
-  respawnTime: {
-    label: "Redeploy",
-    icon: <Timer size={16} className="text-gray-400" />,
-  },
-};
+import { labelMap } from "@/components/ui/operator_detail/stat-icon";
 
 type Props = {
   opDetail: OperatorDetail;
@@ -120,23 +77,29 @@ export default function OperatorStats({
   const range = rangeId ? rangeTable[rangeId as keyof typeof rangeTable] : null;
   const rangeGrid = range?.grids ?? [];
 
-  const validModules = useMemo(
-    () =>
-      opDetail.modules.filter((m) =>
-        ["X", "Y", "Z"].includes(m.typeName2 ?? "")
-      ),
-    [opDetail.modules]
+  const validModules = useMemo(() => {
+    return opDetail.modules.filter((m) => !!m.typeName2);
+  }, [opDetail.modules]);
+
+  const moduleTypes: (string | null)[] = useMemo(() => {
+    const types = Array.from(
+      new Set(validModules.map((m) => m.typeName2))
+    ).filter(Boolean) as string[];
+    return [null, ...types];
+  }, [validModules]);
+
+  const [selectedModuleType, setSelectedModuleType] = useState<string | null>(
+    () => {
+      return moduleTypes[0] ?? null;
+    }
   );
 
-  const [selectedModuleType, setSelectedModuleType] = useState<
-    "X" | "Y" | "Z" | null
-  >(validModules[0]?.typeName2 as "X" | "Y" | "Z" | null);
   const [selectedModuleLevel, setSelectedModuleLevel] = useState<number>(1);
 
-  const selectedModule = useMemo(
-    () => validModules.find((m) => m.typeName2 === selectedModuleType),
-    [validModules, selectedModuleType]
-  );
+  const selectedModule = useMemo(() => {
+    if (!selectedModuleType) return null;
+    return validModules.find((m) => m.typeName2 === selectedModuleType);
+  }, [validModules, selectedModuleType]);
 
   const moduleBonus = useMemo(() => {
     const upgrades = selectedModule?.module_upgrades ?? [];
@@ -149,7 +112,6 @@ export default function OperatorStats({
       const key = entry.key;
       const val = entry.value;
       if (typeof key === "string" && typeof val === "number") {
-        // แปลงชื่อ key ให้ match กับ key ใน labelMap
         if (key === "max_hp") bonus["maxHp"] = (bonus["maxHp"] ?? 0) + val;
         else if (key === "atk") bonus["atk"] = (bonus["atk"] ?? 0) + val;
         else if (key === "def") bonus["def"] = (bonus["def"] ?? 0) + val;
@@ -274,37 +236,44 @@ export default function OperatorStats({
       <div className="flex flex-wrap gap-3 items-center border border-zinc-700 p-3 justify-between">
         <div className="flex items-center gap-2">
           <label className="text-sm font-semibold text-white">Module</label>
-          {validModules.map((mod) => (
+          {["None", ...validModules.map((mod) => mod.typeName2)].map((type) => (
             <button
-              key={mod.typeName2}
+              key={type}
               onClick={() =>
-                setSelectedModuleType(mod.typeName2 as "X" | "Y" | "Z")
+                setSelectedModuleType(
+                  type === "None" ? null : (type as "X" | "Y" | "Z")
+                )
               }
               className={cn(
                 "px-3 py-1.5 text-sm border",
-                selectedModuleType === mod.typeName2
+                selectedModuleType === type ||
+                  (selectedModuleType === null && type === "None")
                   ? "bg-yellow-500 text-black"
                   : "bg-zinc-700 text-white hover:bg-zinc-600"
               )}
             >
-              {mod.typeName2}
+              {type === "None" ? "No Module" : type}
             </button>
           ))}
-          <span className="text-sm font-semibold text-white">:</span>
-          {[1, 2, 3].map((lvl) => (
-            <button
-              key={lvl}
-              onClick={() => setSelectedModuleLevel(lvl)}
-              className={cn(
-                "px-3 py-1.5 text-sm border",
-                selectedModuleLevel === lvl
-                  ? "bg-yellow-400 text-black"
-                  : "bg-zinc-700 text-white hover:bg-zinc-600"
-              )}
-            >
-              {lvl}
-            </button>
-          ))}
+          {selectedModule && (
+            <>
+              <span className="text-sm font-semibold text-white">:</span>
+              {[1, 2, 3].map((lvl) => (
+                <button
+                  key={lvl}
+                  onClick={() => setSelectedModuleLevel(lvl)}
+                  className={cn(
+                    "px-3 py-1.5 text-sm border",
+                    selectedModuleLevel === lvl
+                      ? "bg-yellow-400 text-black"
+                      : "bg-zinc-700 text-white hover:bg-zinc-600"
+                  )}
+                >
+                  {lvl}
+                </button>
+              ))}
+            </>
+          )}
         </div>
 
         <div className="flex items-center gap-2">

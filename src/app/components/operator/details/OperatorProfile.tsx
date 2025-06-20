@@ -54,8 +54,8 @@ export default function OperatorProfile({
           "อัตราการหลอมรวมกับออริจิเนียม",
         ],
         dynamicClass: (match: string) => {
-          const numberMatch = match.match(/(?:】|\])\s*([\d.]+)%?/);
-          const percent = numberMatch ? parseFloat(numberMatch[1]) : null;
+          const numberMatch = match.match(/[\d.]+/);
+          const percent = numberMatch ? parseFloat(numberMatch[0]) : null;
 
           if (percent !== null) {
             return percent > 0
@@ -77,17 +77,22 @@ export default function OperatorProfile({
       },
     ];
 
-    const regex = new RegExp(
+    // Fixed regex to handle spaces between numbers and units
+    const labelRegex = new RegExp(
       `(\\[?【?(?:${patterns
         .flatMap((p) => p.labels)
-        .join("|")})】?\\]?[^\\n]*)`,
+        .join(
+          "|"
+        )})】?\\]?\\s*[\\d.]+\\s*(?:u|μ)?\\s*\\/\\s*L|\\[?【?(?:${patterns
+        .flatMap((p) => p.labels)
+        .join("|")})】?\\]?\\s*[\\d.]+\\s*%)`,
       "gi"
     );
 
     const parts: React.ReactNode[] = [];
     let lastIndex = 0;
 
-    for (const match of text.matchAll(regex)) {
+    for (const match of text.matchAll(labelRegex)) {
       const fullMatch = match[0];
       const index = match.index ?? 0;
 

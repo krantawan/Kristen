@@ -66,6 +66,7 @@ const OperatorFactionImage = {
     "bg-[url('/assets/faction/Lungmen Guard Department.webp')]",
   Blacksteel: "bg-[url('/assets/faction/blacksteel.png')]",
 };
+
 export {
   limitedOperatorIds,
   OperatorRarity,
