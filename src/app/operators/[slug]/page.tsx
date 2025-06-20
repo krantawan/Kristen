@@ -95,7 +95,7 @@ export async function generateMetadata({
       title: `${operator.name} - Arknights Operator`,
       description: `${operator.itemUsage}`,
       url: `https://kristen-lab.vercel.app/operators/${slug}`,
-      siteName: "Kristen Arknights DB",
+      siteName: "Kristen Lab - Nullwish.info",
       images: [
         {
           url: `https://kristen-lab.vercel.app/operators/${operator.id}.png`,

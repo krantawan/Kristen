@@ -115,12 +115,16 @@ export type MetaInfo = {
   };
   phases?: Phase[];
   rarity: number;
-  storyTextAudio?: {
-    storyTitle: string;
-    stories: {
-      storyText: string;
-    }[];
-  }[];
+  storyTextAudio?: StoryBlock[];
+};
+export type StoryBlock = {
+  storyTitle: string;
+  stories: StoryEntry[];
+};
+export type StoryEntry = {
+  storyText: string;
+  unLockType?: string;
+  unLockParam?: string;
 };
 
 export type PotentialBonus = {

@@ -9,7 +9,10 @@ import { Button } from "@/components/ui/operator_detail/button";
 import { Card } from "@/components/ui/operator_detail/card";
 import { Badge } from "@/components/ui/operator_detail/badge";
 import { getOperatorAssetUrl } from "@/lib/getOperatorAssetUrl";
-import { getOperatorDetail } from "@/lib/hooks/useOperatorDetail";
+import {
+  getOperatorDetail,
+  mapLocaleToLang,
+} from "@/lib/hooks/useOperatorDetail";
 import type {
   OperatorDetail,
   OperatorSummary,
@@ -20,12 +23,12 @@ import {
   OperatorRarityBorder,
   OperatorRarityText,
 } from "@/app/components/operator/details/config";
-import { useTranslations } from "next-intl";
-import { OperatorHeader } from "./details/OperatorHeader";
+import { useLocale, useTranslations } from "next-intl";
 
-import OperatorStats from "./details/OperatorStats";
-import OperatorProfile from "./details/OperatorProfile";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { OperatorHeader } from "@/app/components/operator/details/OperatorHeader";
+import OperatorStats from "@/app/components/operator/details/OperatorStats";
+import OperatorTabs from "@/app/components/operator/OperatorTab";
+import OperatorViewer from "@/app/components/operator/details/OperatorViewer";
 
 // Memoized loading skeleton component
 const LoadingSkeleton = React.memo(() => (
@@ -117,7 +120,8 @@ export default function OperatorPageClient({
   const [isLoading, setIsLoading] = useState(true);
 
   const t = useTranslations("components.OperatorsPage");
-
+  const locale = useLocale();
+  const lang = mapLocaleToLang(locale);
   // Optimized data fetching with error handling
   useEffect(() => {
     if (!operator) {
@@ -129,7 +133,7 @@ export default function OperatorPageClient({
 
     const fetchDetail = async () => {
       try {
-        const detail = await getOperatorDetail(operator.id, "en", true);
+        const detail = await getOperatorDetail(operator.id, lang, true);
 
         if (isMounted && detail) {
           setOpDetail(detail);
@@ -154,7 +158,7 @@ export default function OperatorPageClient({
     return () => {
       isMounted = false;
     };
-  }, [operator]); // Include operator in dependencies since we use it directly
+  }, [operator, lang]); // Include operator in dependencies since we use it directly
 
   // Memoized skin navigation handlers
   const handlePrevSkin = useCallback(() => {
@@ -225,7 +229,7 @@ export default function OperatorPageClient({
           <div className="w-full lg:w-[50%] xl:w-[45%]">
             <Card className="overflow-hidden bg-white dark:bg-gradient-to-b dark:from-zinc-900 dark:to-black border-gray-200 dark:border-zinc-800">
               <div className="relative">
-                <div className="relative aspect-[3/4] overflow-hidden">
+                <div className="relative overflow-hidden">
                   {/* Badge */}
                   <div className="absolute top-1 right-1 flex flex-row flex-wrap gap-1 z-20">
                     {limitedOperatorIds.has(opDetail.id) && (
@@ -256,20 +260,25 @@ export default function OperatorPageClient({
                     </>
                   )}
                   {/* Operator Image */}
-                  <Image
-                    src={imageOperatorSrc}
-                    alt={
-                      selectedSkin.displayName ||
-                      selectedSkin.skinGroupName ||
-                      "Skin"
-                    }
-                    fill
-                    sizes="(max-width: 768px) 100vw, 80vw"
-                    className="object-cover object-top relative z-0"
-                    priority
-                    draggable={false}
-                    onError={() => setFallback(true)}
-                  />
+                  <div className="relative w-full h-[60vh] bg-black flex items-center justify-center">
+                    <Image
+                      src={imageOperatorSrc}
+                      alt={
+                        selectedSkin.displayName ||
+                        selectedSkin.skinGroupName ||
+                        "Skin"
+                      }
+                      width={1024}
+                      height={1024}
+                      sizes="(max-width: 768px) 100vw, 80vw"
+                      className="max-h-[60vh] object-contain"
+                      priority
+                      loading="eager"
+                      draggable={false}
+                      onError={() => setFallback(true)}
+                    />
+                    <OperatorViewer imageUrl={imageOperatorSrc} alt="Skin" />
+                  </div>
                 </div>
               </div>
 
@@ -338,83 +347,7 @@ export default function OperatorPageClient({
                 setSelectedLevel={setSelectedLevel}
               />
 
-              <div className="border-t dark:border-zinc-800">
-                <div className="w-full overflow-x-auto">
-                  <Tabs defaultValue="profile">
-                    <TabsList className="flex flex-wrap md:flex-nowrap gap-2 px-2">
-                      <TabsTrigger
-                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
-                        value="profile"
-                      >
-                        Profile
-                      </TabsTrigger>
-                      <TabsTrigger
-                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
-                        value="modules"
-                      >
-                        Modules
-                      </TabsTrigger>
-                      <TabsTrigger
-                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
-                        value="skills"
-                      >
-                        Skills
-                      </TabsTrigger>
-                      <TabsTrigger
-                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
-                        value="talents"
-                      >
-                        Talents
-                      </TabsTrigger>
-                      <TabsTrigger
-                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
-                        value="voice"
-                      >
-                        Voice
-                      </TabsTrigger>
-                      <TabsTrigger
-                        className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
-                        value="story"
-                      >
-                        Story
-                      </TabsTrigger>
-                    </TabsList>
-
-                    <TabsContent value="profile">
-                      <OperatorProfile opDetail={opDetail} />
-                    </TabsContent>
-
-                    <TabsContent value="modules">
-                      <div className="text-sm text-zinc-400 h-200 p-4">
-                        Modules section coming soon...
-                      </div>
-                    </TabsContent>
-
-                    <TabsContent value="skills">
-                      <div className="text-sm text-zinc-400 h-200 p-4">
-                        Skills section coming soon...
-                      </div>
-                    </TabsContent>
-
-                    <TabsContent value="talents">
-                      <div className="text-sm text-zinc-400 h-200 p-4">
-                        Talents section coming soon...
-                      </div>
-                    </TabsContent>
-                    <TabsContent value="voice">
-                      <div className="text-sm text-zinc-400 h-200 p-4">
-                        Voice section coming soon...
-                      </div>
-                    </TabsContent>
-
-                    <TabsContent value="story">
-                      <div className="text-sm text-zinc-400 h-200 p-4">
-                        Story section coming soon...
-                      </div>
-                    </TabsContent>
-                  </Tabs>
-                </div>
-              </div>
+              <OperatorTabs opDetail={opDetail} />
             </Card>
           </div>
         </div>

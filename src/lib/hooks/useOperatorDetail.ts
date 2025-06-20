@@ -11,6 +11,20 @@ import {
 
 type Lang = "cn" | "en" | "jp";
 
+export function mapLocaleToLang(locale: string): Lang {
+  switch (locale) {
+    case "ja":
+      return "jp";
+    case "zh":
+    case "zh-CN":
+    case "zh-TW":
+      return "cn";
+    case "en":
+    default:
+      return "en";
+  }
+}
+
 export type OperatorDetail = {
   id: string;
   skins: OperatorSkin[];
