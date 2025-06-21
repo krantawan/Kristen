@@ -21,116 +21,7 @@ import {
 } from "@/components/ui/select";
 import { labelMap } from "@/components/ui/operator_detail/stat-icon";
 import PromotionRequirements from "@/components/ui/operator_detail/PromotionRequirements";
-
-function parseRichText(
-  text?: string | null,
-  blackboard: Record<string, number> = {}
-): React.ReactNode[] {
-  if (!text) return [];
-
-  const regex =
-    /(<[@$]ba\.[\w.]+>)([+-]?)(\{([\w_]+)(?::(\d+))?%?\})?(.*?)<\/>|(\{([\w_]+)\})|([-+]?\d+(?:\.\d+)?(?:%|s)?)(?!\w)/g;
-
-  const highlightNumbers = (chunk: string): React.ReactNode[] => {
-    const split = chunk.split(
-      /(?<![a-zA-Z])([-+]?\d+(?:\.\d+)?(?:%|s| SP| tiles)?)(?![a-zA-Z])/g
-    );
-    return React.Children.toArray(
-      split.map((part) => {
-        if (/^[-+]?\d+(?:\.\d+)?(?:%|s| SP| tiles)?$/.test(part)) {
-          const color = part.includes("%")
-            ? "text-yellow-400"
-            : part.includes("s")
-            ? "text-cyan-400"
-            : "text-emerald-400";
-          return <span className={color}>{part}</span>;
-        }
-        return part;
-      })
-    );
-  };
-
-  const result: React.ReactNode[] = [];
-  let lastIndex = 0;
-  let match: RegExpExecArray | null;
-
-  while ((match = regex.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      result.push(...highlightNumbers(text.slice(lastIndex, match.index)));
-    }
-
-    if (match[1]) {
-      const tag = match[1];
-      const key = match[4];
-      const precisionStr = match[5];
-      const fallbackText = match[6];
-
-      const value: number | undefined = key ? blackboard[key] : undefined;
-
-      let content = fallbackText;
-
-      if (value !== undefined) {
-        const isPercentage = Boolean(precisionStr);
-        const precision = precisionStr ? parseInt(precisionStr) : 0;
-
-        const raw = isPercentage ? value * 100 : value;
-        const sign = raw > 0 ? "+" : raw < 0 ? "-" : "";
-        const formatted = Math.abs(raw).toFixed(precision);
-
-        content = `${sign}${formatted}${isPercentage ? "%" : ""}`;
-      }
-
-      const color = tag.includes("@ba.kw")
-        ? "text-yellow-400"
-        : tag.includes("$ba.stun")
-        ? "text-blue-400"
-        : tag.includes("@ba.talpu")
-        ? "text-green-400"
-        : tag.includes("@ba.vup")
-        ? "text-red-400"
-        : tag.includes("@ba.vdown")
-        ? "text-cyan-400"
-        : tag.includes("burning")
-        ? "text-orange-400"
-        : "text-white";
-
-      result.push(
-        <span key={`${tag}-${result.length}`} className={color}>
-          {content}
-        </span>
-      );
-    } else if (match[7]) {
-      const key = match[8];
-      const value = blackboard[key];
-      const content = value !== undefined ? value : `{${key}}`;
-      result.push(
-        <span key={`bb-${key}-${result.length}`} className="text-red-400">
-          {content}
-        </span>
-      );
-    } else if (match[9]) {
-      const val = match[9];
-      const color = val.includes("%")
-        ? "text-yellow-400"
-        : val.includes("s")
-        ? "text-cyan-400"
-        : "text-emerald-400";
-      result.push(
-        <span key={`val-${val}-${result.length}`} className={color}>
-          {val}
-        </span>
-      );
-    }
-
-    lastIndex = regex.lastIndex;
-  }
-
-  if (lastIndex < text.length) {
-    result.push(...highlightNumbers(text.slice(lastIndex)));
-  }
-
-  return React.Children.toArray(result);
-}
+import parseRichText from "@/lib/parseRichTect";
 
 export default function OperatorModules({
   modules,
@@ -280,7 +171,7 @@ export default function OperatorModules({
 
       <div className="bg-zinc-900 border border-zinc-700 text-sm whitespace-pre-wrap p-4">
         <div className="flex flex-col md:flex-row gap-4">
-          {/* ซ้าย: Module Title */}
+          {/* Module Title */}
           <div className="w-full md:w-1/2">
             <div className="flex flex-col gap-1">
               <span>{selectedModule.moduleName || "Unknown Module"}</span>
@@ -292,7 +183,7 @@ export default function OperatorModules({
             </div>
           </div>
 
-          {/* ขวา: Stat Bonus */}
+          {/* Stat Bonus */}
           <div className="w-full md:w-1/2">
             <div className="flex flex-wrap">
               {Object.entries(statBonus).map(([key, value]) => {

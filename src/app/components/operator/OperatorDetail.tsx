@@ -323,6 +323,23 @@ export default function OperatorPageClient({
                 onSkinChange={setSelectedSkinIndex}
               />
             </Card>
+
+            <Card className="bg-white dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 mt-4">
+              <div className="flex flex-col">
+                <div className="flex flex-row justify-between items-center px-4 py-2 border-b border-gray-200 dark:border-zinc-800">
+                  <h4 className="text-lg font-bold">Model</h4>
+
+                  <Badge
+                    variant="outline"
+                    className="text-yellow-400 bg-yellow-400/10 border-yellow-400/20"
+                  >
+                    Beta
+                  </Badge>
+                </div>
+
+                <div className="p-4">Coming Soon...</div>
+              </div>
+            </Card>
           </div>
 
           {/* Right panel - Character details */}

@@ -13,14 +13,31 @@ export type OperatorSkin = {
 
 export type OperatorSkill = {
   skillId: string;
-  name: string;
-  description: string;
+  skillName: string;
+  desc: string;
   iconId: string;
   spData?: unknown;
   duration: number;
   spCost?: number;
   initSp?: number;
   blackboard?: Array<{ key: string; value: number }>;
+  upgradeCost?: MasteryStep[];
+  skillType?: string;
+  rangeId?: string;
+};
+
+export type MasteryStep = {
+  phase: string;
+  level: number;
+  levelUpCost: ItemCost[];
+  lvlUpTime?: number;
+};
+
+export type SkillLevelStep = {
+  phase: string;
+  level: number;
+  levelUpCost: ItemCost[];
+  lvlUpTime?: number;
 };
 
 export type OperatorModule = {
@@ -91,6 +108,8 @@ export type ItemType = "MATERIAL" | "GOLD";
 export type ItemCost = {
   id: string;
   count: number;
+  name?: string;
+  iconId?: string;
   type: ItemType;
 };
 
@@ -200,6 +219,7 @@ export type OperatorDetail = {
   phases?: Phase[];
   favorKeyFrames?: FavorKeyFrame[];
   potentialRanks?: PotentialBonus[];
+  skills_1to7?: SkillLevelStep[];
 };
 
 export type OperatorSummary = {

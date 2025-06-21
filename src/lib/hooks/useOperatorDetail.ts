@@ -7,6 +7,7 @@ import {
   Phase,
   FavorKeyFrame,
   PotentialBonus,
+  SkillLevelStep,
 } from "@/types/operator";
 
 type Lang = "cn" | "en" | "jp";
@@ -38,6 +39,7 @@ export type OperatorDetail = {
   phases?: Phase[];
   favorKeyFrames?: FavorKeyFrame[];
   potentialRanks?: PotentialBonus[];
+  skills_1to7?: SkillLevelStep[];
 };
 
 export async function getOperatorDetail(
@@ -93,6 +95,7 @@ export async function getOperatorDetail(
     potentialRanks: primary?.potentialRanks?.length
       ? primary.potentialRanks
       : fallback.potentialRanks,
+    skills_1to7: primary?.skills_1to7 ?? fallback.skills_1to7,
   };
 
   return merged;

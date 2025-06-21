@@ -176,7 +176,6 @@ export default function OperatorStats({
   }, [opDetail.favorKeyFrames, trust]);
 
   //console.log("Trust Bonus Raw:", opDetail.favorKeyFrames);
-
   return (
     <div className="p-4 space-y-3">
       <div className="flex items-center gap-2">

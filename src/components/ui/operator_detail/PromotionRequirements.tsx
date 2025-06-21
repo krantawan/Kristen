@@ -58,6 +58,7 @@ const itemMap: Record<string, { name: string; iconId: string }> = {
   "30115": { name: "Polymerization Preparation", iconId: "MTL_SL_PP" },
   "30125": { name: "Bipolar Nanoflake", iconId: "MTL_SL_BN" },
   "30155": { name: "Nucleic Crystal Sinter", iconId: "MTL_SL_SHJ" },
+  "30165": { name: "-", iconId: "MTL_SL_DYT" },
 };
 
 const PromotionRequirements: React.FC<PromotionRequirementProps> = ({

@@ -4,12 +4,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import OperatorProfile from "./details/OperatorProfile";
 import type { OperatorDetail } from "@/types/operator";
 import OperatorModules from "./details/OperatorModules";
+import OperatorSkill from "./details/OperatorSkill";
 
 export default function OperatorTabs({
   opDetail,
 }: {
   opDetail: OperatorDetail;
 }) {
+  //console.log(opDetail);
+
   return (
     <div className="border-t dark:border-zinc-800">
       <div className="w-full overflow-x-auto">
@@ -42,9 +45,10 @@ export default function OperatorTabs({
           </TabsContent>
 
           <TabsContent value="skills">
-            <div className="text-sm text-zinc-400 h-200 p-4">
-              Skills section coming soon...
-            </div>
+            <OperatorSkill
+              skills={opDetail.skills}
+              skillLevelUpgrade={opDetail.skills_1to7 ?? []}
+            />
           </TabsContent>
 
           <TabsContent value="talents">
